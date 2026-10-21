@@ -48,7 +48,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T162959267Z-cw-focused-claude-invocation-nonprose-description-rewrite-7f5630d9-f630-4b57-ba5a-9200e7a7ea4e-2rd3twb7.json",
           "sha256": "84c274d0978bda36f427557746eea7983e7bfa94b5efdc4b12860000bf99eb1e",
-          "version": "2"
+          "version": "2",
+          "git_revision": "8e3eb2bf8f91dc722754a9e1611d89214d44f468"
         }
       }
     },
@@ -96,7 +97,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T164839809Z-cw-focused-claude-invocation-nonprose-description-existing-c07918e6-98bc-4612-980e-dd1d13c590fa-5hhh1kvz.json",
           "sha256": "b4084d0aaa211d15af43cab65c95555d37b834f5a17b051c5d4f326cfe6241ac",
-          "version": "2"
+          "version": "2",
+          "git_revision": "8e3eb2bf8f91dc722754a9e1611d89214d44f468"
         }
       }
     },
@@ -144,7 +146,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T164912373Z-cw-focused-claude-invocation-nonprose-description-targeted-94f4130a-c83c-477d-81b6-9f8ce4035e18-w0jsxcsz.json",
           "sha256": "179f09a6e197903f83a5a27d3550c30cca90c5a302a7df59083a1eb4bef21e0a",
-          "version": "2"
+          "version": "2",
+          "git_revision": "8e3eb2bf8f91dc722754a9e1611d89214d44f468"
         }
       }
     },
@@ -192,7 +195,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T164950737Z-cw-focused-claude-invocation-nonprose-description-existing-a082a503-292c-4d77-a527-187e37e1d565-vmx7xwsd.json",
           "sha256": "df06cdad3e778bb738a7f098e65cccb63f5c4eef2669358914a05f1a72ceaad4",
-          "version": "2"
+          "version": "2",
+          "git_revision": "8e3eb2bf8f91dc722754a9e1611d89214d44f468"
         }
       }
     },
@@ -240,7 +244,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T165026040Z-cw-focused-claude-invocation-nonprose-description-targeted-4e687bf8-f929-4b48-8740-a97e05a281e7-4t5ivqyl.json",
           "sha256": "74be7669955008bd0a867761da453e174cda8e50f9f07acfa65b8f42b07c4ab8",
-          "version": "2"
+          "version": "2",
+          "git_revision": "8e3eb2bf8f91dc722754a9e1611d89214d44f468"
         }
       }
     },
@@ -288,7 +293,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T165105669Z-cw-focused-claude-invocation-nonprose-description-rewrite-7ca5b1fc-e6e5-4c64-a8a7-e89b87bfb63c-o2nwamu9.json",
           "sha256": "bc121752e5e7d53c7ef8a7bb467afc9635b412f0e7065e1f7c3e706beb2ef0e2",
-          "version": "2"
+          "version": "2",
+          "git_revision": "8e3eb2bf8f91dc722754a9e1611d89214d44f468"
         }
       }
     },
@@ -336,7 +342,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T165238122Z-cw-focused-claude-invocation-nonprose-description-targeted-2ef57a4f-d453-491d-8261-450c8c6d1a87-vbggonlt.json",
           "sha256": "aa6f52686ca89856115c5ec54b528d6fc53aac909091417d42bba783375ecd57",
-          "version": "2"
+          "version": "2",
+          "git_revision": "8e3eb2bf8f91dc722754a9e1611d89214d44f468"
         }
       }
     },
@@ -384,7 +391,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T165302140Z-cw-focused-claude-invocation-nonprose-description-rewrite-abf330dc-f69d-4c9c-8bdd-c125f01b7b79-43lvmanl.json",
           "sha256": "b4a09740433270a951c954d2e1c1394e0430508860987734a610b15c3a0375ba",
-          "version": "2"
+          "version": "2",
+          "git_revision": "8e3eb2bf8f91dc722754a9e1611d89214d44f468"
         }
       }
     },
@@ -432,7 +440,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T165415112Z-cw-focused-claude-invocation-nonprose-description-existing-d5761a26-176f-44cf-871d-6b9aeb063ca1-l_6b6_1b.json",
           "sha256": "b4d71bd04617cbd74ecd4a7b3264b6b9c260bc297779e556f2c3c8a30da000e5",
-          "version": "2"
+          "version": "2",
+          "git_revision": "8e3eb2bf8f91dc722754a9e1611d89214d44f468"
         }
       }
     },
@@ -480,7 +489,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T165502144Z-cw-focused-claude-invocation-nonprose-description-rewrite-3152d681-9502-402a-aa00-1ef4f7285f7e-m8qto3ka.json",
           "sha256": "36adab380c101b8e25ad4f030c73afd273d7e19191bef746b350eab27b89db55",
-          "version": "2"
+          "version": "2",
+          "git_revision": "8e3eb2bf8f91dc722754a9e1611d89214d44f468"
         }
       }
     },
@@ -528,7 +538,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T165546446Z-cw-focused-claude-invocation-nonprose-description-existing-2dbd3863-015e-4415-85ed-87975a65ffc3-qc1oqkw5.json",
           "sha256": "081dabd4ad03a693759909938ba11ccb8dfc625930789f617785d4e3a9c4d680",
-          "version": "2"
+          "version": "2",
+          "git_revision": "8e3eb2bf8f91dc722754a9e1611d89214d44f468"
         }
       }
     },
@@ -576,7 +587,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T165639681Z-cw-focused-claude-invocation-nonprose-description-targeted-2b66087a-25d5-4d5c-a929-d786deaf0c27-97un2obo.json",
           "sha256": "faf3167e7b642be090e4fcabb2bcf50b8985d135796b6a09e6c5be1f56124e1f",
-          "version": "2"
+          "version": "2",
+          "git_revision": "8e3eb2bf8f91dc722754a9e1611d89214d44f468"
         }
       }
     },
@@ -624,7 +636,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T165706084Z-cw-focused-claude-invocation-nonprose-description-existing-eda66c54-7f98-4b17-9b00-698b8d314899-zbg3d2hs.json",
           "sha256": "b0dc7cf2bcda9e70bf17f09757dc847cd247710faceb87239cdb85f8234ddf01",
-          "version": "2"
+          "version": "2",
+          "git_revision": "8e3eb2bf8f91dc722754a9e1611d89214d44f468"
         }
       }
     },
@@ -672,7 +685,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T165728653Z-cw-focused-claude-invocation-nonprose-description-targeted-3e6ff9c5-0e57-43e6-b7cb-81275745d628-c_n4_0y3.json",
           "sha256": "5c015d0d865c3fd793f2f4f460f4aa9ba87d621b6178b4e4e8af2852d320f97a",
-          "version": "2"
+          "version": "2",
+          "git_revision": "8e3eb2bf8f91dc722754a9e1611d89214d44f468"
         }
       }
     },
@@ -720,7 +734,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T165802230Z-cw-focused-claude-invocation-nonprose-description-rewrite-a50d809d-f809-4682-b20e-4266a6a207ce-995198nu.json",
           "sha256": "ba1ad064e30a39daab1476cfb269dd55b5da38b05f2e97c5b067e2b6d120376e",
-          "version": "2"
+          "version": "2",
+          "git_revision": "8e3eb2bf8f91dc722754a9e1611d89214d44f468"
         }
       }
     },
@@ -768,7 +783,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T170100634Z-cw-focused-claude-invocation-comments-description-existing-39ebc29c-b517-45c5-acfb-82a12f8a67ee-a945a3l_.json",
           "sha256": "9ee2f11c32f3061a6cb03c3bd435ec54b652980036c849e72b0a8d39b0393c12",
-          "version": "2"
+          "version": "2",
+          "git_revision": "8e3eb2bf8f91dc722754a9e1611d89214d44f468"
         }
       }
     },
@@ -816,7 +832,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T170158130Z-cw-focused-claude-invocation-comments-description-targeted-34d201b2-8860-46b4-96ac-5df5dc1bb546-r43bctgf.json",
           "sha256": "124faf1b1bcb13862623c420a6e255e5709ca8f5e0be4893d3ea77271a45179b",
-          "version": "2"
+          "version": "2",
+          "git_revision": "8e3eb2bf8f91dc722754a9e1611d89214d44f468"
         }
       }
     },
@@ -864,7 +881,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T170253709Z-cw-focused-claude-invocation-comments-description-rewrite-82de3284-beb6-4872-8f46-e06ce7e50d59-uiivu8lk.json",
           "sha256": "a17e926a95c4d5301dc5e8ec8715b813014e2c89d771838b1a7bfb0867343842",
-          "version": "2"
+          "version": "2",
+          "git_revision": "8e3eb2bf8f91dc722754a9e1611d89214d44f468"
         }
       }
     },
@@ -912,7 +930,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T170400648Z-cw-focused-claude-invocation-comments-description-targeted-1debdc7d-b678-4feb-81f2-e564ed53a2fc-yn8amx11.json",
           "sha256": "44a6bd35250cf103414d789052d598d3f6fd6a7da38a77fc4002f0e51207b3a1",
-          "version": "2"
+          "version": "2",
+          "git_revision": "8e3eb2bf8f91dc722754a9e1611d89214d44f468"
         }
       }
     },
@@ -960,7 +979,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T170517788Z-cw-focused-claude-invocation-comments-description-rewrite-52131708-fb75-4688-957a-1e3b85783d77-7a70kmbk.json",
           "sha256": "457dfb92a0d417838b66aa01e824405478b82284fdb3facb3895b0500ba3ea50",
-          "version": "2"
+          "version": "2",
+          "git_revision": "8e3eb2bf8f91dc722754a9e1611d89214d44f468"
         }
       }
     },
@@ -1008,7 +1028,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T170631798Z-cw-focused-claude-invocation-comments-description-existing-703e0aa6-0e44-4596-a821-128de15eb304-evukrno4.json",
           "sha256": "ba9533ffa86f55ea1bf241e86515912db14bd4ef78a2202b5ec643b8ac7f7f08",
-          "version": "2"
+          "version": "2",
+          "git_revision": "8e3eb2bf8f91dc722754a9e1611d89214d44f468"
         }
       }
     },
@@ -1056,7 +1077,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T170745789Z-cw-focused-claude-invocation-comments-description-rewrite-b8927e01-580c-4acb-bec3-2a4ce112cbfb-b_vgff8b.json",
           "sha256": "9eb14952a960c0e21142b881a11a09bd4c41d8d74839a962ff75bb26f2e001f8",
-          "version": "2"
+          "version": "2",
+          "git_revision": "8e3eb2bf8f91dc722754a9e1611d89214d44f468"
         }
       }
     },
@@ -1104,7 +1126,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T170845148Z-cw-focused-claude-invocation-comments-description-existing-c55340d6-b4d4-4d43-b2e8-8ab4bb97432a-t9qor6pr.json",
           "sha256": "2f4c7026ce7bb5a8f909bb5c7361f477191f76965ac266ee9ca96389eda47202",
-          "version": "2"
+          "version": "2",
+          "git_revision": "8e3eb2bf8f91dc722754a9e1611d89214d44f468"
         }
       }
     },
@@ -1152,7 +1175,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T170948671Z-cw-focused-claude-invocation-comments-description-targeted-17171b72-59b1-474a-a436-619466999424-1n5wkgyo.json",
           "sha256": "08e7a8ace2a79d73ef097d8a79127af99f8821c2f30d09a08359e7c400fd99c9",
-          "version": "2"
+          "version": "2",
+          "git_revision": "8e3eb2bf8f91dc722754a9e1611d89214d44f468"
         }
       }
     },
@@ -1200,7 +1224,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T171102018Z-cw-focused-claude-invocation-comments-description-existing-14d99aa1-1874-40e3-8a69-dd10b9b86a54-80hnzgef.json",
           "sha256": "2f4d65aa52c23992674bbdd4722e06cdc5e5cfc14545577cf9a392988bb3e9dd",
-          "version": "2"
+          "version": "2",
+          "git_revision": "8e3eb2bf8f91dc722754a9e1611d89214d44f468"
         }
       }
     },
@@ -1248,7 +1273,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T171154306Z-cw-focused-claude-invocation-comments-description-targeted-4c2007e4-48a3-4012-b178-0fd18400c02c-v02jvnko.json",
           "sha256": "fd7dc7a83513cf766926a00e357ac7799dc6a42e0c1bfdabaf7c94ead7348d45",
-          "version": "2"
+          "version": "2",
+          "git_revision": "8e3eb2bf8f91dc722754a9e1611d89214d44f468"
         }
       }
     },
@@ -1296,7 +1322,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T171256697Z-cw-focused-claude-invocation-comments-description-rewrite-c6eda3f1-34ce-42ae-b209-fe127224c6ae-vniybsrr.json",
           "sha256": "ff3292792f40788ab46ffe22d741686daafc2b82b440b8613a95c3c4f1639341",
-          "version": "2"
+          "version": "2",
+          "git_revision": "8e3eb2bf8f91dc722754a9e1611d89214d44f468"
         }
       }
     },
@@ -1344,7 +1371,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T171355983Z-cw-focused-claude-invocation-comments-description-targeted-cdd36e44-888d-43d6-8f01-fd18ffbee05b-og3pu8fv.json",
           "sha256": "24726cb689ed84978481571e0ed38588ed9d5e902282fa0a4319989a54ca96fb",
-          "version": "2"
+          "version": "2",
+          "git_revision": "8e3eb2bf8f91dc722754a9e1611d89214d44f468"
         }
       }
     },
@@ -1392,7 +1420,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T171510837Z-cw-focused-claude-invocation-comments-description-rewrite-421c1c54-b854-4468-9c83-5960f0bdbaff-313t3czi.json",
           "sha256": "4d9254b8a0757c59e741f66c87b621dcc7f8c12f4f4f762d7e935c9710e0666d",
-          "version": "2"
+          "version": "2",
+          "git_revision": "8e3eb2bf8f91dc722754a9e1611d89214d44f468"
         }
       }
     },
@@ -1440,7 +1469,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T171645996Z-cw-focused-claude-invocation-comments-description-existing-0efea11f-ba7c-4e6e-9bd4-6283f8aa582c-efn3mqe_.json",
           "sha256": "422d1de102abeb9d5ce8be3a9d57356a848aeb7d694758dcdc5b9317f2a533c2",
-          "version": "2"
+          "version": "2",
+          "git_revision": "8e3eb2bf8f91dc722754a9e1611d89214d44f468"
         }
       }
     }
