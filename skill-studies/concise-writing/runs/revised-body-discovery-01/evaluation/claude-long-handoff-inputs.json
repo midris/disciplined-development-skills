@@ -1,0 +1,268 @@
+{
+  "name": "claude-long-handoff",
+  "subject_provider": "claude",
+  "case": "long-handoff",
+  "configuration": "skill-studies/concise-writing/runs/revised-body-discovery-01/evaluation/configs/claude-long-handoff.json",
+  "configuration_sha256": "b0355436ad5cf852f2fb76e7b47efa14c70fbaaf6dd124e80bedcc80e771fe07",
+  "packet": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff",
+  "outputs": 15,
+  "input_files": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json",
+      "sha256": "713f32d59c8726fdd800bc9dd63381668adfeddf052d9e46f9038068e9060e47"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/INTERPRETATION.md",
+      "target": "INTERPRETATION.md",
+      "sha256": "dfb3c05d7c5f345ecf7ea939ffbb131eb642df2dd93ee334e13e017fdd3f9df5"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/MECHANICAL-CHECKS.json",
+      "target": "MECHANICAL-CHECKS.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/WORD-COUNTS.json",
+      "target": "WORD-COUNTS.json",
+      "sha256": "06f2452cd88109ad8dc0264049a3e2489f471e4b9b966181e020754a041c92b5"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/criteria.md",
+      "target": "criteria.md",
+      "sha256": "1872303a325906ec13813e2afa0991b2b97490ff11414e7113c7c5cca19f4ed9"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/candidate-targeted-examples-1.md",
+      "target": "outputs/candidate-targeted-examples-1.md",
+      "sha256": "4bb7fb6e2835111f01ad7f1a0800c5773a9f7e6e318047b157f1b4977fa75e2a"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/candidate-targeted-examples-2.md",
+      "target": "outputs/candidate-targeted-examples-2.md",
+      "sha256": "afe2f2a2d426902cab1ff2300793c28b603c5e8416552a046dcdf2a5da8c73e5"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/candidate-targeted-examples-3.md",
+      "target": "outputs/candidate-targeted-examples-3.md",
+      "sha256": "41e6f690f55faee00b9bb748a888133b7acdc4dcbac7a2ba40d62ff554f5cb10"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/candidate-targeted-examples-4.md",
+      "target": "outputs/candidate-targeted-examples-4.md",
+      "sha256": "d66a602125d0023f8588e0417ed6b9441d11acf8bd2902f734be699ff56b808d"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/candidate-targeted-examples-5.md",
+      "target": "outputs/candidate-targeted-examples-5.md",
+      "sha256": "4bb7fb6e2835111f01ad7f1a0800c5773a9f7e6e318047b157f1b4977fa75e2a"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/control-1.md",
+      "target": "outputs/control-1.md",
+      "sha256": "007f48d7f01bccedd95f5e0e85fed23bef40b560e79b95f818297c0b6c20a278"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/control-2.md",
+      "target": "outputs/control-2.md",
+      "sha256": "5c10cf851a7fb5e027ebb92eaee27d10940219ab2cf833f357937f437f73c69a"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/control-3.md",
+      "target": "outputs/control-3.md",
+      "sha256": "f31de9681f0fd23d75ce008b9af880091184e82eb191a7987c55d26109058729"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/control-4.md",
+      "target": "outputs/control-4.md",
+      "sha256": "513b0a0bafd5fe1b0e851f440ae44530de4899e62ba45b4ec1a864674abdf3da"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/control-5.md",
+      "target": "outputs/control-5.md",
+      "sha256": "268dcf214822806cf33b4aefb4245529da4b4a61979b9c369dd5cbe6174d8071"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/original-1.md",
+      "target": "outputs/original-1.md",
+      "sha256": "f3c6a8b3eb33037817c109cd61e11ea56852ac320cd4a4f662df22e4be3c32e7"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/original-2.md",
+      "target": "outputs/original-2.md",
+      "sha256": "daf0181ea59f014be5c3597eedbf85a76d9ae76814ec06abc0b9d00bd237bbda"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/original-3.md",
+      "target": "outputs/original-3.md",
+      "sha256": "cf4e7b3b31efc66f251315b8d56ab89653015ba925c239c542a85ceac0560c40"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/original-4.md",
+      "target": "outputs/original-4.md",
+      "sha256": "802a48c66542703493a358f36fd3a06567c71d7e453fef0ae3d9a333373b8e37"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/original-5.md",
+      "target": "outputs/original-5.md",
+      "sha256": "bc4daad00fe4968da153ffc767df42e1bb11376b404a82eb83b6c005a4e5f4f4"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/policy.txt",
+      "target": "policy.txt",
+      "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/prior-assessment.md",
+      "target": "prior-assessment.md",
+      "sha256": "f237dfd5b0b62d011b94ac87f53db5ca1587599488959f3eccd458d61645e5a6"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/sources/TASK.md",
+      "target": "sources/TASK.md",
+      "sha256": "8be0f67fe6b62ca0a1d5f3af9ac2ffea79eef0d0615f0979853079653b8feab8"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/sources/report.md",
+      "target": "sources/report.md",
+      "sha256": "0eb0946286d2a4b1708f14bcff5795cd1effdfa64af612a6cb9a89d2fac84737"
+    }
+  ],
+  "source_audit": [
+    {
+      "run_id": "20261021T132816993Z-cw-focused-claude-long-handoff-candidate-targeted-examples-461bc6cc-2b7e-441e-92cc-391876dc2883-dl9xtxy5",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "4bb7fb6e2835111f01ad7f1a0800c5773a9f7e6e318047b157f1b4977fa75e2a"
+    },
+    {
+      "run_id": "20261021T132954901Z-cw-focused-claude-long-handoff-control-f12f4a6b-c28f-47db-bcab-c695ab8e504e-_ea4ucdn",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "007f48d7f01bccedd95f5e0e85fed23bef40b560e79b95f818297c0b6c20a278"
+    },
+    {
+      "run_id": "20261021T133059755Z-cw-focused-claude-long-handoff-original-7992db3c-7963-4d02-b147-e4f56860b4d1-td_qfl53",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "f3c6a8b3eb33037817c109cd61e11ea56852ac320cd4a4f662df22e4be3c32e7"
+    },
+    {
+      "run_id": "20261021T133226648Z-cw-focused-claude-long-handoff-control-a875d6f6-e665-4eb3-a6a5-24d75e97be3b-ydcallhv",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "5c10cf851a7fb5e027ebb92eaee27d10940219ab2cf833f357937f437f73c69a"
+    },
+    {
+      "run_id": "20261021T133445822Z-cw-focused-claude-long-handoff-original-391ad17a-ebe0-4705-b5ef-9cebad95dae4-80g4e_yx",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "daf0181ea59f014be5c3597eedbf85a76d9ae76814ec06abc0b9d00bd237bbda"
+    },
+    {
+      "run_id": "20261021T133553186Z-cw-focused-claude-long-handoff-candidate-targeted-examples-e2009cde-890b-42ae-b917-e1ed87228c50-fl_d7cgm",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "afe2f2a2d426902cab1ff2300793c28b603c5e8416552a046dcdf2a5da8c73e5"
+    },
+    {
+      "run_id": "20261021T133657777Z-cw-focused-claude-long-handoff-original-43f9ec7f-5be7-4118-8271-76643255452a-f7i8p3e8",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "cf4e7b3b31efc66f251315b8d56ab89653015ba925c239c542a85ceac0560c40"
+    },
+    {
+      "run_id": "20261021T133815836Z-cw-focused-claude-long-handoff-candidate-targeted-examples-b8f43f73-6e1f-4fa9-bffb-b3fa8a9791ba-ex3mqu_5",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "41e6f690f55faee00b9bb748a888133b7acdc4dcbac7a2ba40d62ff554f5cb10"
+    },
+    {
+      "run_id": "20261021T134004725Z-cw-focused-claude-long-handoff-control-7a2c0d53-5c7a-49fb-80e7-e46d76529bf1-3hy4n1k3",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "f31de9681f0fd23d75ce008b9af880091184e82eb191a7987c55d26109058729"
+    },
+    {
+      "run_id": "20261021T134127984Z-cw-focused-claude-long-handoff-candidate-targeted-examples-3d0dc710-7677-4d8d-9b16-4bda5c19916f-50yffnh5",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "d66a602125d0023f8588e0417ed6b9441d11acf8bd2902f734be699ff56b808d"
+    },
+    {
+      "run_id": "20261021T134243049Z-cw-focused-claude-long-handoff-control-ca24a830-7c94-487a-863f-be7ba0207518-nnxzw1qj",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "513b0a0bafd5fe1b0e851f440ae44530de4899e62ba45b4ec1a864674abdf3da"
+    },
+    {
+      "run_id": "20261021T134410311Z-cw-focused-claude-long-handoff-original-92548067-1a5a-4b93-bcaf-e6a1d7450c2b-t1zwyliw",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "802a48c66542703493a358f36fd3a06567c71d7e453fef0ae3d9a333373b8e37"
+    },
+    {
+      "run_id": "20261021T134503654Z-cw-focused-claude-long-handoff-control-d5e81fd2-2f0c-4506-b411-05a03491bf00-8obwmfqs",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "268dcf214822806cf33b4aefb4245529da4b4a61979b9c369dd5cbe6174d8071"
+    },
+    {
+      "run_id": "20261021T134622734Z-cw-focused-claude-long-handoff-original-97c76cba-8949-4695-a690-0df3a558da91-wkz275lr",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "bc4daad00fe4968da153ffc767df42e1bb11376b404a82eb83b6c005a4e5f4f4"
+    },
+    {
+      "run_id": "20261021T134750109Z-cw-focused-claude-long-handoff-candidate-targeted-examples-e398868b-d359-472a-8a20-8b9a9790eb41-lfzh_qe2",
+      "declared_non_skill_sources": [
+        "sources/report.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "4bb7fb6e2835111f01ad7f1a0800c5773a9f7e6e318047b157f1b4977fa75e2a"
+    }
+  ]
+}

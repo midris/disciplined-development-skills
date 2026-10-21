@@ -1,0 +1,3086 @@
+{
+  "prepared_at": "2026-10-21T17:28:45.137356+00:00",
+  "scope": "Ten approved case/provider output reviews; all150focusedsubjects; fifteen outputs per packet; no automatic retry",
+  "model": "claude-opus-5-5",
+  "effort": "medium",
+  "active_assessor": "Codex controller (OpenAI family), exposed authoring/development context; reviewer is different-family relative to assessor and labels are visible",
+  "prompt": {
+    "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/evaluation/prompt.md",
+    "sha256": "827d3b40971c7e1bc342711e03653865a13e74e50ed38fccb81d19ac3e92f221",
+    "git_revision": "f95ee5145b3afd4312681ccfaae60bfa43403a38"
+  },
+  "controller": {
+    "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/controllers/collect-review.py",
+    "sha256": "f03a7c9a7e90da39ad0266d61aa3fe455fc0e5ffeaa3aa0241838be18ceabb89"
+  },
+  "controller_support": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/controllers/audit-review.py",
+      "sha256": "bb74d28070e3e448cca21875786c1b9ed49ce8d29828694bf3092a8af0d1af3c"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/controllers/mechanical.py",
+      "sha256": "bfddef69b2b8e17c2fb586bf50564a34c30043741b5d1f7fcf5c5a5ed04f781e"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/controllers/prepare-packets.py",
+      "sha256": "1ebd9e7c2b3a996a8d08a53117db9fa5f08410f132c024490e9504493d5a673b"
+    }
+  ],
+  "subject_indexes": [
+    {
+      "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/claude-body-focused-01-run-index.json",
+      "sha256": "0004709bd9ffb629bfbadf3d5e566284d3d158729307482f37b5e0028df2b306",
+      "git_revision": "f95ee5145b3afd4312681ccfaae60bfa43403a38"
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/claude-discovery-focused-01-run-index.json",
+      "sha256": "b4e307ad1fb40f3e119e7f6b1114fff9f0ea082100e6614c77b6726256ef586b",
+      "git_revision": "f95ee5145b3afd4312681ccfaae60bfa43403a38"
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/codex-body-focused-01-run-index.json",
+      "sha256": "a2e7419eb9d492324444dd7049a85fb8da1ff5013c6e5fa0e6c71c1cfa57e81b",
+      "git_revision": "f95ee5145b3afd4312681ccfaae60bfa43403a38"
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/codex-discovery-focused-01-run-index.json",
+      "sha256": "bdc0f2d1e46706c1dc8206714d2dbb82a2011f5bb90cdc66c957220f8730d68c",
+      "git_revision": "f95ee5145b3afd4312681ccfaae60bfa43403a38"
+    }
+  ],
+  "subject_assessments": [
+    {
+      "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/claude-body-focused-01-assessment.md",
+      "sha256": "bf50cf18c8c888f4b843cd266bada1dd1c567afd846df42e70b6015d9dab3a08",
+      "git_revision": "f95ee5145b3afd4312681ccfaae60bfa43403a38"
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/claude-discovery-focused-01-assessment.md",
+      "sha256": "7ab8e64ee38523f14dcd640a3bab700ac2119c39be3dd5be3d915435726eced5",
+      "git_revision": "f95ee5145b3afd4312681ccfaae60bfa43403a38"
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/codex-body-focused-01-assessment.md",
+      "sha256": "e9c8040d7db08771b089d08655c2e488af488d25c2c56ff4a53f8e15e2a5227c",
+      "git_revision": "f95ee5145b3afd4312681ccfaae60bfa43403a38"
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/codex-discovery-focused-01-assessment.md",
+      "sha256": "e7525a70328de6b6ab6b12c1ea98eef30361696085c047f5f9b366f01a92613d",
+      "git_revision": "f95ee5145b3afd4312681ccfaae60bfa43403a38"
+    }
+  ],
+  "groups": [
+    {
+      "name": "codex-long-handoff",
+      "subject_provider": "codex",
+      "case": "long-handoff",
+      "configuration": "skill-studies/concise-writing/runs/revised-body-discovery-01/evaluation/configs/codex-long-handoff.json",
+      "configuration_sha256": "cd2472d91bdc4105bc6026e3b9cf282d3c00acb546b74a622a20cf64749557ec",
+      "packet": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-long-handoff",
+      "outputs": 15,
+      "input_files": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-long-handoff/EVALUATION-INDEX.json",
+          "target": "EVALUATION-INDEX.json",
+          "sha256": "73fb440cf6872b5c71652ce4891d22a60a23c00dd299d7b4068ec649778e1bef"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-long-handoff/INTERPRETATION.md",
+          "target": "INTERPRETATION.md",
+          "sha256": "dfb3c05d7c5f345ecf7ea939ffbb131eb642df2dd93ee334e13e017fdd3f9df5"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-long-handoff/MECHANICAL-CHECKS.json",
+          "target": "MECHANICAL-CHECKS.json",
+          "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-long-handoff/WORD-COUNTS.json",
+          "target": "WORD-COUNTS.json",
+          "sha256": "3d92f02ca0c98bc0b92d012158cd49a3e1658d90a808c93e7e35f652ddeed9e4"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-long-handoff/criteria.md",
+          "target": "criteria.md",
+          "sha256": "1872303a325906ec13813e2afa0991b2b97490ff11414e7113c7c5cca19f4ed9"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-long-handoff/outputs/candidate-targeted-examples-1.md",
+          "target": "outputs/candidate-targeted-examples-1.md",
+          "sha256": "cf7b102a8d0c4bd3407b3d7ed1e27afac55450c6325b61f1098ead7587e192f4"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-long-handoff/outputs/candidate-targeted-examples-2.md",
+          "target": "outputs/candidate-targeted-examples-2.md",
+          "sha256": "239d9fbcb474255ec4e50319ce56a6c76882623894f4351028546cd7c8501d9b"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-long-handoff/outputs/candidate-targeted-examples-3.md",
+          "target": "outputs/candidate-targeted-examples-3.md",
+          "sha256": "5a273b4657befef7cb6ce96fa1d5bd9245e7542e65b53afba292f07bdb9a46f9"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-long-handoff/outputs/candidate-targeted-examples-4.md",
+          "target": "outputs/candidate-targeted-examples-4.md",
+          "sha256": "2d687f05ddbc87b38bee843df6e1bd80e75a483c458b9ad2515c7196b3dead8f"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-long-handoff/outputs/candidate-targeted-examples-5.md",
+          "target": "outputs/candidate-targeted-examples-5.md",
+          "sha256": "38324f45fc86a35df16b8eeb04fccce71784c828eb6b4dbfe28ae92efe6cfc57"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-long-handoff/outputs/control-1.md",
+          "target": "outputs/control-1.md",
+          "sha256": "cf1c6dd52ba1ed699a59b24705025cdfc64d003f912928679f4dd98c433a4be3"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-long-handoff/outputs/control-2.md",
+          "target": "outputs/control-2.md",
+          "sha256": "cd53c67d04b7416c5a3ec6a6f546bdeb598f9689c45f7b9e5996369dbf3dad51"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-long-handoff/outputs/control-3.md",
+          "target": "outputs/control-3.md",
+          "sha256": "b89c4e5431cd58d708418b62c3e86ca1082491f0eee66415d1905bb6e3920c32"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-long-handoff/outputs/control-4.md",
+          "target": "outputs/control-4.md",
+          "sha256": "c2237576eefb3905991f43b0e7a9b09b81216a8f4b5ba3e0c1f779fcbf06c3f1"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-long-handoff/outputs/control-5.md",
+          "target": "outputs/control-5.md",
+          "sha256": "c8c91366c7f81f7cf51a424d481c27b30890b29cb0eebdd904353c89cbaeb405"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-long-handoff/outputs/original-1.md",
+          "target": "outputs/original-1.md",
+          "sha256": "1ccf777ed0aced3ecd860cfcf0a7191cf3bc1389f5b007a96e85e34bca175b92"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-long-handoff/outputs/original-2.md",
+          "target": "outputs/original-2.md",
+          "sha256": "81edff86cc13a173e65e118ff907a170ee9d52a856dee41060cc20f26337b162"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-long-handoff/outputs/original-3.md",
+          "target": "outputs/original-3.md",
+          "sha256": "848968fb173a6cf294ba5587fa11acd75a48de1a994c27cfaede6b000e87648d"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-long-handoff/outputs/original-4.md",
+          "target": "outputs/original-4.md",
+          "sha256": "cd4f9eb168e0d74beb4a6b56511952a03863f228918dbca86e568e3e47fc16b2"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-long-handoff/outputs/original-5.md",
+          "target": "outputs/original-5.md",
+          "sha256": "1011fd836281658b9b8ad78c2609fbb7a560f1b88ea9841c53a83912a03cba0d"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-long-handoff/policy.txt",
+          "target": "policy.txt",
+          "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-long-handoff/prior-assessment.md",
+          "target": "prior-assessment.md",
+          "sha256": "7622ea0f4a71bb344e64885dcb5523153f3fa4bdda4c5b723acaedef589d9e28"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-long-handoff/sources/TASK.md",
+          "target": "sources/TASK.md",
+          "sha256": "8be0f67fe6b62ca0a1d5f3af9ac2ffea79eef0d0615f0979853079653b8feab8"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-long-handoff/sources/report.md",
+          "target": "sources/report.md",
+          "sha256": "0eb0946286d2a4b1708f14bcff5795cd1effdfa64af612a6cb9a89d2fac84737"
+        }
+      ],
+      "source_audit": [
+        {
+          "run_id": "20261021T062242372Z-cw-focused-codex-long-handoff-control-a595cf16-5c94-4671-b57a-774471999bd3-wle2cnef",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "cf1c6dd52ba1ed699a59b24705025cdfc64d003f912928679f4dd98c433a4be3"
+        },
+        {
+          "run_id": "20261021T062514644Z-cw-focused-codex-long-handoff-original-bf0742b9-094c-4b4f-9562-a0238ddd876c-zuxuhb9i",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "1ccf777ed0aced3ecd860cfcf0a7191cf3bc1389f5b007a96e85e34bca175b92"
+        },
+        {
+          "run_id": "20261021T062646311Z-cw-focused-codex-long-handoff-candidate-targeted-examples-50e4359a-3e72-40ca-8c1f-45d8ac1f923d-aatsj_y0",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "cf7b102a8d0c4bd3407b3d7ed1e27afac55450c6325b61f1098ead7587e192f4"
+        },
+        {
+          "run_id": "20261021T062817943Z-cw-focused-codex-long-handoff-original-633234ad-705c-4696-b508-91422f5a2849-atokkah3",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "81edff86cc13a173e65e118ff907a170ee9d52a856dee41060cc20f26337b162"
+        },
+        {
+          "run_id": "20261021T063447215Z-cw-focused-codex-long-handoff-candidate-targeted-examples-c7cc739c-9610-4f9f-bac5-7dbb427fc8fe-52rbp1uy",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "239d9fbcb474255ec4e50319ce56a6c76882623894f4351028546cd7c8501d9b"
+        },
+        {
+          "run_id": "20261021T063626456Z-cw-focused-codex-long-handoff-control-dceae98a-ffb7-4aac-8e6f-6afe9bf13fec-3d3p968x",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "cd53c67d04b7416c5a3ec6a6f546bdeb598f9689c45f7b9e5996369dbf3dad51"
+        },
+        {
+          "run_id": "20261021T063852480Z-cw-focused-codex-long-handoff-candidate-targeted-examples-d4dc1d17-af4f-4277-a822-3417d09b9d2a-7yncwfzx",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "5a273b4657befef7cb6ce96fa1d5bd9245e7542e65b53afba292f07bdb9a46f9"
+        },
+        {
+          "run_id": "20261021T064033331Z-cw-focused-codex-long-handoff-control-9a435ac6-8f41-4fcc-a8d2-cd5d29acd9ef-ce1o1ahr",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "b89c4e5431cd58d708418b62c3e86ca1082491f0eee66415d1905bb6e3920c32"
+        },
+        {
+          "run_id": "20261021T064155137Z-cw-focused-codex-long-handoff-original-60b74f6e-a6de-43c3-84d0-9f799bbc45e4-4ub3gmnb",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "848968fb173a6cf294ba5587fa11acd75a48de1a994c27cfaede6b000e87648d"
+        },
+        {
+          "run_id": "20261021T064301250Z-cw-focused-codex-long-handoff-control-7214e72b-2a21-4771-8cf7-4b7c6f74c93b-7yrhd9we",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "c2237576eefb3905991f43b0e7a9b09b81216a8f4b5ba3e0c1f779fcbf06c3f1"
+        },
+        {
+          "run_id": "20261021T064437597Z-cw-focused-codex-long-handoff-original-d04b0974-52e5-4321-9700-1681cc393970-1mjb6_pp",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "cd4f9eb168e0d74beb4a6b56511952a03863f228918dbca86e568e3e47fc16b2"
+        },
+        {
+          "run_id": "20261021T064702796Z-cw-focused-codex-long-handoff-candidate-targeted-examples-479dcfbb-4745-424b-b1bf-ad4eba162d9d-h7re2p1u",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "2d687f05ddbc87b38bee843df6e1bd80e75a483c458b9ad2515c7196b3dead8f"
+        },
+        {
+          "run_id": "20261021T064835849Z-cw-focused-codex-long-handoff-original-7bcc7b6d-582a-439c-a066-4ed5e88c39ae-4fnrhxuz",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "1011fd836281658b9b8ad78c2609fbb7a560f1b88ea9841c53a83912a03cba0d"
+        },
+        {
+          "run_id": "20261021T065006851Z-cw-focused-codex-long-handoff-candidate-targeted-examples-966718ef-dc73-46b5-948d-08c3dc0603c4-5cw0_40z",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "38324f45fc86a35df16b8eeb04fccce71784c828eb6b4dbfe28ae92efe6cfc57"
+        },
+        {
+          "run_id": "20261021T065150726Z-cw-focused-codex-long-handoff-control-abdb2f3c-e614-4ed9-adf6-e4809d5a525a-e1_pagz_",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "c8c91366c7f81f7cf51a424d481c27b30890b29cb0eebdd904353c89cbaeb405"
+        }
+      ],
+      "order": 1,
+      "packet_inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-long-handoff.inventory.json",
+        "sha256": "2246cf08992989bf0372c7e6998b3e6071a009a2ff9724d07d39dc850b4f0b3d",
+        "version": "1"
+      }
+    },
+    {
+      "name": "codex-document-addition",
+      "subject_provider": "codex",
+      "case": "document-addition",
+      "configuration": "skill-studies/concise-writing/runs/revised-body-discovery-01/evaluation/configs/codex-document-addition.json",
+      "configuration_sha256": "1bc6a54cafe165ebc4126135c626ce7f51b1e6aa8a43ce80c4cbc65497ddb08f",
+      "packet": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-document-addition",
+      "outputs": 15,
+      "input_files": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-document-addition/EVALUATION-INDEX.json",
+          "target": "EVALUATION-INDEX.json",
+          "sha256": "a08e05e070c7e5ca72e6375b0ce857b1a2d9c7dfe144c43aebd1d9ec86a8a10d"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-document-addition/INTERPRETATION.md",
+          "target": "INTERPRETATION.md",
+          "sha256": "dfb3c05d7c5f345ecf7ea939ffbb131eb642df2dd93ee334e13e017fdd3f9df5"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-document-addition/MECHANICAL-CHECKS.json",
+          "target": "MECHANICAL-CHECKS.json",
+          "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-document-addition/WORD-COUNTS.json",
+          "target": "WORD-COUNTS.json",
+          "sha256": "189a3dc773721c5dbfdb2b97c5b9d54dd1160007f3dae322f1dee913550621b5"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-document-addition/criteria.md",
+          "target": "criteria.md",
+          "sha256": "84d388da8ddc54ec2bcfa4b2a1152fa07d14ad7e8828ba85b365e46b30f5ac88"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-document-addition/outputs/candidate-targeted-examples-1.md",
+          "target": "outputs/candidate-targeted-examples-1.md",
+          "sha256": "4614ee51d03ebe190f8f8e3d4a9ac681827aa0714439973d7d91138333900ce9"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-document-addition/outputs/candidate-targeted-examples-2.md",
+          "target": "outputs/candidate-targeted-examples-2.md",
+          "sha256": "a77c6b5a9f72ba77c7833e0190b2e4e11754d51361a382b7d5a5dbed516e85a4"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-document-addition/outputs/candidate-targeted-examples-3.md",
+          "target": "outputs/candidate-targeted-examples-3.md",
+          "sha256": "28d3b6b697999a6bc444634e378ef4bc837410950a5995848bef125775bf5606"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-document-addition/outputs/candidate-targeted-examples-4.md",
+          "target": "outputs/candidate-targeted-examples-4.md",
+          "sha256": "bff44e7c52c39e389b242e018bb247b8bda71f35e5247a8a536ecb4648cb2f6d"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-document-addition/outputs/candidate-targeted-examples-5.md",
+          "target": "outputs/candidate-targeted-examples-5.md",
+          "sha256": "ab00ba9d6bebd93933db16ccb6b6ff751c85453656783aef40f987e5c40f6c80"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-document-addition/outputs/control-1.md",
+          "target": "outputs/control-1.md",
+          "sha256": "4f842307a510abb4ff621d7910971755ecc7941bb57c4ae26a9f0bb6ec94453a"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-document-addition/outputs/control-2.md",
+          "target": "outputs/control-2.md",
+          "sha256": "524a68f77c7e34ce6171cddcb283bb9d0decc038fa727ad94bb629230fb31cdc"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-document-addition/outputs/control-3.md",
+          "target": "outputs/control-3.md",
+          "sha256": "78f75c90ce2a401152fb9c1d31b1354c24552776d1f1ccb3a882f3f0962608ce"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-document-addition/outputs/control-4.md",
+          "target": "outputs/control-4.md",
+          "sha256": "b37e5b979c1064c0449988af267995767603eaa014c1e6d8df5548b9273af5c2"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-document-addition/outputs/control-5.md",
+          "target": "outputs/control-5.md",
+          "sha256": "7cddfb6bc2f3c7306004b1ad3619b54be8f044011a6a82056940a633108c8f9d"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-document-addition/outputs/original-1.md",
+          "target": "outputs/original-1.md",
+          "sha256": "908a0b36aae45d06f33529968b15422c4e883a39aed1d19c2d5ddf4cd27c33cb"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-document-addition/outputs/original-2.md",
+          "target": "outputs/original-2.md",
+          "sha256": "e893e4c70fd362b0295f58210fd9598d0b548c9c2889bf0ce7154209e55d1b02"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-document-addition/outputs/original-3.md",
+          "target": "outputs/original-3.md",
+          "sha256": "26dfaf9737ffb86de20ad3184037e7b40219459f803c27a7a09b70ee8e999d68"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-document-addition/outputs/original-4.md",
+          "target": "outputs/original-4.md",
+          "sha256": "45c33febe1024cd3edb5663fe6b9558d9e014a2718a4cde98d0213f481291767"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-document-addition/outputs/original-5.md",
+          "target": "outputs/original-5.md",
+          "sha256": "fcba90bfc518c2b9fd2fe54f886ed87fb7325c4d63f68db40c3ce1f83e6d5ed2"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-document-addition/policy.txt",
+          "target": "policy.txt",
+          "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-document-addition/prior-assessment.md",
+          "target": "prior-assessment.md",
+          "sha256": "1e645c6430c56493fa29f1feb10ae7c5e9d2d83dbae4f1fe15a2fd887b2ca498"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-document-addition/sources/NEW-NOTES.md",
+          "target": "sources/NEW-NOTES.md",
+          "sha256": "8ff2f1ece29e88f352aefe87506c1afcf7e3174849dd978d20ec7065e8da3b74"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-document-addition/sources/TASK.md",
+          "target": "sources/TASK.md",
+          "sha256": "d625196b6cf438dfe556238803851c5b86ae7f2eb07acaa31ddceb5c6e9b8db0"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-document-addition/sources/report.md",
+          "target": "sources/report.md",
+          "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491"
+        }
+      ],
+      "source_audit": [
+        {
+          "run_id": "20261021T065611011Z-cw-focused-codex-document-addition-original-ef378298-9334-47b7-9348-726aea835e89-z0whpxwd",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md",
+            "sources/NEW-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "908a0b36aae45d06f33529968b15422c4e883a39aed1d19c2d5ddf4cd27c33cb"
+        },
+        {
+          "run_id": "20261021T065710849Z-cw-focused-codex-document-addition-candidate-targeted-examples-69f41413-b324-4d1d-bbe1-a1beb43e243d-v_rsh_en",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md",
+            "sources/NEW-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "4614ee51d03ebe190f8f8e3d4a9ac681827aa0714439973d7d91138333900ce9"
+        },
+        {
+          "run_id": "20261021T065818090Z-cw-focused-codex-document-addition-control-c71d2084-dd94-4a71-9c2e-d26eb1f207b4-ug8r039g",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md",
+            "sources/NEW-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "4f842307a510abb4ff621d7910971755ecc7941bb57c4ae26a9f0bb6ec94453a"
+        },
+        {
+          "run_id": "20261021T065924658Z-cw-focused-codex-document-addition-candidate-targeted-examples-a34f4dd2-3ec8-4c06-b10c-29dee1aff1a9-3pytv4vc",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md",
+            "sources/NEW-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "a77c6b5a9f72ba77c7833e0190b2e4e11754d51361a382b7d5a5dbed516e85a4"
+        },
+        {
+          "run_id": "20261021T070246583Z-cw-focused-codex-document-addition-control-b0d0083c-18d3-49a4-a1b1-8e30d7e56f9f-ht4tqmbw",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md",
+            "sources/NEW-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "524a68f77c7e34ce6171cddcb283bb9d0decc038fa727ad94bb629230fb31cdc"
+        },
+        {
+          "run_id": "20261021T070507120Z-cw-focused-codex-document-addition-original-9c76e112-2f8b-42c4-8a7a-f55fad47bce3-by21jqca",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md",
+            "sources/NEW-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "e893e4c70fd362b0295f58210fd9598d0b548c9c2889bf0ce7154209e55d1b02"
+        },
+        {
+          "run_id": "20261021T070609613Z-cw-focused-codex-document-addition-control-508d0e0c-d751-4d0c-9af4-34e55d5629ae-_wf0vrzi",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md",
+            "sources/NEW-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "78f75c90ce2a401152fb9c1d31b1354c24552776d1f1ccb3a882f3f0962608ce"
+        },
+        {
+          "run_id": "20261021T070707918Z-cw-focused-codex-document-addition-original-e1d909fb-d7aa-47a3-a9d7-33ebb588ef05-r5o7jiw6",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md",
+            "sources/NEW-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "26dfaf9737ffb86de20ad3184037e7b40219459f803c27a7a09b70ee8e999d68"
+        },
+        {
+          "run_id": "20261021T070824387Z-cw-focused-codex-document-addition-candidate-targeted-examples-9863d953-a2fd-4e67-a5e5-c7f13b36c0fc-1z47qgqm",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md",
+            "sources/NEW-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "28d3b6b697999a6bc444634e378ef4bc837410950a5995848bef125775bf5606"
+        },
+        {
+          "run_id": "20261021T070921377Z-cw-focused-codex-document-addition-original-f1c1dcb3-c699-4a35-ae33-cc23d48a0bf2-coq36v7j",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md",
+            "sources/NEW-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "45c33febe1024cd3edb5663fe6b9558d9e014a2718a4cde98d0213f481291767"
+        },
+        {
+          "run_id": "20261021T071225546Z-cw-focused-codex-document-addition-candidate-targeted-examples-4e3917bd-ff57-4732-a2f5-96d8191bc677-qqx2m4bt",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md",
+            "sources/NEW-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "bff44e7c52c39e389b242e018bb247b8bda71f35e5247a8a536ecb4648cb2f6d"
+        },
+        {
+          "run_id": "20261021T071321233Z-cw-focused-codex-document-addition-control-0b64f082-2f34-470f-82bb-5ea35a9eb677-_0o1i6f1",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md",
+            "sources/NEW-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "b37e5b979c1064c0449988af267995767603eaa014c1e6d8df5548b9273af5c2"
+        },
+        {
+          "run_id": "20261021T071453270Z-cw-focused-codex-document-addition-candidate-targeted-examples-5f3b0db1-8d9f-4a88-8386-8a8fcc30b231-hqd1a11i",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md",
+            "sources/NEW-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "ab00ba9d6bebd93933db16ccb6b6ff751c85453656783aef40f987e5c40f6c80"
+        },
+        {
+          "run_id": "20261021T071713925Z-cw-focused-codex-document-addition-control-27669602-f851-4136-bd85-9dbe4af8ac8a-22tcar_4",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md",
+            "sources/NEW-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "7cddfb6bc2f3c7306004b1ad3619b54be8f044011a6a82056940a633108c8f9d"
+        },
+        {
+          "run_id": "20261021T071836061Z-cw-focused-codex-document-addition-original-90aa3c52-e11b-452b-acbc-753bfb7b7d44-4kuzcxst",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md",
+            "sources/NEW-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "fcba90bfc518c2b9fd2fe54f886ed87fb7325c4d63f68db40c3ce1f83e6d5ed2"
+        }
+      ],
+      "order": 2,
+      "packet_inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-document-addition.inventory.json",
+        "sha256": "8110074582d31bd481f0dfafd4876b19af03eac008fc7b87f825fc4c56a9100e",
+        "version": "1"
+      }
+    },
+    {
+      "name": "codex-comments-explicit",
+      "subject_provider": "codex",
+      "case": "comments-explicit",
+      "configuration": "skill-studies/concise-writing/runs/revised-body-discovery-01/evaluation/configs/codex-comments-explicit.json",
+      "configuration_sha256": "c086b7cb09149ff47216b2f92b78c2431be0e8f1d7370dc4053c8c8ada5cec19",
+      "packet": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-comments-explicit",
+      "outputs": 15,
+      "input_files": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-comments-explicit/EVALUATION-INDEX.json",
+          "target": "EVALUATION-INDEX.json",
+          "sha256": "8d7328cc17922f8ff13c353ae563e69f75d52002f661582fb38bb5ae7f3a307e"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-comments-explicit/INTERPRETATION.md",
+          "target": "INTERPRETATION.md",
+          "sha256": "dfb3c05d7c5f345ecf7ea939ffbb131eb642df2dd93ee334e13e017fdd3f9df5"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-comments-explicit/MECHANICAL-CHECKS.json",
+          "target": "MECHANICAL-CHECKS.json",
+          "sha256": "27d6462d90d4b1d712a921d7a373f30cee3b0f985c919791cabac93f96e5661d"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-comments-explicit/WORD-COUNTS.json",
+          "target": "WORD-COUNTS.json",
+          "sha256": "987ce10e63fa53c87d173c81f2a1753f64df9c764c37beb0b28c61ed59cfbe90"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-comments-explicit/criteria.md",
+          "target": "criteria.md",
+          "sha256": "0a027f8d7d8cd3ba30246495abc8e9ffac152567a51f1dca80c7730ce31bca63"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-comments-explicit/outputs/candidate-targeted-examples-1.py",
+          "target": "outputs/candidate-targeted-examples-1.py",
+          "sha256": "bde0a76a38e2ee8783a7e58a7ef45d39a0cecaf93f017ebba94e5ec28de2fbfa"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-comments-explicit/outputs/candidate-targeted-examples-2.py",
+          "target": "outputs/candidate-targeted-examples-2.py",
+          "sha256": "d661bf7d56791541c4c20f9266a8cbd53bd9057d485bbc13cd7ab2af331ec76b"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-comments-explicit/outputs/candidate-targeted-examples-3.py",
+          "target": "outputs/candidate-targeted-examples-3.py",
+          "sha256": "7c7acb97b20220f3520fa8d8b77d90a702869536c8684c4fbf898115ea396670"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-comments-explicit/outputs/candidate-targeted-examples-4.py",
+          "target": "outputs/candidate-targeted-examples-4.py",
+          "sha256": "60bf6456653fb1558f5dbf91f4fa097065843f620f4a9fc1be79cf7196dfe78b"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-comments-explicit/outputs/candidate-targeted-examples-5.py",
+          "target": "outputs/candidate-targeted-examples-5.py",
+          "sha256": "5e4cb2a73af6b61c7f75aa02388cf55e6d37ef2de59517382b98b4c12f99e6c2"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-comments-explicit/outputs/control-1.py",
+          "target": "outputs/control-1.py",
+          "sha256": "8b9dbb8a1e84ca4c123d4a7249e8fb6d787aad5f68f767f683572c41ce83fa40"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-comments-explicit/outputs/control-2.py",
+          "target": "outputs/control-2.py",
+          "sha256": "254a9689ac3328f2cd562514472af9e25ffc1b6b7d5f7f18d7b20e1bb5061e5e"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-comments-explicit/outputs/control-3.py",
+          "target": "outputs/control-3.py",
+          "sha256": "dcec3fcd1a61a4b0b67fc8c492751afbfa33397d6b2d7d0d40c62ffa7e75189b"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-comments-explicit/outputs/control-4.py",
+          "target": "outputs/control-4.py",
+          "sha256": "1fd3b4e373648f37333bcd4f2c64d4982579ad259ef4d9990683c010dde46d36"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-comments-explicit/outputs/control-5.py",
+          "target": "outputs/control-5.py",
+          "sha256": "baa8f0aecb5ba7737d6cd1632f3bd416a829b11c62f8f109a12c13164f30d126"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-comments-explicit/outputs/original-1.py",
+          "target": "outputs/original-1.py",
+          "sha256": "b3712aa99d39338ee59d91212173305d76afd544c71e302f002c8c48e4d1fc8d"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-comments-explicit/outputs/original-2.py",
+          "target": "outputs/original-2.py",
+          "sha256": "f5e772983890b03bfb6423e8443348ce548aa2fdb7a18a91c89040307d97a00d"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-comments-explicit/outputs/original-3.py",
+          "target": "outputs/original-3.py",
+          "sha256": "fe5dc0710ce628cfd3fdd70c9c041a703c558d1471e3340dc6d0e0cdd9fbb5c0"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-comments-explicit/outputs/original-4.py",
+          "target": "outputs/original-4.py",
+          "sha256": "a50c61fd0b54c2f7f1a7fe06289743d3b4a95b66e60f2dcd73f75958ae6825b6"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-comments-explicit/outputs/original-5.py",
+          "target": "outputs/original-5.py",
+          "sha256": "b1b12858b523cb227468c34c685fda89ff49c348b649b332290b74b9e7c38566"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-comments-explicit/policy.txt",
+          "target": "policy.txt",
+          "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-comments-explicit/prior-assessment.md",
+          "target": "prior-assessment.md",
+          "sha256": "9975da70d63f110b5a1a897a47afcd100a887a8fb6aed43514de73415410203a"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-comments-explicit/sources/MAINTAINER-NOTES.md",
+          "target": "sources/MAINTAINER-NOTES.md",
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-comments-explicit/sources/TASK.md",
+          "target": "sources/TASK.md",
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-comments-explicit/sources/uploader.py",
+          "target": "sources/uploader.py",
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        }
+      ],
+      "source_audit": [
+        {
+          "run_id": "20261021T072108085Z-cw-focused-codex-comments-explicit-candidate-targeted-examples-2f8ccb68-12a8-42d2-a663-2d60901037f8-5hzloha1",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "bde0a76a38e2ee8783a7e58a7ef45d39a0cecaf93f017ebba94e5ec28de2fbfa"
+        },
+        {
+          "run_id": "20261021T072252424Z-cw-focused-codex-comments-explicit-control-dc88d8b1-8821-4aa7-97d9-57fb3f84177d-2awax4of",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "8b9dbb8a1e84ca4c123d4a7249e8fb6d787aad5f68f767f683572c41ce83fa40"
+        },
+        {
+          "run_id": "20261021T072409401Z-cw-focused-codex-comments-explicit-original-f2b785ac-e2eb-4862-a636-2f2c847217fd-rh_hc8p_",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "b3712aa99d39338ee59d91212173305d76afd544c71e302f002c8c48e4d1fc8d"
+        },
+        {
+          "run_id": "20261021T072535750Z-cw-focused-codex-comments-explicit-control-b13b4e99-bee8-42f6-8b27-2210f983b688-chg1b6f1",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "254a9689ac3328f2cd562514472af9e25ffc1b6b7d5f7f18d7b20e1bb5061e5e"
+        },
+        {
+          "run_id": "20261021T072717716Z-cw-focused-codex-comments-explicit-original-b3bc1631-d15d-4a27-8ab6-daa9162f2a60-rsdbkoap",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "f5e772983890b03bfb6423e8443348ce548aa2fdb7a18a91c89040307d97a00d"
+        },
+        {
+          "run_id": "20261021T072816791Z-cw-focused-codex-comments-explicit-candidate-targeted-examples-6e554fd8-c1f7-4241-a4a5-105fccd2d843-srvzv696",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "d661bf7d56791541c4c20f9266a8cbd53bd9057d485bbc13cd7ab2af331ec76b"
+        },
+        {
+          "run_id": "20261021T073023669Z-cw-focused-codex-comments-explicit-original-ebdbbba3-7368-44e5-ac80-68e439f10808-q1_igszs",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "fe5dc0710ce628cfd3fdd70c9c041a703c558d1471e3340dc6d0e0cdd9fbb5c0"
+        },
+        {
+          "run_id": "20261021T073417782Z-cw-focused-codex-comments-explicit-candidate-targeted-examples-a7111074-2ac3-4893-96b1-30c009875f4f-ucx_1k_a",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "7c7acb97b20220f3520fa8d8b77d90a702869536c8684c4fbf898115ea396670"
+        },
+        {
+          "run_id": "20261021T073513076Z-cw-focused-codex-comments-explicit-control-bdac9b46-f301-419a-97fd-efff3a3b170e-h1itii9x",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "dcec3fcd1a61a4b0b67fc8c492751afbfa33397d6b2d7d0d40c62ffa7e75189b"
+        },
+        {
+          "run_id": "20261021T073640316Z-cw-focused-codex-comments-explicit-candidate-targeted-examples-0f74d102-c525-44c1-8b1a-3c6eb1d4f9f5-w4rfwdcc",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "60bf6456653fb1558f5dbf91f4fa097065843f620f4a9fc1be79cf7196dfe78b"
+        },
+        {
+          "run_id": "20261021T073742371Z-cw-focused-codex-comments-explicit-control-8bfc9bbc-92a5-47f0-8c9b-37333d573f17-2uhi62li",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "1fd3b4e373648f37333bcd4f2c64d4982579ad259ef4d9990683c010dde46d36"
+        },
+        {
+          "run_id": "20261021T073853118Z-cw-focused-codex-comments-explicit-original-b2878e59-823f-402b-98cf-6293ad042315-3fi5wbc_",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "a50c61fd0b54c2f7f1a7fe06289743d3b4a95b66e60f2dcd73f75958ae6825b6"
+        },
+        {
+          "run_id": "20261021T073958444Z-cw-focused-codex-comments-explicit-control-132bc8aa-377f-409e-93fc-7c94b0ee0cf2-9vj69k83",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "baa8f0aecb5ba7737d6cd1632f3bd416a829b11c62f8f109a12c13164f30d126"
+        },
+        {
+          "run_id": "20261021T074242377Z-cw-focused-codex-comments-explicit-original-8fd75509-e87f-44c8-8231-bb2a1bb2fa82-iqfmpihj",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "b1b12858b523cb227468c34c685fda89ff49c348b649b332290b74b9e7c38566"
+        },
+        {
+          "run_id": "20261021T074347535Z-cw-focused-codex-comments-explicit-candidate-targeted-examples-c64fa430-9fed-4c10-8c2f-8e717f23e5d9-hfn83bfe",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "5e4cb2a73af6b61c7f75aa02388cf55e6d37ef2de59517382b98b4c12f99e6c2"
+        }
+      ],
+      "order": 3,
+      "packet_inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-comments-explicit.inventory.json",
+        "sha256": "e8f31e97e343be57c66a916f8bcf4cadae880217710be287f9e1000b087a08ac",
+        "version": "1"
+      }
+    },
+    {
+      "name": "claude-long-handoff",
+      "subject_provider": "claude",
+      "case": "long-handoff",
+      "configuration": "skill-studies/concise-writing/runs/revised-body-discovery-01/evaluation/configs/claude-long-handoff.json",
+      "configuration_sha256": "b0355436ad5cf852f2fb76e7b47efa14c70fbaaf6dd124e80bedcc80e771fe07",
+      "packet": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff",
+      "outputs": 15,
+      "input_files": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/EVALUATION-INDEX.json",
+          "target": "EVALUATION-INDEX.json",
+          "sha256": "713f32d59c8726fdd800bc9dd63381668adfeddf052d9e46f9038068e9060e47"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/INTERPRETATION.md",
+          "target": "INTERPRETATION.md",
+          "sha256": "dfb3c05d7c5f345ecf7ea939ffbb131eb642df2dd93ee334e13e017fdd3f9df5"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/MECHANICAL-CHECKS.json",
+          "target": "MECHANICAL-CHECKS.json",
+          "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/WORD-COUNTS.json",
+          "target": "WORD-COUNTS.json",
+          "sha256": "06f2452cd88109ad8dc0264049a3e2489f471e4b9b966181e020754a041c92b5"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/criteria.md",
+          "target": "criteria.md",
+          "sha256": "1872303a325906ec13813e2afa0991b2b97490ff11414e7113c7c5cca19f4ed9"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/candidate-targeted-examples-1.md",
+          "target": "outputs/candidate-targeted-examples-1.md",
+          "sha256": "4bb7fb6e2835111f01ad7f1a0800c5773a9f7e6e318047b157f1b4977fa75e2a"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/candidate-targeted-examples-2.md",
+          "target": "outputs/candidate-targeted-examples-2.md",
+          "sha256": "afe2f2a2d426902cab1ff2300793c28b603c5e8416552a046dcdf2a5da8c73e5"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/candidate-targeted-examples-3.md",
+          "target": "outputs/candidate-targeted-examples-3.md",
+          "sha256": "41e6f690f55faee00b9bb748a888133b7acdc4dcbac7a2ba40d62ff554f5cb10"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/candidate-targeted-examples-4.md",
+          "target": "outputs/candidate-targeted-examples-4.md",
+          "sha256": "d66a602125d0023f8588e0417ed6b9441d11acf8bd2902f734be699ff56b808d"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/candidate-targeted-examples-5.md",
+          "target": "outputs/candidate-targeted-examples-5.md",
+          "sha256": "4bb7fb6e2835111f01ad7f1a0800c5773a9f7e6e318047b157f1b4977fa75e2a"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/control-1.md",
+          "target": "outputs/control-1.md",
+          "sha256": "007f48d7f01bccedd95f5e0e85fed23bef40b560e79b95f818297c0b6c20a278"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/control-2.md",
+          "target": "outputs/control-2.md",
+          "sha256": "5c10cf851a7fb5e027ebb92eaee27d10940219ab2cf833f357937f437f73c69a"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/control-3.md",
+          "target": "outputs/control-3.md",
+          "sha256": "f31de9681f0fd23d75ce008b9af880091184e82eb191a7987c55d26109058729"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/control-4.md",
+          "target": "outputs/control-4.md",
+          "sha256": "513b0a0bafd5fe1b0e851f440ae44530de4899e62ba45b4ec1a864674abdf3da"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/control-5.md",
+          "target": "outputs/control-5.md",
+          "sha256": "268dcf214822806cf33b4aefb4245529da4b4a61979b9c369dd5cbe6174d8071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/original-1.md",
+          "target": "outputs/original-1.md",
+          "sha256": "f3c6a8b3eb33037817c109cd61e11ea56852ac320cd4a4f662df22e4be3c32e7"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/original-2.md",
+          "target": "outputs/original-2.md",
+          "sha256": "daf0181ea59f014be5c3597eedbf85a76d9ae76814ec06abc0b9d00bd237bbda"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/original-3.md",
+          "target": "outputs/original-3.md",
+          "sha256": "cf4e7b3b31efc66f251315b8d56ab89653015ba925c239c542a85ceac0560c40"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/original-4.md",
+          "target": "outputs/original-4.md",
+          "sha256": "802a48c66542703493a358f36fd3a06567c71d7e453fef0ae3d9a333373b8e37"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/original-5.md",
+          "target": "outputs/original-5.md",
+          "sha256": "bc4daad00fe4968da153ffc767df42e1bb11376b404a82eb83b6c005a4e5f4f4"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/policy.txt",
+          "target": "policy.txt",
+          "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/prior-assessment.md",
+          "target": "prior-assessment.md",
+          "sha256": "f237dfd5b0b62d011b94ac87f53db5ca1587599488959f3eccd458d61645e5a6"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/sources/TASK.md",
+          "target": "sources/TASK.md",
+          "sha256": "8be0f67fe6b62ca0a1d5f3af9ac2ffea79eef0d0615f0979853079653b8feab8"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/sources/report.md",
+          "target": "sources/report.md",
+          "sha256": "0eb0946286d2a4b1708f14bcff5795cd1effdfa64af612a6cb9a89d2fac84737"
+        }
+      ],
+      "source_audit": [
+        {
+          "run_id": "20261021T132816993Z-cw-focused-claude-long-handoff-candidate-targeted-examples-461bc6cc-2b7e-441e-92cc-391876dc2883-dl9xtxy5",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "4bb7fb6e2835111f01ad7f1a0800c5773a9f7e6e318047b157f1b4977fa75e2a"
+        },
+        {
+          "run_id": "20261021T132954901Z-cw-focused-claude-long-handoff-control-f12f4a6b-c28f-47db-bcab-c695ab8e504e-_ea4ucdn",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "007f48d7f01bccedd95f5e0e85fed23bef40b560e79b95f818297c0b6c20a278"
+        },
+        {
+          "run_id": "20261021T133059755Z-cw-focused-claude-long-handoff-original-7992db3c-7963-4d02-b147-e4f56860b4d1-td_qfl53",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "f3c6a8b3eb33037817c109cd61e11ea56852ac320cd4a4f662df22e4be3c32e7"
+        },
+        {
+          "run_id": "20261021T133226648Z-cw-focused-claude-long-handoff-control-a875d6f6-e665-4eb3-a6a5-24d75e97be3b-ydcallhv",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "5c10cf851a7fb5e027ebb92eaee27d10940219ab2cf833f357937f437f73c69a"
+        },
+        {
+          "run_id": "20261021T133445822Z-cw-focused-claude-long-handoff-original-391ad17a-ebe0-4705-b5ef-9cebad95dae4-80g4e_yx",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "daf0181ea59f014be5c3597eedbf85a76d9ae76814ec06abc0b9d00bd237bbda"
+        },
+        {
+          "run_id": "20261021T133553186Z-cw-focused-claude-long-handoff-candidate-targeted-examples-e2009cde-890b-42ae-b917-e1ed87228c50-fl_d7cgm",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "afe2f2a2d426902cab1ff2300793c28b603c5e8416552a046dcdf2a5da8c73e5"
+        },
+        {
+          "run_id": "20261021T133657777Z-cw-focused-claude-long-handoff-original-43f9ec7f-5be7-4118-8271-76643255452a-f7i8p3e8",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "cf4e7b3b31efc66f251315b8d56ab89653015ba925c239c542a85ceac0560c40"
+        },
+        {
+          "run_id": "20261021T133815836Z-cw-focused-claude-long-handoff-candidate-targeted-examples-b8f43f73-6e1f-4fa9-bffb-b3fa8a9791ba-ex3mqu_5",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "41e6f690f55faee00b9bb748a888133b7acdc4dcbac7a2ba40d62ff554f5cb10"
+        },
+        {
+          "run_id": "20261021T134004725Z-cw-focused-claude-long-handoff-control-7a2c0d53-5c7a-49fb-80e7-e46d76529bf1-3hy4n1k3",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "f31de9681f0fd23d75ce008b9af880091184e82eb191a7987c55d26109058729"
+        },
+        {
+          "run_id": "20261021T134127984Z-cw-focused-claude-long-handoff-candidate-targeted-examples-3d0dc710-7677-4d8d-9b16-4bda5c19916f-50yffnh5",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "d66a602125d0023f8588e0417ed6b9441d11acf8bd2902f734be699ff56b808d"
+        },
+        {
+          "run_id": "20261021T134243049Z-cw-focused-claude-long-handoff-control-ca24a830-7c94-487a-863f-be7ba0207518-nnxzw1qj",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "513b0a0bafd5fe1b0e851f440ae44530de4899e62ba45b4ec1a864674abdf3da"
+        },
+        {
+          "run_id": "20261021T134410311Z-cw-focused-claude-long-handoff-original-92548067-1a5a-4b93-bcaf-e6a1d7450c2b-t1zwyliw",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "802a48c66542703493a358f36fd3a06567c71d7e453fef0ae3d9a333373b8e37"
+        },
+        {
+          "run_id": "20261021T134503654Z-cw-focused-claude-long-handoff-control-d5e81fd2-2f0c-4506-b411-05a03491bf00-8obwmfqs",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "268dcf214822806cf33b4aefb4245529da4b4a61979b9c369dd5cbe6174d8071"
+        },
+        {
+          "run_id": "20261021T134622734Z-cw-focused-claude-long-handoff-original-97c76cba-8949-4695-a690-0df3a558da91-wkz275lr",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "bc4daad00fe4968da153ffc767df42e1bb11376b404a82eb83b6c005a4e5f4f4"
+        },
+        {
+          "run_id": "20261021T134750109Z-cw-focused-claude-long-handoff-candidate-targeted-examples-e398868b-d359-472a-8a20-8b9a9790eb41-lfzh_qe2",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "4bb7fb6e2835111f01ad7f1a0800c5773a9f7e6e318047b157f1b4977fa75e2a"
+        }
+      ],
+      "order": 4,
+      "packet_inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff.inventory.json",
+        "sha256": "47b399062505ef3634bc7cc5be0f74c3decf0f1c32fc6272a0a9fd2fda1a8b8f",
+        "version": "1"
+      }
+    },
+    {
+      "name": "claude-document-addition",
+      "subject_provider": "claude",
+      "case": "document-addition",
+      "configuration": "skill-studies/concise-writing/runs/revised-body-discovery-01/evaluation/configs/claude-document-addition.json",
+      "configuration_sha256": "ed4f509dbdb486552fbc0be49539bb87bc495b3ed337632b9cbda8e29e6b14b6",
+      "packet": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition",
+      "outputs": 15,
+      "input_files": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/EVALUATION-INDEX.json",
+          "target": "EVALUATION-INDEX.json",
+          "sha256": "3f9178856a54db3b6f510cad6a80c94d85a025f91c872f6a126a9c5979c56054"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/INTERPRETATION.md",
+          "target": "INTERPRETATION.md",
+          "sha256": "dfb3c05d7c5f345ecf7ea939ffbb131eb642df2dd93ee334e13e017fdd3f9df5"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/MECHANICAL-CHECKS.json",
+          "target": "MECHANICAL-CHECKS.json",
+          "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/WORD-COUNTS.json",
+          "target": "WORD-COUNTS.json",
+          "sha256": "f8f6374666c78d794e716a6e0e83e528c22ae427679fe5f799bf387acc3d203c"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/criteria.md",
+          "target": "criteria.md",
+          "sha256": "84d388da8ddc54ec2bcfa4b2a1152fa07d14ad7e8828ba85b365e46b30f5ac88"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/outputs/candidate-targeted-examples-1.md",
+          "target": "outputs/candidate-targeted-examples-1.md",
+          "sha256": "aea0f703e01d51833a08c0496d1ce938ccf7e99ba84866e862e4dfbac5671b44"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/outputs/candidate-targeted-examples-2.md",
+          "target": "outputs/candidate-targeted-examples-2.md",
+          "sha256": "4865d4246d8547adda3936e5d5712e5819405d0070a7e70535ad75e3ecb00a6d"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/outputs/candidate-targeted-examples-3.md",
+          "target": "outputs/candidate-targeted-examples-3.md",
+          "sha256": "d8403f4e795a987df220659e0483c8842bcb2c06f1cc10da30970177b3ffa65c"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/outputs/candidate-targeted-examples-4.md",
+          "target": "outputs/candidate-targeted-examples-4.md",
+          "sha256": "f85d660c1e50671ef03454ae7c074a336207ee6f6d3ad38ad10a57e9c66ae5f5"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/outputs/candidate-targeted-examples-5.md",
+          "target": "outputs/candidate-targeted-examples-5.md",
+          "sha256": "87aebce10d84ac12131d8d7bd64e4017a82deea439a62c06e1520d6c4b7df104"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/outputs/control-1.md",
+          "target": "outputs/control-1.md",
+          "sha256": "708bae8e939dd5e0a57306a01f1e1fa243fc3b790509b324eb1b3ea895edb63d"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/outputs/control-2.md",
+          "target": "outputs/control-2.md",
+          "sha256": "ce305e8e9f25064784a40c16b266ae96e8827d1b694f93d475442f7d3a17881e"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/outputs/control-3.md",
+          "target": "outputs/control-3.md",
+          "sha256": "f55f4ebcd09dba0dcb56c51a7c675b10c8001c6c2347ccb0460a3f29f4717f57"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/outputs/control-4.md",
+          "target": "outputs/control-4.md",
+          "sha256": "bd38b16e4e5642e1450c7f6c4e61f978018752726b9dede6ce59c121a691b7f0"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/outputs/control-5.md",
+          "target": "outputs/control-5.md",
+          "sha256": "5a11682f1cc6d178572c7daf89d6108398a4d245a8b4002e82f482f4c75daee9"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/outputs/original-1.md",
+          "target": "outputs/original-1.md",
+          "sha256": "946db37dcbb352dc1a3c09d4430b48eccb9a89f09d5cbdba93afcee94e284612"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/outputs/original-2.md",
+          "target": "outputs/original-2.md",
+          "sha256": "10bf3a0411f31cab31c59c20e0776d6d1d9eb5716a1a6bc9214d5394857e78d2"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/outputs/original-3.md",
+          "target": "outputs/original-3.md",
+          "sha256": "a766d348176d3dd3ab19f0982feb1adeb068903258203b3e9bf6bb633c68d78f"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/outputs/original-4.md",
+          "target": "outputs/original-4.md",
+          "sha256": "ce61d489458ae849c5c44e62301579fc61c0cdcb1ae5f49dadc13ef1c13898ad"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/outputs/original-5.md",
+          "target": "outputs/original-5.md",
+          "sha256": "7d7014aa2e8ea59b5c17f43a1b3e023b736135f9dc91b631c533a4abceaefffc"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/policy.txt",
+          "target": "policy.txt",
+          "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/prior-assessment.md",
+          "target": "prior-assessment.md",
+          "sha256": "10ec940d7ebdfb1577aff7ea8053705e3de2b70376ac158e045ad695419107e7"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/sources/NEW-NOTES.md",
+          "target": "sources/NEW-NOTES.md",
+          "sha256": "8ff2f1ece29e88f352aefe87506c1afcf7e3174849dd978d20ec7065e8da3b74"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/sources/TASK.md",
+          "target": "sources/TASK.md",
+          "sha256": "d625196b6cf438dfe556238803851c5b86ae7f2eb07acaa31ddceb5c6e9b8db0"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/sources/report.md",
+          "target": "sources/report.md",
+          "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491"
+        }
+      ],
+      "source_audit": [
+        {
+          "run_id": "20261021T135147259Z-cw-focused-claude-document-addition-control-958f0762-454e-4b6a-b320-8af1db9e85f0-qynih0cm",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md",
+            "sources/NEW-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "708bae8e939dd5e0a57306a01f1e1fa243fc3b790509b324eb1b3ea895edb63d"
+        },
+        {
+          "run_id": "20261021T135248746Z-cw-focused-claude-document-addition-original-a8846f6d-99f3-4e97-aada-c9f9b8aa2f45-e0sydcqd",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md",
+            "sources/NEW-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "946db37dcbb352dc1a3c09d4430b48eccb9a89f09d5cbdba93afcee94e284612"
+        },
+        {
+          "run_id": "20261021T135352213Z-cw-focused-claude-document-addition-candidate-targeted-examples-a40d58d4-87c8-4c75-9295-a4206861ef21-syt0zh4e",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md",
+            "sources/NEW-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "aea0f703e01d51833a08c0496d1ce938ccf7e99ba84866e862e4dfbac5671b44"
+        },
+        {
+          "run_id": "20261021T135446677Z-cw-focused-claude-document-addition-original-c2dc552a-64dd-46d2-8528-e10e1d47b293-4qsik9ds",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md",
+            "sources/NEW-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "10bf3a0411f31cab31c59c20e0776d6d1d9eb5716a1a6bc9214d5394857e78d2"
+        },
+        {
+          "run_id": "20261021T135610959Z-cw-focused-claude-document-addition-candidate-targeted-examples-f8a82482-cd66-44d1-9d93-3d5c24accc2c-y9gjm7qw",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md",
+            "sources/NEW-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "4865d4246d8547adda3936e5d5712e5819405d0070a7e70535ad75e3ecb00a6d"
+        },
+        {
+          "run_id": "20261021T135709857Z-cw-focused-claude-document-addition-control-e02cc7c1-974c-4c1d-96f5-aaaf4e8fb1ef-ojlca6q6",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md",
+            "sources/NEW-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "ce305e8e9f25064784a40c16b266ae96e8827d1b694f93d475442f7d3a17881e"
+        },
+        {
+          "run_id": "20261021T135815218Z-cw-focused-claude-document-addition-candidate-targeted-examples-9a84cb78-0f20-4cbb-a86a-997479fbad63-r3ovtke0",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md",
+            "sources/NEW-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "d8403f4e795a987df220659e0483c8842bcb2c06f1cc10da30970177b3ffa65c"
+        },
+        {
+          "run_id": "20261021T135921138Z-cw-focused-claude-document-addition-control-20a87609-9095-4b87-a53e-7b51e5bbb4ee-obisloam",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md",
+            "sources/NEW-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "f55f4ebcd09dba0dcb56c51a7c675b10c8001c6c2347ccb0460a3f29f4717f57"
+        },
+        {
+          "run_id": "20261021T140032315Z-cw-focused-claude-document-addition-original-a37977bc-045b-4d2b-8dda-acfd3a616ccc-iok3mzq6",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md",
+            "sources/NEW-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "a766d348176d3dd3ab19f0982feb1adeb068903258203b3e9bf6bb633c68d78f"
+        },
+        {
+          "run_id": "20261021T140209140Z-cw-focused-claude-document-addition-control-48e12213-8a5d-4bca-8420-f79a52d5cc1b-ymp1tvn8",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md",
+            "sources/NEW-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "bd38b16e4e5642e1450c7f6c4e61f978018752726b9dede6ce59c121a691b7f0"
+        },
+        {
+          "run_id": "20261021T140304204Z-cw-focused-claude-document-addition-original-570cf339-ae81-4283-950f-d00f148bc8db-wb_j3a78",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md",
+            "sources/NEW-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "ce61d489458ae849c5c44e62301579fc61c0cdcb1ae5f49dadc13ef1c13898ad"
+        },
+        {
+          "run_id": "20261021T140402917Z-cw-focused-claude-document-addition-candidate-targeted-examples-c76dcb47-7b77-40d8-a07f-a520e6c00480-nf7ozblz",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md",
+            "sources/NEW-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "f85d660c1e50671ef03454ae7c074a336207ee6f6d3ad38ad10a57e9c66ae5f5"
+        },
+        {
+          "run_id": "20261021T140527172Z-cw-focused-claude-document-addition-original-da466de9-3d22-49ce-b656-9743b1ba8d61-9h21hw0e",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md",
+            "sources/NEW-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "7d7014aa2e8ea59b5c17f43a1b3e023b736135f9dc91b631c533a4abceaefffc"
+        },
+        {
+          "run_id": "20261021T140616012Z-cw-focused-claude-document-addition-candidate-targeted-examples-68a9bcbb-d752-4677-9cc7-6e283bdd0fd0-tmmx2zc1",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md",
+            "sources/NEW-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "87aebce10d84ac12131d8d7bd64e4017a82deea439a62c06e1520d6c4b7df104"
+        },
+        {
+          "run_id": "20261021T140719301Z-cw-focused-claude-document-addition-control-adf17fd1-a422-4cd6-bba4-5ade8c19c9af-ilshpj0w",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md",
+            "sources/NEW-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "5a11682f1cc6d178572c7daf89d6108398a4d245a8b4002e82f482f4c75daee9"
+        }
+      ],
+      "order": 5,
+      "packet_inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition.inventory.json",
+        "sha256": "10740f3a3a239a0f2e509b2538fcab82b60c80b771f91de8b37789a119fa53cf",
+        "version": "1"
+      }
+    },
+    {
+      "name": "claude-comments-explicit",
+      "subject_provider": "claude",
+      "case": "comments-explicit",
+      "configuration": "skill-studies/concise-writing/runs/revised-body-discovery-01/evaluation/configs/claude-comments-explicit.json",
+      "configuration_sha256": "2437f04ba7c0e7c474a0291edc3bb3832c9a849845e8c70e5c47c1b9448db3de",
+      "packet": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-comments-explicit",
+      "outputs": 15,
+      "input_files": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-comments-explicit/EVALUATION-INDEX.json",
+          "target": "EVALUATION-INDEX.json",
+          "sha256": "a2846a956eaf6cc8039c070e64c384686dfc2d00afdfc82c045d5de8bbbc5b87"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-comments-explicit/INTERPRETATION.md",
+          "target": "INTERPRETATION.md",
+          "sha256": "dfb3c05d7c5f345ecf7ea939ffbb131eb642df2dd93ee334e13e017fdd3f9df5"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-comments-explicit/MECHANICAL-CHECKS.json",
+          "target": "MECHANICAL-CHECKS.json",
+          "sha256": "b74a5b3da587915d49c0d63c0b58737df780524a7ea331e6ab5b1820a13b1227"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-comments-explicit/WORD-COUNTS.json",
+          "target": "WORD-COUNTS.json",
+          "sha256": "fd75f373e246a7650c824012844acc98f0e2dbbf0967dd77080f5d1bdfb3e2d5"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-comments-explicit/criteria.md",
+          "target": "criteria.md",
+          "sha256": "0a027f8d7d8cd3ba30246495abc8e9ffac152567a51f1dca80c7730ce31bca63"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-comments-explicit/outputs/candidate-targeted-examples-1.py",
+          "target": "outputs/candidate-targeted-examples-1.py",
+          "sha256": "ab497bde41162a6cd622f5425e4dc3d99a68014e154eef9aec29573784891fc0"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-comments-explicit/outputs/candidate-targeted-examples-2.py",
+          "target": "outputs/candidate-targeted-examples-2.py",
+          "sha256": "0ed81ef2df262fb22b97d352406ff986135bcbdca14b5519dfd7c5b4b78a0ef4"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-comments-explicit/outputs/candidate-targeted-examples-3.py",
+          "target": "outputs/candidate-targeted-examples-3.py",
+          "sha256": "a8b7a61500f92fff8edfcfcad60c8a1caf63e590af348288f6a9578eb69ccf73"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-comments-explicit/outputs/candidate-targeted-examples-4.py",
+          "target": "outputs/candidate-targeted-examples-4.py",
+          "sha256": "87ef7f982e65512758d0ed624dacf6a4552443fd7fed36f59592fa55e6feb61b"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-comments-explicit/outputs/candidate-targeted-examples-5.py",
+          "target": "outputs/candidate-targeted-examples-5.py",
+          "sha256": "81b318190f64a31fc3dced2b6e0adf888fb2ccf146d313f3a89eb8e4faf6b86b"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-comments-explicit/outputs/control-1.py",
+          "target": "outputs/control-1.py",
+          "sha256": "a90b77a19b97ff58fa450153008f9b3dcfdb175b8710c0957a242b0a48c9539a"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-comments-explicit/outputs/control-2.py",
+          "target": "outputs/control-2.py",
+          "sha256": "70fdd1ef3f4c3ffd85b7c44036f559276e77992d932b9f7591f42b144dc4c237"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-comments-explicit/outputs/control-3.py",
+          "target": "outputs/control-3.py",
+          "sha256": "526a0a04e46b92e52d719c37d0a9e0ab1f00eee1a5eba1f9614b40058f313b88"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-comments-explicit/outputs/control-4.py",
+          "target": "outputs/control-4.py",
+          "sha256": "a14814c0504cf51411f79653ef9bfbf3b94e4323ddfb1689f312df2ad58efab4"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-comments-explicit/outputs/control-5.py",
+          "target": "outputs/control-5.py",
+          "sha256": "70e073f6f32b8889cc41e13e70f48fc0ce6f087dc59f150e4a61ee5a2875f694"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-comments-explicit/outputs/original-1.py",
+          "target": "outputs/original-1.py",
+          "sha256": "063919114585841c45c94e1cc34a242e05829f74f34adba1c335a5fa2cbd2ed7"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-comments-explicit/outputs/original-2.py",
+          "target": "outputs/original-2.py",
+          "sha256": "1db68c64dbc7ac5496ea18ab81c8b1fcd96a58ee8506ab0914211700892fbc2b"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-comments-explicit/outputs/original-3.py",
+          "target": "outputs/original-3.py",
+          "sha256": "aff58fdc18e7451405ae65dd4b022dfd7c0fc43776fdc5aaa4b247ce9603c923"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-comments-explicit/outputs/original-4.py",
+          "target": "outputs/original-4.py",
+          "sha256": "8e42d792f1e5b26ec97a79bb63f7627afcbc78746855dfe55df18ef14d5aa1e5"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-comments-explicit/outputs/original-5.py",
+          "target": "outputs/original-5.py",
+          "sha256": "ae871b5f741e98039debe602659a60fd848742c1dd65de062a5600339de13bf8"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-comments-explicit/policy.txt",
+          "target": "policy.txt",
+          "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-comments-explicit/prior-assessment.md",
+          "target": "prior-assessment.md",
+          "sha256": "168eca30298bbfea098d3bd9be0b39e3c9befb541ceaa99e877ec4a9c4acd31f"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-comments-explicit/sources/MAINTAINER-NOTES.md",
+          "target": "sources/MAINTAINER-NOTES.md",
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-comments-explicit/sources/TASK.md",
+          "target": "sources/TASK.md",
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-comments-explicit/sources/uploader.py",
+          "target": "sources/uploader.py",
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        }
+      ],
+      "source_audit": [
+        {
+          "run_id": "20261021T140943478Z-cw-focused-claude-comments-explicit-original-8321dcc4-cedc-41d5-8d36-277c78147352-83sr3o1j",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "063919114585841c45c94e1cc34a242e05829f74f34adba1c335a5fa2cbd2ed7"
+        },
+        {
+          "run_id": "20261021T141113804Z-cw-focused-claude-comments-explicit-candidate-targeted-examples-0d48148a-2998-411e-9831-61fa0e3ef0bc-nmex72vk",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "ab497bde41162a6cd622f5425e4dc3d99a68014e154eef9aec29573784891fc0"
+        },
+        {
+          "run_id": "20261021T141220061Z-cw-focused-claude-comments-explicit-control-5f5d91fb-a731-4297-b24a-6c1ddf921305-nbel6rtf",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "a90b77a19b97ff58fa450153008f9b3dcfdb175b8710c0957a242b0a48c9539a"
+        },
+        {
+          "run_id": "20261021T141324651Z-cw-focused-claude-comments-explicit-candidate-targeted-examples-64ab2f5d-0117-4153-8677-ba141c60c4c2-vc1cz2_c",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "0ed81ef2df262fb22b97d352406ff986135bcbdca14b5519dfd7c5b4b78a0ef4"
+        },
+        {
+          "run_id": "20261021T141425745Z-cw-focused-claude-comments-explicit-control-a9727752-1338-4337-92aa-65f34c37cabb-zfnes4s2",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "70fdd1ef3f4c3ffd85b7c44036f559276e77992d932b9f7591f42b144dc4c237"
+        },
+        {
+          "run_id": "20261021T141533432Z-cw-focused-claude-comments-explicit-original-aad22941-31f0-4b2f-b04e-edd3bc7951af-_0tbsen4",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "1db68c64dbc7ac5496ea18ab81c8b1fcd96a58ee8506ab0914211700892fbc2b"
+        },
+        {
+          "run_id": "20261021T141619260Z-cw-focused-claude-comments-explicit-control-2685ae6c-f43d-43f2-95ae-7d0264803b4e-nq_0401c",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "526a0a04e46b92e52d719c37d0a9e0ab1f00eee1a5eba1f9614b40058f313b88"
+        },
+        {
+          "run_id": "20261021T141731114Z-cw-focused-claude-comments-explicit-original-82360600-d26e-449b-8eee-db25c1356cf7-pswfy6eg",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "aff58fdc18e7451405ae65dd4b022dfd7c0fc43776fdc5aaa4b247ce9603c923"
+        },
+        {
+          "run_id": "20261021T141825190Z-cw-focused-claude-comments-explicit-candidate-targeted-examples-d86e86ea-d4d0-47b0-94ca-24edab7323fc-ut1ssqnv",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "a8b7a61500f92fff8edfcfcad60c8a1caf63e590af348288f6a9578eb69ccf73"
+        },
+        {
+          "run_id": "20261021T141957328Z-cw-focused-claude-comments-explicit-original-a6d54df0-f6d6-4ed8-8f8d-154c4c4fbe7c-995m61ct",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "8e42d792f1e5b26ec97a79bb63f7627afcbc78746855dfe55df18ef14d5aa1e5"
+        },
+        {
+          "run_id": "20261021T142121344Z-cw-focused-claude-comments-explicit-candidate-targeted-examples-daec3140-054d-4988-9623-6e7785235033-fenaxba8",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "87ef7f982e65512758d0ed624dacf6a4552443fd7fed36f59592fa55e6feb61b"
+        },
+        {
+          "run_id": "20261021T142221419Z-cw-focused-claude-comments-explicit-control-257885d1-069a-4bc0-98d1-907b5095e453-hlmqjfp0",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "a14814c0504cf51411f79653ef9bfbf3b94e4323ddfb1689f312df2ad58efab4"
+        },
+        {
+          "run_id": "20261021T142333787Z-cw-focused-claude-comments-explicit-candidate-targeted-examples-ae5fb642-9f2b-4757-ae48-373ca8d3e56e-c650uysl",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "81b318190f64a31fc3dced2b6e0adf888fb2ccf146d313f3a89eb8e4faf6b86b"
+        },
+        {
+          "run_id": "20261021T142443860Z-cw-focused-claude-comments-explicit-control-00c4a28a-461c-402c-ae4f-10d045370da3-6ra57kf8",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "70e073f6f32b8889cc41e13e70f48fc0ce6f087dc59f150e4a61ee5a2875f694"
+        },
+        {
+          "run_id": "20261021T142552433Z-cw-focused-claude-comments-explicit-original-ecb981ba-acfe-4b39-bfc8-d7aeb79d5bd3-mvblcw22",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "ae871b5f741e98039debe602659a60fd848742c1dd65de062a5600339de13bf8"
+        }
+      ],
+      "order": 6,
+      "packet_inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-comments-explicit.inventory.json",
+        "sha256": "95baef1704d64f896de785c8073b7eaf5fe957f911275f6753f92d46f13ed2c5",
+        "version": "1"
+      }
+    },
+    {
+      "name": "codex-invocation-nonprose",
+      "subject_provider": "codex",
+      "case": "invocation-nonprose",
+      "configuration": "skill-studies/concise-writing/runs/revised-body-discovery-01/evaluation/configs/codex-invocation-nonprose.json",
+      "configuration_sha256": "f969525a2c173531bdde60aeef30688c1579f3bc4e97285d3a4c241903bea2cb",
+      "packet": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose",
+      "outputs": 15,
+      "input_files": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/EVALUATION-INDEX.json",
+          "target": "EVALUATION-INDEX.json",
+          "sha256": "6cdc9af1b1372b86e5f65b8a0b073002b2966eca11d1453c6678281b12258e52"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/INTERPRETATION.md",
+          "target": "INTERPRETATION.md",
+          "sha256": "dfb3c05d7c5f345ecf7ea939ffbb131eb642df2dd93ee334e13e017fdd3f9df5"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/MECHANICAL-CHECKS.json",
+          "target": "MECHANICAL-CHECKS.json",
+          "sha256": "79301292cf50919f5fda07de8cc18979a9919d4f5ba4f48f2a25eb8415109648"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/WORD-COUNTS.json",
+          "target": "WORD-COUNTS.json",
+          "sha256": "f9727fa46de3e38f50a220c65445c60c9e86abb09d0ec436df81062dcd608de8"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/criteria.md",
+          "target": "criteria.md",
+          "sha256": "bacf702ec15092258bdb6723cf3325dc153d97c49bc4eb0b00d88a6c561141e9"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/outputs/description-existing-1.toml",
+          "target": "outputs/description-existing-1.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/outputs/description-existing-1.toml.assistant-messages.json",
+          "target": "outputs/description-existing-1.toml.assistant-messages.json",
+          "sha256": "12e5cddc99b34b4d30ce27017d4f189e1f5e9f93f57de601fe4f71abf73afc9a"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/outputs/description-existing-2.toml",
+          "target": "outputs/description-existing-2.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/outputs/description-existing-2.toml.assistant-messages.json",
+          "target": "outputs/description-existing-2.toml.assistant-messages.json",
+          "sha256": "c91a0351f10c1d16d0ac5f725ee6baec03db33aed262ce06d0189660bbe81b50"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/outputs/description-existing-3.toml",
+          "target": "outputs/description-existing-3.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/outputs/description-existing-3.toml.assistant-messages.json",
+          "target": "outputs/description-existing-3.toml.assistant-messages.json",
+          "sha256": "cb1ca81db3b14876af986de16291f32a2fc8ff8c787ec037553fbd4540a868d2"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/outputs/description-existing-4.toml",
+          "target": "outputs/description-existing-4.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/outputs/description-existing-4.toml.assistant-messages.json",
+          "target": "outputs/description-existing-4.toml.assistant-messages.json",
+          "sha256": "aa8dbf10a9d6e74baa0a81e4f2aa7d8986185202960660f078ac0363fbdcb16a"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/outputs/description-existing-5.toml",
+          "target": "outputs/description-existing-5.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/outputs/description-existing-5.toml.assistant-messages.json",
+          "target": "outputs/description-existing-5.toml.assistant-messages.json",
+          "sha256": "09a88f9cd15b856113ac479d1f31882d404ce4def26a6c413949c268e7caa2aa"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/outputs/description-rewrite-1.toml",
+          "target": "outputs/description-rewrite-1.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/outputs/description-rewrite-1.toml.assistant-messages.json",
+          "target": "outputs/description-rewrite-1.toml.assistant-messages.json",
+          "sha256": "7eaf7b22cea39955c9fe4f13bb77fa97b69fa110324a8caad864a942eb9dab4a"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/outputs/description-rewrite-2.toml",
+          "target": "outputs/description-rewrite-2.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/outputs/description-rewrite-2.toml.assistant-messages.json",
+          "target": "outputs/description-rewrite-2.toml.assistant-messages.json",
+          "sha256": "bcbb1f91c218d888bed227e0b01151a7a1c019f33b42dd5e5b5125478c9fa27b"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/outputs/description-rewrite-3.toml",
+          "target": "outputs/description-rewrite-3.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/outputs/description-rewrite-3.toml.assistant-messages.json",
+          "target": "outputs/description-rewrite-3.toml.assistant-messages.json",
+          "sha256": "4755f7c9e76d57c874e2b48635ecdae33411bf19b840b0a1dc64f6680f5f1452"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/outputs/description-rewrite-4.toml",
+          "target": "outputs/description-rewrite-4.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/outputs/description-rewrite-4.toml.assistant-messages.json",
+          "target": "outputs/description-rewrite-4.toml.assistant-messages.json",
+          "sha256": "1c170bd8965e0a326cfe126216d4f611e26c2b57dd6c3200fbb19303b266b05c"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/outputs/description-rewrite-5.toml",
+          "target": "outputs/description-rewrite-5.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/outputs/description-rewrite-5.toml.assistant-messages.json",
+          "target": "outputs/description-rewrite-5.toml.assistant-messages.json",
+          "sha256": "fa8b811557972884548163293295d185139e0098f95440e7b02bcb427579d27f"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/outputs/description-targeted-1.toml",
+          "target": "outputs/description-targeted-1.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/outputs/description-targeted-1.toml.assistant-messages.json",
+          "target": "outputs/description-targeted-1.toml.assistant-messages.json",
+          "sha256": "08a5c913c72ccf452d144c0554f9f6966345921846bd16a4de6235063f9823a9"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/outputs/description-targeted-2.toml",
+          "target": "outputs/description-targeted-2.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/outputs/description-targeted-2.toml.assistant-messages.json",
+          "target": "outputs/description-targeted-2.toml.assistant-messages.json",
+          "sha256": "5df0afc4ac2f823684a1133765abaea5f9c1210b57e48bcf7f576ea8b104d726"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/outputs/description-targeted-3.toml",
+          "target": "outputs/description-targeted-3.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/outputs/description-targeted-3.toml.assistant-messages.json",
+          "target": "outputs/description-targeted-3.toml.assistant-messages.json",
+          "sha256": "1d9c08ba202472b007e4553b772d839fd8d473469db74600c8047854460a76ff"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/outputs/description-targeted-4.toml",
+          "target": "outputs/description-targeted-4.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/outputs/description-targeted-4.toml.assistant-messages.json",
+          "target": "outputs/description-targeted-4.toml.assistant-messages.json",
+          "sha256": "f808da47e00720ad5d9224b13c497cc26cca914bae053e96fdd3a62db43bab88"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/outputs/description-targeted-5.toml",
+          "target": "outputs/description-targeted-5.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/outputs/description-targeted-5.toml.assistant-messages.json",
+          "target": "outputs/description-targeted-5.toml.assistant-messages.json",
+          "sha256": "d29b2b2c4bb4a184532c2b0bbe9b733682f97bd6376158ea0bd0be98accf676f"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/policy.txt",
+          "target": "policy.txt",
+          "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/prior-assessment.md",
+          "target": "prior-assessment.md",
+          "sha256": "086f3c82827d37a9900ee34a87da9cd7638ae97c62a750ba71aaeb3cdc71b093"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/sources/TASK.md",
+          "target": "sources/TASK.md",
+          "sha256": "8c960258723b03e87cfdae2fbfbd576c4ff4299206f02c87dcd50e9026c80733"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose/sources/settings.toml",
+          "target": "sources/settings.toml",
+          "sha256": "38f8a9ddd2d83dc10d2f3681c0e56663d2fa9907c16e105bcc4d7f3fb387158c"
+        }
+      ],
+      "source_audit": [
+        {
+          "run_id": "20261021T153808634Z-cw-focused-codex-invocation-nonprose-description-existing-11831896-ebbe-419e-babd-e768303357e8-arfrigtc",
+          "declared_non_skill_sources": [
+            "sources/settings.toml",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "run_id": "20261021T153852682Z-cw-focused-codex-invocation-nonprose-description-targeted-0adcc752-5b71-4f52-9351-77cb75fdd3da-iqzlqt2i",
+          "declared_non_skill_sources": [
+            "sources/settings.toml",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "run_id": "20261021T153940073Z-cw-focused-codex-invocation-nonprose-description-rewrite-aa4eb6f7-76c5-45c1-930b-10008749e164-k7agp5er",
+          "declared_non_skill_sources": [
+            "sources/settings.toml",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "run_id": "20261021T154029900Z-cw-focused-codex-invocation-nonprose-description-targeted-6b198f7d-d6a7-4827-8295-f60011bf3412-k_jyebnt",
+          "declared_non_skill_sources": [
+            "sources/settings.toml",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "run_id": "20261021T154342818Z-cw-focused-codex-invocation-nonprose-description-rewrite-d4dd0e6a-9896-4aa8-9614-0fb3573220f8-4nh163bn",
+          "declared_non_skill_sources": [
+            "sources/settings.toml",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "run_id": "20261021T154420787Z-cw-focused-codex-invocation-nonprose-description-existing-c64e1890-5db3-49ff-8cda-7a5547e45f44-cklgazwy",
+          "declared_non_skill_sources": [
+            "sources/settings.toml",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "run_id": "20261021T154501933Z-cw-focused-codex-invocation-nonprose-description-rewrite-97090985-3b2f-4a96-8f23-dd80a64bbf39-z1s1pjvu",
+          "declared_non_skill_sources": [
+            "sources/settings.toml",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "run_id": "20261021T154855784Z-cw-focused-codex-invocation-nonprose-description-existing-3e12f8db-9e40-4ded-9ba2-3f07cfc0db7b-80w2l74c",
+          "declared_non_skill_sources": [
+            "sources/settings.toml",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "run_id": "20261021T154937634Z-cw-focused-codex-invocation-nonprose-description-targeted-a5fd59f4-788a-4ea2-b8c8-33bacdf1d03f-ssss3htb",
+          "declared_non_skill_sources": [
+            "sources/settings.toml",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "run_id": "20261021T155015992Z-cw-focused-codex-invocation-nonprose-description-existing-0fef15fa-55fb-483f-bf5a-2e26a1b21d6f-zz_puzw8",
+          "declared_non_skill_sources": [
+            "sources/settings.toml",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "run_id": "20261021T155350288Z-cw-focused-codex-invocation-nonprose-description-targeted-5ceb1491-e144-4f78-988e-672ad245e880-1d1105fs",
+          "declared_non_skill_sources": [
+            "sources/settings.toml",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "run_id": "20261021T155420652Z-cw-focused-codex-invocation-nonprose-description-rewrite-9317499f-343b-4d0f-a2f7-91ae4ee1edfe-vz4v28_q",
+          "declared_non_skill_sources": [
+            "sources/settings.toml",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "run_id": "20261021T155449925Z-cw-focused-codex-invocation-nonprose-description-targeted-4b609a0c-6dce-4608-85fc-e598e174e7fb-ysg1ifyz",
+          "declared_non_skill_sources": [
+            "sources/settings.toml",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "run_id": "20261021T155853910Z-cw-focused-codex-invocation-nonprose-description-rewrite-8d8ccd28-aa16-4115-b0dd-d479c9548e27-6g5pukus",
+          "declared_non_skill_sources": [
+            "sources/settings.toml",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "run_id": "20261021T155927378Z-cw-focused-codex-invocation-nonprose-description-existing-52a5eade-80d4-41a7-ac5c-a810c375dcf6-_9vb0em6",
+          "declared_non_skill_sources": [
+            "sources/settings.toml",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        }
+      ],
+      "order": 7,
+      "packet_inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-nonprose.inventory.json",
+        "sha256": "edbdd0cf61e4faf0a4781ae451d070ce1f7f634863643a184b982687ba6a9bfb",
+        "version": "1"
+      }
+    },
+    {
+      "name": "codex-invocation-comments",
+      "subject_provider": "codex",
+      "case": "invocation-comments",
+      "configuration": "skill-studies/concise-writing/runs/revised-body-discovery-01/evaluation/configs/codex-invocation-comments.json",
+      "configuration_sha256": "a2b9f6c93fd658ea9cfb61d0d6f0087aebb5a2abf8d2a851e17d49c08f7561c9",
+      "packet": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-comments",
+      "outputs": 15,
+      "input_files": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-comments/EVALUATION-INDEX.json",
+          "target": "EVALUATION-INDEX.json",
+          "sha256": "31c99c92a41d58e08cb28a8a15e048b6e0663d4088430323a75a828004b7ce6e"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-comments/INTERPRETATION.md",
+          "target": "INTERPRETATION.md",
+          "sha256": "dfb3c05d7c5f345ecf7ea939ffbb131eb642df2dd93ee334e13e017fdd3f9df5"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-comments/MECHANICAL-CHECKS.json",
+          "target": "MECHANICAL-CHECKS.json",
+          "sha256": "944b1e52736c30820fa7a4bc02089c9fb5f225c20a6db5cddb008b33755de709"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-comments/WORD-COUNTS.json",
+          "target": "WORD-COUNTS.json",
+          "sha256": "9617d519dc9ba54c354b99bd054ea077c164d7556b63d1120a6fc59ff8f4c16c"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-comments/criteria.md",
+          "target": "criteria.md",
+          "sha256": "278087ab739b4a2315d1f7fcf2554b20cc1288189e269625215f2313ec6bb999"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-comments/outputs/description-existing-1.py",
+          "target": "outputs/description-existing-1.py",
+          "sha256": "e33a3bdd50a360cef8fbf4479fe913c73c487d59507a71ba8af8602f16c08f28"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-comments/outputs/description-existing-2.py",
+          "target": "outputs/description-existing-2.py",
+          "sha256": "67a0a2dcec76026f92fdafb2ce56845a6c54e028acb10e28802c0275605d2fab"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-comments/outputs/description-existing-3.py",
+          "target": "outputs/description-existing-3.py",
+          "sha256": "39ee4ba424d7644ff84fdb7ddaad2a0e9171cd14a078f9f422cb8251302eff7f"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-comments/outputs/description-existing-4.py",
+          "target": "outputs/description-existing-4.py",
+          "sha256": "33bd3f114df78a18587ffbde7bdb989815ca2fd1080b7c9c6fedfe347da26b90"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-comments/outputs/description-existing-5.py",
+          "target": "outputs/description-existing-5.py",
+          "sha256": "b90ac209ad5bdccacca122fed310f0ac5aa535be8f6c46527c95b5c441cf6a73"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-comments/outputs/description-rewrite-1.py",
+          "target": "outputs/description-rewrite-1.py",
+          "sha256": "718c853a9fa0b2fa27e99d3efb7c72861cc819c10b216e09200f11e55b51b0c1"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-comments/outputs/description-rewrite-2.py",
+          "target": "outputs/description-rewrite-2.py",
+          "sha256": "65d1175b34802a853676d5a885c5edfe6f887ec7e82d856a64cd001e2f6fb033"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-comments/outputs/description-rewrite-3.py",
+          "target": "outputs/description-rewrite-3.py",
+          "sha256": "6745f69fb8dbf3579c4a04bb1615dd88801bac6f55d0838b1915fcc3d634482f"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-comments/outputs/description-rewrite-4.py",
+          "target": "outputs/description-rewrite-4.py",
+          "sha256": "cb59f7b1b5ab9f302b0a5715396e50d220e95bd287f1f3e944f09cb3b3e327df"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-comments/outputs/description-rewrite-5.py",
+          "target": "outputs/description-rewrite-5.py",
+          "sha256": "7ba2cd19827127a0de976c065f0d0652a455f8dda1da81ff58acc92ef9df5f0d"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-comments/outputs/description-targeted-1.py",
+          "target": "outputs/description-targeted-1.py",
+          "sha256": "83a2909f3caf4629980b7ec0ad7135a48cfd829e6c18935e4debaf799c39f27a"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-comments/outputs/description-targeted-2.py",
+          "target": "outputs/description-targeted-2.py",
+          "sha256": "b658d5bb26a77062ac87fafec394e061eb442636b8dcb52dc6d0ec915f49b123"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-comments/outputs/description-targeted-3.py",
+          "target": "outputs/description-targeted-3.py",
+          "sha256": "ca4793281a1a873e57c920c88cf6266be50b370525827efd19732a6b3f648b13"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-comments/outputs/description-targeted-4.py",
+          "target": "outputs/description-targeted-4.py",
+          "sha256": "fd5df46a1ae3de9088df1fc0221e9f6e3bf827631e38781d0a5dc5a432eceb6c"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-comments/outputs/description-targeted-5.py",
+          "target": "outputs/description-targeted-5.py",
+          "sha256": "a5d54c03c18452831f59e6822ba924befc1e028412100d5a1703a1e6bb275817"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-comments/policy.txt",
+          "target": "policy.txt",
+          "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-comments/prior-assessment.md",
+          "target": "prior-assessment.md",
+          "sha256": "1c1f082301e5de70aa42f41c91d6329455e03e27746f1dc733dde1f07c19db82"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-comments/sources/MAINTAINER-NOTES.md",
+          "target": "sources/MAINTAINER-NOTES.md",
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-comments/sources/TASK.md",
+          "target": "sources/TASK.md",
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-comments/sources/uploader.py",
+          "target": "sources/uploader.py",
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        }
+      ],
+      "source_audit": [
+        {
+          "run_id": "20261021T160304309Z-cw-focused-codex-invocation-comments-description-targeted-313b3c35-7ed8-474e-930c-b9541b9f44f2-2gt1nchx",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "83a2909f3caf4629980b7ec0ad7135a48cfd829e6c18935e4debaf799c39f27a"
+        },
+        {
+          "run_id": "20261021T160428207Z-cw-focused-codex-invocation-comments-description-rewrite-3db1c55c-d7b1-4f98-8aad-946895209a7b-g7axuzx7",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "718c853a9fa0b2fa27e99d3efb7c72861cc819c10b216e09200f11e55b51b0c1"
+        },
+        {
+          "run_id": "20261021T160514486Z-cw-focused-codex-invocation-comments-description-existing-8ba4b395-43af-4445-bb84-b702cdabe706-4dv3ogrw",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "e33a3bdd50a360cef8fbf4479fe913c73c487d59507a71ba8af8602f16c08f28"
+        },
+        {
+          "run_id": "20261021T160559478Z-cw-focused-codex-invocation-comments-description-rewrite-1ddaff97-b0f0-49cf-b09f-33656b833e89-xdvyq317",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "65d1175b34802a853676d5a885c5edfe6f887ec7e82d856a64cd001e2f6fb033"
+        },
+        {
+          "run_id": "20261021T160904665Z-cw-focused-codex-invocation-comments-description-existing-b975a59a-ce5c-4e83-b0b2-08a200cd15e2-qs7iov1m",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "67a0a2dcec76026f92fdafb2ce56845a6c54e028acb10e28802c0275605d2fab"
+        },
+        {
+          "run_id": "20261021T160957265Z-cw-focused-codex-invocation-comments-description-targeted-a3c3f74e-1a4d-4ff7-95dc-354bef68f410-44hq9b4_",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "b658d5bb26a77062ac87fafec394e061eb442636b8dcb52dc6d0ec915f49b123"
+        },
+        {
+          "run_id": "20261021T161121263Z-cw-focused-codex-invocation-comments-description-existing-0af35299-da5c-4345-a036-ad7403e715b9-v0abmk9e",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "39ee4ba424d7644ff84fdb7ddaad2a0e9171cd14a078f9f422cb8251302eff7f"
+        },
+        {
+          "run_id": "20261021T161426631Z-cw-focused-codex-invocation-comments-description-targeted-106f688d-55f0-4eb6-bc03-6e10ddcf386a-rcem1aq_",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "ca4793281a1a873e57c920c88cf6266be50b370525827efd19732a6b3f648b13"
+        },
+        {
+          "run_id": "20261021T161518629Z-cw-focused-codex-invocation-comments-description-rewrite-6500cb93-9680-41e8-a68f-fa2459d96889-jjzr16ve",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "6745f69fb8dbf3579c4a04bb1615dd88801bac6f55d0838b1915fcc3d634482f"
+        },
+        {
+          "run_id": "20261021T161613436Z-cw-focused-codex-invocation-comments-description-targeted-e5e42d63-8ae8-4fa7-b92c-5057a7a6abb4-5n6dinpc",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "fd5df46a1ae3de9088df1fc0221e9f6e3bf827631e38781d0a5dc5a432eceb6c"
+        },
+        {
+          "run_id": "20261021T161857075Z-cw-focused-codex-invocation-comments-description-rewrite-f1688a46-19ca-4603-9dcd-6356e023c092-9pjv1noh",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "cb59f7b1b5ab9f302b0a5715396e50d220e95bd287f1f3e944f09cb3b3e327df"
+        },
+        {
+          "run_id": "20261021T161956684Z-cw-focused-codex-invocation-comments-description-existing-2424e560-3f69-409f-9bc4-2597f489b60f-7nt2_au3",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "33bd3f114df78a18587ffbde7bdb989815ca2fd1080b7c9c6fedfe347da26b90"
+        },
+        {
+          "run_id": "20261021T162047052Z-cw-focused-codex-invocation-comments-description-rewrite-0fb33ce3-2ebf-4b76-9b53-c1fade0f9a0d-d9z2m8q9",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "7ba2cd19827127a0de976c065f0d0652a455f8dda1da81ff58acc92ef9df5f0d"
+        },
+        {
+          "run_id": "20261021T162412210Z-cw-focused-codex-invocation-comments-description-existing-2f888161-671d-4b92-b65b-71a727873fe4-xhdflj4i",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "b90ac209ad5bdccacca122fed310f0ac5aa535be8f6c46527c95b5c441cf6a73"
+        },
+        {
+          "run_id": "20261021T162451384Z-cw-focused-codex-invocation-comments-description-targeted-98606a80-cae4-48f0-8681-d7b025e4a14d-h2w4hbgd",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "a5d54c03c18452831f59e6822ba924befc1e028412100d5a1703a1e6bb275817"
+        }
+      ],
+      "order": 8,
+      "packet_inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-invocation-comments.inventory.json",
+        "sha256": "132434dd948cfb73943a0255aaa5a621fa1baea9066bc021fa229f67dfbd6728",
+        "version": "1"
+      }
+    },
+    {
+      "name": "claude-invocation-nonprose",
+      "subject_provider": "claude",
+      "case": "invocation-nonprose",
+      "configuration": "skill-studies/concise-writing/runs/revised-body-discovery-01/evaluation/configs/claude-invocation-nonprose.json",
+      "configuration_sha256": "91ef690f3e6ee32042db3ffea068e6ae9bd82c1ff4c77364adfae14ceab22d4d",
+      "packet": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose",
+      "outputs": 15,
+      "input_files": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/EVALUATION-INDEX.json",
+          "target": "EVALUATION-INDEX.json",
+          "sha256": "b858f4e11e13f19e5d09c4a33a66d96f64d0648c5cdef716547393b88b55a87a"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/INTERPRETATION.md",
+          "target": "INTERPRETATION.md",
+          "sha256": "dfb3c05d7c5f345ecf7ea939ffbb131eb642df2dd93ee334e13e017fdd3f9df5"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/MECHANICAL-CHECKS.json",
+          "target": "MECHANICAL-CHECKS.json",
+          "sha256": "8e91071af8d5c6aa07e5849f231a29cc4c49e41e151d5797b7570a3b5a4471d7"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/WORD-COUNTS.json",
+          "target": "WORD-COUNTS.json",
+          "sha256": "75f7156cc798731f9bb71a506673955622648874ed1a2273caed7f60b17b878d"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/criteria.md",
+          "target": "criteria.md",
+          "sha256": "bacf702ec15092258bdb6723cf3325dc153d97c49bc4eb0b00d88a6c561141e9"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-existing-1.toml",
+          "target": "outputs/description-existing-1.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-existing-1.toml.assistant-messages.json",
+          "target": "outputs/description-existing-1.toml.assistant-messages.json",
+          "sha256": "61ab9befeeecc7e42e73a6444fcda0388e3dabaed09954c2fa1493970a329d50"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-existing-2.toml",
+          "target": "outputs/description-existing-2.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-existing-2.toml.assistant-messages.json",
+          "target": "outputs/description-existing-2.toml.assistant-messages.json",
+          "sha256": "61ab9befeeecc7e42e73a6444fcda0388e3dabaed09954c2fa1493970a329d50"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-existing-3.toml",
+          "target": "outputs/description-existing-3.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-existing-3.toml.assistant-messages.json",
+          "target": "outputs/description-existing-3.toml.assistant-messages.json",
+          "sha256": "61ab9befeeecc7e42e73a6444fcda0388e3dabaed09954c2fa1493970a329d50"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-existing-4.toml",
+          "target": "outputs/description-existing-4.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-existing-4.toml.assistant-messages.json",
+          "target": "outputs/description-existing-4.toml.assistant-messages.json",
+          "sha256": "61ab9befeeecc7e42e73a6444fcda0388e3dabaed09954c2fa1493970a329d50"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-existing-5.toml",
+          "target": "outputs/description-existing-5.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-existing-5.toml.assistant-messages.json",
+          "target": "outputs/description-existing-5.toml.assistant-messages.json",
+          "sha256": "61ab9befeeecc7e42e73a6444fcda0388e3dabaed09954c2fa1493970a329d50"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-rewrite-1.toml",
+          "target": "outputs/description-rewrite-1.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-rewrite-1.toml.assistant-messages.json",
+          "target": "outputs/description-rewrite-1.toml.assistant-messages.json",
+          "sha256": "61ab9befeeecc7e42e73a6444fcda0388e3dabaed09954c2fa1493970a329d50"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-rewrite-2.toml",
+          "target": "outputs/description-rewrite-2.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-rewrite-2.toml.assistant-messages.json",
+          "target": "outputs/description-rewrite-2.toml.assistant-messages.json",
+          "sha256": "27ab8b2021614e1776c0c9e65ab762d2c34980e237df4e0c6919dc387ae254ea"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-rewrite-3.toml",
+          "target": "outputs/description-rewrite-3.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-rewrite-3.toml.assistant-messages.json",
+          "target": "outputs/description-rewrite-3.toml.assistant-messages.json",
+          "sha256": "3603a499b2362b2cadb11c34b8876d1b1351f1842249452c232f9a77835353b7"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-rewrite-4.toml",
+          "target": "outputs/description-rewrite-4.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-rewrite-4.toml.assistant-messages.json",
+          "target": "outputs/description-rewrite-4.toml.assistant-messages.json",
+          "sha256": "bf1044be890ab2d7d99923e2409d30e8583ebb2b4ed83e6384de06674afea46f"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-rewrite-5.toml",
+          "target": "outputs/description-rewrite-5.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-rewrite-5.toml.assistant-messages.json",
+          "target": "outputs/description-rewrite-5.toml.assistant-messages.json",
+          "sha256": "6c3cf00c036a2cdf115af6d44f6415c64f762cd5f29a06f2c838c902f8549d88"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-targeted-1.toml",
+          "target": "outputs/description-targeted-1.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-targeted-1.toml.assistant-messages.json",
+          "target": "outputs/description-targeted-1.toml.assistant-messages.json",
+          "sha256": "61ab9befeeecc7e42e73a6444fcda0388e3dabaed09954c2fa1493970a329d50"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-targeted-2.toml",
+          "target": "outputs/description-targeted-2.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-targeted-2.toml.assistant-messages.json",
+          "target": "outputs/description-targeted-2.toml.assistant-messages.json",
+          "sha256": "61ab9befeeecc7e42e73a6444fcda0388e3dabaed09954c2fa1493970a329d50"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-targeted-3.toml",
+          "target": "outputs/description-targeted-3.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-targeted-3.toml.assistant-messages.json",
+          "target": "outputs/description-targeted-3.toml.assistant-messages.json",
+          "sha256": "61ab9befeeecc7e42e73a6444fcda0388e3dabaed09954c2fa1493970a329d50"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-targeted-4.toml",
+          "target": "outputs/description-targeted-4.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-targeted-4.toml.assistant-messages.json",
+          "target": "outputs/description-targeted-4.toml.assistant-messages.json",
+          "sha256": "56acef08531d96ff89194276b4bc79d008743c6b12f6c323a67d519e7515cb7f"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-targeted-5.toml",
+          "target": "outputs/description-targeted-5.toml",
+          "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-targeted-5.toml.assistant-messages.json",
+          "target": "outputs/description-targeted-5.toml.assistant-messages.json",
+          "sha256": "61ab9befeeecc7e42e73a6444fcda0388e3dabaed09954c2fa1493970a329d50"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/policy.txt",
+          "target": "policy.txt",
+          "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/prior-assessment.md",
+          "target": "prior-assessment.md",
+          "sha256": "f356c36a5d0b2753939f222120e93513834afe769f9d7c17ada3b55c5054c3f5"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/sources/TASK.md",
+          "target": "sources/TASK.md",
+          "sha256": "8c960258723b03e87cfdae2fbfbd576c4ff4299206f02c87dcd50e9026c80733"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/sources/settings.toml",
+          "target": "sources/settings.toml",
+          "sha256": "38f8a9ddd2d83dc10d2f3681c0e56663d2fa9907c16e105bcc4d7f3fb387158c"
+        }
+      ],
+      "source_audit": [
+        {
+          "run_id": "20261021T162959267Z-cw-focused-claude-invocation-nonprose-description-rewrite-7f5630d9-f630-4b57-ba5a-9200e7a7ea4e-2rd3twb7",
+          "declared_non_skill_sources": [
+            "sources/settings.toml",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "run_id": "20261021T164839809Z-cw-focused-claude-invocation-nonprose-description-existing-c07918e6-98bc-4612-980e-dd1d13c590fa-5hhh1kvz",
+          "declared_non_skill_sources": [
+            "sources/settings.toml",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "run_id": "20261021T164912373Z-cw-focused-claude-invocation-nonprose-description-targeted-94f4130a-c83c-477d-81b6-9f8ce4035e18-w0jsxcsz",
+          "declared_non_skill_sources": [
+            "sources/settings.toml",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "run_id": "20261021T164950737Z-cw-focused-claude-invocation-nonprose-description-existing-a082a503-292c-4d77-a527-187e37e1d565-vmx7xwsd",
+          "declared_non_skill_sources": [
+            "sources/settings.toml",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "run_id": "20261021T165026040Z-cw-focused-claude-invocation-nonprose-description-targeted-4e687bf8-f929-4b48-8740-a97e05a281e7-4t5ivqyl",
+          "declared_non_skill_sources": [
+            "sources/settings.toml",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "run_id": "20261021T165105669Z-cw-focused-claude-invocation-nonprose-description-rewrite-7ca5b1fc-e6e5-4c64-a8a7-e89b87bfb63c-o2nwamu9",
+          "declared_non_skill_sources": [
+            "sources/settings.toml",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "run_id": "20261021T165238122Z-cw-focused-claude-invocation-nonprose-description-targeted-2ef57a4f-d453-491d-8261-450c8c6d1a87-vbggonlt",
+          "declared_non_skill_sources": [
+            "sources/settings.toml",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "run_id": "20261021T165302140Z-cw-focused-claude-invocation-nonprose-description-rewrite-abf330dc-f69d-4c9c-8bdd-c125f01b7b79-43lvmanl",
+          "declared_non_skill_sources": [
+            "sources/settings.toml",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "run_id": "20261021T165415112Z-cw-focused-claude-invocation-nonprose-description-existing-d5761a26-176f-44cf-871d-6b9aeb063ca1-l_6b6_1b",
+          "declared_non_skill_sources": [
+            "sources/settings.toml",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "run_id": "20261021T165502144Z-cw-focused-claude-invocation-nonprose-description-rewrite-3152d681-9502-402a-aa00-1ef4f7285f7e-m8qto3ka",
+          "declared_non_skill_sources": [
+            "sources/settings.toml",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "run_id": "20261021T165546446Z-cw-focused-claude-invocation-nonprose-description-existing-2dbd3863-015e-4415-85ed-87975a65ffc3-qc1oqkw5",
+          "declared_non_skill_sources": [
+            "sources/settings.toml",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "run_id": "20261021T165639681Z-cw-focused-claude-invocation-nonprose-description-targeted-2b66087a-25d5-4d5c-a929-d786deaf0c27-97un2obo",
+          "declared_non_skill_sources": [
+            "sources/settings.toml",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "run_id": "20261021T165706084Z-cw-focused-claude-invocation-nonprose-description-existing-eda66c54-7f98-4b17-9b00-698b8d314899-zbg3d2hs",
+          "declared_non_skill_sources": [
+            "sources/settings.toml",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "run_id": "20261021T165728653Z-cw-focused-claude-invocation-nonprose-description-targeted-3e6ff9c5-0e57-43e6-b7cb-81275745d628-c_n4_0y3",
+          "declared_non_skill_sources": [
+            "sources/settings.toml",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        },
+        {
+          "run_id": "20261021T165802230Z-cw-focused-claude-invocation-nonprose-description-rewrite-a50d809d-f809-4682-b20e-4266a6a207ce-995198nu",
+          "declared_non_skill_sources": [
+            "sources/settings.toml",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071"
+        }
+      ],
+      "order": 9,
+      "packet_inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose.inventory.json",
+        "sha256": "9c3f8652cf8716f5b755c6d2fc514c54f6f018714dde0b307bd18a2dadec7b01",
+        "version": "1"
+      }
+    },
+    {
+      "name": "claude-invocation-comments",
+      "subject_provider": "claude",
+      "case": "invocation-comments",
+      "configuration": "skill-studies/concise-writing/runs/revised-body-discovery-01/evaluation/configs/claude-invocation-comments.json",
+      "configuration_sha256": "2e0dce46cb64eb3494d0b04375e02aa15e74f2dc7a058688af25aa1306ad3e71",
+      "packet": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments",
+      "outputs": 15,
+      "input_files": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/EVALUATION-INDEX.json",
+          "target": "EVALUATION-INDEX.json",
+          "sha256": "538c2fc8c7194476b2ccc2319b9fb565f48ea0190a270616a6d8e1d99461a6c6"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/INTERPRETATION.md",
+          "target": "INTERPRETATION.md",
+          "sha256": "dfb3c05d7c5f345ecf7ea939ffbb131eb642df2dd93ee334e13e017fdd3f9df5"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/MECHANICAL-CHECKS.json",
+          "target": "MECHANICAL-CHECKS.json",
+          "sha256": "187de0fe3ff9f0e5761e0e4e249f9d0e186fab5529f7eb0c1b06e785d7088148"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/WORD-COUNTS.json",
+          "target": "WORD-COUNTS.json",
+          "sha256": "7088c2ce8a5e5fea38d2b1b58c13460a60e2a73e0d5335c06552fe6c10c1421d"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/criteria.md",
+          "target": "criteria.md",
+          "sha256": "278087ab739b4a2315d1f7fcf2554b20cc1288189e269625215f2313ec6bb999"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/outputs/description-existing-1.py",
+          "target": "outputs/description-existing-1.py",
+          "sha256": "e89e3ced16876ca5daf8596bcaff51b3532a9435b76791c0198ac42a637fbcb9"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/outputs/description-existing-2.py",
+          "target": "outputs/description-existing-2.py",
+          "sha256": "45251cb13a8e1890e011db4a3ed64fcc1739e2b42554e5424f4c20c79e2d5c39"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/outputs/description-existing-3.py",
+          "target": "outputs/description-existing-3.py",
+          "sha256": "671cc78ee8a88355b4cf318ae215f191ca2b7052ed1af03bc03f3f7f1e010a7e"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/outputs/description-existing-4.py",
+          "target": "outputs/description-existing-4.py",
+          "sha256": "0e836ad602aa1fd3dc50032492b5effed8f1563aba58343d74ec79b77fbbe580"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/outputs/description-existing-5.py",
+          "target": "outputs/description-existing-5.py",
+          "sha256": "5cf4d452f3a777cdf2d472226b6030e3fef30089f6d510e100583d0a4ce29062"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/outputs/description-rewrite-1.py",
+          "target": "outputs/description-rewrite-1.py",
+          "sha256": "ca555d163a58e873888d7bae6d6a50ba326d0195a59e945cea82eae928f1ba31"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/outputs/description-rewrite-2.py",
+          "target": "outputs/description-rewrite-2.py",
+          "sha256": "7a9efd7e140af187a59ffedd682126f6af685929c7c719ddf54608d1e393d186"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/outputs/description-rewrite-3.py",
+          "target": "outputs/description-rewrite-3.py",
+          "sha256": "0098a8474949d2f6a76931abd481ca52b20888fde37a81755e613be5ebfeeb8a"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/outputs/description-rewrite-4.py",
+          "target": "outputs/description-rewrite-4.py",
+          "sha256": "8aa71d5ca98ade38965b2f2abdf426c698d078ecdbcb8a806bac5410b8a9fafd"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/outputs/description-rewrite-5.py",
+          "target": "outputs/description-rewrite-5.py",
+          "sha256": "b6d05a78ddc380607fb3d31303dd943b62e12517d633b975614cef09d1f2dbfe"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/outputs/description-targeted-1.py",
+          "target": "outputs/description-targeted-1.py",
+          "sha256": "37795a5ed33f45052834aec79b1ded76022a0442692416d8b63c1cab0deaaea2"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/outputs/description-targeted-2.py",
+          "target": "outputs/description-targeted-2.py",
+          "sha256": "59f1fcab029799ab7e2fb6636c786460b4b1be1cb2952cbe5cba7a9f261681c6"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/outputs/description-targeted-3.py",
+          "target": "outputs/description-targeted-3.py",
+          "sha256": "8f9979ef244c3ec4e43850197460e8fa7e6546fb11256809998902b094687e31"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/outputs/description-targeted-4.py",
+          "target": "outputs/description-targeted-4.py",
+          "sha256": "d8077cdbd0fc0c427d77807059176ca9be34198d5475c0f7299af5a5dee42c15"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/outputs/description-targeted-5.py",
+          "target": "outputs/description-targeted-5.py",
+          "sha256": "68eb38b98b16c9a697dcdee84534bb1cd2cf609e431e17a0b1282dd8a3883730"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/policy.txt",
+          "target": "policy.txt",
+          "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/prior-assessment.md",
+          "target": "prior-assessment.md",
+          "sha256": "d6136e641897417024613b433355785e778914ed084a8fc53758a534fea1f4f1"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/sources/MAINTAINER-NOTES.md",
+          "target": "sources/MAINTAINER-NOTES.md",
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/sources/TASK.md",
+          "target": "sources/TASK.md",
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/sources/uploader.py",
+          "target": "sources/uploader.py",
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        }
+      ],
+      "source_audit": [
+        {
+          "run_id": "20261021T170100634Z-cw-focused-claude-invocation-comments-description-existing-39ebc29c-b517-45c5-acfb-82a12f8a67ee-a945a3l_",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "e89e3ced16876ca5daf8596bcaff51b3532a9435b76791c0198ac42a637fbcb9"
+        },
+        {
+          "run_id": "20261021T170158130Z-cw-focused-claude-invocation-comments-description-targeted-34d201b2-8860-46b4-96ac-5df5dc1bb546-r43bctgf",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "37795a5ed33f45052834aec79b1ded76022a0442692416d8b63c1cab0deaaea2"
+        },
+        {
+          "run_id": "20261021T170253709Z-cw-focused-claude-invocation-comments-description-rewrite-82de3284-beb6-4872-8f46-e06ce7e50d59-uiivu8lk",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "ca555d163a58e873888d7bae6d6a50ba326d0195a59e945cea82eae928f1ba31"
+        },
+        {
+          "run_id": "20261021T170400648Z-cw-focused-claude-invocation-comments-description-targeted-1debdc7d-b678-4feb-81f2-e564ed53a2fc-yn8amx11",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "59f1fcab029799ab7e2fb6636c786460b4b1be1cb2952cbe5cba7a9f261681c6"
+        },
+        {
+          "run_id": "20261021T170517788Z-cw-focused-claude-invocation-comments-description-rewrite-52131708-fb75-4688-957a-1e3b85783d77-7a70kmbk",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "7a9efd7e140af187a59ffedd682126f6af685929c7c719ddf54608d1e393d186"
+        },
+        {
+          "run_id": "20261021T170631798Z-cw-focused-claude-invocation-comments-description-existing-703e0aa6-0e44-4596-a821-128de15eb304-evukrno4",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "45251cb13a8e1890e011db4a3ed64fcc1739e2b42554e5424f4c20c79e2d5c39"
+        },
+        {
+          "run_id": "20261021T170745789Z-cw-focused-claude-invocation-comments-description-rewrite-b8927e01-580c-4acb-bec3-2a4ce112cbfb-b_vgff8b",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "0098a8474949d2f6a76931abd481ca52b20888fde37a81755e613be5ebfeeb8a"
+        },
+        {
+          "run_id": "20261021T170845148Z-cw-focused-claude-invocation-comments-description-existing-c55340d6-b4d4-4d43-b2e8-8ab4bb97432a-t9qor6pr",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "671cc78ee8a88355b4cf318ae215f191ca2b7052ed1af03bc03f3f7f1e010a7e"
+        },
+        {
+          "run_id": "20261021T170948671Z-cw-focused-claude-invocation-comments-description-targeted-17171b72-59b1-474a-a436-619466999424-1n5wkgyo",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "8f9979ef244c3ec4e43850197460e8fa7e6546fb11256809998902b094687e31"
+        },
+        {
+          "run_id": "20261021T171102018Z-cw-focused-claude-invocation-comments-description-existing-14d99aa1-1874-40e3-8a69-dd10b9b86a54-80hnzgef",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "0e836ad602aa1fd3dc50032492b5effed8f1563aba58343d74ec79b77fbbe580"
+        },
+        {
+          "run_id": "20261021T171154306Z-cw-focused-claude-invocation-comments-description-targeted-4c2007e4-48a3-4012-b178-0fd18400c02c-v02jvnko",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "d8077cdbd0fc0c427d77807059176ca9be34198d5475c0f7299af5a5dee42c15"
+        },
+        {
+          "run_id": "20261021T171256697Z-cw-focused-claude-invocation-comments-description-rewrite-c6eda3f1-34ce-42ae-b209-fe127224c6ae-vniybsrr",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "8aa71d5ca98ade38965b2f2abdf426c698d078ecdbcb8a806bac5410b8a9fafd"
+        },
+        {
+          "run_id": "20261021T171355983Z-cw-focused-claude-invocation-comments-description-targeted-cdd36e44-888d-43d6-8f01-fd18ffbee05b-og3pu8fv",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "68eb38b98b16c9a697dcdee84534bb1cd2cf609e431e17a0b1282dd8a3883730"
+        },
+        {
+          "run_id": "20261021T171510837Z-cw-focused-claude-invocation-comments-description-rewrite-421c1c54-b854-4468-9c83-5960f0bdbaff-313t3czi",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "b6d05a78ddc380607fb3d31303dd943b62e12517d633b975614cef09d1f2dbfe"
+        },
+        {
+          "run_id": "20261021T171645996Z-cw-focused-claude-invocation-comments-description-existing-0efea11f-ba7c-4e6e-9bd4-6283f8aa582c-efn3mqe_",
+          "declared_non_skill_sources": [
+            "sources/TASK.md",
+            "sources/uploader.py",
+            "sources/MAINTAINER-NOTES.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "5cf4d452f3a777cdf2d472226b6030e3fef30089f6d510e100583d0a4ce29062"
+        }
+      ],
+      "order": 10,
+      "packet_inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments.inventory.json",
+        "sha256": "b570e3ca6c60d94f99a6e2676489bf58b08452578a081d173781ef28a71f90f0",
+        "version": "1"
+      }
+    }
+  ]
+}

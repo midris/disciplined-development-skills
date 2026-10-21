@@ -1,0 +1,169 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-suite-opus-claude-invocation-nonprose",
+  "prompt": "../prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/INTERPRETATION.md",
+      "target": "INTERPRETATION.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/MECHANICAL-CHECKS.json",
+      "target": "MECHANICAL-CHECKS.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/WORD-COUNTS.json",
+      "target": "WORD-COUNTS.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/criteria.md",
+      "target": "criteria.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-existing-1.toml",
+      "target": "outputs/description-existing-1.toml"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-existing-1.toml.assistant-messages.json",
+      "target": "outputs/description-existing-1.toml.assistant-messages.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-existing-2.toml",
+      "target": "outputs/description-existing-2.toml"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-existing-2.toml.assistant-messages.json",
+      "target": "outputs/description-existing-2.toml.assistant-messages.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-existing-3.toml",
+      "target": "outputs/description-existing-3.toml"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-existing-3.toml.assistant-messages.json",
+      "target": "outputs/description-existing-3.toml.assistant-messages.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-existing-4.toml",
+      "target": "outputs/description-existing-4.toml"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-existing-4.toml.assistant-messages.json",
+      "target": "outputs/description-existing-4.toml.assistant-messages.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-existing-5.toml",
+      "target": "outputs/description-existing-5.toml"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-existing-5.toml.assistant-messages.json",
+      "target": "outputs/description-existing-5.toml.assistant-messages.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-rewrite-1.toml",
+      "target": "outputs/description-rewrite-1.toml"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-rewrite-1.toml.assistant-messages.json",
+      "target": "outputs/description-rewrite-1.toml.assistant-messages.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-rewrite-2.toml",
+      "target": "outputs/description-rewrite-2.toml"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-rewrite-2.toml.assistant-messages.json",
+      "target": "outputs/description-rewrite-2.toml.assistant-messages.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-rewrite-3.toml",
+      "target": "outputs/description-rewrite-3.toml"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-rewrite-3.toml.assistant-messages.json",
+      "target": "outputs/description-rewrite-3.toml.assistant-messages.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-rewrite-4.toml",
+      "target": "outputs/description-rewrite-4.toml"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-rewrite-4.toml.assistant-messages.json",
+      "target": "outputs/description-rewrite-4.toml.assistant-messages.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-rewrite-5.toml",
+      "target": "outputs/description-rewrite-5.toml"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-rewrite-5.toml.assistant-messages.json",
+      "target": "outputs/description-rewrite-5.toml.assistant-messages.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-targeted-1.toml",
+      "target": "outputs/description-targeted-1.toml"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-targeted-1.toml.assistant-messages.json",
+      "target": "outputs/description-targeted-1.toml.assistant-messages.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-targeted-2.toml",
+      "target": "outputs/description-targeted-2.toml"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-targeted-2.toml.assistant-messages.json",
+      "target": "outputs/description-targeted-2.toml.assistant-messages.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-targeted-3.toml",
+      "target": "outputs/description-targeted-3.toml"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-targeted-3.toml.assistant-messages.json",
+      "target": "outputs/description-targeted-3.toml.assistant-messages.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-targeted-4.toml",
+      "target": "outputs/description-targeted-4.toml"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-targeted-4.toml.assistant-messages.json",
+      "target": "outputs/description-targeted-4.toml.assistant-messages.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-targeted-5.toml",
+      "target": "outputs/description-targeted-5.toml"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/outputs/description-targeted-5.toml.assistant-messages.json",
+      "target": "outputs/description-targeted-5.toml.assistant-messages.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/policy.txt",
+      "target": "policy.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/prior-assessment.md",
+      "target": "prior-assessment.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/sources/TASK.md",
+      "target": "sources/TASK.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-nonprose/sources/settings.toml",
+      "target": "sources/settings.toml"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}

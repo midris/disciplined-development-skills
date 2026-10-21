@@ -1,0 +1,113 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-suite-opus-claude-document-addition",
+  "prompt": "../prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/INTERPRETATION.md",
+      "target": "INTERPRETATION.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/MECHANICAL-CHECKS.json",
+      "target": "MECHANICAL-CHECKS.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/WORD-COUNTS.json",
+      "target": "WORD-COUNTS.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/criteria.md",
+      "target": "criteria.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/outputs/candidate-targeted-examples-1.md",
+      "target": "outputs/candidate-targeted-examples-1.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/outputs/candidate-targeted-examples-2.md",
+      "target": "outputs/candidate-targeted-examples-2.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/outputs/candidate-targeted-examples-3.md",
+      "target": "outputs/candidate-targeted-examples-3.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/outputs/candidate-targeted-examples-4.md",
+      "target": "outputs/candidate-targeted-examples-4.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/outputs/candidate-targeted-examples-5.md",
+      "target": "outputs/candidate-targeted-examples-5.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/outputs/control-1.md",
+      "target": "outputs/control-1.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/outputs/control-2.md",
+      "target": "outputs/control-2.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/outputs/control-3.md",
+      "target": "outputs/control-3.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/outputs/control-4.md",
+      "target": "outputs/control-4.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/outputs/control-5.md",
+      "target": "outputs/control-5.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/outputs/original-1.md",
+      "target": "outputs/original-1.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/outputs/original-2.md",
+      "target": "outputs/original-2.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/outputs/original-3.md",
+      "target": "outputs/original-3.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/outputs/original-4.md",
+      "target": "outputs/original-4.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/outputs/original-5.md",
+      "target": "outputs/original-5.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/policy.txt",
+      "target": "policy.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/prior-assessment.md",
+      "target": "prior-assessment.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/sources/NEW-NOTES.md",
+      "target": "sources/NEW-NOTES.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/sources/TASK.md",
+      "target": "sources/TASK.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-document-addition/sources/report.md",
+      "target": "sources/report.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}

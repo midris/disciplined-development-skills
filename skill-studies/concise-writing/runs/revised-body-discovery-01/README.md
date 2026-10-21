@@ -21,3 +21,5 @@ The [Claude native-inspection amendment](preparation/native-inspection-amendment
 For Claude discovery after the first invocation, use [inspector v2](preparation/inspect_native_v2.py); the two native manifests freeze that controller-only amendment at `835a41fab005d537ee34c8bb9f056409678fa3cc`, with identical subject inputs and criteria.
 
 The [Claude discovery assessment](claude-discovery-focused-01-assessment.md) links the final [index](claude-discovery-focused-01-run-index.json), separate selection/task outcomes and the observed description trade-off across providers.
+
+The [Opus output-review package](evaluation/README.md) freezes ten fifteen-output packets, with first-pass/prior-score separation and a separate evaluator ledger.

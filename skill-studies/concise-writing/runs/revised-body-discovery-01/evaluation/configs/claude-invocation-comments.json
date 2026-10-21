@@ -1,0 +1,113 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-suite-opus-claude-invocation-comments",
+  "prompt": "../prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/INTERPRETATION.md",
+      "target": "INTERPRETATION.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/MECHANICAL-CHECKS.json",
+      "target": "MECHANICAL-CHECKS.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/WORD-COUNTS.json",
+      "target": "WORD-COUNTS.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/criteria.md",
+      "target": "criteria.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/outputs/description-existing-1.py",
+      "target": "outputs/description-existing-1.py"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/outputs/description-existing-2.py",
+      "target": "outputs/description-existing-2.py"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/outputs/description-existing-3.py",
+      "target": "outputs/description-existing-3.py"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/outputs/description-existing-4.py",
+      "target": "outputs/description-existing-4.py"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/outputs/description-existing-5.py",
+      "target": "outputs/description-existing-5.py"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/outputs/description-rewrite-1.py",
+      "target": "outputs/description-rewrite-1.py"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/outputs/description-rewrite-2.py",
+      "target": "outputs/description-rewrite-2.py"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/outputs/description-rewrite-3.py",
+      "target": "outputs/description-rewrite-3.py"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/outputs/description-rewrite-4.py",
+      "target": "outputs/description-rewrite-4.py"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/outputs/description-rewrite-5.py",
+      "target": "outputs/description-rewrite-5.py"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/outputs/description-targeted-1.py",
+      "target": "outputs/description-targeted-1.py"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/outputs/description-targeted-2.py",
+      "target": "outputs/description-targeted-2.py"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/outputs/description-targeted-3.py",
+      "target": "outputs/description-targeted-3.py"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/outputs/description-targeted-4.py",
+      "target": "outputs/description-targeted-4.py"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/outputs/description-targeted-5.py",
+      "target": "outputs/description-targeted-5.py"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/policy.txt",
+      "target": "policy.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/prior-assessment.md",
+      "target": "prior-assessment.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/sources/MAINTAINER-NOTES.md",
+      "target": "sources/MAINTAINER-NOTES.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/sources/TASK.md",
+      "target": "sources/TASK.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-invocation-comments/sources/uploader.py",
+      "target": "sources/uploader.py"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}

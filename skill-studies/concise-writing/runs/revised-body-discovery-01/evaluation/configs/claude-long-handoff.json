@@ -1,0 +1,109 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-suite-opus-claude-long-handoff",
+  "prompt": "../prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/INTERPRETATION.md",
+      "target": "INTERPRETATION.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/MECHANICAL-CHECKS.json",
+      "target": "MECHANICAL-CHECKS.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/WORD-COUNTS.json",
+      "target": "WORD-COUNTS.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/criteria.md",
+      "target": "criteria.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/candidate-targeted-examples-1.md",
+      "target": "outputs/candidate-targeted-examples-1.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/candidate-targeted-examples-2.md",
+      "target": "outputs/candidate-targeted-examples-2.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/candidate-targeted-examples-3.md",
+      "target": "outputs/candidate-targeted-examples-3.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/candidate-targeted-examples-4.md",
+      "target": "outputs/candidate-targeted-examples-4.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/candidate-targeted-examples-5.md",
+      "target": "outputs/candidate-targeted-examples-5.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/control-1.md",
+      "target": "outputs/control-1.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/control-2.md",
+      "target": "outputs/control-2.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/control-3.md",
+      "target": "outputs/control-3.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/control-4.md",
+      "target": "outputs/control-4.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/control-5.md",
+      "target": "outputs/control-5.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/original-1.md",
+      "target": "outputs/original-1.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/original-2.md",
+      "target": "outputs/original-2.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/original-3.md",
+      "target": "outputs/original-3.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/original-4.md",
+      "target": "outputs/original-4.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/outputs/original-5.md",
+      "target": "outputs/original-5.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/policy.txt",
+      "target": "policy.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/prior-assessment.md",
+      "target": "prior-assessment.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/sources/TASK.md",
+      "target": "sources/TASK.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/claude-long-handoff/sources/report.md",
+      "target": "sources/report.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}
