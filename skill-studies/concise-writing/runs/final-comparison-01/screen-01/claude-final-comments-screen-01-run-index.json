@@ -48,7 +48,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T192936761Z-cw-final-claude-comments-explicit-revised-body-179e8c05-6ac3-4f88-a491-4bf9aa00114f-wahfnx0c.json",
           "sha256": "7bf8574def5fa5bde78b6dd15462f65198aba8470bd3b5c3a9c64d87412f2947",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5853140a9e17f2f146baa90f51c52fb547e45e2f"
         }
       }
     },
@@ -96,7 +97,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T193637217Z-cw-final-claude-comments-explicit-original-body-5e474484-7f58-46a5-8f20-e0ce2475fe49-iwhaxcva.json",
           "sha256": "233a92ad9471f5aa25fa95953b441d49514c55b81629ad65cad54b4802f22955",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5853140a9e17f2f146baa90f51c52fb547e45e2f"
         }
       }
     },
@@ -144,7 +146,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T193718128Z-cw-final-claude-comments-explicit-original-body-d1a6de95-f8a7-4aae-b670-47c33c712d42-sx5l0p7h.json",
           "sha256": "96909b691c32055f70a553d168fcb52c70b5ae6c2ebd2d41ba53a999b59f032c",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5853140a9e17f2f146baa90f51c52fb547e45e2f"
         }
       }
     },
@@ -192,7 +195,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T193818029Z-cw-final-claude-comments-explicit-revised-body-ce1cf2d0-db00-4ac3-b9b9-e2402752d4e3-buzvu051.json",
           "sha256": "908b148b649d439c4805ff0164728162a9468fb017cf88949bafa8f6c4600ce7",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5853140a9e17f2f146baa90f51c52fb547e45e2f"
         }
       }
     },
@@ -240,7 +244,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T193852233Z-cw-final-claude-comments-explicit-revised-body-8f6afe52-2fa1-4edd-bac6-524c3e2abf6d-7k__l_sv.json",
           "sha256": "278e9fb4e0ec879496c12f767f54f0c5f1f0f9dba6503a8de699305aa705df85",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5853140a9e17f2f146baa90f51c52fb547e45e2f"
         }
       }
     },
@@ -288,7 +293,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T193924939Z-cw-final-claude-comments-explicit-original-body-a30c3cdd-d31e-411b-bbb4-353c9650397e-ywvr_40c.json",
           "sha256": "92857bfb1343aaf52080fdbb48d0966467ebe5e6a32782b01a5ca3f5eabcdcd7",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5853140a9e17f2f146baa90f51c52fb547e45e2f"
         }
       }
     }
