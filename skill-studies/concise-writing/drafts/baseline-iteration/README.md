@@ -12,7 +12,7 @@ None is adopted or installed; the protocol links completed comparison evidence a
 
 All three body drafts retain the baseline description; the revised body changes body guidance only.
 The separate [discovery proposal](discovery/proposal.md) compares that description with a [targeted edit](discovery/description-targeted.txt) and a [full rewrite](discovery/description-rewrite.txt), holding the revised body fixed.
-Both description candidates are untested, and their proposed allocations need owner approval.
+Both description candidates are untested; current collection authority and the later-stage decision belong to the protocol.
 The fuller draft retains all six named padding patterns, draft-first comparison, the over-trimming guard, the uncertainty flag, useful reinforcement and companion boundaries.
 It keeps the original LRU example with a fidelity correction alongside the constructed access-form example, without adopting the comprehensive candidate’s changed contract.
 The tested targeted draft keeps the original example and overall structure.
@@ -45,5 +45,5 @@ Both examples remove narration and repetition, but the LRU example illustrates a
 This is a bounded overlap for teaching two applications, not evidence that two examples are more effective.
 Whole-skill review and static checks confirm the exact edit scope, unchanged descriptions/rationalizations, faithful example transfer and byte-identical baseline frontmatter.
 The bundled quick_validate script could not run because PyYAML is unavailable; no dependency was installed, and unchanged frontmatter was verified directly instead.
-Behavioral effectiveness remains unvalidated; a new allocation, frozen inputs and relevant regression tests are required before relying on this variant or adopting it.
-The owner requests authorize body/description drafting, test planning and static review only; they do not authorize model calls or applying it to the live skill.
+Behavioral effectiveness remains unvalidated; the approved focused allocation still requires qualification and frozen inputs, with relevant later regression coverage before adoption.
+The protocol records the separate focused test authorization; drafting itself supplies no call authority or live-skill adoption.

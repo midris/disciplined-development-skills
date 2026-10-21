@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-focused-claude-invocation-nonprose-description-targeted",
+  "prompt": "../../../suite-2026-09-27/preparation/native-prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../cases/invocation-nonprose/fixture/settings.toml",
+      "target": "settings.toml"
+    },
+    {
+      "source": "../../../../cases/invocation-nonprose/task.md",
+      "target": "TASK.md"
+    },
+    {
+      "source": "../skills/description-targeted/SKILL.md",
+      "target": ".claude/skills/concise-writing/SKILL.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-sonnet-5",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}

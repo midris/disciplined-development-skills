@@ -16,3 +16,9 @@ A completed record or an undispatched preparation directory supplies no authoriz
 - [CW expanded and native suite](suite-2026-09-27/README.md)
 
 - [Baseline-derived remaining suite](baseline-iteration-suite-01/README.md): both-provider A/B/C and native N1–N4 comparisons, result records and grouped Opus reviews.
+
+- [Revised body and discovery](revised-body-discovery-01/README.md): focused body contribution and description selection comparison.
+
+- [Evaluation-guideline application audit](evaluation-application-audit-01/README.md): existing-rule audit, owner judgment and separate superseding result mapping.
+
+- [Holistic disputed-output reassessment](holistic-dispute-reassessment-01/README.md): complete-context reread of 102 compared artifacts, superseding result mapping and retained substantive findings.

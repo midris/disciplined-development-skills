@@ -2,8 +2,8 @@
 
 Format version: `1`
 Study ID: `concise-writing`
-Status: the tested original/targeted/fuller comparison and fourteen usable Opus reviews are complete; the owner-requested [revised targeted draft](drafts/baseline-iteration/targeted-examples/SKILL.md) and two [description candidates](drafts/baseline-iteration/discovery/proposal.md) are prepared but untested. The live skill remains unchanged and adoption is deferred.
-Current action: review the revised body, targeted/rewritten descriptions and the proposed focused-then-regression allocation; settle prospective scoring boundaries before freezing inputs; keep the completed comparison disagreements visible in the [reconciliation](runs/baseline-iteration-suite-01/evaluation/assessment.md). The owner authorized the revised body and discovery preparation, then approved replacing the targeted description with the agreed reader-facing-text wording; the three-arm test allocation remains proposed, with no new model calls or adoption authorized. The original authentication failure and its approved replacement remain separately retained and charged.
+Status: the focused allocation and assessment interpretation are finalized; input freeze and publication are in progress. Codex runtime identities match. Claude Code updated to 2.1.305 and passes fresh zero-model qualification, but its substitution awaits the owner decision. The live skill remains unchanged and adoption is deferred.
+Current action: commit and push the assessment corrections and focused preparation, freeze verified inputs, then begin the fixed Codex body sequence. Hold Claude dispatch until the owner accepts the qualified CLI substitution required by the [proposal](drafts/baseline-iteration/discovery/proposal.md#qualification-and-cross-model-review). All 150 focused subject and ten evaluator calls remain unused; later regression, automatic retries, further wording changes and adoption remain unapproved.
 The approved [core/runs directory layout](../../plans/specs/2026-10-18-study-directory-layout.md) is implemented and verified for both studies; [navigation](README.md) separates core guidance from collected evidence.
 On 2026-10-18 the owner replied “ok, let’s do it” to the concrete remaining allocation of 144 subject calls plus fourteen evaluator calls. This accepts unchanged targeted/fuller bodies, fresh original/control comparisons, three repetitions per selected condition/provider and reuse of the separate completed E stratum while input/runtime qualification holds.
 The authorized sequence is 72 ordinary A/B/C subjects, then 72 native N1–N4 subjects, plus six ordinary and eight native Opus 5.5 medium reviews.
@@ -774,6 +774,220 @@ Global ordering: all 72 ordinary attempts precede all 72 native attempts; the [s
 | 36 | invocation-comments | original | 3 | `skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/configs/claude-invocation-comments-original.json` |
 
 
+### Focused revised comparison: codex-body-focused-01
+
+Batch: codex-body-focused-01
+Scope: 45 sequential subjects, five repetitions per selected condition/case.
+Authority: owner-approved 150-subject/ten-review allocation at this protocol's opening; no automatic retry or adoption.
+Inputs and criteria: [preparation](runs/revised-body-discovery-01/preparation/README.md), with prospective interpretation boundaries and case/provider manifests.
+Runtime: pinned existing CLI/model/toolchain, qualified before dispatch; body contribution and native selection remain separate.
+Acceptance: complete fixed-stage descriptive outcomes with concrete source/output evidence; no reliability threshold, word-count gate or forced failure on a disputed paraphrase.
+Stop on infrastructure, contamination, capture/retention failure, input/runtime drift or uncertain charge; retain every valid behavioral miss.
+Record: [index](runs/revised-body-discovery-01/codex-body-focused-01-run-index.json).
+Global ordering: all 90 body subjects precede all 60 discovery subjects; [schedule](runs/revised-body-discovery-01/preparation/schedule.json).
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | long-handoff | control | 1 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-long-handoff-control.json` |
+| 2 | long-handoff | original | 1 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-long-handoff-original.json` |
+| 3 | long-handoff | candidate-targeted-examples | 1 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-long-handoff-candidate-targeted-examples.json` |
+| 4 | long-handoff | original | 2 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-long-handoff-original.json` |
+| 5 | long-handoff | candidate-targeted-examples | 2 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-long-handoff-candidate-targeted-examples.json` |
+| 6 | long-handoff | control | 2 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-long-handoff-control.json` |
+| 7 | long-handoff | candidate-targeted-examples | 3 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-long-handoff-candidate-targeted-examples.json` |
+| 8 | long-handoff | control | 3 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-long-handoff-control.json` |
+| 9 | long-handoff | original | 3 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-long-handoff-original.json` |
+| 10 | long-handoff | control | 4 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-long-handoff-control.json` |
+| 11 | long-handoff | original | 4 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-long-handoff-original.json` |
+| 12 | long-handoff | candidate-targeted-examples | 4 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-long-handoff-candidate-targeted-examples.json` |
+| 13 | long-handoff | original | 5 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-long-handoff-original.json` |
+| 14 | long-handoff | candidate-targeted-examples | 5 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-long-handoff-candidate-targeted-examples.json` |
+| 15 | long-handoff | control | 5 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-long-handoff-control.json` |
+| 16 | document-addition | original | 1 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-document-addition-original.json` |
+| 17 | document-addition | candidate-targeted-examples | 1 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-document-addition-candidate-targeted-examples.json` |
+| 18 | document-addition | control | 1 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-document-addition-control.json` |
+| 19 | document-addition | candidate-targeted-examples | 2 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-document-addition-candidate-targeted-examples.json` |
+| 20 | document-addition | control | 2 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-document-addition-control.json` |
+| 21 | document-addition | original | 2 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-document-addition-original.json` |
+| 22 | document-addition | control | 3 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-document-addition-control.json` |
+| 23 | document-addition | original | 3 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-document-addition-original.json` |
+| 24 | document-addition | candidate-targeted-examples | 3 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-document-addition-candidate-targeted-examples.json` |
+| 25 | document-addition | original | 4 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-document-addition-original.json` |
+| 26 | document-addition | candidate-targeted-examples | 4 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-document-addition-candidate-targeted-examples.json` |
+| 27 | document-addition | control | 4 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-document-addition-control.json` |
+| 28 | document-addition | candidate-targeted-examples | 5 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-document-addition-candidate-targeted-examples.json` |
+| 29 | document-addition | control | 5 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-document-addition-control.json` |
+| 30 | document-addition | original | 5 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-document-addition-original.json` |
+| 31 | comments-explicit | candidate-targeted-examples | 1 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-comments-explicit-candidate-targeted-examples.json` |
+| 32 | comments-explicit | control | 1 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-comments-explicit-control.json` |
+| 33 | comments-explicit | original | 1 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-comments-explicit-original.json` |
+| 34 | comments-explicit | control | 2 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-comments-explicit-control.json` |
+| 35 | comments-explicit | original | 2 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-comments-explicit-original.json` |
+| 36 | comments-explicit | candidate-targeted-examples | 2 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-comments-explicit-candidate-targeted-examples.json` |
+| 37 | comments-explicit | original | 3 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-comments-explicit-original.json` |
+| 38 | comments-explicit | candidate-targeted-examples | 3 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-comments-explicit-candidate-targeted-examples.json` |
+| 39 | comments-explicit | control | 3 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-comments-explicit-control.json` |
+| 40 | comments-explicit | candidate-targeted-examples | 4 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-comments-explicit-candidate-targeted-examples.json` |
+| 41 | comments-explicit | control | 4 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-comments-explicit-control.json` |
+| 42 | comments-explicit | original | 4 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-comments-explicit-original.json` |
+| 43 | comments-explicit | control | 5 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-comments-explicit-control.json` |
+| 44 | comments-explicit | original | 5 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-comments-explicit-original.json` |
+| 45 | comments-explicit | candidate-targeted-examples | 5 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-comments-explicit-candidate-targeted-examples.json` |
+
+
+### Focused revised comparison: claude-body-focused-01
+
+Batch: claude-body-focused-01
+Scope: 45 sequential subjects, five repetitions per selected condition/case.
+Authority: owner-approved 150-subject/ten-review allocation at this protocol's opening; no automatic retry or adoption.
+Inputs and criteria: [preparation](runs/revised-body-discovery-01/preparation/README.md), with prospective interpretation boundaries and case/provider manifests.
+Runtime: pinned existing CLI/model/toolchain, qualified before dispatch; body contribution and native selection remain separate.
+Acceptance: complete fixed-stage descriptive outcomes with concrete source/output evidence; no reliability threshold, word-count gate or forced failure on a disputed paraphrase.
+Stop on infrastructure, contamination, capture/retention failure, input/runtime drift or uncertain charge; retain every valid behavioral miss.
+Record: [index](runs/revised-body-discovery-01/claude-body-focused-01-run-index.json).
+Global ordering: all 90 body subjects precede all 60 discovery subjects; [schedule](runs/revised-body-discovery-01/preparation/schedule.json).
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | long-handoff | candidate-targeted-examples | 1 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-long-handoff-candidate-targeted-examples.json` |
+| 2 | long-handoff | control | 1 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-long-handoff-control.json` |
+| 3 | long-handoff | original | 1 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-long-handoff-original.json` |
+| 4 | long-handoff | control | 2 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-long-handoff-control.json` |
+| 5 | long-handoff | original | 2 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-long-handoff-original.json` |
+| 6 | long-handoff | candidate-targeted-examples | 2 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-long-handoff-candidate-targeted-examples.json` |
+| 7 | long-handoff | original | 3 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-long-handoff-original.json` |
+| 8 | long-handoff | candidate-targeted-examples | 3 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-long-handoff-candidate-targeted-examples.json` |
+| 9 | long-handoff | control | 3 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-long-handoff-control.json` |
+| 10 | long-handoff | candidate-targeted-examples | 4 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-long-handoff-candidate-targeted-examples.json` |
+| 11 | long-handoff | control | 4 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-long-handoff-control.json` |
+| 12 | long-handoff | original | 4 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-long-handoff-original.json` |
+| 13 | long-handoff | control | 5 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-long-handoff-control.json` |
+| 14 | long-handoff | original | 5 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-long-handoff-original.json` |
+| 15 | long-handoff | candidate-targeted-examples | 5 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-long-handoff-candidate-targeted-examples.json` |
+| 16 | document-addition | control | 1 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-document-addition-control.json` |
+| 17 | document-addition | original | 1 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-document-addition-original.json` |
+| 18 | document-addition | candidate-targeted-examples | 1 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-document-addition-candidate-targeted-examples.json` |
+| 19 | document-addition | original | 2 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-document-addition-original.json` |
+| 20 | document-addition | candidate-targeted-examples | 2 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-document-addition-candidate-targeted-examples.json` |
+| 21 | document-addition | control | 2 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-document-addition-control.json` |
+| 22 | document-addition | candidate-targeted-examples | 3 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-document-addition-candidate-targeted-examples.json` |
+| 23 | document-addition | control | 3 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-document-addition-control.json` |
+| 24 | document-addition | original | 3 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-document-addition-original.json` |
+| 25 | document-addition | control | 4 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-document-addition-control.json` |
+| 26 | document-addition | original | 4 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-document-addition-original.json` |
+| 27 | document-addition | candidate-targeted-examples | 4 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-document-addition-candidate-targeted-examples.json` |
+| 28 | document-addition | original | 5 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-document-addition-original.json` |
+| 29 | document-addition | candidate-targeted-examples | 5 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-document-addition-candidate-targeted-examples.json` |
+| 30 | document-addition | control | 5 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-document-addition-control.json` |
+| 31 | comments-explicit | original | 1 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-comments-explicit-original.json` |
+| 32 | comments-explicit | candidate-targeted-examples | 1 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-comments-explicit-candidate-targeted-examples.json` |
+| 33 | comments-explicit | control | 1 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-comments-explicit-control.json` |
+| 34 | comments-explicit | candidate-targeted-examples | 2 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-comments-explicit-candidate-targeted-examples.json` |
+| 35 | comments-explicit | control | 2 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-comments-explicit-control.json` |
+| 36 | comments-explicit | original | 2 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-comments-explicit-original.json` |
+| 37 | comments-explicit | control | 3 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-comments-explicit-control.json` |
+| 38 | comments-explicit | original | 3 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-comments-explicit-original.json` |
+| 39 | comments-explicit | candidate-targeted-examples | 3 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-comments-explicit-candidate-targeted-examples.json` |
+| 40 | comments-explicit | original | 4 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-comments-explicit-original.json` |
+| 41 | comments-explicit | candidate-targeted-examples | 4 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-comments-explicit-candidate-targeted-examples.json` |
+| 42 | comments-explicit | control | 4 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-comments-explicit-control.json` |
+| 43 | comments-explicit | candidate-targeted-examples | 5 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-comments-explicit-candidate-targeted-examples.json` |
+| 44 | comments-explicit | control | 5 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-comments-explicit-control.json` |
+| 45 | comments-explicit | original | 5 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-comments-explicit-original.json` |
+
+
+### Focused revised comparison: codex-discovery-focused-01
+
+Batch: codex-discovery-focused-01
+Scope: 30 sequential subjects, five repetitions per selected condition/case.
+Authority: owner-approved 150-subject/ten-review allocation at this protocol's opening; no automatic retry or adoption.
+Inputs and criteria: [preparation](runs/revised-body-discovery-01/preparation/README.md), with prospective interpretation boundaries and case/provider manifests.
+Runtime: pinned existing CLI/model/toolchain, qualified before dispatch; body contribution and native selection remain separate.
+Acceptance: complete fixed-stage descriptive outcomes with concrete source/output evidence; no reliability threshold, word-count gate or forced failure on a disputed paraphrase.
+Stop on infrastructure, contamination, capture/retention failure, input/runtime drift or uncertain charge; retain every valid behavioral miss.
+Record: [index](runs/revised-body-discovery-01/codex-discovery-focused-01-run-index.json).
+Global ordering: all 90 body subjects precede all 60 discovery subjects; [schedule](runs/revised-body-discovery-01/preparation/schedule.json).
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | invocation-nonprose | description-existing | 1 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-invocation-nonprose-description-existing.json` |
+| 2 | invocation-nonprose | description-targeted | 1 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-invocation-nonprose-description-targeted.json` |
+| 3 | invocation-nonprose | description-rewrite | 1 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-invocation-nonprose-description-rewrite.json` |
+| 4 | invocation-nonprose | description-targeted | 2 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-invocation-nonprose-description-targeted.json` |
+| 5 | invocation-nonprose | description-rewrite | 2 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-invocation-nonprose-description-rewrite.json` |
+| 6 | invocation-nonprose | description-existing | 2 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-invocation-nonprose-description-existing.json` |
+| 7 | invocation-nonprose | description-rewrite | 3 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-invocation-nonprose-description-rewrite.json` |
+| 8 | invocation-nonprose | description-existing | 3 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-invocation-nonprose-description-existing.json` |
+| 9 | invocation-nonprose | description-targeted | 3 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-invocation-nonprose-description-targeted.json` |
+| 10 | invocation-nonprose | description-existing | 4 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-invocation-nonprose-description-existing.json` |
+| 11 | invocation-nonprose | description-targeted | 4 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-invocation-nonprose-description-targeted.json` |
+| 12 | invocation-nonprose | description-rewrite | 4 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-invocation-nonprose-description-rewrite.json` |
+| 13 | invocation-nonprose | description-targeted | 5 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-invocation-nonprose-description-targeted.json` |
+| 14 | invocation-nonprose | description-rewrite | 5 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-invocation-nonprose-description-rewrite.json` |
+| 15 | invocation-nonprose | description-existing | 5 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-invocation-nonprose-description-existing.json` |
+| 16 | invocation-comments | description-targeted | 1 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-invocation-comments-description-targeted.json` |
+| 17 | invocation-comments | description-rewrite | 1 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-invocation-comments-description-rewrite.json` |
+| 18 | invocation-comments | description-existing | 1 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-invocation-comments-description-existing.json` |
+| 19 | invocation-comments | description-rewrite | 2 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-invocation-comments-description-rewrite.json` |
+| 20 | invocation-comments | description-existing | 2 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-invocation-comments-description-existing.json` |
+| 21 | invocation-comments | description-targeted | 2 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-invocation-comments-description-targeted.json` |
+| 22 | invocation-comments | description-existing | 3 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-invocation-comments-description-existing.json` |
+| 23 | invocation-comments | description-targeted | 3 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-invocation-comments-description-targeted.json` |
+| 24 | invocation-comments | description-rewrite | 3 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-invocation-comments-description-rewrite.json` |
+| 25 | invocation-comments | description-targeted | 4 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-invocation-comments-description-targeted.json` |
+| 26 | invocation-comments | description-rewrite | 4 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-invocation-comments-description-rewrite.json` |
+| 27 | invocation-comments | description-existing | 4 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-invocation-comments-description-existing.json` |
+| 28 | invocation-comments | description-rewrite | 5 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-invocation-comments-description-rewrite.json` |
+| 29 | invocation-comments | description-existing | 5 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-invocation-comments-description-existing.json` |
+| 30 | invocation-comments | description-targeted | 5 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/codex-invocation-comments-description-targeted.json` |
+
+
+### Focused revised comparison: claude-discovery-focused-01
+
+Batch: claude-discovery-focused-01
+Scope: 30 sequential subjects, five repetitions per selected condition/case.
+Authority: owner-approved 150-subject/ten-review allocation at this protocol's opening; no automatic retry or adoption.
+Inputs and criteria: [preparation](runs/revised-body-discovery-01/preparation/README.md), with prospective interpretation boundaries and case/provider manifests.
+Runtime: pinned existing CLI/model/toolchain, qualified before dispatch; body contribution and native selection remain separate.
+Acceptance: complete fixed-stage descriptive outcomes with concrete source/output evidence; no reliability threshold, word-count gate or forced failure on a disputed paraphrase.
+Stop on infrastructure, contamination, capture/retention failure, input/runtime drift or uncertain charge; retain every valid behavioral miss.
+Record: [index](runs/revised-body-discovery-01/claude-discovery-focused-01-run-index.json).
+Global ordering: all 90 body subjects precede all 60 discovery subjects; [schedule](runs/revised-body-discovery-01/preparation/schedule.json).
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | invocation-nonprose | description-rewrite | 1 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-invocation-nonprose-description-rewrite.json` |
+| 2 | invocation-nonprose | description-existing | 1 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-invocation-nonprose-description-existing.json` |
+| 3 | invocation-nonprose | description-targeted | 1 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-invocation-nonprose-description-targeted.json` |
+| 4 | invocation-nonprose | description-existing | 2 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-invocation-nonprose-description-existing.json` |
+| 5 | invocation-nonprose | description-targeted | 2 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-invocation-nonprose-description-targeted.json` |
+| 6 | invocation-nonprose | description-rewrite | 2 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-invocation-nonprose-description-rewrite.json` |
+| 7 | invocation-nonprose | description-targeted | 3 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-invocation-nonprose-description-targeted.json` |
+| 8 | invocation-nonprose | description-rewrite | 3 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-invocation-nonprose-description-rewrite.json` |
+| 9 | invocation-nonprose | description-existing | 3 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-invocation-nonprose-description-existing.json` |
+| 10 | invocation-nonprose | description-rewrite | 4 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-invocation-nonprose-description-rewrite.json` |
+| 11 | invocation-nonprose | description-existing | 4 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-invocation-nonprose-description-existing.json` |
+| 12 | invocation-nonprose | description-targeted | 4 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-invocation-nonprose-description-targeted.json` |
+| 13 | invocation-nonprose | description-existing | 5 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-invocation-nonprose-description-existing.json` |
+| 14 | invocation-nonprose | description-targeted | 5 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-invocation-nonprose-description-targeted.json` |
+| 15 | invocation-nonprose | description-rewrite | 5 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-invocation-nonprose-description-rewrite.json` |
+| 16 | invocation-comments | description-existing | 1 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-invocation-comments-description-existing.json` |
+| 17 | invocation-comments | description-targeted | 1 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-invocation-comments-description-targeted.json` |
+| 18 | invocation-comments | description-rewrite | 1 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-invocation-comments-description-rewrite.json` |
+| 19 | invocation-comments | description-targeted | 2 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-invocation-comments-description-targeted.json` |
+| 20 | invocation-comments | description-rewrite | 2 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-invocation-comments-description-rewrite.json` |
+| 21 | invocation-comments | description-existing | 2 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-invocation-comments-description-existing.json` |
+| 22 | invocation-comments | description-rewrite | 3 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-invocation-comments-description-rewrite.json` |
+| 23 | invocation-comments | description-existing | 3 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-invocation-comments-description-existing.json` |
+| 24 | invocation-comments | description-targeted | 3 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-invocation-comments-description-targeted.json` |
+| 25 | invocation-comments | description-existing | 4 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-invocation-comments-description-existing.json` |
+| 26 | invocation-comments | description-targeted | 4 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-invocation-comments-description-targeted.json` |
+| 27 | invocation-comments | description-rewrite | 4 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-invocation-comments-description-rewrite.json` |
+| 28 | invocation-comments | description-targeted | 5 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-invocation-comments-description-targeted.json` |
+| 29 | invocation-comments | description-rewrite | 5 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-invocation-comments-description-rewrite.json` |
+| 30 | invocation-comments | description-existing | 5 | `skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-invocation-comments-description-existing.json` |
+
+
 ## Storage and accounting
 
 Supplemental evaluator accounting: [evaluator ledger](runs/cross-model-evaluation-01/evaluator-run-index.json); these calls do not add subject repetitions.
@@ -797,13 +1011,13 @@ Owner-accepted recovery decision for CW: single-host retention, as used for SSR,
 Combined accounting sources: closed SSR [pilot 01](../sweeping-stale-references/runs/pilot-01/pilot-run-index.json), [pilot 02](../sweeping-stale-references/runs/pilot-02/pilot-02-run-index.json), [semantic delivery](../sweeping-stale-references/runs/semantic-delivery-01/semantic-delivery-01-run-index.json), [core baseline](../sweeping-stale-references/runs/core-baseline-01/core-baseline-01-run-index.json), [comparison](../sweeping-stale-references/runs/comprehensive-comparison-01/comprehensive-comparison-01-run-index.json), the SSR [completed expansion](../sweeping-stale-references/runs/coverage-baseline-01/coverage-baseline-01-run-index.json), the SSR [completed comparison](../sweeping-stale-references/runs/comprehensive-comparison-02/comprehensive-comparison-02-run-index.json), the SSR [Claude smoke](../sweeping-stale-references/runs/claude-smoke-01/claude-smoke-01-run-index.json), the SSR [Claude comparison](../sweeping-stale-references/runs/claude-comparison-01/claude-comparison-01-run-index.json), the SSR [Opus invocation comparison](../sweeping-stale-references/runs/claude-opus-invocation-01/claude-opus-invocation-01-run-index.json), and both CW indexes above. Historical pilot links contribute accounting only; they are not reclassified or reassessed.
 The new E reviews use the [fixed review package](runs/baseline-iteration-e-01/evaluation/README.md) and [supplemental Opus accounting](runs/baseline-iteration-e-01/evaluation/evaluator-run-index.json).
 The remaining-suite reviews use the [fourteen-packet package](runs/baseline-iteration-suite-01/evaluation/README.md) and [evaluator ledger](runs/baseline-iteration-suite-01/evaluation/evaluator-run-index.json); their allocation is included in the current ceiling.
-Dispatched calls are **440 subject, 28 evaluator, 0 authoring, 2 retry**; remaining outer capacity is **0 / 0 / 4 / 2** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
+Dispatched calls are **440 subject, 28 evaluator, 0 authoring, 2 retry**; remaining outer capacity is **150 / 10 / 4 / 2** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **2,710 active minutes booked; 1,510 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **2,825 active minutes booked; 1,625 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
-The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 440/440, with 0 approved remaining-suite calls available and no E calls remaining.
+The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 440/590, with 150 approved focused calls available and no E calls remaining.
 The supplemental work used 40 estimated active minutes against its 40-minute forecast; model waits are included once.
 
 | Work | Estimated active minutes |
@@ -900,7 +1114,12 @@ The supplemental work used 40 estimated active minutes against its 40-minute for
 | Targeted/rewritten discovery descriptions, staged allocation and consistency review | 10 |
 | Owner-selected targeted description replacement and consistency verification | 5 |
 | Preparation publication, final verification and commit/push | 5 |
-| **Total** | **2,710** |
+| Focused-round scope, interpretation boundaries, input/controller preparation and qualification setup | 30 |
+| Owner example review, completed-evaluation application audit and versioned correction | 30 |
+| Holistic disputed-output reread, consistent reassessment and verification | 35 |
+| Whole-input/output criteria and reviewer-process confirmation | 5 |
+| Focused input finalization, runtime requalification and publication | 15 |
+| **Total** | **2,825** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.
@@ -945,6 +1164,24 @@ Preparation and final review/publication account for the other 15 supplemental m
 A later diagnosis or rewrite needs its own bounded estimate and any new model-call authorization.
 
 ## Results and decision
+
+### Evaluation-guideline application audit
+
+The [audit](runs/evaluation-application-audit-01/README.md) checked all 320 recorded output identities, all 290 applicable readability explanations and every current functional-failure reason, with fresh complete rereads of 38 specified artifacts.
+This is a bounded application audit, not a new blind regrade of all outputs.
+Existing rules already cover readability, useful framing and comparative quality; no new general requirement is added.
+The owner judged latest Codex A control repetition 2 acceptable with a density/readability weakness, and its matched three CW-assisted outputs easier to read, with targeted preferred for compactness.
+The [versioned mapping](runs/evaluation-application-audit-01/index.json) changes only that control's F1 and aggregate result, bringing Codex A controls to 3/3 current passes; all original records and evaluator judgments remain historical evidence.
+All eleven other Codex A outcomes remain passes, and meaningful quality differences survive those equal thresholds.
+The complete Codex A reread identifies a recurring layout difference: all three controls pack mechanism into an evidence bullet, while all nine assisted outputs separate it into a paragraph or section.
+This supports a concrete quality observation in this stratum, not a general variant ranking or automatic shorter-SKILL.md adoption.
+The subsequent [holistic reassessment](runs/holistic-dispute-reassessment-01/README.md) owns the controller's resolution of the latest five dispute groups and specified earlier counterparts, after complete rereads of all 102 compared outputs in ten strata.
+It adds fifteen fail-to-pass corrections and two reason-only revisions, with seventeen separate result records and unchanged original evidence.
+Deployment wording, only-window phrasing and detached handoff repetition receive context-specific precision/quality observations; the four disputed categorical no-loss claims retain their F1/F2 failures.
+The narrowed staffing gate and invented specific pilot-testing scope remain failures in the reviewed strata; historical disputes outside this declared scope remain retained rather than cleared by analogy.
+Apply this mapping alongside the separate A and E mappings; corrected threshold counts do not establish equivalent quality or change invocation results.
+The owner's subsequent criteria/process check confirms that every text-case card and the historical reviewer prompts already require complete-input/complete-output comparison and accept faithful rearrangement and paraphrase.
+The prospective supplement clarifies that an actual introduced inaccuracy fails F1 independently of actionability/readability, with the whole-context source/output evidence stated; historical criteria and evaluator packets remain unchanged.
 
 ### Baseline-derived full-suite comparison
 

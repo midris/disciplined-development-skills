@@ -44,7 +44,8 @@ The accepted limitation of this design is that it cannot distinguish prose from 
 It makes no claim to follow the recommended structural intervention or establish its relative effectiveness; persistent confirmed omissions would motivate a separately proposed structural arm before further wording-only iteration.
 The fuller draft organizes the same responsibilities into understand, organize, trim and verify, while preserving all original rationalization rows and companion ownership.
 Neither draft adopts the comprehensive version’s detailed-response exemption, removal of the uncertainty flag, broadened authoring scope or all-source-distinctions-explicit rule.
-Fable’s all-pass judgments and the active assessor’s failures remain separate; the C readability threshold is disputed, so section retention alone is not an automatic failure or a reason to demand maximal cutting.
+Fable’s original judgments and the historical active scores remain separate.
+The later [holistic reassessment](../../skill-studies/concise-writing/runs/holistic-dispute-reassessment-01/README.md) corrects C's eleven disputed readability failures to passes with cleanup observations after complete-context rereading; section retention alone is not a failure or a reason to demand maximal cutting.
 
 ## Owner-selected targeted example variant
 
@@ -69,7 +70,7 @@ The rewrite starts from task intent and gives document additions and source comm
 Both retain the skill/reference-authoring exclusion and add no workflow or answer-key instruction.
 These are candidate descriptions, not observed discovery improvements, and any apparent description effect remains scoped to the fixed body and test catalog.
 The [body/discovery proposal](../../skill-studies/concise-writing/drafts/baseline-iteration/discovery/proposal.md) owns candidate text locations, the proposed test matrix, scoring prerequisites and call forecasts.
-Preparation is authorized; new model calls, runtime changes and adoption still require the protocol's allocation decision.
+The protocol records the separately approved focused allocation; new calls require its qualification/freeze gates, while later regression, runtime substitutions and adoption need a new decision.
 
 ## Completed comparison and continuing validation requirements
 

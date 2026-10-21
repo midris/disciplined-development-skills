@@ -1,0 +1,120 @@
+{
+  "format_version": "1",
+  "manifest_id": "cw-claude-document-addition-focused-01",
+  "study_id": "concise-writing",
+  "case_id": "document-addition",
+  "status": "draft",
+  "created_at": "2026-10-18T00:00:00Z",
+  "source_revision": "",
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "684d76df079a1359f998a06f64c98e6234fdb85c71af0969ba99bfa176521708",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/concise-writing/protocol.md",
+      "sha256": "066e0b267bacaf6130f79b5592b2e057c3cc4776ce18d83ee9d21c919a1fc0c5",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "a90ca386d0b267632b01d8cd0bce8ba4bb4010999c3481e74a318b4d17675e40",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result-v2.schema.json",
+      "sha256": "81902ed03e807804404c0d6ba7a0092a1c311c9eef45ee88c89708ce50d7c2c2",
+      "version": "2"
+    },
+    "policy": {
+      "path": "skill-studies/concise-writing/runs/suite-2026-09-27/preparation/assessment-policy.txt",
+      "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33",
+      "version": "CW-expanded-1"
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/criteria/document-addition.md",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "version": "3"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "candidate-targeted-examples",
+      "configuration": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-document-addition-candidate-targeted-examples.json",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/concise-writing/drafts/baseline-iteration/targeted-examples/SKILL.md"
+    },
+    {
+      "id": "control",
+      "configuration": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-document-addition-control.json",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "version": "0.2"
+      },
+      "target_skill": null
+    },
+    {
+      "id": "original",
+      "configuration": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/configs/claude-document-addition-original.json",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/concise-writing/cases/skill-original/SKILL.md"
+    }
+  ],
+  "subject_sources": [],
+  "controller_only": [
+    {
+      "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/schedule.json",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/runtime_setup.py",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/runtime-identities.json",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/collect_one.py",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/inspect_one.py",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/trace_paths.py",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/README.md",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/interpretation.md",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/drafts/baseline-iteration/discovery/proposal.md",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "version": null
+    }
+  ]
+}

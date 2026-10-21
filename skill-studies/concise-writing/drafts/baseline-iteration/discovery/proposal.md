@@ -1,7 +1,8 @@
 # CW revised body and description comparison proposal
 
 The [protocol](../../../protocol.md) owns current status, accepted ceilings and dispatch authority.
-This proposal supplies reviewable candidates and a staged forecast; it authorizes no model calls, live-skill changes or adoption.
+The owner approved the focused 150 subjects and ten reviews through the protocol after reviewing this proposal; the later regression stage remains a forecast.
+That approval requires qualification and committed input freeze before collection and authorizes no live-skill change or adoption.
 The [design](../../../../../plans/specs/2026-10-17-cw-baseline-iteration.md) records the owner's request for targeted and fully rewritten descriptions alongside the revised body.
 
 ## Description candidates
@@ -44,7 +45,7 @@ Use the same task and fixtures but a separately frozen condition instruction to 
 These probes measure body contribution, not natural invocation.
 For native probes, keep existing task prompts unchanged and provide no extra hint to load CW.
 
-## Proposed allocation
+## Focused allocation and later forecast
 
 Body conditions are no CW, unchanged original and revised targeted-examples, using the existing description for both skill arms.
 Discovery conditions are the three descriptions above with the revised body fixed; there is no no-CW arm because the measured question is selection from an available catalog.
@@ -54,7 +55,7 @@ Both stages use Codex and Claude separately, with fresh contexts for every subje
 | --- | --- | --- | ---: | ---: |
 | Focused body | C, E, N4; three conditions; five repetitions | 3 cases × 3 conditions × 2 providers × 5 | 90 | 6 |
 | Focused discovery | N3, N4; three descriptions; five repetitions | 2 cases × 3 descriptions × 2 providers × 5 | 60 | 4 |
-| First proposed allocation | Focused body then discovery | 75 subjects per provider | **150** | **10** |
+| Approved focused allocation | Focused body then discovery | 75 subjects per provider | **150** | **10** |
 | Remaining body regression | A, B, N2; three conditions; three repetitions | 3 × 3 × 2 × 3 | 54 | 6 |
 | Remaining discovery regression | N1, N2; three descriptions; three repetitions | 2 × 3 × 2 × 3 | 36 | 4 |
 | Later proposed allocation | Separate decision after the focused results | 45 subjects per provider | **90** | **10** |
@@ -66,10 +67,9 @@ A and N1 share task content, so do not duplicate A as another explicit-load N1 b
 All eight existing scenarios are represented; the new body cannot reuse old E results as validation of its changed bytes.
 The previously tested targeted, fuller and comprehensive variants remain historical comparators, not additional arms in this bounded proposal.
 
-Current accepted subject/evaluator ceilings are exhausted at 440/28.
-Approving the first allocation would raise them to 590/38; approving both stages unchanged would eventually raise them to 680/48.
+The focused approval increases the previously exhausted 440/28 subject/evaluator ceilings to 590/38; approving the later stage unchanged would eventually raise them to 680/48.
 Authoring/retry pools stay unchanged, and unused capacity is not transferable or automatic replacement authority.
-The later 90/10 is a forecast, not part of a first-stage approval.
+The later 90/10 is a forecast outside the focused approval.
 
 Estimate 210–300 active minutes for the focused stage and 150–210 for the remaining stage: 360–510 combined.
 This includes preparation, runtime qualification, freezing, model waits, direct assessment, grouped review and reconciliation once, informed by the prior remaining-suite collection and review effort.

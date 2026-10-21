@@ -1,0 +1,190 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claude-native-iteration-01-invocation-tighten-original-2-1-assessment-holistic-application-1",
+  "assessed_at": "2026-10-21T05:21:24+00:00",
+  "run_id": "20261018T180039294Z-cw-suite-claude-invocation-tighten-original-8cf4949c-3b89-4bfd-9b37-8071a3328682-endzbwm1",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Owner-requested complete-context reassessment by the exposed Codex active controller under unchanged CW-expanded-1/CW-assessment-4. No new independent reviewer or model call. See CW-holistic-application-1; the owner explicitly reviewed Codex N2 targeted3, while other judgments here are controller applications, not additional owner rulings."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-invocation-tighten-manifest.json",
+    "sha256": "059ee86bf335893597cc0f092df99e2825903cb5b1b54c28bf68abdcdbf7677b",
+    "version": "1",
+    "git_revision": "0524ec5aa23288841bc6972516a4c14bca24678d"
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T180039294Z-cw-suite-claude-invocation-tighten-original-8cf4949c-3b89-4bfd-9b37-8071a3328682-endzbwm1/workspace/fixture/report.md",
+        "sha256": "c0a795eef448660e349e89a0bb5765ef256901c8131dc50eda8b1246e5e010f2",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T180039294Z-cw-suite-claude-invocation-tighten-original-8cf4949c-3b89-4bfd-9b37-8071a3328682-endzbwm1/stdout.txt",
+        "sha256": "b09ed6b077b6ccf4bfbf4fbde2bf60b0c556ba9ad5cf68c7e9a6797b8f264c43",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T180039294Z-cw-suite-claude-invocation-tighten-original-8cf4949c-3b89-4bfd-9b37-8071a3328682-endzbwm1/result.json",
+        "sha256": "9cfdac1ece0570d436425f7a53fc703e0ed0841c9c428e0494ba517fbdc7810d",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T180039294Z-cw-suite-claude-invocation-tighten-original-8cf4949c-3b89-4bfd-9b37-8071a3328682-endzbwm1/runner.log",
+        "sha256": "1f6042eeba33164bb64e32e538417340b40241aa5879fc1cdb67e324fed13de4",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T180039294Z-cw-suite-claude-invocation-tighten-original-8cf4949c-3b89-4bfd-9b37-8071a3328682-endzbwm1/final.txt",
+        "sha256": "56e63898e6cd1b61fea418967c938ab416aeebb0c1a175e91f9fb197d2e31c5f",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/fixture/report.md",
+        "sha256": "e9a992c7e4c14dfd5afc10cc637349f39c2030e98ed0311441675900bc3e93e9",
+        "version": null,
+        "git_revision": "6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb"
+      },
+      "selector": "Complete frozen report.md"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/task.md",
+        "sha256": "607cbe0562a19ea092fe76ec96f13bfbe033b2e1095baef2ca38be621c0baf82",
+        "version": null,
+        "git_revision": "6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb"
+      },
+      "selector": "Complete frozen TASK.md"
+    },
+    {
+      "id": "holistic-application",
+      "artifact": {
+        "path": "skill-studies/concise-writing/runs/holistic-dispute-reassessment-01/interpretation.md",
+        "sha256": "c02dfd377317cb74d863a9cb8517c3e269ab7c4607e27ce4afd26bada3d9da31",
+        "version": "CW-holistic-application-1"
+      },
+      "selector": "Complete context-review rationale and scope"
+    },
+    {
+      "id": "prior-assessment",
+      "artifact": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T180039294Z-cw-suite-claude-invocation-tighten-original-8cf4949c-3b89-4bfd-9b37-8071a3328682-endzbwm1.json",
+        "sha256": "bef540d379fcff3d2e7daf99405288268fed3533ce902d3e70d2884000e437d7",
+        "version": "2",
+        "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
+      },
+      "selector": "Preserved prior assessment; changed factors and reasons are identified in the reassessment mapping"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Fixed provider/model/CLI and retained inventory verified. Native skill available; complete assigned body before first edit: True. Protected input bytes unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Read as a complete pilot recommendation, the only-window parenthesis describes the supplied Tuesday 10:00–11:00 staffed opportunity. Approval remains pending, the pilot stays bounded and wider release requires another decision; no instruction compels approval or forbids a different proposal. The source itself calls this the staffed change window. Only is unnecessary emphasis and a precision weakness, but the prior no-alternative consequence was not established in context.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "holistic-application"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The bounded approval request, pilot staff/time/duration, mismatch stop and retained export evidence with diagnostic purpose, and separate successful-pilot release decision remain usable. The unsupported exclusivity assertion is an F1 defect; no additional demonstrated loss of the requested Tuesday action is inferred.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The update is substantially tightened into coherent evidence, mechanism, limits, recommendation and next-action sections. Limited repeated qualifications support local context rather than an unnecessary detached detour.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "CW is available and not pre-supplied. Complete-body deliveries occur at events10and18, with the first before task editing; earlier operations establish baseline and read task only. A second load does not erase the valid first load.",
+      "consequence": "Selection is reported separately from artifact quality.",
+      "evidence": [
+        "trace",
+        "log"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Fixed provider/model/CLI and retained inventory verified. Native skill available; complete assigned body before first edit: True. Protected input bytes unchanged. O4/O5 remain unscored; native D1 is distinct from functional outcome.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Complete output 275 wc-w words; supplied report.md: 625 words, TASK.md: 51 words. Counts describe length, not semantic success; comment-only counts are reported separately for N4.",
+      "consequence": "Descriptive counts only.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "The only-window wording is less careful than the source, but the full report still requests a bounded Tuesday pilot and a separate release decision. Keep the precision observation without the earlier categorical fidelity failure.",
+      "consequence": "Qualitative comparison remains separate from threshold counts; prior interpretation is preserved in the linked prior assessment.",
+      "evidence": [
+        "output",
+        "holistic-application"
+      ]
+    }
+  ],
+  "uncertainty": []
+}

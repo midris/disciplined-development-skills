@@ -1,0 +1,190 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claude-native-iteration-01-invocation-write-candidate-fuller-1-1-assessment-holistic-application-1",
+  "assessed_at": "2026-10-21T05:21:24+00:00",
+  "run_id": "20261018T180509523Z-cw-suite-claude-invocation-write-candidate-fuller-e0c43ee4-f1e9-4d12-b3bc-fb6f49ab767d-aippuhxe",
+  "condition": "candidate-fuller",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Owner-requested complete-context reassessment by the exposed Codex active controller under unchanged CW-expanded-1/CW-assessment-4. No new independent reviewer or model call. See CW-holistic-application-1; the owner explicitly reviewed Codex N2 targeted3, while other judgments here are controller applications, not additional owner rulings."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-invocation-write-manifest.json",
+    "sha256": "fed8b5b4b1d77ade2637299c9881c50da5d573fae199d778b9db355d6ff8f4b7",
+    "version": "1",
+    "git_revision": "0524ec5aa23288841bc6972516a4c14bca24678d"
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T180509523Z-cw-suite-claude-invocation-write-candidate-fuller-e0c43ee4-f1e9-4d12-b3bc-fb6f49ab767d-aippuhxe/workspace/fixture/report.md",
+        "sha256": "79d05bd4364bb96a165ccbff941ce86bf7d7000d72efed732664181c31a95212",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T180509523Z-cw-suite-claude-invocation-write-candidate-fuller-e0c43ee4-f1e9-4d12-b3bc-fb6f49ab767d-aippuhxe/stdout.txt",
+        "sha256": "7d4274efa1039168ce8a7c17c1893be8e24864b4fb5b91e42b90a890d3633d71",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T180509523Z-cw-suite-claude-invocation-write-candidate-fuller-e0c43ee4-f1e9-4d12-b3bc-fb6f49ab767d-aippuhxe/result.json",
+        "sha256": "84b687f7b8986a902d8ab89ecb542945c3817ebffa009363c08987c7eeab987d",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T180509523Z-cw-suite-claude-invocation-write-candidate-fuller-e0c43ee4-f1e9-4d12-b3bc-fb6f49ab767d-aippuhxe/runner.log",
+        "sha256": "4c38d87e719ac93ed90b4336d6d523f33e3523f1ee3875c207584346b0a71b72",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T180509523Z-cw-suite-claude-invocation-write-candidate-fuller-e0c43ee4-f1e9-4d12-b3bc-fb6f49ab767d-aippuhxe/final.txt",
+        "sha256": "72fcd69f3867a830dd4caaafa4f166902867909cdc8a22b20120dfbfbf1163f8",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-write/fixture/notes.md",
+        "sha256": "687328b186b130469d63398579e81d72b88866e0f7ba4e48b9dfbb4774581442",
+        "version": null,
+        "git_revision": "6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb"
+      },
+      "selector": "Complete frozen notes.md"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-write/task.md",
+        "sha256": "2e0ce51601ecd5e3a12168a3f0640b9ee49151fa3810cc59da0e4abcda85220f",
+        "version": null,
+        "git_revision": "6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb"
+      },
+      "selector": "Complete frozen TASK.md"
+    },
+    {
+      "id": "holistic-application",
+      "artifact": {
+        "path": "skill-studies/concise-writing/runs/holistic-dispute-reassessment-01/interpretation.md",
+        "sha256": "c02dfd377317cb74d863a9cb8517c3e269ab7c4607e27ce4afd26bada3d9da31",
+        "version": "CW-holistic-application-1"
+      },
+      "selector": "Complete context-review rationale and scope"
+    },
+    {
+      "id": "prior-assessment",
+      "artifact": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T180509523Z-cw-suite-claude-invocation-write-candidate-fuller-e0c43ee4-f1e9-4d12-b3bc-fb6f49ab767d-aippuhxe.json",
+        "sha256": "d56ad6d6da454dee89509311cadf7acf7220f3bde07c05ac18167eb69c872a02",
+        "version": "2",
+        "git_revision": "0ec93cc28d59fc796319edad5bcee1df2be44b0f"
+      },
+      "selector": "Preserved prior assessment; changed factors and reasons are identified in the reassessment mapping"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Fixed provider/model/CLI and retained inventory verified. Native skill available; complete assigned body before first edit: True. Protected input bytes unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The complete report requests only the three-workspace pilot, keeps prior approval and both-staff availability, stops on a mismatch and returns matching-count results for another decision without automatic expansion. The status wording is less precise than a separate current-state statement, but does not override those explicit limits or establish a consequential unsupported deployment permission. The notes do not independently specify a staging-only pilot environment.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "holistic-application"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The bounded approval, staffing/window/rescheduling rule, count comparison, mismatch stop and export retention with diagnostic purpose, and separate successful-pilot decision remain actionable. The unsupported deployment assurance fails F1 without automatically duplicating an F2 failure.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "A concise recommendation/evidence/limits/next-steps layout is readable and consolidates duplicate source mechanics without a detour.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "The catalogued fuller body is fully delivered before report creation, after only baseline/task/source operations; it is not pre-supplied or explicitly requested by the task.",
+      "consequence": "Selection is reported separately from artifact quality.",
+      "evidence": [
+        "trace",
+        "log"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Fixed provider/model/CLI and retained inventory verified. Native skill available; complete assigned body before first edit: True. Protected input bytes unchanged. O4/O5 remain unscored; native D1 is distinct from functional outcome.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Complete output 206 wc-w words; supplied notes.md: 199 words, TASK.md: 49 words. Counts describe length, not semantic success; comment-only counts are reported separately for N4.",
+      "consequence": "Descriptive counts only.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "The staging/pilot-only statement is imprecise about a future execution environment that the notes do not specify. The complete artifact preserves pilot scope and all decision/control branches; no demonstrated functional failure remains.",
+      "consequence": "Qualitative comparison remains separate from threshold counts; prior interpretation is preserved in the linked prior assessment.",
+      "evidence": [
+        "output",
+        "holistic-application"
+      ]
+    }
+  ],
+  "uncertainty": []
+}

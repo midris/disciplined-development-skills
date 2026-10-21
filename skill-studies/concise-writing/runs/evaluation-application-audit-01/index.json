@@ -1,0 +1,290 @@
+{
+  "reassessment_version": "1",
+  "interpretation": {
+    "path": "skill-studies/concise-writing/runs/evaluation-application-audit-01/owner-ruling.md",
+    "sha256": "98c9dfbb7d50d17bb86f0b9e0ce3c7cdd8b1e67b885ce4fa9b2262a4be95c815",
+    "version": "CW-A-owner-application-1"
+  },
+  "new_subject_calls": 0,
+  "new_evaluator_calls": 0,
+  "complete_comparison_outputs_reviewed": 12,
+  "changed_results": 1,
+  "unchanged_results": 11,
+  "results": [
+    {
+      "run_id": "20261018T163611129Z-cw-suite-codex-agent-recommendation-candidate-fuller-95a6b0cb-78ee-43f8-9085-af2a35479733-x84oau61",
+      "condition": "candidate-fuller",
+      "repetition": 1,
+      "original_result": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163611129Z-cw-suite-codex-agent-recommendation-candidate-fuller-95a6b0cb-78ee-43f8-9085-af2a35479733-x84oau61.json",
+        "sha256": "d7794f8ff9b24b7a23eccd9421686b70e0ef74cedc1076f04cf7df513e95d858",
+        "version": "2",
+        "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
+      },
+      "current_result": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163611129Z-cw-suite-codex-agent-recommendation-candidate-fuller-95a6b0cb-78ee-43f8-9085-af2a35479733-x84oau61.json",
+        "sha256": "d7794f8ff9b24b7a23eccd9421686b70e0ef74cedc1076f04cf7df513e95d858",
+        "version": "2",
+        "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
+      },
+      "judgment_changed": false,
+      "functional_result": "met",
+      "output": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163611129Z-cw-suite-codex-agent-recommendation-candidate-fuller-95a6b0cb-78ee-43f8-9085-af2a35479733-x84oau61/workspace/fixture/report.md",
+        "sha256": "61c56e66aab0fd65a66c5a9ef82b697cdcd69bf2ae44ee28ed9345cee4ba76a7"
+      }
+    },
+    {
+      "run_id": "20261018T163528329Z-cw-suite-codex-agent-recommendation-candidate-targeted-ca997521-057a-4962-8919-8b912614d5ea-_sga5u3y",
+      "condition": "candidate-targeted",
+      "repetition": 1,
+      "original_result": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163528329Z-cw-suite-codex-agent-recommendation-candidate-targeted-ca997521-057a-4962-8919-8b912614d5ea-_sga5u3y.json",
+        "sha256": "0d44c46ed3c5096c954939783fa2ea956f2e5ff1c4c36b3acd5b1621f61b3de7",
+        "version": "2",
+        "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
+      },
+      "current_result": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163528329Z-cw-suite-codex-agent-recommendation-candidate-targeted-ca997521-057a-4962-8919-8b912614d5ea-_sga5u3y.json",
+        "sha256": "0d44c46ed3c5096c954939783fa2ea956f2e5ff1c4c36b3acd5b1621f61b3de7",
+        "version": "2",
+        "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
+      },
+      "judgment_changed": false,
+      "functional_result": "met",
+      "output": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163528329Z-cw-suite-codex-agent-recommendation-candidate-targeted-ca997521-057a-4962-8919-8b912614d5ea-_sga5u3y/workspace/fixture/report.md",
+        "sha256": "5fe2e2245cfe0a3650a0905fca7b1da6eb2e751f2ea48ec13f7bb4bfc956251c"
+      }
+    },
+    {
+      "run_id": "20261018T163332960Z-cw-suite-codex-agent-recommendation-control-807003c3-fdaf-4767-8a08-6ea68eac3d2a-_glxocsg",
+      "condition": "control",
+      "repetition": 1,
+      "original_result": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163332960Z-cw-suite-codex-agent-recommendation-control-807003c3-fdaf-4767-8a08-6ea68eac3d2a-_glxocsg.json",
+        "sha256": "399f11d01c80176c544b1a99d634f8169f4d5e9a83701717dcd1ec7a83b073b3",
+        "version": "2",
+        "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
+      },
+      "current_result": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163332960Z-cw-suite-codex-agent-recommendation-control-807003c3-fdaf-4767-8a08-6ea68eac3d2a-_glxocsg.json",
+        "sha256": "399f11d01c80176c544b1a99d634f8169f4d5e9a83701717dcd1ec7a83b073b3",
+        "version": "2",
+        "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
+      },
+      "judgment_changed": false,
+      "functional_result": "met",
+      "output": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163332960Z-cw-suite-codex-agent-recommendation-control-807003c3-fdaf-4767-8a08-6ea68eac3d2a-_glxocsg/workspace/fixture/report.md",
+        "sha256": "2ff22bb23cfd9c963eafd0e31d8a70589c57793214e625fb992c28289b3b4476"
+      }
+    },
+    {
+      "run_id": "20261018T163426022Z-cw-suite-codex-agent-recommendation-original-80bed02a-0a5d-4547-84f4-01a5d03ad340-bwxx__5o",
+      "condition": "original",
+      "repetition": 1,
+      "original_result": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163426022Z-cw-suite-codex-agent-recommendation-original-80bed02a-0a5d-4547-84f4-01a5d03ad340-bwxx__5o.json",
+        "sha256": "4d20a525b0ed9656448e974d087181e634a7198317f489c6494cd500e84a9e89",
+        "version": "2",
+        "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
+      },
+      "current_result": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163426022Z-cw-suite-codex-agent-recommendation-original-80bed02a-0a5d-4547-84f4-01a5d03ad340-bwxx__5o.json",
+        "sha256": "4d20a525b0ed9656448e974d087181e634a7198317f489c6494cd500e84a9e89",
+        "version": "2",
+        "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
+      },
+      "judgment_changed": false,
+      "functional_result": "met",
+      "output": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163426022Z-cw-suite-codex-agent-recommendation-original-80bed02a-0a5d-4547-84f4-01a5d03ad340-bwxx__5o/workspace/fixture/report.md",
+        "sha256": "cb649d60ad721399944779e80d40d381843770e843102e40f321ab47095fbc3d"
+      }
+    },
+    {
+      "run_id": "20261018T163807986Z-cw-suite-codex-agent-recommendation-candidate-fuller-ae0309f5-31ce-496b-bcc3-212d72e237f2-bcnhsi0m",
+      "condition": "candidate-fuller",
+      "repetition": 2,
+      "original_result": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163807986Z-cw-suite-codex-agent-recommendation-candidate-fuller-ae0309f5-31ce-496b-bcc3-212d72e237f2-bcnhsi0m.json",
+        "sha256": "4be0fef20208990eefd465b75fa9eacb6482d20bc34cda8c65f39646b1d22a0e",
+        "version": "2",
+        "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
+      },
+      "current_result": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163807986Z-cw-suite-codex-agent-recommendation-candidate-fuller-ae0309f5-31ce-496b-bcc3-212d72e237f2-bcnhsi0m.json",
+        "sha256": "4be0fef20208990eefd465b75fa9eacb6482d20bc34cda8c65f39646b1d22a0e",
+        "version": "2",
+        "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
+      },
+      "judgment_changed": false,
+      "functional_result": "met",
+      "output": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163807986Z-cw-suite-codex-agent-recommendation-candidate-fuller-ae0309f5-31ce-496b-bcc3-212d72e237f2-bcnhsi0m/workspace/fixture/report.md",
+        "sha256": "9160bc862424300ee8fef62d7153bdd15b8da3c6a19c4d17d59540778f9be3b5"
+      }
+    },
+    {
+      "run_id": "20261018T163728325Z-cw-suite-codex-agent-recommendation-candidate-targeted-aea01fda-4ef4-42c0-8144-dab7b82b32c2-3s54ight",
+      "condition": "candidate-targeted",
+      "repetition": 2,
+      "original_result": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163728325Z-cw-suite-codex-agent-recommendation-candidate-targeted-aea01fda-4ef4-42c0-8144-dab7b82b32c2-3s54ight.json",
+        "sha256": "d0e6b5d3c5054ea3c5ef33a9348be830a9d66591b0a48add5f20175bf52a624c",
+        "version": "2",
+        "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
+      },
+      "current_result": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163728325Z-cw-suite-codex-agent-recommendation-candidate-targeted-aea01fda-4ef4-42c0-8144-dab7b82b32c2-3s54ight.json",
+        "sha256": "d0e6b5d3c5054ea3c5ef33a9348be830a9d66591b0a48add5f20175bf52a624c",
+        "version": "2",
+        "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
+      },
+      "judgment_changed": false,
+      "functional_result": "met",
+      "output": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163728325Z-cw-suite-codex-agent-recommendation-candidate-targeted-aea01fda-4ef4-42c0-8144-dab7b82b32c2-3s54ight/workspace/fixture/report.md",
+        "sha256": "01d99a04451012800480d4f751543d8f2830081e8778bc147c168887a456ab7b"
+      }
+    },
+    {
+      "run_id": "20261018T163848522Z-cw-suite-codex-agent-recommendation-control-28615740-751e-4465-a8b6-b7e2c956c85c-ibreq8xx",
+      "condition": "control",
+      "repetition": 2,
+      "original_result": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163848522Z-cw-suite-codex-agent-recommendation-control-28615740-751e-4465-a8b6-b7e2c956c85c-ibreq8xx.json",
+        "sha256": "6d48bbed5c0f4e05331c8570d127f5c79a48c55a57e4382dfbfa48e9c4efb62e",
+        "version": "2",
+        "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
+      },
+      "current_result": {
+        "path": "skill-studies/concise-writing/runs/evaluation-application-audit-01/results/20261018T163848522Z-cw-suite-codex-agent-recommendation-control-28615740-751e-4465-a8b6-b7e2c956c85c-ibreq8xx.json",
+        "sha256": "aaeefe33aa0891c6d4a1ff6bd44557ba84dd78c705e1ff7acaf3bb159c10c29b",
+        "version": "2"
+      },
+      "judgment_changed": true,
+      "functional_result": "met",
+      "output": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163848522Z-cw-suite-codex-agent-recommendation-control-28615740-751e-4465-a8b6-b7e2c956c85c-ibreq8xx/workspace/fixture/report.md",
+        "sha256": "b9cfb278b694f3c2b312b6b2ff381236ef63b77780f0f9ca5af8191ea010d9e4"
+      }
+    },
+    {
+      "run_id": "20261018T163648790Z-cw-suite-codex-agent-recommendation-original-78d44923-aa6c-4420-9bfd-070379ac30c2-lxfe4yux",
+      "condition": "original",
+      "repetition": 2,
+      "original_result": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163648790Z-cw-suite-codex-agent-recommendation-original-78d44923-aa6c-4420-9bfd-070379ac30c2-lxfe4yux.json",
+        "sha256": "df18ccf8c5358923547b1f1bf5f16c0c5fe7b6aa1bafd0441ae7ffe8221aadc2",
+        "version": "2",
+        "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
+      },
+      "current_result": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163648790Z-cw-suite-codex-agent-recommendation-original-78d44923-aa6c-4420-9bfd-070379ac30c2-lxfe4yux.json",
+        "sha256": "df18ccf8c5358923547b1f1bf5f16c0c5fe7b6aa1bafd0441ae7ffe8221aadc2",
+        "version": "2",
+        "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
+      },
+      "judgment_changed": false,
+      "functional_result": "met",
+      "output": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163648790Z-cw-suite-codex-agent-recommendation-original-78d44923-aa6c-4420-9bfd-070379ac30c2-lxfe4yux/workspace/fixture/report.md",
+        "sha256": "a485ac03166ad1812f32bb4a2e922b8fc5d67c292f50ad35fba4160d5a85c6f0"
+      }
+    },
+    {
+      "run_id": "20261018T163957463Z-cw-suite-codex-agent-recommendation-candidate-fuller-23959f90-6949-436c-bd87-3baa14825200-g2yhjg56",
+      "condition": "candidate-fuller",
+      "repetition": 3,
+      "original_result": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163957463Z-cw-suite-codex-agent-recommendation-candidate-fuller-23959f90-6949-436c-bd87-3baa14825200-g2yhjg56.json",
+        "sha256": "1e96db515f73a64971e0ea43b2a032dc6a73039f4a4e86e1385ee548af96bcea",
+        "version": "2",
+        "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
+      },
+      "current_result": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163957463Z-cw-suite-codex-agent-recommendation-candidate-fuller-23959f90-6949-436c-bd87-3baa14825200-g2yhjg56.json",
+        "sha256": "1e96db515f73a64971e0ea43b2a032dc6a73039f4a4e86e1385ee548af96bcea",
+        "version": "2",
+        "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
+      },
+      "judgment_changed": false,
+      "functional_result": "met",
+      "output": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163957463Z-cw-suite-codex-agent-recommendation-candidate-fuller-23959f90-6949-436c-bd87-3baa14825200-g2yhjg56/workspace/fixture/report.md",
+        "sha256": "45b6879d78fccad04d4b973607470f7f77857cdf2c658c7924d8c756aaf73fbb"
+      }
+    },
+    {
+      "run_id": "20261018T163919129Z-cw-suite-codex-agent-recommendation-candidate-targeted-961233ed-dea7-467b-ba18-592fc39069ce-6o6737ty",
+      "condition": "candidate-targeted",
+      "repetition": 3,
+      "original_result": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163919129Z-cw-suite-codex-agent-recommendation-candidate-targeted-961233ed-dea7-467b-ba18-592fc39069ce-6o6737ty.json",
+        "sha256": "379122623998cd40f07a49ecfc733030181a9f33425d11f791f38e9adfdb954a",
+        "version": "2",
+        "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
+      },
+      "current_result": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T163919129Z-cw-suite-codex-agent-recommendation-candidate-targeted-961233ed-dea7-467b-ba18-592fc39069ce-6o6737ty.json",
+        "sha256": "379122623998cd40f07a49ecfc733030181a9f33425d11f791f38e9adfdb954a",
+        "version": "2",
+        "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
+      },
+      "judgment_changed": false,
+      "functional_result": "met",
+      "output": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T163919129Z-cw-suite-codex-agent-recommendation-candidate-targeted-961233ed-dea7-467b-ba18-592fc39069ce-6o6737ty/workspace/fixture/report.md",
+        "sha256": "29c96e31b66cc927737ea2fedd0c4613ea95e595d4a6cf2f11120b285369caa8"
+      }
+    },
+    {
+      "run_id": "20261018T164029409Z-cw-suite-codex-agent-recommendation-control-99d110c9-6662-4760-adb2-8c64200c01bf-ml_t3ckm",
+      "condition": "control",
+      "repetition": 3,
+      "original_result": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164029409Z-cw-suite-codex-agent-recommendation-control-99d110c9-6662-4760-adb2-8c64200c01bf-ml_t3ckm.json",
+        "sha256": "f27e67fb1e2ff102cb35fb12c143707c0267723ab773925c5a3a17f95afdbe3d",
+        "version": "2",
+        "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
+      },
+      "current_result": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164029409Z-cw-suite-codex-agent-recommendation-control-99d110c9-6662-4760-adb2-8c64200c01bf-ml_t3ckm.json",
+        "sha256": "f27e67fb1e2ff102cb35fb12c143707c0267723ab773925c5a3a17f95afdbe3d",
+        "version": "2",
+        "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
+      },
+      "judgment_changed": false,
+      "functional_result": "met",
+      "output": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164029409Z-cw-suite-codex-agent-recommendation-control-99d110c9-6662-4760-adb2-8c64200c01bf-ml_t3ckm/workspace/fixture/report.md",
+        "sha256": "3dd9dd3c6aea1ff729ceb7de50dee941fee9f3594380dc78f85c22d152fdbe56"
+      }
+    },
+    {
+      "run_id": "20261018T164107612Z-cw-suite-codex-agent-recommendation-original-c7ae56cd-0e70-4ecf-b907-c192552d5b68-pdo3phcc",
+      "condition": "original",
+      "repetition": 3,
+      "original_result": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164107612Z-cw-suite-codex-agent-recommendation-original-c7ae56cd-0e70-4ecf-b907-c192552d5b68-pdo3phcc.json",
+        "sha256": "8771f33b3ddb38466cf06007981dd2bc599c767c23f63cc6cf22e8e633b3dca0",
+        "version": "2",
+        "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
+      },
+      "current_result": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T164107612Z-cw-suite-codex-agent-recommendation-original-c7ae56cd-0e70-4ecf-b907-c192552d5b68-pdo3phcc.json",
+        "sha256": "8771f33b3ddb38466cf06007981dd2bc599c767c23f63cc6cf22e8e633b3dca0",
+        "version": "2",
+        "git_revision": "24c80fe8faa76cb08e837ba68d96133c80fcb865"
+      },
+      "judgment_changed": false,
+      "functional_result": "met",
+      "output": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T164107612Z-cw-suite-codex-agent-recommendation-original-c7ae56cd-0e70-4ecf-b907-c192552d5b68-pdo3phcc/workspace/fixture/report.md",
+        "sha256": "868082b26218558b4380e81fb22342dd0a1a525e50bf7788353adbb24fadd3e0"
+      }
+    }
+  ]
+}

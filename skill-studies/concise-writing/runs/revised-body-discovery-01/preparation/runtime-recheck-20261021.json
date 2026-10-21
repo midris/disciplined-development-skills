@@ -1,0 +1,31 @@
+{
+  "status": "Claude CLI substitution awaits owner decision; Codex remains qualified",
+  "checked_on": "2026-10-21",
+  "model_calls": 0,
+  "passed": 15,
+  "claude": {
+    "path": "/opt/homebrew/Caskroom/claude-code@latest/2.1.305/claude",
+    "sha256": "ea3ea3c08d2a9634a4651e687fcf900d410c489bce2b00f22bd7352b91ba704f",
+    "version": "2.1.305 (Claude Code)"
+  },
+  "claude_logged_in": true,
+  "old_claude": "2.1.301 binary absent",
+  "unchanged": [
+    "codex0.163.0",
+    "Python3.14.8",
+    "Git2.56.0"
+  ],
+  "checks": [
+    "11 installed shell/Git/isolation/read-only checks",
+    "3 exact Claude description catalog/body deliveries",
+    "1 Opus-medium read-only transport"
+  ],
+  "evidence": {
+    "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/qualification-20261021",
+    "inventory": {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/qualification-20261021.inventory.json",
+      "sha256": "bff2209bbd8cae12655159a74e0a3894f038ad40110b41f08857fb4a0e518a3e",
+      "version": "1"
+    }
+  }
+}

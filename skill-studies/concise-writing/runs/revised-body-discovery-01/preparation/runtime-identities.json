@@ -1,0 +1,92 @@
+{
+  "qualified": {
+    "codex": {
+      "path": "/opt/homebrew/Caskroom/codex/0.163.0/bin/codex",
+      "sha256": "8813367285524ac798dd96d1b071aea30d58708c7226fd236cd275cf1cfdee31",
+      "version": "codex-cli 0.163.0"
+    },
+    "claude": {
+      "path": "/opt/homebrew/Caskroom/claude-code@latest/2.1.305/claude",
+      "sha256": "ea3ea3c08d2a9634a4651e687fcf900d410c489bce2b00f22bd7352b91ba704f",
+      "version": "2.1.305 (Claude Code)"
+    },
+    "python": {
+      "path": "/opt/homebrew/Cellar/python@3.14/3.14.8_2/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+      "sha256": "1b5cb11d163e5ba34e2a05fc533c0ed89574d4425f9749a9d89405f651980e0d",
+      "version": "Python 3.14.8"
+    },
+    "git": {
+      "path": "/opt/homebrew/Cellar/git/2.56.0_1/bin/git",
+      "sha256": "40163333061f7223ecb604ed0f12988cfc8096d57ca8b1db006d410d4aeb700e",
+      "version": "git version 2.56.0"
+    }
+  },
+  "zero_model_checks": 18,
+  "model_calls": 0,
+  "subject_models": {
+    "codex": "gpt-5.6-sol",
+    "claude": "claude-sonnet-5"
+  },
+  "subject_effort": "low",
+  "evaluator_model": "claude-opus-5-5",
+  "evaluator_effort": "medium",
+  "evaluator_tools": [
+    "Read",
+    "Glob",
+    "Grep"
+  ],
+  "prior_qualification": {
+    "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/preflight",
+    "inventory": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/preflight.inventory.json",
+    "sha256": "a9048aed09782ce2aca317a6f4831d178a87c7af72a0821fedc57f6919738dd3"
+  },
+  "prior_qualification_final": {
+    "path": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/preflight-final",
+    "inventory": "/Users/simon/work/personal/skill-study-private/concise-writing/e-iteration-20261018/preflight-final.inventory.json",
+    "sha256": "d8c2ea050e3259825ede959af0aff6d800030cbe13fce0514085f0286f68b873",
+    "passed": 12,
+    "notes": "Eleven combined runtime checks pass; Opus ran separately after a controller evidence-name collision prevented its startup in the combined command."
+  },
+  "prior_preflight": {
+    "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/preflight",
+    "inventory": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/preflight.inventory.json",
+    "sha256": "e8f5af29e63d663fb9019f32add43e470f6a2e2d6650df90cc867d02387cdbee",
+    "passed": 12,
+    "model_calls": 0
+  },
+  "focused_qualification": {
+    "runtime": {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/qualification-runtime",
+      "inventory": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/qualification-runtime.inventory.json",
+      "sha256": "3a33bcbac469732eebce1ab59aebd5c141b020dd077dc3d2056f1f9f98c936c5",
+      "model_calls": 0
+    },
+    "claude-catalog": {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/qualification-claude-catalog",
+      "inventory": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/qualification-claude-catalog.inventory.json",
+      "sha256": "d2f3a5fd1189a11db666972bc76dadc14357e37b8dc6928acfeead5fd7da4367",
+      "model_calls": 0
+    },
+    "codex-catalog": {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/qualification-codex-catalog",
+      "inventory": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/qualification-codex-catalog.inventory.json",
+      "sha256": "83fbc77c07eaa1c5ed1160c0cc72fbef28c1bf5ced1b0f0a0911fbefa40cffa2",
+      "model_calls": 0
+    },
+    "opus": {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/qualification-opus",
+      "inventory": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/qualification-opus.inventory.json",
+      "sha256": "77b48a10c51cdb5a9bbe33ae978cc54de950c54733f0fea1cd777405a76f6ae0",
+      "model_calls": 0
+    }
+  },
+  "qualification_recheck_20261021": {
+    "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/qualification-20261021",
+    "inventory": {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/qualification-20261021.inventory.json",
+      "sha256": "bff2209bbd8cae12655159a74e0a3894f038ad40110b41f08857fb4a0e518a3e",
+      "version": "1"
+    }
+  },
+  "qualification_recheck_notes": "15 fresh zero-model checks; Codex CLI and retained three-description catalog qualification are byte-identical. Claude technical qualification is not owner authorization; see the protocol for the CLI substitution decision."
+}

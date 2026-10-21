@@ -1,0 +1,179 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claude-ordinary-iteration-01-agent-recommendation-candidate-fuller-1-1-assessment-holistic-application-1",
+  "assessed_at": "2026-10-21T05:21:24+00:00",
+  "run_id": "20261018T170853473Z-cw-suite-claude-agent-recommendation-candidate-fuller-fb7d7805-0d65-443b-b53c-51a55b8ae586-n0vsuhra",
+  "condition": "candidate-fuller",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Owner-requested complete-context reassessment by the exposed Codex active controller under unchanged CW-expanded-1/CW-assessment-4. No new independent reviewer or model call. See CW-holistic-application-1; the owner explicitly reviewed Codex N2 targeted3, while other judgments here are controller applications, not additional owner rulings."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/preparation/manifests/claude-agent-recommendation-manifest.json",
+    "sha256": "a653bf4dfce20734af25315396158434186b7b94b1e79b6961dd4420357e238a",
+    "version": "1",
+    "git_revision": "6a89f2f76a3a03508fb05d6ce435af98ed35ea42"
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T170853473Z-cw-suite-claude-agent-recommendation-candidate-fuller-fb7d7805-0d65-443b-b53c-51a55b8ae586-n0vsuhra/workspace/fixture/report.md",
+        "sha256": "08e0c5d2c759eb4c0372c4ec123f7ec82d2c885f31e24a9975b2fa05df3338f4",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T170853473Z-cw-suite-claude-agent-recommendation-candidate-fuller-fb7d7805-0d65-443b-b53c-51a55b8ae586-n0vsuhra/stdout.txt",
+        "sha256": "928f2f256ebe75e4e79f305d2a661d5512695db3f789c40d2be6c7a7ec5e4d06",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T170853473Z-cw-suite-claude-agent-recommendation-candidate-fuller-fb7d7805-0d65-443b-b53c-51a55b8ae586-n0vsuhra/result.json",
+        "sha256": "35e35ba9ad878dd639c00f0a7a361a912dc419bb2c04a5d8ca8444094083cef2",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T170853473Z-cw-suite-claude-agent-recommendation-candidate-fuller-fb7d7805-0d65-443b-b53c-51a55b8ae586-n0vsuhra/runner.log",
+        "sha256": "7c0c977584f70a2841e05f606b1a2d2e0f0ef3b7bf04f908e4569b466d535019",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/baseline-suite-20261018/subjects/20261018T170853473Z-cw-suite-claude-agent-recommendation-candidate-fuller-fb7d7805-0d65-443b-b53c-51a55b8ae586-n0vsuhra/final.txt",
+        "sha256": "b92bd12bcb2b809afd6b99ab5b03fdb4db98f04fc422656b1a3ed10448488730",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/fixture/report.md",
+        "sha256": "e9a992c7e4c14dfd5afc10cc637349f39c2030e98ed0311441675900bc3e93e9",
+        "version": null,
+        "git_revision": "6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb"
+      },
+      "selector": "Complete frozen report.md"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/agent-recommendation/task.md",
+        "sha256": "607cbe0562a19ea092fe76ec96f13bfbe033b2e1095baef2ca38be621c0baf82",
+        "version": null,
+        "git_revision": "6ad549b50af54d9766d05b47ebf5cbc1ea3cddbb"
+      },
+      "selector": "Complete frozen TASK.md"
+    },
+    {
+      "id": "holistic-application",
+      "artifact": {
+        "path": "skill-studies/concise-writing/runs/holistic-dispute-reassessment-01/interpretation.md",
+        "sha256": "c02dfd377317cb74d863a9cb8517c3e269ab7c4607e27ce4afd26bada3d9da31",
+        "version": "CW-holistic-application-1"
+      },
+      "selector": "Complete context-review rationale and scope"
+    },
+    {
+      "id": "prior-assessment",
+      "artifact": {
+        "path": "skill-studies/concise-writing/runs/baseline-iteration-suite-01/results/20261018T170853473Z-cw-suite-claude-agent-recommendation-candidate-fuller-fb7d7805-0d65-443b-b53c-51a55b8ae586-n0vsuhra.json",
+        "sha256": "248017d1d067267323a004bc161f153379317a044c9f3a6098470fcf14570cc3",
+        "version": "2",
+        "git_revision": "9d88e769eb4e7e7bab464644c750863dde4b0ec1"
+      },
+      "selector": "Preserved prior assessment; changed factors and reasons are identified in the reassessment mapping"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Fixed provider/model/CLI and retained inventory verified. Complete assigned body in tool output 9 before first task edit 16. Protected input bytes unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Read as a complete pilot recommendation, the only-window parenthesis describes the supplied Tuesday 10:00–11:00 staffed opportunity. Approval remains pending, the pilot stays bounded and wider release requires another decision; no instruction compels approval or forbids a different proposal. The source itself calls this the staffed change window. Only is unnecessary emphasis and a precision weakness, but the prior no-alternative consequence was not established in context.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "holistic-application"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The complete update still supports the limited ten-account/30-minute approval request, Maya/Leo roles and separate successful-pilot release decision. The mismatch branch retains both files until investigation and explicitly preserves the source-selection/upload diagnostic purpose. Those actions remain usable despite the distinct F1 exclusivity overstatement.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The recommendation-first sequence is compact and coherent, followed by one implementation explanation, bounded evidence and the mismatch branch. Repetition does not impose a demonstrated unnecessary reading burden.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Fixed provider/model/CLI and retained inventory verified. Complete assigned body in tool output 9 before first task edit 16. Protected input bytes unchanged. O4/O5 remain unscored; native D1 is distinct from functional outcome.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Complete output 241 wc-w words; supplied report.md: 625 words, TASK.md: 51 words. Counts describe length, not semantic success; comment-only counts are reported separately for N4.",
+      "consequence": "Descriptive counts only.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "The only-window parenthesis is a non-blocking precision weakness in this complete bounded recommendation; no false urgency or compulsory approval is established. Its recommendation-first structure, separate mechanism, bounded evidence and mismatch section remain clear.",
+      "consequence": "Qualitative comparison remains separate from threshold counts; prior interpretation is preserved in the linked prior assessment.",
+      "evidence": [
+        "output",
+        "holistic-application"
+      ]
+    }
+  ],
+  "uncertainty": []
+}
