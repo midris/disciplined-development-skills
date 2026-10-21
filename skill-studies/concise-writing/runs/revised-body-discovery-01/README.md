@@ -16,3 +16,6 @@ The [Codex body assessment](codex-body-focused-01-assessment.md) links the final
 The [Claude body assessment](claude-body-focused-01-assessment.md) links its final [attempt index](claude-body-focused-01-run-index.json), frozen result citations and provider-specific quality observations.
 
 The [Codex discovery assessment](codex-discovery-focused-01-assessment.md) links its final [index](codex-discovery-focused-01-run-index.json), native load timing, comment outcomes and numeric-only task observations.
+
+The [Claude native-inspection amendment](preparation/native-inspection-amendment.md) records the name-only init correction and evidence limits.
+For Claude discovery after the first invocation, use [inspector v2](preparation/inspect_native_v2.py); the two native manifests freeze that controller-only amendment at `835a41fab005d537ee34c8bb9f056409678fa3cc`, with identical subject inputs and criteria.

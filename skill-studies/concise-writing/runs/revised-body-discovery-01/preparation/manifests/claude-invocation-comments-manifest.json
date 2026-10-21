@@ -5,7 +5,7 @@
   "case_id": "invocation-comments",
   "status": "frozen",
   "created_at": "2026-10-18T00:00:00Z",
-  "source_revision": "dcb8aba30fcbb28563f6db6965d8abb607fd0d97",
+  "source_revision": "835a41fab005d537ee34c8bb9f056409678fa3cc",
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
@@ -14,7 +14,7 @@
     },
     "protocol": {
       "path": "skill-studies/concise-writing/protocol.md",
-      "sha256": "887e00f1fb66aa80d639f7c3e98f5e88911b6d82872e7d02f38a0af5fe28161b",
+      "sha256": "bc6d2047b3900abb9bb3bdf8f48ce4d02c071d6c22dfce0f3f489a45546fbf10",
       "version": "1"
     },
     "format_contract": {
@@ -151,6 +151,31 @@
       "path": "skill-studies/concise-writing/drafts/baseline-iteration/discovery/proposal.md",
       "sha256": "08f88706f7b303cbc22ad88015b2031c63c047039dc74d35bf8be92306b2fd33",
       "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/inspect_native_v2.py",
+      "sha256": "5aa940ed5a7397c86231caac269f1b054ab9635750b66febb6d44c43945224a1",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/claude_catalog.py",
+      "sha256": "1af2b5db4f8bd99a49855e9511306d92cf6c13ed94aa1d7c4958d9d770f184fa",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/inspection-tests/test_claude_catalog.py",
+      "sha256": "e4bf45c0b949e4aac9303a613d4e5c46607fe057206ac3ad1a8e37df3f8de047",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/native-inspection-amendment.md",
+      "sha256": "24b5472fd6f70732272c9e9ae3962d1d4fe60acac19bc76986bdb778d390900e",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/native-inspection-amendment.json",
+      "sha256": "35bb8c6d620ce16ed5334cb2cef79b10360ffd46948e7a92182acb9610f97ea4",
+      "version": "1"
     }
   ]
 }

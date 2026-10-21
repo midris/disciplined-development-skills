@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `concise-writing`
 Status: all ninety focused body subjects and thirty Codex discovery subjects are complete and directly assessed, with five repetitions per selected condition/provider.
-Current action: freeze the corrected [Claude native inspection](runs/revised-body-discovery-01/preparation/native-inspection-amendment.md), then complete the remaining twenty-nine Claude discovery subjects and ten Opus 5.5 medium reviews.
+Current action: complete the Claude discovery stratum using the frozen [catalog-inspection amendment](runs/revised-body-discovery-01/preparation/native-inspection-amendment.md), then ten Opus 5.5 medium reviews.
 Both runtimes remain qualified, with no setup exclusions or retries.
 The first Claude discovery subject is complete and assessed after correcting a name-only-init inspection error through retained-evidence replay; it was not repeated.
 The [Codex discovery assessment](runs/revised-body-discovery-01/codex-discovery-focused-01-assessment.md) separates body delivery, comment quality and numeric-task observations.
