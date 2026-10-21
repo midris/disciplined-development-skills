@@ -1,0 +1,17 @@
+{
+  "configuration": "claude-comments-explicit",
+  "required_complete_files": 20,
+  "outputs": 10,
+  "first_pass_event": 93,
+  "prior_read_event": 94,
+  "first_pass_sha256": "09ee00ae91e7a15d30c1e859b52cb900ea65633ab65c54221b4aed4d14495669",
+  "first_pass_path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/evaluation/claude-comments-explicit-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/reviews/20261021T202511275Z-cw-suite-opus-claude-comments-explicit-9857d3d3-9afa-4dc5-b072-f8828408a765-ghghsjha/final.txt",
+  "final_sha256": "c4127fe6ebcbba15330bfb74df712cfc9df92e3369ccad4232ac366771efc42c",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "pre_prior_grep_calls": [],
+  "semantic_completeness": "verified: all ten independent F1-F3 rows, full-ID quote mappings, counts and complete final comparison manually inspected; bare F3 rows supported by complete-file/group discussion. All20files before first pass93/priorRead94, no pre-prior Grep. All factors and output attribution unchanged; post-prior maintenance-scope evidence explanation corrected and explicitly preserved as post-prior."
+}

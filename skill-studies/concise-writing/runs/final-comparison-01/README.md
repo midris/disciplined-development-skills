@@ -6,3 +6,5 @@ The [comparison design](../../drafts/baseline-iteration/final-comparison/README.
 [Review design](evaluation/README.md) defines the bounded output evaluation.
 
 The owner-approved [first comment screen](screen-01/README.md) uses only twelve subjects and two reviews; current status belongs to the protocol.
+
+[Repetitions four and five](screen-02/README.md) retain the eight additions and the two combined ten-output provider reviews separately from the first-screen evidence.

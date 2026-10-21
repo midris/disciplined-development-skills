@@ -1,0 +1,627 @@
+{
+  "scope": "Twenty distinct final CW comment artifacts (twelve reused, eight added), two ten-output Opus reviews; manual interpretation of full first passes and comparisons",
+  "reviewer": "claude-opus-5-5 medium",
+  "active_assessor": "Codex controller",
+  "blinding": "Condition labels visible; active assessor has development/authoring exposure",
+  "reviewed_packets": 2,
+  "unique_subject_outputs": 20,
+  "reviews": [
+    {
+      "configuration": "codex-comments-explicit",
+      "evaluator_run_id": "20261021T202154729Z-cw-suite-opus-codex-comments-explicit-866b2509-b031-4dcd-b88c-1f3388a8554f-1fcxo9tf",
+      "audit": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/evaluation/codex-comments-explicit-audit.json",
+      "judgments": [
+        {
+          "run_id": "20261021T192106786Z-cw-final-codex-comments-explicit-original-body-edd19c3e-6bef-49e2-9a55-881ecec9bc5b-0xrc7pdu",
+          "condition": "original-body",
+          "repetition": 1,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "codex-final-comments-screen-01-comments-explicit-original-body-1-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T192106786Z-cw-final-codex-comments-explicit-original-body-edd19c3e-6bef-49e2-9a55-881ecec9bc5b-0xrc7pdu.json",
+              "sha256": "f2424769de7fceb3ee7ead45a00258c7c69eab392fa2699b73a414f9ce0bb73b",
+              "version": "2",
+              "git_revision": "5853140a9e17f2f146baa90f51c52fb547e45e2f"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/evaluation/codex-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "None: all thirty independent factor judgments and run/condition/repetition attribution remain unchanged."
+        },
+        {
+          "run_id": "20261021T192300999Z-cw-final-codex-comments-explicit-revised-body-c4b7fa18-c41e-4264-aed1-5993195a94b2-k0fuy9bj",
+          "condition": "revised-body",
+          "repetition": 1,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "codex-final-comments-screen-01-comments-explicit-revised-body-1-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T192300999Z-cw-final-codex-comments-explicit-revised-body-c4b7fa18-c41e-4264-aed1-5993195a94b2-k0fuy9bj.json",
+              "sha256": "87bb0b7b175008a223a895f65aa59c2de9ab360548c731ffc45d32fa2a0a2685",
+              "version": "2",
+              "git_revision": "5853140a9e17f2f146baa90f51c52fb547e45e2f"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/evaluation/codex-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "None: all thirty independent factor judgments and run/condition/repetition attribution remain unchanged."
+        },
+        {
+          "run_id": "20261021T192410997Z-cw-final-codex-comments-explicit-revised-body-e56a7e18-7ae7-4140-91f3-166dfb4bb2c5-hpdmjfq7",
+          "condition": "revised-body",
+          "repetition": 2,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "codex-final-comments-screen-01-comments-explicit-revised-body-2-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T192410997Z-cw-final-codex-comments-explicit-revised-body-e56a7e18-7ae7-4140-91f3-166dfb4bb2c5-hpdmjfq7.json",
+              "sha256": "814dbf9a3447e1bebca7978510f7eb86e12a16620a7913698ee45749639fcd87",
+              "version": "2",
+              "git_revision": "5853140a9e17f2f146baa90f51c52fb547e45e2f"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/evaluation/codex-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "None: all thirty independent factor judgments and run/condition/repetition attribution remain unchanged."
+        },
+        {
+          "run_id": "20261021T192531063Z-cw-final-codex-comments-explicit-original-body-6b2c3e11-e21d-4de2-99c4-c48b66a97ea8-rv61auqg",
+          "condition": "original-body",
+          "repetition": 2,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "codex-final-comments-screen-01-comments-explicit-original-body-2-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T192531063Z-cw-final-codex-comments-explicit-original-body-6b2c3e11-e21d-4de2-99c4-c48b66a97ea8-rv61auqg.json",
+              "sha256": "e19ca81238752c711665b9f8ba47b110fd788aec1f4635a56b5c9f7946b37afc",
+              "version": "2",
+              "git_revision": "5853140a9e17f2f146baa90f51c52fb547e45e2f"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/evaluation/codex-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "None: all thirty independent factor judgments and run/condition/repetition attribution remain unchanged."
+        },
+        {
+          "run_id": "20261021T192718747Z-cw-final-codex-comments-explicit-original-body-a2d143cb-0b10-47af-960d-3846f2e2e5b5-zuv2m2zn",
+          "condition": "original-body",
+          "repetition": 3,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "codex-final-comments-screen-01-comments-explicit-original-body-3-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T192718747Z-cw-final-codex-comments-explicit-original-body-a2d143cb-0b10-47af-960d-3846f2e2e5b5-zuv2m2zn.json",
+              "sha256": "b06be895d8b0eb33963fc09f8dc20e3dbbd0616edaa66ef958934e90c20ec2d2",
+              "version": "2",
+              "git_revision": "5853140a9e17f2f146baa90f51c52fb547e45e2f"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/evaluation/codex-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "None: all thirty independent factor judgments and run/condition/repetition attribution remain unchanged."
+        },
+        {
+          "run_id": "20261021T192825872Z-cw-final-codex-comments-explicit-revised-body-338ab5d0-873f-42e4-b15a-43511c02e320-ixuuc5fr",
+          "condition": "revised-body",
+          "repetition": 3,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "codex-final-comments-screen-01-comments-explicit-revised-body-3-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T192825872Z-cw-final-codex-comments-explicit-revised-body-338ab5d0-873f-42e4-b15a-43511c02e320-ixuuc5fr.json",
+              "sha256": "3281d447df42ed351f0719642a2c76c1e07225e553c5d98cab759d907130f327",
+              "version": "2",
+              "git_revision": "5853140a9e17f2f146baa90f51c52fb547e45e2f"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/evaluation/codex-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "None: all thirty independent factor judgments and run/condition/repetition attribution remain unchanged."
+        },
+        {
+          "run_id": "20261021T200649492Z-cw-final-codex-comments-explicit-revised-body-c51de4ad-202c-4d75-b7e2-4d2deeb6d65a-2jak535y",
+          "condition": "revised-body",
+          "repetition": 4,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "codex-final-comments-screen-02-comments-explicit-revised-body-4-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/results/20261021T200649492Z-cw-final-codex-comments-explicit-revised-body-c51de4ad-202c-4d75-b7e2-4d2deeb6d65a-2jak535y.json",
+              "sha256": "25d6efbd999a5fed9f7608a566874113e5f1c242e9de0ec6ba4a6c585d7bc384",
+              "version": "2",
+              "git_revision": "5259392428e715078fd8c0c04d45d7885cd57561"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/evaluation/codex-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "None: all thirty independent factor judgments and run/condition/repetition attribution remain unchanged."
+        },
+        {
+          "run_id": "20261021T200908311Z-cw-final-codex-comments-explicit-original-body-e9af45d9-9301-4d20-b9ba-3301e778f166-vrdw03bo",
+          "condition": "original-body",
+          "repetition": 4,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "codex-final-comments-screen-02-comments-explicit-original-body-4-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/results/20261021T200908311Z-cw-final-codex-comments-explicit-original-body-e9af45d9-9301-4d20-b9ba-3301e778f166-vrdw03bo.json",
+              "sha256": "ef8dd33b6175802bba0c4e094e12adf67bf3b29fec822448c59da16fb674d9c9",
+              "version": "2",
+              "git_revision": "5259392428e715078fd8c0c04d45d7885cd57561"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/evaluation/codex-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "None: all thirty independent factor judgments and run/condition/repetition attribution remain unchanged."
+        },
+        {
+          "run_id": "20261021T201009511Z-cw-final-codex-comments-explicit-original-body-f9ffc034-7d80-433f-9c82-bcbf26f615f5-8714jyaa",
+          "condition": "original-body",
+          "repetition": 5,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "codex-final-comments-screen-02-comments-explicit-original-body-5-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/results/20261021T201009511Z-cw-final-codex-comments-explicit-original-body-f9ffc034-7d80-433f-9c82-bcbf26f615f5-8714jyaa.json",
+              "sha256": "d6cd8cc2da6410b2c85a07820a82b4f4a92ebfd5d29e156953d2dfe9a0f77104",
+              "version": "2",
+              "git_revision": "5259392428e715078fd8c0c04d45d7885cd57561"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/evaluation/codex-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "None: all thirty independent factor judgments and run/condition/repetition attribution remain unchanged."
+        },
+        {
+          "run_id": "20261021T201139611Z-cw-final-codex-comments-explicit-revised-body-ea37b06e-36cc-4950-9fa3-d2c1b6a7b172-ni9m6s9t",
+          "condition": "revised-body",
+          "repetition": 5,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "codex-final-comments-screen-02-comments-explicit-revised-body-5-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/results/20261021T201139611Z-cw-final-codex-comments-explicit-revised-body-ea37b06e-36cc-4950-9fa3-d2c1b6a7b172-ni9m6s9t.json",
+              "sha256": "5c6ce1b1e3eaadd03f8c91db1b31e5e6d7b577e53958105f2cf2f0d813484b3d",
+              "version": "2",
+              "git_revision": "5259392428e715078fd8c0c04d45d7885cd57561"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/evaluation/codex-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "None: all thirty independent factor judgments and run/condition/repetition attribution remain unchanged."
+        }
+      ],
+      "disagreements": [
+        "No factor disagreement. Reviewer distinguishes original1 comment no-resend wording from code-visible acknowledgement propagation; the active reason assesses complete code/comments and does not require a literal propagation sentence.",
+        "Reviewer flags a compressed causal link in original5 (errors propagate because resending could duplicate), with no practical meaning loss.",
+        "Reported criterion ambiguities about placement wording and acknowledgement TemporaryUploadError are already bounded by the frozen complete-code interpretation; no new sentence requirement is added."
+      ],
+      "quality_notes": [
+        "All ten pass. Original outputs are more uniform at33\u201348commentwords; revised range33\u201362. Means42and47.2 are descriptive.",
+        "Revised5 is the most explicit and uniquely names acknowledgement TemporaryUploadError; revised3/4 convey duplicate risk implicitly. Original2/3/4/5 name duplicate/second-upload consequence directly. These are detail/compactness trade-offs, not a consistent consequential winner.",
+        "Independent first pass supplies exact full IDs for all ten outputs and matches their actual quotes/condition/reps. Revised4 F3 is a bare met row, supported by the complete-file discussion and all-ten readability comparison, not a missing judgment. Subsequent comparison uses some shortened references; mappings remain unambiguous."
+      ],
+      "transcription_basis": "Manually read all ten first-pass F1-F3 rows, quoted passages, element tabulation and full final comparison against complete output evidence. All20required files delivered before first pass69/priorRead70; no pre-prior Grep. Exact model/tools, capture, inventories and protected packet bytes verified. No factor or evidence-attribution changes after prior."
+    },
+    {
+      "configuration": "claude-comments-explicit",
+      "evaluator_run_id": "20261021T202511275Z-cw-suite-opus-claude-comments-explicit-9857d3d3-9afa-4dc5-b072-f8828408a765-ghghsjha",
+      "audit": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/evaluation/claude-comments-explicit-audit.json",
+      "judgments": [
+        {
+          "run_id": "20261021T192936761Z-cw-final-claude-comments-explicit-revised-body-179e8c05-6ac3-4f88-a491-4bf9aa00114f-wahfnx0c",
+          "condition": "revised-body",
+          "repetition": 1,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "claude-final-comments-screen-01-comments-explicit-revised-body-1-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T192936761Z-cw-final-claude-comments-explicit-revised-body-179e8c05-6ac3-4f88-a491-4bf9aa00114f-wahfnx0c.json",
+              "sha256": "7bf8574def5fa5bde78b6dd15462f65198aba8470bd3b5c3a9c64d87412f2947",
+              "version": "2",
+              "git_revision": "5853140a9e17f2f146baa90f51c52fb547e45e2f"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/evaluation/claude-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "All thirty factors, totals and output/condition/rep mappings unchanged. Reviewer revised its scope-evidence explanation after prior exposure: outside-except-block describes current placement correctly but is narrower than the safe send try/retry boundary as a maintenance instruction. Its revised1 weakness-on-this-axis account is post-prior evidence, not independently established first-pass reasoning."
+        },
+        {
+          "run_id": "20261021T193637217Z-cw-final-claude-comments-explicit-original-body-5e474484-7f58-46a5-8f20-e0ce2475fe49-iwhaxcva",
+          "condition": "original-body",
+          "repetition": 1,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "claude-final-comments-screen-01-comments-explicit-original-body-1-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T193637217Z-cw-final-claude-comments-explicit-original-body-5e474484-7f58-46a5-8f20-e0ce2475fe49-iwhaxcva.json",
+              "sha256": "233a92ad9471f5aa25fa95953b441d49514c55b81629ad65cad54b4802f22955",
+              "version": "2",
+              "git_revision": "5853140a9e17f2f146baa90f51c52fb547e45e2f"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/evaluation/claude-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "All thirty factors, totals and output/condition/rep mappings unchanged. Reviewer revised its scope-evidence explanation after prior exposure: outside-except-block describes current placement correctly but is narrower than the safe send try/retry boundary as a maintenance instruction. Its revised1 weakness-on-this-axis account is post-prior evidence, not independently established first-pass reasoning."
+        },
+        {
+          "run_id": "20261021T193718128Z-cw-final-claude-comments-explicit-original-body-d1a6de95-f8a7-4aae-b670-47c33c712d42-sx5l0p7h",
+          "condition": "original-body",
+          "repetition": 2,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "claude-final-comments-screen-01-comments-explicit-original-body-2-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T193718128Z-cw-final-claude-comments-explicit-original-body-d1a6de95-f8a7-4aae-b670-47c33c712d42-sx5l0p7h.json",
+              "sha256": "96909b691c32055f70a553d168fcb52c70b5ae6c2ebd2d41ba53a999b59f032c",
+              "version": "2",
+              "git_revision": "5853140a9e17f2f146baa90f51c52fb547e45e2f"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/evaluation/claude-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "All thirty factors, totals and output/condition/rep mappings unchanged. Reviewer revised its scope-evidence explanation after prior exposure: outside-except-block describes current placement correctly but is narrower than the safe send try/retry boundary as a maintenance instruction. Its revised1 weakness-on-this-axis account is post-prior evidence, not independently established first-pass reasoning."
+        },
+        {
+          "run_id": "20261021T193818029Z-cw-final-claude-comments-explicit-revised-body-ce1cf2d0-db00-4ac3-b9b9-e2402752d4e3-buzvu051",
+          "condition": "revised-body",
+          "repetition": 2,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "claude-final-comments-screen-01-comments-explicit-revised-body-2-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T193818029Z-cw-final-claude-comments-explicit-revised-body-ce1cf2d0-db00-4ac3-b9b9-e2402752d4e3-buzvu051.json",
+              "sha256": "908b148b649d439c4805ff0164728162a9468fb017cf88949bafa8f6c4600ce7",
+              "version": "2",
+              "git_revision": "5853140a9e17f2f146baa90f51c52fb547e45e2f"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/evaluation/claude-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "All thirty factors, totals and output/condition/rep mappings unchanged. Reviewer revised its scope-evidence explanation after prior exposure: outside-except-block describes current placement correctly but is narrower than the safe send try/retry boundary as a maintenance instruction. Its revised1 weakness-on-this-axis account is post-prior evidence, not independently established first-pass reasoning."
+        },
+        {
+          "run_id": "20261021T193852233Z-cw-final-claude-comments-explicit-revised-body-8f6afe52-2fa1-4edd-bac6-524c3e2abf6d-7k__l_sv",
+          "condition": "revised-body",
+          "repetition": 3,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "claude-final-comments-screen-01-comments-explicit-revised-body-3-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T193852233Z-cw-final-claude-comments-explicit-revised-body-8f6afe52-2fa1-4edd-bac6-524c3e2abf6d-7k__l_sv.json",
+              "sha256": "278e9fb4e0ec879496c12f767f54f0c5f1f0f9dba6503a8de699305aa705df85",
+              "version": "2",
+              "git_revision": "5853140a9e17f2f146baa90f51c52fb547e45e2f"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/evaluation/claude-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "All thirty factors, totals and output/condition/rep mappings unchanged. Reviewer revised its scope-evidence explanation after prior exposure: outside-except-block describes current placement correctly but is narrower than the safe send try/retry boundary as a maintenance instruction. Its revised1 weakness-on-this-axis account is post-prior evidence, not independently established first-pass reasoning."
+        },
+        {
+          "run_id": "20261021T193924939Z-cw-final-claude-comments-explicit-original-body-a30c3cdd-d31e-411b-bbb4-353c9650397e-ywvr_40c",
+          "condition": "original-body",
+          "repetition": 3,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "claude-final-comments-screen-01-comments-explicit-original-body-3-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T193924939Z-cw-final-claude-comments-explicit-original-body-a30c3cdd-d31e-411b-bbb4-353c9650397e-ywvr_40c.json",
+              "sha256": "92857bfb1343aaf52080fdbb48d0966467ebe5e6a32782b01a5ca3f5eabcdcd7",
+              "version": "2",
+              "git_revision": "5853140a9e17f2f146baa90f51c52fb547e45e2f"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/evaluation/claude-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "All thirty factors, totals and output/condition/rep mappings unchanged. Reviewer revised its scope-evidence explanation after prior exposure: outside-except-block describes current placement correctly but is narrower than the safe send try/retry boundary as a maintenance instruction. Its revised1 weakness-on-this-axis account is post-prior evidence, not independently established first-pass reasoning."
+        },
+        {
+          "run_id": "20261021T201358180Z-cw-final-claude-comments-explicit-original-body-66c98953-2540-461c-a9f9-7894feb81f08-ukkm3xh2",
+          "condition": "original-body",
+          "repetition": 4,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "claude-final-comments-screen-02-comments-explicit-original-body-4-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/results/20261021T201358180Z-cw-final-claude-comments-explicit-original-body-66c98953-2540-461c-a9f9-7894feb81f08-ukkm3xh2.json",
+              "sha256": "830df992b27d1640d8725d9e3d7fb5ba955f453cb61eaa187d2ac79e501d66ac",
+              "version": "2",
+              "git_revision": "5259392428e715078fd8c0c04d45d7885cd57561"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/evaluation/claude-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "All thirty factors, totals and output/condition/rep mappings unchanged. Reviewer revised its scope-evidence explanation after prior exposure: outside-except-block describes current placement correctly but is narrower than the safe send try/retry boundary as a maintenance instruction. Its revised1 weakness-on-this-axis account is post-prior evidence, not independently established first-pass reasoning."
+        },
+        {
+          "run_id": "20261021T201459548Z-cw-final-claude-comments-explicit-revised-body-87cbcab4-9153-4bdf-9ba8-9cbfa2da4f4f-x8xv94b9",
+          "condition": "revised-body",
+          "repetition": 4,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "claude-final-comments-screen-02-comments-explicit-revised-body-4-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/results/20261021T201459548Z-cw-final-claude-comments-explicit-revised-body-87cbcab4-9153-4bdf-9ba8-9cbfa2da4f4f-x8xv94b9.json",
+              "sha256": "b6f014ce8717f81faea5d1bc2f6f18b9dee6f256c601aad00d7cadfc23c1dc15",
+              "version": "2",
+              "git_revision": "5259392428e715078fd8c0c04d45d7885cd57561"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/evaluation/claude-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "All thirty factors, totals and output/condition/rep mappings unchanged. Reviewer revised its scope-evidence explanation after prior exposure: outside-except-block describes current placement correctly but is narrower than the safe send try/retry boundary as a maintenance instruction. Its revised1 weakness-on-this-axis account is post-prior evidence, not independently established first-pass reasoning."
+        },
+        {
+          "run_id": "20261021T201609426Z-cw-final-claude-comments-explicit-revised-body-cef8b869-bfd5-4a66-a12f-3f5bad55f5d8-me5qzzyo",
+          "condition": "revised-body",
+          "repetition": 5,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "claude-final-comments-screen-02-comments-explicit-revised-body-5-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/results/20261021T201609426Z-cw-final-claude-comments-explicit-revised-body-cef8b869-bfd5-4a66-a12f-3f5bad55f5d8-me5qzzyo.json",
+              "sha256": "1a74ad2f1686fdc3411b3a6412a39e49543c832a4b270b7b81c1150e4346880f",
+              "version": "2",
+              "git_revision": "5259392428e715078fd8c0c04d45d7885cd57561"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/evaluation/claude-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "All thirty factors, totals and output/condition/rep mappings unchanged. Reviewer revised its scope-evidence explanation after prior exposure: outside-except-block describes current placement correctly but is narrower than the safe send try/retry boundary as a maintenance instruction. Its revised1 weakness-on-this-axis account is post-prior evidence, not independently established first-pass reasoning."
+        },
+        {
+          "run_id": "20261021T201657228Z-cw-final-claude-comments-explicit-original-body-600efc28-63d3-417b-91d5-ac68111d1f1d-7k4nwqut",
+          "condition": "original-body",
+          "repetition": 5,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "claude-final-comments-screen-02-comments-explicit-original-body-5-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/results/20261021T201657228Z-cw-final-claude-comments-explicit-original-body-600efc28-63d3-417b-91d5-ac68111d1f1d-7k4nwqut.json",
+              "sha256": "d55efe4dd8e1ebaf05696ba2443b620c69f89db6eaaba9359698e32e554bac9f",
+              "version": "2",
+              "git_revision": "5259392428e715078fd8c0c04d45d7885cd57561"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/evaluation/claude-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "All thirty factors, totals and output/condition/rep mappings unchanged. Reviewer revised its scope-evidence explanation after prior exposure: outside-except-block describes current placement correctly but is narrower than the safe send try/retry boundary as a maintenance instruction. Its revised1 weakness-on-this-axis account is post-prior evidence, not independently established first-pass reasoning."
+        }
+      ],
+      "disagreements": [
+        "No factor disagreement. Reviewer gives precision notes on implicit acknowledgement-failure triggers in original2/revised1/revised5, while complete code/comments retain the practical maintenance meaning under the frozen interpretation.",
+        "Outside-except precision applies consistently to original3/original5 and revised1/revised4. Earlier active narratives did not flag all four; this comparison annotates all four without changing original scores or inventing a new phrase requirement.",
+        "Original4 lacks up-to before four total attempts, but early return in complete code resolves maximum versus mandatory count. A precision observation, not an introduced inaccuracy.",
+        "Frozen source card describes the original three-repetition scope; the owner-approved continuation schedule, protocol, prompt and index explicitly add4/5 while preserving F1-F3. Mechanical slot ordinals are stage-local and can repeat; exact run IDs/output hashes provide unique identity."
+      ],
+      "quality_notes": [
+        "Both bodies pass5/5, with original46.6 versus revised48.2meancommentwords. Original more often states trigger/placement/duplicate consequence explicitly; revised more often states fourth-failure behavior. Code supplies remaining facts and the differences do not establish a consistent consequential winner.",
+        "All ten independent first-pass IDs and quotes map correctly. Several F3 rows are bare met but supported by per-output structure discussion and complete-file/group readability comparison; no applicable judgment is absent.",
+        "The scope refinement followed prior-score exposure; preserve the initial explanation and final refinement separately rather than rewriting the first pass or counting the refinement as independent confirmation."
+      ],
+      "transcription_basis": "Manually read all ten independent F1-F3 rows, quotes, comparative counts/limitations and complete final response, checked against complete outputs. All20required files delivered before first pass93/priorRead94; no pre-prior Grep. Model/tool identity, protected bytes/capture/inventories verified. Thirty factor judgments unchanged; post-prior interpretive scope correction explicitly retained."
+    }
+  ]
+}

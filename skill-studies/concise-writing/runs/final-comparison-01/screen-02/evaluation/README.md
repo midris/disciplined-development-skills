@@ -15,3 +15,5 @@ Functional F1–F3, acceptable full-code paraphrase, useful reinforcement and co
 All required file deliveries must precede first-pass judgments and prior exposure; exact full run IDs are requested to avoid earlier abbreviation errors.
 A failed or incomplete review remains charged; no automatic retry, split, fallback or capacity transfer is authorized.
 Stop after these two reviews and reconcile all twenty unique subjects before any next-scenario or adoption decision.
+
+The [combined comparison](assessment.md) links [full-ID manual judgments](judgments.json), independent first passes, audits and the post-prior scope refinement.
