@@ -723,6 +723,726 @@
           "version": "2"
         }
       }
+    },
+    {
+      "attempt_id": "claude-body-focused-01-document-addition-control-1-1",
+      "case_id": "document-addition",
+      "condition": "control",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-document-addition-manifest.json",
+        "sha256": "fa95cda9233a077f63b3640677a865dd433c3053dca0624abe82939ebdcc49f2",
+        "version": "1",
+        "git_revision": "4025bbcb3b267e0aab9e6766fb7eab5a781cff0b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9a94fc71e368a5e505366d4576c9fda533734624eb46fff72c70e6d6ebe70c66",
+          "version": "1",
+          "git_revision": "4025bbcb3b267e0aab9e6766fb7eab5a781cff0b"
+        },
+        "selector": "Batch: claude-body-focused-01; order 16"
+      },
+      "run_id": "20261021T135147259Z-cw-focused-claude-document-addition-control-958f0762-454e-4b6a-b320-8af1db9e85f0-qynih0cm",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T135147259Z-cw-focused-claude-document-addition-control-958f0762-454e-4b6a-b320-8af1db9e85f0-qynih0cm",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T135147259Z-cw-focused-claude-document-addition-control-958f0762-454e-4b6a-b320-8af1db9e85f0-qynih0cm.inventory.json",
+          "sha256": "28b6008f7e4973bb632a27496fb3dccf153218271b370405e1c51954b23f6c9f",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-body-focused-01-document-addition-control-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T135147259Z-cw-focused-claude-document-addition-control-958f0762-454e-4b6a-b320-8af1db9e85f0-qynih0cm.json",
+          "sha256": "65c94bad4041927e37e8deaf0da316582e02ad3b6cd0e6c235cbc77bca42b0d9",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-body-focused-01-document-addition-original-1-1",
+      "case_id": "document-addition",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-document-addition-manifest.json",
+        "sha256": "fa95cda9233a077f63b3640677a865dd433c3053dca0624abe82939ebdcc49f2",
+        "version": "1",
+        "git_revision": "4025bbcb3b267e0aab9e6766fb7eab5a781cff0b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9a94fc71e368a5e505366d4576c9fda533734624eb46fff72c70e6d6ebe70c66",
+          "version": "1",
+          "git_revision": "4025bbcb3b267e0aab9e6766fb7eab5a781cff0b"
+        },
+        "selector": "Batch: claude-body-focused-01; order 17"
+      },
+      "run_id": "20261021T135248746Z-cw-focused-claude-document-addition-original-a8846f6d-99f3-4e97-aada-c9f9b8aa2f45-e0sydcqd",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T135248746Z-cw-focused-claude-document-addition-original-a8846f6d-99f3-4e97-aada-c9f9b8aa2f45-e0sydcqd",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T135248746Z-cw-focused-claude-document-addition-original-a8846f6d-99f3-4e97-aada-c9f9b8aa2f45-e0sydcqd.inventory.json",
+          "sha256": "0719a9fe5dc73e73d3184a7baa0d289bb17c5bbef8b68e0275c8ce624c561080",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-body-focused-01-document-addition-original-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T135248746Z-cw-focused-claude-document-addition-original-a8846f6d-99f3-4e97-aada-c9f9b8aa2f45-e0sydcqd.json",
+          "sha256": "738b76a8f03626e224b18281a989dc8dcd82b8c1ddbd60d9eb26b6b03ff48fdc",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-body-focused-01-document-addition-candidate-targeted-examples-1-1",
+      "case_id": "document-addition",
+      "condition": "candidate-targeted-examples",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-document-addition-manifest.json",
+        "sha256": "fa95cda9233a077f63b3640677a865dd433c3053dca0624abe82939ebdcc49f2",
+        "version": "1",
+        "git_revision": "4025bbcb3b267e0aab9e6766fb7eab5a781cff0b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9a94fc71e368a5e505366d4576c9fda533734624eb46fff72c70e6d6ebe70c66",
+          "version": "1",
+          "git_revision": "4025bbcb3b267e0aab9e6766fb7eab5a781cff0b"
+        },
+        "selector": "Batch: claude-body-focused-01; order 18"
+      },
+      "run_id": "20261021T135352213Z-cw-focused-claude-document-addition-candidate-targeted-examples-a40d58d4-87c8-4c75-9295-a4206861ef21-syt0zh4e",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T135352213Z-cw-focused-claude-document-addition-candidate-targeted-examples-a40d58d4-87c8-4c75-9295-a4206861ef21-syt0zh4e",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T135352213Z-cw-focused-claude-document-addition-candidate-targeted-examples-a40d58d4-87c8-4c75-9295-a4206861ef21-syt0zh4e.inventory.json",
+          "sha256": "9e35591137869f291cea9b34aa8f6c06ee0d7445f31f945f98bd246edf351a44",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-body-focused-01-document-addition-candidate-targeted-examples-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T135352213Z-cw-focused-claude-document-addition-candidate-targeted-examples-a40d58d4-87c8-4c75-9295-a4206861ef21-syt0zh4e.json",
+          "sha256": "b8deb1da41f9adffa09ed9cfd37c91bdc91f514542e77adca588ea6c2a315741",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-body-focused-01-document-addition-original-2-1",
+      "case_id": "document-addition",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-document-addition-manifest.json",
+        "sha256": "fa95cda9233a077f63b3640677a865dd433c3053dca0624abe82939ebdcc49f2",
+        "version": "1",
+        "git_revision": "4025bbcb3b267e0aab9e6766fb7eab5a781cff0b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9a94fc71e368a5e505366d4576c9fda533734624eb46fff72c70e6d6ebe70c66",
+          "version": "1",
+          "git_revision": "4025bbcb3b267e0aab9e6766fb7eab5a781cff0b"
+        },
+        "selector": "Batch: claude-body-focused-01; order 19"
+      },
+      "run_id": "20261021T135446677Z-cw-focused-claude-document-addition-original-c2dc552a-64dd-46d2-8528-e10e1d47b293-4qsik9ds",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T135446677Z-cw-focused-claude-document-addition-original-c2dc552a-64dd-46d2-8528-e10e1d47b293-4qsik9ds",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T135446677Z-cw-focused-claude-document-addition-original-c2dc552a-64dd-46d2-8528-e10e1d47b293-4qsik9ds.inventory.json",
+          "sha256": "3e1248e1ad6ba31b615da3a707306142085080807a15e7859b4a84e15c0aac10",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-body-focused-01-document-addition-original-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T135446677Z-cw-focused-claude-document-addition-original-c2dc552a-64dd-46d2-8528-e10e1d47b293-4qsik9ds.json",
+          "sha256": "305f6a54901c53e0aa6fffad6c32da522f19b8b646b6a56dd26e0b6632df1ff1",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-body-focused-01-document-addition-candidate-targeted-examples-2-1",
+      "case_id": "document-addition",
+      "condition": "candidate-targeted-examples",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-document-addition-manifest.json",
+        "sha256": "fa95cda9233a077f63b3640677a865dd433c3053dca0624abe82939ebdcc49f2",
+        "version": "1",
+        "git_revision": "4025bbcb3b267e0aab9e6766fb7eab5a781cff0b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9a94fc71e368a5e505366d4576c9fda533734624eb46fff72c70e6d6ebe70c66",
+          "version": "1",
+          "git_revision": "4025bbcb3b267e0aab9e6766fb7eab5a781cff0b"
+        },
+        "selector": "Batch: claude-body-focused-01; order 20"
+      },
+      "run_id": "20261021T135610959Z-cw-focused-claude-document-addition-candidate-targeted-examples-f8a82482-cd66-44d1-9d93-3d5c24accc2c-y9gjm7qw",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T135610959Z-cw-focused-claude-document-addition-candidate-targeted-examples-f8a82482-cd66-44d1-9d93-3d5c24accc2c-y9gjm7qw",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T135610959Z-cw-focused-claude-document-addition-candidate-targeted-examples-f8a82482-cd66-44d1-9d93-3d5c24accc2c-y9gjm7qw.inventory.json",
+          "sha256": "17ef188137faeed47f6183e113ccdb6bd9b350dd8b7eaba765492904dbb6f7cc",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-body-focused-01-document-addition-candidate-targeted-examples-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T135610959Z-cw-focused-claude-document-addition-candidate-targeted-examples-f8a82482-cd66-44d1-9d93-3d5c24accc2c-y9gjm7qw.json",
+          "sha256": "b44d480fe8e754b994ec15e110a733a16ea160f6a3e7ec22496338c730fd7e00",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-body-focused-01-document-addition-control-2-1",
+      "case_id": "document-addition",
+      "condition": "control",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-document-addition-manifest.json",
+        "sha256": "fa95cda9233a077f63b3640677a865dd433c3053dca0624abe82939ebdcc49f2",
+        "version": "1",
+        "git_revision": "4025bbcb3b267e0aab9e6766fb7eab5a781cff0b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9a94fc71e368a5e505366d4576c9fda533734624eb46fff72c70e6d6ebe70c66",
+          "version": "1",
+          "git_revision": "4025bbcb3b267e0aab9e6766fb7eab5a781cff0b"
+        },
+        "selector": "Batch: claude-body-focused-01; order 21"
+      },
+      "run_id": "20261021T135709857Z-cw-focused-claude-document-addition-control-e02cc7c1-974c-4c1d-96f5-aaaf4e8fb1ef-ojlca6q6",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T135709857Z-cw-focused-claude-document-addition-control-e02cc7c1-974c-4c1d-96f5-aaaf4e8fb1ef-ojlca6q6",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T135709857Z-cw-focused-claude-document-addition-control-e02cc7c1-974c-4c1d-96f5-aaaf4e8fb1ef-ojlca6q6.inventory.json",
+          "sha256": "bbc98661f4897148112032f2f3c3e08c82a2721bc61fd672604834785e362f52",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-body-focused-01-document-addition-control-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T135709857Z-cw-focused-claude-document-addition-control-e02cc7c1-974c-4c1d-96f5-aaaf4e8fb1ef-ojlca6q6.json",
+          "sha256": "45290c3491fb9b04a16d142a78a2b03edd5b06104859f98115758eb5c661afec",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-body-focused-01-document-addition-candidate-targeted-examples-3-1",
+      "case_id": "document-addition",
+      "condition": "candidate-targeted-examples",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-document-addition-manifest.json",
+        "sha256": "fa95cda9233a077f63b3640677a865dd433c3053dca0624abe82939ebdcc49f2",
+        "version": "1",
+        "git_revision": "4025bbcb3b267e0aab9e6766fb7eab5a781cff0b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9a94fc71e368a5e505366d4576c9fda533734624eb46fff72c70e6d6ebe70c66",
+          "version": "1",
+          "git_revision": "4025bbcb3b267e0aab9e6766fb7eab5a781cff0b"
+        },
+        "selector": "Batch: claude-body-focused-01; order 22"
+      },
+      "run_id": "20261021T135815218Z-cw-focused-claude-document-addition-candidate-targeted-examples-9a84cb78-0f20-4cbb-a86a-997479fbad63-r3ovtke0",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T135815218Z-cw-focused-claude-document-addition-candidate-targeted-examples-9a84cb78-0f20-4cbb-a86a-997479fbad63-r3ovtke0",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T135815218Z-cw-focused-claude-document-addition-candidate-targeted-examples-9a84cb78-0f20-4cbb-a86a-997479fbad63-r3ovtke0.inventory.json",
+          "sha256": "535092b8fba6958870321f229de198d0964f398c0985e10c1629cc1b0a6d7b45",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-body-focused-01-document-addition-candidate-targeted-examples-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T135815218Z-cw-focused-claude-document-addition-candidate-targeted-examples-9a84cb78-0f20-4cbb-a86a-997479fbad63-r3ovtke0.json",
+          "sha256": "95a3c215bbf78d8d722a331f606b8b9ba3f0e3593a31430e49eb64bb4caeb2ca",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-body-focused-01-document-addition-control-3-1",
+      "case_id": "document-addition",
+      "condition": "control",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-document-addition-manifest.json",
+        "sha256": "fa95cda9233a077f63b3640677a865dd433c3053dca0624abe82939ebdcc49f2",
+        "version": "1",
+        "git_revision": "4025bbcb3b267e0aab9e6766fb7eab5a781cff0b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9a94fc71e368a5e505366d4576c9fda533734624eb46fff72c70e6d6ebe70c66",
+          "version": "1",
+          "git_revision": "4025bbcb3b267e0aab9e6766fb7eab5a781cff0b"
+        },
+        "selector": "Batch: claude-body-focused-01; order 23"
+      },
+      "run_id": "20261021T135921138Z-cw-focused-claude-document-addition-control-20a87609-9095-4b87-a53e-7b51e5bbb4ee-obisloam",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T135921138Z-cw-focused-claude-document-addition-control-20a87609-9095-4b87-a53e-7b51e5bbb4ee-obisloam",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T135921138Z-cw-focused-claude-document-addition-control-20a87609-9095-4b87-a53e-7b51e5bbb4ee-obisloam.inventory.json",
+          "sha256": "c1f6e506d2e90b57bab983f82219a6125ba510f36df7bc4de7f3439626f65fb6",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-body-focused-01-document-addition-control-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T135921138Z-cw-focused-claude-document-addition-control-20a87609-9095-4b87-a53e-7b51e5bbb4ee-obisloam.json",
+          "sha256": "2d09a0ba3204882abda97caaee5fd3b6541ab1f84ef92c6839b168d8f0fe84a4",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-body-focused-01-document-addition-original-3-1",
+      "case_id": "document-addition",
+      "condition": "original",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-document-addition-manifest.json",
+        "sha256": "fa95cda9233a077f63b3640677a865dd433c3053dca0624abe82939ebdcc49f2",
+        "version": "1",
+        "git_revision": "4025bbcb3b267e0aab9e6766fb7eab5a781cff0b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9a94fc71e368a5e505366d4576c9fda533734624eb46fff72c70e6d6ebe70c66",
+          "version": "1",
+          "git_revision": "4025bbcb3b267e0aab9e6766fb7eab5a781cff0b"
+        },
+        "selector": "Batch: claude-body-focused-01; order 24"
+      },
+      "run_id": "20261021T140032315Z-cw-focused-claude-document-addition-original-a37977bc-045b-4d2b-8dda-acfd3a616ccc-iok3mzq6",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T140032315Z-cw-focused-claude-document-addition-original-a37977bc-045b-4d2b-8dda-acfd3a616ccc-iok3mzq6",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T140032315Z-cw-focused-claude-document-addition-original-a37977bc-045b-4d2b-8dda-acfd3a616ccc-iok3mzq6.inventory.json",
+          "sha256": "48319ad5c8887dc1a2c66a9be7f15a459f374d5ec38cee3a74943f83bea2e275",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-body-focused-01-document-addition-original-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T140032315Z-cw-focused-claude-document-addition-original-a37977bc-045b-4d2b-8dda-acfd3a616ccc-iok3mzq6.json",
+          "sha256": "8df34ceedc86762781502d341e886695c9222559bcb448a4debaba60b3092cb4",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-body-focused-01-document-addition-control-4-1",
+      "case_id": "document-addition",
+      "condition": "control",
+      "repetition": 4,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-document-addition-manifest.json",
+        "sha256": "fa95cda9233a077f63b3640677a865dd433c3053dca0624abe82939ebdcc49f2",
+        "version": "1",
+        "git_revision": "4025bbcb3b267e0aab9e6766fb7eab5a781cff0b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9a94fc71e368a5e505366d4576c9fda533734624eb46fff72c70e6d6ebe70c66",
+          "version": "1",
+          "git_revision": "4025bbcb3b267e0aab9e6766fb7eab5a781cff0b"
+        },
+        "selector": "Batch: claude-body-focused-01; order 25"
+      },
+      "run_id": "20261021T140209140Z-cw-focused-claude-document-addition-control-48e12213-8a5d-4bca-8420-f79a52d5cc1b-ymp1tvn8",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T140209140Z-cw-focused-claude-document-addition-control-48e12213-8a5d-4bca-8420-f79a52d5cc1b-ymp1tvn8",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T140209140Z-cw-focused-claude-document-addition-control-48e12213-8a5d-4bca-8420-f79a52d5cc1b-ymp1tvn8.inventory.json",
+          "sha256": "334c62acd4f97f4d58442d34c4355452bd50fe7d6f521945b62ee22b71baf82d",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-body-focused-01-document-addition-control-4-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T140209140Z-cw-focused-claude-document-addition-control-48e12213-8a5d-4bca-8420-f79a52d5cc1b-ymp1tvn8.json",
+          "sha256": "018558f3ccb6dea9869e15eb5ab5ef3aed82c57a3f2420e56e0fe306bcd363e7",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-body-focused-01-document-addition-original-4-1",
+      "case_id": "document-addition",
+      "condition": "original",
+      "repetition": 4,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-document-addition-manifest.json",
+        "sha256": "fa95cda9233a077f63b3640677a865dd433c3053dca0624abe82939ebdcc49f2",
+        "version": "1",
+        "git_revision": "4025bbcb3b267e0aab9e6766fb7eab5a781cff0b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9a94fc71e368a5e505366d4576c9fda533734624eb46fff72c70e6d6ebe70c66",
+          "version": "1",
+          "git_revision": "4025bbcb3b267e0aab9e6766fb7eab5a781cff0b"
+        },
+        "selector": "Batch: claude-body-focused-01; order 26"
+      },
+      "run_id": "20261021T140304204Z-cw-focused-claude-document-addition-original-570cf339-ae81-4283-950f-d00f148bc8db-wb_j3a78",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T140304204Z-cw-focused-claude-document-addition-original-570cf339-ae81-4283-950f-d00f148bc8db-wb_j3a78",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T140304204Z-cw-focused-claude-document-addition-original-570cf339-ae81-4283-950f-d00f148bc8db-wb_j3a78.inventory.json",
+          "sha256": "dd4f82ad5d2b91cadaaeb69ddd33b4952dc3a73edc419ffc53b1c1b338c9c151",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-body-focused-01-document-addition-original-4-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T140304204Z-cw-focused-claude-document-addition-original-570cf339-ae81-4283-950f-d00f148bc8db-wb_j3a78.json",
+          "sha256": "ae7f940ce1d90051b786e2aead51105271d3a4956d582b0f0e223f0d730505ed",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-body-focused-01-document-addition-candidate-targeted-examples-4-1",
+      "case_id": "document-addition",
+      "condition": "candidate-targeted-examples",
+      "repetition": 4,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-document-addition-manifest.json",
+        "sha256": "fa95cda9233a077f63b3640677a865dd433c3053dca0624abe82939ebdcc49f2",
+        "version": "1",
+        "git_revision": "4025bbcb3b267e0aab9e6766fb7eab5a781cff0b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9a94fc71e368a5e505366d4576c9fda533734624eb46fff72c70e6d6ebe70c66",
+          "version": "1",
+          "git_revision": "4025bbcb3b267e0aab9e6766fb7eab5a781cff0b"
+        },
+        "selector": "Batch: claude-body-focused-01; order 27"
+      },
+      "run_id": "20261021T140402917Z-cw-focused-claude-document-addition-candidate-targeted-examples-c76dcb47-7b77-40d8-a07f-a520e6c00480-nf7ozblz",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T140402917Z-cw-focused-claude-document-addition-candidate-targeted-examples-c76dcb47-7b77-40d8-a07f-a520e6c00480-nf7ozblz",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T140402917Z-cw-focused-claude-document-addition-candidate-targeted-examples-c76dcb47-7b77-40d8-a07f-a520e6c00480-nf7ozblz.inventory.json",
+          "sha256": "1ea386b4453d0b826cdbb1533907691924e5a7040bd461da676555121b45adce",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-body-focused-01-document-addition-candidate-targeted-examples-4-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T140402917Z-cw-focused-claude-document-addition-candidate-targeted-examples-c76dcb47-7b77-40d8-a07f-a520e6c00480-nf7ozblz.json",
+          "sha256": "7d16889e0b5c27dc7f38811ce45aa899102380827675a0a71c067703e13c9dcc",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-body-focused-01-document-addition-original-5-1",
+      "case_id": "document-addition",
+      "condition": "original",
+      "repetition": 5,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-document-addition-manifest.json",
+        "sha256": "fa95cda9233a077f63b3640677a865dd433c3053dca0624abe82939ebdcc49f2",
+        "version": "1",
+        "git_revision": "4025bbcb3b267e0aab9e6766fb7eab5a781cff0b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9a94fc71e368a5e505366d4576c9fda533734624eb46fff72c70e6d6ebe70c66",
+          "version": "1",
+          "git_revision": "4025bbcb3b267e0aab9e6766fb7eab5a781cff0b"
+        },
+        "selector": "Batch: claude-body-focused-01; order 28"
+      },
+      "run_id": "20261021T140527172Z-cw-focused-claude-document-addition-original-da466de9-3d22-49ce-b656-9743b1ba8d61-9h21hw0e",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T140527172Z-cw-focused-claude-document-addition-original-da466de9-3d22-49ce-b656-9743b1ba8d61-9h21hw0e",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T140527172Z-cw-focused-claude-document-addition-original-da466de9-3d22-49ce-b656-9743b1ba8d61-9h21hw0e.inventory.json",
+          "sha256": "af08eeb2327eb36f6bf0acd800e7b318ca80b05e80d1d254b215d085d0df1049",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-body-focused-01-document-addition-original-5-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T140527172Z-cw-focused-claude-document-addition-original-da466de9-3d22-49ce-b656-9743b1ba8d61-9h21hw0e.json",
+          "sha256": "4774fd198372ea3e8aa0e73e7221e6734865557272ac216bbf6e1b776c257b16",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-body-focused-01-document-addition-candidate-targeted-examples-5-1",
+      "case_id": "document-addition",
+      "condition": "candidate-targeted-examples",
+      "repetition": 5,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-document-addition-manifest.json",
+        "sha256": "fa95cda9233a077f63b3640677a865dd433c3053dca0624abe82939ebdcc49f2",
+        "version": "1",
+        "git_revision": "4025bbcb3b267e0aab9e6766fb7eab5a781cff0b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9a94fc71e368a5e505366d4576c9fda533734624eb46fff72c70e6d6ebe70c66",
+          "version": "1",
+          "git_revision": "4025bbcb3b267e0aab9e6766fb7eab5a781cff0b"
+        },
+        "selector": "Batch: claude-body-focused-01; order 29"
+      },
+      "run_id": "20261021T140616012Z-cw-focused-claude-document-addition-candidate-targeted-examples-68a9bcbb-d752-4677-9cc7-6e283bdd0fd0-tmmx2zc1",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T140616012Z-cw-focused-claude-document-addition-candidate-targeted-examples-68a9bcbb-d752-4677-9cc7-6e283bdd0fd0-tmmx2zc1",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T140616012Z-cw-focused-claude-document-addition-candidate-targeted-examples-68a9bcbb-d752-4677-9cc7-6e283bdd0fd0-tmmx2zc1.inventory.json",
+          "sha256": "5cbe5ff7a25a24687c4a07f6f6d5d943aec5b9feb4eed7573fbc7c1a51590126",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-body-focused-01-document-addition-candidate-targeted-examples-5-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T140616012Z-cw-focused-claude-document-addition-candidate-targeted-examples-68a9bcbb-d752-4677-9cc7-6e283bdd0fd0-tmmx2zc1.json",
+          "sha256": "b20fa6f7ab1fba803c0b9a0e90a5f7e2bf3b9c110d7ac0564aa3253e8ad2c3b6",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-body-focused-01-document-addition-control-5-1",
+      "case_id": "document-addition",
+      "condition": "control",
+      "repetition": 5,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-document-addition-manifest.json",
+        "sha256": "fa95cda9233a077f63b3640677a865dd433c3053dca0624abe82939ebdcc49f2",
+        "version": "1",
+        "git_revision": "4025bbcb3b267e0aab9e6766fb7eab5a781cff0b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9a94fc71e368a5e505366d4576c9fda533734624eb46fff72c70e6d6ebe70c66",
+          "version": "1",
+          "git_revision": "4025bbcb3b267e0aab9e6766fb7eab5a781cff0b"
+        },
+        "selector": "Batch: claude-body-focused-01; order 30"
+      },
+      "run_id": "20261021T140719301Z-cw-focused-claude-document-addition-control-adf17fd1-a422-4cd6-bba4-5ade8c19c9af-ilshpj0w",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T140719301Z-cw-focused-claude-document-addition-control-adf17fd1-a422-4cd6-bba4-5ade8c19c9af-ilshpj0w",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T140719301Z-cw-focused-claude-document-addition-control-adf17fd1-a422-4cd6-bba4-5ade8c19c9af-ilshpj0w.inventory.json",
+          "sha256": "2f33f5c86f14d3cf05c206d2c71e100646e16324ed522ca6f87fa2603eb46ce1",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-body-focused-01-document-addition-control-5-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T140719301Z-cw-focused-claude-document-addition-control-adf17fd1-a422-4cd6-bba4-5ade8c19c9af-ilshpj0w.json",
+          "sha256": "ec5857fd60734c0b0d8ccdb00b1a240baef1dac1f1e91fa5d8c95031614cce80",
+          "version": "2"
+        }
+      }
     }
   ]
 }

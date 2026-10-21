@@ -1711,6 +1711,441 @@
       "signed_change": -146,
       "length_state": "shorter",
       "longer_flag": false
+    },
+    {
+      "provider": "claude",
+      "batch_id": "claude-body-focused-01",
+      "global_order": 61,
+      "run_id": "20261021T135147259Z-cw-focused-claude-document-addition-control-958f0762-454e-4b6a-b320-8af1db9e85f0-qynih0cm",
+      "case": "document-addition",
+      "condition": "control",
+      "repetition": 1,
+      "complete_output_words": 396,
+      "output_sha256": "708bae8e939dd5e0a57306a01f1e1fa243fc3b790509b324eb1b3ea895edb63d",
+      "inputs": [
+        {
+          "target": "report.md",
+          "words": 279,
+          "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491"
+        },
+        {
+          "target": "TASK.md",
+          "words": 58,
+          "sha256": "d625196b6cf438dfe556238803851c5b86ae7f2eb07acaa31ddceb5c6e9b8db0"
+        },
+        {
+          "target": "NEW-NOTES.md",
+          "words": 166,
+          "sha256": "8ff2f1ece29e88f352aefe87506c1afcf7e3174849dd978d20ec7065e8da3b74"
+        }
+      ],
+      "length_treatment": "Required additions; input/output counts descriptive, no shortening preference."
+    },
+    {
+      "provider": "claude",
+      "batch_id": "claude-body-focused-01",
+      "global_order": 62,
+      "run_id": "20261021T135248746Z-cw-focused-claude-document-addition-original-a8846f6d-99f3-4e97-aada-c9f9b8aa2f45-e0sydcqd",
+      "case": "document-addition",
+      "condition": "original",
+      "repetition": 1,
+      "complete_output_words": 363,
+      "output_sha256": "946db37dcbb352dc1a3c09d4430b48eccb9a89f09d5cbdba93afcee94e284612",
+      "inputs": [
+        {
+          "target": "report.md",
+          "words": 279,
+          "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491"
+        },
+        {
+          "target": "TASK.md",
+          "words": 58,
+          "sha256": "d625196b6cf438dfe556238803851c5b86ae7f2eb07acaa31ddceb5c6e9b8db0"
+        },
+        {
+          "target": "NEW-NOTES.md",
+          "words": 166,
+          "sha256": "8ff2f1ece29e88f352aefe87506c1afcf7e3174849dd978d20ec7065e8da3b74"
+        }
+      ],
+      "length_treatment": "Required additions; input/output counts descriptive, no shortening preference."
+    },
+    {
+      "provider": "claude",
+      "batch_id": "claude-body-focused-01",
+      "global_order": 63,
+      "run_id": "20261021T135352213Z-cw-focused-claude-document-addition-candidate-targeted-examples-a40d58d4-87c8-4c75-9295-a4206861ef21-syt0zh4e",
+      "case": "document-addition",
+      "condition": "candidate-targeted-examples",
+      "repetition": 1,
+      "complete_output_words": 360,
+      "output_sha256": "aea0f703e01d51833a08c0496d1ce938ccf7e99ba84866e862e4dfbac5671b44",
+      "inputs": [
+        {
+          "target": "report.md",
+          "words": 279,
+          "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491"
+        },
+        {
+          "target": "TASK.md",
+          "words": 58,
+          "sha256": "d625196b6cf438dfe556238803851c5b86ae7f2eb07acaa31ddceb5c6e9b8db0"
+        },
+        {
+          "target": "NEW-NOTES.md",
+          "words": 166,
+          "sha256": "8ff2f1ece29e88f352aefe87506c1afcf7e3174849dd978d20ec7065e8da3b74"
+        }
+      ],
+      "length_treatment": "Required additions; input/output counts descriptive, no shortening preference."
+    },
+    {
+      "provider": "claude",
+      "batch_id": "claude-body-focused-01",
+      "global_order": 64,
+      "run_id": "20261021T135446677Z-cw-focused-claude-document-addition-original-c2dc552a-64dd-46d2-8528-e10e1d47b293-4qsik9ds",
+      "case": "document-addition",
+      "condition": "original",
+      "repetition": 2,
+      "complete_output_words": 358,
+      "output_sha256": "10bf3a0411f31cab31c59c20e0776d6d1d9eb5716a1a6bc9214d5394857e78d2",
+      "inputs": [
+        {
+          "target": "report.md",
+          "words": 279,
+          "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491"
+        },
+        {
+          "target": "TASK.md",
+          "words": 58,
+          "sha256": "d625196b6cf438dfe556238803851c5b86ae7f2eb07acaa31ddceb5c6e9b8db0"
+        },
+        {
+          "target": "NEW-NOTES.md",
+          "words": 166,
+          "sha256": "8ff2f1ece29e88f352aefe87506c1afcf7e3174849dd978d20ec7065e8da3b74"
+        }
+      ],
+      "length_treatment": "Required additions; input/output counts descriptive, no shortening preference."
+    },
+    {
+      "provider": "claude",
+      "batch_id": "claude-body-focused-01",
+      "global_order": 65,
+      "run_id": "20261021T135610959Z-cw-focused-claude-document-addition-candidate-targeted-examples-f8a82482-cd66-44d1-9d93-3d5c24accc2c-y9gjm7qw",
+      "case": "document-addition",
+      "condition": "candidate-targeted-examples",
+      "repetition": 2,
+      "complete_output_words": 355,
+      "output_sha256": "4865d4246d8547adda3936e5d5712e5819405d0070a7e70535ad75e3ecb00a6d",
+      "inputs": [
+        {
+          "target": "report.md",
+          "words": 279,
+          "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491"
+        },
+        {
+          "target": "TASK.md",
+          "words": 58,
+          "sha256": "d625196b6cf438dfe556238803851c5b86ae7f2eb07acaa31ddceb5c6e9b8db0"
+        },
+        {
+          "target": "NEW-NOTES.md",
+          "words": 166,
+          "sha256": "8ff2f1ece29e88f352aefe87506c1afcf7e3174849dd978d20ec7065e8da3b74"
+        }
+      ],
+      "length_treatment": "Required additions; input/output counts descriptive, no shortening preference."
+    },
+    {
+      "provider": "claude",
+      "batch_id": "claude-body-focused-01",
+      "global_order": 66,
+      "run_id": "20261021T135709857Z-cw-focused-claude-document-addition-control-e02cc7c1-974c-4c1d-96f5-aaaf4e8fb1ef-ojlca6q6",
+      "case": "document-addition",
+      "condition": "control",
+      "repetition": 2,
+      "complete_output_words": 382,
+      "output_sha256": "ce305e8e9f25064784a40c16b266ae96e8827d1b694f93d475442f7d3a17881e",
+      "inputs": [
+        {
+          "target": "report.md",
+          "words": 279,
+          "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491"
+        },
+        {
+          "target": "TASK.md",
+          "words": 58,
+          "sha256": "d625196b6cf438dfe556238803851c5b86ae7f2eb07acaa31ddceb5c6e9b8db0"
+        },
+        {
+          "target": "NEW-NOTES.md",
+          "words": 166,
+          "sha256": "8ff2f1ece29e88f352aefe87506c1afcf7e3174849dd978d20ec7065e8da3b74"
+        }
+      ],
+      "length_treatment": "Required additions; input/output counts descriptive, no shortening preference."
+    },
+    {
+      "provider": "claude",
+      "batch_id": "claude-body-focused-01",
+      "global_order": 67,
+      "run_id": "20261021T135815218Z-cw-focused-claude-document-addition-candidate-targeted-examples-9a84cb78-0f20-4cbb-a86a-997479fbad63-r3ovtke0",
+      "case": "document-addition",
+      "condition": "candidate-targeted-examples",
+      "repetition": 3,
+      "complete_output_words": 362,
+      "output_sha256": "d8403f4e795a987df220659e0483c8842bcb2c06f1cc10da30970177b3ffa65c",
+      "inputs": [
+        {
+          "target": "report.md",
+          "words": 279,
+          "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491"
+        },
+        {
+          "target": "TASK.md",
+          "words": 58,
+          "sha256": "d625196b6cf438dfe556238803851c5b86ae7f2eb07acaa31ddceb5c6e9b8db0"
+        },
+        {
+          "target": "NEW-NOTES.md",
+          "words": 166,
+          "sha256": "8ff2f1ece29e88f352aefe87506c1afcf7e3174849dd978d20ec7065e8da3b74"
+        }
+      ],
+      "length_treatment": "Required additions; input/output counts descriptive, no shortening preference."
+    },
+    {
+      "provider": "claude",
+      "batch_id": "claude-body-focused-01",
+      "global_order": 68,
+      "run_id": "20261021T135921138Z-cw-focused-claude-document-addition-control-20a87609-9095-4b87-a53e-7b51e5bbb4ee-obisloam",
+      "case": "document-addition",
+      "condition": "control",
+      "repetition": 3,
+      "complete_output_words": 386,
+      "output_sha256": "f55f4ebcd09dba0dcb56c51a7c675b10c8001c6c2347ccb0460a3f29f4717f57",
+      "inputs": [
+        {
+          "target": "report.md",
+          "words": 279,
+          "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491"
+        },
+        {
+          "target": "TASK.md",
+          "words": 58,
+          "sha256": "d625196b6cf438dfe556238803851c5b86ae7f2eb07acaa31ddceb5c6e9b8db0"
+        },
+        {
+          "target": "NEW-NOTES.md",
+          "words": 166,
+          "sha256": "8ff2f1ece29e88f352aefe87506c1afcf7e3174849dd978d20ec7065e8da3b74"
+        }
+      ],
+      "length_treatment": "Required additions; input/output counts descriptive, no shortening preference."
+    },
+    {
+      "provider": "claude",
+      "batch_id": "claude-body-focused-01",
+      "global_order": 69,
+      "run_id": "20261021T140032315Z-cw-focused-claude-document-addition-original-a37977bc-045b-4d2b-8dda-acfd3a616ccc-iok3mzq6",
+      "case": "document-addition",
+      "condition": "original",
+      "repetition": 3,
+      "complete_output_words": 361,
+      "output_sha256": "a766d348176d3dd3ab19f0982feb1adeb068903258203b3e9bf6bb633c68d78f",
+      "inputs": [
+        {
+          "target": "report.md",
+          "words": 279,
+          "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491"
+        },
+        {
+          "target": "TASK.md",
+          "words": 58,
+          "sha256": "d625196b6cf438dfe556238803851c5b86ae7f2eb07acaa31ddceb5c6e9b8db0"
+        },
+        {
+          "target": "NEW-NOTES.md",
+          "words": 166,
+          "sha256": "8ff2f1ece29e88f352aefe87506c1afcf7e3174849dd978d20ec7065e8da3b74"
+        }
+      ],
+      "length_treatment": "Required additions; input/output counts descriptive, no shortening preference."
+    },
+    {
+      "provider": "claude",
+      "batch_id": "claude-body-focused-01",
+      "global_order": 70,
+      "run_id": "20261021T140209140Z-cw-focused-claude-document-addition-control-48e12213-8a5d-4bca-8420-f79a52d5cc1b-ymp1tvn8",
+      "case": "document-addition",
+      "condition": "control",
+      "repetition": 4,
+      "complete_output_words": 381,
+      "output_sha256": "bd38b16e4e5642e1450c7f6c4e61f978018752726b9dede6ce59c121a691b7f0",
+      "inputs": [
+        {
+          "target": "report.md",
+          "words": 279,
+          "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491"
+        },
+        {
+          "target": "TASK.md",
+          "words": 58,
+          "sha256": "d625196b6cf438dfe556238803851c5b86ae7f2eb07acaa31ddceb5c6e9b8db0"
+        },
+        {
+          "target": "NEW-NOTES.md",
+          "words": 166,
+          "sha256": "8ff2f1ece29e88f352aefe87506c1afcf7e3174849dd978d20ec7065e8da3b74"
+        }
+      ],
+      "length_treatment": "Required additions; input/output counts descriptive, no shortening preference."
+    },
+    {
+      "provider": "claude",
+      "batch_id": "claude-body-focused-01",
+      "global_order": 71,
+      "run_id": "20261021T140304204Z-cw-focused-claude-document-addition-original-570cf339-ae81-4283-950f-d00f148bc8db-wb_j3a78",
+      "case": "document-addition",
+      "condition": "original",
+      "repetition": 4,
+      "complete_output_words": 356,
+      "output_sha256": "ce61d489458ae849c5c44e62301579fc61c0cdcb1ae5f49dadc13ef1c13898ad",
+      "inputs": [
+        {
+          "target": "report.md",
+          "words": 279,
+          "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491"
+        },
+        {
+          "target": "TASK.md",
+          "words": 58,
+          "sha256": "d625196b6cf438dfe556238803851c5b86ae7f2eb07acaa31ddceb5c6e9b8db0"
+        },
+        {
+          "target": "NEW-NOTES.md",
+          "words": 166,
+          "sha256": "8ff2f1ece29e88f352aefe87506c1afcf7e3174849dd978d20ec7065e8da3b74"
+        }
+      ],
+      "length_treatment": "Required additions; input/output counts descriptive, no shortening preference."
+    },
+    {
+      "provider": "claude",
+      "batch_id": "claude-body-focused-01",
+      "global_order": 72,
+      "run_id": "20261021T140402917Z-cw-focused-claude-document-addition-candidate-targeted-examples-c76dcb47-7b77-40d8-a07f-a520e6c00480-nf7ozblz",
+      "case": "document-addition",
+      "condition": "candidate-targeted-examples",
+      "repetition": 4,
+      "complete_output_words": 359,
+      "output_sha256": "f85d660c1e50671ef03454ae7c074a336207ee6f6d3ad38ad10a57e9c66ae5f5",
+      "inputs": [
+        {
+          "target": "report.md",
+          "words": 279,
+          "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491"
+        },
+        {
+          "target": "TASK.md",
+          "words": 58,
+          "sha256": "d625196b6cf438dfe556238803851c5b86ae7f2eb07acaa31ddceb5c6e9b8db0"
+        },
+        {
+          "target": "NEW-NOTES.md",
+          "words": 166,
+          "sha256": "8ff2f1ece29e88f352aefe87506c1afcf7e3174849dd978d20ec7065e8da3b74"
+        }
+      ],
+      "length_treatment": "Required additions; input/output counts descriptive, no shortening preference."
+    },
+    {
+      "provider": "claude",
+      "batch_id": "claude-body-focused-01",
+      "global_order": 73,
+      "run_id": "20261021T140527172Z-cw-focused-claude-document-addition-original-da466de9-3d22-49ce-b656-9743b1ba8d61-9h21hw0e",
+      "case": "document-addition",
+      "condition": "original",
+      "repetition": 5,
+      "complete_output_words": 357,
+      "output_sha256": "7d7014aa2e8ea59b5c17f43a1b3e023b736135f9dc91b631c533a4abceaefffc",
+      "inputs": [
+        {
+          "target": "report.md",
+          "words": 279,
+          "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491"
+        },
+        {
+          "target": "TASK.md",
+          "words": 58,
+          "sha256": "d625196b6cf438dfe556238803851c5b86ae7f2eb07acaa31ddceb5c6e9b8db0"
+        },
+        {
+          "target": "NEW-NOTES.md",
+          "words": 166,
+          "sha256": "8ff2f1ece29e88f352aefe87506c1afcf7e3174849dd978d20ec7065e8da3b74"
+        }
+      ],
+      "length_treatment": "Required additions; input/output counts descriptive, no shortening preference."
+    },
+    {
+      "provider": "claude",
+      "batch_id": "claude-body-focused-01",
+      "global_order": 74,
+      "run_id": "20261021T140616012Z-cw-focused-claude-document-addition-candidate-targeted-examples-68a9bcbb-d752-4677-9cc7-6e283bdd0fd0-tmmx2zc1",
+      "case": "document-addition",
+      "condition": "candidate-targeted-examples",
+      "repetition": 5,
+      "complete_output_words": 353,
+      "output_sha256": "87aebce10d84ac12131d8d7bd64e4017a82deea439a62c06e1520d6c4b7df104",
+      "inputs": [
+        {
+          "target": "report.md",
+          "words": 279,
+          "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491"
+        },
+        {
+          "target": "TASK.md",
+          "words": 58,
+          "sha256": "d625196b6cf438dfe556238803851c5b86ae7f2eb07acaa31ddceb5c6e9b8db0"
+        },
+        {
+          "target": "NEW-NOTES.md",
+          "words": 166,
+          "sha256": "8ff2f1ece29e88f352aefe87506c1afcf7e3174849dd978d20ec7065e8da3b74"
+        }
+      ],
+      "length_treatment": "Required additions; input/output counts descriptive, no shortening preference."
+    },
+    {
+      "provider": "claude",
+      "batch_id": "claude-body-focused-01",
+      "global_order": 75,
+      "run_id": "20261021T140719301Z-cw-focused-claude-document-addition-control-adf17fd1-a422-4cd6-bba4-5ade8c19c9af-ilshpj0w",
+      "case": "document-addition",
+      "condition": "control",
+      "repetition": 5,
+      "complete_output_words": 398,
+      "output_sha256": "5a11682f1cc6d178572c7daf89d6108398a4d245a8b4002e82f482f4c75daee9",
+      "inputs": [
+        {
+          "target": "report.md",
+          "words": 279,
+          "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491"
+        },
+        {
+          "target": "TASK.md",
+          "words": 58,
+          "sha256": "d625196b6cf438dfe556238803851c5b86ae7f2eb07acaa31ddceb5c6e9b8db0"
+        },
+        {
+          "target": "NEW-NOTES.md",
+          "words": 166,
+          "sha256": "8ff2f1ece29e88f352aefe87506c1afcf7e3174849dd978d20ec7065e8da3b74"
+        }
+      ],
+      "length_treatment": "Required additions; input/output counts descriptive, no shortening preference."
     }
   ]
 }
