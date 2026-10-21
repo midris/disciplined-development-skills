@@ -3,9 +3,9 @@
   "manifest_id": "cw-codex-final-comments-screen-01",
   "study_id": "concise-writing",
   "case_id": "comments-explicit",
-  "status": "draft",
+  "status": "frozen",
   "created_at": "2026-10-21T19:16:45.966065+00:00",
-  "source_revision": "",
+  "source_revision": "dcbb176616bd9ee540a11243c24b8bf740fdd122",
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",

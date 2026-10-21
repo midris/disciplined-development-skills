@@ -3,7 +3,8 @@
 Format version: `1`
 Study ID: `concise-writing`
 Status: the owner approved the first staged final-comparison screen: twelve subjects and two Opus 5.5 medium reviews.
-Current action: qualify/freeze the [comment screen](runs/final-comparison-01/screen-01/README.md), then collect all twelve subjects and complete both reviews before returning the results to the owner.
+Current action: collect and directly assess the [twelve-subject comment screen](runs/final-comparison-01/screen-01/README.md), then complete both Opus reviews before returning the results to the owner.
+Twelve zero-model runtime probes passed; exact binaries, sign-in metadata and paired inputs are checked, with manifests frozen against `dcbb176616bd9ee540a11243c24b8bf740fdd122`.
 The owner approved “sounds good, let’s proceeed” after the concrete twelve-subject/two-review proposal; accepted ceilings rise from 590/38 to 602/40, with authoring/retry ceilings unchanged.
 This approval covers explicit comments only: both unchanged bodies with the selected description, three repetitions on Codex and Claude. It does not approve the broader prepared 120/20 proposal.
 After the screen, dropping a clearly inferior candidate or extending promising ones to five repetitions needs the evidence and a bounded continuation decision; no automatic top-up or mid-screen edit is authorized.
