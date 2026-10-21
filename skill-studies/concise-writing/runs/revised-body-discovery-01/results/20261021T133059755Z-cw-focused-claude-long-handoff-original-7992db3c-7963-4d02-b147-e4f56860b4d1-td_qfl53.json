@@ -1,0 +1,160 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claude-body-focused-01-long-handoff-original-1-1-assessment",
+  "assessed_at": "2026-10-21T13:32:24.953907+00:00",
+  "run_id": "20261021T133059755Z-cw-focused-claude-long-handoff-original-7992db3c-7963-4d02-b147-e4f56860b4d1-td_qfl53",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same Codex controller authored/reviewed exposed development variants and directly judged complete outputs; no blind, held-out or independent assessor claim. Separate Opus review supplements this."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-long-handoff-manifest.json",
+    "sha256": "0981d4936d40c9612d7b2b76a984a9f520346a88720bbab80b351df5f96e2a73",
+    "version": "1",
+    "git_revision": "cce369e72d0a11f14daf3ab91aa4c65e158dffbe"
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T133059755Z-cw-focused-claude-long-handoff-original-7992db3c-7963-4d02-b147-e4f56860b4d1-td_qfl53/workspace/fixture/report.md",
+        "sha256": "f3c6a8b3eb33037817c109cd61e11ea56852ac320cd4a4f662df22e4be3c32e7",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T133059755Z-cw-focused-claude-long-handoff-original-7992db3c-7963-4d02-b147-e4f56860b4d1-td_qfl53/stdout.txt",
+        "sha256": "3e3aa15c9e2ac55f6eb844bd8e9af60003a9c98a0d1d90a45ed7381b8c11e774",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T133059755Z-cw-focused-claude-long-handoff-original-7992db3c-7963-4d02-b147-e4f56860b4d1-td_qfl53/result.json",
+        "sha256": "51b2b86aa3830fe132c2352966cc299e7a5ca9beea6c519adf0a23c92ea6cea2",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T133059755Z-cw-focused-claude-long-handoff-original-7992db3c-7963-4d02-b147-e4f56860b4d1-td_qfl53/runner.log",
+        "sha256": "4344bd9ce14a7e2241b277f5780a179580371ee57e409558974600877ae8f421",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T133059755Z-cw-focused-claude-long-handoff-original-7992db3c-7963-4d02-b147-e4f56860b4d1-td_qfl53/final.txt",
+        "sha256": "c9f2dfa4a972f0fab8d62804727ae6009477cf74b59eaf4cb89d808338279937",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/long-handoff/fixture/report.md",
+        "sha256": "0eb0946286d2a4b1708f14bcff5795cd1effdfa64af612a6cb9a89d2fac84737",
+        "version": null,
+        "git_revision": "dcb8aba30fcbb28563f6db6965d8abb607fd0d97"
+      },
+      "selector": "Complete frozen report.md"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/long-handoff/task.md",
+        "sha256": "8be0f67fe6b62ca0a1d5f3af9ac2ffea79eef0d0615f0979853079653b8feab8",
+        "version": null,
+        "git_revision": "dcb8aba30fcbb28563f6db6965d8abb607fd0d97"
+      },
+      "selector": "Complete frozen TASK.md"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Fixed provider/model/CLI and retained inventory verified. Complete assigned body in tool output 6 before first task edit 29. Protected input bytes unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The whole edit preserves all pilot/status/approval limits, bounded staging evidence, exact time/mismatch/latency rules, unresolved-state safeguards, rollback/cursor/evidence requirements and handoff acceptance. No unsupported conclusion is introduced.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Deployment and Rollback retain direct-entry prerequisites, state and evidence release conditions and diagnostic rationale. Owners, observations and separate release decisions remain usable without the removed detached mechanism reminder.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Generic opening filler, the repeated eighty-export statement and detached implementation section are removed. Clear operational sections and useful point-of-use reinforcement remain; the complete handoff is easy to follow.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Fixed provider/model/CLI and retained inventory verified. Complete assigned body in tool output 6 before first task edit 29. Protected input bytes unchanged. O4/O5 remain unscored; native D1 is distinct from functional outcome.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Complete output 1063 wc-w words; supplied report.md: 1207 words, TASK.md: 68 words. Counts describe length, not semantic success; comment-only counts are reported separately for N4.",
+      "consequence": "Descriptive counts only.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "Original Claude handoff1 is very close to revised1 in organization and retained detail. Their alternate single staging-count sentences preserve the same evidence; neither establishes a consequential advantage.",
+      "consequence": "Qualitative comparison is separate from threshold counts.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "uncertainty": []
+}

@@ -3,5 +3,726 @@
   "index_id": "concise-writing-claude-body-focused-01",
   "study_id": "concise-writing",
   "batch_id": "claude-body-focused-01",
-  "attempts": []
+  "attempts": [
+    {
+      "attempt_id": "claude-body-focused-01-long-handoff-candidate-targeted-examples-1-1",
+      "case_id": "long-handoff",
+      "condition": "candidate-targeted-examples",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "0981d4936d40c9612d7b2b76a984a9f520346a88720bbab80b351df5f96e2a73",
+        "version": "1",
+        "git_revision": "cce369e72d0a11f14daf3ab91aa4c65e158dffbe"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "0d722455ea8f6adcdf3bbc1400105967e0d4b68bf65d75aa20176b98415fe0ea",
+          "version": "1",
+          "git_revision": "cce369e72d0a11f14daf3ab91aa4c65e158dffbe"
+        },
+        "selector": "Batch: claude-body-focused-01; order 1"
+      },
+      "run_id": "20261021T132816993Z-cw-focused-claude-long-handoff-candidate-targeted-examples-461bc6cc-2b7e-441e-92cc-391876dc2883-dl9xtxy5",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T132816993Z-cw-focused-claude-long-handoff-candidate-targeted-examples-461bc6cc-2b7e-441e-92cc-391876dc2883-dl9xtxy5",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T132816993Z-cw-focused-claude-long-handoff-candidate-targeted-examples-461bc6cc-2b7e-441e-92cc-391876dc2883-dl9xtxy5.inventory.json",
+          "sha256": "2ffeaf9471e765747334ce0eb0eba1c976615b72c74a31ea81ebdd58e9367caa",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-body-focused-01-long-handoff-candidate-targeted-examples-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T132816993Z-cw-focused-claude-long-handoff-candidate-targeted-examples-461bc6cc-2b7e-441e-92cc-391876dc2883-dl9xtxy5.json",
+          "sha256": "49bf9fac9037504aedce73f9c679623026c9ae462983970af8dc8222a38ff162",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-body-focused-01-long-handoff-control-1-1",
+      "case_id": "long-handoff",
+      "condition": "control",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "0981d4936d40c9612d7b2b76a984a9f520346a88720bbab80b351df5f96e2a73",
+        "version": "1",
+        "git_revision": "cce369e72d0a11f14daf3ab91aa4c65e158dffbe"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "0d722455ea8f6adcdf3bbc1400105967e0d4b68bf65d75aa20176b98415fe0ea",
+          "version": "1",
+          "git_revision": "cce369e72d0a11f14daf3ab91aa4c65e158dffbe"
+        },
+        "selector": "Batch: claude-body-focused-01; order 2"
+      },
+      "run_id": "20261021T132954901Z-cw-focused-claude-long-handoff-control-f12f4a6b-c28f-47db-bcab-c695ab8e504e-_ea4ucdn",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T132954901Z-cw-focused-claude-long-handoff-control-f12f4a6b-c28f-47db-bcab-c695ab8e504e-_ea4ucdn",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T132954901Z-cw-focused-claude-long-handoff-control-f12f4a6b-c28f-47db-bcab-c695ab8e504e-_ea4ucdn.inventory.json",
+          "sha256": "882f09b5afc0c8d4508c7ff24893fe09f8ce35987d04d0c7f524b6351cc5d1e0",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-body-focused-01-long-handoff-control-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T132954901Z-cw-focused-claude-long-handoff-control-f12f4a6b-c28f-47db-bcab-c695ab8e504e-_ea4ucdn.json",
+          "sha256": "537efd9441dc6585712e7448719f3ec5e907988e3c08303ded43ae0d17ab245a",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-body-focused-01-long-handoff-original-1-1",
+      "case_id": "long-handoff",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "0981d4936d40c9612d7b2b76a984a9f520346a88720bbab80b351df5f96e2a73",
+        "version": "1",
+        "git_revision": "cce369e72d0a11f14daf3ab91aa4c65e158dffbe"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "0d722455ea8f6adcdf3bbc1400105967e0d4b68bf65d75aa20176b98415fe0ea",
+          "version": "1",
+          "git_revision": "cce369e72d0a11f14daf3ab91aa4c65e158dffbe"
+        },
+        "selector": "Batch: claude-body-focused-01; order 3"
+      },
+      "run_id": "20261021T133059755Z-cw-focused-claude-long-handoff-original-7992db3c-7963-4d02-b147-e4f56860b4d1-td_qfl53",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T133059755Z-cw-focused-claude-long-handoff-original-7992db3c-7963-4d02-b147-e4f56860b4d1-td_qfl53",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T133059755Z-cw-focused-claude-long-handoff-original-7992db3c-7963-4d02-b147-e4f56860b4d1-td_qfl53.inventory.json",
+          "sha256": "8fad9ba65e53f51dba31687fe3d9f505525c1c6e7d5b072ac8fcf6fcc076e2ce",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-body-focused-01-long-handoff-original-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T133059755Z-cw-focused-claude-long-handoff-original-7992db3c-7963-4d02-b147-e4f56860b4d1-td_qfl53.json",
+          "sha256": "bda9c006294c1cd9671da3568216a3ef1cca05852bb666aaf41115402bf82908",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-body-focused-01-long-handoff-control-2-1",
+      "case_id": "long-handoff",
+      "condition": "control",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "0981d4936d40c9612d7b2b76a984a9f520346a88720bbab80b351df5f96e2a73",
+        "version": "1",
+        "git_revision": "cce369e72d0a11f14daf3ab91aa4c65e158dffbe"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "0d722455ea8f6adcdf3bbc1400105967e0d4b68bf65d75aa20176b98415fe0ea",
+          "version": "1",
+          "git_revision": "cce369e72d0a11f14daf3ab91aa4c65e158dffbe"
+        },
+        "selector": "Batch: claude-body-focused-01; order 4"
+      },
+      "run_id": "20261021T133226648Z-cw-focused-claude-long-handoff-control-a875d6f6-e665-4eb3-a6a5-24d75e97be3b-ydcallhv",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T133226648Z-cw-focused-claude-long-handoff-control-a875d6f6-e665-4eb3-a6a5-24d75e97be3b-ydcallhv",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T133226648Z-cw-focused-claude-long-handoff-control-a875d6f6-e665-4eb3-a6a5-24d75e97be3b-ydcallhv.inventory.json",
+          "sha256": "7aaacdd26d3aa0cd1e4df711b2a6c844ee032b3029665c29993556e269ccb681",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-body-focused-01-long-handoff-control-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T133226648Z-cw-focused-claude-long-handoff-control-a875d6f6-e665-4eb3-a6a5-24d75e97be3b-ydcallhv.json",
+          "sha256": "d5f25decd0ee90f28d402b205a0c1413938fd5c6b9dd5da1cf7ce24ae19c03d9",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-body-focused-01-long-handoff-original-2-1",
+      "case_id": "long-handoff",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "0981d4936d40c9612d7b2b76a984a9f520346a88720bbab80b351df5f96e2a73",
+        "version": "1",
+        "git_revision": "cce369e72d0a11f14daf3ab91aa4c65e158dffbe"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "0d722455ea8f6adcdf3bbc1400105967e0d4b68bf65d75aa20176b98415fe0ea",
+          "version": "1",
+          "git_revision": "cce369e72d0a11f14daf3ab91aa4c65e158dffbe"
+        },
+        "selector": "Batch: claude-body-focused-01; order 5"
+      },
+      "run_id": "20261021T133445822Z-cw-focused-claude-long-handoff-original-391ad17a-ebe0-4705-b5ef-9cebad95dae4-80g4e_yx",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T133445822Z-cw-focused-claude-long-handoff-original-391ad17a-ebe0-4705-b5ef-9cebad95dae4-80g4e_yx",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T133445822Z-cw-focused-claude-long-handoff-original-391ad17a-ebe0-4705-b5ef-9cebad95dae4-80g4e_yx.inventory.json",
+          "sha256": "4b6455db2cf3d385adaeb65da568eb5539393937e1ac513bb2900ca8ab899f8b",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-body-focused-01-long-handoff-original-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T133445822Z-cw-focused-claude-long-handoff-original-391ad17a-ebe0-4705-b5ef-9cebad95dae4-80g4e_yx.json",
+          "sha256": "c47cc5cf3fa43b04e4e030de29c99f95fcf3eccbf436014f4e727e71f1385328",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-body-focused-01-long-handoff-candidate-targeted-examples-2-1",
+      "case_id": "long-handoff",
+      "condition": "candidate-targeted-examples",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "0981d4936d40c9612d7b2b76a984a9f520346a88720bbab80b351df5f96e2a73",
+        "version": "1",
+        "git_revision": "cce369e72d0a11f14daf3ab91aa4c65e158dffbe"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "0d722455ea8f6adcdf3bbc1400105967e0d4b68bf65d75aa20176b98415fe0ea",
+          "version": "1",
+          "git_revision": "cce369e72d0a11f14daf3ab91aa4c65e158dffbe"
+        },
+        "selector": "Batch: claude-body-focused-01; order 6"
+      },
+      "run_id": "20261021T133553186Z-cw-focused-claude-long-handoff-candidate-targeted-examples-e2009cde-890b-42ae-b917-e1ed87228c50-fl_d7cgm",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T133553186Z-cw-focused-claude-long-handoff-candidate-targeted-examples-e2009cde-890b-42ae-b917-e1ed87228c50-fl_d7cgm",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T133553186Z-cw-focused-claude-long-handoff-candidate-targeted-examples-e2009cde-890b-42ae-b917-e1ed87228c50-fl_d7cgm.inventory.json",
+          "sha256": "8433e7937f0b089b2399a52413c99bef993ce1264bfee42a89f565c534bcd959",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-body-focused-01-long-handoff-candidate-targeted-examples-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T133553186Z-cw-focused-claude-long-handoff-candidate-targeted-examples-e2009cde-890b-42ae-b917-e1ed87228c50-fl_d7cgm.json",
+          "sha256": "06129da9538c3abdb9667514db34d397213165d53e8a56e4a1057dc398313c16",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-body-focused-01-long-handoff-original-3-1",
+      "case_id": "long-handoff",
+      "condition": "original",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "0981d4936d40c9612d7b2b76a984a9f520346a88720bbab80b351df5f96e2a73",
+        "version": "1",
+        "git_revision": "cce369e72d0a11f14daf3ab91aa4c65e158dffbe"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "0d722455ea8f6adcdf3bbc1400105967e0d4b68bf65d75aa20176b98415fe0ea",
+          "version": "1",
+          "git_revision": "cce369e72d0a11f14daf3ab91aa4c65e158dffbe"
+        },
+        "selector": "Batch: claude-body-focused-01; order 7"
+      },
+      "run_id": "20261021T133657777Z-cw-focused-claude-long-handoff-original-43f9ec7f-5be7-4118-8271-76643255452a-f7i8p3e8",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T133657777Z-cw-focused-claude-long-handoff-original-43f9ec7f-5be7-4118-8271-76643255452a-f7i8p3e8",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T133657777Z-cw-focused-claude-long-handoff-original-43f9ec7f-5be7-4118-8271-76643255452a-f7i8p3e8.inventory.json",
+          "sha256": "0bc2d27d36cc192732f9175ab579874af823a2dc8d4b7b8ac673cefe986c5e84",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-body-focused-01-long-handoff-original-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T133657777Z-cw-focused-claude-long-handoff-original-43f9ec7f-5be7-4118-8271-76643255452a-f7i8p3e8.json",
+          "sha256": "59bead41f2474983a8475815dc4f31f7f453c0bfe9c4007fc9888bca3b928150",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-body-focused-01-long-handoff-candidate-targeted-examples-3-1",
+      "case_id": "long-handoff",
+      "condition": "candidate-targeted-examples",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "0981d4936d40c9612d7b2b76a984a9f520346a88720bbab80b351df5f96e2a73",
+        "version": "1",
+        "git_revision": "cce369e72d0a11f14daf3ab91aa4c65e158dffbe"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "0d722455ea8f6adcdf3bbc1400105967e0d4b68bf65d75aa20176b98415fe0ea",
+          "version": "1",
+          "git_revision": "cce369e72d0a11f14daf3ab91aa4c65e158dffbe"
+        },
+        "selector": "Batch: claude-body-focused-01; order 8"
+      },
+      "run_id": "20261021T133815836Z-cw-focused-claude-long-handoff-candidate-targeted-examples-b8f43f73-6e1f-4fa9-bffb-b3fa8a9791ba-ex3mqu_5",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T133815836Z-cw-focused-claude-long-handoff-candidate-targeted-examples-b8f43f73-6e1f-4fa9-bffb-b3fa8a9791ba-ex3mqu_5",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T133815836Z-cw-focused-claude-long-handoff-candidate-targeted-examples-b8f43f73-6e1f-4fa9-bffb-b3fa8a9791ba-ex3mqu_5.inventory.json",
+          "sha256": "9e37d735ac978251ea4a68b1e956c16fd2cb7f5f0a1a60aaa99a69eba12d7dce",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-body-focused-01-long-handoff-candidate-targeted-examples-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T133815836Z-cw-focused-claude-long-handoff-candidate-targeted-examples-b8f43f73-6e1f-4fa9-bffb-b3fa8a9791ba-ex3mqu_5.json",
+          "sha256": "c12aa6fcb64563c45ec808f64623bea8896a1373fdbe2f94b23e5d61c28cdbb5",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-body-focused-01-long-handoff-control-3-1",
+      "case_id": "long-handoff",
+      "condition": "control",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "0981d4936d40c9612d7b2b76a984a9f520346a88720bbab80b351df5f96e2a73",
+        "version": "1",
+        "git_revision": "cce369e72d0a11f14daf3ab91aa4c65e158dffbe"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "0d722455ea8f6adcdf3bbc1400105967e0d4b68bf65d75aa20176b98415fe0ea",
+          "version": "1",
+          "git_revision": "cce369e72d0a11f14daf3ab91aa4c65e158dffbe"
+        },
+        "selector": "Batch: claude-body-focused-01; order 9"
+      },
+      "run_id": "20261021T134004725Z-cw-focused-claude-long-handoff-control-7a2c0d53-5c7a-49fb-80e7-e46d76529bf1-3hy4n1k3",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T134004725Z-cw-focused-claude-long-handoff-control-7a2c0d53-5c7a-49fb-80e7-e46d76529bf1-3hy4n1k3",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T134004725Z-cw-focused-claude-long-handoff-control-7a2c0d53-5c7a-49fb-80e7-e46d76529bf1-3hy4n1k3.inventory.json",
+          "sha256": "35bbf52318f04b87fd59e5b71e0f114ea8305ad8d32174d500be3eaeee254835",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-body-focused-01-long-handoff-control-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T134004725Z-cw-focused-claude-long-handoff-control-7a2c0d53-5c7a-49fb-80e7-e46d76529bf1-3hy4n1k3.json",
+          "sha256": "a874c3c90e3854730ebd83cfeb30efa95c9118c0aa0be4c3ddb87d75184f27c5",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-body-focused-01-long-handoff-candidate-targeted-examples-4-1",
+      "case_id": "long-handoff",
+      "condition": "candidate-targeted-examples",
+      "repetition": 4,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "0981d4936d40c9612d7b2b76a984a9f520346a88720bbab80b351df5f96e2a73",
+        "version": "1",
+        "git_revision": "cce369e72d0a11f14daf3ab91aa4c65e158dffbe"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "0d722455ea8f6adcdf3bbc1400105967e0d4b68bf65d75aa20176b98415fe0ea",
+          "version": "1",
+          "git_revision": "cce369e72d0a11f14daf3ab91aa4c65e158dffbe"
+        },
+        "selector": "Batch: claude-body-focused-01; order 10"
+      },
+      "run_id": "20261021T134127984Z-cw-focused-claude-long-handoff-candidate-targeted-examples-3d0dc710-7677-4d8d-9b16-4bda5c19916f-50yffnh5",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T134127984Z-cw-focused-claude-long-handoff-candidate-targeted-examples-3d0dc710-7677-4d8d-9b16-4bda5c19916f-50yffnh5",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T134127984Z-cw-focused-claude-long-handoff-candidate-targeted-examples-3d0dc710-7677-4d8d-9b16-4bda5c19916f-50yffnh5.inventory.json",
+          "sha256": "d6f88c72d3eb408e24345f0fe76d99b7bcdad190e1569072348610f3e838d96d",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-body-focused-01-long-handoff-candidate-targeted-examples-4-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T134127984Z-cw-focused-claude-long-handoff-candidate-targeted-examples-3d0dc710-7677-4d8d-9b16-4bda5c19916f-50yffnh5.json",
+          "sha256": "4117fbc9101c052e5805227a8b56f748a3ac782be08258526f14976b79e0bf7f",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-body-focused-01-long-handoff-control-4-1",
+      "case_id": "long-handoff",
+      "condition": "control",
+      "repetition": 4,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "0981d4936d40c9612d7b2b76a984a9f520346a88720bbab80b351df5f96e2a73",
+        "version": "1",
+        "git_revision": "cce369e72d0a11f14daf3ab91aa4c65e158dffbe"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "0d722455ea8f6adcdf3bbc1400105967e0d4b68bf65d75aa20176b98415fe0ea",
+          "version": "1",
+          "git_revision": "cce369e72d0a11f14daf3ab91aa4c65e158dffbe"
+        },
+        "selector": "Batch: claude-body-focused-01; order 11"
+      },
+      "run_id": "20261021T134243049Z-cw-focused-claude-long-handoff-control-ca24a830-7c94-487a-863f-be7ba0207518-nnxzw1qj",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T134243049Z-cw-focused-claude-long-handoff-control-ca24a830-7c94-487a-863f-be7ba0207518-nnxzw1qj",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T134243049Z-cw-focused-claude-long-handoff-control-ca24a830-7c94-487a-863f-be7ba0207518-nnxzw1qj.inventory.json",
+          "sha256": "0e106334e1e32fc350e3e0257c25aa7b43f7b3c980e8be52da03e94e770c2204",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-body-focused-01-long-handoff-control-4-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T134243049Z-cw-focused-claude-long-handoff-control-ca24a830-7c94-487a-863f-be7ba0207518-nnxzw1qj.json",
+          "sha256": "5f3b77f0aa9a89f23e8f5308d128b06079cfe1f03fca490e90063af587118d8f",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-body-focused-01-long-handoff-original-4-1",
+      "case_id": "long-handoff",
+      "condition": "original",
+      "repetition": 4,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "0981d4936d40c9612d7b2b76a984a9f520346a88720bbab80b351df5f96e2a73",
+        "version": "1",
+        "git_revision": "cce369e72d0a11f14daf3ab91aa4c65e158dffbe"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "0d722455ea8f6adcdf3bbc1400105967e0d4b68bf65d75aa20176b98415fe0ea",
+          "version": "1",
+          "git_revision": "cce369e72d0a11f14daf3ab91aa4c65e158dffbe"
+        },
+        "selector": "Batch: claude-body-focused-01; order 12"
+      },
+      "run_id": "20261021T134410311Z-cw-focused-claude-long-handoff-original-92548067-1a5a-4b93-bcaf-e6a1d7450c2b-t1zwyliw",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T134410311Z-cw-focused-claude-long-handoff-original-92548067-1a5a-4b93-bcaf-e6a1d7450c2b-t1zwyliw",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T134410311Z-cw-focused-claude-long-handoff-original-92548067-1a5a-4b93-bcaf-e6a1d7450c2b-t1zwyliw.inventory.json",
+          "sha256": "6db8c6569e2b9c2cd326d6edcdca915e1fcac16ec4c925ae6f97582e642686d6",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-body-focused-01-long-handoff-original-4-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T134410311Z-cw-focused-claude-long-handoff-original-92548067-1a5a-4b93-bcaf-e6a1d7450c2b-t1zwyliw.json",
+          "sha256": "9f6e17f52a6a4a588a48bce678b658c51efc771c07e794d28486bd38517889e1",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-body-focused-01-long-handoff-control-5-1",
+      "case_id": "long-handoff",
+      "condition": "control",
+      "repetition": 5,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "0981d4936d40c9612d7b2b76a984a9f520346a88720bbab80b351df5f96e2a73",
+        "version": "1",
+        "git_revision": "cce369e72d0a11f14daf3ab91aa4c65e158dffbe"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "0d722455ea8f6adcdf3bbc1400105967e0d4b68bf65d75aa20176b98415fe0ea",
+          "version": "1",
+          "git_revision": "cce369e72d0a11f14daf3ab91aa4c65e158dffbe"
+        },
+        "selector": "Batch: claude-body-focused-01; order 13"
+      },
+      "run_id": "20261021T134503654Z-cw-focused-claude-long-handoff-control-d5e81fd2-2f0c-4506-b411-05a03491bf00-8obwmfqs",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T134503654Z-cw-focused-claude-long-handoff-control-d5e81fd2-2f0c-4506-b411-05a03491bf00-8obwmfqs",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T134503654Z-cw-focused-claude-long-handoff-control-d5e81fd2-2f0c-4506-b411-05a03491bf00-8obwmfqs.inventory.json",
+          "sha256": "4b6d796cd07cf2ea99d53d7034e19821bb0b01ad0405605135cb2b62dc85684e",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-body-focused-01-long-handoff-control-5-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T134503654Z-cw-focused-claude-long-handoff-control-d5e81fd2-2f0c-4506-b411-05a03491bf00-8obwmfqs.json",
+          "sha256": "f28bff9250000388827577a1f0eec4b4e4cc461be7e909cd9a54f1c4d5fa64cd",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-body-focused-01-long-handoff-original-5-1",
+      "case_id": "long-handoff",
+      "condition": "original",
+      "repetition": 5,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "0981d4936d40c9612d7b2b76a984a9f520346a88720bbab80b351df5f96e2a73",
+        "version": "1",
+        "git_revision": "cce369e72d0a11f14daf3ab91aa4c65e158dffbe"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "0d722455ea8f6adcdf3bbc1400105967e0d4b68bf65d75aa20176b98415fe0ea",
+          "version": "1",
+          "git_revision": "cce369e72d0a11f14daf3ab91aa4c65e158dffbe"
+        },
+        "selector": "Batch: claude-body-focused-01; order 14"
+      },
+      "run_id": "20261021T134622734Z-cw-focused-claude-long-handoff-original-97c76cba-8949-4695-a690-0df3a558da91-wkz275lr",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T134622734Z-cw-focused-claude-long-handoff-original-97c76cba-8949-4695-a690-0df3a558da91-wkz275lr",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T134622734Z-cw-focused-claude-long-handoff-original-97c76cba-8949-4695-a690-0df3a558da91-wkz275lr.inventory.json",
+          "sha256": "1015560c2f1cad037143e1f66290130d0c2d99fd05539504b12c8acc34863b7e",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-body-focused-01-long-handoff-original-5-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T134622734Z-cw-focused-claude-long-handoff-original-97c76cba-8949-4695-a690-0df3a558da91-wkz275lr.json",
+          "sha256": "1961a3af3448c538c9b977ef46332565f06aa9c3c1bf0404b3296643d95f4864",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-body-focused-01-long-handoff-candidate-targeted-examples-5-1",
+      "case_id": "long-handoff",
+      "condition": "candidate-targeted-examples",
+      "repetition": 5,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "0981d4936d40c9612d7b2b76a984a9f520346a88720bbab80b351df5f96e2a73",
+        "version": "1",
+        "git_revision": "cce369e72d0a11f14daf3ab91aa4c65e158dffbe"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "0d722455ea8f6adcdf3bbc1400105967e0d4b68bf65d75aa20176b98415fe0ea",
+          "version": "1",
+          "git_revision": "cce369e72d0a11f14daf3ab91aa4c65e158dffbe"
+        },
+        "selector": "Batch: claude-body-focused-01; order 15"
+      },
+      "run_id": "20261021T134750109Z-cw-focused-claude-long-handoff-candidate-targeted-examples-e398868b-d359-472a-8a20-8b9a9790eb41-lfzh_qe2",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T134750109Z-cw-focused-claude-long-handoff-candidate-targeted-examples-e398868b-d359-472a-8a20-8b9a9790eb41-lfzh_qe2",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T134750109Z-cw-focused-claude-long-handoff-candidate-targeted-examples-e398868b-d359-472a-8a20-8b9a9790eb41-lfzh_qe2.inventory.json",
+          "sha256": "9e933dfe45e4d72e98825d8776478a94d4686fd83315a001187e0cd58818d072",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-body-focused-01-long-handoff-candidate-targeted-examples-5-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/results/20261021T134750109Z-cw-focused-claude-long-handoff-candidate-targeted-examples-e398868b-d359-472a-8a20-8b9a9790eb41-lfzh_qe2.json",
+          "sha256": "6a56ac07b2872af30f19aef2328e2935b204938e4bf73cea2a13042cdff21086",
+          "version": "2"
+        }
+      }
+    }
+  ]
 }
