@@ -1,5 +1,5 @@
 {
-  "status": "Claude CLI substitution awaits owner decision; Codex remains qualified",
+  "status": "Qualified Claude2.1.305 substitution accepted; freeze/readiness required before dispatch",
   "checked_on": "2026-10-21",
   "model_calls": 0,
   "passed": 15,
@@ -27,5 +27,12 @@
       "sha256": "bff2209bbd8cae12655159a74e0a3894f038ad40110b41f08857fb4a0e518a3e",
       "version": "1"
     }
+  },
+  "owner_authorization": {
+    "date": "2026-10-21",
+    "quote": "give me a summary of the results so far. then continue with the claude body testing.",
+    "context": "Direct continuation after explicit presentation of the qualified2.1.305 substitution gate; existing150subject/10evaluator allocation and subject/evaluator models/efforts unchanged.",
+    "claude_cli_stratum": "2.1.305",
+    "pre_dispatch_recheck": "Exact CLI/toolchain hashes and Claude loggedIn=true reverified with zero model calls."
   }
 }
