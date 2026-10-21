@@ -2,8 +2,8 @@
 
 Format version: `1`
 Study ID: `concise-writing`
-Status: the focused allocation and assessment interpretation are finalized; input freeze and publication are in progress. Codex runtime identities match. Claude Code updated to 2.1.305 and passes fresh zero-model qualification, but its substitution awaits the owner decision. The live skill remains unchanged and adoption is deferred.
-Current action: commit and push the assessment corrections and focused preparation, freeze verified inputs, then begin the fixed Codex body sequence. Hold Claude dispatch until the owner accepts the qualified CLI substitution required by the [proposal](drafts/baseline-iteration/discovery/proposal.md#qualification-and-cross-model-review). All 150 focused subject and ten evaluator calls remain unused; later regression, automatic retries, further wording changes and adoption remain unapproved.
+Status: the focused allocation and assessment interpretation are finalized; Codex inputs are frozen at preparation commit08ec3ee and runtime identities match. Claude Code updated to 2.1.305 and passes fresh zero-model qualification, but its substitution awaits the owner decision. The live skill remains unchanged and adoption is deferred.
+Current action: publish the frozen Codex manifests and collection readiness, then begin the fixed Codex body sequence. Assessment corrections and focused preparation are committed and pushed at08ec3ee. Hold Claude dispatch until the owner accepts the qualified CLI substitution required by the [proposal](drafts/baseline-iteration/discovery/proposal.md#qualification-and-cross-model-review). The accounting section owns remaining calls; later regression, automatic retries, further wording changes and adoption remain unapproved.
 The approved [core/runs directory layout](../../plans/specs/2026-10-18-study-directory-layout.md) is implemented and verified for both studies; [navigation](README.md) separates core guidance from collected evidence.
 On 2026-10-18 the owner replied “ok, let’s do it” to the concrete remaining allocation of 144 subject calls plus fourteen evaluator calls. This accepts unchanged targeted/fuller bodies, fresh original/control comparisons, three repetitions per selected condition/provider and reuse of the separate completed E stratum while input/runtime qualification holds.
 The authorized sequence is 72 ordinary A/B/C subjects, then 72 native N1–N4 subjects, plus six ordinary and eight native Opus 5.5 medium reviews.
@@ -777,11 +777,13 @@ Global ordering: all 72 ordinary attempts precede all 72 native attempts; the [s
 ### Focused revised comparison: codex-body-focused-01
 
 Batch: codex-body-focused-01
+Manifests: [long-handoff](runs/revised-body-discovery-01/preparation/manifests/codex-long-handoff-manifest.json), [document-addition](runs/revised-body-discovery-01/preparation/manifests/codex-document-addition-manifest.json), [comments-explicit](runs/revised-body-discovery-01/preparation/manifests/codex-comments-explicit-manifest.json).
 Scope: 45 sequential subjects, five repetitions per selected condition/case.
 Authority: owner-approved 150-subject/ten-review allocation at this protocol's opening; no automatic retry or adoption.
 Inputs and criteria: [preparation](runs/revised-body-discovery-01/preparation/README.md), with prospective interpretation boundaries and case/provider manifests.
 Runtime: pinned existing CLI/model/toolchain, qualified before dispatch; body contribution and native selection remain separate.
 Acceptance: complete fixed-stage descriptive outcomes with concrete source/output evidence; no reliability threshold, word-count gate or forced failure on a disputed paraphrase.
+Include all valid-setup executions regardless of outcome. No automatic retry; disclose exclusions, uncertainty and unattempted slots.
 Stop on infrastructure, contamination, capture/retention failure, input/runtime drift or uncertain charge; retain every valid behavioral miss.
 Record: [index](runs/revised-body-discovery-01/codex-body-focused-01-run-index.json).
 Global ordering: all 90 body subjects precede all 60 discovery subjects; [schedule](runs/revised-body-discovery-01/preparation/schedule.json).
@@ -838,11 +840,13 @@ Global ordering: all 90 body subjects precede all 60 discovery subjects; [schedu
 ### Focused revised comparison: claude-body-focused-01
 
 Batch: claude-body-focused-01
+Manifests: [long-handoff](runs/revised-body-discovery-01/preparation/manifests/claude-long-handoff-manifest.json), [document-addition](runs/revised-body-discovery-01/preparation/manifests/claude-document-addition-manifest.json), [comments-explicit](runs/revised-body-discovery-01/preparation/manifests/claude-comments-explicit-manifest.json).
 Scope: 45 sequential subjects, five repetitions per selected condition/case.
 Authority: owner-approved 150-subject/ten-review allocation at this protocol's opening; no automatic retry or adoption.
 Inputs and criteria: [preparation](runs/revised-body-discovery-01/preparation/README.md), with prospective interpretation boundaries and case/provider manifests.
 Runtime: pinned existing CLI/model/toolchain, qualified before dispatch; body contribution and native selection remain separate.
 Acceptance: complete fixed-stage descriptive outcomes with concrete source/output evidence; no reliability threshold, word-count gate or forced failure on a disputed paraphrase.
+Include all valid-setup executions regardless of outcome. No automatic retry; disclose exclusions, uncertainty and unattempted slots.
 Stop on infrastructure, contamination, capture/retention failure, input/runtime drift or uncertain charge; retain every valid behavioral miss.
 Record: [index](runs/revised-body-discovery-01/claude-body-focused-01-run-index.json).
 Global ordering: all 90 body subjects precede all 60 discovery subjects; [schedule](runs/revised-body-discovery-01/preparation/schedule.json).
@@ -899,11 +903,13 @@ Global ordering: all 90 body subjects precede all 60 discovery subjects; [schedu
 ### Focused revised comparison: codex-discovery-focused-01
 
 Batch: codex-discovery-focused-01
+Manifests: [invocation-nonprose](runs/revised-body-discovery-01/preparation/manifests/codex-invocation-nonprose-manifest.json), [invocation-comments](runs/revised-body-discovery-01/preparation/manifests/codex-invocation-comments-manifest.json).
 Scope: 30 sequential subjects, five repetitions per selected condition/case.
 Authority: owner-approved 150-subject/ten-review allocation at this protocol's opening; no automatic retry or adoption.
 Inputs and criteria: [preparation](runs/revised-body-discovery-01/preparation/README.md), with prospective interpretation boundaries and case/provider manifests.
 Runtime: pinned existing CLI/model/toolchain, qualified before dispatch; body contribution and native selection remain separate.
 Acceptance: complete fixed-stage descriptive outcomes with concrete source/output evidence; no reliability threshold, word-count gate or forced failure on a disputed paraphrase.
+Include all valid-setup executions regardless of outcome. No automatic retry; disclose exclusions, uncertainty and unattempted slots.
 Stop on infrastructure, contamination, capture/retention failure, input/runtime drift or uncertain charge; retain every valid behavioral miss.
 Record: [index](runs/revised-body-discovery-01/codex-discovery-focused-01-run-index.json).
 Global ordering: all 90 body subjects precede all 60 discovery subjects; [schedule](runs/revised-body-discovery-01/preparation/schedule.json).
@@ -945,11 +951,13 @@ Global ordering: all 90 body subjects precede all 60 discovery subjects; [schedu
 ### Focused revised comparison: claude-discovery-focused-01
 
 Batch: claude-discovery-focused-01
+Manifests: [invocation-nonprose](runs/revised-body-discovery-01/preparation/manifests/claude-invocation-nonprose-manifest.json), [invocation-comments](runs/revised-body-discovery-01/preparation/manifests/claude-invocation-comments-manifest.json).
 Scope: 30 sequential subjects, five repetitions per selected condition/case.
 Authority: owner-approved 150-subject/ten-review allocation at this protocol's opening; no automatic retry or adoption.
 Inputs and criteria: [preparation](runs/revised-body-discovery-01/preparation/README.md), with prospective interpretation boundaries and case/provider manifests.
 Runtime: pinned existing CLI/model/toolchain, qualified before dispatch; body contribution and native selection remain separate.
 Acceptance: complete fixed-stage descriptive outcomes with concrete source/output evidence; no reliability threshold, word-count gate or forced failure on a disputed paraphrase.
+Include all valid-setup executions regardless of outcome. No automatic retry; disclose exclusions, uncertainty and unattempted slots.
 Stop on infrastructure, contamination, capture/retention failure, input/runtime drift or uncertain charge; retain every valid behavioral miss.
 Record: [index](runs/revised-body-discovery-01/claude-discovery-focused-01-run-index.json).
 Global ordering: all 90 body subjects precede all 60 discovery subjects; [schedule](runs/revised-body-discovery-01/preparation/schedule.json).
