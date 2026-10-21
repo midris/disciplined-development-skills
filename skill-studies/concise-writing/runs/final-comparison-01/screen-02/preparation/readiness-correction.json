@@ -1,0 +1,25 @@
+{
+  "created_at": "2026-10-21T20:08:15.165770+00:00",
+  "first_subject_global_order": 1,
+  "original_authority_revision": "8bf1336c21b8d9852368b6034dfed61c2b43d400",
+  "original_protocol_sha256": "0e4cff8df571eba149f14c8143f7ff57e64c29112126b1dc8876664bf20b455d",
+  "readiness_before_first_dispatch": "failed for both batches; active controller did not act on returned nonzero codes before proceeding",
+  "first_subject_retained": true,
+  "repeated_subjects": 0,
+  "exclusions": 0,
+  "subject_calls": 1,
+  "subject_or_scoring_inputs_changed": false,
+  "corrected_readiness_both_pass": true,
+  "launcher": {
+    "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/readiness-correction/dispatch-checked.py",
+    "sha256": "170882a15aaa62c2bfc215653b195f994ea74072e179906ca66dd32a9327250a"
+  },
+  "evidence": {
+    "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/readiness-correction",
+    "inventory": {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/readiness-correction.inventory.json",
+      "sha256": "785d280d4908d8aa27ce9c6b2c46e6223310a7251ead4fa16bfbd7ff35b33ac1",
+      "version": "1"
+    }
+  }
+}

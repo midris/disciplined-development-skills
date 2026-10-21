@@ -3,12 +3,14 @@
 Format version: `1`
 Study ID: `concise-writing`
 Status: the owner approved eight additional comment subjects and two updated Opus reviews, topping both bodies up to five repetitions per provider.
-Current action: freeze the [repetition-4/5 continuation](runs/final-comparison-01/screen-02/README.md), collect and assess its eight subjects, then review all twenty distinct comment outputs in two provider packets before returning to the owner.
+Current action: collect and assess the [repetition-4/5 continuation](runs/final-comparison-01/screen-02/README.md), then review all twenty distinct comment outputs in two provider packets before returning to the owner.
 The owner replied “let's do it” to the concrete +8-subject/+2-review proposal after the first twelve subjects and two reviews passed with no clear loser.
 Accepted combined ceilings rise from 602 subject / 40 evaluator to 610 / 42; authoring/retry ceilings stay four each.
 Only repetitions 4/5 and two ten-output reviews are approved; unchanged first-screen evidence is reused, not rerun.
 The [zero-model continuation recheck](runs/final-comparison-01/screen-02/preparation/continuation-recheck.json) verifies exact binaries/sign-in, unchanged adapter and prior qualification inventory; eleven body/guard checks pass.
 No automatic retry, split, fallback, candidate edit, next-case collection or adoption is authorized.
+The first authorized top-up subject started before the two failed readiness results were acted on; the [readiness correction](runs/final-comparison-01/screen-02/preparation/readiness-correction.md) preserves this procedural deviation and original charge, with unchanged subject inputs and scoring.
+Recognized include-all wording and successful readiness are required before any later dispatch.
 Twelve zero-model runtime probes passed; exact binaries, sign-in metadata and paired inputs are checked, with subject inputs frozen against `dcbb176616bd9ee540a11243c24b8bf740fdd122`.
 Claude slot 7 received the complete teaching body before editing; the [inspection amendment](runs/final-comparison-01/screen-01/preparation/explicit-inspection-amendment.md) corrects a YAML-header expectation through retained-evidence replay, without repeating the subject.
 Its original manifest and charge remain; the amended controller was frozen prospectively before slot 8.
@@ -1044,13 +1046,13 @@ Combined accounting sources: closed SSR [pilot 01](../sweeping-stale-references/
 The new E reviews use the [fixed review package](runs/baseline-iteration-e-01/evaluation/README.md) and [supplemental Opus accounting](runs/baseline-iteration-e-01/evaluation/evaluator-run-index.json).
 The remaining-suite reviews use the [fourteen-packet package](runs/baseline-iteration-suite-01/evaluation/README.md) and [evaluator ledger](runs/baseline-iteration-suite-01/evaluation/evaluator-run-index.json); their allocation is included in the current ceiling.
 The focused output reviews use the [ten-packet package](runs/revised-body-discovery-01/evaluation/README.md) and [evaluator ledger](runs/revised-body-discovery-01/evaluation/evaluator-run-index.json); their ten calls are spent within the current evaluator accounting.
-Dispatched calls are **602 subject, 40 evaluator, 0 authoring, 2 retry**; remaining outer capacity is **8 / 2 / 4 / 2** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
+Dispatched calls are **603 subject, 40 evaluator, 0 authoring, 2 retry**; remaining outer capacity is **7 / 2 / 4 / 2** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
 Current combined accounting: **3,260 active minutes booked; 2,060 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
-The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 602/610, with eight approved top-up calls available; the earlier E diagnostic is spent.
+The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 603/610, with 7 approved top-up calls available and no E calls remaining.
 The supplemental work used 40 estimated active minutes against its 40-minute forecast; model waits are included once.
 
 | Work | Estimated active minutes |
@@ -1277,7 +1279,7 @@ Scope: four sequential subjects, repetitions 4/5 of both unchanged bodies; prior
 Authority: owner-approved eight-subject/two-review continuation, combined ceilings 610 subject / 42 evaluator.
 Inputs and criteria: [continuation](runs/final-comparison-01/screen-02/README.md), unchanged CW-expanded-1 and complete-code interpretation.
 Acceptance: descriptive comparison of consequential quality, regressions and uncertainty across five repetitions; no threshold or length-only winner.
-Include every valid setup; record failures, uncertainty, exclusions and unattempted slots without automatic replacement.
+Include all valid-setup executions regardless of outcome. No automatic retry; disclose exclusions, uncertainty and unattempted slots.
 Stop on infrastructure, contamination, preservation/capture failure, identity drift or uncertain charge; valid behavioral misses alone do not stop later rows.
 Record: [index](runs/final-comparison-01/screen-02/codex-final-comments-screen-02-run-index.json).
 
@@ -1296,7 +1298,7 @@ Scope: four sequential subjects, repetitions 4/5 of both unchanged bodies; prior
 Authority: owner-approved eight-subject/two-review continuation, combined ceilings 610 subject / 42 evaluator.
 Inputs and criteria: [continuation](runs/final-comparison-01/screen-02/README.md), unchanged CW-expanded-1 and complete-code interpretation.
 Acceptance: descriptive comparison of consequential quality, regressions and uncertainty across five repetitions; no threshold or length-only winner.
-Include every valid setup; record failures, uncertainty, exclusions and unattempted slots without automatic replacement.
+Include all valid-setup executions regardless of outcome. No automatic retry; disclose exclusions, uncertainty and unattempted slots.
 Stop on infrastructure, contamination, preservation/capture failure, identity drift or uncertain charge; valid behavioral misses alone do not stop later rows.
 Record: [index](runs/final-comparison-01/screen-02/claude-final-comments-screen-02-run-index.json).
 
