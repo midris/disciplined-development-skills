@@ -781,6 +781,441 @@
         }
       ],
       "length_treatment": "Required additions; input/output counts descriptive, no shortening preference."
+    },
+    {
+      "global_order": 31,
+      "run_id": "20261021T072108085Z-cw-focused-codex-comments-explicit-candidate-targeted-examples-2f8ccb68-12a8-42d2-a663-2d60901037f8-5hzloha1",
+      "case": "comments-explicit",
+      "condition": "candidate-targeted-examples",
+      "repetition": 1,
+      "complete_output_words": 62,
+      "output_sha256": "bde0a76a38e2ee8783a7e58a7ef45d39a0cecaf93f017ebba94e5ec28de2fbfa",
+      "inputs": [
+        {
+          "target": "TASK.md",
+          "words": 47,
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "target": "uploader.py",
+          "words": 48,
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "target": "MAINTAINER-NOTES.md",
+          "words": 136,
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        }
+      ],
+      "source_comment_words": 20,
+      "output_comment_words": 33,
+      "length_treatment": "Comment-only counts descriptive; useful maintenance rationale can justify growth."
+    },
+    {
+      "global_order": 32,
+      "run_id": "20261021T072252424Z-cw-focused-codex-comments-explicit-control-dc88d8b1-8821-4aa7-97d9-57fb3f84177d-2awax4of",
+      "case": "comments-explicit",
+      "condition": "control",
+      "repetition": 1,
+      "complete_output_words": 84,
+      "output_sha256": "8b9dbb8a1e84ca4c123d4a7249e8fb6d787aad5f68f767f683572c41ce83fa40",
+      "inputs": [
+        {
+          "target": "TASK.md",
+          "words": 47,
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "target": "uploader.py",
+          "words": 48,
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "target": "MAINTAINER-NOTES.md",
+          "words": 136,
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        }
+      ],
+      "source_comment_words": 20,
+      "output_comment_words": 53,
+      "length_treatment": "Comment-only counts descriptive; useful maintenance rationale can justify growth."
+    },
+    {
+      "global_order": 33,
+      "run_id": "20261021T072409401Z-cw-focused-codex-comments-explicit-original-f2b785ac-e2eb-4862-a636-2f2c847217fd-rh_hc8p_",
+      "case": "comments-explicit",
+      "condition": "original",
+      "repetition": 1,
+      "complete_output_words": 63,
+      "output_sha256": "b3712aa99d39338ee59d91212173305d76afd544c71e302f002c8c48e4d1fc8d",
+      "inputs": [
+        {
+          "target": "TASK.md",
+          "words": 47,
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "target": "uploader.py",
+          "words": 48,
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "target": "MAINTAINER-NOTES.md",
+          "words": 136,
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        }
+      ],
+      "source_comment_words": 20,
+      "output_comment_words": 34,
+      "length_treatment": "Comment-only counts descriptive; useful maintenance rationale can justify growth."
+    },
+    {
+      "global_order": 34,
+      "run_id": "20261021T072535750Z-cw-focused-codex-comments-explicit-control-b13b4e99-bee8-42f6-8b27-2210f983b688-chg1b6f1",
+      "case": "comments-explicit",
+      "condition": "control",
+      "repetition": 2,
+      "complete_output_words": 99,
+      "output_sha256": "254a9689ac3328f2cd562514472af9e25ffc1b6b7d5f7f18d7b20e1bb5061e5e",
+      "inputs": [
+        {
+          "target": "TASK.md",
+          "words": 47,
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "target": "uploader.py",
+          "words": 48,
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "target": "MAINTAINER-NOTES.md",
+          "words": 136,
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        }
+      ],
+      "source_comment_words": 20,
+      "output_comment_words": 67,
+      "length_treatment": "Comment-only counts descriptive; useful maintenance rationale can justify growth."
+    },
+    {
+      "global_order": 35,
+      "run_id": "20261021T072717716Z-cw-focused-codex-comments-explicit-original-b3bc1631-d15d-4a27-8ab6-daa9162f2a60-rsdbkoap",
+      "case": "comments-explicit",
+      "condition": "original",
+      "repetition": 2,
+      "complete_output_words": 71,
+      "output_sha256": "f5e772983890b03bfb6423e8443348ce548aa2fdb7a18a91c89040307d97a00d",
+      "inputs": [
+        {
+          "target": "TASK.md",
+          "words": 47,
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "target": "uploader.py",
+          "words": 48,
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "target": "MAINTAINER-NOTES.md",
+          "words": 136,
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        }
+      ],
+      "source_comment_words": 20,
+      "output_comment_words": 41,
+      "length_treatment": "Comment-only counts descriptive; useful maintenance rationale can justify growth."
+    },
+    {
+      "global_order": 36,
+      "run_id": "20261021T072816791Z-cw-focused-codex-comments-explicit-candidate-targeted-examples-6e554fd8-c1f7-4241-a4a5-105fccd2d843-srvzv696",
+      "case": "comments-explicit",
+      "condition": "candidate-targeted-examples",
+      "repetition": 2,
+      "complete_output_words": 70,
+      "output_sha256": "d661bf7d56791541c4c20f9266a8cbd53bd9057d485bbc13cd7ab2af331ec76b",
+      "inputs": [
+        {
+          "target": "TASK.md",
+          "words": 47,
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "target": "uploader.py",
+          "words": 48,
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "target": "MAINTAINER-NOTES.md",
+          "words": 136,
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        }
+      ],
+      "source_comment_words": 20,
+      "output_comment_words": 40,
+      "length_treatment": "Comment-only counts descriptive; useful maintenance rationale can justify growth."
+    },
+    {
+      "global_order": 37,
+      "run_id": "20261021T073023669Z-cw-focused-codex-comments-explicit-original-ebdbbba3-7368-44e5-ac80-68e439f10808-q1_igszs",
+      "case": "comments-explicit",
+      "condition": "original",
+      "repetition": 3,
+      "complete_output_words": 72,
+      "output_sha256": "fe5dc0710ce628cfd3fdd70c9c041a703c558d1471e3340dc6d0e0cdd9fbb5c0",
+      "inputs": [
+        {
+          "target": "TASK.md",
+          "words": 47,
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "target": "uploader.py",
+          "words": 48,
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "target": "MAINTAINER-NOTES.md",
+          "words": 136,
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        }
+      ],
+      "source_comment_words": 20,
+      "output_comment_words": 42,
+      "length_treatment": "Comment-only counts descriptive; useful maintenance rationale can justify growth."
+    },
+    {
+      "global_order": 38,
+      "run_id": "20261021T073417782Z-cw-focused-codex-comments-explicit-candidate-targeted-examples-a7111074-2ac3-4893-96b1-30c009875f4f-ucx_1k_a",
+      "case": "comments-explicit",
+      "condition": "candidate-targeted-examples",
+      "repetition": 3,
+      "complete_output_words": 71,
+      "output_sha256": "7c7acb97b20220f3520fa8d8b77d90a702869536c8684c4fbf898115ea396670",
+      "inputs": [
+        {
+          "target": "TASK.md",
+          "words": 47,
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "target": "uploader.py",
+          "words": 48,
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "target": "MAINTAINER-NOTES.md",
+          "words": 136,
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        }
+      ],
+      "source_comment_words": 20,
+      "output_comment_words": 41,
+      "length_treatment": "Comment-only counts descriptive; useful maintenance rationale can justify growth."
+    },
+    {
+      "global_order": 39,
+      "run_id": "20261021T073513076Z-cw-focused-codex-comments-explicit-control-bdac9b46-f301-419a-97fd-efff3a3b170e-h1itii9x",
+      "case": "comments-explicit",
+      "condition": "control",
+      "repetition": 3,
+      "complete_output_words": 86,
+      "output_sha256": "dcec3fcd1a61a4b0b67fc8c492751afbfa33397d6b2d7d0d40c62ffa7e75189b",
+      "inputs": [
+        {
+          "target": "TASK.md",
+          "words": 47,
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "target": "uploader.py",
+          "words": 48,
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "target": "MAINTAINER-NOTES.md",
+          "words": 136,
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        }
+      ],
+      "source_comment_words": 20,
+      "output_comment_words": 55,
+      "length_treatment": "Comment-only counts descriptive; useful maintenance rationale can justify growth."
+    },
+    {
+      "global_order": 40,
+      "run_id": "20261021T073640316Z-cw-focused-codex-comments-explicit-candidate-targeted-examples-0f74d102-c525-44c1-8b1a-3c6eb1d4f9f5-w4rfwdcc",
+      "case": "comments-explicit",
+      "condition": "candidate-targeted-examples",
+      "repetition": 4,
+      "complete_output_words": 70,
+      "output_sha256": "60bf6456653fb1558f5dbf91f4fa097065843f620f4a9fc1be79cf7196dfe78b",
+      "inputs": [
+        {
+          "target": "TASK.md",
+          "words": 47,
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "target": "uploader.py",
+          "words": 48,
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "target": "MAINTAINER-NOTES.md",
+          "words": 136,
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        }
+      ],
+      "source_comment_words": 20,
+      "output_comment_words": 40,
+      "length_treatment": "Comment-only counts descriptive; useful maintenance rationale can justify growth."
+    },
+    {
+      "global_order": 41,
+      "run_id": "20261021T073742371Z-cw-focused-codex-comments-explicit-control-8bfc9bbc-92a5-47f0-8c9b-37333d573f17-2uhi62li",
+      "case": "comments-explicit",
+      "condition": "control",
+      "repetition": 4,
+      "complete_output_words": 77,
+      "output_sha256": "1fd3b4e373648f37333bcd4f2c64d4982579ad259ef4d9990683c010dde46d36",
+      "inputs": [
+        {
+          "target": "TASK.md",
+          "words": 47,
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "target": "uploader.py",
+          "words": 48,
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "target": "MAINTAINER-NOTES.md",
+          "words": 136,
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        }
+      ],
+      "source_comment_words": 20,
+      "output_comment_words": 47,
+      "length_treatment": "Comment-only counts descriptive; useful maintenance rationale can justify growth."
+    },
+    {
+      "global_order": 42,
+      "run_id": "20261021T073853118Z-cw-focused-codex-comments-explicit-original-b2878e59-823f-402b-98cf-6293ad042315-3fi5wbc_",
+      "case": "comments-explicit",
+      "condition": "original",
+      "repetition": 4,
+      "complete_output_words": 79,
+      "output_sha256": "a50c61fd0b54c2f7f1a7fe06289743d3b4a95b66e60f2dcd73f75958ae6825b6",
+      "inputs": [
+        {
+          "target": "TASK.md",
+          "words": 47,
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "target": "uploader.py",
+          "words": 48,
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "target": "MAINTAINER-NOTES.md",
+          "words": 136,
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        }
+      ],
+      "source_comment_words": 20,
+      "output_comment_words": 48,
+      "length_treatment": "Comment-only counts descriptive; useful maintenance rationale can justify growth."
+    },
+    {
+      "global_order": 43,
+      "run_id": "20261021T073958444Z-cw-focused-codex-comments-explicit-control-132bc8aa-377f-409e-93fc-7c94b0ee0cf2-9vj69k83",
+      "case": "comments-explicit",
+      "condition": "control",
+      "repetition": 5,
+      "complete_output_words": 84,
+      "output_sha256": "baa8f0aecb5ba7737d6cd1632f3bd416a829b11c62f8f109a12c13164f30d126",
+      "inputs": [
+        {
+          "target": "TASK.md",
+          "words": 47,
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "target": "uploader.py",
+          "words": 48,
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "target": "MAINTAINER-NOTES.md",
+          "words": 136,
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        }
+      ],
+      "source_comment_words": 20,
+      "output_comment_words": 53,
+      "length_treatment": "Comment-only counts descriptive; useful maintenance rationale can justify growth."
+    },
+    {
+      "global_order": 44,
+      "run_id": "20261021T074242377Z-cw-focused-codex-comments-explicit-original-8fd75509-e87f-44c8-8231-bb2a1bb2fa82-iqfmpihj",
+      "case": "comments-explicit",
+      "condition": "original",
+      "repetition": 5,
+      "complete_output_words": 59,
+      "output_sha256": "b1b12858b523cb227468c34c685fda89ff49c348b649b332290b74b9e7c38566",
+      "inputs": [
+        {
+          "target": "TASK.md",
+          "words": 47,
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "target": "uploader.py",
+          "words": 48,
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "target": "MAINTAINER-NOTES.md",
+          "words": 136,
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        }
+      ],
+      "source_comment_words": 20,
+      "output_comment_words": 30,
+      "length_treatment": "Comment-only counts descriptive; useful maintenance rationale can justify growth."
+    },
+    {
+      "global_order": 45,
+      "run_id": "20261021T074347535Z-cw-focused-codex-comments-explicit-candidate-targeted-examples-c64fa430-9fed-4c10-8c2f-8e717f23e5d9-hfn83bfe",
+      "case": "comments-explicit",
+      "condition": "candidate-targeted-examples",
+      "repetition": 5,
+      "complete_output_words": 74,
+      "output_sha256": "5e4cb2a73af6b61c7f75aa02388cf55e6d37ef2de59517382b98b4c12f99e6c2",
+      "inputs": [
+        {
+          "target": "TASK.md",
+          "words": 47,
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "target": "uploader.py",
+          "words": 48,
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "target": "MAINTAINER-NOTES.md",
+          "words": 136,
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        }
+      ],
+      "source_comment_words": 20,
+      "output_comment_words": 44,
+      "length_treatment": "Comment-only counts descriptive; useful maintenance rationale can justify growth."
     }
   ]
 }
