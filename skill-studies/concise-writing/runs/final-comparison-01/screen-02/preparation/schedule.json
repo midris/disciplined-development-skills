@@ -1,0 +1,104 @@
+{
+  "status": "owner-approved eight-subject top-up only",
+  "subjects": 8,
+  "reused_screen": "screen-01",
+  "combined_repetitions": 5,
+  "slots": [
+    {
+      "global_order": 1,
+      "batch_id": "codex-final-comments-screen-02",
+      "provider": "codex",
+      "case_id": "comments-explicit",
+      "kind": "body",
+      "condition": "revised-body",
+      "repetition": 4,
+      "config": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-comments-explicit-revised-body.json",
+      "order": 1,
+      "output": "uploader.py"
+    },
+    {
+      "global_order": 2,
+      "batch_id": "codex-final-comments-screen-02",
+      "provider": "codex",
+      "case_id": "comments-explicit",
+      "kind": "body",
+      "condition": "original-body",
+      "repetition": 4,
+      "config": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-comments-explicit-original-body.json",
+      "order": 2,
+      "output": "uploader.py"
+    },
+    {
+      "global_order": 3,
+      "batch_id": "codex-final-comments-screen-02",
+      "provider": "codex",
+      "case_id": "comments-explicit",
+      "kind": "body",
+      "condition": "original-body",
+      "repetition": 5,
+      "config": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-comments-explicit-original-body.json",
+      "order": 3,
+      "output": "uploader.py"
+    },
+    {
+      "global_order": 4,
+      "batch_id": "codex-final-comments-screen-02",
+      "provider": "codex",
+      "case_id": "comments-explicit",
+      "kind": "body",
+      "condition": "revised-body",
+      "repetition": 5,
+      "config": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-comments-explicit-revised-body.json",
+      "order": 4,
+      "output": "uploader.py"
+    },
+    {
+      "global_order": 5,
+      "batch_id": "claude-final-comments-screen-02",
+      "provider": "claude",
+      "case_id": "comments-explicit",
+      "kind": "body",
+      "condition": "original-body",
+      "repetition": 4,
+      "config": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-comments-explicit-original-body.json",
+      "order": 1,
+      "output": "uploader.py"
+    },
+    {
+      "global_order": 6,
+      "batch_id": "claude-final-comments-screen-02",
+      "provider": "claude",
+      "case_id": "comments-explicit",
+      "kind": "body",
+      "condition": "revised-body",
+      "repetition": 4,
+      "config": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-comments-explicit-revised-body.json",
+      "order": 2,
+      "output": "uploader.py"
+    },
+    {
+      "global_order": 7,
+      "batch_id": "claude-final-comments-screen-02",
+      "provider": "claude",
+      "case_id": "comments-explicit",
+      "kind": "body",
+      "condition": "revised-body",
+      "repetition": 5,
+      "config": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-comments-explicit-revised-body.json",
+      "order": 3,
+      "output": "uploader.py"
+    },
+    {
+      "global_order": 8,
+      "batch_id": "claude-final-comments-screen-02",
+      "provider": "claude",
+      "case_id": "comments-explicit",
+      "kind": "body",
+      "condition": "original-body",
+      "repetition": 5,
+      "config": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-comments-explicit-original-body.json",
+      "order": 4,
+      "output": "uploader.py"
+    }
+  ]
+}
