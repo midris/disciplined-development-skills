@@ -17,3 +17,5 @@ No automatic top-up, retry, split, fallback, mid-screen edit or adoption is auth
 Private evidence uses /Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01 under the accepted single-host arrangement.
 Never run Git inside retained bundles; use reads or disposable copies.
 Controller input freeze and runtime checks must pass before dispatch; current readiness belongs to the protocol.
+
+The [comparison and Opus reconciliation](evaluation/assessment.md) links the two aggregate subject assessments, independent first passes, audits and full-ID manual judgments.

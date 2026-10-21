@@ -22,3 +22,5 @@ A completed record or an undispatched preparation directory supplies no authoriz
 - [Evaluation-guideline application audit](evaluation-application-audit-01/README.md): existing-rule audit, owner judgment and separate superseding result mapping.
 
 - [Holistic disputed-output reassessment](holistic-dispute-reassessment-01/README.md): complete-context reread of 102 compared artifacts, superseding result mapping and retained substantive findings.
+
+- [Final combination comparison](final-comparison-01/README.md): both bodies with the selected description; [first comment screen](final-comparison-01/screen-01/README.md) keeps its measured subjects and bounded output reviews together.

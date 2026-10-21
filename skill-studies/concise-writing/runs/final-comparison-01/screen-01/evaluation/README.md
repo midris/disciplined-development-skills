@@ -22,3 +22,5 @@ Audit complete Read returns, any pre-prior search exposure, model/tool identity,
 The collector requires all twelve assessed subjects and blocks a second review until the first audit is cleared.
 Unusable reviews stay charged; no automatic replacement, split, fallback or capacity transfer is authorized.
 Stop after the two reviews and return the screen evidence to the owner before any top-up, candidate edit or adoption.
+
+The [comparison and reconciliation](assessment.md) preserves the independent first passes, reviewer limitations and [full-ID manual transcription](judgments.json).
