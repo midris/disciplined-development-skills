@@ -175,9 +175,9 @@ The owner prefers the shorter SKILL.md where consequential effectiveness and qua
 
 No confirmed revised-body regression blocks eligibility for remaining coverage under the frozen rule.
 Eligibility is not approval: the separate [forecast](../../../drafts/baseline-iteration/discovery/proposal.md#focused-allocation-and-later-forecast) is 54 body-regression subjects/six reviews for A, B and explicit N2, plus 36 discovery-regression subjects/four reviews for N1/N2.
-Neither new description meets the observed cross-provider advancement rule; selecting another description approach or accepting that trade-off is an owner decision before further discovery testing.
+Neither new description meets the original frozen cross-provider advancement rule; subsequent owner decisions about that trade-off belong to the protocol and do not change these observations.
 Changing wording would require a concrete affected-revalidation proposal rather than treating old observations as validation of new bytes.
 Further edits, compression, the forecast 90 subjects/ten reviews and live adoption remain unapproved.
-The next owner discussion should weigh the local revised-body benefit against its extra instructions, resolve the discovery trade-off, and select only the justified remaining scope.
+The protocol owns subsequent body/description selection and remaining-scope decisions, including whether to accept the observed discovery trade-off.
 
 The ten evaluator runner durations total 1,693.307 seconds (28.22 minutes), included once in booked effort.

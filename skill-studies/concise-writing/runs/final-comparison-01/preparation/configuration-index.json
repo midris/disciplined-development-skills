@@ -1,0 +1,107 @@
+{
+  "status": "prepared; budget/collection approval pending",
+  "cases": [
+    {
+      "case": "agent-recommendation",
+      "mode": "body",
+      "criteria": "skill-studies/concise-writing/runs/final-comparison-01/preparation/criteria/agent-recommendation.md",
+      "source_case": "skill-studies/concise-writing/cases/agent-recommendation/assessment.md"
+    },
+    {
+      "case": "effective-briefing",
+      "mode": "body",
+      "criteria": "skill-studies/concise-writing/runs/final-comparison-01/preparation/criteria/effective-briefing.md",
+      "source_case": "skill-studies/concise-writing/cases/effective-briefing/assessment.md"
+    },
+    {
+      "case": "long-handoff",
+      "mode": "body",
+      "criteria": "skill-studies/concise-writing/runs/final-comparison-01/preparation/criteria/long-handoff.md",
+      "source_case": "skill-studies/concise-writing/cases/long-handoff/assessment.md"
+    },
+    {
+      "case": "document-addition",
+      "mode": "body",
+      "criteria": "skill-studies/concise-writing/runs/final-comparison-01/preparation/criteria/document-addition.md",
+      "source_case": "skill-studies/concise-writing/cases/document-addition/assessment.md"
+    },
+    {
+      "case": "writing-explicit",
+      "mode": "body",
+      "criteria": "skill-studies/concise-writing/runs/final-comparison-01/preparation/criteria/writing-explicit.md",
+      "source_case": "skill-studies/concise-writing/cases/invocation-write/assessment.md"
+    },
+    {
+      "case": "comments-explicit",
+      "mode": "body",
+      "criteria": "skill-studies/concise-writing/runs/final-comparison-01/preparation/criteria/comments-explicit.md",
+      "source_case": "skill-studies/concise-writing/cases/invocation-comments/assessment.md"
+    },
+    {
+      "case": "invocation-tighten",
+      "mode": "native",
+      "criteria": "skill-studies/concise-writing/runs/final-comparison-01/preparation/criteria/invocation-tighten.md",
+      "source_case": "skill-studies/concise-writing/cases/invocation-tighten/assessment.md"
+    },
+    {
+      "case": "invocation-write",
+      "mode": "native",
+      "criteria": "skill-studies/concise-writing/runs/final-comparison-01/preparation/criteria/invocation-write.md",
+      "source_case": "skill-studies/concise-writing/cases/invocation-write/assessment.md"
+    },
+    {
+      "case": "invocation-nonprose",
+      "mode": "native",
+      "criteria": "skill-studies/concise-writing/runs/final-comparison-01/preparation/criteria/invocation-nonprose.md",
+      "source_case": "skill-studies/concise-writing/cases/invocation-nonprose/assessment.md"
+    },
+    {
+      "case": "invocation-comments",
+      "mode": "native",
+      "criteria": "skill-studies/concise-writing/runs/final-comparison-01/preparation/criteria/invocation-comments.md",
+      "source_case": "skill-studies/concise-writing/cases/invocation-comments/assessment.md"
+    }
+  ],
+  "configurations": [
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-agent-recommendation-original-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-agent-recommendation-revised-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-agent-recommendation-original-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-agent-recommendation-revised-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-effective-briefing-original-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-effective-briefing-revised-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-effective-briefing-original-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-effective-briefing-revised-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-long-handoff-original-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-long-handoff-revised-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-long-handoff-original-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-long-handoff-revised-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-document-addition-original-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-document-addition-revised-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-document-addition-original-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-document-addition-revised-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-writing-explicit-original-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-writing-explicit-revised-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-writing-explicit-original-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-writing-explicit-revised-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-comments-explicit-original-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-comments-explicit-revised-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-comments-explicit-original-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-comments-explicit-revised-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-tighten-original-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-tighten-revised-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-tighten-original-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-tighten-revised-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-write-original-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-write-revised-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-write-original-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-write-revised-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-nonprose-original-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-nonprose-revised-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-nonprose-original-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-nonprose-revised-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-comments-original-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-comments-revised-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-comments-original-body.json",
+    "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-comments-revised-body.json"
+  ]
+}

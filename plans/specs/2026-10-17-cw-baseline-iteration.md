@@ -91,3 +91,12 @@ Declare settings before verdicts and requalify affected runtime assumptions, inc
 Exact input bytes, ordered slots, CLI/model settings, criteria and readiness evidence must be frozen before new calls.
 Have Opus judge all compared arms under the same declared settings before prior-score exposure; do not compare new verdicts only with historical Fable verdicts.
 Dispatch authority is recorded only in the protocol; this design supplies no extra calls or automatic revision/retry authority.
+
+## Final combination comparison
+
+The owner retained the original and revised targeted-examples bodies as final candidates and selected the fully rewritten description for both.
+The [prepared comparison](../../skill-studies/concise-writing/drafts/baseline-iteration/final-comparison/README.md) changes only each supplied description scalar and preserves the source bodies byte-for-byte.
+Its relative comparison uses both providers and the full selected suite, including explicit N2/N4 siblings to distinguish loaded-body behavior from natural selection.
+No fresh no-CW arm is proposed because incremental unguided benefit is outside this final choice; prior controls remain historical evidence.
+The owner accepts additional loading as a caution where output is intact and appropriate Claude loading improves; actual output defects and invocation misses remain visible.
+The protocol owns allocation acceptance, qualification/freeze and execution; the owner makes the final adoption decision after the results.

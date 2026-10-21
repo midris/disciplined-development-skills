@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-final-claude-agent-recommendation-original-body",
+  "prompt": "../prompts/claude-body.md",
+  "fixtures": [
+    {
+      "source": "../fixtures/agent-recommendation/report.md",
+      "target": "report.md"
+    },
+    {
+      "source": "../fixtures/agent-recommendation/TASK.md",
+      "target": "TASK.md"
+    },
+    {
+      "source": "../../../../drafts/baseline-iteration/final-comparison/skills/original-body/SKILL.md",
+      "target": ".claude/skills/concise-writing/SKILL.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-sonnet-5",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}

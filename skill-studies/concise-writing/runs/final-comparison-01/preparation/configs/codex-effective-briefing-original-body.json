@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-final-codex-effective-briefing-original-body",
+  "prompt": "../prompts/codex-body.md",
+  "fixtures": [
+    {
+      "source": "../fixtures/effective-briefing/report.md",
+      "target": "report.md"
+    },
+    {
+      "source": "../fixtures/effective-briefing/TASK.md",
+      "target": "TASK.md"
+    },
+    {
+      "source": "../../../../drafts/baseline-iteration/final-comparison/skills/original-body/SKILL.md",
+      "target": ".agents/skills/concise-writing/SKILL.md"
+    }
+  ],
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}

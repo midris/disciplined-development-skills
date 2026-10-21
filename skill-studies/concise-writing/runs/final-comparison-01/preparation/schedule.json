@@ -1,0 +1,1088 @@
+{
+  "status": "proposed allocation; no dispatch authority",
+  "subjects": 120,
+  "repetitions": 3,
+  "ordering": "All72body precede all48native; reverse provider starts and alternate condition order; odd three cannot fully balance order.",
+  "slots": [
+    {
+      "order": 1,
+      "mode": "body",
+      "provider": "codex",
+      "case": "agent-recommendation",
+      "condition": "original-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-agent-recommendation-original-body.json"
+    },
+    {
+      "order": 2,
+      "mode": "body",
+      "provider": "codex",
+      "case": "agent-recommendation",
+      "condition": "revised-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-agent-recommendation-revised-body.json"
+    },
+    {
+      "order": 3,
+      "mode": "body",
+      "provider": "codex",
+      "case": "agent-recommendation",
+      "condition": "revised-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-agent-recommendation-revised-body.json"
+    },
+    {
+      "order": 4,
+      "mode": "body",
+      "provider": "codex",
+      "case": "agent-recommendation",
+      "condition": "original-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-agent-recommendation-original-body.json"
+    },
+    {
+      "order": 5,
+      "mode": "body",
+      "provider": "codex",
+      "case": "agent-recommendation",
+      "condition": "original-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-agent-recommendation-original-body.json"
+    },
+    {
+      "order": 6,
+      "mode": "body",
+      "provider": "codex",
+      "case": "agent-recommendation",
+      "condition": "revised-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-agent-recommendation-revised-body.json"
+    },
+    {
+      "order": 7,
+      "mode": "body",
+      "provider": "codex",
+      "case": "effective-briefing",
+      "condition": "original-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-effective-briefing-original-body.json"
+    },
+    {
+      "order": 8,
+      "mode": "body",
+      "provider": "codex",
+      "case": "effective-briefing",
+      "condition": "revised-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-effective-briefing-revised-body.json"
+    },
+    {
+      "order": 9,
+      "mode": "body",
+      "provider": "codex",
+      "case": "effective-briefing",
+      "condition": "revised-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-effective-briefing-revised-body.json"
+    },
+    {
+      "order": 10,
+      "mode": "body",
+      "provider": "codex",
+      "case": "effective-briefing",
+      "condition": "original-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-effective-briefing-original-body.json"
+    },
+    {
+      "order": 11,
+      "mode": "body",
+      "provider": "codex",
+      "case": "effective-briefing",
+      "condition": "original-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-effective-briefing-original-body.json"
+    },
+    {
+      "order": 12,
+      "mode": "body",
+      "provider": "codex",
+      "case": "effective-briefing",
+      "condition": "revised-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-effective-briefing-revised-body.json"
+    },
+    {
+      "order": 13,
+      "mode": "body",
+      "provider": "codex",
+      "case": "long-handoff",
+      "condition": "original-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-long-handoff-original-body.json"
+    },
+    {
+      "order": 14,
+      "mode": "body",
+      "provider": "codex",
+      "case": "long-handoff",
+      "condition": "revised-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-long-handoff-revised-body.json"
+    },
+    {
+      "order": 15,
+      "mode": "body",
+      "provider": "codex",
+      "case": "long-handoff",
+      "condition": "revised-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-long-handoff-revised-body.json"
+    },
+    {
+      "order": 16,
+      "mode": "body",
+      "provider": "codex",
+      "case": "long-handoff",
+      "condition": "original-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-long-handoff-original-body.json"
+    },
+    {
+      "order": 17,
+      "mode": "body",
+      "provider": "codex",
+      "case": "long-handoff",
+      "condition": "original-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-long-handoff-original-body.json"
+    },
+    {
+      "order": 18,
+      "mode": "body",
+      "provider": "codex",
+      "case": "long-handoff",
+      "condition": "revised-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-long-handoff-revised-body.json"
+    },
+    {
+      "order": 19,
+      "mode": "body",
+      "provider": "codex",
+      "case": "document-addition",
+      "condition": "original-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-document-addition-original-body.json"
+    },
+    {
+      "order": 20,
+      "mode": "body",
+      "provider": "codex",
+      "case": "document-addition",
+      "condition": "revised-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-document-addition-revised-body.json"
+    },
+    {
+      "order": 21,
+      "mode": "body",
+      "provider": "codex",
+      "case": "document-addition",
+      "condition": "revised-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-document-addition-revised-body.json"
+    },
+    {
+      "order": 22,
+      "mode": "body",
+      "provider": "codex",
+      "case": "document-addition",
+      "condition": "original-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-document-addition-original-body.json"
+    },
+    {
+      "order": 23,
+      "mode": "body",
+      "provider": "codex",
+      "case": "document-addition",
+      "condition": "original-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-document-addition-original-body.json"
+    },
+    {
+      "order": 24,
+      "mode": "body",
+      "provider": "codex",
+      "case": "document-addition",
+      "condition": "revised-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-document-addition-revised-body.json"
+    },
+    {
+      "order": 25,
+      "mode": "body",
+      "provider": "codex",
+      "case": "writing-explicit",
+      "condition": "original-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-writing-explicit-original-body.json"
+    },
+    {
+      "order": 26,
+      "mode": "body",
+      "provider": "codex",
+      "case": "writing-explicit",
+      "condition": "revised-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-writing-explicit-revised-body.json"
+    },
+    {
+      "order": 27,
+      "mode": "body",
+      "provider": "codex",
+      "case": "writing-explicit",
+      "condition": "revised-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-writing-explicit-revised-body.json"
+    },
+    {
+      "order": 28,
+      "mode": "body",
+      "provider": "codex",
+      "case": "writing-explicit",
+      "condition": "original-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-writing-explicit-original-body.json"
+    },
+    {
+      "order": 29,
+      "mode": "body",
+      "provider": "codex",
+      "case": "writing-explicit",
+      "condition": "original-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-writing-explicit-original-body.json"
+    },
+    {
+      "order": 30,
+      "mode": "body",
+      "provider": "codex",
+      "case": "writing-explicit",
+      "condition": "revised-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-writing-explicit-revised-body.json"
+    },
+    {
+      "order": 31,
+      "mode": "body",
+      "provider": "codex",
+      "case": "comments-explicit",
+      "condition": "original-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-comments-explicit-original-body.json"
+    },
+    {
+      "order": 32,
+      "mode": "body",
+      "provider": "codex",
+      "case": "comments-explicit",
+      "condition": "revised-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-comments-explicit-revised-body.json"
+    },
+    {
+      "order": 33,
+      "mode": "body",
+      "provider": "codex",
+      "case": "comments-explicit",
+      "condition": "revised-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-comments-explicit-revised-body.json"
+    },
+    {
+      "order": 34,
+      "mode": "body",
+      "provider": "codex",
+      "case": "comments-explicit",
+      "condition": "original-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-comments-explicit-original-body.json"
+    },
+    {
+      "order": 35,
+      "mode": "body",
+      "provider": "codex",
+      "case": "comments-explicit",
+      "condition": "original-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-comments-explicit-original-body.json"
+    },
+    {
+      "order": 36,
+      "mode": "body",
+      "provider": "codex",
+      "case": "comments-explicit",
+      "condition": "revised-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-comments-explicit-revised-body.json"
+    },
+    {
+      "order": 37,
+      "mode": "body",
+      "provider": "claude",
+      "case": "agent-recommendation",
+      "condition": "revised-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-agent-recommendation-revised-body.json"
+    },
+    {
+      "order": 38,
+      "mode": "body",
+      "provider": "claude",
+      "case": "agent-recommendation",
+      "condition": "original-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-agent-recommendation-original-body.json"
+    },
+    {
+      "order": 39,
+      "mode": "body",
+      "provider": "claude",
+      "case": "agent-recommendation",
+      "condition": "original-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-agent-recommendation-original-body.json"
+    },
+    {
+      "order": 40,
+      "mode": "body",
+      "provider": "claude",
+      "case": "agent-recommendation",
+      "condition": "revised-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-agent-recommendation-revised-body.json"
+    },
+    {
+      "order": 41,
+      "mode": "body",
+      "provider": "claude",
+      "case": "agent-recommendation",
+      "condition": "revised-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-agent-recommendation-revised-body.json"
+    },
+    {
+      "order": 42,
+      "mode": "body",
+      "provider": "claude",
+      "case": "agent-recommendation",
+      "condition": "original-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-agent-recommendation-original-body.json"
+    },
+    {
+      "order": 43,
+      "mode": "body",
+      "provider": "claude",
+      "case": "effective-briefing",
+      "condition": "revised-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-effective-briefing-revised-body.json"
+    },
+    {
+      "order": 44,
+      "mode": "body",
+      "provider": "claude",
+      "case": "effective-briefing",
+      "condition": "original-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-effective-briefing-original-body.json"
+    },
+    {
+      "order": 45,
+      "mode": "body",
+      "provider": "claude",
+      "case": "effective-briefing",
+      "condition": "original-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-effective-briefing-original-body.json"
+    },
+    {
+      "order": 46,
+      "mode": "body",
+      "provider": "claude",
+      "case": "effective-briefing",
+      "condition": "revised-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-effective-briefing-revised-body.json"
+    },
+    {
+      "order": 47,
+      "mode": "body",
+      "provider": "claude",
+      "case": "effective-briefing",
+      "condition": "revised-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-effective-briefing-revised-body.json"
+    },
+    {
+      "order": 48,
+      "mode": "body",
+      "provider": "claude",
+      "case": "effective-briefing",
+      "condition": "original-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-effective-briefing-original-body.json"
+    },
+    {
+      "order": 49,
+      "mode": "body",
+      "provider": "claude",
+      "case": "long-handoff",
+      "condition": "revised-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-long-handoff-revised-body.json"
+    },
+    {
+      "order": 50,
+      "mode": "body",
+      "provider": "claude",
+      "case": "long-handoff",
+      "condition": "original-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-long-handoff-original-body.json"
+    },
+    {
+      "order": 51,
+      "mode": "body",
+      "provider": "claude",
+      "case": "long-handoff",
+      "condition": "original-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-long-handoff-original-body.json"
+    },
+    {
+      "order": 52,
+      "mode": "body",
+      "provider": "claude",
+      "case": "long-handoff",
+      "condition": "revised-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-long-handoff-revised-body.json"
+    },
+    {
+      "order": 53,
+      "mode": "body",
+      "provider": "claude",
+      "case": "long-handoff",
+      "condition": "revised-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-long-handoff-revised-body.json"
+    },
+    {
+      "order": 54,
+      "mode": "body",
+      "provider": "claude",
+      "case": "long-handoff",
+      "condition": "original-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-long-handoff-original-body.json"
+    },
+    {
+      "order": 55,
+      "mode": "body",
+      "provider": "claude",
+      "case": "document-addition",
+      "condition": "revised-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-document-addition-revised-body.json"
+    },
+    {
+      "order": 56,
+      "mode": "body",
+      "provider": "claude",
+      "case": "document-addition",
+      "condition": "original-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-document-addition-original-body.json"
+    },
+    {
+      "order": 57,
+      "mode": "body",
+      "provider": "claude",
+      "case": "document-addition",
+      "condition": "original-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-document-addition-original-body.json"
+    },
+    {
+      "order": 58,
+      "mode": "body",
+      "provider": "claude",
+      "case": "document-addition",
+      "condition": "revised-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-document-addition-revised-body.json"
+    },
+    {
+      "order": 59,
+      "mode": "body",
+      "provider": "claude",
+      "case": "document-addition",
+      "condition": "revised-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-document-addition-revised-body.json"
+    },
+    {
+      "order": 60,
+      "mode": "body",
+      "provider": "claude",
+      "case": "document-addition",
+      "condition": "original-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-document-addition-original-body.json"
+    },
+    {
+      "order": 61,
+      "mode": "body",
+      "provider": "claude",
+      "case": "writing-explicit",
+      "condition": "revised-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-writing-explicit-revised-body.json"
+    },
+    {
+      "order": 62,
+      "mode": "body",
+      "provider": "claude",
+      "case": "writing-explicit",
+      "condition": "original-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-writing-explicit-original-body.json"
+    },
+    {
+      "order": 63,
+      "mode": "body",
+      "provider": "claude",
+      "case": "writing-explicit",
+      "condition": "original-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-writing-explicit-original-body.json"
+    },
+    {
+      "order": 64,
+      "mode": "body",
+      "provider": "claude",
+      "case": "writing-explicit",
+      "condition": "revised-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-writing-explicit-revised-body.json"
+    },
+    {
+      "order": 65,
+      "mode": "body",
+      "provider": "claude",
+      "case": "writing-explicit",
+      "condition": "revised-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-writing-explicit-revised-body.json"
+    },
+    {
+      "order": 66,
+      "mode": "body",
+      "provider": "claude",
+      "case": "writing-explicit",
+      "condition": "original-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-writing-explicit-original-body.json"
+    },
+    {
+      "order": 67,
+      "mode": "body",
+      "provider": "claude",
+      "case": "comments-explicit",
+      "condition": "revised-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-comments-explicit-revised-body.json"
+    },
+    {
+      "order": 68,
+      "mode": "body",
+      "provider": "claude",
+      "case": "comments-explicit",
+      "condition": "original-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-comments-explicit-original-body.json"
+    },
+    {
+      "order": 69,
+      "mode": "body",
+      "provider": "claude",
+      "case": "comments-explicit",
+      "condition": "original-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-comments-explicit-original-body.json"
+    },
+    {
+      "order": 70,
+      "mode": "body",
+      "provider": "claude",
+      "case": "comments-explicit",
+      "condition": "revised-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-comments-explicit-revised-body.json"
+    },
+    {
+      "order": 71,
+      "mode": "body",
+      "provider": "claude",
+      "case": "comments-explicit",
+      "condition": "revised-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-comments-explicit-revised-body.json"
+    },
+    {
+      "order": 72,
+      "mode": "body",
+      "provider": "claude",
+      "case": "comments-explicit",
+      "condition": "original-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-comments-explicit-original-body.json"
+    },
+    {
+      "order": 73,
+      "mode": "native",
+      "provider": "codex",
+      "case": "invocation-tighten",
+      "condition": "original-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-tighten-original-body.json"
+    },
+    {
+      "order": 74,
+      "mode": "native",
+      "provider": "codex",
+      "case": "invocation-tighten",
+      "condition": "revised-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-tighten-revised-body.json"
+    },
+    {
+      "order": 75,
+      "mode": "native",
+      "provider": "codex",
+      "case": "invocation-tighten",
+      "condition": "revised-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-tighten-revised-body.json"
+    },
+    {
+      "order": 76,
+      "mode": "native",
+      "provider": "codex",
+      "case": "invocation-tighten",
+      "condition": "original-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-tighten-original-body.json"
+    },
+    {
+      "order": 77,
+      "mode": "native",
+      "provider": "codex",
+      "case": "invocation-tighten",
+      "condition": "original-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-tighten-original-body.json"
+    },
+    {
+      "order": 78,
+      "mode": "native",
+      "provider": "codex",
+      "case": "invocation-tighten",
+      "condition": "revised-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-tighten-revised-body.json"
+    },
+    {
+      "order": 79,
+      "mode": "native",
+      "provider": "codex",
+      "case": "invocation-write",
+      "condition": "original-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-write-original-body.json"
+    },
+    {
+      "order": 80,
+      "mode": "native",
+      "provider": "codex",
+      "case": "invocation-write",
+      "condition": "revised-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-write-revised-body.json"
+    },
+    {
+      "order": 81,
+      "mode": "native",
+      "provider": "codex",
+      "case": "invocation-write",
+      "condition": "revised-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-write-revised-body.json"
+    },
+    {
+      "order": 82,
+      "mode": "native",
+      "provider": "codex",
+      "case": "invocation-write",
+      "condition": "original-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-write-original-body.json"
+    },
+    {
+      "order": 83,
+      "mode": "native",
+      "provider": "codex",
+      "case": "invocation-write",
+      "condition": "original-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-write-original-body.json"
+    },
+    {
+      "order": 84,
+      "mode": "native",
+      "provider": "codex",
+      "case": "invocation-write",
+      "condition": "revised-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-write-revised-body.json"
+    },
+    {
+      "order": 85,
+      "mode": "native",
+      "provider": "codex",
+      "case": "invocation-nonprose",
+      "condition": "original-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-nonprose-original-body.json"
+    },
+    {
+      "order": 86,
+      "mode": "native",
+      "provider": "codex",
+      "case": "invocation-nonprose",
+      "condition": "revised-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-nonprose-revised-body.json"
+    },
+    {
+      "order": 87,
+      "mode": "native",
+      "provider": "codex",
+      "case": "invocation-nonprose",
+      "condition": "revised-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-nonprose-revised-body.json"
+    },
+    {
+      "order": 88,
+      "mode": "native",
+      "provider": "codex",
+      "case": "invocation-nonprose",
+      "condition": "original-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-nonprose-original-body.json"
+    },
+    {
+      "order": 89,
+      "mode": "native",
+      "provider": "codex",
+      "case": "invocation-nonprose",
+      "condition": "original-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-nonprose-original-body.json"
+    },
+    {
+      "order": 90,
+      "mode": "native",
+      "provider": "codex",
+      "case": "invocation-nonprose",
+      "condition": "revised-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-nonprose-revised-body.json"
+    },
+    {
+      "order": 91,
+      "mode": "native",
+      "provider": "codex",
+      "case": "invocation-comments",
+      "condition": "original-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-comments-original-body.json"
+    },
+    {
+      "order": 92,
+      "mode": "native",
+      "provider": "codex",
+      "case": "invocation-comments",
+      "condition": "revised-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-comments-revised-body.json"
+    },
+    {
+      "order": 93,
+      "mode": "native",
+      "provider": "codex",
+      "case": "invocation-comments",
+      "condition": "revised-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-comments-revised-body.json"
+    },
+    {
+      "order": 94,
+      "mode": "native",
+      "provider": "codex",
+      "case": "invocation-comments",
+      "condition": "original-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-comments-original-body.json"
+    },
+    {
+      "order": 95,
+      "mode": "native",
+      "provider": "codex",
+      "case": "invocation-comments",
+      "condition": "original-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-comments-original-body.json"
+    },
+    {
+      "order": 96,
+      "mode": "native",
+      "provider": "codex",
+      "case": "invocation-comments",
+      "condition": "revised-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-invocation-comments-revised-body.json"
+    },
+    {
+      "order": 97,
+      "mode": "native",
+      "provider": "claude",
+      "case": "invocation-tighten",
+      "condition": "revised-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-tighten-revised-body.json"
+    },
+    {
+      "order": 98,
+      "mode": "native",
+      "provider": "claude",
+      "case": "invocation-tighten",
+      "condition": "original-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-tighten-original-body.json"
+    },
+    {
+      "order": 99,
+      "mode": "native",
+      "provider": "claude",
+      "case": "invocation-tighten",
+      "condition": "original-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-tighten-original-body.json"
+    },
+    {
+      "order": 100,
+      "mode": "native",
+      "provider": "claude",
+      "case": "invocation-tighten",
+      "condition": "revised-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-tighten-revised-body.json"
+    },
+    {
+      "order": 101,
+      "mode": "native",
+      "provider": "claude",
+      "case": "invocation-tighten",
+      "condition": "revised-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-tighten-revised-body.json"
+    },
+    {
+      "order": 102,
+      "mode": "native",
+      "provider": "claude",
+      "case": "invocation-tighten",
+      "condition": "original-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-tighten-original-body.json"
+    },
+    {
+      "order": 103,
+      "mode": "native",
+      "provider": "claude",
+      "case": "invocation-write",
+      "condition": "revised-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-write-revised-body.json"
+    },
+    {
+      "order": 104,
+      "mode": "native",
+      "provider": "claude",
+      "case": "invocation-write",
+      "condition": "original-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-write-original-body.json"
+    },
+    {
+      "order": 105,
+      "mode": "native",
+      "provider": "claude",
+      "case": "invocation-write",
+      "condition": "original-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-write-original-body.json"
+    },
+    {
+      "order": 106,
+      "mode": "native",
+      "provider": "claude",
+      "case": "invocation-write",
+      "condition": "revised-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-write-revised-body.json"
+    },
+    {
+      "order": 107,
+      "mode": "native",
+      "provider": "claude",
+      "case": "invocation-write",
+      "condition": "revised-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-write-revised-body.json"
+    },
+    {
+      "order": 108,
+      "mode": "native",
+      "provider": "claude",
+      "case": "invocation-write",
+      "condition": "original-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-write-original-body.json"
+    },
+    {
+      "order": 109,
+      "mode": "native",
+      "provider": "claude",
+      "case": "invocation-nonprose",
+      "condition": "revised-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-nonprose-revised-body.json"
+    },
+    {
+      "order": 110,
+      "mode": "native",
+      "provider": "claude",
+      "case": "invocation-nonprose",
+      "condition": "original-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-nonprose-original-body.json"
+    },
+    {
+      "order": 111,
+      "mode": "native",
+      "provider": "claude",
+      "case": "invocation-nonprose",
+      "condition": "original-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-nonprose-original-body.json"
+    },
+    {
+      "order": 112,
+      "mode": "native",
+      "provider": "claude",
+      "case": "invocation-nonprose",
+      "condition": "revised-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-nonprose-revised-body.json"
+    },
+    {
+      "order": 113,
+      "mode": "native",
+      "provider": "claude",
+      "case": "invocation-nonprose",
+      "condition": "revised-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-nonprose-revised-body.json"
+    },
+    {
+      "order": 114,
+      "mode": "native",
+      "provider": "claude",
+      "case": "invocation-nonprose",
+      "condition": "original-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-nonprose-original-body.json"
+    },
+    {
+      "order": 115,
+      "mode": "native",
+      "provider": "claude",
+      "case": "invocation-comments",
+      "condition": "revised-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-comments-revised-body.json"
+    },
+    {
+      "order": 116,
+      "mode": "native",
+      "provider": "claude",
+      "case": "invocation-comments",
+      "condition": "original-body",
+      "repetition": 1,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-comments-original-body.json"
+    },
+    {
+      "order": 117,
+      "mode": "native",
+      "provider": "claude",
+      "case": "invocation-comments",
+      "condition": "original-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-comments-original-body.json"
+    },
+    {
+      "order": 118,
+      "mode": "native",
+      "provider": "claude",
+      "case": "invocation-comments",
+      "condition": "revised-body",
+      "repetition": 2,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-comments-revised-body.json"
+    },
+    {
+      "order": 119,
+      "mode": "native",
+      "provider": "claude",
+      "case": "invocation-comments",
+      "condition": "revised-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-comments-revised-body.json"
+    },
+    {
+      "order": 120,
+      "mode": "native",
+      "provider": "claude",
+      "case": "invocation-comments",
+      "condition": "original-body",
+      "repetition": 3,
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-invocation-comments-original-body.json"
+    }
+  ]
+}

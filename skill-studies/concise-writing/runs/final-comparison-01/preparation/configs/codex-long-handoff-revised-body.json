@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-final-codex-long-handoff-revised-body",
+  "prompt": "../prompts/codex-body.md",
+  "fixtures": [
+    {
+      "source": "../fixtures/long-handoff/report.md",
+      "target": "report.md"
+    },
+    {
+      "source": "../fixtures/long-handoff/TASK.md",
+      "target": "TASK.md"
+    },
+    {
+      "source": "../../../../drafts/baseline-iteration/final-comparison/skills/revised-body/SKILL.md",
+      "target": ".agents/skills/concise-writing/SKILL.md"
+    }
+  ],
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}

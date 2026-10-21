@@ -3,9 +3,15 @@
 Format version: `1`
 Study ID: `concise-writing`
 Status: all 150 focused subjects and ten allocated Opus 5.5 medium reviews are complete, retained, audited and reconciled.
-Current action: review the [focused comparison](runs/revised-body-discovery-01/evaluation/assessment.md) and decide the justified remaining scope. Subject and evaluator capacity are exhausted; later regression, replacements, further edits and adoption remain unapproved.
+Current action: obtain the numeric allocation for the [prepared final comparison](drafts/baseline-iteration/final-comparison/README.md), then qualify, freeze and collect both complete combinations. The 120-subject/twenty-review extension is proposed, not accepted; existing subject/evaluator capacity is exhausted and no new model call has been dispatched.
+The owner requested combining both retained bodies with the selected description for a final test round, followed by the owner’s final decision.
+The prepared comparison covers all eight existing scenarios plus explicit N2/N4 body siblings, three repetitions per condition/provider, with no new no-CW arm because the question is relative combination performance.
+This sets the intended work and final owner decision; the concrete 120/20 ceiling extension still needs acceptance under the [framework budget rule](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#4-pilot-and-freeze-the-experiment-plan).
+The owner selected the unchanged [fully rewritten description](drafts/baseline-iteration/discovery/description-rewrite.txt): “we can go with that”.
+Its prior native discovery evidence uses the revised targeted-examples body; the prepared original-body combination therefore needs measured validation, and selection alone authorizes no live deployment.
 No confirmed revised-body regression blocks eligibility for remaining coverage, but no overall consequential-quality advantage over the shorter original is established; Opus locally prefers the revised Claude explicit comments.
-Neither new description meets the cross-provider advancement rule: Claude comment loading improves while Codex numeric-only loading increases.
+The owner accepts additional unwanted Codex loading as “a note to keep in mind” rather than a blocker when output is not impaired and appropriate Claude loading improves.
+This changes prospective decision weighting, not the frozen rule, recorded scores or historical comparison; it authorizes no further calls or live-skill deployment.
 The comparison preserves one disputed Codex document-addition control sequence as unresolved interpretation, with insufficient evidence to settle it; original active and Opus scores remain intact.
 Both runtimes remain qualified, with no setup exclusions or retries.
 The first Claude discovery subject is complete and assessed after correcting a name-only-init inspection error through retained-evidence replay; it was not repeated.
@@ -1032,7 +1038,7 @@ The focused output reviews use the [ten-packet package](runs/revised-body-discov
 Dispatched calls are **590 subject, 38 evaluator, 0 authoring, 2 retry**; remaining outer capacity is **0 / 0 / 4 / 2** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **3,165 active minutes booked; 1,965 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **3,190 active minutes booked; 1,990 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
 The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 590/590, with 0 approved focused calls available; the earlier E diagnostic has no unused calls.
@@ -1152,7 +1158,9 @@ The supplemental work used 40 estimated active minutes against its 40-minute for
 | Focused Opus packet freeze, first four reviews, manual audits and checkpoint publication | 20 |
 | Focused Opus reviews five through eight, manual audits and checkpoint verification | 20 |
 | Final two focused Opus reviews, manual correction audit, reconciliation and publication | 15 |
-| **Total** | **3,165** |
+| Owner discussion and recording of discovery trade-off weighting | 5 |
+| Final-comparison combination/input preparation, scope design and static review | 20 |
+| **Total** | **3,190** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.
@@ -1184,6 +1192,8 @@ E remained a separately reused completed stratum.
 The [proposal forecast](drafts/baseline-iteration/discovery/proposal.md#focused-allocation-and-later-forecast) estimates 210–300 minutes for the complete focused stage and separately forecasts the unapproved later regression stage.
 The focused stage from final input qualification through reconciliation/publication used 355 estimated active minutes, 55 above its proposed 300-minute upper estimate; earlier proposal drafting is outside that subtotal.
 The 55 review minutes include packet/controller preparation, ten runner waits once, manual audits and publication.
+The requested final comparison proposes 240–330 estimated active minutes in its design; twenty preparation minutes are already booked, leaving 220–310 proposed minutes if the allocation is accepted.
+That forecast and the proposed +120 subjects/+20 reviews replace the earlier unapproved 90/10 forecast; no accepted ceiling changes before approval.
 The current remaining-work estimate below covers only the fixed approved scope, with owner-wait time excluded; it is a rounded planning estimate, not additional call authority.
 
 | Work | Estimate | Basis |

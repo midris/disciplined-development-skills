@@ -1,0 +1,30 @@
+{
+  "status": "prepared combinations; not deployed",
+  "source_git_revision": "c6fdc89026268c6f99bd5ba608ac0caa98e955a1",
+  "skills": [
+    {
+      "condition": "original-body",
+      "path": "skill-studies/concise-writing/drafts/baseline-iteration/final-comparison/skills/original-body/SKILL.md",
+      "sha256": "1889d41c2f90ec7c909ebf3baca0dd3c395fbc8d837003b21732599f26735422",
+      "body_sha256": "4a4da53ad091fa83fc54b0bed833094533a04e4f0fca63e28b538c6797a8ced2",
+      "source": "skill-studies/concise-writing/cases/skill-original/SKILL.md",
+      "source_sha256": "4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72",
+      "source_git_revision": "c6fdc89026268c6f99bd5ba608ac0caa98e955a1",
+      "description_source": "skill-studies/concise-writing/drafts/baseline-iteration/discovery/description-rewrite.txt",
+      "description_sha256": "36a6f911ad9665816680c10b72f289cd2d50b99c4622fc358eb77b52de6e01ec",
+      "complete_words": 869
+    },
+    {
+      "condition": "revised-body",
+      "path": "skill-studies/concise-writing/drafts/baseline-iteration/final-comparison/skills/revised-body/SKILL.md",
+      "sha256": "fe48f44ab3ccc3f58addabbe2e04b90f9f6ed08590dad21814bf7a9d7b7bdd07",
+      "body_sha256": "54e6a54e292f7e47053f25196ff1eda825c2f96aad5e82c454523ba336e781a2",
+      "source": "skill-studies/concise-writing/drafts/baseline-iteration/targeted-examples/SKILL.md",
+      "source_sha256": "3dcc777e37a406c5c55a80941c3271d7306be2a0351acf03ca6622d44cce2a4e",
+      "source_git_revision": "c6fdc89026268c6f99bd5ba608ac0caa98e955a1",
+      "description_source": "skill-studies/concise-writing/drafts/baseline-iteration/discovery/description-rewrite.txt",
+      "description_sha256": "36a6f911ad9665816680c10b72f289cd2d50b99c4622fc358eb77b52de6e01ec",
+      "complete_words": 980
+    }
+  ]
+}

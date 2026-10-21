@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-final-claude-effective-briefing-original-body",
+  "prompt": "../prompts/claude-body.md",
+  "fixtures": [
+    {
+      "source": "../fixtures/effective-briefing/report.md",
+      "target": "report.md"
+    },
+    {
+      "source": "../fixtures/effective-briefing/TASK.md",
+      "target": "TASK.md"
+    },
+    {
+      "source": "../../../../drafts/baseline-iteration/final-comparison/skills/original-body/SKILL.md",
+      "target": ".claude/skills/concise-writing/SKILL.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-sonnet-5",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}

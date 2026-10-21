@@ -1,0 +1,186 @@
+{
+  "status": "proposed; no evaluator dispatch authority",
+  "reviews": 20,
+  "groups": [
+    {
+      "order": 1,
+      "provider": "codex",
+      "mode": "body",
+      "case": "agent-recommendation",
+      "outputs": 6,
+      "reviewer": "claude-opus-5-5",
+      "effort": "medium"
+    },
+    {
+      "order": 2,
+      "provider": "codex",
+      "mode": "body",
+      "case": "effective-briefing",
+      "outputs": 6,
+      "reviewer": "claude-opus-5-5",
+      "effort": "medium"
+    },
+    {
+      "order": 3,
+      "provider": "codex",
+      "mode": "body",
+      "case": "long-handoff",
+      "outputs": 6,
+      "reviewer": "claude-opus-5-5",
+      "effort": "medium"
+    },
+    {
+      "order": 4,
+      "provider": "codex",
+      "mode": "body",
+      "case": "document-addition",
+      "outputs": 6,
+      "reviewer": "claude-opus-5-5",
+      "effort": "medium"
+    },
+    {
+      "order": 5,
+      "provider": "codex",
+      "mode": "body",
+      "case": "writing-explicit",
+      "outputs": 6,
+      "reviewer": "claude-opus-5-5",
+      "effort": "medium"
+    },
+    {
+      "order": 6,
+      "provider": "codex",
+      "mode": "body",
+      "case": "comments-explicit",
+      "outputs": 6,
+      "reviewer": "claude-opus-5-5",
+      "effort": "medium"
+    },
+    {
+      "order": 7,
+      "provider": "claude",
+      "mode": "body",
+      "case": "agent-recommendation",
+      "outputs": 6,
+      "reviewer": "claude-opus-5-5",
+      "effort": "medium"
+    },
+    {
+      "order": 8,
+      "provider": "claude",
+      "mode": "body",
+      "case": "effective-briefing",
+      "outputs": 6,
+      "reviewer": "claude-opus-5-5",
+      "effort": "medium"
+    },
+    {
+      "order": 9,
+      "provider": "claude",
+      "mode": "body",
+      "case": "long-handoff",
+      "outputs": 6,
+      "reviewer": "claude-opus-5-5",
+      "effort": "medium"
+    },
+    {
+      "order": 10,
+      "provider": "claude",
+      "mode": "body",
+      "case": "document-addition",
+      "outputs": 6,
+      "reviewer": "claude-opus-5-5",
+      "effort": "medium"
+    },
+    {
+      "order": 11,
+      "provider": "claude",
+      "mode": "body",
+      "case": "writing-explicit",
+      "outputs": 6,
+      "reviewer": "claude-opus-5-5",
+      "effort": "medium"
+    },
+    {
+      "order": 12,
+      "provider": "claude",
+      "mode": "body",
+      "case": "comments-explicit",
+      "outputs": 6,
+      "reviewer": "claude-opus-5-5",
+      "effort": "medium"
+    },
+    {
+      "order": 13,
+      "provider": "codex",
+      "mode": "native",
+      "case": "invocation-tighten",
+      "outputs": 6,
+      "reviewer": "claude-opus-5-5",
+      "effort": "medium"
+    },
+    {
+      "order": 14,
+      "provider": "codex",
+      "mode": "native",
+      "case": "invocation-write",
+      "outputs": 6,
+      "reviewer": "claude-opus-5-5",
+      "effort": "medium"
+    },
+    {
+      "order": 15,
+      "provider": "codex",
+      "mode": "native",
+      "case": "invocation-nonprose",
+      "outputs": 6,
+      "reviewer": "claude-opus-5-5",
+      "effort": "medium"
+    },
+    {
+      "order": 16,
+      "provider": "codex",
+      "mode": "native",
+      "case": "invocation-comments",
+      "outputs": 6,
+      "reviewer": "claude-opus-5-5",
+      "effort": "medium"
+    },
+    {
+      "order": 17,
+      "provider": "claude",
+      "mode": "native",
+      "case": "invocation-tighten",
+      "outputs": 6,
+      "reviewer": "claude-opus-5-5",
+      "effort": "medium"
+    },
+    {
+      "order": 18,
+      "provider": "claude",
+      "mode": "native",
+      "case": "invocation-write",
+      "outputs": 6,
+      "reviewer": "claude-opus-5-5",
+      "effort": "medium"
+    },
+    {
+      "order": 19,
+      "provider": "claude",
+      "mode": "native",
+      "case": "invocation-nonprose",
+      "outputs": 6,
+      "reviewer": "claude-opus-5-5",
+      "effort": "medium"
+    },
+    {
+      "order": 20,
+      "provider": "claude",
+      "mode": "native",
+      "case": "invocation-comments",
+      "outputs": 6,
+      "reviewer": "claude-opus-5-5",
+      "effort": "medium"
+    }
+  ]
+}

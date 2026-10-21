@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-10-21T19:00:22.805902+00:00",
+  "source": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/runtime-identities.json",
+  "qualification": "identity recheck only; changed skill catalog/body qualification still required before dispatch",
+  "model_calls": 0,
+  "identities": [
+    {
+      "name": "codex",
+      "path": "/opt/homebrew/Caskroom/codex/0.163.0/bin/codex",
+      "sha256": "8813367285524ac798dd96d1b071aea30d58708c7226fd236cd275cf1cfdee31"
+    },
+    {
+      "name": "claude",
+      "path": "/opt/homebrew/Caskroom/claude-code@latest/2.1.305/claude",
+      "sha256": "ea3ea3c08d2a9634a4651e687fcf900d410c489bce2b00f22bd7352b91ba704f"
+    },
+    {
+      "name": "python",
+      "path": "/opt/homebrew/Cellar/python@3.14/3.14.8_2/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+      "sha256": "1b5cb11d163e5ba34e2a05fc533c0ed89574d4425f9749a9d89405f651980e0d"
+    },
+    {
+      "name": "git",
+      "path": "/opt/homebrew/Cellar/git/2.56.0_1/bin/git",
+      "sha256": "40163333061f7223ecb604ed0f12988cfc8096d57ca8b1db006d410d4aeb700e"
+    }
+  ]
+}
