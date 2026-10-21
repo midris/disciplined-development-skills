@@ -1,0 +1,206 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claude-discovery-focused-01-invocation-comments-description-targeted-2-1-assessment",
+  "assessed_at": "2026-10-21T17:05:17.473017+00:00",
+  "run_id": "20261021T170400648Z-cw-focused-claude-invocation-comments-description-targeted-1debdc7d-b678-4feb-81f2-e564ed53a2fc-yn8amx11",
+  "condition": "description-targeted",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same Codex controller authored/reviewed exposed development variants and directly judged complete outputs; no blind, held-out or independent assessor claim. Separate Opus review supplements this."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-invocation-comments-manifest.json",
+    "sha256": "e6a59916bba8ee1781ebc80fa43f0239272e12f47cb5548090be72afb385eb71",
+    "version": "1",
+    "git_revision": "62d530fb2f5ca36f5c7b70e3e84f42a77f1f0f22"
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T170400648Z-cw-focused-claude-invocation-comments-description-targeted-1debdc7d-b678-4feb-81f2-e564ed53a2fc-yn8amx11/workspace/fixture/uploader.py",
+        "sha256": "59f1fcab029799ab7e2fb6636c786460b4b1be1cb2952cbe5cba7a9f261681c6",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T170400648Z-cw-focused-claude-invocation-comments-description-targeted-1debdc7d-b678-4feb-81f2-e564ed53a2fc-yn8amx11/stdout.txt",
+        "sha256": "00a1a4f4972e6cba1cb6da74f9e9196bae837a935aea4a41a877702696ce342e",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T170400648Z-cw-focused-claude-invocation-comments-description-targeted-1debdc7d-b678-4feb-81f2-e564ed53a2fc-yn8amx11/result.json",
+        "sha256": "41c4d234721bf6d8d2ba5de095b70b173772c943da14e0a8c1d584a313387419",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T170400648Z-cw-focused-claude-invocation-comments-description-targeted-1debdc7d-b678-4feb-81f2-e564ed53a2fc-yn8amx11/runner.log",
+        "sha256": "f41a76a3bb3ae26caf5684e0466dcc9f69584f9376c45450d5b02cd4ca56f7c4",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T170400648Z-cw-focused-claude-invocation-comments-description-targeted-1debdc7d-b678-4feb-81f2-e564ed53a2fc-yn8amx11/final.txt",
+        "sha256": "2c369be7eeb0520a48350235710302385f46a3a17d20a55c6636f11ca7d06ccf",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-comments/task.md",
+        "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5",
+        "version": null,
+        "git_revision": "835a41fab005d537ee34c8bb9f056409678fa3cc"
+      },
+      "selector": "Complete frozen TASK.md"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-comments/fixture/uploader.py",
+        "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1",
+        "version": null,
+        "git_revision": "835a41fab005d537ee34c8bb9f056409678fa3cc"
+      },
+      "selector": "Complete frozen uploader.py"
+    },
+    {
+      "id": "source-2",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-comments/fixture/MAINTAINER-NOTES.md",
+        "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847",
+        "version": null,
+        "git_revision": "835a41fab005d537ee34c8bb9f056409678fa3cc"
+      },
+      "selector": "Complete frozen MAINTAINER-NOTES.md"
+    },
+    {
+      "id": "catalog-qualification",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/qualification-20261021/catalog-targeted/claude-catalog-targeted-workspace-write/requests.json",
+        "sha256": "bfd9ddeaaa0b8a162d6bff1365728e3eeec4d8bcbce4d3f637a79720f4ed5f9c",
+        "version": null
+      },
+      "selector": "Retained exact-description initial request without body and subsequent complete-body delivery; actual live init separately lists CW and Skill."
+    },
+    {
+      "id": "task-mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/mechanical/139.json",
+        "sha256": "23529da53ab3430127f7098d1747ae711a08a0f32b37d71aa605a8e2a3f3e581",
+        "version": null
+      },
+      "selector": "Complete saved parse/token or numeric/reply observation; no subject code execution"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Fixed provider/model/CLI and retained inventory verified. Native skill available; complete assigned body before first edit: True; actual init lists CW and Skill; exact description/body separation established by retained byte-matched transport qualification, not echoed in live init. Protected input bytes unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log",
+      "catalog-qualification"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The complete code/comments retain four total attempts, temporary-send-only retries, other/final failure propagation and acknowledgement after acceptance outside the send handler. Duplicate risk and propagation even for temporary acknowledgement errors are explicit; executable syntax/tokens are unchanged.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The maintainer can identify the exact retry budget and exception boundary and understand both the duplicate-upload risk and why TemporaryUploadError from record_ack must not cause another send.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The loop policy, short final-attempt reminder and acknowledgement warning are coherent at their sites. The fuller warning gives useful maintenance detail rather than burying the point in obvious narration.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "The native Skill call at event 16 returns the complete targeted-description body before the first comment Edit at event 20. Qualified availability and exact body identity are verified.",
+      "consequence": "Selection is reported separately from artifact quality.",
+      "evidence": [
+        "trace",
+        "log",
+        "catalog-qualification"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Fixed provider/model/CLI and retained inventory verified. Native skill available; complete assigned body before first edit: True; actual init lists CW and Skill; exact description/body separation established by retained byte-matched transport qualification, not echoed in live init. Protected input bytes unchanged. O4/O5 remain unscored; native D1 is distinct from functional outcome.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Complete output 92 wc-w words; supplied TASK.md: 47 words, uploader.py: 48 words, MAINTAINER-NOTES.md: 136 words. Counts describe length, not semantic success; comment-only counts are reported separately for N4.",
+      "consequence": "Descriptive counts only.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "59 comment words versus 20 originally. The acknowledgement block is fuller than some compact outputs but retains useful, explicit exception and duplicate-risk guidance. Passing output and timely invocation are scored independently.",
+      "consequence": "Qualitative comparison is separate from threshold counts.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    }
+  ],
+  "uncertainty": []
+}
