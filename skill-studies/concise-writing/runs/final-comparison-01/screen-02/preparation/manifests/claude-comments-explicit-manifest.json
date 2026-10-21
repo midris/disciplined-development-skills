@@ -3,9 +3,9 @@
   "manifest_id": "cw-claude-final-comments-screen-02",
   "study_id": "concise-writing",
   "case_id": "comments-explicit",
-  "status": "draft",
+  "status": "frozen",
   "created_at": "2026-10-21T20:04:04.284303+00:00",
-  "source_revision": null,
+  "source_revision": "80cbe9445c7606834663a9e9808dcb0f43b06f41",
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
@@ -14,7 +14,7 @@
     },
     "protocol": {
       "path": "skill-studies/concise-writing/protocol.md",
-      "sha256": "db8bbc5a318db8fea148bdd1e056edea694a06020d749730e727075bd0dbb3ab",
+      "sha256": "0e4cff8df571eba149f14c8143f7ff57e64c29112126b1dc8876664bf20b455d",
       "version": "1"
     },
     "format_contract": {
@@ -95,67 +95,67 @@
   "controller_only": [
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/preparation/schedule.json",
-      "sha256": null,
+      "sha256": "40d0dae1400c393181174db1cafe861f39ec173c467b54c2419a0cb931cc14ab",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/preparation/runtime_setup.py",
-      "sha256": null,
+      "sha256": "91c8a2a5fccaa22affc662fe8824a2502be8e373e363520f21033a25838afdb2",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/preparation/runtime-identities.json",
-      "sha256": null,
+      "sha256": "a15af92cfb26d229bf97eb46c35991ebd0e1ae45ea83e0746107c85e4ccfa7fe",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/preparation/collect_one.py",
-      "sha256": null,
+      "sha256": "1fe5c33e143a059c84d2e2da4944db373f72129a63125051320a1d9ed294e136",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/preparation/inspect_one.py",
-      "sha256": null,
+      "sha256": "e93ef59405d1ba3161e5a47c3e94356a5aa88abd9c19f7efde64d408e6ca6871",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/preparation/trace_paths.py",
-      "sha256": null,
+      "sha256": "050a6d29ca6dd59f018651bd8d328b94a2a74b47363ea029df7b6f0978087c79",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/preparation/body_delivery.py",
-      "sha256": null,
+      "sha256": "8e084894e036286c8b7735df6a6a1d160eef4e74d609626f1bdfd1667ba1c87a",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/preparation/inspection-tests/test_body_delivery.py",
-      "sha256": null,
+      "sha256": "48712f7ab2bbeeefb008cb435325155493f1aa6e3e460b340940449e8eaac4f6",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/preparation/inspection-tests/test_collection_guards.py",
-      "sha256": null,
+      "sha256": "56cddce90005dae9147bad8c0e2e4dd0b429af3f5fd4a01f08c0b0b185e5a9ff",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/README.md",
-      "sha256": null,
+      "sha256": "80142a8d53e0fe6c48a42e424bd05304c9b3e73174678a3bab4a972004b66984",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/interpretation.md",
-      "sha256": null,
+      "sha256": "dfb3c05d7c5f345ecf7ea939ffbb131eb642df2dd93ee334e13e017fdd3f9df5",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/cases/invocation-comments/check_fixture.py",
-      "sha256": null,
+      "sha256": "ea39af1c4a932ba9e6203393c9db6daa671e43e0bd4493a25553629c15e8d912",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/preparation/continuation-recheck.json",
-      "sha256": null,
+      "sha256": "a9acdd3c22ea68445f7db8ca3cdba6fd992b210a77f300e8e6eeada2adc8210a",
       "version": null
     }
   ]
