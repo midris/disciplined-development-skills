@@ -1,0 +1,17 @@
+{
+  "configuration": "claude-comments-explicit",
+  "required_complete_files": 24,
+  "outputs": 15,
+  "first_pass_event": 97,
+  "prior_read_event": 98,
+  "first_pass_sha256": "9e4e2a000f262170898bbe62679fe9d22ebf6cb4ceb8ce3327e57aaaa640130d",
+  "first_pass_path": "skill-studies/concise-writing/runs/revised-body-discovery-01/evaluation/claude-comments-explicit-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/reviews/20261021T180334816Z-cw-suite-opus-claude-comments-explicit-252e2951-baad-474a-b11d-312dbcec247c-5g02ydzm/final.txt",
+  "final_sha256": "dccd906b7f9b7589bb85914f134b365a27575a7c66c4f6746ccea973331621f7",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "pre_prior_grep_calls": [],
+  "semantic_completeness": "verified: all fifteen complete code/comment judgments and final comparison manually inspected; holistic rationale treatment and qualitative preference recorded; prior cross-packet reference not used to establish a local outcome; no pre-prior Grep exposure."
+}

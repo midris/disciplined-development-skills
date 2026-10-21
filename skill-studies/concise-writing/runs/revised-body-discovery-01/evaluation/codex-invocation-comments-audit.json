@@ -1,0 +1,17 @@
+{
+  "configuration": "codex-invocation-comments",
+  "required_complete_files": 24,
+  "outputs": 15,
+  "first_pass_event": 87,
+  "prior_read_event": 88,
+  "first_pass_sha256": "42786cd4f380e52fffa0b6b8e9c6129f6619662b47e0269dbcf1ce178ecbc3c2",
+  "first_pass_path": "skill-studies/concise-writing/runs/revised-body-discovery-01/evaluation/codex-invocation-comments-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/reviews/20261021T180936148Z-cw-suite-opus-codex-invocation-comments-c0836214-0ca1-4a0f-803a-a104544eae01-oy4e7_w1/final.txt",
+  "final_sha256": "f4bfbc21f7e4b82660a32a88b5916b956658715f79a538db84b0a1279344fd73",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "pre_prior_grep_calls": [],
+  "semantic_completeness": "verified: all fifteen first-pass factors and whole-code reasoning plus final comparison manually inspected; fixed-body/no-control limitation and minor explicitness differences preserved; no pre-prior Grep exposure."
+}

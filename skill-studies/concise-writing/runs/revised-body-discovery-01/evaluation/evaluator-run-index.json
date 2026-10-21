@@ -77,6 +77,82 @@
       "status": "COMPLETED",
       "duration_seconds": 210.05,
       "audit_status": "verified complete reads and first-pass-before-prior; manual scope checked"
+    },
+    {
+      "order": 5,
+      "run_id": "20261021T180036005Z-cw-suite-opus-claude-document-addition-b2c2f2a6-aabb-4d90-8fbe-b327d93a39ab-s64y3c4a",
+      "configuration": "claude-document-addition",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "e5c3c824475031f59cfdd8b4d964d6db4a9789ae",
+      "config_sha256": "ed4f509dbdb486552fbc0be49539bb87bc495b3ed337632b9cbda8e29e6b14b6",
+      "bundle": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/reviews/20261021T180036005Z-cw-suite-opus-claude-document-addition-b2c2f2a6-aabb-4d90-8fbe-b327d93a39ab-s64y3c4a",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/reviews/20261021T180036005Z-cw-suite-opus-claude-document-addition-b2c2f2a6-aabb-4d90-8fbe-b327d93a39ab-s64y3c4a.inventory.json",
+        "sha256": "f71f0ea343ee37b2e2eadd33f53f9d3a740c2053df91a581d1479b0ffc80759e",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 153.355,
+      "audit_status": "verified complete reads and first-pass-before-prior; manual scope checked"
+    },
+    {
+      "order": 6,
+      "run_id": "20261021T180334816Z-cw-suite-opus-claude-comments-explicit-252e2951-baad-474a-b11d-312dbcec247c-5g02ydzm",
+      "configuration": "claude-comments-explicit",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "e5c3c824475031f59cfdd8b4d964d6db4a9789ae",
+      "config_sha256": "2437f04ba7c0e7c474a0291edc3bb3832c9a849845e8c70e5c47c1b9448db3de",
+      "bundle": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/reviews/20261021T180334816Z-cw-suite-opus-claude-comments-explicit-252e2951-baad-474a-b11d-312dbcec247c-5g02ydzm",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/reviews/20261021T180334816Z-cw-suite-opus-claude-comments-explicit-252e2951-baad-474a-b11d-312dbcec247c-5g02ydzm.inventory.json",
+        "sha256": "b02eeff9c59a529cd81b6c4058b9d8c25f8b035ff7dcc0d48dcd1429bb85d6d5",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 174.488,
+      "audit_status": "verified complete reads and first-pass-before-prior; manual scope checked"
+    },
+    {
+      "order": 7,
+      "run_id": "20261021T180712259Z-cw-suite-opus-codex-invocation-nonprose-89a42ee0-3470-4c37-9bcb-a1330b886521-08z2qn6p",
+      "configuration": "codex-invocation-nonprose",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "e5c3c824475031f59cfdd8b4d964d6db4a9789ae",
+      "config_sha256": "f969525a2c173531bdde60aeef30688c1579f3bc4e97285d3a4c241903bea2cb",
+      "bundle": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/reviews/20261021T180712259Z-cw-suite-opus-codex-invocation-nonprose-89a42ee0-3470-4c37-9bcb-a1330b886521-08z2qn6p",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/reviews/20261021T180712259Z-cw-suite-opus-codex-invocation-nonprose-89a42ee0-3470-4c37-9bcb-a1330b886521-08z2qn6p.inventory.json",
+        "sha256": "4e4fcdc0e5c3ebb8b1a0b55f5041f4d4459cf4726acf33710b3a488fc73b2eba",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 122.078,
+      "audit_status": "verified complete reads and first-pass-before-prior; manual scope checked"
+    },
+    {
+      "order": 8,
+      "run_id": "20261021T180936148Z-cw-suite-opus-codex-invocation-comments-c0836214-0ca1-4a0f-803a-a104544eae01-oy4e7_w1",
+      "configuration": "codex-invocation-comments",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "e5c3c824475031f59cfdd8b4d964d6db4a9789ae",
+      "config_sha256": "a2b9f6c93fd658ea9cfb61d0d6f0087aebb5a2abf8d2a851e17d49c08f7561c9",
+      "bundle": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/reviews/20261021T180936148Z-cw-suite-opus-codex-invocation-comments-c0836214-0ca1-4a0f-803a-a104544eae01-oy4e7_w1",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/reviews/20261021T180936148Z-cw-suite-opus-codex-invocation-comments-c0836214-0ca1-4a0f-803a-a104544eae01-oy4e7_w1.inventory.json",
+        "sha256": "3f890668510532f1d251033db7701d264c917cf20af4258c13fa4cfc1eff2b2b",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 157.952,
+      "audit_status": "verified complete reads and first-pass-before-prior; manual scope checked"
     }
   ]
 }
