@@ -1,0 +1,53 @@
+{
+  "qualified": {
+    "codex": {
+      "path": "/opt/homebrew/Caskroom/codex/0.163.0/bin/codex",
+      "sha256": "8813367285524ac798dd96d1b071aea30d58708c7226fd236cd275cf1cfdee31",
+      "version": "codex-cli 0.163.0"
+    },
+    "claude": {
+      "path": "/opt/homebrew/Caskroom/claude-code@latest/2.1.305/claude",
+      "sha256": "ea3ea3c08d2a9634a4651e687fcf900d410c489bce2b00f22bd7352b91ba704f",
+      "version": "2.1.305 (Claude Code)"
+    },
+    "python": {
+      "path": "/opt/homebrew/Cellar/python@3.14/3.14.8_2/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+      "sha256": "1b5cb11d163e5ba34e2a05fc533c0ed89574d4425f9749a9d89405f651980e0d",
+      "version": "Python 3.14.8"
+    },
+    "git": {
+      "path": "/opt/homebrew/Cellar/git/2.56.0_1/bin/git",
+      "sha256": "40163333061f7223ecb604ed0f12988cfc8096d57ca8b1db006d410d4aeb700e",
+      "version": "git version 2.56.0"
+    }
+  },
+  "subject_models": {
+    "codex": "gpt-5.6-sol",
+    "claude": "claude-sonnet-5"
+  },
+  "subject_effort": "low",
+  "evaluator_model": "claude-opus-5-5",
+  "evaluator_effort": "medium",
+  "evaluator_tools": [
+    "Read",
+    "Glob",
+    "Grep"
+  ],
+  "model_calls": 0,
+  "preflight": {
+    "checked_at": "2026-10-21T19:18:09.272042+00:00",
+    "passed": 12,
+    "claude_logged_in": true,
+    "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/preflight",
+    "inventory": {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/preflight.inventory.json",
+      "sha256": "adba4bbba5bcf3cfbad45691ad08da796b9abf215f3ba73facbd8347ec8029c2",
+      "version": "1"
+    }
+  },
+  "reused_qualification": {
+    "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/runtime-identities.json",
+    "sha256": "234fa30ad06212431b4691ca18b0d977395e5d4637be1543966d0daf70a0e506",
+    "reason": "Exact binary/toolchain hashes unchanged; explicit-load screen reuses established runtime and Opus transport. No native-discovery claim; every real subject must deliver the complete assigned combined skill before its first edit."
+  }
+}

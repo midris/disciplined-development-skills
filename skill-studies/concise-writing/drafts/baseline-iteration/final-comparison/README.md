@@ -2,7 +2,8 @@
 
 The owner requested a final comparison of original and revised bodies, both with the selected fully rewritten description, before making the adoption decision.
 The [protocol](../../../protocol.md) owns current authority, spending and next action.
-This package proposes **120 subject calls and twenty Opus reviews**; both existing pools are exhausted, so approval of that numeric extension is required before provider dispatch.
+This package describes the broader **120-subject/twenty-review proposal**, which remains unapproved.
+The owner instead approved a [first comment screen](../../../runs/final-comparison-01/screen-01/README.md) of twelve subjects and two reviews; the protocol owns its authority and the later three-to-five continuation decision.
 The selected description and both body texts are unchanged; this round tests their complete combinations rather than authoring another revision.
 
 ## Candidates and question
@@ -38,7 +39,7 @@ Five-plus wording repetitions are not being claimed: there is no new body wordin
 
 No additional controls, authoring calls, automatic retries, fallback models or adoption are included.
 This replaces the earlier unapproved 90-subject/ten-review forecast rather than adding to it: that forecast had three description arms and a narrower remaining-case scope, whereas this round compares both complete combinations across the full selected suite.
-Accepted combined ceilings would increase from 590 to **710 subjects** and from 38 to **58 evaluators**; authoring/retry ceilings stay four each.
+Relative to the pre-screen 590/38 ceilings, the broader proposal would increase combined capacity to **710 subjects** and **58 evaluators**; authoring/retry ceilings stay four each.
 Only this 120/20 allocation becomes dispatch capacity if accepted; unused pools cannot be transferred.
 
 Estimated active effort, including model waits once:

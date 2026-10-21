@@ -37,7 +37,7 @@ The owner separately requested a clearer layout for the current CW/SSR studies; 
 
 ## Limits and information boundaries
 
-**Accepted outer limits: 590 subject, 38 evaluator, 4 authoring and 4 retry invocations (636 total), with a 20-hour active-work planning guideline.**
+**Accepted outer limits: 602 subject, 40 evaluator, 4 authoring and 4 retry invocations (650 total), with a 20-hour active-work planning guideline.**
 The [CW protocol](../skill-studies/concise-writing/protocol.md) records current spending, the completed first stage and the next owner decision.
 The invocation limits are ceilings, not a dispatch commitment. Owner clarification after round-10 review: “the budget is just a guideline”; this relaxes the active-time limit, not the authorized call count. The subsequent “ok, please proceed” resumes the eight remaining expansion attempts. The owner requested minimal real-model runs to establish the process before broader testing; the initial Sol-low pair and its two-call extension are complete. Pre-baseline development is now closed at four subject calls; its remaining additional-development slot stays unused. A new facet alone cannot reopen that phase. A diagnostic exception requires a named readiness defect and separate owner approval; no automatic full campaign follows.
 Track active sessions from Stage 1, including preparation, review and model-run waits; exclude recorded periods awaiting owner input.
@@ -310,9 +310,9 @@ Reserved bundles and revealing assessments stay entirely in the verified private
 - [x] Record the owner’s discovery trade-off decision: unwanted Codex loading is a caution rather than a blocker where output remains intact and appropriate Claude loading improves. The protocol owns this prospective weighting; frozen rules/scores remain historical evidence, with no new calls or adoption authorized.
 - [x] Record the owner’s selection of the unchanged fully rewritten description; the protocol preserves its tested-body dependency and pending body/remaining-scope decision. No new calls or live deployment are authorized by selection alone.
 - [x] Prepare the owner-requested [final comparison](../skill-studies/concise-writing/drafts/baseline-iteration/final-comparison/README.md): original/revised bodies with the selected description, unchanged body bytes, full selected suite and explicit N2/N4 siblings, three repetitions per condition/provider. Forty configurations and 120 proposed slots are statically checked; this is not collection readiness.
-- [ ] Obtain acceptance of the concrete +120 subjects/+20 reviews extension before exceeding the exhausted pools; the protocol owns ceilings and the 220–310-minute remaining forecast.
-- [ ] Recheck runtime and changed-combination catalog/body boundaries, review controllers, commit exact manifests and pass collection readiness; then collect/assess all fixed final-comparison slots without automatic retries or edits.
-- [ ] Complete all twenty fixed Opus output-review packets and reconcile both combinations for the owner's final decision; no live deployment before that decision.
+- [x] Obtain the owner’s smaller staged allocation: twelve explicit-comment subjects and two Opus reviews, three repetitions per body/provider. The larger 120/20 proposal remains unapproved; the protocol owns current ceilings/forecast.
+- [ ] Qualify/freeze the approved first comment screen, then collect/assess its twelve subjects and two Opus reviews; stop at that evidence checkpoint, with no automatic top-up or candidate edits.
+- [ ] Present the first-screen comparison and obtain the owner’s bounded continuation/drop decision before any further combination testing or deployment.
 - [ ] Establish effective behavior on the relevant fixed cases and both providers, then test instruction compression separately and present an adoption decision.
 - [ ] When SSR resumes, revisit the loaded-failure baseline decision in the [revised proposal](../skill-studies/sweeping-stale-references/rewrite-diagnosis.md#proposed-allocation-owner-decision-required). The owner explicitly deferred this decision until then; the withdrawn no-SSR-success stop rule does not authorize dispatch.
 - [ ] Resolve the parked SSR context-reading cost and matching-heading wording concerns, review the whole draft and relative call allocation, then freeze and qualify only approved scope.

@@ -2,11 +2,12 @@
 
 Format version: `1`
 Study ID: `concise-writing`
-Status: all 150 focused subjects and ten allocated Opus 5.5 medium reviews are complete, retained, audited and reconciled.
-Current action: obtain the numeric allocation for the [prepared final comparison](drafts/baseline-iteration/final-comparison/README.md), then qualify, freeze and collect both complete combinations. The 120-subject/twenty-review extension is proposed, not accepted; existing subject/evaluator capacity is exhausted and no new model call has been dispatched.
-The owner requested combining both retained bodies with the selected description for a final test round, followed by the owner’s final decision.
-The prepared comparison covers all eight existing scenarios plus explicit N2/N4 body siblings, three repetitions per condition/provider, with no new no-CW arm because the question is relative combination performance.
-This sets the intended work and final owner decision; the concrete 120/20 ceiling extension still needs acceptance under the [framework budget rule](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#4-pilot-and-freeze-the-experiment-plan).
+Status: the owner approved the first staged final-comparison screen: twelve subjects and two Opus 5.5 medium reviews.
+Current action: qualify/freeze the [comment screen](runs/final-comparison-01/screen-01/README.md), then collect all twelve subjects and complete both reviews before returning the results to the owner.
+The owner approved “sounds good, let’s proceeed” after the concrete twelve-subject/two-review proposal; accepted ceilings rise from 590/38 to 602/40, with authoring/retry ceilings unchanged.
+This approval covers explicit comments only: both unchanged bodies with the selected description, three repetitions on Codex and Claude. It does not approve the broader prepared 120/20 proposal.
+After the screen, dropping a clearly inferior candidate or extending promising ones to five repetitions needs the evidence and a bounded continuation decision; no automatic top-up or mid-screen edit is authorized.
+The owner accepts unnecessary loading as a caution where output is intact and appropriate Claude loading improves; this screen explicitly loads both candidates and does not measure native selection.
 The owner selected the unchanged [fully rewritten description](drafts/baseline-iteration/discovery/description-rewrite.txt): “we can go with that”.
 Its prior native discovery evidence uses the revised targeted-examples body; the prepared original-body combination therefore needs measured validation, and selection alone authorizes no live deployment.
 No confirmed revised-body regression blocks eligibility for remaining coverage, but no overall consequential-quality advantage over the shorter original is established; Opus locally prefers the revised Claude explicit comments.
@@ -1034,14 +1035,14 @@ Owner-accepted recovery decision for CW: single-host retention, as used for SSR,
 Combined accounting sources: closed SSR [pilot 01](../sweeping-stale-references/runs/pilot-01/pilot-run-index.json), [pilot 02](../sweeping-stale-references/runs/pilot-02/pilot-02-run-index.json), [semantic delivery](../sweeping-stale-references/runs/semantic-delivery-01/semantic-delivery-01-run-index.json), [core baseline](../sweeping-stale-references/runs/core-baseline-01/core-baseline-01-run-index.json), [comparison](../sweeping-stale-references/runs/comprehensive-comparison-01/comprehensive-comparison-01-run-index.json), the SSR [completed expansion](../sweeping-stale-references/runs/coverage-baseline-01/coverage-baseline-01-run-index.json), the SSR [completed comparison](../sweeping-stale-references/runs/comprehensive-comparison-02/comprehensive-comparison-02-run-index.json), the SSR [Claude smoke](../sweeping-stale-references/runs/claude-smoke-01/claude-smoke-01-run-index.json), the SSR [Claude comparison](../sweeping-stale-references/runs/claude-comparison-01/claude-comparison-01-run-index.json), the SSR [Opus invocation comparison](../sweeping-stale-references/runs/claude-opus-invocation-01/claude-opus-invocation-01-run-index.json), and both CW indexes above. Historical pilot links contribute accounting only; they are not reclassified or reassessed.
 The new E reviews use the [fixed review package](runs/baseline-iteration-e-01/evaluation/README.md) and [supplemental Opus accounting](runs/baseline-iteration-e-01/evaluation/evaluator-run-index.json).
 The remaining-suite reviews use the [fourteen-packet package](runs/baseline-iteration-suite-01/evaluation/README.md) and [evaluator ledger](runs/baseline-iteration-suite-01/evaluation/evaluator-run-index.json); their allocation is included in the current ceiling.
-The focused output reviews use the [ten-packet package](runs/revised-body-discovery-01/evaluation/README.md) and [evaluator ledger](runs/revised-body-discovery-01/evaluation/evaluator-run-index.json); their ten calls are included in the accepted 38-evaluator ceiling.
-Dispatched calls are **590 subject, 38 evaluator, 0 authoring, 2 retry**; remaining outer capacity is **0 / 0 / 4 / 2** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
+The focused output reviews use the [ten-packet package](runs/revised-body-discovery-01/evaluation/README.md) and [evaluator ledger](runs/revised-body-discovery-01/evaluation/evaluator-run-index.json); their ten calls are spent within the current evaluator accounting.
+Dispatched calls are **590 subject, 38 evaluator, 0 authoring, 2 retry**; remaining outer capacity is **12 / 2 / 4 / 2** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
 Current combined accounting: **3,190 active minutes booked; 1,990 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
-The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 590/590, with 0 approved focused calls available; the earlier E diagnostic has no unused calls.
+The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 590/602, with 12 approved screen calls available.
 The supplemental work used 40 estimated active minutes against its 40-minute forecast; model waits are included once.
 
 | Work | Estimated active minutes |
@@ -1192,14 +1193,14 @@ E remained a separately reused completed stratum.
 The [proposal forecast](drafts/baseline-iteration/discovery/proposal.md#focused-allocation-and-later-forecast) estimates 210–300 minutes for the complete focused stage and separately forecasts the unapproved later regression stage.
 The focused stage from final input qualification through reconciliation/publication used 355 estimated active minutes, 55 above its proposed 300-minute upper estimate; earlier proposal drafting is outside that subtotal.
 The 55 review minutes include packet/controller preparation, ten runner waits once, manual audits and publication.
-The requested final comparison proposes 240–330 estimated active minutes in its design; twenty preparation minutes are already booked, leaving 220–310 proposed minutes if the allocation is accepted.
-That forecast and the proposed +120 subjects/+20 reviews replace the earlier unapproved 90/10 forecast; no accepted ceiling changes before approval.
+The broader final-comparison 240–330-minute/120-subject/twenty-review proposal remains unapproved; its twenty preparation minutes are already booked.
+The owner instead approved this first twelve-subject/two-review screen, forecast at 55–80 further active minutes including qualification/freeze, sequential model waits, direct assessment, Opus review and publication.
 The current remaining-work estimate below covers only the fixed approved scope, with owner-wait time excluded; it is a rounded planning estimate, not additional call authority.
 
 | Work | Estimate | Basis |
 | --- | ---: | --- |
-| Approved focused work remaining | 0 | Subject collection, direct assessment, ten output reviews and reconciliation are complete. |
-| **Total** | **0** | Later regression, replacements, further wording edits and adoption are outside this forecast. |
+| Approved comment screen remaining | 55–80 | Qualification/freeze, twelve subjects, direct assessment, two Opus reviews, reconciliation and publication. |
+| **Total** | **55–80** | Later regression, replacements, further wording edits and adoption are outside this forecast. |
 
 The E stage used 115 estimated active minutes against the 180-minute upper forecast, 65 below it: 35 preparation, 40 subject collection/assessment and 40 evaluator preparation/reconciliation.
 The two evaluator durations total 420.696 seconds (7.01 minutes), included once in those estimates.
@@ -1212,6 +1213,48 @@ Procedure and qualification/preparation remain separately booked above.
 The supplemental runner durations are 336.559 seconds for Codex and 171.913 seconds for Claude, included once in the 15- and 10-minute collection/assessment estimates.
 Preparation and final review/publication account for the other 15 supplemental minutes.
 A later diagnosis or rewrite needs its own bounded estimate and any new model-call authorization.
+
+### Final comment screen: codex-final-comments-screen-01
+
+Batch: codex-final-comments-screen-01
+Manifest: [comments-explicit](runs/final-comparison-01/screen-01/preparation/manifests/codex-comments-explicit-manifest.json).
+Scope: six sequential subjects; three repetitions per body with the selected common description.
+Authority: owner-approved twelve-subject/two-review first screen; no automatic top-up or adoption.
+Inputs and criteria: [screen](runs/final-comparison-01/screen-01/README.md), existing CW-expanded-1 and complete-artifact interpretation.
+Acceptance: compare complete artifacts, preserve consequential regression/quality evidence and uncertainty, and return to the owner after the fixed stage.
+Include all valid-setup executions regardless of outcome. No automatic retry; disclose exclusions, uncertainty and unattempted slots.
+Stop on infrastructure, contamination, capture/retention failure, input/runtime drift or uncertain charge; retain every valid behavioral miss.
+Record: [index](runs/final-comparison-01/screen-01/codex-final-comments-screen-01-run-index.json).
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | comments-explicit | original-body | 1 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-comments-explicit-original-body.json` |
+| 2 | comments-explicit | revised-body | 1 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-comments-explicit-revised-body.json` |
+| 3 | comments-explicit | revised-body | 2 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-comments-explicit-revised-body.json` |
+| 4 | comments-explicit | original-body | 2 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-comments-explicit-original-body.json` |
+| 5 | comments-explicit | original-body | 3 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-comments-explicit-original-body.json` |
+| 6 | comments-explicit | revised-body | 3 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-comments-explicit-revised-body.json` |
+
+### Final comment screen: claude-final-comments-screen-01
+
+Batch: claude-final-comments-screen-01
+Manifest: [comments-explicit](runs/final-comparison-01/screen-01/preparation/manifests/claude-comments-explicit-manifest.json).
+Scope: six sequential subjects; three repetitions per body with the selected common description.
+Authority: owner-approved twelve-subject/two-review first screen; no automatic top-up or adoption.
+Inputs and criteria: [screen](runs/final-comparison-01/screen-01/README.md), existing CW-expanded-1 and complete-artifact interpretation.
+Acceptance: compare complete artifacts, preserve consequential regression/quality evidence and uncertainty, and return to the owner after the fixed stage.
+Include all valid-setup executions regardless of outcome. No automatic retry; disclose exclusions, uncertainty and unattempted slots.
+Stop on infrastructure, contamination, capture/retention failure, input/runtime drift or uncertain charge; retain every valid behavioral miss.
+Record: [index](runs/final-comparison-01/screen-01/claude-final-comments-screen-01-run-index.json).
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | comments-explicit | revised-body | 1 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-comments-explicit-revised-body.json` |
+| 2 | comments-explicit | original-body | 1 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-comments-explicit-original-body.json` |
+| 3 | comments-explicit | original-body | 2 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-comments-explicit-original-body.json` |
+| 4 | comments-explicit | revised-body | 2 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-comments-explicit-revised-body.json` |
+| 5 | comments-explicit | revised-body | 3 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-comments-explicit-revised-body.json` |
+| 6 | comments-explicit | original-body | 3 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-comments-explicit-original-body.json` |
 
 ## Results and decision
 
@@ -1406,3 +1449,5 @@ Baseline collection is closed and adoption remains deferred. The live skill is u
 Comparison review: [fixed-suite comparison self-review](../../reviews/2026-09-18-cw-comparison-review.md).
 
 Baseline review: the [policy-4 resolution and self-review](../../reviews/2026-09-18-cw-policy4-review.md) records the external findings, additional validator defect and verification. No blocking findings remain.
+
+Final screen accounting: [Codex index](runs/final-comparison-01/screen-01/codex-final-comments-screen-01-run-index.json), [Claude index](runs/final-comparison-01/screen-01/claude-final-comments-screen-01-run-index.json).

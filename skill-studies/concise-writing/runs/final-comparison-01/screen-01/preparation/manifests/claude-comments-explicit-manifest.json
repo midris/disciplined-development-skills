@@ -1,0 +1,142 @@
+{
+  "format_version": "1",
+  "manifest_id": "cw-claude-final-comments-screen-01",
+  "study_id": "concise-writing",
+  "case_id": "comments-explicit",
+  "status": "draft",
+  "created_at": "2026-10-21T19:16:45.966652+00:00",
+  "source_revision": "",
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "684d76df079a1359f998a06f64c98e6234fdb85c71af0969ba99bfa176521708",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/concise-writing/protocol.md",
+      "sha256": "d80055e346cfb512bb9c0a9e5cc5b63cdf821c3ff52b1b61608b4ef7579ac6f5",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "a90ca386d0b267632b01d8cd0bce8ba4bb4010999c3481e74a318b4d17675e40",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result-v2.schema.json",
+      "sha256": "81902ed03e807804404c0d6ba7a0092a1c311c9eef45ee88c89708ce50d7c2c2",
+      "version": "2"
+    },
+    "policy": {
+      "path": "skill-studies/concise-writing/runs/suite-2026-09-27/preparation/assessment-policy.txt",
+      "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33",
+      "version": "CW-expanded-1"
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/criteria/comments-explicit.md",
+        "sha256": "dc682490e96bbc3776a8cb90fdfe9e5889795013a3dbdaf47df4490adb386229",
+        "version": "4"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "original-body",
+      "configuration": {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-comments-explicit-original-body.json",
+        "sha256": "f052af60f52db3d2494fb39fd173d9b2efe1e45a062237ee83e022cdb33cf823",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/concise-writing/drafts/baseline-iteration/final-comparison/skills/original-body/SKILL.md"
+    },
+    {
+      "id": "revised-body",
+      "configuration": {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-comments-explicit-revised-body.json",
+        "sha256": "0191b1eef4bd4740e8c11f71697079eb8b4457d36977280531ab40d3419ab5f4",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/concise-writing/drafts/baseline-iteration/final-comparison/skills/revised-body/SKILL.md"
+    }
+  ],
+  "subject_sources": [
+    {
+      "path": "skill-studies/concise-writing/drafts/baseline-iteration/final-comparison/skills/original-body/SKILL.md",
+      "sha256": "1889d41c2f90ec7c909ebf3baca0dd3c395fbc8d837003b21732599f26735422",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/drafts/baseline-iteration/final-comparison/skills/revised-body/SKILL.md",
+      "sha256": "fe48f44ab3ccc3f58addabbe2e04b90f9f6ed08590dad21814bf7a9d7b7bdd07",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/invocation-comments/MAINTAINER-NOTES.md",
+      "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/invocation-comments/TASK.md",
+      "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/invocation-comments/uploader.py",
+      "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/prompts/claude-body.md",
+      "sha256": "c72703762cfa9b2be16c09550e27b534fd378c68150004b8d039cbcc499df6bd",
+      "version": null
+    }
+  ],
+  "controller_only": [
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/preparation/schedule.json",
+      "sha256": "9153f9c7b185e411113a86bc0f912ee7f8713f839ca92bce281b7bfa19b475b9",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/preparation/runtime_setup.py",
+      "sha256": "91c8a2a5fccaa22affc662fe8824a2502be8e373e363520f21033a25838afdb2",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/preparation/runtime-identities.json",
+      "sha256": "028c7a594a256e2d605640396c6869d52d230d90769112e5536ea12cc9c1cba8",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/preparation/collect_one.py",
+      "sha256": "f01ef125e1b2706ad80e2f653d9b83f759d28ddf3404ec3c9902dd96e5815f02",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/preparation/inspect_one.py",
+      "sha256": "37a551dad8a1e3a719865238d42562d2eb09a9bb3e96600e59fd63f4f0ebe8b9",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/preparation/trace_paths.py",
+      "sha256": "050a6d29ca6dd59f018651bd8d328b94a2a74b47363ea029df7b6f0978087c79",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/README.md",
+      "sha256": "59e47a5096c102c9dd3d9c478ffa209c4ea8f6fa8dfa1b2449001fb68f8ec5db",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/interpretation.md",
+      "sha256": "dfb3c05d7c5f345ecf7ea939ffbb131eb642df2dd93ee334e13e017fdd3f9df5",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/cases/invocation-comments/check_fixture.py",
+      "sha256": "ea39af1c4a932ba9e6203393c9db6daa671e43e0bd4493a25553629c15e8d912",
+      "version": null
+    }
+  ]
+}
