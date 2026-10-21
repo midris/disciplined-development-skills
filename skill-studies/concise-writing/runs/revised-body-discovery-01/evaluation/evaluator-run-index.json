@@ -153,6 +153,44 @@
       "status": "COMPLETED",
       "duration_seconds": 157.952,
       "audit_status": "verified complete reads and first-pass-before-prior; manual scope checked"
+    },
+    {
+      "order": 9,
+      "run_id": "20261021T181307295Z-cw-suite-opus-claude-invocation-nonprose-4d1085bb-8558-49e8-b36e-084f7eca9150-a2a0xvlb",
+      "configuration": "claude-invocation-nonprose",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "aecfc7e7056d5470f86ddd922034d9db8cb8ed10",
+      "config_sha256": "91ef690f3e6ee32042db3ffea068e6ae9bd82c1ff4c77364adfae14ceab22d4d",
+      "bundle": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/reviews/20261021T181307295Z-cw-suite-opus-claude-invocation-nonprose-4d1085bb-8558-49e8-b36e-084f7eca9150-a2a0xvlb",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/reviews/20261021T181307295Z-cw-suite-opus-claude-invocation-nonprose-4d1085bb-8558-49e8-b36e-084f7eca9150-a2a0xvlb.inventory.json",
+        "sha256": "bcecc39ad5fb6e7d18515b9b37540d1f87e4ea4b0edbc0db300f0811e2688bdc",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 124.813,
+      "audit_status": "verified complete reads and first-pass-before-prior; manual scope checked"
+    },
+    {
+      "order": 10,
+      "run_id": "20261021T181549113Z-cw-suite-opus-claude-invocation-comments-2008862a-a354-48f1-9287-2d334fdfe5c5-1gbblg99",
+      "configuration": "claude-invocation-comments",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "aecfc7e7056d5470f86ddd922034d9db8cb8ed10",
+      "config_sha256": "2e0dce46cb64eb3494d0b04375e02aa15e74f2dc7a058688af25aa1306ad3e71",
+      "bundle": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/reviews/20261021T181549113Z-cw-suite-opus-claude-invocation-comments-2008862a-a354-48f1-9287-2d334fdfe5c5-1gbblg99",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/reviews/20261021T181549113Z-cw-suite-opus-claude-invocation-comments-2008862a-a354-48f1-9287-2d334fdfe5c5-1gbblg99.inventory.json",
+        "sha256": "afb72576c930e8725d1c960ea802dc36b785e3bbe767ddf4b4d86f15e61267ff",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 178.151,
+      "audit_status": "verified complete reads and first-pass-before-prior; manual scope checked"
     }
   ]
 }

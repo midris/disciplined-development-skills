@@ -17,6 +17,7 @@ Current status is recorded only in the protocol; a result report or draft does n
 | [Expanded suite](runs/suite-2026-09-27/README.md) | Ordinary cases, native cases, third-repetition supplements and shared preparation. |
 | [Baseline-derived E diagnostic](runs/baseline-iteration-e-01/README.md) | Original, targeted, fuller and controls on both providers, plus Opus review. |
 | [Baseline-derived remaining suite](runs/baseline-iteration-suite-01/README.md) | A/B/C and N1–N4 on both providers, with grouped Opus review. |
+| [Focused revised body and discovery](runs/revised-body-discovery-01/README.md) | Five-repetition body/description probes and [Opus reconciliation](runs/revised-body-discovery-01/evaluation/assessment.md). |
 | [Retrospective evaluation](runs/cross-model-evaluation-01/README.md) | Fable reviews of historical and expanded outputs. |
 | [Contact reassessment](runs/contact-reassessment-01/README.md) | Versioned interpretation correction; previous judgments retained. |
 | [Historical skill-editing preparation](runs/skill-editing-preparation/README.md) | Preparation context; current selected scenarios belong to the protocol. |

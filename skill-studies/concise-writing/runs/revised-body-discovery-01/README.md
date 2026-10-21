@@ -23,3 +23,5 @@ For Claude discovery after the first invocation, use [inspector v2](preparation/
 The [Claude discovery assessment](claude-discovery-focused-01-assessment.md) links the final [index](claude-discovery-focused-01-run-index.json), separate selection/task outcomes and the observed description trade-off across providers.
 
 The [Opus output-review package](evaluation/README.md) freezes ten fifteen-output packets, with first-pass/prior-score separation and a separate evaluator ledger.
+
+The [focused comparison and Opus reconciliation](evaluation/assessment.md) joins the four subject assessments with ten independent output-review packets, preserving disagreements and scope limits.

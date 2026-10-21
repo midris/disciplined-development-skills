@@ -1,9 +1,9 @@
 {
   "evaluation_judgment_version": "1",
-  "status": "partial manual transcription",
-  "reviewed_packets": 8,
+  "status": "complete manual transcription",
+  "reviewed_packets": 10,
   "planned_packets": 10,
-  "reviewed_outputs": 120,
+  "reviewed_outputs": 150,
   "planned_outputs": 150,
   "reviewer_model": "claude-opus-5-5",
   "requested_effort": "medium",
@@ -323,6 +323,7 @@
       "disagreements": [
         "Precision interpretation only: Opus reads control5 restart-after-incident wording as supported by source; active prior called it broader. Both pass."
       ],
+      "controller_reconciliation": null,
       "quality_notes": [
         "All15pass; no meaningful original/revised advantage in this Codex handoff sample.",
         "All10skilloutputs retain more diagnostic/lease rationale at operational entry points; some controls use more scannable checklists and are shorter.",
@@ -655,6 +656,14 @@
           "controller": "Unresolved consequential sequencing interpretation after whole-output reread: do not count as a confirmed loss or silently impose a stricter phrase rule; retain both judgments and bound conclusions pending reconciliation/owner ruling."
         }
       ],
+      "controller_reconciliation": {
+        "condition": "control",
+        "repetition": 5,
+        "factor": "F1",
+        "judgment": "insufficient evidence",
+        "scope": "Comparative reconciliation only; canonical active pass and independent Opus not-met first pass remain intact.",
+        "reason": "Complete output retains Omar investigation obligation, Nia approval gate, pause/evidence/other-team/expansion boundaries. It does not explicitly restore investigation-before-resumption elsewhere; conjunction and context can communicate that sequence. The consequential permission reading remains disputed, so the prospective rule forbids defaulting to the stricter reading. This does not establish a CW body regression or benefit."
+      },
       "quality_notes": [
         "All original/revised outputs pass all factors; no clear useful body contribution or preference established by this case.",
         "Original5 removes the closing recap but preserves decision and default constraints elsewhere: small orientation loss, not an automatic failure.",
@@ -977,6 +986,7 @@
       "disagreements": [
         "No factor disagreement. Opus calls the consistently shorter CW comments a modest descriptive concision benefit, while noting controls give more explicit refactor guidance. This does not establish a reliable overall benefit or a preference between original and revised bodies."
       ],
+      "controller_reconciliation": null,
       "quality_notes": [
         "All15pass with syntax/tokens unchanged, source comments20words; controls47\u201367, original30\u201348,revised33\u201344.",
         "Implied duplicate risk from prior acceptance/no-resend is adequate in complete code context, not a required-keyword judgment.",
@@ -1300,6 +1310,7 @@
       "disagreements": [
         "No categorical disagreements. Reviewer treats consolidated paragraphs as neutral to mildly positive where active assessor noted scanning weaknesses; both apply holistic readability without a mandated layout."
       ],
+      "controller_reconciliation": null,
       "quality_notes": [
         "Every control retained the detached reminder; all ten skill-bearing outputs removed it while preserving point-of-use safeguards. This is a repeated qualitative tightening benefit within passing outcomes.",
         "No evidence-backed preference between original and revised body. Original rep 3 is most compressed and thinnest on reinforcement; candidate outputs are more uniform, not evidence of reliability.",
@@ -1621,6 +1632,7 @@
         "No categorical disagreement. Reviewer gives more weight to the controls explicit recording/qualification wording and sees skill-arm grouping as a small readability benefit; active assessor does not establish a functional difference.",
         "Candidate rep 1 later-confirmation wording is accepted holistically by both, with reviewer noting greater uncertainty about lost explicit precaution framing; not silently upgraded to a failure."
       ],
+      "controller_reconciliation": null,
       "quality_notes": [
         "Controls retain the notes most explicitly. All skill outputs consolidate pre-invitation checks more tightly; shorter output alone has no value preference in E.",
         "No consistent original-versus-revised advantage. Single original rep 2 and revised rep 1 qualification-softening observations remain qualitative.",
@@ -1942,6 +1954,7 @@
         "No factor disagreement. Reviewer prefers revised body balance in this Claude comment sample, while active assessment identifies no consistent overall advantage. This is a stated qualitative preference, not a reliability conclusion.",
         "Reviewer notes a prior reason referring to Codex output outside this packet; that cross-packet observation is not evidence for the fifteen Claude judgments."
       ],
+      "controller_reconciliation": null,
       "quality_notes": [
         "Both body arms reduce code-restating comment burden relative to controls while preserving rationale. Growth from the source is justified by supplied maintenance notes.",
         "Revised body explicitly names duplicate-upload consequence 5/5 versus original 3/5; original names keep-outside-handler 5/5 versus revised 2/5. Equivalent behavioral guards still pass.",
@@ -2189,6 +2202,7 @@
         "No task observation disagreement. Reviewer raises scope wording for progress messages, reports both final-only 15/15 and complete-stream 0/15; fixed controller observation uses complete stream.",
         "D1 traces are outside the packet; reviewer correctly declines to verify loads from self-reports, including claims of non-use after actual loading."
       ],
+      "controller_reconciliation": null,
       "quality_notes": [
         "Every settings artifact is the exact required one-value change; every final message is Done., but all fifteen include earlier progress messages.",
         "No functional CW or description-quality contribution claim is available from numeric artifacts; loading remains ordered-trace evidence.",
@@ -2509,6 +2523,7 @@
       "disagreements": [
         "No categorical disagreement. Targeted rep 2 handler comment is useful maintenance support to active assessor, near-narration to reviewer; rewrite rep 1 other-error wording is a minor logic slip to reviewer, contextual shorthand to active assessor."
       ],
+      "controller_reconciliation": null,
       "quality_notes": [
         "All fifteen pass with unchanged executable tokens/syntax; no no-CW control, no reviewer D1 inference, and fixed common body across descriptions.",
         "Explicit duplicate consequence appears in existing 3/5, rewritten 3/5 and targeted 0/5; acceptance-based reasoning remains adequate under fixed complete-context interpretation. This descriptive explicitness difference does not isolate a causal phrase effect or establish body contribution.",
@@ -2516,6 +2531,576 @@
         "Reviewer flags grammatical ambiguity in supplement wording and explain-versus-understand criterion language; both assessors use the supplied prospective whole-code interpretation without adding a literal sentence requirement."
       ],
       "transcription_basis": "Manually read all fifteen factor rows across three condition tables, each per-output code/comment explanation and complete final comparison. All factors met; no pre-prior Grep exposure."
+    },
+    {
+      "configuration": "claude-invocation-nonprose",
+      "review_run_id": "20261021T181307295Z-cw-suite-opus-claude-invocation-nonprose-4d1085bb-8558-49e8-b36e-084f7eca9150-a2a0xvlb",
+      "subject_provider": "claude",
+      "case": "invocation-nonprose",
+      "audit": "skill-studies/concise-writing/runs/revised-body-discovery-01/evaluation/claude-invocation-nonprose-audit.json",
+      "first_pass_sha256": "92d9ca5922dde368bed6967efc4a7153af3ee39332c0f2b053ccd3f5f6d7fc1b",
+      "judgments": [
+        {
+          "subject_run_id": "20261021T162959267Z-cw-focused-claude-invocation-nonprose-description-rewrite-7f5630d9-f630-4b57-ba5a-9200e7a7ea4e-2rd3twb7",
+          "global_order": 121,
+          "condition": "description-rewrite",
+          "repetition": 1,
+          "active_result_id": "claude-discovery-focused-01-invocation-nonprose-description-rewrite-1-1-assessment",
+          "active_factors": {},
+          "active_functional_result": "not measured",
+          "evaluator_factors": {},
+          "evaluator_functional_result": "not measured",
+          "task_observations": {
+            "numeric_edit": "met",
+            "literal_reply": "met"
+          }
+        },
+        {
+          "subject_run_id": "20261021T164839809Z-cw-focused-claude-invocation-nonprose-description-existing-c07918e6-98bc-4612-980e-dd1d13c590fa-5hhh1kvz",
+          "global_order": 122,
+          "condition": "description-existing",
+          "repetition": 1,
+          "active_result_id": "claude-discovery-focused-01-invocation-nonprose-description-existing-1-1-assessment",
+          "active_factors": {},
+          "active_functional_result": "not measured",
+          "evaluator_factors": {},
+          "evaluator_functional_result": "not measured",
+          "task_observations": {
+            "numeric_edit": "met",
+            "literal_reply": "met"
+          }
+        },
+        {
+          "subject_run_id": "20261021T164912373Z-cw-focused-claude-invocation-nonprose-description-targeted-94f4130a-c83c-477d-81b6-9f8ce4035e18-w0jsxcsz",
+          "global_order": 123,
+          "condition": "description-targeted",
+          "repetition": 1,
+          "active_result_id": "claude-discovery-focused-01-invocation-nonprose-description-targeted-1-1-assessment",
+          "active_factors": {},
+          "active_functional_result": "not measured",
+          "evaluator_factors": {},
+          "evaluator_functional_result": "not measured",
+          "task_observations": {
+            "numeric_edit": "met",
+            "literal_reply": "met"
+          }
+        },
+        {
+          "subject_run_id": "20261021T164950737Z-cw-focused-claude-invocation-nonprose-description-existing-a082a503-292c-4d77-a527-187e37e1d565-vmx7xwsd",
+          "global_order": 124,
+          "condition": "description-existing",
+          "repetition": 2,
+          "active_result_id": "claude-discovery-focused-01-invocation-nonprose-description-existing-2-1-assessment",
+          "active_factors": {},
+          "active_functional_result": "not measured",
+          "evaluator_factors": {},
+          "evaluator_functional_result": "not measured",
+          "task_observations": {
+            "numeric_edit": "met",
+            "literal_reply": "met"
+          }
+        },
+        {
+          "subject_run_id": "20261021T165026040Z-cw-focused-claude-invocation-nonprose-description-targeted-4e687bf8-f929-4b48-8740-a97e05a281e7-4t5ivqyl",
+          "global_order": 125,
+          "condition": "description-targeted",
+          "repetition": 2,
+          "active_result_id": "claude-discovery-focused-01-invocation-nonprose-description-targeted-2-1-assessment",
+          "active_factors": {},
+          "active_functional_result": "not measured",
+          "evaluator_factors": {},
+          "evaluator_functional_result": "not measured",
+          "task_observations": {
+            "numeric_edit": "met",
+            "literal_reply": "met"
+          }
+        },
+        {
+          "subject_run_id": "20261021T165105669Z-cw-focused-claude-invocation-nonprose-description-rewrite-7ca5b1fc-e6e5-4c64-a8a7-e89b87bfb63c-o2nwamu9",
+          "global_order": 126,
+          "condition": "description-rewrite",
+          "repetition": 2,
+          "active_result_id": "claude-discovery-focused-01-invocation-nonprose-description-rewrite-2-1-assessment",
+          "active_factors": {},
+          "active_functional_result": "not measured",
+          "evaluator_factors": {},
+          "evaluator_functional_result": "not measured",
+          "task_observations": {
+            "numeric_edit": "met",
+            "literal_reply": "not met"
+          }
+        },
+        {
+          "subject_run_id": "20261021T165238122Z-cw-focused-claude-invocation-nonprose-description-targeted-2ef57a4f-d453-491d-8261-450c8c6d1a87-vbggonlt",
+          "global_order": 127,
+          "condition": "description-targeted",
+          "repetition": 3,
+          "active_result_id": "claude-discovery-focused-01-invocation-nonprose-description-targeted-3-1-assessment",
+          "active_factors": {},
+          "active_functional_result": "not measured",
+          "evaluator_factors": {},
+          "evaluator_functional_result": "not measured",
+          "task_observations": {
+            "numeric_edit": "met",
+            "literal_reply": "met"
+          }
+        },
+        {
+          "subject_run_id": "20261021T165302140Z-cw-focused-claude-invocation-nonprose-description-rewrite-abf330dc-f69d-4c9c-8bdd-c125f01b7b79-43lvmanl",
+          "global_order": 128,
+          "condition": "description-rewrite",
+          "repetition": 3,
+          "active_result_id": "claude-discovery-focused-01-invocation-nonprose-description-rewrite-3-1-assessment",
+          "active_factors": {},
+          "active_functional_result": "not measured",
+          "evaluator_factors": {},
+          "evaluator_functional_result": "not measured",
+          "task_observations": {
+            "numeric_edit": "met",
+            "literal_reply": "not met"
+          }
+        },
+        {
+          "subject_run_id": "20261021T165415112Z-cw-focused-claude-invocation-nonprose-description-existing-d5761a26-176f-44cf-871d-6b9aeb063ca1-l_6b6_1b",
+          "global_order": 129,
+          "condition": "description-existing",
+          "repetition": 3,
+          "active_result_id": "claude-discovery-focused-01-invocation-nonprose-description-existing-3-1-assessment",
+          "active_factors": {},
+          "active_functional_result": "not measured",
+          "evaluator_factors": {},
+          "evaluator_functional_result": "not measured",
+          "task_observations": {
+            "numeric_edit": "met",
+            "literal_reply": "met"
+          }
+        },
+        {
+          "subject_run_id": "20261021T165502144Z-cw-focused-claude-invocation-nonprose-description-rewrite-3152d681-9502-402a-aa00-1ef4f7285f7e-m8qto3ka",
+          "global_order": 130,
+          "condition": "description-rewrite",
+          "repetition": 4,
+          "active_result_id": "claude-discovery-focused-01-invocation-nonprose-description-rewrite-4-1-assessment",
+          "active_factors": {},
+          "active_functional_result": "not measured",
+          "evaluator_factors": {},
+          "evaluator_functional_result": "not measured",
+          "task_observations": {
+            "numeric_edit": "met",
+            "literal_reply": "not met"
+          }
+        },
+        {
+          "subject_run_id": "20261021T165546446Z-cw-focused-claude-invocation-nonprose-description-existing-2dbd3863-015e-4415-85ed-87975a65ffc3-qc1oqkw5",
+          "global_order": 131,
+          "condition": "description-existing",
+          "repetition": 4,
+          "active_result_id": "claude-discovery-focused-01-invocation-nonprose-description-existing-4-1-assessment",
+          "active_factors": {},
+          "active_functional_result": "not measured",
+          "evaluator_factors": {},
+          "evaluator_functional_result": "not measured",
+          "task_observations": {
+            "numeric_edit": "met",
+            "literal_reply": "met"
+          }
+        },
+        {
+          "subject_run_id": "20261021T165639681Z-cw-focused-claude-invocation-nonprose-description-targeted-2b66087a-25d5-4d5c-a929-d786deaf0c27-97un2obo",
+          "global_order": 132,
+          "condition": "description-targeted",
+          "repetition": 4,
+          "active_result_id": "claude-discovery-focused-01-invocation-nonprose-description-targeted-4-1-assessment",
+          "active_factors": {},
+          "active_functional_result": "not measured",
+          "evaluator_factors": {},
+          "evaluator_functional_result": "not measured",
+          "task_observations": {
+            "numeric_edit": "met",
+            "literal_reply": "not met"
+          }
+        },
+        {
+          "subject_run_id": "20261021T165706084Z-cw-focused-claude-invocation-nonprose-description-existing-eda66c54-7f98-4b17-9b00-698b8d314899-zbg3d2hs",
+          "global_order": 133,
+          "condition": "description-existing",
+          "repetition": 5,
+          "active_result_id": "claude-discovery-focused-01-invocation-nonprose-description-existing-5-1-assessment",
+          "active_factors": {},
+          "active_functional_result": "not measured",
+          "evaluator_factors": {},
+          "evaluator_functional_result": "not measured",
+          "task_observations": {
+            "numeric_edit": "met",
+            "literal_reply": "met"
+          }
+        },
+        {
+          "subject_run_id": "20261021T165728653Z-cw-focused-claude-invocation-nonprose-description-targeted-3e6ff9c5-0e57-43e6-b7cb-81275745d628-c_n4_0y3",
+          "global_order": 134,
+          "condition": "description-targeted",
+          "repetition": 5,
+          "active_result_id": "claude-discovery-focused-01-invocation-nonprose-description-targeted-5-1-assessment",
+          "active_factors": {},
+          "active_functional_result": "not measured",
+          "evaluator_factors": {},
+          "evaluator_functional_result": "not measured",
+          "task_observations": {
+            "numeric_edit": "met",
+            "literal_reply": "met"
+          }
+        },
+        {
+          "subject_run_id": "20261021T165802230Z-cw-focused-claude-invocation-nonprose-description-rewrite-a50d809d-f809-4682-b20e-4266a6a207ce-995198nu",
+          "global_order": 135,
+          "condition": "description-rewrite",
+          "repetition": 5,
+          "active_result_id": "claude-discovery-focused-01-invocation-nonprose-description-rewrite-5-1-assessment",
+          "active_factors": {},
+          "active_functional_result": "not measured",
+          "evaluator_factors": {},
+          "evaluator_functional_result": "not measured",
+          "task_observations": {
+            "numeric_edit": "met",
+            "literal_reply": "not met"
+          }
+        }
+      ],
+      "after_prior_changes": "No task judgments changed. Reviewer baseline-commit concern is probably resolved by prior explanation of the controller-required unchanged baseline; raw trace remains outside packet.",
+      "disagreements": [
+        "No numeric or literal-reply task disagreement; D1 outside reviewer scope, no CW functional score.",
+        "Reviewer initially questions a possible unauthorized baseline commit from assistant text. The frozen native wrapper explicitly requires that unchanged baseline; controller trace validates it, while reviewer lacks that wrapper/trace in packet and retains its caveat."
+      ],
+      "controller_reconciliation": null,
+      "quality_notes": [
+        "All fifteen numeric artifacts exact. Literal-only replies existing5/5, targeted4/5(rep4extra), rewritten1/5(rep1onlypass). All final messages Done.",
+        "Repeated rewritten narration about not using CW is a task-compliance difference, not evidence of actual loading or a proven phrase cause.",
+        "Complete assistant-stream interpretation controls the observation; a final-only check would conceal the five deviations."
+      ],
+      "transcription_basis": "Manually read fifteen first-pass artifact/message rows, every condition count and final comparison. Transcribed only numeric/literal task observations; no F1-F3 or reviewer D1 inference; no pre-prior Grep exposure."
+    },
+    {
+      "configuration": "claude-invocation-comments",
+      "review_run_id": "20261021T181549113Z-cw-suite-opus-claude-invocation-comments-2008862a-a354-48f1-9287-2d334fdfe5c5-1gbblg99",
+      "subject_provider": "claude",
+      "case": "invocation-comments",
+      "audit": "skill-studies/concise-writing/runs/revised-body-discovery-01/evaluation/claude-invocation-comments-audit.json",
+      "first_pass_sha256": "1f548b49604285e3e674238b8657b4ba9f1ecdde867c5a9c13ac31b4de566a76",
+      "judgments": [
+        {
+          "subject_run_id": "20261021T170100634Z-cw-focused-claude-invocation-comments-description-existing-39ebc29c-b517-45c5-acfb-82a12f8a67ee-a945a3l_",
+          "global_order": 136,
+          "condition": "description-existing",
+          "repetition": 1,
+          "active_result_id": "claude-discovery-focused-01-invocation-comments-description-existing-1-1-assessment",
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_functional_result": "met",
+          "evaluator_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "evaluator_functional_result": "met",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261021T170158130Z-cw-focused-claude-invocation-comments-description-targeted-34d201b2-8860-46b4-96ac-5df5dc1bb546-r43bctgf",
+          "global_order": 137,
+          "condition": "description-targeted",
+          "repetition": 1,
+          "active_result_id": "claude-discovery-focused-01-invocation-comments-description-targeted-1-1-assessment",
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_functional_result": "met",
+          "evaluator_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "evaluator_functional_result": "met",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261021T170253709Z-cw-focused-claude-invocation-comments-description-rewrite-82de3284-beb6-4872-8f46-e06ce7e50d59-uiivu8lk",
+          "global_order": 138,
+          "condition": "description-rewrite",
+          "repetition": 1,
+          "active_result_id": "claude-discovery-focused-01-invocation-comments-description-rewrite-1-1-assessment",
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_functional_result": "met",
+          "evaluator_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "evaluator_functional_result": "met",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261021T170400648Z-cw-focused-claude-invocation-comments-description-targeted-1debdc7d-b678-4feb-81f2-e564ed53a2fc-yn8amx11",
+          "global_order": 139,
+          "condition": "description-targeted",
+          "repetition": 2,
+          "active_result_id": "claude-discovery-focused-01-invocation-comments-description-targeted-2-1-assessment",
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_functional_result": "met",
+          "evaluator_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "evaluator_functional_result": "met",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261021T170517788Z-cw-focused-claude-invocation-comments-description-rewrite-52131708-fb75-4688-957a-1e3b85783d77-7a70kmbk",
+          "global_order": 140,
+          "condition": "description-rewrite",
+          "repetition": 2,
+          "active_result_id": "claude-discovery-focused-01-invocation-comments-description-rewrite-2-1-assessment",
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_functional_result": "met",
+          "evaluator_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "evaluator_functional_result": "met",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261021T170631798Z-cw-focused-claude-invocation-comments-description-existing-703e0aa6-0e44-4596-a821-128de15eb304-evukrno4",
+          "global_order": 141,
+          "condition": "description-existing",
+          "repetition": 2,
+          "active_result_id": "claude-discovery-focused-01-invocation-comments-description-existing-2-1-assessment",
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_functional_result": "met",
+          "evaluator_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "evaluator_functional_result": "met",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261021T170745789Z-cw-focused-claude-invocation-comments-description-rewrite-b8927e01-580c-4acb-bec3-2a4ce112cbfb-b_vgff8b",
+          "global_order": 142,
+          "condition": "description-rewrite",
+          "repetition": 3,
+          "active_result_id": "claude-discovery-focused-01-invocation-comments-description-rewrite-3-1-assessment",
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_functional_result": "met",
+          "evaluator_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "evaluator_functional_result": "met",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261021T170845148Z-cw-focused-claude-invocation-comments-description-existing-c55340d6-b4d4-4d43-b2e8-8ab4bb97432a-t9qor6pr",
+          "global_order": 143,
+          "condition": "description-existing",
+          "repetition": 3,
+          "active_result_id": "claude-discovery-focused-01-invocation-comments-description-existing-3-1-assessment",
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_functional_result": "met",
+          "evaluator_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "evaluator_functional_result": "met",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261021T170948671Z-cw-focused-claude-invocation-comments-description-targeted-17171b72-59b1-474a-a436-619466999424-1n5wkgyo",
+          "global_order": 144,
+          "condition": "description-targeted",
+          "repetition": 3,
+          "active_result_id": "claude-discovery-focused-01-invocation-comments-description-targeted-3-1-assessment",
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_functional_result": "met",
+          "evaluator_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "evaluator_functional_result": "met",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261021T171102018Z-cw-focused-claude-invocation-comments-description-existing-14d99aa1-1874-40e3-8a69-dd10b9b86a54-80hnzgef",
+          "global_order": 145,
+          "condition": "description-existing",
+          "repetition": 4,
+          "active_result_id": "claude-discovery-focused-01-invocation-comments-description-existing-4-1-assessment",
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_functional_result": "met",
+          "evaluator_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "evaluator_functional_result": "met",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261021T171154306Z-cw-focused-claude-invocation-comments-description-targeted-4c2007e4-48a3-4012-b178-0fd18400c02c-v02jvnko",
+          "global_order": 146,
+          "condition": "description-targeted",
+          "repetition": 4,
+          "active_result_id": "claude-discovery-focused-01-invocation-comments-description-targeted-4-1-assessment",
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_functional_result": "met",
+          "evaluator_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "evaluator_functional_result": "met",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261021T171256697Z-cw-focused-claude-invocation-comments-description-rewrite-c6eda3f1-34ce-42ae-b209-fe127224c6ae-vniybsrr",
+          "global_order": 147,
+          "condition": "description-rewrite",
+          "repetition": 4,
+          "active_result_id": "claude-discovery-focused-01-invocation-comments-description-rewrite-4-1-assessment",
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_functional_result": "met",
+          "evaluator_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "evaluator_functional_result": "met",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261021T171355983Z-cw-focused-claude-invocation-comments-description-targeted-cdd36e44-888d-43d6-8f01-fd18ffbee05b-og3pu8fv",
+          "global_order": 148,
+          "condition": "description-targeted",
+          "repetition": 5,
+          "active_result_id": "claude-discovery-focused-01-invocation-comments-description-targeted-5-1-assessment",
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_functional_result": "met",
+          "evaluator_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "evaluator_functional_result": "met",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261021T171510837Z-cw-focused-claude-invocation-comments-description-rewrite-421c1c54-b854-4468-9c83-5960f0bdbaff-313t3czi",
+          "global_order": 149,
+          "condition": "description-rewrite",
+          "repetition": 5,
+          "active_result_id": "claude-discovery-focused-01-invocation-comments-description-rewrite-5-1-assessment",
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_functional_result": "met",
+          "evaluator_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "evaluator_functional_result": "met",
+          "task_observations": null
+        },
+        {
+          "subject_run_id": "20261021T171645996Z-cw-focused-claude-invocation-comments-description-existing-0efea11f-ba7c-4e6e-9bd4-6283f8aa582c-efn3mqe_",
+          "global_order": 150,
+          "condition": "description-existing",
+          "repetition": 5,
+          "active_result_id": "claude-discovery-focused-01-invocation-comments-description-existing-5-1-assessment",
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_functional_result": "met",
+          "evaluator_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "evaluator_functional_result": "met",
+          "task_observations": null
+        }
+      ],
+      "after_prior_changes": "No F1-F3 factor or condition total changed. After reading prior scores the reviewer corrected shifted per-output narrative labels for description-rewrite reps 1-5: true rep1 had an explicit first-pass factor row but no distinct correct narrative. Original first pass retained; corrected explanations are post-prior, not independently correct first-pass rationales.",
+      "disagreements": [
+        "No factor disagreement. Both accept targeted rep4 accepted-batch/no-resend rationale in complete code context and treat existing rep2 repetition as room to trim, not F3 failure.",
+        "Reviewer post-prior rewrite narrative correction is a review limitation, not a new subject observation or a replacement review. Controller reread all five complete files and confirmed corrected mappings."
+      ],
+      "controller_reconciliation": null,
+      "quality_notes": [
+        "All fifteen pass unchanged parse/executable-token checks and provide useful retry/acknowledgement rationale; no no-CW control and D1 outside packet.",
+        "Existing-description outputs are longer on average and include the wordiest output, but ranges overlap and all use fixed common body; no reliable quality or causal loading advantage established.",
+        "Targeted rep4 implies duplicate consequence from accepted-batch plus no-resend context; both assessors accept meaning without literal keyword.",
+        "Reviewer post-prior loaded/unloaded length hypothesis is confounded by assigned description; it is not a causal contribution finding or authority for another round."
+      ],
+      "transcription_basis": "Manually read the complete first-pass fifteen-row factor table, per-output analysis and final corrected comparison; all factors met. Directly reread all five full rewrite output files to confirm corrected narrative mapping. All required outputs were delivered before independent factor judgments; no pre-prior Grep exposure. Narrative correction after prior exposure remains disclosed."
     }
   ]
 }

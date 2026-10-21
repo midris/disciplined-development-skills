@@ -28,3 +28,6 @@ An unusable review stays charged; no automatic retry, packet split, fallback mod
 All raw packets and review bundles remain in the authorized private store under revised-body-discovery-20261018.
 The six separate host-dependent offline dummy-provider process-smoke failures are tracked in the [inspection amendment](../preparation/native-inspection-amendment.md); they are not real-subject authentication failures and the full runner suite is not claimed green.
 The protocol owns the remaining review allocation and future adoption/regression decisions.
+
+The [comparison and reconciliation](assessment.md) links the [manual judgments](judgments.json), independent first passes and audits.
+It separates fixed-body output quality, native selection, N3 task observations and unresolved interpretation.
