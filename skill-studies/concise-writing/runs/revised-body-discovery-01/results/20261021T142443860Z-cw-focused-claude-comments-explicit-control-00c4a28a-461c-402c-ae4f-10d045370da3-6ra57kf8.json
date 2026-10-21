@@ -1,0 +1,184 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claude-body-focused-01-comments-explicit-control-5-1-assessment",
+  "assessed_at": "2026-10-21T14:25:49.961176+00:00",
+  "run_id": "20261021T142443860Z-cw-focused-claude-comments-explicit-control-00c4a28a-461c-402c-ae4f-10d045370da3-6ra57kf8",
+  "condition": "control",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same Codex controller authored/reviewed exposed development variants and directly judged complete outputs; no blind, held-out or independent assessor claim. Separate Opus review supplements this."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-comments-explicit-manifest.json",
+    "sha256": "20bad94f4a15a2bcb697241d3cea13c4939569170b891b57b09b10589a2d3069",
+    "version": "1",
+    "git_revision": "22fbc374c7f66454db0100a9ed00f73a045dbead"
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T142443860Z-cw-focused-claude-comments-explicit-control-00c4a28a-461c-402c-ae4f-10d045370da3-6ra57kf8/workspace/fixture/uploader.py",
+        "sha256": "70e073f6f32b8889cc41e13e70f48fc0ce6f087dc59f150e4a61ee5a2875f694",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T142443860Z-cw-focused-claude-comments-explicit-control-00c4a28a-461c-402c-ae4f-10d045370da3-6ra57kf8/stdout.txt",
+        "sha256": "182ead78ca95a0e45241cfd31a448e0f314c47d4f0335efbdd05651a6fcf5e0f",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T142443860Z-cw-focused-claude-comments-explicit-control-00c4a28a-461c-402c-ae4f-10d045370da3-6ra57kf8/result.json",
+        "sha256": "44d3d3ea1521e85e471f08cf3947bc952f47a46aa429238b43bf03871b6a3b08",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T142443860Z-cw-focused-claude-comments-explicit-control-00c4a28a-461c-402c-ae4f-10d045370da3-6ra57kf8/runner.log",
+        "sha256": "fd6b3e8304fb04aa191a2e927d386b6fb7902e59f8ef7d8a0d35abe16c1b979d",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T142443860Z-cw-focused-claude-comments-explicit-control-00c4a28a-461c-402c-ae4f-10d045370da3-6ra57kf8/final.txt",
+        "sha256": "4b4039595189bc329a3257b2ab08705f6fd690c328a4e279a179977ed8928070",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-comments/task.md",
+        "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5",
+        "version": null,
+        "git_revision": "dcb8aba30fcbb28563f6db6965d8abb607fd0d97"
+      },
+      "selector": "Complete frozen TASK.md"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-comments/fixture/uploader.py",
+        "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1",
+        "version": null,
+        "git_revision": "dcb8aba30fcbb28563f6db6965d8abb607fd0d97"
+      },
+      "selector": "Complete frozen uploader.py"
+    },
+    {
+      "id": "source-2",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-comments/fixture/MAINTAINER-NOTES.md",
+        "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847",
+        "version": null,
+        "git_revision": "dcb8aba30fcbb28563f6db6965d8abb607fd0d97"
+      },
+      "selector": "Complete frozen MAINTAINER-NOTES.md"
+    },
+    {
+      "id": "task-mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/mechanical/089.json",
+        "sha256": "0dc7d7e14a0c1fe3c6ea86e4421e7083974cc5e8af93f8b57d8f8bbfb5b5910c",
+        "version": null
+      },
+      "selector": "Complete saved parse/token or numeric/reply observation; no subject code execution"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Fixed provider/model/CLI and retained inventory verified. No CW catalog/body exposure. Protected input bytes unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Tokens/syntax are preserved. Comments correctly state four total attempts, temporary-send-only retry with fourth-failure/other-error propagation, and exactly one acknowledgement after acceptance whose errors, including TemporaryUploadError, propagate without retrying send.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Budget/error scope and the acknowledgement boundary are explicit in complete code context. The already-accepted-batch duplicate-upload explanation preserves the supplied maintenance rationale without the notes.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Two focused blocks explain relevant limits and rationale at their code locations. The70comment words are fuller than skill outputs but readable and useful, without extensive per-line narration or disconnected repetition.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Fixed provider/model/CLI and retained inventory verified. No CW catalog/body exposure. Protected input bytes unchanged. O4/O5 remain unscored; native D1 is distinct from functional outcome.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Complete output 104 wc-w words; supplied TASK.md: 47 words, uploader.py: 48 words, MAINTAINER-NOTES.md: 136 words. Counts describe length, not semantic success; comment-only counts are reported separately for N4.",
+      "consequence": "Descriptive counts only.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "Control Claude comments5 explicitly names acknowledgement TemporaryUploadError and duplicate risk, like the fuller peers. All five controls preserve the maintenance trap with more text than the observed skill outputs; length alone does not determine quality.",
+      "consequence": "Qualitative comparison is separate from threshold counts.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    }
+  ],
+  "uncertainty": []
+}
