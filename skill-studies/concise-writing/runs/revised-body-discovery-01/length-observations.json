@@ -2611,6 +2611,831 @@
       "source_comment_words": 20,
       "output_comment_words": 51,
       "length_treatment": "Comment-only counts descriptive; useful maintenance rationale can justify growth."
+    },
+    {
+      "provider": "codex",
+      "batch_id": "codex-discovery-focused-01",
+      "global_order": 91,
+      "run_id": "20261021T153808634Z-cw-focused-codex-invocation-nonprose-description-existing-11831896-ebbe-419e-babd-e768303357e8-arfrigtc",
+      "case": "invocation-nonprose",
+      "condition": "description-existing",
+      "repetition": 1,
+      "complete_output_words": 48,
+      "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071",
+      "inputs": [
+        {
+          "target": "settings.toml",
+          "words": 48,
+          "sha256": "38f8a9ddd2d83dc10d2f3681c0e56663d2fa9907c16e105bcc4d7f3fb387158c"
+        },
+        {
+          "target": "TASK.md",
+          "words": 25,
+          "sha256": "8c960258723b03e87cfdae2fbfbd576c4ff4299206f02c87dcd50e9026c80733"
+        }
+      ],
+      "length_treatment": "Not applicable to numeric-only task; CW functional result not measured."
+    },
+    {
+      "provider": "codex",
+      "batch_id": "codex-discovery-focused-01",
+      "global_order": 92,
+      "run_id": "20261021T153852682Z-cw-focused-codex-invocation-nonprose-description-targeted-0adcc752-5b71-4f52-9351-77cb75fdd3da-iqzlqt2i",
+      "case": "invocation-nonprose",
+      "condition": "description-targeted",
+      "repetition": 1,
+      "complete_output_words": 48,
+      "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071",
+      "inputs": [
+        {
+          "target": "settings.toml",
+          "words": 48,
+          "sha256": "38f8a9ddd2d83dc10d2f3681c0e56663d2fa9907c16e105bcc4d7f3fb387158c"
+        },
+        {
+          "target": "TASK.md",
+          "words": 25,
+          "sha256": "8c960258723b03e87cfdae2fbfbd576c4ff4299206f02c87dcd50e9026c80733"
+        }
+      ],
+      "length_treatment": "Not applicable to numeric-only task; CW functional result not measured."
+    },
+    {
+      "provider": "codex",
+      "batch_id": "codex-discovery-focused-01",
+      "global_order": 93,
+      "run_id": "20261021T153940073Z-cw-focused-codex-invocation-nonprose-description-rewrite-aa4eb6f7-76c5-45c1-930b-10008749e164-k7agp5er",
+      "case": "invocation-nonprose",
+      "condition": "description-rewrite",
+      "repetition": 1,
+      "complete_output_words": 48,
+      "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071",
+      "inputs": [
+        {
+          "target": "settings.toml",
+          "words": 48,
+          "sha256": "38f8a9ddd2d83dc10d2f3681c0e56663d2fa9907c16e105bcc4d7f3fb387158c"
+        },
+        {
+          "target": "TASK.md",
+          "words": 25,
+          "sha256": "8c960258723b03e87cfdae2fbfbd576c4ff4299206f02c87dcd50e9026c80733"
+        }
+      ],
+      "length_treatment": "Not applicable to numeric-only task; CW functional result not measured."
+    },
+    {
+      "provider": "codex",
+      "batch_id": "codex-discovery-focused-01",
+      "global_order": 94,
+      "run_id": "20261021T154029900Z-cw-focused-codex-invocation-nonprose-description-targeted-6b198f7d-d6a7-4827-8295-f60011bf3412-k_jyebnt",
+      "case": "invocation-nonprose",
+      "condition": "description-targeted",
+      "repetition": 2,
+      "complete_output_words": 48,
+      "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071",
+      "inputs": [
+        {
+          "target": "settings.toml",
+          "words": 48,
+          "sha256": "38f8a9ddd2d83dc10d2f3681c0e56663d2fa9907c16e105bcc4d7f3fb387158c"
+        },
+        {
+          "target": "TASK.md",
+          "words": 25,
+          "sha256": "8c960258723b03e87cfdae2fbfbd576c4ff4299206f02c87dcd50e9026c80733"
+        }
+      ],
+      "length_treatment": "Not applicable to numeric-only task; CW functional result not measured."
+    },
+    {
+      "provider": "codex",
+      "batch_id": "codex-discovery-focused-01",
+      "global_order": 95,
+      "run_id": "20261021T154342818Z-cw-focused-codex-invocation-nonprose-description-rewrite-d4dd0e6a-9896-4aa8-9614-0fb3573220f8-4nh163bn",
+      "case": "invocation-nonprose",
+      "condition": "description-rewrite",
+      "repetition": 2,
+      "complete_output_words": 48,
+      "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071",
+      "inputs": [
+        {
+          "target": "settings.toml",
+          "words": 48,
+          "sha256": "38f8a9ddd2d83dc10d2f3681c0e56663d2fa9907c16e105bcc4d7f3fb387158c"
+        },
+        {
+          "target": "TASK.md",
+          "words": 25,
+          "sha256": "8c960258723b03e87cfdae2fbfbd576c4ff4299206f02c87dcd50e9026c80733"
+        }
+      ],
+      "length_treatment": "Not applicable to numeric-only task; CW functional result not measured."
+    },
+    {
+      "provider": "codex",
+      "batch_id": "codex-discovery-focused-01",
+      "global_order": 96,
+      "run_id": "20261021T154420787Z-cw-focused-codex-invocation-nonprose-description-existing-c64e1890-5db3-49ff-8cda-7a5547e45f44-cklgazwy",
+      "case": "invocation-nonprose",
+      "condition": "description-existing",
+      "repetition": 2,
+      "complete_output_words": 48,
+      "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071",
+      "inputs": [
+        {
+          "target": "settings.toml",
+          "words": 48,
+          "sha256": "38f8a9ddd2d83dc10d2f3681c0e56663d2fa9907c16e105bcc4d7f3fb387158c"
+        },
+        {
+          "target": "TASK.md",
+          "words": 25,
+          "sha256": "8c960258723b03e87cfdae2fbfbd576c4ff4299206f02c87dcd50e9026c80733"
+        }
+      ],
+      "length_treatment": "Not applicable to numeric-only task; CW functional result not measured."
+    },
+    {
+      "provider": "codex",
+      "batch_id": "codex-discovery-focused-01",
+      "global_order": 97,
+      "run_id": "20261021T154501933Z-cw-focused-codex-invocation-nonprose-description-rewrite-97090985-3b2f-4a96-8f23-dd80a64bbf39-z1s1pjvu",
+      "case": "invocation-nonprose",
+      "condition": "description-rewrite",
+      "repetition": 3,
+      "complete_output_words": 48,
+      "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071",
+      "inputs": [
+        {
+          "target": "settings.toml",
+          "words": 48,
+          "sha256": "38f8a9ddd2d83dc10d2f3681c0e56663d2fa9907c16e105bcc4d7f3fb387158c"
+        },
+        {
+          "target": "TASK.md",
+          "words": 25,
+          "sha256": "8c960258723b03e87cfdae2fbfbd576c4ff4299206f02c87dcd50e9026c80733"
+        }
+      ],
+      "length_treatment": "Not applicable to numeric-only task; CW functional result not measured."
+    },
+    {
+      "provider": "codex",
+      "batch_id": "codex-discovery-focused-01",
+      "global_order": 98,
+      "run_id": "20261021T154855784Z-cw-focused-codex-invocation-nonprose-description-existing-3e12f8db-9e40-4ded-9ba2-3f07cfc0db7b-80w2l74c",
+      "case": "invocation-nonprose",
+      "condition": "description-existing",
+      "repetition": 3,
+      "complete_output_words": 48,
+      "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071",
+      "inputs": [
+        {
+          "target": "settings.toml",
+          "words": 48,
+          "sha256": "38f8a9ddd2d83dc10d2f3681c0e56663d2fa9907c16e105bcc4d7f3fb387158c"
+        },
+        {
+          "target": "TASK.md",
+          "words": 25,
+          "sha256": "8c960258723b03e87cfdae2fbfbd576c4ff4299206f02c87dcd50e9026c80733"
+        }
+      ],
+      "length_treatment": "Not applicable to numeric-only task; CW functional result not measured."
+    },
+    {
+      "provider": "codex",
+      "batch_id": "codex-discovery-focused-01",
+      "global_order": 99,
+      "run_id": "20261021T154937634Z-cw-focused-codex-invocation-nonprose-description-targeted-a5fd59f4-788a-4ea2-b8c8-33bacdf1d03f-ssss3htb",
+      "case": "invocation-nonprose",
+      "condition": "description-targeted",
+      "repetition": 3,
+      "complete_output_words": 48,
+      "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071",
+      "inputs": [
+        {
+          "target": "settings.toml",
+          "words": 48,
+          "sha256": "38f8a9ddd2d83dc10d2f3681c0e56663d2fa9907c16e105bcc4d7f3fb387158c"
+        },
+        {
+          "target": "TASK.md",
+          "words": 25,
+          "sha256": "8c960258723b03e87cfdae2fbfbd576c4ff4299206f02c87dcd50e9026c80733"
+        }
+      ],
+      "length_treatment": "Not applicable to numeric-only task; CW functional result not measured."
+    },
+    {
+      "provider": "codex",
+      "batch_id": "codex-discovery-focused-01",
+      "global_order": 100,
+      "run_id": "20261021T155015992Z-cw-focused-codex-invocation-nonprose-description-existing-0fef15fa-55fb-483f-bf5a-2e26a1b21d6f-zz_puzw8",
+      "case": "invocation-nonprose",
+      "condition": "description-existing",
+      "repetition": 4,
+      "complete_output_words": 48,
+      "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071",
+      "inputs": [
+        {
+          "target": "settings.toml",
+          "words": 48,
+          "sha256": "38f8a9ddd2d83dc10d2f3681c0e56663d2fa9907c16e105bcc4d7f3fb387158c"
+        },
+        {
+          "target": "TASK.md",
+          "words": 25,
+          "sha256": "8c960258723b03e87cfdae2fbfbd576c4ff4299206f02c87dcd50e9026c80733"
+        }
+      ],
+      "length_treatment": "Not applicable to numeric-only task; CW functional result not measured."
+    },
+    {
+      "provider": "codex",
+      "batch_id": "codex-discovery-focused-01",
+      "global_order": 101,
+      "run_id": "20261021T155350288Z-cw-focused-codex-invocation-nonprose-description-targeted-5ceb1491-e144-4f78-988e-672ad245e880-1d1105fs",
+      "case": "invocation-nonprose",
+      "condition": "description-targeted",
+      "repetition": 4,
+      "complete_output_words": 48,
+      "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071",
+      "inputs": [
+        {
+          "target": "settings.toml",
+          "words": 48,
+          "sha256": "38f8a9ddd2d83dc10d2f3681c0e56663d2fa9907c16e105bcc4d7f3fb387158c"
+        },
+        {
+          "target": "TASK.md",
+          "words": 25,
+          "sha256": "8c960258723b03e87cfdae2fbfbd576c4ff4299206f02c87dcd50e9026c80733"
+        }
+      ],
+      "length_treatment": "Not applicable to numeric-only task; CW functional result not measured."
+    },
+    {
+      "provider": "codex",
+      "batch_id": "codex-discovery-focused-01",
+      "global_order": 102,
+      "run_id": "20261021T155420652Z-cw-focused-codex-invocation-nonprose-description-rewrite-9317499f-343b-4d0f-a2f7-91ae4ee1edfe-vz4v28_q",
+      "case": "invocation-nonprose",
+      "condition": "description-rewrite",
+      "repetition": 4,
+      "complete_output_words": 48,
+      "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071",
+      "inputs": [
+        {
+          "target": "settings.toml",
+          "words": 48,
+          "sha256": "38f8a9ddd2d83dc10d2f3681c0e56663d2fa9907c16e105bcc4d7f3fb387158c"
+        },
+        {
+          "target": "TASK.md",
+          "words": 25,
+          "sha256": "8c960258723b03e87cfdae2fbfbd576c4ff4299206f02c87dcd50e9026c80733"
+        }
+      ],
+      "length_treatment": "Not applicable to numeric-only task; CW functional result not measured."
+    },
+    {
+      "provider": "codex",
+      "batch_id": "codex-discovery-focused-01",
+      "global_order": 103,
+      "run_id": "20261021T155449925Z-cw-focused-codex-invocation-nonprose-description-targeted-4b609a0c-6dce-4608-85fc-e598e174e7fb-ysg1ifyz",
+      "case": "invocation-nonprose",
+      "condition": "description-targeted",
+      "repetition": 5,
+      "complete_output_words": 48,
+      "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071",
+      "inputs": [
+        {
+          "target": "settings.toml",
+          "words": 48,
+          "sha256": "38f8a9ddd2d83dc10d2f3681c0e56663d2fa9907c16e105bcc4d7f3fb387158c"
+        },
+        {
+          "target": "TASK.md",
+          "words": 25,
+          "sha256": "8c960258723b03e87cfdae2fbfbd576c4ff4299206f02c87dcd50e9026c80733"
+        }
+      ],
+      "length_treatment": "Not applicable to numeric-only task; CW functional result not measured."
+    },
+    {
+      "provider": "codex",
+      "batch_id": "codex-discovery-focused-01",
+      "global_order": 104,
+      "run_id": "20261021T155853910Z-cw-focused-codex-invocation-nonprose-description-rewrite-8d8ccd28-aa16-4115-b0dd-d479c9548e27-6g5pukus",
+      "case": "invocation-nonprose",
+      "condition": "description-rewrite",
+      "repetition": 5,
+      "complete_output_words": 48,
+      "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071",
+      "inputs": [
+        {
+          "target": "settings.toml",
+          "words": 48,
+          "sha256": "38f8a9ddd2d83dc10d2f3681c0e56663d2fa9907c16e105bcc4d7f3fb387158c"
+        },
+        {
+          "target": "TASK.md",
+          "words": 25,
+          "sha256": "8c960258723b03e87cfdae2fbfbd576c4ff4299206f02c87dcd50e9026c80733"
+        }
+      ],
+      "length_treatment": "Not applicable to numeric-only task; CW functional result not measured."
+    },
+    {
+      "provider": "codex",
+      "batch_id": "codex-discovery-focused-01",
+      "global_order": 105,
+      "run_id": "20261021T155927378Z-cw-focused-codex-invocation-nonprose-description-existing-52a5eade-80d4-41a7-ac5c-a810c375dcf6-_9vb0em6",
+      "case": "invocation-nonprose",
+      "condition": "description-existing",
+      "repetition": 5,
+      "complete_output_words": 48,
+      "output_sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071",
+      "inputs": [
+        {
+          "target": "settings.toml",
+          "words": 48,
+          "sha256": "38f8a9ddd2d83dc10d2f3681c0e56663d2fa9907c16e105bcc4d7f3fb387158c"
+        },
+        {
+          "target": "TASK.md",
+          "words": 25,
+          "sha256": "8c960258723b03e87cfdae2fbfbd576c4ff4299206f02c87dcd50e9026c80733"
+        }
+      ],
+      "length_treatment": "Not applicable to numeric-only task; CW functional result not measured."
+    },
+    {
+      "provider": "codex",
+      "batch_id": "codex-discovery-focused-01",
+      "global_order": 106,
+      "run_id": "20261021T160304309Z-cw-focused-codex-invocation-comments-description-targeted-313b3c35-7ed8-474e-930c-b9541b9f44f2-2gt1nchx",
+      "case": "invocation-comments",
+      "condition": "description-targeted",
+      "repetition": 1,
+      "complete_output_words": 71,
+      "output_sha256": "83a2909f3caf4629980b7ec0ad7135a48cfd829e6c18935e4debaf799c39f27a",
+      "inputs": [
+        {
+          "target": "TASK.md",
+          "words": 47,
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "target": "uploader.py",
+          "words": 48,
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "target": "MAINTAINER-NOTES.md",
+          "words": 136,
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        }
+      ],
+      "source_comment_words": 20,
+      "output_comment_words": 41,
+      "length_treatment": "Comment-only counts descriptive; useful maintenance rationale can justify growth."
+    },
+    {
+      "provider": "codex",
+      "batch_id": "codex-discovery-focused-01",
+      "global_order": 107,
+      "run_id": "20261021T160428207Z-cw-focused-codex-invocation-comments-description-rewrite-3db1c55c-d7b1-4f98-8aad-946895209a7b-g7axuzx7",
+      "case": "invocation-comments",
+      "condition": "description-rewrite",
+      "repetition": 1,
+      "complete_output_words": 72,
+      "output_sha256": "718c853a9fa0b2fa27e99d3efb7c72861cc819c10b216e09200f11e55b51b0c1",
+      "inputs": [
+        {
+          "target": "TASK.md",
+          "words": 47,
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "target": "uploader.py",
+          "words": 48,
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "target": "MAINTAINER-NOTES.md",
+          "words": 136,
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        }
+      ],
+      "source_comment_words": 20,
+      "output_comment_words": 42,
+      "length_treatment": "Comment-only counts descriptive; useful maintenance rationale can justify growth."
+    },
+    {
+      "provider": "codex",
+      "batch_id": "codex-discovery-focused-01",
+      "global_order": 108,
+      "run_id": "20261021T160514486Z-cw-focused-codex-invocation-comments-description-existing-8ba4b395-43af-4445-bb84-b702cdabe706-4dv3ogrw",
+      "case": "invocation-comments",
+      "condition": "description-existing",
+      "repetition": 1,
+      "complete_output_words": 73,
+      "output_sha256": "e33a3bdd50a360cef8fbf4479fe913c73c487d59507a71ba8af8602f16c08f28",
+      "inputs": [
+        {
+          "target": "TASK.md",
+          "words": 47,
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "target": "uploader.py",
+          "words": 48,
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "target": "MAINTAINER-NOTES.md",
+          "words": 136,
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        }
+      ],
+      "source_comment_words": 20,
+      "output_comment_words": 43,
+      "length_treatment": "Comment-only counts descriptive; useful maintenance rationale can justify growth."
+    },
+    {
+      "provider": "codex",
+      "batch_id": "codex-discovery-focused-01",
+      "global_order": 109,
+      "run_id": "20261021T160559478Z-cw-focused-codex-invocation-comments-description-rewrite-1ddaff97-b0f0-49cf-b09f-33656b833e89-xdvyq317",
+      "case": "invocation-comments",
+      "condition": "description-rewrite",
+      "repetition": 2,
+      "complete_output_words": 73,
+      "output_sha256": "65d1175b34802a853676d5a885c5edfe6f887ec7e82d856a64cd001e2f6fb033",
+      "inputs": [
+        {
+          "target": "TASK.md",
+          "words": 47,
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "target": "uploader.py",
+          "words": 48,
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "target": "MAINTAINER-NOTES.md",
+          "words": 136,
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        }
+      ],
+      "source_comment_words": 20,
+      "output_comment_words": 43,
+      "length_treatment": "Comment-only counts descriptive; useful maintenance rationale can justify growth."
+    },
+    {
+      "provider": "codex",
+      "batch_id": "codex-discovery-focused-01",
+      "global_order": 110,
+      "run_id": "20261021T160904665Z-cw-focused-codex-invocation-comments-description-existing-b975a59a-ce5c-4e83-b0b2-08a200cd15e2-qs7iov1m",
+      "case": "invocation-comments",
+      "condition": "description-existing",
+      "repetition": 2,
+      "complete_output_words": 61,
+      "output_sha256": "67a0a2dcec76026f92fdafb2ce56845a6c54e028acb10e28802c0275605d2fab",
+      "inputs": [
+        {
+          "target": "TASK.md",
+          "words": 47,
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "target": "uploader.py",
+          "words": 48,
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "target": "MAINTAINER-NOTES.md",
+          "words": 136,
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        }
+      ],
+      "source_comment_words": 20,
+      "output_comment_words": 32,
+      "length_treatment": "Comment-only counts descriptive; useful maintenance rationale can justify growth."
+    },
+    {
+      "provider": "codex",
+      "batch_id": "codex-discovery-focused-01",
+      "global_order": 111,
+      "run_id": "20261021T160957265Z-cw-focused-codex-invocation-comments-description-targeted-a3c3f74e-1a4d-4ff7-95dc-354bef68f410-44hq9b4_",
+      "case": "invocation-comments",
+      "condition": "description-targeted",
+      "repetition": 2,
+      "complete_output_words": 78,
+      "output_sha256": "b658d5bb26a77062ac87fafec394e061eb442636b8dcb52dc6d0ec915f49b123",
+      "inputs": [
+        {
+          "target": "TASK.md",
+          "words": 47,
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "target": "uploader.py",
+          "words": 48,
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "target": "MAINTAINER-NOTES.md",
+          "words": 136,
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        }
+      ],
+      "source_comment_words": 20,
+      "output_comment_words": 47,
+      "length_treatment": "Comment-only counts descriptive; useful maintenance rationale can justify growth."
+    },
+    {
+      "provider": "codex",
+      "batch_id": "codex-discovery-focused-01",
+      "global_order": 112,
+      "run_id": "20261021T161121263Z-cw-focused-codex-invocation-comments-description-existing-0af35299-da5c-4345-a036-ad7403e715b9-v0abmk9e",
+      "case": "invocation-comments",
+      "condition": "description-existing",
+      "repetition": 3,
+      "complete_output_words": 70,
+      "output_sha256": "39ee4ba424d7644ff84fdb7ddaad2a0e9171cd14a078f9f422cb8251302eff7f",
+      "inputs": [
+        {
+          "target": "TASK.md",
+          "words": 47,
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "target": "uploader.py",
+          "words": 48,
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "target": "MAINTAINER-NOTES.md",
+          "words": 136,
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        }
+      ],
+      "source_comment_words": 20,
+      "output_comment_words": 40,
+      "length_treatment": "Comment-only counts descriptive; useful maintenance rationale can justify growth."
+    },
+    {
+      "provider": "codex",
+      "batch_id": "codex-discovery-focused-01",
+      "global_order": 113,
+      "run_id": "20261021T161426631Z-cw-focused-codex-invocation-comments-description-targeted-106f688d-55f0-4eb6-bc03-6e10ddcf386a-rcem1aq_",
+      "case": "invocation-comments",
+      "condition": "description-targeted",
+      "repetition": 3,
+      "complete_output_words": 71,
+      "output_sha256": "ca4793281a1a873e57c920c88cf6266be50b370525827efd19732a6b3f648b13",
+      "inputs": [
+        {
+          "target": "TASK.md",
+          "words": 47,
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "target": "uploader.py",
+          "words": 48,
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "target": "MAINTAINER-NOTES.md",
+          "words": 136,
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        }
+      ],
+      "source_comment_words": 20,
+      "output_comment_words": 41,
+      "length_treatment": "Comment-only counts descriptive; useful maintenance rationale can justify growth."
+    },
+    {
+      "provider": "codex",
+      "batch_id": "codex-discovery-focused-01",
+      "global_order": 114,
+      "run_id": "20261021T161518629Z-cw-focused-codex-invocation-comments-description-rewrite-6500cb93-9680-41e8-a68f-fa2459d96889-jjzr16ve",
+      "case": "invocation-comments",
+      "condition": "description-rewrite",
+      "repetition": 3,
+      "complete_output_words": 72,
+      "output_sha256": "6745f69fb8dbf3579c4a04bb1615dd88801bac6f55d0838b1915fcc3d634482f",
+      "inputs": [
+        {
+          "target": "TASK.md",
+          "words": 47,
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "target": "uploader.py",
+          "words": 48,
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "target": "MAINTAINER-NOTES.md",
+          "words": 136,
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        }
+      ],
+      "source_comment_words": 20,
+      "output_comment_words": 42,
+      "length_treatment": "Comment-only counts descriptive; useful maintenance rationale can justify growth."
+    },
+    {
+      "provider": "codex",
+      "batch_id": "codex-discovery-focused-01",
+      "global_order": 115,
+      "run_id": "20261021T161613436Z-cw-focused-codex-invocation-comments-description-targeted-e5e42d63-8ae8-4fa7-b92c-5057a7a6abb4-5n6dinpc",
+      "case": "invocation-comments",
+      "condition": "description-targeted",
+      "repetition": 4,
+      "complete_output_words": 71,
+      "output_sha256": "fd5df46a1ae3de9088df1fc0221e9f6e3bf827631e38781d0a5dc5a432eceb6c",
+      "inputs": [
+        {
+          "target": "TASK.md",
+          "words": 47,
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "target": "uploader.py",
+          "words": 48,
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "target": "MAINTAINER-NOTES.md",
+          "words": 136,
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        }
+      ],
+      "source_comment_words": 20,
+      "output_comment_words": 41,
+      "length_treatment": "Comment-only counts descriptive; useful maintenance rationale can justify growth."
+    },
+    {
+      "provider": "codex",
+      "batch_id": "codex-discovery-focused-01",
+      "global_order": 116,
+      "run_id": "20261021T161857075Z-cw-focused-codex-invocation-comments-description-rewrite-f1688a46-19ca-4603-9dcd-6356e023c092-9pjv1noh",
+      "case": "invocation-comments",
+      "condition": "description-rewrite",
+      "repetition": 4,
+      "complete_output_words": 52,
+      "output_sha256": "cb59f7b1b5ab9f302b0a5715396e50d220e95bd287f1f3e944f09cb3b3e327df",
+      "inputs": [
+        {
+          "target": "TASK.md",
+          "words": 47,
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "target": "uploader.py",
+          "words": 48,
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "target": "MAINTAINER-NOTES.md",
+          "words": 136,
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        }
+      ],
+      "source_comment_words": 20,
+      "output_comment_words": 24,
+      "length_treatment": "Comment-only counts descriptive; useful maintenance rationale can justify growth."
+    },
+    {
+      "provider": "codex",
+      "batch_id": "codex-discovery-focused-01",
+      "global_order": 117,
+      "run_id": "20261021T161956684Z-cw-focused-codex-invocation-comments-description-existing-2424e560-3f69-409f-9bc4-2597f489b60f-7nt2_au3",
+      "case": "invocation-comments",
+      "condition": "description-existing",
+      "repetition": 4,
+      "complete_output_words": 68,
+      "output_sha256": "33bd3f114df78a18587ffbde7bdb989815ca2fd1080b7c9c6fedfe347da26b90",
+      "inputs": [
+        {
+          "target": "TASK.md",
+          "words": 47,
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "target": "uploader.py",
+          "words": 48,
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "target": "MAINTAINER-NOTES.md",
+          "words": 136,
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        }
+      ],
+      "source_comment_words": 20,
+      "output_comment_words": 38,
+      "length_treatment": "Comment-only counts descriptive; useful maintenance rationale can justify growth."
+    },
+    {
+      "provider": "codex",
+      "batch_id": "codex-discovery-focused-01",
+      "global_order": 118,
+      "run_id": "20261021T162047052Z-cw-focused-codex-invocation-comments-description-rewrite-0fb33ce3-2ebf-4b76-9b53-c1fade0f9a0d-d9z2m8q9",
+      "case": "invocation-comments",
+      "condition": "description-rewrite",
+      "repetition": 5,
+      "complete_output_words": 71,
+      "output_sha256": "7ba2cd19827127a0de976c065f0d0652a455f8dda1da81ff58acc92ef9df5f0d",
+      "inputs": [
+        {
+          "target": "TASK.md",
+          "words": 47,
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "target": "uploader.py",
+          "words": 48,
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "target": "MAINTAINER-NOTES.md",
+          "words": 136,
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        }
+      ],
+      "source_comment_words": 20,
+      "output_comment_words": 41,
+      "length_treatment": "Comment-only counts descriptive; useful maintenance rationale can justify growth."
+    },
+    {
+      "provider": "codex",
+      "batch_id": "codex-discovery-focused-01",
+      "global_order": 119,
+      "run_id": "20261021T162412210Z-cw-focused-codex-invocation-comments-description-existing-2f888161-671d-4b92-b65b-71a727873fe4-xhdflj4i",
+      "case": "invocation-comments",
+      "condition": "description-existing",
+      "repetition": 5,
+      "complete_output_words": 72,
+      "output_sha256": "b90ac209ad5bdccacca122fed310f0ac5aa535be8f6c46527c95b5c441cf6a73",
+      "inputs": [
+        {
+          "target": "TASK.md",
+          "words": 47,
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "target": "uploader.py",
+          "words": 48,
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "target": "MAINTAINER-NOTES.md",
+          "words": 136,
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        }
+      ],
+      "source_comment_words": 20,
+      "output_comment_words": 42,
+      "length_treatment": "Comment-only counts descriptive; useful maintenance rationale can justify growth."
+    },
+    {
+      "provider": "codex",
+      "batch_id": "codex-discovery-focused-01",
+      "global_order": 120,
+      "run_id": "20261021T162451384Z-cw-focused-codex-invocation-comments-description-targeted-98606a80-cae4-48f0-8681-d7b025e4a14d-h2w4hbgd",
+      "case": "invocation-comments",
+      "condition": "description-targeted",
+      "repetition": 5,
+      "complete_output_words": 59,
+      "output_sha256": "a5d54c03c18452831f59e6822ba924befc1e028412100d5a1703a1e6bb275817",
+      "inputs": [
+        {
+          "target": "TASK.md",
+          "words": 47,
+          "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+        },
+        {
+          "target": "uploader.py",
+          "words": 48,
+          "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+        },
+        {
+          "target": "MAINTAINER-NOTES.md",
+          "words": 136,
+          "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+        }
+      ],
+      "source_comment_words": 20,
+      "output_comment_words": 30,
+      "length_treatment": "Comment-only counts descriptive; useful maintenance rationale can justify growth."
     }
   ]
 }
