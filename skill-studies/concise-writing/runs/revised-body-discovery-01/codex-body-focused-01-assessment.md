@@ -3,7 +3,7 @@
 Format version: `2`
 Assessment ID: cw-codex-body-focused-01
 Study / batch: concise-writing / codex-body-focused-01
-Status: complete active assessment; separate Opus review pending
+Status: complete active assessment; cross-model review is recorded separately.
 Scope and acceptance rules: [protocol](../../protocol.md) at Git `a76451b6d2e359c006dabe35f2ae2208c5a23bad`, codex-body-focused-01; CW-expanded-1, prospective case cards and interpretation supplement, frozen together in the manifests.
 Attempt index: [codex-body-focused-01-run-index.json](codex-body-focused-01-run-index.json) at Git `9a627c91a2ef10cea5b1fa0ba13ab37de3dc7422`, SHA-256 `a2e7419eb9d492324444dd7049a85fb8da1ff5013c6e5fa0e6c71c1cfa57e81b`.
 Assessor and relevant session context: Codex controller with exposed development and authoring history, judging complete outputs against all source/task/authorized-note inputs; neither blind nor independent. Separate Opus review supplements these judgments.
@@ -101,5 +101,5 @@ Control E repetition 5 has less explicit sequencing between investigation and re
 Comments: all conditions replace narration with useful retry/acknowledgement guidance, with unchanged executable code. Original and revised are similarly compact; some controls explain early success, exception propagation and duplicate prevention more fully.
 A few passing comments convey acceptance/no-resend risk through code context without the literal word duplicate. More explicit rationale can be clearer, but no literal phrase is required.
 The detailed result observations preserve these differences; equal pass counts do not establish output-quality equivalence or justify adoption.
-Claude body subjects, both native discovery comparisons and all ten Opus reviews remain outstanding. The protocol owns the pending Claude CLI substitution decision and current allocation.
+This assessment covers the Codex body stratum only; the [protocol](../../protocol.md) owns runtime authority, other strata, cross-model review and current next action.
 Complete the unchanged fixed focused stage before any wording revision or later regression decision; no live-skill adoption, extra calls, automatic replacements or selective reruns follow from this assessment.

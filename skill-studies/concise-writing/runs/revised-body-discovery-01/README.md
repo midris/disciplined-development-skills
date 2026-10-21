@@ -12,3 +12,5 @@ The protocol owns accepted runtime strata and collection authority.
 [Length observations](length-observations.json) give descriptive per-output counts, signed changes and longer flags where applicable; they do not supply semantic grades.
 
 The [Codex body assessment](codex-body-focused-01-assessment.md) links the final [attempt index](codex-body-focused-01-run-index.json), frozen result citations and comparative observations.
+
+The [Claude body assessment](claude-body-focused-01-assessment.md) links its final [attempt index](claude-body-focused-01-run-index.json), frozen result citations and provider-specific quality observations.

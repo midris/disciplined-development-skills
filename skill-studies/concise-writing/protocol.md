@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `concise-writing`
 Status: all ninety focused body subjects are complete and directly assessed: 45 Codex and 45 Claude, with five repetitions per case/condition/provider. Both runtimes remain qualified, with no setup exclusions or retries. Live skills are unchanged and adoption remains deferred.
-Current action: publish the completed Claude body assessment and compare it with the [Codex assessment](runs/revised-body-discovery-01/codex-body-focused-01-assessment.md). All three cases pass five repetitions per condition on both providers; concrete quality differences remain separate from these thresholds. The next allocated stage is native discovery slots 91–150, followed by ten Opus 5.5 medium reviews. The owner accepted the qualified Claude 2.1.305 substitution for removed 2.1.301 by directing continuation on 2026-10-21; [runtime acceptance](runs/revised-body-discovery-01/preparation/runtime-recheck-20261021.json) retains the quote, checks and unchanged models/efforts/ceilings. Later regression, automatic retries, further wording changes and adoption remain unapproved.
+Current action: the next allocated work is native discovery slots 91–150, followed by ten Opus 5.5 medium reviews. The [Codex](runs/revised-body-discovery-01/codex-body-focused-01-assessment.md) and [Claude](runs/revised-body-discovery-01/claude-body-focused-01-assessment.md) body assessments are complete, with all three cases passing five repetitions per condition/provider; concrete quality differences remain separate from those thresholds. The owner accepted the qualified Claude 2.1.305 substitution for removed 2.1.301 by directing continuation on 2026-10-21; [runtime acceptance](runs/revised-body-discovery-01/preparation/runtime-recheck-20261021.json) retains the quote, checks and unchanged models/efforts/ceilings. Later regression, automatic retries, further wording changes and adoption remain unapproved.
 The approved [core/runs directory layout](../../plans/specs/2026-10-18-study-directory-layout.md) is implemented and verified for both studies; [navigation](README.md) separates core guidance from collected evidence.
 On 2026-10-18 the owner replied “ok, let’s do it” to the concrete remaining allocation of 144 subject calls plus fourteen evaluator calls. This accepts unchanged targeted/fuller bodies, fresh original/control comparisons, three repetitions per selected condition/provider and reuse of the separate completed E stratum while input/runtime qualification holds.
 The authorized sequence is 72 ordinary A/B/C subjects, then 72 native N1–N4 subjects, plus six ordinary and eight native Opus 5.5 medium reviews.
@@ -848,7 +848,7 @@ Runtime: pinned existing CLI/model/toolchain, qualified before dispatch; body co
 Acceptance: complete fixed-stage descriptive outcomes with concrete source/output evidence; no reliability threshold, word-count gate or forced failure on a disputed paraphrase.
 Include all valid-setup executions regardless of outcome. No automatic retry; disclose exclusions, uncertainty and unattempted slots.
 Stop on infrastructure, contamination, capture/retention failure, input/runtime drift or uncertain charge; retain every valid behavioral miss.
-Record: [index](runs/revised-body-discovery-01/claude-body-focused-01-run-index.json).
+Record: [index](runs/revised-body-discovery-01/claude-body-focused-01-run-index.json), [assessment](runs/revised-body-discovery-01/claude-body-focused-01-assessment.md).
 Global ordering: all 90 body subjects precede all 60 discovery subjects; [schedule](runs/revised-body-discovery-01/preparation/schedule.json).
 
 | Order | Case | Condition | Repetition | CONFIG |
@@ -1185,23 +1185,31 @@ A later diagnosis or rewrite needs its own bounded estimate and any new model-ca
 
 ## Results and decision
 
-### Focused revised body: completed Codex stratum
+### Focused revised body: completed provider strata
 
-The [assessment](runs/revised-body-discovery-01/codex-body-focused-01-assessment.md) pins the final index and all 45 unchanged result records.
-Each condition has five fresh contexts per case, with all F1–F3 factors met, no setup exclusions, unknowns or retries.
+The [Codex assessment](runs/revised-body-discovery-01/codex-body-focused-01-assessment.md) and [Claude assessment](runs/revised-body-discovery-01/claude-body-focused-01-assessment.md) pin their final indexes and all ninety unchanged result records.
+Each condition has five fresh contexts per case/provider, with all F1–F3 factors met, no setup exclusions, unknowns or retries.
 
-| Case | No CW | Original | Revised targeted-examples |
+| Provider / case | No CW | Original | Revised targeted-examples |
 | --- | ---: | ---: | ---: |
-| Long handoff | 5/5 | 5/5 | 5/5 |
-| Document addition | 5/5 | 5/5 | 5/5 |
-| Explicit comments | 5/5 | 5/5 | 5/5 |
+| Codex / long handoff | 5/5 | 5/5 | 5/5 |
+| Codex / document addition | 5/5 | 5/5 | 5/5 |
+| Codex / explicit comments | 5/5 | 5/5 | 5/5 |
+| Claude / long handoff | 5/5 | 5/5 | 5/5 |
+| Claude / document addition | 5/5 | 5/5 | 5/5 |
+| Claude / explicit comments | 5/5 | 5/5 | 5/5 |
 
-All thirty skill-bearing attempts received the complete assigned body before editing; controls received no CW catalog/body.
-All fifteen comment outputs preserve executable tokens and syntax; no generated code was executed.
-Skill-bearing handoffs more consistently retain explicit diagnostic rationale; some controls provide particularly scannable lists, and their comment explanations are often fuller.
-Original and revised bodies show no consistent consequential quality difference here; threshold ties do not establish equivalence or authorize adoption.
-The assessment preserves precision and layout observations alongside descriptive length counts.
-Claude body, both native discovery strata and all ten Opus reviews remain outstanding; current next action and runtime authority are at the top of this protocol.
+All sixty skill-bearing attempts received the complete assigned body before editing; all thirty controls received no CW catalog/body.
+All thirty comment outputs preserve executable tokens and syntax; no generated code was executed for assessment.
+In Claude handoffs, both skill bodies remove the detached mechanism reminder in all ten outputs, while all five controls retain it; the latter remain readable, with residual redundancy recorded as a quality weakness.
+Codex skill-bearing handoffs more consistently retain explicit diagnostic rationale, while some controls use particularly scannable lists.
+Both providers' additions preserve evidence uncertainty and the full invitation, incident and review workflow; contact confirmation remains adequate under the owner-selected interpretation, with explicit recording more precise.
+Claude comments explicitly name duplicate-upload risk in five of five revised outputs and three of five originals; the other originals convey the accepted-batch/no-resend relation adequately in code context.
+Controls generally give fuller comment explanations; both skill bodies are more compact, with useful detail and precision trade-offs retained in the assessments.
+No consistent consequential overall revised-body advantage is established; threshold ties alone do not establish equivalent quality or authorize adoption of either body.
+The original and revised complete skills are 860 and 971 words respectively; the shorter-SKILL.md tie-break remains conditional on reconciled effectiveness and quality.
+Claude Code 2.1.305 observations remain separate from prior 2.1.301 strata; these are exposed development observations, not pooled reliability estimates.
+Current discovery/evaluation progress and authority are owned by the opening of this protocol.
 
 ### Evaluation-guideline application audit
 

@@ -1,0 +1,118 @@
+# Claude focused CW body comparison: assessment
+
+Format version: `2`
+Assessment ID: cw-claude-body-focused-01
+Study / batch: concise-writing / claude-body-focused-01
+Status: complete active assessment; cross-model review is recorded separately.
+Scope and acceptance rules: [protocol](../../protocol.md) at Git `cce369e72d0a11f14daf3ab91aa4c65e158dffbe`, claude-body-focused-01; CW-expanded-1, prospective case cards and interpretation supplement, frozen together in the manifests.
+Attempt index: [claude-body-focused-01-run-index.json](claude-body-focused-01-run-index.json) at Git `9aa5adf724b666debb5e6ea7248501caf6f9a0ff`, SHA-256 `0004709bd9ffb629bfbadf3d5e566284d3d158729307482f37b5e0028df2b306`.
+Assessor and relevant session context: Codex controller with exposed development and authoring history, judging complete outputs against all source/task/authorized-note inputs; neither blind nor independent. Separate Opus review supplements these judgments.
+
+## Coverage and execution results
+
+All 45 fixed subjects are retained, inspected and directly assessed, with five fresh contexts per case/condition.
+No retries, setup exclusions, capture failures, unresolved charges, unknown factor judgments or unattempted slots in this batch.
+Runtime: Claude Code 2.1.305 / claude-sonnet-5 low, workspace-write and 900-second timeout, with pinned Python 3.14.8 / Git 2.56.0; backend weights are not immutable.
+Every skill-bearing attempt received the complete assigned body before its first task edit; controls received no CW catalog or body.
+Inventories, protected supplied files and model/runtime identities were checked after each attempt; no Git operation ran in retained bundles.
+Runner durations total 1,604.044 seconds. Estimated collection/assessment effort is booked once in the protocol ledger.
+All fifteen comment outputs preserve executable tokens and valid syntax; output code was parsed/tokenized, never executed.
+Fixed cyclic condition rotation over five repetitions cannot fully balance three conditions; results are exposed development evidence, not randomized or reliability estimates.
+
+| Case / condition | Planned | Attempted | Included | Invalid setup | Setup unresolved | Unattempted |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| long-handoff / control | 5 | 5 | 5 | 0 | 0 | 0 |
+| long-handoff / original | 5 | 5 | 5 | 0 | 0 | 0 |
+| long-handoff / candidate-targeted-examples | 5 | 5 | 5 | 0 | 0 | 0 |
+| document-addition / control | 5 | 5 | 5 | 0 | 0 | 0 |
+| document-addition / original | 5 | 5 | 5 | 0 | 0 | 0 |
+| document-addition / candidate-targeted-examples | 5 | 5 | 5 | 0 | 0 | 0 |
+| comments-explicit / control | 5 | 5 | 5 | 0 | 0 | 0 |
+| comments-explicit / original | 5 | 5 | 5 | 0 | 0 | 0 |
+| comments-explicit / candidate-targeted-examples | 5 | 5 | 5 | 0 | 0 | 0 |
+
+## Aggregate results
+
+| Case / condition / criterion | Met | Not met | Insufficient evidence | Not measured | Evidence |
+| --- | ---: | ---: | ---: | ---: | --- |
+| long-handoff / control / F1 | 5 | 0 | 0 | 0 | `claude-body-focused-01-long-handoff-control-1-1-assessment`, `claude-body-focused-01-long-handoff-control-2-1-assessment`, `claude-body-focused-01-long-handoff-control-3-1-assessment`, `claude-body-focused-01-long-handoff-control-4-1-assessment`, `claude-body-focused-01-long-handoff-control-5-1-assessment` |
+| long-handoff / control / F2 | 5 | 0 | 0 | 0 | `claude-body-focused-01-long-handoff-control-1-1-assessment`, `claude-body-focused-01-long-handoff-control-2-1-assessment`, `claude-body-focused-01-long-handoff-control-3-1-assessment`, `claude-body-focused-01-long-handoff-control-4-1-assessment`, `claude-body-focused-01-long-handoff-control-5-1-assessment` |
+| long-handoff / control / F3 | 5 | 0 | 0 | 0 | `claude-body-focused-01-long-handoff-control-1-1-assessment`, `claude-body-focused-01-long-handoff-control-2-1-assessment`, `claude-body-focused-01-long-handoff-control-3-1-assessment`, `claude-body-focused-01-long-handoff-control-4-1-assessment`, `claude-body-focused-01-long-handoff-control-5-1-assessment` |
+| long-handoff / control / functional outcome | 5 | 0 | 0 | 0 | `claude-body-focused-01-long-handoff-control-1-1-assessment`, `claude-body-focused-01-long-handoff-control-2-1-assessment`, `claude-body-focused-01-long-handoff-control-3-1-assessment`, `claude-body-focused-01-long-handoff-control-4-1-assessment`, `claude-body-focused-01-long-handoff-control-5-1-assessment` |
+| long-handoff / original / F1 | 5 | 0 | 0 | 0 | `claude-body-focused-01-long-handoff-original-1-1-assessment`, `claude-body-focused-01-long-handoff-original-2-1-assessment`, `claude-body-focused-01-long-handoff-original-3-1-assessment`, `claude-body-focused-01-long-handoff-original-4-1-assessment`, `claude-body-focused-01-long-handoff-original-5-1-assessment` |
+| long-handoff / original / F2 | 5 | 0 | 0 | 0 | `claude-body-focused-01-long-handoff-original-1-1-assessment`, `claude-body-focused-01-long-handoff-original-2-1-assessment`, `claude-body-focused-01-long-handoff-original-3-1-assessment`, `claude-body-focused-01-long-handoff-original-4-1-assessment`, `claude-body-focused-01-long-handoff-original-5-1-assessment` |
+| long-handoff / original / F3 | 5 | 0 | 0 | 0 | `claude-body-focused-01-long-handoff-original-1-1-assessment`, `claude-body-focused-01-long-handoff-original-2-1-assessment`, `claude-body-focused-01-long-handoff-original-3-1-assessment`, `claude-body-focused-01-long-handoff-original-4-1-assessment`, `claude-body-focused-01-long-handoff-original-5-1-assessment` |
+| long-handoff / original / functional outcome | 5 | 0 | 0 | 0 | `claude-body-focused-01-long-handoff-original-1-1-assessment`, `claude-body-focused-01-long-handoff-original-2-1-assessment`, `claude-body-focused-01-long-handoff-original-3-1-assessment`, `claude-body-focused-01-long-handoff-original-4-1-assessment`, `claude-body-focused-01-long-handoff-original-5-1-assessment` |
+| long-handoff / candidate-targeted-examples / F1 | 5 | 0 | 0 | 0 | `claude-body-focused-01-long-handoff-candidate-targeted-examples-1-1-assessment`, `claude-body-focused-01-long-handoff-candidate-targeted-examples-2-1-assessment`, `claude-body-focused-01-long-handoff-candidate-targeted-examples-3-1-assessment`, `claude-body-focused-01-long-handoff-candidate-targeted-examples-4-1-assessment`, `claude-body-focused-01-long-handoff-candidate-targeted-examples-5-1-assessment` |
+| long-handoff / candidate-targeted-examples / F2 | 5 | 0 | 0 | 0 | `claude-body-focused-01-long-handoff-candidate-targeted-examples-1-1-assessment`, `claude-body-focused-01-long-handoff-candidate-targeted-examples-2-1-assessment`, `claude-body-focused-01-long-handoff-candidate-targeted-examples-3-1-assessment`, `claude-body-focused-01-long-handoff-candidate-targeted-examples-4-1-assessment`, `claude-body-focused-01-long-handoff-candidate-targeted-examples-5-1-assessment` |
+| long-handoff / candidate-targeted-examples / F3 | 5 | 0 | 0 | 0 | `claude-body-focused-01-long-handoff-candidate-targeted-examples-1-1-assessment`, `claude-body-focused-01-long-handoff-candidate-targeted-examples-2-1-assessment`, `claude-body-focused-01-long-handoff-candidate-targeted-examples-3-1-assessment`, `claude-body-focused-01-long-handoff-candidate-targeted-examples-4-1-assessment`, `claude-body-focused-01-long-handoff-candidate-targeted-examples-5-1-assessment` |
+| long-handoff / candidate-targeted-examples / functional outcome | 5 | 0 | 0 | 0 | `claude-body-focused-01-long-handoff-candidate-targeted-examples-1-1-assessment`, `claude-body-focused-01-long-handoff-candidate-targeted-examples-2-1-assessment`, `claude-body-focused-01-long-handoff-candidate-targeted-examples-3-1-assessment`, `claude-body-focused-01-long-handoff-candidate-targeted-examples-4-1-assessment`, `claude-body-focused-01-long-handoff-candidate-targeted-examples-5-1-assessment` |
+| document-addition / control / F1 | 5 | 0 | 0 | 0 | `claude-body-focused-01-document-addition-control-1-1-assessment`, `claude-body-focused-01-document-addition-control-2-1-assessment`, `claude-body-focused-01-document-addition-control-3-1-assessment`, `claude-body-focused-01-document-addition-control-4-1-assessment`, `claude-body-focused-01-document-addition-control-5-1-assessment` |
+| document-addition / control / F2 | 5 | 0 | 0 | 0 | `claude-body-focused-01-document-addition-control-1-1-assessment`, `claude-body-focused-01-document-addition-control-2-1-assessment`, `claude-body-focused-01-document-addition-control-3-1-assessment`, `claude-body-focused-01-document-addition-control-4-1-assessment`, `claude-body-focused-01-document-addition-control-5-1-assessment` |
+| document-addition / control / F3 | 5 | 0 | 0 | 0 | `claude-body-focused-01-document-addition-control-1-1-assessment`, `claude-body-focused-01-document-addition-control-2-1-assessment`, `claude-body-focused-01-document-addition-control-3-1-assessment`, `claude-body-focused-01-document-addition-control-4-1-assessment`, `claude-body-focused-01-document-addition-control-5-1-assessment` |
+| document-addition / control / functional outcome | 5 | 0 | 0 | 0 | `claude-body-focused-01-document-addition-control-1-1-assessment`, `claude-body-focused-01-document-addition-control-2-1-assessment`, `claude-body-focused-01-document-addition-control-3-1-assessment`, `claude-body-focused-01-document-addition-control-4-1-assessment`, `claude-body-focused-01-document-addition-control-5-1-assessment` |
+| document-addition / original / F1 | 5 | 0 | 0 | 0 | `claude-body-focused-01-document-addition-original-1-1-assessment`, `claude-body-focused-01-document-addition-original-2-1-assessment`, `claude-body-focused-01-document-addition-original-3-1-assessment`, `claude-body-focused-01-document-addition-original-4-1-assessment`, `claude-body-focused-01-document-addition-original-5-1-assessment` |
+| document-addition / original / F2 | 5 | 0 | 0 | 0 | `claude-body-focused-01-document-addition-original-1-1-assessment`, `claude-body-focused-01-document-addition-original-2-1-assessment`, `claude-body-focused-01-document-addition-original-3-1-assessment`, `claude-body-focused-01-document-addition-original-4-1-assessment`, `claude-body-focused-01-document-addition-original-5-1-assessment` |
+| document-addition / original / F3 | 5 | 0 | 0 | 0 | `claude-body-focused-01-document-addition-original-1-1-assessment`, `claude-body-focused-01-document-addition-original-2-1-assessment`, `claude-body-focused-01-document-addition-original-3-1-assessment`, `claude-body-focused-01-document-addition-original-4-1-assessment`, `claude-body-focused-01-document-addition-original-5-1-assessment` |
+| document-addition / original / functional outcome | 5 | 0 | 0 | 0 | `claude-body-focused-01-document-addition-original-1-1-assessment`, `claude-body-focused-01-document-addition-original-2-1-assessment`, `claude-body-focused-01-document-addition-original-3-1-assessment`, `claude-body-focused-01-document-addition-original-4-1-assessment`, `claude-body-focused-01-document-addition-original-5-1-assessment` |
+| document-addition / candidate-targeted-examples / F1 | 5 | 0 | 0 | 0 | `claude-body-focused-01-document-addition-candidate-targeted-examples-1-1-assessment`, `claude-body-focused-01-document-addition-candidate-targeted-examples-2-1-assessment`, `claude-body-focused-01-document-addition-candidate-targeted-examples-3-1-assessment`, `claude-body-focused-01-document-addition-candidate-targeted-examples-4-1-assessment`, `claude-body-focused-01-document-addition-candidate-targeted-examples-5-1-assessment` |
+| document-addition / candidate-targeted-examples / F2 | 5 | 0 | 0 | 0 | `claude-body-focused-01-document-addition-candidate-targeted-examples-1-1-assessment`, `claude-body-focused-01-document-addition-candidate-targeted-examples-2-1-assessment`, `claude-body-focused-01-document-addition-candidate-targeted-examples-3-1-assessment`, `claude-body-focused-01-document-addition-candidate-targeted-examples-4-1-assessment`, `claude-body-focused-01-document-addition-candidate-targeted-examples-5-1-assessment` |
+| document-addition / candidate-targeted-examples / F3 | 5 | 0 | 0 | 0 | `claude-body-focused-01-document-addition-candidate-targeted-examples-1-1-assessment`, `claude-body-focused-01-document-addition-candidate-targeted-examples-2-1-assessment`, `claude-body-focused-01-document-addition-candidate-targeted-examples-3-1-assessment`, `claude-body-focused-01-document-addition-candidate-targeted-examples-4-1-assessment`, `claude-body-focused-01-document-addition-candidate-targeted-examples-5-1-assessment` |
+| document-addition / candidate-targeted-examples / functional outcome | 5 | 0 | 0 | 0 | `claude-body-focused-01-document-addition-candidate-targeted-examples-1-1-assessment`, `claude-body-focused-01-document-addition-candidate-targeted-examples-2-1-assessment`, `claude-body-focused-01-document-addition-candidate-targeted-examples-3-1-assessment`, `claude-body-focused-01-document-addition-candidate-targeted-examples-4-1-assessment`, `claude-body-focused-01-document-addition-candidate-targeted-examples-5-1-assessment` |
+| comments-explicit / control / F1 | 5 | 0 | 0 | 0 | `claude-body-focused-01-comments-explicit-control-1-1-assessment`, `claude-body-focused-01-comments-explicit-control-2-1-assessment`, `claude-body-focused-01-comments-explicit-control-3-1-assessment`, `claude-body-focused-01-comments-explicit-control-4-1-assessment`, `claude-body-focused-01-comments-explicit-control-5-1-assessment` |
+| comments-explicit / control / F2 | 5 | 0 | 0 | 0 | `claude-body-focused-01-comments-explicit-control-1-1-assessment`, `claude-body-focused-01-comments-explicit-control-2-1-assessment`, `claude-body-focused-01-comments-explicit-control-3-1-assessment`, `claude-body-focused-01-comments-explicit-control-4-1-assessment`, `claude-body-focused-01-comments-explicit-control-5-1-assessment` |
+| comments-explicit / control / F3 | 5 | 0 | 0 | 0 | `claude-body-focused-01-comments-explicit-control-1-1-assessment`, `claude-body-focused-01-comments-explicit-control-2-1-assessment`, `claude-body-focused-01-comments-explicit-control-3-1-assessment`, `claude-body-focused-01-comments-explicit-control-4-1-assessment`, `claude-body-focused-01-comments-explicit-control-5-1-assessment` |
+| comments-explicit / control / functional outcome | 5 | 0 | 0 | 0 | `claude-body-focused-01-comments-explicit-control-1-1-assessment`, `claude-body-focused-01-comments-explicit-control-2-1-assessment`, `claude-body-focused-01-comments-explicit-control-3-1-assessment`, `claude-body-focused-01-comments-explicit-control-4-1-assessment`, `claude-body-focused-01-comments-explicit-control-5-1-assessment` |
+| comments-explicit / original / F1 | 5 | 0 | 0 | 0 | `claude-body-focused-01-comments-explicit-original-1-1-assessment`, `claude-body-focused-01-comments-explicit-original-2-1-assessment`, `claude-body-focused-01-comments-explicit-original-3-1-assessment`, `claude-body-focused-01-comments-explicit-original-4-1-assessment`, `claude-body-focused-01-comments-explicit-original-5-1-assessment` |
+| comments-explicit / original / F2 | 5 | 0 | 0 | 0 | `claude-body-focused-01-comments-explicit-original-1-1-assessment`, `claude-body-focused-01-comments-explicit-original-2-1-assessment`, `claude-body-focused-01-comments-explicit-original-3-1-assessment`, `claude-body-focused-01-comments-explicit-original-4-1-assessment`, `claude-body-focused-01-comments-explicit-original-5-1-assessment` |
+| comments-explicit / original / F3 | 5 | 0 | 0 | 0 | `claude-body-focused-01-comments-explicit-original-1-1-assessment`, `claude-body-focused-01-comments-explicit-original-2-1-assessment`, `claude-body-focused-01-comments-explicit-original-3-1-assessment`, `claude-body-focused-01-comments-explicit-original-4-1-assessment`, `claude-body-focused-01-comments-explicit-original-5-1-assessment` |
+| comments-explicit / original / functional outcome | 5 | 0 | 0 | 0 | `claude-body-focused-01-comments-explicit-original-1-1-assessment`, `claude-body-focused-01-comments-explicit-original-2-1-assessment`, `claude-body-focused-01-comments-explicit-original-3-1-assessment`, `claude-body-focused-01-comments-explicit-original-4-1-assessment`, `claude-body-focused-01-comments-explicit-original-5-1-assessment` |
+| comments-explicit / candidate-targeted-examples / F1 | 5 | 0 | 0 | 0 | `claude-body-focused-01-comments-explicit-candidate-targeted-examples-1-1-assessment`, `claude-body-focused-01-comments-explicit-candidate-targeted-examples-2-1-assessment`, `claude-body-focused-01-comments-explicit-candidate-targeted-examples-3-1-assessment`, `claude-body-focused-01-comments-explicit-candidate-targeted-examples-4-1-assessment`, `claude-body-focused-01-comments-explicit-candidate-targeted-examples-5-1-assessment` |
+| comments-explicit / candidate-targeted-examples / F2 | 5 | 0 | 0 | 0 | `claude-body-focused-01-comments-explicit-candidate-targeted-examples-1-1-assessment`, `claude-body-focused-01-comments-explicit-candidate-targeted-examples-2-1-assessment`, `claude-body-focused-01-comments-explicit-candidate-targeted-examples-3-1-assessment`, `claude-body-focused-01-comments-explicit-candidate-targeted-examples-4-1-assessment`, `claude-body-focused-01-comments-explicit-candidate-targeted-examples-5-1-assessment` |
+| comments-explicit / candidate-targeted-examples / F3 | 5 | 0 | 0 | 0 | `claude-body-focused-01-comments-explicit-candidate-targeted-examples-1-1-assessment`, `claude-body-focused-01-comments-explicit-candidate-targeted-examples-2-1-assessment`, `claude-body-focused-01-comments-explicit-candidate-targeted-examples-3-1-assessment`, `claude-body-focused-01-comments-explicit-candidate-targeted-examples-4-1-assessment`, `claude-body-focused-01-comments-explicit-candidate-targeted-examples-5-1-assessment` |
+| comments-explicit / candidate-targeted-examples / functional outcome | 5 | 0 | 0 | 0 | `claude-body-focused-01-comments-explicit-candidate-targeted-examples-1-1-assessment`, `claude-body-focused-01-comments-explicit-candidate-targeted-examples-2-1-assessment`, `claude-body-focused-01-comments-explicit-candidate-targeted-examples-3-1-assessment`, `claude-body-focused-01-comments-explicit-candidate-targeted-examples-4-1-assessment`, `claude-body-focused-01-comments-explicit-candidate-targeted-examples-5-1-assessment` |
+
+## Length observations
+
+Exact per-output counts and source identities are in [length observations](length-observations.json).
+Counts do not substitute for correctness, reader purpose or readability; shorter output is not automatically better.
+
+| Case and condition | Source words | Output range | Treatment |
+| --- | ---: | ---: | --- |
+| long-handoff / control | 1207 | 1136–1166 | 0 longer outputs; signed changes retained. |
+| long-handoff / original | 1207 | 962–1080 | 0 longer outputs; signed changes retained. |
+| long-handoff / candidate-targeted-examples | 1207 | 1041–1061 | 0 longer outputs; signed changes retained. |
+| document-addition / control | 279 | 381–398 | Required additions; descriptive growth, no shortening preference. |
+| document-addition / original | 279 | 356–363 | Required additions; descriptive growth, no shortening preference. |
+| document-addition / candidate-targeted-examples | 279 | 353–362 | Required additions; descriptive growth, no shortening preference. |
+| comments-explicit / control | 20 | 63–100 | Comment-only counts; useful rationale can justify growth. |
+| comments-explicit / original | 20 | 41–51 | Comment-only counts; useful rationale can justify growth. |
+| comments-explicit / candidate-targeted-examples | 20 | 44–60 | Comment-only counts; useful rationale can justify growth. |
+
+## Comparison and next decision
+
+Every condition passes five of five repetitions on each selected case. These tied thresholds do not establish equal output quality or an adoption choice.
+
+C: both skill bodies remove the detached implementation reminder in all ten outputs; all five controls retain it. The controls remain readable under the fixed whole-artifact boundary, but keep avoidable material.
+Some controls and skill outputs use denser multi-condition paragraphs; neither body consistently improves layout over the other.
+Original repetition 3 leaves batch-retry availability implicit in the cursor mechanism and omits the commentary that token-retention rationale is unexplained. Its operative safeguards remain adequate; the report records reduced explanatory precision rather than failing changed wording alone.
+Both bodies preserve independently usable Deployment/Rollback safeguards, exact timing and latency boundaries, unresolved batch state, diagnostic evidence and incoming acceptance.
+
+E: all fifteen reports preserve evidence uncertainty, scale limits, invitation gates, restricted incident evidence, affected-team pause, precaution versus confirmed defect, other-team policy, investigation-plus-approval resumption and expanded review inputs.
+Controls retain fuller incident wording and explicit contact recording. Original and revised outputs usually consolidate the incident paragraph and alternate contact-on-record with the owner-accepted named-contact confirmation.
+Layouts and compactness are close between the two skill bodies; no consistent consequential advantage is demonstrated.
+Revised repetition 4 uses a compact precaution/not-confirmed-defect phrase. Its potential-report workflow remains faithful in complete context; fuller peers express the relation more precisely.
+
+Comments: all fifteen outputs preserve executable tokens and syntax and convey the retry/acknowledgement boundary. No subject code was executed to assess these outputs.
+Comment-only counts are 41–51 original, 44–60 revised and 63–100 control words; useful rationale can justify growth from the twenty-word source.
+Revised explicitly names duplicate-upload risk in five of five outputs, versus three of five original outputs. The other two originals convey the accepted-batch/no-resend relationship adequately in complete code context; this is a narrower precision difference, not a functional-score advantage.
+Some originals and revised outputs use placement shorthand, while the actual code and explicit error/no-resend rationale preserve the intended boundary. More explicit peers are clearer about rerunning send rather than receipt storage alone.
+The fullest control repeats some successful-send/loop-exit explanation and could be tightened, but its maintenance warning remains prominent. Length alone does not fail it or establish a preferred skill output.
+
+The preserved original is 860 complete-SKILL.md words and revised targeted-examples is 971. These are instruction lengths, distinct from output counts.
+No consistent consequential overall advantage of revised over original is established here. Narrow precision and concision observations remain visible; equal passes alone do not settle the owner's shorter-SKILL.md tie-break.
+Passing controls limit claims that a valid output required CW; the consistent detached-reminder and comment-length differences are descriptive evidence in exposed development cases, not causal isolation of an instruction or population reliability estimates.
+
+This Claude stratum uses Code 2.1.305 with owner acceptance and fresh qualification; earlier Code 2.1.301 observations remain separate and are not pooled.
+Both providers' ninety explicit-load body subjects are complete. Native invocation is not measured here; the [protocol](../../protocol.md) owns separate discovery/evaluation progress and current next action.
+Follow the protocol’s fixed focused-stage and quality-reconciliation gates before adoption or further wording edits; this report supplies no new call authority.
