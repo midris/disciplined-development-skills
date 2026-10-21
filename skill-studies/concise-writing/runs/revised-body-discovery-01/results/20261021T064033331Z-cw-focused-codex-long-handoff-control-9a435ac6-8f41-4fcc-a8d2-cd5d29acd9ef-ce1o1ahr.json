@@ -1,0 +1,160 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "codex-body-focused-01-long-handoff-control-3-1-assessment",
+  "assessed_at": "2026-10-21T06:41:53.201639+00:00",
+  "run_id": "20261021T064033331Z-cw-focused-codex-long-handoff-control-9a435ac6-8f41-4fcc-a8d2-cd5d29acd9ef-ce1o1ahr",
+  "condition": "control",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same Codex controller authored/reviewed exposed development variants and directly judged complete outputs; no blind, held-out or independent assessor claim. Separate Opus review supplements this."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/codex-long-handoff-manifest.json",
+    "sha256": "01e57a7f37a9798fee7a1c26defe0fdf5c683fd7411af0c546642dd1dc9cd061",
+    "version": "1",
+    "git_revision": "40bc48f47d9595d5c2af9ef3fe120d59b7a7d1ed"
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T064033331Z-cw-focused-codex-long-handoff-control-9a435ac6-8f41-4fcc-a8d2-cd5d29acd9ef-ce1o1ahr/workspace/fixture/report.md",
+        "sha256": "b89c4e5431cd58d708418b62c3e86ca1082491f0eee66415d1905bb6e3920c32",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T064033331Z-cw-focused-codex-long-handoff-control-9a435ac6-8f41-4fcc-a8d2-cd5d29acd9ef-ce1o1ahr/provider-session.jsonl",
+        "sha256": "253a2b972e5adc33059fe48784c1f49896b61244bfa0eb6b23f686434ef2fcdb",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T064033331Z-cw-focused-codex-long-handoff-control-9a435ac6-8f41-4fcc-a8d2-cd5d29acd9ef-ce1o1ahr/result.json",
+        "sha256": "fc17d036b793d9cacf283f701fe44c3408e0e59f61fba6c4415d313c6168ace9",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T064033331Z-cw-focused-codex-long-handoff-control-9a435ac6-8f41-4fcc-a8d2-cd5d29acd9ef-ce1o1ahr/runner.log",
+        "sha256": "1c99f19067f96a5c4d5ded36115dc446bddb27513896950f014078887e79bcfa",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T064033331Z-cw-focused-codex-long-handoff-control-9a435ac6-8f41-4fcc-a8d2-cd5d29acd9ef-ce1o1ahr/final.txt",
+        "sha256": "ba7b0de7b86781d75b34bfdb31f195589e9b04f2dd278041bf217c4126b23e3f",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/long-handoff/fixture/report.md",
+        "sha256": "0eb0946286d2a4b1708f14bcff5795cd1effdfa64af612a6cb9a89d2fac84737",
+        "version": null,
+        "git_revision": "08ec3eee2b57037d52bc7f04edcd8e42736384cd"
+      },
+      "selector": "Complete frozen report.md"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/long-handoff/task.md",
+        "sha256": "8be0f67fe6b62ca0a1d5f3af9ac2ffea79eef0d0615f0979853079653b8feab8",
+        "version": null,
+        "git_revision": "08ec3eee2b57037d52bc7f04edcd8e42736384cd"
+      },
+      "selector": "Complete frozen TASK.md"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Fixed provider/model/CLI and retained inventory verified. No CW catalog/body exposure. Protected input bytes unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The complete control distinguishes the approved account list from unrecorded pilot approval, preserves current versions and bounded80-export/four-recovery evidence, dry-run limits,12-account40-minute scope, exact window/latency/reset/mismatch conditions and all lease/evidence/token/recovery/acceptance boundaries. No general-release authorization is introduced.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The decision summary, local Deployment gates and numbered Rollback remain actionable, with acknowledgement/cursor resolution before lease release, escalation, owner evidence-release authority and fresh pilot approval after rollback. Incoming acceptance and token retention remain explicit. The retained-file diagnostic categories are less explicit, as in control1, but the complete comparison/investigation and evidence-preservation workflow remains usable; record that explanatory weakness without inventing an action loss.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Status bullets, numbered preparation/rollback and a handoff-record list make the complete report easy to scan. One mechanism paragraph and bounded evidence precede the operational sequence; the detached duplicate reminder is removed, while the closing scope recap remains useful.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Fixed provider/model/CLI and retained inventory verified. No CW catalog/body exposure. Protected input bytes unchanged. O4/O5 remain unscored; native D1 is distinct from functional outcome.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Complete output 791 wc-w words; supplied report.md: 1207 words, TASK.md: 68 words. Counts describe length, not semantic success; comment-only counts are reported separately for N4.",
+      "consequence": "Descriptive counts only.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "Control3 provides strong scanning aids and faithful decision gates without CW. Its retained-file diagnostic purpose is less explicit than the completed skill outputs; the source-like explicit rationale in those peers is a quality difference, not proof of a consistent body contribution.",
+      "consequence": "Qualitative comparison is separate from threshold counts.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "uncertainty": []
+}
