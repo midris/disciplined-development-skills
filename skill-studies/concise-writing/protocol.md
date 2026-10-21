@@ -2,8 +2,8 @@
 
 Format version: `1`
 Study ID: `concise-writing`
-Status: the owner approved eight additional comment subjects and two updated Opus reviews, topping both bodies up to five repetitions per provider.
-Current action: collect and assess the [repetition-4/5 continuation](runs/final-comparison-01/screen-02/README.md), then review all twenty distinct comment outputs in two provider packets before returning to the owner.
+Status: all eight comment additions are complete and directly assessed; both bodies pass five repetitions per provider, with two updated Opus reviews remaining.
+Current action: freeze and complete the two ten-output Opus reviews for the [repetition-4/5 continuation](runs/final-comparison-01/screen-02/README.md), then reconcile all twenty distinct comment outputs before returning to the owner.
 The owner replied “let's do it” to the concrete +8-subject/+2-review proposal after the first twelve subjects and two reviews passed with no clear loser.
 Accepted combined ceilings rise from 602 subject / 40 evaluator to 610 / 42; authoring/retry ceilings stay four each.
 Only repetitions 4/5 and two ten-output reviews are approved; unchanged first-screen evidence is reused, not rerun.
@@ -1046,13 +1046,13 @@ Combined accounting sources: closed SSR [pilot 01](../sweeping-stale-references/
 The new E reviews use the [fixed review package](runs/baseline-iteration-e-01/evaluation/README.md) and [supplemental Opus accounting](runs/baseline-iteration-e-01/evaluation/evaluator-run-index.json).
 The remaining-suite reviews use the [fourteen-packet package](runs/baseline-iteration-suite-01/evaluation/README.md) and [evaluator ledger](runs/baseline-iteration-suite-01/evaluation/evaluator-run-index.json); their allocation is included in the current ceiling.
 The focused output reviews use the [ten-packet package](runs/revised-body-discovery-01/evaluation/README.md) and [evaluator ledger](runs/revised-body-discovery-01/evaluation/evaluator-run-index.json); their ten calls are spent within the current evaluator accounting.
-Dispatched calls are **603 subject, 40 evaluator, 0 authoring, 2 retry**; remaining outer capacity is **7 / 2 / 4 / 2** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
+Dispatched calls are **610 subject, 40 evaluator, 0 authoring, 2 retry**; remaining outer capacity is **0 / 2 / 4 / 2** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **3,260 active minutes booked; 2,060 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **3,300 active minutes booked; 2,100 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
-The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 603/610, with 7 approved top-up calls available and no E calls remaining.
+The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 610/610, with 0 approved top-up calls available and no E calls remaining.
 The supplemental work used 40 estimated active minutes against its 40-minute forecast; model waits are included once.
 
 | Work | Estimated active minutes |
@@ -1173,7 +1173,9 @@ The supplemental work used 40 estimated active minutes against its 40-minute for
 | Final-comparison combination/input preparation, scope design and static review | 20 |
 | Final comment screen qualification, input freeze, twelve subjects/direct assessments and inspection repair | 50 |
 | Final comment-screen Opus packet freeze, two reviews, manual audits, reconciliation and publication | 20 |
-| **Total** | **3,260** |
+| Comment top-up preparation, runtime/guard checks, readiness repair and four Codex direct assessments | 30 |
+| Four Claude comment additions, direct assessments and combined packet preparation | 10 |
+| **Total** | **3,300** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.
@@ -1212,8 +1214,8 @@ The current remaining-work estimate below covers only the fixed approved scope, 
 
 | Work | Estimate | Basis |
 | --- | ---: | --- |
-| Approved comment top-up remaining | 65 | Recheck/freeze, eight subjects/direct assessments, two ten-output Opus reviews, audits, reconciliation and publication; planning range 45–65 minutes. |
-| **Total** | **65** | Later scenarios, replacements, further wording edits and adoption are outside this forecast. |
+| Approved comment top-up remaining | 25 | Two ten-output Opus reviews, audits, reconciliation and publication; forty minutes are booked against the 45–65-minute total forecast. |
+| **Total** | **25** | Later scenarios, replacements, further wording edits and adoption are outside this forecast. |
 
 The E stage used 115 estimated active minutes against the 180-minute upper forecast, 65 below it: 35 preparation, 40 subject collection/assessment and 40 evaluator preparation/reconciliation.
 The two evaluator durations total 420.696 seconds (7.01 minutes), included once in those estimates.
