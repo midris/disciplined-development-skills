@@ -1200,8 +1200,8 @@ The current remaining-work estimate below covers only the fixed approved scope, 
 
 | Work | Estimate | Basis |
 | --- | ---: | --- |
-| Approved comment screen remaining | 55–80 | Qualification/freeze, twelve subjects, direct assessment, two Opus reviews, reconciliation and publication. |
-| **Total** | **55–80** | Later regression, replacements, further wording edits and adoption are outside this forecast. |
+| Approved comment screen remaining | 80 | Upper end of the 55–80-minute planning range: qualification/freeze, twelve subjects, direct assessment, two Opus reviews, reconciliation and publication. |
+| **Total** | **80** | Later regression, replacements, further wording edits and adoption are outside this forecast. |
 
 The E stage used 115 estimated active minutes against the 180-minute upper forecast, 65 below it: 35 preparation, 40 subject collection/assessment and 40 evaluator preparation/reconciliation.
 The two evaluator durations total 420.696 seconds (7.01 minutes), included once in those estimates.
