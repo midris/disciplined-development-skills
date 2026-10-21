@@ -9,3 +9,5 @@ The [readiness evidence](preparation/codex-readiness-20261021.json) records pass
 The protocol owns Claude runtime-substitution authority and its remaining freeze gate.
 
 [Length observations](length-observations.json) give descriptive per-output counts, signed changes and longer flags where applicable; they do not supply semantic grades.
+
+The [Codex body assessment](codex-body-focused-01-assessment.md) links the final [attempt index](codex-body-focused-01-run-index.json), frozen result citations and comparative observations.

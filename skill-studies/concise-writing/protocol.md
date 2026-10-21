@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `concise-writing`
 Status: all 45 Codex focused-body subjects are retained and directly assessed, with no setup exclusions or retries; both Codex scopes remain qualified. Claude Code updated to 2.1.305 and passes fresh zero-model qualification, but its substitution awaits the owner decision. The live skill remains unchanged and adoption is deferred.
-Current action: publish the completed Codex body assessment, then hold fixed slot46 until the owner accepts the qualified Claude CLI substitution required by the [proposal](drafts/baseline-iteration/discovery/proposal.md#qualification-and-cross-model-review). Handoff, document-addition and explicit-comment cases each pass five repetitions per condition; cross-model review remains pending. All 90 body subjects precede the 60 discovery subjects, so neither provider’s discovery stage has started. The accounting section owns remaining calls; later regression, automatic retries, further wording changes and adoption remain unapproved.
+Current action: the [Codex body assessment](runs/revised-body-discovery-01/codex-body-focused-01-assessment.md) is complete; hold fixed slot46 until the owner accepts the qualified Claude CLI substitution required by the [proposal](drafts/baseline-iteration/discovery/proposal.md#qualification-and-cross-model-review). Handoff, document-addition and explicit-comment cases each pass five repetitions per condition; cross-model review remains pending. All 90 body subjects precede the 60 discovery subjects, so neither provider’s discovery stage has started. The accounting section owns remaining calls; later regression, automatic retries, further wording changes and adoption remain unapproved.
 The approved [core/runs directory layout](../../plans/specs/2026-10-18-study-directory-layout.md) is implemented and verified for both studies; [navigation](README.md) separates core guidance from collected evidence.
 On 2026-10-18 the owner replied “ok, let’s do it” to the concrete remaining allocation of 144 subject calls plus fourteen evaluator calls. This accepts unchanged targeted/fuller bodies, fresh original/control comparisons, three repetitions per selected condition/provider and reuse of the separate completed E stratum while input/runtime qualification holds.
 The authorized sequence is 72 ordinary A/B/C subjects, then 72 native N1–N4 subjects, plus six ordinary and eight native Opus 5.5 medium reviews.
@@ -785,7 +785,7 @@ Runtime: pinned existing CLI/model/toolchain, qualified before dispatch; body co
 Acceptance: complete fixed-stage descriptive outcomes with concrete source/output evidence; no reliability threshold, word-count gate or forced failure on a disputed paraphrase.
 Include all valid-setup executions regardless of outcome. No automatic retry; disclose exclusions, uncertainty and unattempted slots.
 Stop on infrastructure, contamination, capture/retention failure, input/runtime drift or uncertain charge; retain every valid behavioral miss.
-Record: [index](runs/revised-body-discovery-01/codex-body-focused-01-run-index.json).
+Record: [index](runs/revised-body-discovery-01/codex-body-focused-01-run-index.json), [assessment](runs/revised-body-discovery-01/codex-body-focused-01-assessment.md).
 Global ordering: all 90 body subjects precede all 60 discovery subjects; [schedule](runs/revised-body-discovery-01/preparation/schedule.json).
 
 | Order | Case | Condition | Repetition | CONFIG |
@@ -1157,10 +1157,15 @@ Collection/assessment totaled 230 estimated minutes, 170 below the initial 400-m
 All 4,964.922 seconds of runner duration are included once, not added to those estimates.
 Subject collection and active-session assessment are complete; the owner subsequently requested cross-model review.
 
+The completed baseline-iteration remaining-suite collection and review used 265 estimated active minutes, including recovery, 135–290 below its updated 400–555 forecast.
+E remained a separately reused completed stratum.
+The [proposal forecast](drafts/baseline-iteration/discovery/proposal.md#focused-allocation-and-later-forecast) estimates 210–300 minutes for the complete focused stage and separately forecasts the unapproved later regression stage.
+The current remaining-work estimate below covers only the fixed approved calls, with owner-wait time excluded; it is a rounded planning estimate, not additional call authority.
+
 | Work | Estimate | Basis |
 | --- | ---: | --- |
-| Authorized remaining-suite collection and review | 0 | Complete at 265 estimated active minutes, including recovery; 135–290 below the updated 400–555 forecast. E remains a separately reused completed stratum. |
-| **Total** | **0** | No further experiment is allocated; owner decisions have no model-call forecast yet. |
+| Approved focused collection and review remaining | 185 | 105 subjects and ten Opus reviews, including pending Claude freeze, packet preparation, retained capture, direct assessment, review reconciliation and publication. |
+| **Total** | **185** | Later regression, replacements, further wording edits and adoption are outside this forecast. |
 
 The E stage used 115 estimated active minutes against the 180-minute upper forecast, 65 below it: 35 preparation, 40 subject collection/assessment and 40 evaluator preparation/reconciliation.
 The two evaluator durations total 420.696 seconds (7.01 minutes), included once in those estimates.
@@ -1175,6 +1180,24 @@ Preparation and final review/publication account for the other 15 supplemental m
 A later diagnosis or rewrite needs its own bounded estimate and any new model-call authorization.
 
 ## Results and decision
+
+### Focused revised body: completed Codex stratum
+
+The [assessment](runs/revised-body-discovery-01/codex-body-focused-01-assessment.md) pins the final index and all 45 unchanged result records.
+Each condition has five fresh contexts per case, with all F1–F3 factors met, no setup exclusions, unknowns or retries.
+
+| Case | No CW | Original | Revised targeted-examples |
+| --- | ---: | ---: | ---: |
+| Long handoff | 5/5 | 5/5 | 5/5 |
+| Document addition | 5/5 | 5/5 | 5/5 |
+| Explicit comments | 5/5 | 5/5 | 5/5 |
+
+All thirty skill-bearing attempts received the complete assigned body before editing; controls received no CW catalog/body.
+All fifteen comment outputs preserve executable tokens and syntax; no generated code was executed.
+Skill-bearing handoffs more consistently retain explicit diagnostic rationale; some controls provide particularly scannable lists, and their comment explanations are often fuller.
+Original and revised bodies show no consistent consequential quality difference here; threshold ties do not establish equivalence or authorize adoption.
+The assessment preserves precision and layout observations alongside descriptive length counts.
+Claude body, both native discovery strata and all ten Opus reviews remain outstanding; current next action and runtime authority are at the top of this protocol.
 
 ### Evaluation-guideline application audit
 
