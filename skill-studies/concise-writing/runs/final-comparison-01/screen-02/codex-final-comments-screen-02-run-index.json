@@ -48,7 +48,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/results/20261021T200649492Z-cw-final-codex-comments-explicit-revised-body-c51de4ad-202c-4d75-b7e2-4d2deeb6d65a-2jak535y.json",
           "sha256": "25d6efbd999a5fed9f7608a566874113e5f1c242e9de0ec6ba4a6c585d7bc384",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5259392428e715078fd8c0c04d45d7885cd57561"
         }
       }
     },
@@ -96,7 +97,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/results/20261021T200908311Z-cw-final-codex-comments-explicit-original-body-e9af45d9-9301-4d20-b9ba-3301e778f166-vrdw03bo.json",
           "sha256": "ef8dd33b6175802bba0c4e094e12adf67bf3b29fec822448c59da16fb674d9c9",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5259392428e715078fd8c0c04d45d7885cd57561"
         }
       }
     },
@@ -144,7 +146,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/results/20261021T201009511Z-cw-final-codex-comments-explicit-original-body-f9ffc034-7d80-433f-9c82-bcbf26f615f5-8714jyaa.json",
           "sha256": "d6cd8cc2da6410b2c85a07820a82b4f4a92ebfd5d29e156953d2dfe9a0f77104",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5259392428e715078fd8c0c04d45d7885cd57561"
         }
       }
     },
@@ -192,7 +195,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/results/20261021T201139611Z-cw-final-codex-comments-explicit-revised-body-ea37b06e-36cc-4950-9fa3-d2c1b6a7b172-ni9m6s9t.json",
           "sha256": "5c6ce1b1e3eaadd03f8c91db1b31e5e6d7b577e53958105f2cf2f0d813484b3d",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5259392428e715078fd8c0c04d45d7885cd57561"
         }
       }
     }
