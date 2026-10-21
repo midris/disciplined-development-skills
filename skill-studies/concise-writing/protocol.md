@@ -1284,6 +1284,7 @@ Acceptance: descriptive comparison of consequential quality, regressions and unc
 Include all valid-setup executions regardless of outcome. No automatic retry; disclose exclusions, uncertainty and unattempted slots.
 Stop on infrastructure, contamination, preservation/capture failure, identity drift or uncertain charge; valid behavioral misses alone do not stop later rows.
 Record: [index](runs/final-comparison-01/screen-02/codex-final-comments-screen-02-run-index.json).
+Assessment: [completed additions](runs/final-comparison-01/screen-02/codex-final-comments-screen-02-assessment.md).
 
 | Order | Case | Condition | Repetition | CONFIG |
 | ---: | --- | --- | ---: | --- |
@@ -1303,6 +1304,7 @@ Acceptance: descriptive comparison of consequential quality, regressions and unc
 Include all valid-setup executions regardless of outcome. No automatic retry; disclose exclusions, uncertainty and unattempted slots.
 Stop on infrastructure, contamination, preservation/capture failure, identity drift or uncertain charge; valid behavioral misses alone do not stop later rows.
 Record: [index](runs/final-comparison-01/screen-02/claude-final-comments-screen-02-run-index.json).
+Assessment: [completed additions](runs/final-comparison-01/screen-02/claude-final-comments-screen-02-assessment.md).
 
 | Order | Case | Condition | Repetition | CONFIG |
 | ---: | --- | --- | ---: | --- |
@@ -1312,6 +1314,19 @@ Record: [index](runs/final-comparison-01/screen-02/claude-final-comments-screen-
 | 4 | comments-explicit | original-body | 5 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-comments-explicit-original-body.json` |
 
 ## Results and decision
+
+### Five-repetition comment continuation
+
+The eight additions are complete and directly assessed; all four added outputs per provider meet F1–F3 and preserve syntax/executable tokens.
+Together with unchanged screen-01 evidence, each body has five successful repetitions per provider.
+
+| Batch | Assessment | Added functional result |
+| --- | --- | --- |
+| codex-final-comments-screen-02 | [Codex additions](runs/final-comparison-01/screen-02/codex-final-comments-screen-02-assessment.md) | Original 2/2; revised 2/2. |
+| claude-final-comments-screen-02 | [Claude additions](runs/final-comparison-01/screen-02/claude-final-comments-screen-02-assessment.md) | Original 2/2; revised 2/2. |
+
+The first-slot readiness-order deviation remains explicit in the continuation record; no attempt is repeated, excluded or reassigned a charge.
+The two updated ten-output reviews remain a separate pending check; current action is recorded at this protocol's opening.
 
 ### Final combined-description comment screen
 

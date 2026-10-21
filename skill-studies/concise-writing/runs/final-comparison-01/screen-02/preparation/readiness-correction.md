@@ -15,3 +15,6 @@ Both collection-readiness checks must pass before slot 2.
 For each later dispatch, a controller-only launcher runs its selected batch readiness check with check=True before executing the frozen collector, so a failed check cannot fall through to a model call.
 The launcher is pinned in the [verification record](readiness-correction.json); its data-only evidence/status sequencing does not change subject inputs or authorize retries.
 Original results and the frozen first-subject context remain retrievable; the protocol owns progress/accounting.
+
+Aggregate reports cite the corrected, parser-recognized scope at commit `04325d4`; each attempt still cites its actual dispatch authority and manifest, including the first slot at `8bf1336`.
+This changes the aggregate scope citation, not the inclusion policy, execution history or scoring rules.

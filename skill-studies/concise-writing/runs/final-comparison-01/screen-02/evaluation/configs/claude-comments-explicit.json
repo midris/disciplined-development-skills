@@ -1,0 +1,97 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-suite-opus-claude-comments-explicit",
+  "prompt": "../prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../../../../../skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/claude-comments-explicit/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json"
+    },
+    {
+      "source": "../../../../../../../../skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/claude-comments-explicit/INTERPRETATION.md",
+      "target": "INTERPRETATION.md"
+    },
+    {
+      "source": "../../../../../../../../skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/claude-comments-explicit/MECHANICAL-CHECKS.json",
+      "target": "MECHANICAL-CHECKS.json"
+    },
+    {
+      "source": "../../../../../../../../skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/claude-comments-explicit/SETUP.md",
+      "target": "SETUP.md"
+    },
+    {
+      "source": "../../../../../../../../skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/claude-comments-explicit/WORD-COUNTS.json",
+      "target": "WORD-COUNTS.json"
+    },
+    {
+      "source": "../../../../../../../../skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/claude-comments-explicit/criteria.md",
+      "target": "criteria.md"
+    },
+    {
+      "source": "../../../../../../../../skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/claude-comments-explicit/outputs/original-body-1.py",
+      "target": "outputs/original-body-1.py"
+    },
+    {
+      "source": "../../../../../../../../skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/claude-comments-explicit/outputs/original-body-2.py",
+      "target": "outputs/original-body-2.py"
+    },
+    {
+      "source": "../../../../../../../../skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/claude-comments-explicit/outputs/original-body-3.py",
+      "target": "outputs/original-body-3.py"
+    },
+    {
+      "source": "../../../../../../../../skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/claude-comments-explicit/outputs/original-body-4.py",
+      "target": "outputs/original-body-4.py"
+    },
+    {
+      "source": "../../../../../../../../skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/claude-comments-explicit/outputs/original-body-5.py",
+      "target": "outputs/original-body-5.py"
+    },
+    {
+      "source": "../../../../../../../../skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/claude-comments-explicit/outputs/revised-body-1.py",
+      "target": "outputs/revised-body-1.py"
+    },
+    {
+      "source": "../../../../../../../../skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/claude-comments-explicit/outputs/revised-body-2.py",
+      "target": "outputs/revised-body-2.py"
+    },
+    {
+      "source": "../../../../../../../../skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/claude-comments-explicit/outputs/revised-body-3.py",
+      "target": "outputs/revised-body-3.py"
+    },
+    {
+      "source": "../../../../../../../../skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/claude-comments-explicit/outputs/revised-body-4.py",
+      "target": "outputs/revised-body-4.py"
+    },
+    {
+      "source": "../../../../../../../../skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/claude-comments-explicit/outputs/revised-body-5.py",
+      "target": "outputs/revised-body-5.py"
+    },
+    {
+      "source": "../../../../../../../../skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/claude-comments-explicit/policy.txt",
+      "target": "policy.txt"
+    },
+    {
+      "source": "../../../../../../../../skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/claude-comments-explicit/prior-assessment.md",
+      "target": "prior-assessment.md"
+    },
+    {
+      "source": "../../../../../../../../skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/claude-comments-explicit/sources/MAINTAINER-NOTES.md",
+      "target": "sources/MAINTAINER-NOTES.md"
+    },
+    {
+      "source": "../../../../../../../../skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/claude-comments-explicit/sources/TASK.md",
+      "target": "sources/TASK.md"
+    },
+    {
+      "source": "../../../../../../../../skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/claude-comments-explicit/sources/uploader.py",
+      "target": "sources/uploader.py"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}
