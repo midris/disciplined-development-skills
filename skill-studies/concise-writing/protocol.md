@@ -2,8 +2,8 @@
 
 Format version: `1`
 Study ID: `concise-writing`
-Status: all eight handoff continuation subjects are retained, inspected and directly assessed; two approved ten-output Opus reviews remain.
-Current action: freeze two packets containing all twenty distinct handoff outputs, complete/audit independent first passes and prior-score reconciliations, then return the combined evidence.
+Status: the five-repetition handoff comparison is complete: eight additions, twenty distinct outputs and two fresh ten-output Opus reviews are assessed and audited.
+Current action: present the combined handoff evidence for the owner’s next-case decision; both bodies remain eligible and no further collection, edit or adoption is authorized.
 The owner replied “please proceed” to the concrete +8-subject/+2-review handoff proposal; combined ceilings rise from 622 subject / 44 evaluator to 630 / 46, with authoring/retry ceilings unchanged.
 Only this continuation is newly authorized; no automatic retry, split, fallback, body/description edit, next case or adoption is approved.
 The earlier twelve handoff subjects and two reviews remain immutable; reused outputs add no subject charge and previous Opus reviews are excluded from the new packets.
@@ -1051,10 +1051,10 @@ The focused output reviews use the [ten-packet package](runs/revised-body-discov
 The comment continuation uses [frozen review inputs](runs/final-comparison-01/screen-02/evaluation/inputs.json) and its [two-call evaluator ledger](runs/final-comparison-01/screen-02/evaluation/evaluator-run-index.json); both charges are included in combined evaluator accounting.
 The first handoff stage uses its [two-call evaluator ledger](runs/final-comparison-01/handoff-01/evaluation/evaluator-run-index.json).
 The handoff continuation uses its [two-call evaluator ledger](runs/final-comparison-01/handoff-02/evaluation/evaluator-run-index.json).
-Dispatched calls are **630 subject, 44 evaluator, 0 authoring, 2 retry**; remaining outer capacity is **0 / 2 / 4 / 2** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
+Dispatched calls are **630 subject, 46 evaluator, 0 authoring, 2 retry**; remaining outer capacity is **0 / 0 / 4 / 2** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **3,405 active minutes booked; 2,205 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **3,425 active minutes booked; 2,225 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
 The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 630/630, with 0 approved handoff continuation calls available; the earlier E diagnostic is spent.
@@ -1184,7 +1184,8 @@ The supplemental work used 40 estimated active minutes against its 40-minute for
 | Final handoff preparation and twelve subjects | 35 |
 | Final handoff reviews and publication | 20 |
 | Handoff continuation preparation and eight subjects | 35 |
-| **Total** | **3,405** |
+| Handoff continuation reviews, audits, reconciliation and publication | 20 |
+| **Total** | **3,425** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.
@@ -1225,8 +1226,8 @@ The current remaining-work estimate below covers only the fixed approved scope, 
 
 | Work | Estimate | Basis |
 | --- | ---: | --- |
-| Approved handoff continuation reviews remaining | 30 | Two ten-output reviews, audits, reconciliation and publication; 35 estimated minutes already used from the 45–65-minute forecast. |
-| **Total** | **30** | Later scenarios, replacements, further wording edits and adoption are outside this forecast. |
+| Approved handoff continuation remaining | 0 | Complete at 55 estimated minutes, including all new model waits once, within the 45–65-minute forecast. |
+| **Total** | **0** | Later scenarios, replacements, further wording edits and adoption remain unapproved. |
 
 The E stage used 115 estimated active minutes against the 180-minute upper forecast, 65 below it: 35 preparation, 40 subject collection/assessment and 40 evaluator preparation/reconciliation.
 The two evaluator durations total 420.696 seconds (7.01 minutes), included once in those estimates.
@@ -1409,6 +1410,26 @@ Assessment: [completed additions](runs/final-comparison-01/handoff-02/claude-fin
 | 4 | long-handoff | original-body | 5 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-long-handoff-original-body.json` |
 
 ## Results and decision
+
+### Five-repetition long-handoff comparison
+
+The eight additions are complete, with every F1–F3 met in both active assessment and fresh Opus first passes.
+Combined with the unchanged first stage, each body passes five repetitions per provider, covering twenty distinct outputs.
+
+| Added batch | Assessment | Added functional result |
+| --- | --- | --- |
+| codex-final-handoff-02 | [Codex additions](runs/final-comparison-01/handoff-02/codex-final-handoff-02-assessment.md) | Original 2/2; revised 2/2. |
+| claude-final-handoff-02 | [Claude additions](runs/final-comparison-01/handoff-02/claude-final-handoff-02-assessment.md) | Original 2/2; revised 2/2. |
+
+The [combined comparison](runs/final-comparison-01/handoff-02/evaluation/assessment.md) records two audited ten-output reviews, all sixty factors agreeing without post-prior correction.
+No setup exclusion, retry, charge uncertainty or missing applicable judgment remains.
+The revised Claude body removes the detached reminder in 5/5 versus original 4/5; the original varies from the strongest compression to the weakest cleanup.
+Revised Codex repetitions 4/5 have especially scannable lists and steps; the original consistently keeps the opening orientation.
+These are quality observations, with no demonstrated consequential body advantage or clear loser; tied pass counts do not establish equivalence.
+Reviewer narrative precision errors are preserved and qualified in the audits rather than adopted as facts.
+The shorter original remains provisionally favored where consequential quality/effectiveness are equivalent, without a whole-skill adoption decision.
+The continuation used 55 estimated active minutes, including 408.434 new subject-runner seconds and 288.837 reviewer seconds once; the earlier twelve subjects/reviews/waits are not charged again.
+Both complete combinations and the live skill remain unchanged; current authority belongs to the opening.
 
 ### Three-repetition long-handoff comparison
 

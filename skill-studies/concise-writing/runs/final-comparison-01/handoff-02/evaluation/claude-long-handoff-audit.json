@@ -1,0 +1,22 @@
+{
+  "configuration": "claude-long-handoff",
+  "required_complete_files": 19,
+  "outputs": 10,
+  "first_pass_event": 73,
+  "prior_read_event": 74,
+  "first_pass_sha256": "e9b675bd41699be72438a2ef9b525639ce33cbe4bbc149d4d901a96e325d2382",
+  "first_pass_path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-02/evaluation/claude-long-handoff-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-02/reviews/20261022T210059067Z-cw-suite-opus-claude-long-handoff-b483e3b3-41ee-4409-80fc-10c5f12665ea-zw8tp9sc/final.txt",
+  "final_sha256": "4c24d7283ed64141aee58d0d2bc293581f12b565c16aadb14b7abd3d5db7bb4d",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "pre_prior_grep_calls": [],
+  "semantic_completeness": "verified: complete emitted first pass and final comparison manually read; all ten full run IDs, thirty factors, quotes/examples, counts and comparative conclusions checked against complete sources and outputs. No judgments in the pre-first-pass text (only Now all ten outputs). No post-prior change; narrative qualifications below are not adopted as stronger facts.",
+  "controller_qualifications": [
+    "The review says the encouraging evaluative sentence survives verbatim in original1/2/4. The complete sentence is verbatim in original1/2; original4 retains useful indication in a merged sentence but drops encouraging, while original3 retains encouraging in a substantially rewritten sentence. Revised1/5 retain the full sentence and revised2 keeps a qualified suggestion. Preserve the exact distinctions rather than the reviewers verbatim count.",
+    "The nine light edits range from about 5% to14% shorter: original2 is1147/1207, about5%, not within the stated10\u201314% range. Original3 is907/1207, about25% shorter. Counts are descriptive, not a functional gate.",
+    "Equivalent at the threshold describes observed factor outcomes only. Equal passes and five exposed repetitions do not prove equivalence or causal body benefit; qualitative consistency/variation remains visible."
+  ]
+}

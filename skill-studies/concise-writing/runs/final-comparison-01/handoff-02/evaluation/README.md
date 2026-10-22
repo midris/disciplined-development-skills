@@ -1,6 +1,7 @@
 # Five-repetition handoff output review
 
 The [protocol](../../../../protocol.md) owns current authority and accounting.
+The [combined assessment](assessment.md) compares all twenty distinct outputs and reconciles the two reviews; [judgments](judgments.json) preserve the manual factor transcription.
 The two [frozen input groups](inputs.json) each contain ten distinct outputs, five per unchanged body: six first-stage outputs plus four additions.
 Reusing the first twelve adds no subject charge; the new [ledger](evaluator-run-index.json) funds exactly two reviewer sessions.
 [Prompt](prompt.md) fixes complete-artifact judgments and independent-first-pass-before-prior order.
