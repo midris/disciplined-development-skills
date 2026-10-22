@@ -1,0 +1,194 @@
+{
+  "subjects": 8,
+  "reused_subjects": 12,
+  "combined_distinct_subjects": 20,
+  "exclusions": 0,
+  "retries": 0,
+  "body_native_D1": "not measured; explicit complete-body-before-edit is setup",
+  "rows": [
+    {
+      "order": 1,
+      "run_id": "20261022T203714097Z-cw-final-codex-long-handoff-revised-body-11968518-0846-420d-a484-13f6aaad061b-5ihe8wsy",
+      "provider": "codex",
+      "condition": "revised-body",
+      "repetition": 4,
+      "clearance": "Fixed provider/model/CLI and retained inventory verified. Complete assigned teaching body in tool output 16 before first task edit 33. Protected input bytes unchanged.",
+      "execution": {
+        "cleanup_error": null,
+        "effort": "low",
+        "executable": "codex",
+        "exit_code": 0,
+        "invocation_started": true,
+        "model": "gpt-5.6-sol",
+        "permissions": "workspace-write",
+        "provider": "codex",
+        "timed_out": false,
+        "timeout_seconds": 900
+      },
+      "duration_seconds": 52.011,
+      "output_words": 887
+    },
+    {
+      "order": 2,
+      "run_id": "20261022T203848285Z-cw-final-codex-long-handoff-original-body-78629f22-d979-4d64-9d0a-9812ef5f526d-qso2emjy",
+      "provider": "codex",
+      "condition": "original-body",
+      "repetition": 4,
+      "clearance": "Fixed provider/model/CLI and retained inventory verified. Complete assigned teaching body in tool output 16 before first task edit 33. Protected input bytes unchanged.",
+      "execution": {
+        "cleanup_error": null,
+        "effort": "low",
+        "executable": "codex",
+        "exit_code": 0,
+        "invocation_started": true,
+        "model": "gpt-5.6-sol",
+        "permissions": "workspace-write",
+        "provider": "codex",
+        "timed_out": false,
+        "timeout_seconds": 900
+      },
+      "duration_seconds": 56.958,
+      "output_words": 898
+    },
+    {
+      "order": 3,
+      "run_id": "20261022T204041413Z-cw-final-codex-long-handoff-original-body-d5e0cae0-a661-4c43-a81e-8ee7aa9ef4a2-d__6pf6n",
+      "provider": "codex",
+      "condition": "original-body",
+      "repetition": 5,
+      "clearance": "Fixed provider/model/CLI and retained inventory verified. Complete assigned teaching body in tool output 16 before first task edit 40. Protected input bytes unchanged.",
+      "execution": {
+        "cleanup_error": null,
+        "effort": "low",
+        "executable": "codex",
+        "exit_code": 0,
+        "invocation_started": true,
+        "model": "gpt-5.6-sol",
+        "permissions": "workspace-write",
+        "provider": "codex",
+        "timed_out": false,
+        "timeout_seconds": 900
+      },
+      "duration_seconds": 42.028,
+      "output_words": 1007
+    },
+    {
+      "order": 4,
+      "run_id": "20261022T204201822Z-cw-final-codex-long-handoff-revised-body-27243e3b-53ac-4683-8414-639615b86cba-5cc_30cg",
+      "provider": "codex",
+      "condition": "revised-body",
+      "repetition": 5,
+      "clearance": "Fixed provider/model/CLI and retained inventory verified. Complete assigned teaching body in tool output 16 before first task edit 36. Protected input bytes unchanged.",
+      "execution": {
+        "cleanup_error": null,
+        "effort": "low",
+        "executable": "codex",
+        "exit_code": 0,
+        "invocation_started": true,
+        "model": "gpt-5.6-sol",
+        "permissions": "workspace-write",
+        "provider": "codex",
+        "timed_out": false,
+        "timeout_seconds": 900
+      },
+      "duration_seconds": 55.716,
+      "output_words": 846
+    },
+    {
+      "order": 5,
+      "run_id": "20261022T204339860Z-cw-final-claude-long-handoff-original-body-7e668a8f-92bb-44c8-89bf-7c5b9bef0e44-svj66sh2",
+      "provider": "claude",
+      "condition": "original-body",
+      "repetition": 4,
+      "clearance": "Fixed provider/model/CLI and retained inventory verified. Complete assigned teaching body in tool output 10 before first task edit 19. Protected input bytes unchanged.",
+      "execution": {
+        "cleanup_error": null,
+        "effort": "low",
+        "executable": "claude",
+        "exit_code": 0,
+        "invocation_started": true,
+        "model": "claude-sonnet-5",
+        "permissions": "workspace-write",
+        "provider": "claude",
+        "timed_out": false,
+        "timeout_seconds": 900
+      },
+      "duration_seconds": 43.014,
+      "output_words": 1072
+    },
+    {
+      "order": 6,
+      "run_id": "20261022T204510560Z-cw-final-claude-long-handoff-revised-body-01559116-3942-4d28-94d3-cb8cd89f3f39-miqasdb3",
+      "provider": "claude",
+      "condition": "revised-body",
+      "repetition": 4,
+      "clearance": "Fixed provider/model/CLI and retained inventory verified. Complete assigned teaching body in tool output 6 before first task edit 38. Protected input bytes unchanged.",
+      "execution": {
+        "cleanup_error": null,
+        "effort": "low",
+        "executable": "claude",
+        "exit_code": 0,
+        "invocation_started": true,
+        "model": "claude-sonnet-5",
+        "permissions": "workspace-write",
+        "provider": "claude",
+        "timed_out": false,
+        "timeout_seconds": 900
+      },
+      "duration_seconds": 78.535,
+      "output_words": 1035
+    },
+    {
+      "order": 7,
+      "run_id": "20261022T204657765Z-cw-final-claude-long-handoff-revised-body-47e16080-9858-4ecf-85e9-5098576eb0af-ho1u238n",
+      "provider": "claude",
+      "condition": "revised-body",
+      "repetition": 5,
+      "clearance": "Fixed provider/model/CLI and retained inventory verified. Complete assigned teaching body in tool output 7 before first task edit 23. Protected input bytes unchanged.",
+      "execution": {
+        "cleanup_error": null,
+        "effort": "low",
+        "executable": "claude",
+        "exit_code": 0,
+        "invocation_started": true,
+        "model": "claude-sonnet-5",
+        "permissions": "workspace-write",
+        "provider": "claude",
+        "timed_out": false,
+        "timeout_seconds": 900
+      },
+      "duration_seconds": 37.592,
+      "output_words": 1084
+    },
+    {
+      "order": 8,
+      "run_id": "20261022T204824337Z-cw-final-claude-long-handoff-original-body-d8ee835f-138f-4769-961e-98ea67d13cd9-45ozz7co",
+      "provider": "claude",
+      "condition": "original-body",
+      "repetition": 5,
+      "clearance": "Fixed provider/model/CLI and retained inventory verified. Complete assigned teaching body in tool output 11 before first task edit 26. Protected input bytes unchanged.",
+      "execution": {
+        "cleanup_error": null,
+        "effort": "low",
+        "executable": "claude",
+        "exit_code": 0,
+        "invocation_started": true,
+        "model": "claude-sonnet-5",
+        "permissions": "workspace-write",
+        "provider": "claude",
+        "timed_out": false,
+        "timeout_seconds": 900
+      },
+      "duration_seconds": 42.58,
+      "output_words": 1065
+    }
+  ],
+  "readiness_logs": {
+    "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-02/collection-logs",
+    "inventory": {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-02/collection-logs.inventory.json",
+      "sha256": "d379ecb215cb3d1cc1fba86abe4ee4d5732d7047e0eab73f1dec81600bf158a7",
+      "version": "1"
+    }
+  }
+}

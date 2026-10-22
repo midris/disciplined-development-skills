@@ -2,8 +2,8 @@
 
 Format version: `1`
 Study ID: `concise-writing`
-Status: the owner approved eight additional handoff subjects and two updated Opus reviews, bringing both bodies to five repetitions per provider.
-Current action: freeze the [handoff continuation](runs/final-comparison-01/handoff-02/README.md), collect/assess repetitions 4/5, then review all twenty distinct handoff outputs in two ten-output packets and return the evidence.
+Status: all eight handoff continuation subjects are retained, inspected and directly assessed; two approved ten-output Opus reviews remain.
+Current action: freeze two packets containing all twenty distinct handoff outputs, complete/audit independent first passes and prior-score reconciliations, then return the combined evidence.
 The owner replied “please proceed” to the concrete +8-subject/+2-review handoff proposal; combined ceilings rise from 622 subject / 44 evaluator to 630 / 46, with authoring/retry ceilings unchanged.
 Only this continuation is newly authorized; no automatic retry, split, fallback, body/description edit, next case or adoption is approved.
 The earlier twelve handoff subjects and two reviews remain immutable; reused outputs add no subject charge and previous Opus reviews are excluded from the new packets.
@@ -1051,13 +1051,13 @@ The focused output reviews use the [ten-packet package](runs/revised-body-discov
 The comment continuation uses [frozen review inputs](runs/final-comparison-01/screen-02/evaluation/inputs.json) and its [two-call evaluator ledger](runs/final-comparison-01/screen-02/evaluation/evaluator-run-index.json); both charges are included in combined evaluator accounting.
 The first handoff stage uses its [two-call evaluator ledger](runs/final-comparison-01/handoff-01/evaluation/evaluator-run-index.json).
 The handoff continuation uses its [two-call evaluator ledger](runs/final-comparison-01/handoff-02/evaluation/evaluator-run-index.json).
-Dispatched calls are **622 subject, 44 evaluator, 0 authoring, 2 retry**; remaining outer capacity is **8 / 2 / 4 / 2** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
+Dispatched calls are **630 subject, 44 evaluator, 0 authoring, 2 retry**; remaining outer capacity is **0 / 2 / 4 / 2** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **3,370 active minutes booked; 2,170 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **3,405 active minutes booked; 2,205 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
-The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 622/630, with eight approved handoff continuation calls remaining; the earlier E diagnostic is spent.
+The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 630/630, with 0 approved handoff continuation calls available; the earlier E diagnostic is spent.
 The supplemental work used 40 estimated active minutes against its 40-minute forecast; model waits are included once.
 
 | Work | Estimated active minutes |
@@ -1183,7 +1183,8 @@ The supplemental work used 40 estimated active minutes against its 40-minute for
 | Two updated comment Opus reviews, full audits, reconciliation and publication | 15 |
 | Final handoff preparation and twelve subjects | 35 |
 | Final handoff reviews and publication | 20 |
-| **Total** | **3,370** |
+| Handoff continuation preparation and eight subjects | 35 |
+| **Total** | **3,405** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.
@@ -1224,8 +1225,8 @@ The current remaining-work estimate below covers only the fixed approved scope, 
 
 | Work | Estimate | Basis |
 | --- | ---: | --- |
-| Approved handoff continuation remaining | 65 | Recheck/freeze, eight new subjects/direct assessments, two ten-output reviews, audits and publication; planning range 45–65 minutes. |
-| **Total** | **65** | Later scenarios, replacements, further wording edits and adoption are outside this forecast. |
+| Approved handoff continuation reviews remaining | 30 | Two ten-output reviews, audits, reconciliation and publication; 35 estimated minutes already used from the 45–65-minute forecast. |
+| **Total** | **30** | Later scenarios, replacements, further wording edits and adoption are outside this forecast. |
 
 The E stage used 115 estimated active minutes against the 180-minute upper forecast, 65 below it: 35 preparation, 40 subject collection/assessment and 40 evaluator preparation/reconciliation.
 The two evaluator durations total 420.696 seconds (7.01 minutes), included once in those estimates.
