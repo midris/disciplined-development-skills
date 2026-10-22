@@ -1329,6 +1329,7 @@ Acceptance: descriptive comparison of consequential correctness, effectiveness a
 Include all valid-setup executions regardless of outcome. No automatic retry; disclose exclusions, uncertainty and unattempted slots.
 Stop on infrastructure, contamination, capture/preservation failure, identity drift or uncertain charge; valid behavioral misses alone do not stop later slots.
 Record: [index](runs/final-comparison-01/handoff-01/codex-final-handoff-01-run-index.json).
+Assessment: [completed subjects](runs/final-comparison-01/handoff-01/codex-final-handoff-01-assessment.md).
 
 | Order | Case | Condition | Repetition | CONFIG |
 | ---: | --- | --- | ---: | --- |
@@ -1350,6 +1351,7 @@ Acceptance: descriptive comparison of consequential correctness, effectiveness a
 Include all valid-setup executions regardless of outcome. No automatic retry; disclose exclusions, uncertainty and unattempted slots.
 Stop on infrastructure, contamination, capture/preservation failure, identity drift or uncertain charge; valid behavioral misses alone do not stop later slots.
 Record: [index](runs/final-comparison-01/handoff-01/claude-final-handoff-01-run-index.json).
+Assessment: [completed subjects](runs/final-comparison-01/handoff-01/claude-final-handoff-01-assessment.md).
 
 | Order | Case | Condition | Repetition | CONFIG |
 | ---: | --- | --- | ---: | --- |
