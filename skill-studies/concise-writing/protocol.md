@@ -2,15 +2,14 @@
 
 Format version: `1`
 Study ID: `concise-writing`
-Status: the comment continuation is complete: eight additions and two audited Opus reviews; both bodies pass five repetitions per provider.
-Current action: review the [five-repetition comparison](runs/final-comparison-01/screen-02/evaluation/assessment.md) and choose the next bounded scenario. Comments favor the shorter original under the owner’s tie-break; remaining-scenario testing, edits and adoption are unapproved.
-The owner replied “let's do it” to the concrete +8-subject/+2-review proposal after the first twelve subjects and two reviews passed with no clear loser.
-Accepted combined ceilings rise from 602 subject / 40 evaluator to 610 / 42; authoring/retry ceilings stay four each.
-Only repetitions 4/5 and two ten-output reviews are approved; unchanged first-screen evidence is reused, not rerun.
-The [zero-model continuation recheck](runs/final-comparison-01/screen-02/preparation/continuation-recheck.json) verifies exact binaries/sign-in, unchanged adapter and prior qualification inventory; eleven body/guard checks pass.
-No automatic retry, split, fallback, candidate edit, next-case collection or adoption is authorized.
-The first authorized top-up subject started before the two failed readiness results were acted on; the [readiness correction](runs/final-comparison-01/screen-02/preparation/readiness-correction.md) preserves this procedural deviation and original charge, with unchanged subject inputs and scoring.
-Recognized include-all wording and successful readiness are required before any later dispatch.
+Status: the owner approved twelve long-handoff subjects and two Opus reviews after the completed five-repetition comment comparison.
+Current action: freeze the [long-handoff comparison](runs/final-comparison-01/handoff-01/README.md), collect and directly assess three repetitions per unchanged body/provider, then audit two six-output Opus reviews and return the evidence.
+The owner replied “ok, please proceed” to the concrete twelve-run/two-review next-scenario recommendation.
+Accepted combined ceilings rise from 610 subject / 42 evaluator to 622 / 44; authoring/retry ceilings stay four each.
+Only long-handoff three-repetition comparison and its two reviews are newly approved; the broader prepared campaign, top-ups, edits and adoption remain unapproved.
+The collector must pass collection readiness before any subject claim or invocation, then retain and assess each attempt before advancing.
+No automatic retry, split, fallback or body/description change is authorized.
+The completed comment comparison found no consequential body advantage and provisionally favors the shorter original for that case; it does not establish a whole-skill winner.
 Twelve zero-model runtime probes passed; exact binaries, sign-in metadata and paired inputs are checked, with subject inputs frozen against `dcbb176616bd9ee540a11243c24b8bf740fdd122`.
 Claude slot 7 received the complete teaching body before editing; the [inspection amendment](runs/final-comparison-01/screen-01/preparation/explicit-inspection-amendment.md) corrects a YAML-header expectation through retained-evidence replay, without repeating the subject.
 Its original manifest and charge remain; the amended controller was frozen prospectively before slot 8.
@@ -1047,13 +1046,14 @@ The new E reviews use the [fixed review package](runs/baseline-iteration-e-01/ev
 The remaining-suite reviews use the [fourteen-packet package](runs/baseline-iteration-suite-01/evaluation/README.md) and [evaluator ledger](runs/baseline-iteration-suite-01/evaluation/evaluator-run-index.json); their allocation is included in the current ceiling.
 The focused output reviews use the [ten-packet package](runs/revised-body-discovery-01/evaluation/README.md) and [evaluator ledger](runs/revised-body-discovery-01/evaluation/evaluator-run-index.json); their ten calls are spent within the current evaluator accounting.
 The comment continuation uses [frozen review inputs](runs/final-comparison-01/screen-02/evaluation/inputs.json) and its [two-call evaluator ledger](runs/final-comparison-01/screen-02/evaluation/evaluator-run-index.json); those calls are included in the current forty-two evaluator charges.
-Dispatched calls are **610 subject, 42 evaluator, 0 authoring, 2 retry**; remaining outer capacity is **0 / 0 / 4 / 2** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
+The handoff uses its [two-call evaluator ledger](runs/final-comparison-01/handoff-01/evaluation/evaluator-run-index.json).
+Dispatched calls are **610 subject, 42 evaluator, 0 authoring, 2 retry**; remaining outer capacity is **12 / 2 / 4 / 2** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
 Current combined accounting: **3,315 active minutes booked; 2,115 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
-The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 610/610, with no approved subject calls remaining; the earlier E diagnostic is also spent.
+The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 610/622, with twelve approved handoff calls remaining; the earlier E diagnostic is also spent.
 The supplemental work used 40 estimated active minutes against its 40-minute forecast; model waits are included once.
 
 | Work | Estimated active minutes |
@@ -1218,8 +1218,8 @@ The current remaining-work estimate below covers only the fixed approved scope, 
 
 | Work | Estimate | Basis |
 | --- | ---: | --- |
-| Approved comment top-up remaining | 0 | Eight additions, two updated reviews, audits and publication are complete. |
-| **Total** | **0** | Later scenarios, replacements, further wording edits and adoption are outside this forecast. |
+| Approved long-handoff comparison remaining | 80 | Recheck/freeze, twelve subjects/direct assessments, two six-output reviews, audits and publication; planning range 55–80 minutes. |
+| **Total** | **80** | Later scenarios, replacements, further wording edits and adoption are outside this forecast. |
 
 The E stage used 115 estimated active minutes against the 180-minute upper forecast, 65 below it: 35 preparation, 40 subject collection/assessment and 40 evaluator preparation/reconciliation.
 The two evaluator durations total 420.696 seconds (7.01 minutes), included once in those estimates.
@@ -1316,6 +1316,48 @@ Assessment: [completed additions](runs/final-comparison-01/screen-02/claude-fina
 | 2 | comments-explicit | revised-body | 4 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-comments-explicit-revised-body.json` |
 | 3 | comments-explicit | revised-body | 5 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-comments-explicit-revised-body.json` |
 | 4 | comments-explicit | original-body | 5 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-comments-explicit-original-body.json` |
+
+### Final long-handoff: codex-final-handoff-01
+
+Batch: codex-final-handoff-01
+Manifest: [long-handoff](runs/final-comparison-01/handoff-01/preparation/manifests/codex-long-handoff-manifest.json).
+Scope: six subjects, three repetitions per body, explicit complete loading; no control or native D1.
+Authority: owner-approved twelve-subject/two-review comparison, combined ceilings 622 subject / 44 evaluator.
+Inputs and criteria: [comparison](runs/final-comparison-01/handoff-01/README.md), unchanged CW-expanded-1, definition v4 and whole-artifact interpretation.
+Acceptance: descriptive comparison of consequential correctness, effectiveness and readability; no length-only winner or reliability threshold.
+Include all valid-setup executions regardless of outcome. No automatic retry; disclose exclusions, uncertainty and unattempted slots.
+Stop on infrastructure, contamination, capture/preservation failure, identity drift or uncertain charge; valid behavioral misses alone do not stop later slots.
+Record: [index](runs/final-comparison-01/handoff-01/codex-final-handoff-01-run-index.json).
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | long-handoff | original-body | 1 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-long-handoff-original-body.json` |
+| 2 | long-handoff | revised-body | 1 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-long-handoff-revised-body.json` |
+| 3 | long-handoff | revised-body | 2 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-long-handoff-revised-body.json` |
+| 4 | long-handoff | original-body | 2 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-long-handoff-original-body.json` |
+| 5 | long-handoff | original-body | 3 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-long-handoff-original-body.json` |
+| 6 | long-handoff | revised-body | 3 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-long-handoff-revised-body.json` |
+
+### Final long-handoff: claude-final-handoff-01
+
+Batch: claude-final-handoff-01
+Manifest: [long-handoff](runs/final-comparison-01/handoff-01/preparation/manifests/claude-long-handoff-manifest.json).
+Scope: six subjects, three repetitions per body, explicit complete loading; no control or native D1.
+Authority: owner-approved twelve-subject/two-review comparison, combined ceilings 622 subject / 44 evaluator.
+Inputs and criteria: [comparison](runs/final-comparison-01/handoff-01/README.md), unchanged CW-expanded-1, definition v4 and whole-artifact interpretation.
+Acceptance: descriptive comparison of consequential correctness, effectiveness and readability; no length-only winner or reliability threshold.
+Include all valid-setup executions regardless of outcome. No automatic retry; disclose exclusions, uncertainty and unattempted slots.
+Stop on infrastructure, contamination, capture/preservation failure, identity drift or uncertain charge; valid behavioral misses alone do not stop later slots.
+Record: [index](runs/final-comparison-01/handoff-01/claude-final-handoff-01-run-index.json).
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | long-handoff | revised-body | 1 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-long-handoff-revised-body.json` |
+| 2 | long-handoff | original-body | 1 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-long-handoff-original-body.json` |
+| 3 | long-handoff | original-body | 2 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-long-handoff-original-body.json` |
+| 4 | long-handoff | revised-body | 2 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-long-handoff-revised-body.json` |
+| 5 | long-handoff | revised-body | 3 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-long-handoff-revised-body.json` |
+| 6 | long-handoff | original-body | 3 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-long-handoff-original-body.json` |
 
 ## Results and decision
 

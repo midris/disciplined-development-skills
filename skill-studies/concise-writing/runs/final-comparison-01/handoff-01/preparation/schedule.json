@@ -1,0 +1,151 @@
+{
+  "status": "owner-approved twelve-subject long-handoff comparison only",
+  "subjects": 12,
+  "repetitions": 3,
+  "slots": [
+    {
+      "global_order": 1,
+      "batch_id": "codex-final-handoff-01",
+      "provider": "codex",
+      "case_id": "long-handoff",
+      "kind": "body",
+      "condition": "original-body",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-long-handoff-original-body.json",
+      "order": 1,
+      "output": "report.md"
+    },
+    {
+      "global_order": 2,
+      "batch_id": "codex-final-handoff-01",
+      "provider": "codex",
+      "case_id": "long-handoff",
+      "kind": "body",
+      "condition": "revised-body",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-long-handoff-revised-body.json",
+      "order": 2,
+      "output": "report.md"
+    },
+    {
+      "global_order": 3,
+      "batch_id": "codex-final-handoff-01",
+      "provider": "codex",
+      "case_id": "long-handoff",
+      "kind": "body",
+      "condition": "revised-body",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-long-handoff-revised-body.json",
+      "order": 3,
+      "output": "report.md"
+    },
+    {
+      "global_order": 4,
+      "batch_id": "codex-final-handoff-01",
+      "provider": "codex",
+      "case_id": "long-handoff",
+      "kind": "body",
+      "condition": "original-body",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-long-handoff-original-body.json",
+      "order": 4,
+      "output": "report.md"
+    },
+    {
+      "global_order": 5,
+      "batch_id": "codex-final-handoff-01",
+      "provider": "codex",
+      "case_id": "long-handoff",
+      "kind": "body",
+      "condition": "original-body",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-long-handoff-original-body.json",
+      "order": 5,
+      "output": "report.md"
+    },
+    {
+      "global_order": 6,
+      "batch_id": "codex-final-handoff-01",
+      "provider": "codex",
+      "case_id": "long-handoff",
+      "kind": "body",
+      "condition": "revised-body",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-long-handoff-revised-body.json",
+      "order": 6,
+      "output": "report.md"
+    },
+    {
+      "global_order": 7,
+      "batch_id": "claude-final-handoff-01",
+      "provider": "claude",
+      "case_id": "long-handoff",
+      "kind": "body",
+      "condition": "revised-body",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-long-handoff-revised-body.json",
+      "order": 1,
+      "output": "report.md"
+    },
+    {
+      "global_order": 8,
+      "batch_id": "claude-final-handoff-01",
+      "provider": "claude",
+      "case_id": "long-handoff",
+      "kind": "body",
+      "condition": "original-body",
+      "repetition": 1,
+      "config": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-long-handoff-original-body.json",
+      "order": 2,
+      "output": "report.md"
+    },
+    {
+      "global_order": 9,
+      "batch_id": "claude-final-handoff-01",
+      "provider": "claude",
+      "case_id": "long-handoff",
+      "kind": "body",
+      "condition": "original-body",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-long-handoff-original-body.json",
+      "order": 3,
+      "output": "report.md"
+    },
+    {
+      "global_order": 10,
+      "batch_id": "claude-final-handoff-01",
+      "provider": "claude",
+      "case_id": "long-handoff",
+      "kind": "body",
+      "condition": "revised-body",
+      "repetition": 2,
+      "config": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-long-handoff-revised-body.json",
+      "order": 4,
+      "output": "report.md"
+    },
+    {
+      "global_order": 11,
+      "batch_id": "claude-final-handoff-01",
+      "provider": "claude",
+      "case_id": "long-handoff",
+      "kind": "body",
+      "condition": "revised-body",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-long-handoff-revised-body.json",
+      "order": 5,
+      "output": "report.md"
+    },
+    {
+      "global_order": 12,
+      "batch_id": "claude-final-handoff-01",
+      "provider": "claude",
+      "case_id": "long-handoff",
+      "kind": "body",
+      "condition": "original-body",
+      "repetition": 3,
+      "config": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-long-handoff-original-body.json",
+      "order": 6,
+      "output": "report.md"
+    }
+  ]
+}
