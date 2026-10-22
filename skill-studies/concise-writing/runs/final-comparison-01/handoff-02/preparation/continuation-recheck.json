@@ -1,0 +1,47 @@
+{
+  "checked_at": "2026-10-22T20:34:28.139229+00:00",
+  "model_calls": 0,
+  "qualified_binaries": [
+    {
+      "name": "codex",
+      "path": "/opt/homebrew/Caskroom/codex/0.163.0/bin/codex",
+      "sha256": "8813367285524ac798dd96d1b071aea30d58708c7226fd236cd275cf1cfdee31",
+      "unchanged": true
+    },
+    {
+      "name": "claude",
+      "path": "/opt/homebrew/Caskroom/claude-code@latest/2.1.305/claude",
+      "sha256": "ea3ea3c08d2a9634a4651e687fcf900d410c489bce2b00f22bd7352b91ba704f",
+      "unchanged": true
+    },
+    {
+      "name": "python",
+      "path": "/opt/homebrew/Cellar/python@3.14/3.14.8_2/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+      "sha256": "1b5cb11d163e5ba34e2a05fc533c0ed89574d4425f9749a9d89405f651980e0d",
+      "unchanged": true
+    },
+    {
+      "name": "git",
+      "path": "/opt/homebrew/Cellar/git/2.56.0_1/bin/git",
+      "sha256": "40163333061f7223ecb604ed0f12988cfc8096d57ca8b1db006d410d4aeb700e",
+      "unchanged": true
+    }
+  ],
+  "claude_logged_in": true,
+  "toolchain_adapter_unchanged": true,
+  "reused_zero_model_probes": 12,
+  "reused_preflight_inventory": {
+    "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/preflight.inventory.json",
+    "sha256": "adba4bbba5bcf3cfbad45691ad08da796b9abf215f3ba73facbd8347ec8029c2",
+    "version": "1"
+  },
+  "boundary_reuse": "Same exact CLI/toolchain hashes, adapter and input/permission profiles. Both original and revised subject combinations unchanged. Existing runtime, input-isolation, login-shell and Opus read-only qualification reused; actual model/tool/body evidence is checked on each new invocation.",
+  "evidence": {
+    "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-02/runtime-recheck",
+    "inventory": {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-02/runtime-recheck.inventory.json",
+      "sha256": "635d356193cb9f32330aeb23d07fabdb66f5a639340e964ff6ff7fe87fb441bf",
+      "version": "1"
+    }
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "format_version": "1",
+  "manifest_id": "cw-codex-final-handoff-02",
+  "study_id": "concise-writing",
+  "case_id": "long-handoff",
+  "status": "draft",
+  "created_at": "2026-10-22T20:34:05.408209+00:00",
+  "source_revision": null,
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "684d76df079a1359f998a06f64c98e6234fdb85c71af0969ba99bfa176521708",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/concise-writing/protocol.md",
+      "sha256": "054a28f27df97f256735f3c00b39e06bc1a9b19c2257e2200f65af904bd4a4f3",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "a90ca386d0b267632b01d8cd0bce8ba4bb4010999c3481e74a318b4d17675e40",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result-v2.schema.json",
+      "sha256": "81902ed03e807804404c0d6ba7a0092a1c311c9eef45ee88c89708ce50d7c2c2",
+      "version": "2"
+    },
+    "policy": {
+      "path": "skill-studies/concise-writing/runs/suite-2026-09-27/preparation/assessment-policy.txt",
+      "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33",
+      "version": "CW-expanded-1"
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/criteria/long-handoff.md",
+        "sha256": "04ff1b2c2b4f76a9c2936100111f679f7666f8a3f8a72c0d6f2a24c0728eb366",
+        "version": "4"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "original-body",
+      "configuration": {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-long-handoff-original-body.json",
+        "sha256": "f0994cf08dfb170aa16f247e3a3627d90fd0e200b96cfc64bf45f0566f04d871",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/concise-writing/drafts/baseline-iteration/final-comparison/skills/original-body/SKILL.md"
+    },
+    {
+      "id": "revised-body",
+      "configuration": {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/codex-long-handoff-revised-body.json",
+        "sha256": "988792a9c674412668b789dc8eeaddd38658d0e044f7e689f8d2f8316db9c8b0",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/concise-writing/drafts/baseline-iteration/final-comparison/skills/revised-body/SKILL.md"
+    }
+  ],
+  "subject_sources": [
+    {
+      "path": "skill-studies/concise-writing/drafts/baseline-iteration/final-comparison/skills/original-body/SKILL.md",
+      "sha256": "1889d41c2f90ec7c909ebf3baca0dd3c395fbc8d837003b21732599f26735422",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/drafts/baseline-iteration/final-comparison/skills/revised-body/SKILL.md",
+      "sha256": "fe48f44ab3ccc3f58addabbe2e04b90f9f6ed08590dad21814bf7a9d7b7bdd07",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/long-handoff/TASK.md",
+      "sha256": "8be0f67fe6b62ca0a1d5f3af9ac2ffea79eef0d0615f0979853079653b8feab8",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/long-handoff/report.md",
+      "sha256": "0eb0946286d2a4b1708f14bcff5795cd1effdfa64af612a6cb9a89d2fac84737",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/prompts/codex-body.md",
+      "sha256": "ec75556bc64e9de7ef0ca76ef50fe2db02021e90c8a855901b6e08a854f4d81e",
+      "version": null
+    }
+  ],
+  "controller_only": [
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-02/preparation/schedule.json",
+      "sha256": null,
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-02/preparation/runtime_setup.py",
+      "sha256": null,
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-02/preparation/runtime-identities.json",
+      "sha256": null,
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-02/preparation/collect_one.py",
+      "sha256": null,
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-02/preparation/inspect_one.py",
+      "sha256": null,
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-02/preparation/trace_paths.py",
+      "sha256": null,
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-02/preparation/body_delivery.py",
+      "sha256": null,
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-02/preparation/inspection-tests/test_body_delivery.py",
+      "sha256": null,
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-02/preparation/inspection-tests/test_collection_guards.py",
+      "sha256": null,
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-02/preparation/continuation-recheck.json",
+      "sha256": null,
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-02/README.md",
+      "sha256": null,
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/interpretation.md",
+      "sha256": null,
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-02/preparation/review.md",
+      "sha256": null,
+      "version": null
+    }
+  ]
+}

@@ -10,3 +10,5 @@ The owner-approved [first comment screen](screen-01/README.md) uses only twelve 
 [Repetitions four and five](screen-02/README.md) retain the eight additions and the two combined ten-output provider reviews separately from the first-screen evidence.
 
 The [long-handoff comparison](handoff-01/README.md) keeps its twelve subjects and two six-output reviews separate from comment evidence.
+
+[Handoff repetitions four and five](handoff-02/README.md) retain eight new subjects and the updated ten-output provider reviews separately from the first stage.
