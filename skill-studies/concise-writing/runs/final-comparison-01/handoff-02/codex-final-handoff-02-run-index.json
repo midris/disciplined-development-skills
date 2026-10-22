@@ -48,7 +48,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-02/results/20261022T203714097Z-cw-final-codex-long-handoff-revised-body-11968518-0846-420d-a484-13f6aaad061b-5ihe8wsy.json",
           "sha256": "5502b8ac5c62c4a4b41f985dff57630b2d080347f997dd3ac57931e25d6c7b67",
-          "version": "2"
+          "version": "2",
+          "git_revision": "f6258d40de0e567aeca7a85cac59c7b4110e31a5"
         }
       }
     },
@@ -96,7 +97,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-02/results/20261022T203848285Z-cw-final-codex-long-handoff-original-body-78629f22-d979-4d64-9d0a-9812ef5f526d-qso2emjy.json",
           "sha256": "7497d57c1adc053d898afa7b6608272e10fd8e6997ce4190a90ad6091ac7b5b1",
-          "version": "2"
+          "version": "2",
+          "git_revision": "f6258d40de0e567aeca7a85cac59c7b4110e31a5"
         }
       }
     },
@@ -144,7 +146,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-02/results/20261022T204041413Z-cw-final-codex-long-handoff-original-body-d5e0cae0-a661-4c43-a81e-8ee7aa9ef4a2-d__6pf6n.json",
           "sha256": "f7585d70cf9ed573b0af84bde2b9a5f90e6bb9e3c4d98219e25af95521257901",
-          "version": "2"
+          "version": "2",
+          "git_revision": "f6258d40de0e567aeca7a85cac59c7b4110e31a5"
         }
       }
     },
@@ -192,7 +195,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-02/results/20261022T204201822Z-cw-final-codex-long-handoff-revised-body-27243e3b-53ac-4683-8414-639615b86cba-5cc_30cg.json",
           "sha256": "cac3e33509c21b94d0bac9d7fc8ef53818019edec35f859798ac3f53b4757928",
-          "version": "2"
+          "version": "2",
+          "git_revision": "f6258d40de0e567aeca7a85cac59c7b4110e31a5"
         }
       }
     }
