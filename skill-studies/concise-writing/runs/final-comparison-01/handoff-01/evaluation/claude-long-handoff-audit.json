@@ -1,0 +1,17 @@
+{
+  "configuration": "claude-long-handoff",
+  "required_complete_files": 15,
+  "outputs": 6,
+  "first_pass_event": 71,
+  "prior_read_event": 72,
+  "first_pass_sha256": "9ee2a601459fdd6c91a92a4930bdcdb3f5625b1a433cb3215ddc951682fa86e2",
+  "first_pass_path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/evaluation/claude-long-handoff-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/reviews/20261022T200822434Z-cw-suite-opus-claude-long-handoff-67ac30f4-4173-4a1f-88d8-00c29866a663-azl03c7o/final.txt",
+  "final_sha256": "df247d37573558760e13c66f0813abd79719f6ea216f5990ce6aee77e19ca62d",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "pre_prior_grep_calls": [],
+  "semantic_completeness": "verified: all six full run IDs, eighteen first-pass factors, quotes, retained-reminder reasoning, token/whole-batch/count precision notes and all comparison counts manually checked against complete sources/outputs; no pre-prior score exposure or post-prior factor/evidence correction. Controller contextual qualification of count wording is retained in the reconciliation, not a change to the reviewer transcript."
+}

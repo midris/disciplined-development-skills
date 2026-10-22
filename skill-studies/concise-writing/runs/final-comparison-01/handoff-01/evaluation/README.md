@@ -14,3 +14,5 @@ For each review, verify complete delivery before its first judgments and prior-s
 Read every factor, quotation and comparison manually before clearing semantic completeness; retain disagreements and post-prior changes separately.
 Three repetitions are descriptive; equal passes do not prove equivalent quality or support reliability claims.
 The owner makes the next continuation and adoption decision after reviewing the evidence.
+
+[Comparison and manual reconciliation](assessment.md) maps the first passes, audits and structured judgments to the fixed subjects.

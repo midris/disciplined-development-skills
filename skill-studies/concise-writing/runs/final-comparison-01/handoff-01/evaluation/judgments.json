@@ -1,0 +1,387 @@
+{
+  "scope": "Twelve distinct final CW handoff artifacts, two six-output Opus reviews; manual interpretation of complete first passes and comparisons",
+  "reviewer": "claude-opus-5-5 medium",
+  "active_assessor": "Codex controller",
+  "blinding": "Condition labels visible; active assessor has development/authoring exposure",
+  "reviewed_packets": 2,
+  "unique_subject_outputs": 12,
+  "reviews": [
+    {
+      "configuration": "codex-long-handoff",
+      "evaluator_run_id": "20261022T200403898Z-cw-suite-opus-codex-long-handoff-27777ee0-6cf8-4efa-9db0-bc268d2190a9-aozvx39u",
+      "audit": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/evaluation/codex-long-handoff-audit.json",
+      "judgments": [
+        {
+          "run_id": "20261022T194147448Z-cw-final-codex-long-handoff-original-body-d671ddc4-19d5-4189-95f9-d8c3cba752c0-sigu273f",
+          "condition": "original-body",
+          "repetition": 1,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "codex-final-handoff-01-long-handoff-original-body-1-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/results/20261022T194147448Z-cw-final-codex-long-handoff-original-body-d671ddc4-19d5-4189-95f9-d8c3cba752c0-sigu273f.json",
+              "sha256": "39c10f0bdc683d4988ba66277d64fdbda605d1c27e9f8c75a35341d55eba1683",
+              "version": "2",
+              "git_revision": "f19bad714f9d4dfad0be036624f0ce00eb007ab7"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/evaluation/codex-long-handoff-first-pass.md",
+            "selector": "Exact full run ID and condition/repetition; complete per-output discussion"
+          },
+          "after_prior": []
+        },
+        {
+          "run_id": "20261022T194313605Z-cw-final-codex-long-handoff-revised-body-23a09fab-04c5-469d-99ac-35ad09c6bc92-sxs0jm27",
+          "condition": "revised-body",
+          "repetition": 1,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "codex-final-handoff-01-long-handoff-revised-body-1-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/results/20261022T194313605Z-cw-final-codex-long-handoff-revised-body-23a09fab-04c5-469d-99ac-35ad09c6bc92-sxs0jm27.json",
+              "sha256": "4f018ac30a0d79d4d02b8f941862f9c92750209e274c306c9e4c05ab1492c900",
+              "version": "2",
+              "git_revision": "f19bad714f9d4dfad0be036624f0ce00eb007ab7"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/evaluation/codex-long-handoff-first-pass.md",
+            "selector": "Exact full run ID and condition/repetition; complete per-output discussion"
+          },
+          "after_prior": []
+        },
+        {
+          "run_id": "20261022T194428548Z-cw-final-codex-long-handoff-revised-body-c5b68e9e-fdfe-4665-8ca8-3b031811b3b9-fnd0hr89",
+          "condition": "revised-body",
+          "repetition": 2,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "codex-final-handoff-01-long-handoff-revised-body-2-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/results/20261022T194428548Z-cw-final-codex-long-handoff-revised-body-c5b68e9e-fdfe-4665-8ca8-3b031811b3b9-fnd0hr89.json",
+              "sha256": "84ac88471dffc6b1bd7ec061a0e413564fa4fc26515381a8a0b6ef38d98d1793",
+              "version": "2",
+              "git_revision": "f19bad714f9d4dfad0be036624f0ce00eb007ab7"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/evaluation/codex-long-handoff-first-pass.md",
+            "selector": "Exact full run ID and condition/repetition; complete per-output discussion"
+          },
+          "after_prior": []
+        },
+        {
+          "run_id": "20261022T194535385Z-cw-final-codex-long-handoff-original-body-7cfa035a-7f94-4854-a4d5-671404ca9e24-ycbzdmah",
+          "condition": "original-body",
+          "repetition": 2,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "codex-final-handoff-01-long-handoff-original-body-2-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/results/20261022T194535385Z-cw-final-codex-long-handoff-original-body-7cfa035a-7f94-4854-a4d5-671404ca9e24-ycbzdmah.json",
+              "sha256": "3f4531427202b29e13eea2b4d23730196eb8edad07ce2c4fc5f59ef6dc871d98",
+              "version": "2",
+              "git_revision": "f19bad714f9d4dfad0be036624f0ce00eb007ab7"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/evaluation/codex-long-handoff-first-pass.md",
+            "selector": "Exact full run ID and condition/repetition; complete per-output discussion"
+          },
+          "after_prior": []
+        },
+        {
+          "run_id": "20261022T194701944Z-cw-final-codex-long-handoff-original-body-d3edc56f-0ad2-468b-ad72-5fd73473fe4a-bbzyeo3i",
+          "condition": "original-body",
+          "repetition": 3,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "codex-final-handoff-01-long-handoff-original-body-3-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/results/20261022T194701944Z-cw-final-codex-long-handoff-original-body-d3edc56f-0ad2-468b-ad72-5fd73473fe4a-bbzyeo3i.json",
+              "sha256": "9d3e29c07da33aaf0f2bc26587776c0eb0a09c6e2f157cfacf558dc7da5409b0",
+              "version": "2",
+              "git_revision": "f19bad714f9d4dfad0be036624f0ce00eb007ab7"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/evaluation/codex-long-handoff-first-pass.md",
+            "selector": "Exact full run ID and condition/repetition; complete per-output discussion"
+          },
+          "after_prior": []
+        },
+        {
+          "run_id": "20261022T194822220Z-cw-final-codex-long-handoff-revised-body-7db7853d-d29b-435f-8738-98d45311dcf1-74o1boxw",
+          "condition": "revised-body",
+          "repetition": 3,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "codex-final-handoff-01-long-handoff-revised-body-3-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/results/20261022T194822220Z-cw-final-codex-long-handoff-revised-body-7db7853d-d29b-435f-8738-98d45311dcf1-74o1boxw.json",
+              "sha256": "3aaeeb126a83c25e85dd007b94233f1eceb60e1c67adc8025516aa14b6d93f1b",
+              "version": "2",
+              "git_revision": "f19bad714f9d4dfad0be036624f0ce00eb007ab7"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/evaluation/codex-long-handoff-first-pass.md",
+            "selector": "Exact full run ID and condition/repetition; complete per-output discussion"
+          },
+          "after_prior": []
+        }
+      ],
+      "disagreements": [],
+      "quality_notes": [
+        "Both bodies3/3, no consequential effectiveness/readability advantage. Original outputs slightly more consistent in compactness and explicit entry-point orientation; original repetition3 has the most scannable lists. Revised repetitions1/2 conserve more wording; repetition3 is shortest overall.",
+        "Contextual precision observations: original1 token endpoint retained in Deployment; revised1 all-eighty wording does not create a new consequential claim; revised2/3 delete opening orientation but retain usable sections; original3 prerequisite-remedy wording is conservative; revised3 deployment ownership still situates account confirmation.",
+        "One-sentence-per-line observations describe source formatting and do not independently establish reader effectiveness."
+      ],
+      "transcription_basis": "Active controller read the complete emitted first pass before the complete final prior comparison, checked all six full IDs, eighteen factors, quotes/examples and every condition count against the frozen source/output packet. All first-pass factors agree; no corrections after prior."
+    },
+    {
+      "configuration": "claude-long-handoff",
+      "evaluator_run_id": "20261022T200822434Z-cw-suite-opus-claude-long-handoff-67ac30f4-4173-4a1f-88d8-00c29866a663-azl03c7o",
+      "audit": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/evaluation/claude-long-handoff-audit.json",
+      "judgments": [
+        {
+          "run_id": "20261022T194957957Z-cw-final-claude-long-handoff-revised-body-54ac6853-222f-4122-9722-0456e905db18-hf4os8zu",
+          "condition": "revised-body",
+          "repetition": 1,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "claude-final-handoff-01-long-handoff-revised-body-1-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/results/20261022T194957957Z-cw-final-claude-long-handoff-revised-body-54ac6853-222f-4122-9722-0456e905db18-hf4os8zu.json",
+              "sha256": "5a8be98a17d317ac5d972d716ad2310226e52748afce2261a105aeb0c0aad882",
+              "version": "2",
+              "git_revision": "f19bad714f9d4dfad0be036624f0ce00eb007ab7"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/evaluation/claude-long-handoff-first-pass.md",
+            "selector": "Exact full run ID and condition/repetition; complete per-output discussion"
+          },
+          "after_prior": []
+        },
+        {
+          "run_id": "20261022T195132875Z-cw-final-claude-long-handoff-original-body-091d019a-5c46-4d46-9d01-8b46c975a881-newbykys",
+          "condition": "original-body",
+          "repetition": 1,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "claude-final-handoff-01-long-handoff-original-body-1-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/results/20261022T195132875Z-cw-final-claude-long-handoff-original-body-091d019a-5c46-4d46-9d01-8b46c975a881-newbykys.json",
+              "sha256": "1565ec04fce6c4bf30553c794f38d49ddd24c68a8a83be54a2a7adf910777628",
+              "version": "2",
+              "git_revision": "f19bad714f9d4dfad0be036624f0ce00eb007ab7"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/evaluation/claude-long-handoff-first-pass.md",
+            "selector": "Exact full run ID and condition/repetition; complete per-output discussion"
+          },
+          "after_prior": []
+        },
+        {
+          "run_id": "20261022T195250466Z-cw-final-claude-long-handoff-original-body-c8b930c2-78b6-473f-b7dd-3e9d32a78d5f-d08e3j3h",
+          "condition": "original-body",
+          "repetition": 2,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "claude-final-handoff-01-long-handoff-original-body-2-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/results/20261022T195250466Z-cw-final-claude-long-handoff-original-body-c8b930c2-78b6-473f-b7dd-3e9d32a78d5f-d08e3j3h.json",
+              "sha256": "f848c8c5baaddfd57cf4d0d4fd843178b27db4787fa443bbf109a6fa63e81c4a",
+              "version": "2",
+              "git_revision": "f19bad714f9d4dfad0be036624f0ce00eb007ab7"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/evaluation/claude-long-handoff-first-pass.md",
+            "selector": "Exact full run ID and condition/repetition; complete per-output discussion"
+          },
+          "after_prior": []
+        },
+        {
+          "run_id": "20261022T195409483Z-cw-final-claude-long-handoff-revised-body-e7632964-4301-443c-b200-8a781993e2e6-dgpsa5l2",
+          "condition": "revised-body",
+          "repetition": 2,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "claude-final-handoff-01-long-handoff-revised-body-2-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/results/20261022T195409483Z-cw-final-claude-long-handoff-revised-body-e7632964-4301-443c-b200-8a781993e2e6-dgpsa5l2.json",
+              "sha256": "9916d96f728c417135f8469aaaa97c8872dc1c380ec7c7beae4fa078a58b98bd",
+              "version": "2",
+              "git_revision": "f19bad714f9d4dfad0be036624f0ce00eb007ab7"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/evaluation/claude-long-handoff-first-pass.md",
+            "selector": "Exact full run ID and condition/repetition; complete per-output discussion"
+          },
+          "after_prior": []
+        },
+        {
+          "run_id": "20261022T195514678Z-cw-final-claude-long-handoff-revised-body-fa738718-6e85-4a50-b8c7-c8e29e5bc2d5-9ycpapu5",
+          "condition": "revised-body",
+          "repetition": 3,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "claude-final-handoff-01-long-handoff-revised-body-3-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/results/20261022T195514678Z-cw-final-claude-long-handoff-revised-body-fa738718-6e85-4a50-b8c7-c8e29e5bc2d5-9ycpapu5.json",
+              "sha256": "fbc830e3407bfeb6ba515b4cd01879006d4d8c1dc96bbc634d3f850114034ac3",
+              "version": "2",
+              "git_revision": "f19bad714f9d4dfad0be036624f0ce00eb007ab7"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/evaluation/claude-long-handoff-first-pass.md",
+            "selector": "Exact full run ID and condition/repetition; complete per-output discussion"
+          },
+          "after_prior": []
+        },
+        {
+          "run_id": "20261022T195659960Z-cw-final-claude-long-handoff-original-body-230d027f-2783-4993-9a34-802ab151970c-1e8z_iju",
+          "condition": "original-body",
+          "repetition": 3,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "claude-final-handoff-01-long-handoff-original-body-3-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/results/20261022T195659960Z-cw-final-claude-long-handoff-original-body-230d027f-2783-4993-9a34-802ab151970c-1e8z_iju.json",
+              "sha256": "9d1fbbc37e1423aad0402ed0bd7b49c4dc869ad492c47e376e6567117d89bd84",
+              "version": "2",
+              "git_revision": "f19bad714f9d4dfad0be036624f0ce00eb007ab7"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/evaluation/claude-long-handoff-first-pass.md",
+            "selector": "Exact full run ID and condition/repetition; complete per-output discussion"
+          },
+          "after_prior": []
+        }
+      ],
+      "disagreements": [],
+      "quality_notes": [
+        "Both bodies3/3, all18 factors agree; no consequential effectiveness advantage. Revised removed the detached reminder in3/3, original in2/3. Original2 weakest cleanup, original3 strongest compression with denser dash-linked prose; revised3 best near-verbatim edit.",
+        "The retained reminder is easy to skip and does not split operations or obscure an action. Its presence alone is not F3 failure; the reviewer independently found no consequential burden.",
+        "Controller qualification: the reviewers call All eighty wording a precision note. In complete context it describes the observed completed sample, not an assertion of exactly80 total attempts or zero earlier failures. An actual introduced false claim would fail F1 regardless of retained limits or unchanged actions; the pass does not excuse a known inaccuracy as harmless.",
+        "Whole-batch acknowledgement remains the meaning in complete context; the token obligation survives without invented rationale even where the editorial note about unexplained why is cut."
+      ],
+      "transcription_basis": "Active controller read the complete first pass and final prior comparison; manually checked six full IDs,18 factors, every quote/example and provider/condition count. First-pass factors agree and no post-prior correction occurs. Narrative precision labels remain visible with the controller whole-context qualification."
+    }
+  ]
+}
