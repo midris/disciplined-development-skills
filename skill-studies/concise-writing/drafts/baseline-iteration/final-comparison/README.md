@@ -3,7 +3,7 @@
 The owner requested a final comparison of original and revised bodies, both with the selected fully rewritten description, before making the adoption decision.
 The [protocol](../../../protocol.md) owns current authority, spending and next action.
 This package describes the broader **120-subject/twenty-review proposal**, which remains unapproved.
-The owner selected staged comment collection; the [protocol](../../../protocol.md) owns the first-screen and repetition-4/5 authorizations, current ceiling and later continuation decisions.
+The owner selected bounded stages; the [protocol](../../../protocol.md) owns their allocations, current ceiling and subsequent continuation decisions.
 The selected description and both body texts are unchanged; this round tests their complete combinations rather than authoring another revision.
 
 ## Candidates and question

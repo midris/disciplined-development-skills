@@ -24,7 +24,7 @@ Use the [runner guide](../skill-validation/runner/README.md) for mechanics; its 
 Read installed workflow skills from the available catalog rather than relying on a previous installation path.
 Read the [purpose and relationship map](../ARCHITECTURE.md#composition-boundaries) for orientation; distinguish independent use, explicit pairings and DD orchestration before deciding subject context.
 
-The study workspaces are `skill-studies/concise-writing/` and `skill-studies/sweeping-stale-references/`; their previously authorized batches are complete.
+The study workspaces are `skill-studies/concise-writing/` and `skill-studies/sweeping-stale-references/`; each protocol owns current collection status.
 Each study’s protocol holds its concrete decisions, versions, commands, artifact links, accounting and conclusion, without another task checklist. Resume from the [CW protocol](../skill-studies/concise-writing/protocol.md) for the owner-selected first end-to-end study; SSR follows it. The [CW accounting section](../skill-studies/concise-writing/protocol.md#storage-and-accounting) owns current combined spending, not current SSR scope.
 Fixtures, checkers, raw bundles and assessments are supporting artifacts linked from that record.
 This plan owns progress; the spec owns general rules; the protocol owns study-specific facts and decisions.

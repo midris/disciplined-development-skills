@@ -3,5 +3,294 @@
   "index_id": "cw-codex-final-handoff-01",
   "study_id": "concise-writing",
   "batch_id": "codex-final-handoff-01",
-  "attempts": []
+  "attempts": [
+    {
+      "attempt_id": "codex-final-handoff-01-long-handoff-original-body-1-1",
+      "case_id": "long-handoff",
+      "condition": "original-body",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/preparation/manifests/codex-long-handoff-manifest.json",
+        "sha256": "69bfc027ee125246a5f2c282afa0096d0957a19f8cf3899548da3f006ebfe6a4",
+        "version": "1",
+        "git_revision": "9cfd0aef9d986542f6e97a54436a090a0394c3f9"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "054a28f27df97f256735f3c00b39e06bc1a9b19c2257e2200f65af904bd4a4f3",
+          "version": "1",
+          "git_revision": "9cfd0aef9d986542f6e97a54436a090a0394c3f9"
+        },
+        "selector": "Batch: codex-final-handoff-01; order 1"
+      },
+      "run_id": "20261022T194147448Z-cw-final-codex-long-handoff-original-body-d671ddc4-19d5-4189-95f9-d8c3cba752c0-sigu273f",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/subjects/20261022T194147448Z-cw-final-codex-long-handoff-original-body-d671ddc4-19d5-4189-95f9-d8c3cba752c0-sigu273f",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/subjects/20261022T194147448Z-cw-final-codex-long-handoff-original-body-d671ddc4-19d5-4189-95f9-d8c3cba752c0-sigu273f.inventory.json",
+          "sha256": "2892cd89984d400973ff53612d9f6c63dcfb6764b7fe0d225de4116db5c2f7ca",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-final-handoff-01-long-handoff-original-body-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/results/20261022T194147448Z-cw-final-codex-long-handoff-original-body-d671ddc4-19d5-4189-95f9-d8c3cba752c0-sigu273f.json",
+          "sha256": "39c10f0bdc683d4988ba66277d64fdbda605d1c27e9f8c75a35341d55eba1683",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-final-handoff-01-long-handoff-revised-body-1-1",
+      "case_id": "long-handoff",
+      "condition": "revised-body",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/preparation/manifests/codex-long-handoff-manifest.json",
+        "sha256": "69bfc027ee125246a5f2c282afa0096d0957a19f8cf3899548da3f006ebfe6a4",
+        "version": "1",
+        "git_revision": "9cfd0aef9d986542f6e97a54436a090a0394c3f9"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "054a28f27df97f256735f3c00b39e06bc1a9b19c2257e2200f65af904bd4a4f3",
+          "version": "1",
+          "git_revision": "9cfd0aef9d986542f6e97a54436a090a0394c3f9"
+        },
+        "selector": "Batch: codex-final-handoff-01; order 2"
+      },
+      "run_id": "20261022T194313605Z-cw-final-codex-long-handoff-revised-body-23a09fab-04c5-469d-99ac-35ad09c6bc92-sxs0jm27",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/subjects/20261022T194313605Z-cw-final-codex-long-handoff-revised-body-23a09fab-04c5-469d-99ac-35ad09c6bc92-sxs0jm27",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/subjects/20261022T194313605Z-cw-final-codex-long-handoff-revised-body-23a09fab-04c5-469d-99ac-35ad09c6bc92-sxs0jm27.inventory.json",
+          "sha256": "f4369e1971d1afafd78ca7373caef78274a1b0b6238bc2fc9fb7ee09c3787ca9",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-final-handoff-01-long-handoff-revised-body-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/results/20261022T194313605Z-cw-final-codex-long-handoff-revised-body-23a09fab-04c5-469d-99ac-35ad09c6bc92-sxs0jm27.json",
+          "sha256": "4f018ac30a0d79d4d02b8f941862f9c92750209e274c306c9e4c05ab1492c900",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-final-handoff-01-long-handoff-revised-body-2-1",
+      "case_id": "long-handoff",
+      "condition": "revised-body",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/preparation/manifests/codex-long-handoff-manifest.json",
+        "sha256": "69bfc027ee125246a5f2c282afa0096d0957a19f8cf3899548da3f006ebfe6a4",
+        "version": "1",
+        "git_revision": "9cfd0aef9d986542f6e97a54436a090a0394c3f9"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "054a28f27df97f256735f3c00b39e06bc1a9b19c2257e2200f65af904bd4a4f3",
+          "version": "1",
+          "git_revision": "9cfd0aef9d986542f6e97a54436a090a0394c3f9"
+        },
+        "selector": "Batch: codex-final-handoff-01; order 3"
+      },
+      "run_id": "20261022T194428548Z-cw-final-codex-long-handoff-revised-body-c5b68e9e-fdfe-4665-8ca8-3b031811b3b9-fnd0hr89",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/subjects/20261022T194428548Z-cw-final-codex-long-handoff-revised-body-c5b68e9e-fdfe-4665-8ca8-3b031811b3b9-fnd0hr89",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/subjects/20261022T194428548Z-cw-final-codex-long-handoff-revised-body-c5b68e9e-fdfe-4665-8ca8-3b031811b3b9-fnd0hr89.inventory.json",
+          "sha256": "7a4efb29a747808deb186939040386a5ee11c62e2fed69a31f1749c9de9420f9",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-final-handoff-01-long-handoff-revised-body-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/results/20261022T194428548Z-cw-final-codex-long-handoff-revised-body-c5b68e9e-fdfe-4665-8ca8-3b031811b3b9-fnd0hr89.json",
+          "sha256": "84ac88471dffc6b1bd7ec061a0e413564fa4fc26515381a8a0b6ef38d98d1793",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-final-handoff-01-long-handoff-original-body-2-1",
+      "case_id": "long-handoff",
+      "condition": "original-body",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/preparation/manifests/codex-long-handoff-manifest.json",
+        "sha256": "69bfc027ee125246a5f2c282afa0096d0957a19f8cf3899548da3f006ebfe6a4",
+        "version": "1",
+        "git_revision": "9cfd0aef9d986542f6e97a54436a090a0394c3f9"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "054a28f27df97f256735f3c00b39e06bc1a9b19c2257e2200f65af904bd4a4f3",
+          "version": "1",
+          "git_revision": "9cfd0aef9d986542f6e97a54436a090a0394c3f9"
+        },
+        "selector": "Batch: codex-final-handoff-01; order 4"
+      },
+      "run_id": "20261022T194535385Z-cw-final-codex-long-handoff-original-body-7cfa035a-7f94-4854-a4d5-671404ca9e24-ycbzdmah",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/subjects/20261022T194535385Z-cw-final-codex-long-handoff-original-body-7cfa035a-7f94-4854-a4d5-671404ca9e24-ycbzdmah",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/subjects/20261022T194535385Z-cw-final-codex-long-handoff-original-body-7cfa035a-7f94-4854-a4d5-671404ca9e24-ycbzdmah.inventory.json",
+          "sha256": "fdc563fcfec47f9a7488bbd89342152792c0a7ad13318e1cd7357664b1a09102",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-final-handoff-01-long-handoff-original-body-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/results/20261022T194535385Z-cw-final-codex-long-handoff-original-body-7cfa035a-7f94-4854-a4d5-671404ca9e24-ycbzdmah.json",
+          "sha256": "3f4531427202b29e13eea2b4d23730196eb8edad07ce2c4fc5f59ef6dc871d98",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-final-handoff-01-long-handoff-original-body-3-1",
+      "case_id": "long-handoff",
+      "condition": "original-body",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/preparation/manifests/codex-long-handoff-manifest.json",
+        "sha256": "69bfc027ee125246a5f2c282afa0096d0957a19f8cf3899548da3f006ebfe6a4",
+        "version": "1",
+        "git_revision": "9cfd0aef9d986542f6e97a54436a090a0394c3f9"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "054a28f27df97f256735f3c00b39e06bc1a9b19c2257e2200f65af904bd4a4f3",
+          "version": "1",
+          "git_revision": "9cfd0aef9d986542f6e97a54436a090a0394c3f9"
+        },
+        "selector": "Batch: codex-final-handoff-01; order 5"
+      },
+      "run_id": "20261022T194701944Z-cw-final-codex-long-handoff-original-body-d3edc56f-0ad2-468b-ad72-5fd73473fe4a-bbzyeo3i",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/subjects/20261022T194701944Z-cw-final-codex-long-handoff-original-body-d3edc56f-0ad2-468b-ad72-5fd73473fe4a-bbzyeo3i",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/subjects/20261022T194701944Z-cw-final-codex-long-handoff-original-body-d3edc56f-0ad2-468b-ad72-5fd73473fe4a-bbzyeo3i.inventory.json",
+          "sha256": "4ac3cefe357205e2eee7ce9d0ca8c9c0fd0b8a026148a0350e9d2d97b39376b3",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-final-handoff-01-long-handoff-original-body-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/results/20261022T194701944Z-cw-final-codex-long-handoff-original-body-d3edc56f-0ad2-468b-ad72-5fd73473fe4a-bbzyeo3i.json",
+          "sha256": "9d3e29c07da33aaf0f2bc26587776c0eb0a09c6e2f157cfacf558dc7da5409b0",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-final-handoff-01-long-handoff-revised-body-3-1",
+      "case_id": "long-handoff",
+      "condition": "revised-body",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/preparation/manifests/codex-long-handoff-manifest.json",
+        "sha256": "69bfc027ee125246a5f2c282afa0096d0957a19f8cf3899548da3f006ebfe6a4",
+        "version": "1",
+        "git_revision": "9cfd0aef9d986542f6e97a54436a090a0394c3f9"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "054a28f27df97f256735f3c00b39e06bc1a9b19c2257e2200f65af904bd4a4f3",
+          "version": "1",
+          "git_revision": "9cfd0aef9d986542f6e97a54436a090a0394c3f9"
+        },
+        "selector": "Batch: codex-final-handoff-01; order 6"
+      },
+      "run_id": "20261022T194822220Z-cw-final-codex-long-handoff-revised-body-7db7853d-d29b-435f-8738-98d45311dcf1-74o1boxw",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/subjects/20261022T194822220Z-cw-final-codex-long-handoff-revised-body-7db7853d-d29b-435f-8738-98d45311dcf1-74o1boxw",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/subjects/20261022T194822220Z-cw-final-codex-long-handoff-revised-body-7db7853d-d29b-435f-8738-98d45311dcf1-74o1boxw.inventory.json",
+          "sha256": "55e4c4570582590ba1a2a65e4dd86bd3ad2720c72fcb50a5394968ebe71ef8cd",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-final-handoff-01-long-handoff-revised-body-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/results/20261022T194822220Z-cw-final-codex-long-handoff-revised-body-7db7853d-d29b-435f-8738-98d45311dcf1-74o1boxw.json",
+          "sha256": "3aaeeb126a83c25e85dd007b94233f1eceb60e1c67adc8025516aa14b6d93f1b",
+          "version": "2"
+        }
+      }
+    }
+  ]
 }
