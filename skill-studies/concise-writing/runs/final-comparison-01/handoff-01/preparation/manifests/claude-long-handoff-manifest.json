@@ -3,39 +3,39 @@
   "manifest_id": "cw-claude-final-handoff-01",
   "study_id": "concise-writing",
   "case_id": "long-handoff",
-  "status": "draft",
+  "status": "frozen",
   "created_at": "2026-10-22T19:39:08.819151+00:00",
-  "source_revision": null,
+  "source_revision": "88bbee2e0316a2f7fb3120bb9bc241a5f054ae90",
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
-      "sha256": null,
+      "sha256": "684d76df079a1359f998a06f64c98e6234fdb85c71af0969ba99bfa176521708",
       "version": null
     },
     "protocol": {
       "path": "skill-studies/concise-writing/protocol.md",
-      "sha256": null,
+      "sha256": "054a28f27df97f256735f3c00b39e06bc1a9b19c2257e2200f65af904bd4a4f3",
       "version": "1"
     },
     "format_contract": {
       "path": "skill-studies/formats/companion-formats.md",
-      "sha256": null,
+      "sha256": "a90ca386d0b267632b01d8cd0bce8ba4bb4010999c3481e74a318b4d17675e40",
       "version": "1"
     },
     "execution_result_schema": {
       "path": "skill-studies/formats/execution-result-v2.schema.json",
-      "sha256": null,
+      "sha256": "81902ed03e807804404c0d6ba7a0092a1c311c9eef45ee88c89708ce50d7c2c2",
       "version": "2"
     },
     "policy": {
       "path": "skill-studies/concise-writing/runs/suite-2026-09-27/preparation/assessment-policy.txt",
-      "sha256": null,
+      "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33",
       "version": "CW-expanded-1"
     },
     "criteria": [
       {
         "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/criteria/long-handoff.md",
-        "sha256": null,
+        "sha256": "04ff1b2c2b4f76a9c2936100111f679f7666f8a3f8a72c0d6f2a24c0728eb366",
         "version": "4"
       }
     ]
@@ -45,7 +45,7 @@
       "id": "original-body",
       "configuration": {
         "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-long-handoff-original-body.json",
-        "sha256": null,
+        "sha256": "d4ba12c6d17b374e5d8b01263549d9c27d04d746cb0ba10fd8cef46e9b00be22",
         "version": "0.2"
       },
       "target_skill": "skill-studies/concise-writing/drafts/baseline-iteration/final-comparison/skills/original-body/SKILL.md"
@@ -54,7 +54,7 @@
       "id": "revised-body",
       "configuration": {
         "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-long-handoff-revised-body.json",
-        "sha256": null,
+        "sha256": "9ddb31fda41379c5c1ca8e9e6a7d5f330dd03862759c4524690ab283aa54178e",
         "version": "0.2"
       },
       "target_skill": "skill-studies/concise-writing/drafts/baseline-iteration/final-comparison/skills/revised-body/SKILL.md"
@@ -63,94 +63,94 @@
   "subject_sources": [
     {
       "path": "skill-studies/concise-writing/drafts/baseline-iteration/final-comparison/skills/original-body/SKILL.md",
-      "sha256": null,
+      "sha256": "1889d41c2f90ec7c909ebf3baca0dd3c395fbc8d837003b21732599f26735422",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/drafts/baseline-iteration/final-comparison/skills/revised-body/SKILL.md",
-      "sha256": null,
+      "sha256": "fe48f44ab3ccc3f58addabbe2e04b90f9f6ed08590dad21814bf7a9d7b7bdd07",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/long-handoff/TASK.md",
-      "sha256": null,
+      "sha256": "8be0f67fe6b62ca0a1d5f3af9ac2ffea79eef0d0615f0979853079653b8feab8",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/long-handoff/report.md",
-      "sha256": null,
+      "sha256": "0eb0946286d2a4b1708f14bcff5795cd1effdfa64af612a6cb9a89d2fac84737",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/prompts/claude-body.md",
-      "sha256": null,
+      "sha256": "c72703762cfa9b2be16c09550e27b534fd378c68150004b8d039cbcc499df6bd",
       "version": null
     }
   ],
   "controller_only": [
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/preparation/schedule.json",
-      "sha256": null,
+      "sha256": "20fbee2c8e5d43920f0c622c7fda09e93c640c00b5fe8b69e398b97aaf4fc779",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/preparation/runtime_setup.py",
-      "sha256": null,
+      "sha256": "91c8a2a5fccaa22affc662fe8824a2502be8e373e363520f21033a25838afdb2",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/preparation/runtime-identities.json",
-      "sha256": null,
+      "sha256": "31604eb232516465ebb16663f5684a4d74db0d46797ca88d4ffb07c0d31bd4bf",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/preparation/collect_one.py",
-      "sha256": null,
+      "sha256": "e79108adb73d36f677f986560b67d7a03cdd68624945d825312a02386ecd3dac",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/preparation/inspect_one.py",
-      "sha256": null,
+      "sha256": "dd8e7f8fc206691f94828cd4a5ef5a075f1af015fec068ad7e1a968be6bfb702",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/preparation/trace_paths.py",
-      "sha256": null,
+      "sha256": "050a6d29ca6dd59f018651bd8d328b94a2a74b47363ea029df7b6f0978087c79",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/preparation/body_delivery.py",
-      "sha256": null,
+      "sha256": "8e084894e036286c8b7735df6a6a1d160eef4e74d609626f1bdfd1667ba1c87a",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/preparation/inspection-tests/test_body_delivery.py",
-      "sha256": null,
+      "sha256": "48712f7ab2bbeeefb008cb435325155493f1aa6e3e460b340940449e8eaac4f6",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/preparation/inspection-tests/test_collection_guards.py",
-      "sha256": null,
+      "sha256": "6939f570deba0a688452eabbe1e98ba90b1ed310eb319b5aff52025315801fbe",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/preparation/continuation-recheck.json",
-      "sha256": null,
+      "sha256": "473b02c7b2986486ddc31d1e92e492580d3c02bf8e9250d254e6481956eed605",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/README.md",
-      "sha256": null,
+      "sha256": "13b0ac00296e3bd7c67de1f6bf0048a64194e00004675b14e397722ac2e42c78",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/interpretation.md",
-      "sha256": null,
+      "sha256": "dfb3c05d7c5f345ecf7ea939ffbb131eb642df2dd93ee334e13e017fdd3f9df5",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/preparation/review.md",
-      "sha256": null,
+      "sha256": "b00c08fdbe6c4ebb2720fdf6030b9a455ea6e7d443570afbdf79ffa3d4818d5b",
       "version": null
     }
   ]
