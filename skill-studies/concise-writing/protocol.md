@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `concise-writing`
 Status: closed; the owner approved adopting the original body with the selected rewritten description on 2026-10-22.
-Current action: none for CW. SSR remains parked pending its separate resumption decision; runner follow-ups remain in the shared plan.
+Current action: none for CW. SSR resumed for the owner-requested audit/recommendation only; its [protocol](../sweeping-stale-references/protocol.md) owns current scope. No model runs are authorized; runner follow-ups remain in the shared plan.
 
 ## Closure and adoption
 
@@ -1009,7 +1009,7 @@ The short examples screen uses its [two-call evaluator ledger](runs/final-compar
 Dispatched calls are **642 subject, 48 evaluator, 0 authoring, 3 retry**; remaining outer capacity is **0 / 0 / 4 / 1** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **3,510 active minutes booked; 2,310 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **3,545 active minutes booked; 2,345 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
 The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 642/642, with 0 approved examples-screen calls available; the earlier E diagnostic is spent.
@@ -1145,7 +1145,9 @@ The supplemental work used 40 estimated active minutes against its 40-minute for
 | Approved authentication resumption and six Claude output inspections/assessments | 20 |
 | Short examples-screen two Opus reviews, complete-read audits, reconciliation and publication | 15 |
 | CW description promotion, closure reconciliation and verification | 15 |
-| **Total** | **3,510** |
+| SSR resumption coverage/evidence/evaluation audit, complete draft review, recommendation and zero-model verification | 30 |
+| SSR coverage acceptance, cross-model review process adoption and documentation verification | 5 |
+| **Total** | **3,545** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.
@@ -1636,7 +1638,7 @@ Both versions show Claude weaknesses in whole-document cleanup and unsupported n
 The owner’s development-base and authoring-method decisions are recorded at the protocol opening; the existing assessments and coverage limitations remain unchanged.
 The [baseline iteration](drafts/baseline-iteration/README.md) separates body quality from discovery under the owner’s direction recorded above.
 Response-only applicability, full orchestration, plan/spec generation and conditional O5 remain outside demonstrated effectiveness.
-SSR stays parked until CW's cycle is settled.
+SSR's resumed scope is recorded in its protocol; this earlier CW comparison supplies no SSR collection authority.
 
 ### Combined native results: three repetitions
 

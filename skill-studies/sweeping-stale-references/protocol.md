@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `sweeping-stale-references`
 Status: all authorized comparison batches are complete; the owner selected the comprehensive rewrite as the development base and accepts its changed local reporting. The original and tested rewrite snapshots remain preserved; no new skill version is adopted.
-Current action: follow the [CW protocol’s current action](../concise-writing/protocol.md) for the owner-selected first end-to-end study. Preserve the unvalidated SSR draft and its revised, unapproved +15-call proposal. The owner deferred its baseline interpretation decision until SSR resumes; no SSR collection is scheduled. All 136 combined subject calls are spent.
+Current action: the post-CW [resumption audit](../../reviews/2026-10-22-ssr-resumption-audit.md) and whole-draft review are complete. On 2026-10-23 the owner accepted bounded coverage and added [cross-model output review](#cross-model-output-review) to SSR's testing process. The context-only three-arm proposal remains 15 subjects plus one output review, with its allocation, SSR-specific loaded-baseline interpretation and candidate wording unapproved. Preserve the combined draft and all tested snapshots. The instruction not to start model runs remains in force; no SSR collection or reviewer dispatch is scheduled. Current combined spending remains in [CW accounting](../concise-writing/protocol.md#storage-and-accounting), with subject/evaluator capacity fully spent.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](runs/core-baseline-01/core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -68,6 +68,23 @@ Core-baseline-01 fixes two executions per case/condition and descriptive counts;
 Input-format changes do not alter the following criterion policy. Historical references to preserving or separately identifying a correction are satisfied by committed Git versions and a concise reason, not duplicate history files.
 
 The [policy-3 copy](assessment-policies/SSR-assessment-3.txt) derives verbatim from the following subsection. Existing assessed pilot inputs retain policy 2; the current Shiv, semantic-delivery and moved-guide controller definitions use policy 3.
+
+### Cross-model output review
+
+Owner-approved process amendment, 2026-10-23: add the [framework's decision-boundary output review](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#cross-model-output-review) to SSR, using the safeguards exercised during CW.
+This supplements active-session assessment before the next baseline/comparison recommendation and before adoption; it is not a per-execution evaluator or calibration campaign.
+It changes the review workflow, not SSR-assessment-3, frozen case criteria or historical scores.
+
+1. **Declare the review scope and allocation.** Select coherent case/provider groups or an explicitly bounded set before reviewer judgments, including every repetition and compared condition, with no-SSR controls where available. Keep model/runtime strata distinct and account for invalid or missing outputs separately. Retained outputs may be reviewed without recollecting subjects; this amendment does not mandate an all-history review. Record the evaluator model/effort, prompts, input identities, call limit and failure/retry handling before dispatch.
+2. **Prepare complete evidence.** Supply the settled task, complete original project material, applicable policy/case criteria and interpretation, and each complete saved final project, including unchanged relevant files. Supply neutral committed-tree/history and runtime observations where required to assess committed completeness and preservation. Include commit accounts for applicable artifact-based procedural criteria. Exclude skill bodies, descriptions, hypotheses, raw subject traces and prior judgments from the first-pass packet; preserve source uncertainty and acceptable alternative structures.
+3. **Use a fresh, verified read-only reviewer.** Choose a different model family from the active assessor; while Codex assesses, the proposed reviewer is Opus at medium effort, subject to runtime qualification and allocation approval. Matching the subject's family is disclosed, not called independent cross-family subject validation. Verify that tools/filesystem permissions protect project and evidence inputs, including shell access if any; an instruction not to edit is insufficient. Identify visible condition labels and other exposure rather than claiming blinding.
+4. **Retain an independent first pass.** Require judgments and concrete evidence for every included output under the same applicable SSR criteria before delivering prior scores. Audit complete input delivery, first-pass timing, actual model/tools, protected bytes and semantic coverage; checking that a file was opened is insufficient. Assess complete reconciliation, preservation and committed completeness separately. Discuss meaningful quality differences among passing outputs without introducing a new functional style criterion or rewarding shorter text automatically.
+5. **Reconcile separately.** After retaining the complete first pass, provide prior assessments for comparison and record actual access timing. Preserve active judgments, independent judgments, post-prior changes and unresolved disagreements separately. Judge P2/P3 only where applicable and supported by supplied evidence; no-SSR controls do not inherit target-specific procedure. The active assessor separately judges search/read order and native loading from ordered traces; task success does not establish invocation or procedural compliance. Correct an adopted scoring error with explicit rationale and consistent reassessment of affected conditions, never by model vote.
+6. **Close at the decision boundary.** Retain every evaluator attempt and charge, raw review output, verified inventory, input identities, delivery/access audit and reconciliation in the selected batch's evaluation record. Missing capture or an incomplete first pass limits the review; it does not fail a subject or authorize an automatic replacement. Present consequential unresolved disagreement and the bounded recommendation to the owner before progression/adoption.
+
+The [CW short-screen review](../concise-writing/runs/final-comparison-01/examples-screen-01/evaluation/README.md) illustrates the mechanics; its CW-specific functional factors are not SSR's criteria.
+The next comparison proposal includes one review of all fifteen proposed outputs; grouping and feasibility must be fixed before its allocation is approved.
+Process acceptance alone authorizes no reviewer invocation, subject call, ceiling increase, candidate edit or deployment.
 
 ### Session evidence amendment: capture-2
 
@@ -173,6 +190,11 @@ Coverage does not mean all behavior passes: Claude has both missed loads and inc
 No additional broad baseline, independent evaluator campaign or held-out study is a prerequisite to the next focused investigation.
 Claims about every instruction, full-bundle use, realistic over-triggering and production reliability remain unsupported under the dispositions above.
 
+Owner coverage decision, 2026-10-23: accept the current suite as sufficient for the next focused experiment, balancing representative coverage with a practical stopping point.
+Further testing should resolve a concrete uncertainty that could change the development or adoption decision; the listed gaps are not automatically additional prerequisites.
+The intended endpoint is real-world use with disclosed limits, followed by evidence-led improvements when actual deficiencies emerge, rather than exhaustive pre-release coverage.
+This accepts bounded coverage, not unresolved consequential regressions, and does not authorize model calls or adoption.
+
 ### Testing and authoring readiness check (2026-09-24)
 
 The owner asked to log the Claude findings and check remaining testing/process work before fixes.
@@ -204,7 +226,8 @@ The protocol opening owns the current decision; the active plan records the comp
 ## Execution scope and authorization
 
 Follow the [ordinary active-session workflow](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#default-work-session-workflow).
-No separate evaluator or calibration campaign is required. Optional read-only evaluator capability is documented in [permission qualification](runs/coverage-baseline-01/permissions-qualification.json); it is not a pending dispatch.
+No per-execution evaluator or separate calibration campaign is required; the [cross-model output review](#cross-model-output-review) applies at the decision boundary.
+The historical [permission qualification](runs/coverage-baseline-01/permissions-qualification.json) documents read-only capability, not qualification of a future changed runtime or authorization for a pending dispatch.
 Original and control receive the same task, project and neutral setup; original alone receives the frozen SSR skill and its read instruction. An eventual candidate substitutes only separately identified target bytes.
 Supply a realistic requested change or triggering defect and permission to fix related files, without enumerating consumers or teaching the target's sweep procedure in the control.
 DD and other instructions used by the controller session are not subject inputs. Assessment policies, expected facts and checkers remain controller-only.
@@ -604,6 +627,13 @@ Closure is complete within its 30-minute allowance; no new collection or rollout
 
 
 ## Results and decision
+
+Resumption decision, 2026-10-22: the owner reaffirmed the comprehensive rewrite as the development base and authorized an audit/recommendation only, preserving working-tree changes and prohibiting model runs.
+The [audit](../../reviews/2026-10-22-ssr-resumption-audit.md) checks all 120 SSR primary inventories, rereads 28 complete semantic-family project outputs and sustains the inspected functional judgments without rescoring.
+Historical SSR output assessments lack CW's later decision-boundary cross-model review; future comparison must allocate that review, preserve independent first passes and judge complete context.
+The [rewrite diagnosis](rewrite-diagnosis.md#proposed-allocation-owner-decision-required) retains the proposed experiment and pending interpretation; neither CW's method approval nor this resumption authorizes SSR candidate acceptance, collection or adoption.
+Process decision, 2026-10-23: the owner directed adding cross-model review to SSR testing; the [operational review procedure](#cross-model-output-review) is accepted for future selected decision boundaries.
+Its concrete packets, call allocation and dispatch remain unapproved; historical scores and the comprehensive development base remain unchanged.
 
 | Evidence | Interpretation |
 |---|---|

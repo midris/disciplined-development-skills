@@ -10,6 +10,7 @@ This is navigation, not a duplicate progress or decision record.
 5. The [retrospective](../../reviews/2026-09-18-skill-testing-retrospective.md) identifies remaining discovery questions. The plan owns which one is selected next.
 
 Read the [protocol opening](protocol.md) for current status, owner decisions and next action; its [results index](protocol.md#results-and-decision) links all batch assessments.
+The [2026-10-22 resumption audit](../../reviews/2026-10-22-ssr-resumption-audit.md) records the completed post-CW audit, whole-draft review and unapproved next-experiment recommendation; the owner explicitly directed no model runs.
 Preserve settled scenarios, criteria and historical identities; do not derive a baseline from a candidate or rescore old records to continue.
 SSR's [core assessment](runs/core-baseline-01/core-baseline-01-assessment.md) records an unresolved Shiv category boundary: its P3 counts are not three established skill defects and do not independently justify a rewrite.
 Controller criteria, manifests and revealing evidence remain outside subject context; raw evidence stays in the protocol's external stores.

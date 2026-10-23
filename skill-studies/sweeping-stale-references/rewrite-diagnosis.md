@@ -5,6 +5,8 @@ The [protocol opening](protocol.md) owns the current decision.
 The owner selected the comprehensive rewrite as the development base; the original remains a historical control.
 The tested rewrite remains unchanged at [its frozen snapshot](cases/skill-candidate-comprehensive/SKILL.md), SHA-256 `15992341f7ab2fb1e4d8a775092199d7d4e6a9de1167895dbe5a805aeafbd38c`.
 Any accepted edits must go in a separate candidate, preserving that snapshot and all existing manifests and scores.
+SSR resumed after CW closure on 2026-10-22 for audit and recommendation only, with an explicit instruction not to start model runs.
+The [resumption audit](../../reviews/2026-10-22-ssr-resumption-audit.md) reviews coverage, evidence, evaluation and the complete parked draft under the process refined during CW; its findings leave the tested and draft bytes unchanged.
 
 ## Evidence and limits
 
@@ -77,6 +79,10 @@ The prior permission to draft does not settle that decision or authorize calls.
 
 If accepted, request **15 additional subject calls**, adding 15 to the ceiling in force at approval.
 Do not carry forward an absolute ceiling based on the pre-CW total.
+The resumption recommendation adds **one cross-model output-review call** at the comparison boundary, covering all fifteen complete outputs under the fixed SSR criteria with an independent first pass before prior-score exposure.
+The owner accepted adding cross-model review to SSR's process on 2026-10-23; the [protocol's review procedure](protocol.md#cross-model-output-review) owns packet contents, verified read-only execution, complete-read/semantic audits, committed-state evidence and disagreement handling.
+The single-call allocation remains proposed; process acceptance is not a retrospective endorsement of all SSR scores or dispatch authority.
+At the current 642-subject/48-evaluator ceilings, the proposed ceilings would be 657/49; neither increase is approved.
 Use the existing semantic-delivery fixture/task with Claude Opus 5.5 low effort: it is the explicit-load counterpart of the failed native repair.
 Use five fresh contexts each for no SSR, the unchanged tested rewrite, and a context-only reconciliation candidate.
 Only the full-load instruction and skill availability differ in the no-SSR arm; keep task, fixture, permissions and common setup identical.
@@ -98,18 +104,18 @@ Candidate 5/5 complete repairs with preservation and a weaker unchanged-rewrite 
 Neither result authorizes adoption or establishes population reliability.
 
 Pin the actual available CLI/model settings and runner revision before dispatch, repeat the installed Claude/Git/isolation preflight and existing fixture checks, and do not pool with earlier runtime versions.
-Estimate 45 active minutes for preparation, up to 15 calls, evidence inspection and close; time remains a guideline.
+Revised resumption forecast: 90 active minutes for preparation/qualification/freeze (25), subject waits/retention (30), direct assessment and output review (20), and reconciliation/reporting (15); time remains a guideline.
 Model availability and runtime pins remain preflight facts, not assumptions imported from the historical batch.
 
 Later work is conditional and unallocated: a five-per-arm accounting comparison needs its own no-guidance interpretation (an unprompted control cannot fail SSR-specific reporting rules), and the semantic change needs pressure/application regression coverage before adoption.
 Reconsider the existing facet map for affected ordinary cases at that point; a micro-test does not replace full relevant application/pressure testing.
 Invocation testing remains a separate native-availability experiment with timely loading as its primary measure.
-No extra scenario suite, authoring model, evaluator model or broad comparison is requested now.
-This proposal remains parked behind CW; the owner explicitly deferred the baseline interpretation decision until SSR resumes, so it is not dispatch-ready.
+No extra scenario suite, authoring-model call or broad comparison is proposed now; the single output-review call above updates the earlier evaluator-free proposal to the current framework.
+CW is closed and SSR's audit/recommendation is complete; the deferred SSR baseline interpretation, candidate acceptance and allocation remain owner decisions, so this proposal is not dispatch-ready.
 
 ## Parked draft review follow-ups
 
-Keep the committed combined draft unchanged while CW baselines take priority.
+Keep the committed combined draft unchanged; the owner resumed SSR for review and recommendation, not candidate edits or testing.
 Its 1,026 words versus the frozen rewrite's 923 measure draft size, not effectiveness or a compression target.
 Before accepting a context-only candidate, resolve these two bounded wording concerns and review the complete skill again:
 
@@ -117,3 +123,5 @@ Before accepting a context-only candidate, resolve these two bounded wording con
 - The search-context exclusion does not clearly state the matching-heading boundary. Make explicit that an old/new-form match in a heading still needs triage, while adjacent context is not an extra inventory entry merely because a search displays it. This is a clarification proposal, not a measured defect or authority to exclude genuine matches.
 
 These are tracked candidate-review tasks, not silent changes to the tested or drafted bytes.
+The completed resumption audit recommends sufficient-context inspection with full-claim expansion for prose or ambiguous snippets, and explicit triage of old/new matches in headings.
+Both wording choices remain proposals for a separately prepared candidate; their effectiveness and large-sweep cost remain unmeasured.
