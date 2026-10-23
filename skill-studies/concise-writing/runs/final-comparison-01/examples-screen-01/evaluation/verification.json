@@ -1,0 +1,60 @@
+{
+  "checked_at": "2026-10-23T01:49:25.307679+00:00",
+  "method": "Active-session manual semantic review and mechanical evidence/pin/coverage audit; no additional model calls.",
+  "scope": {
+    "subject_attempts": 13,
+    "valid_outputs": 12,
+    "invalid_authentication": 1,
+    "subject_charges": 12,
+    "retry_charges": 1,
+    "evaluator_sessions": 2,
+    "reviewed_factors": 36
+  },
+  "checks": [
+    {
+      "command": "PYTHONPATH=skill-validation/runner/src /Users/simon/work/personal/disciplined-development-skills/skill-validation/runner/.venv/bin/python /Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/final-audit/check-final.py",
+      "exit_code": 0,
+      "output": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/final-audit/check-final.py.txt"
+    },
+    {
+      "command": "PYTHONPATH=skill-validation/runner/src /Users/simon/work/personal/disciplined-development-skills/skill-validation/runner/.venv/bin/python /Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/final-audit/check-subjects.py",
+      "exit_code": 0,
+      "output": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/final-audit/check-subjects.py.txt"
+    },
+    {
+      "command": "PYTHONPATH=skill-validation/runner/src /Users/simon/work/personal/disciplined-development-skills/skill-validation/runner/.venv/bin/python /Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/final-audit/check-links.py",
+      "exit_code": 0,
+      "output": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/final-audit/check-links.py.txt"
+    }
+  ],
+  "earlier_this_resumption": {
+    "guards": "24 passed, including eleven test-first resumption guards",
+    "hooks": "263 passed, 3 skipped"
+  },
+  "batch_readiness": {
+    "codex": "passes",
+    "claude": "does not pass: the no-retry checker reports retry, scope and coverage errors; full typed index/results and explicit manual retry/coverage/aggregate audit pass"
+  },
+  "limitations": [
+    "Three repetitions are exploratory, not reliability or equivalence validation.",
+    "Six pre-existing host-dependent offline Claude process smokes are tracked in the active plan; the full runner suite is not claimed green.",
+    "One original Codex output remains a functional failure; Opus changed two factors only after prior-score access.",
+    "No live skill or unrelated owner fixture edit changed."
+  ],
+  "retained_support": {
+    "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/final-audit",
+    "inventory": {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/final-audit.inventory.json",
+      "sha256": "ee81d32c64703496cab02dd13a18899fcfa95974af75d731a187c7dccd09f4a4"
+    }
+  },
+  "collection_logs_inventory": {
+    "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/collection-logs.inventory.json",
+    "sha256": "c89394d443e3160b1d2ab4316c28c9e6fbf82083a6952bff516de034b639cea7"
+  },
+  "collection_audit_inventory": {
+    "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/collection-audit.inventory.json",
+    "sha256": "c05d9d4d24c837f70e70d78f32be16c6de2bcece85a16c91d9e46f9aec51b4cd"
+  },
+  "review": "Deep active-session self-review; no blocking findings; logged via dd-log."
+}

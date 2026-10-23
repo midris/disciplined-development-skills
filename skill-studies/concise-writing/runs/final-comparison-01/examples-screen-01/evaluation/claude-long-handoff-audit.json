@@ -1,0 +1,23 @@
+{
+  "configuration": "claude-long-handoff",
+  "required_complete_files": 15,
+  "outputs": 6,
+  "first_pass_event": 56,
+  "prior_read_event": 57,
+  "first_pass_sha256": "45c09d57ba874e0866ca06b28d3323d44b0a9dd286c296f68df07dcd9556ca6d",
+  "first_pass_path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/evaluation/claude-long-handoff-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/reviews/20261023T014153224Z-cw-suite-opus-claude-long-handoff-02ac56bc-8f71-4d00-adc4-fe084250fb57-677en50b/final.txt",
+  "final_sha256": "8a4466d4f3825d3a03f8ac246fa2edcc84ba2d621b69391b7c3354d91d42bf66",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "pre_prior_grep_calls": [],
+  "semantic_completeness": "verified: manually read full first pass and final comparison, all six exact run IDs, eighteen factor judgments, word counts and concrete source/output evidence. No factor changes after prior access.",
+  "pre_prior_scope_verified": true,
+  "narrative_precision_notes": [
+    "Deployment, Monitoring and Rollback are unchanged, but the blanket claim that the entire Handoff section is verbatim is too broad: examples3 consolidates its final untested-case sentences. Core handoff obligations are unchanged.",
+    "The dry-run distinction appears before the removed summary cue and remains explicit; the reviewer\u2019s very-next-sentence location claim is inaccurate but does not undermine its retained-meaning judgment.",
+    "Do not promote threshold ties or the reviewer\u2019s suggested shorter-skill tie-break into a reliability/equivalence finding. The owner\u2019s fixed exploratory fallback rule owns selection."
+  ]
+}

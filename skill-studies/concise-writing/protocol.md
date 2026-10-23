@@ -2,13 +2,13 @@
 
 Format version: `1`
 Study ID: `concise-writing`
-Status: all twelve valid short examples-screen outputs are retained, inspected and directly assessed; the expired-OAuth parent and one approved retry remain separately recorded.
-Current action: freeze the two six-output Opus packets, audit complete independent first passes before prior-score access, then reconcile the comparison and apply the owner’s conditional body choice.
-The owner replied “I logged in, please try again” to the concrete one-replacement request; one retry slot is authorized, retaining the failed subject charge and leaving all remaining allocations unchanged. No second replacement is authorized.
+Status: the short examples comparison is complete: twelve valid outputs, two audited Opus reviews and one retained invalid authentication attempt. The fixed rule finds no repeated examples benefit; retain the original body with the selected description under the owner’s conditional choice.
+Current action: present the completed comparison and agree any remaining combined-skill validation/adoption scope. No additional subject/evaluator capacity or live deployment is authorized.
+The owner replied “I logged in, please try again” to the concrete one-replacement request; one retry slot funded the completed unchanged replacement, retaining the failed subject charge and leaving other allocations unchanged. No second replacement is authorized.
 The owner explicitly accepted “Use the qualified installed versions”; the [qualification record](runs/final-comparison-01/examples-screen-01/preparation/runtime-substitution.json) retains thirteen zero-model checks and exact identities. Codex/Git, models/efforts and permission grants are unchanged; this fresh CLI/toolchain stratum is not pooled with earlier runs.
 The owner replied “yeah, let's run the short test. if there is no noticeable change we can go with the original body”.
 This accepts the proposed 642-subject/48-evaluator ceilings, three-repetition exploratory screen and 40–60-minute forecast; authoring/retry ceilings remain four each.
-If the short comparison shows no noticeable improvement, select the unchanged original body with the selected description; do not infer an effect from a single unusually short output or tied passes alone.
+The [completed comparison](runs/final-comparison-01/examples-screen-01/evaluation/assessment.md) applies the fixed repeated-difference rule; the one Codex original-body rollback failure remains recorded and does not establish a repeated examples advantage. This conditional choice is not a reliability/equivalence finding or a waiver of that failure.
 The original direction authorized this fixed comparison and conditional body choice; the one separately authorized retry is recorded above. No automatic top-up, further wording edits, additional retry, fallback, next scenario or live deployment is authorized.
 The owner supplied both worked examples and their closing explanations verbatim after the five-repetition handoff comparison.
 The example-authoring direction authorized that substitution in a separate candidate; this newly accepted test allocation is recorded above. Tested bodies, frozen inputs and completed results remain unchanged.
@@ -34,7 +34,7 @@ No confirmed revised-body regression blocks eligibility for remaining coverage, 
 The owner accepts additional unwanted Codex loading as “a note to keep in mind” rather than a blocker when output is not impaired and appropriate Claude loading improves.
 This changes prospective decision weighting, not the frozen rule, recorded scores or historical comparison; it authorizes no further calls or live-skill deployment.
 The comparison preserves one disputed Codex document-addition control sequence as unresolved interpretation, with insufficient evidence to settle it; original active and Opus scores remain intact.
-Both runtimes remain qualified, with no setup exclusions or retries.
+That earlier focused comparison had no setup exclusions or retries; its runtime qualification and records remain historical evidence.
 The first Claude discovery subject is complete and assessed after correcting a name-only-init inspection error through retained-evidence replay; it was not repeated.
 The [Codex discovery assessment](runs/revised-body-discovery-01/codex-discovery-focused-01-assessment.md) separates body delivery, comment quality and numeric-task observations.
 The [Codex](runs/revised-body-discovery-01/codex-body-focused-01-assessment.md) and [Claude](runs/revised-body-discovery-01/claude-body-focused-01-assessment.md) body assessments record all three cases passing five repetitions per condition/provider, with concrete quality differences separate from those thresholds.
@@ -1060,10 +1060,10 @@ The comment continuation uses [frozen review inputs](runs/final-comparison-01/sc
 The first handoff stage uses its [two-call evaluator ledger](runs/final-comparison-01/handoff-01/evaluation/evaluator-run-index.json).
 The handoff continuation uses its [two-call evaluator ledger](runs/final-comparison-01/handoff-02/evaluation/evaluator-run-index.json).
 The short examples screen uses its [two-call evaluator ledger](runs/final-comparison-01/examples-screen-01/evaluation/evaluator-run-index.json).
-Dispatched calls are **642 subject, 46 evaluator, 0 authoring, 3 retry**; remaining outer capacity is **0 / 2 / 4 / 1** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
+Dispatched calls are **642 subject, 48 evaluator, 0 authoring, 3 retry**; remaining outer capacity is **0 / 0 / 4 / 1** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **3,480 active minutes booked; 2,280 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **3,495 active minutes booked; 2,295 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
 The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 642/642, with 0 approved examples-screen calls available; the earlier E diagnostic is spent.
@@ -1197,7 +1197,8 @@ The supplemental work used 40 estimated active minutes against its 40-minute for
 | Original-body example substitution, static review and short comparison proposal | 10 |
 | Short examples-screen qualification/freeze, six Codex subjects and Claude authentication stop | 25 |
 | Approved authentication resumption and six Claude output inspections/assessments | 20 |
-| **Total** | **3,480** |
+| Short examples-screen two Opus reviews, complete-read audits, reconciliation and publication | 15 |
+| **Total** | **3,495** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.
@@ -1234,12 +1235,15 @@ The owner instead approved this first twelve-subject/two-review screen, forecast
 The completed screen used 70 estimated active minutes (50 qualification/subjects/inspection repair and 20 review/publication), 10 below the upper forecast; all runner waits are included once.
 The repetition-4/5 continuation used 55 estimated active minutes (30 preparation/repair/Codex, 10 Claude/packets and 15 reviews/publication), 10 below its 65-minute upper forecast.
 Only eight new subjects and two new reviewer sessions are charged; reading the twelve reused outputs adds no subject charge and their earlier runner waits are not rebooked.
+The short examples screen used 60 estimated active minutes: 25 qualification/freeze/Codex/authentication stop, 20 resumption/Claude assessments and 15 reviews/audits/publication.
+Its accepted 40–60-minute forecast gained a separately approved2–4-minute replacement allowance; owner sign-in wait is excluded.
+The thirteen subject-runner durations total539.815seconds and the two reviewer durations total300.990seconds; both are included once in those estimates.
 The current remaining-work estimate below covers only the fixed approved scope, with owner-wait time excluded; it is a rounded planning estimate, not additional call authority.
 
 | Work | Estimate | Basis |
 | --- | ---: | --- |
-| Approved short examples reviews remaining | 19 | Two six-output Opus reviews, manual audits/reconciliation and publication; 45estimated minutes booked for this screen, excluding owner sign-in wait. |
-| **Total** | **19** | No additional scenarios, top-ups, retries, wording edits or live adoption. |
+| Approved short examples comparison remaining | 0 | Twelve valid outputs and both reviews are complete; the conditional original-body choice is recorded. |
+| **Total** | **0** | Any further validation, wording edits or live adoption needs a separate decision; unused authoring/retry ceilings are not dispatch authority. |
 
 The E stage used 115 estimated active minutes against the 180-minute upper forecast, 65 below it: 35 preparation, 40 subject collection/assessment and 40 evaluator preparation/reconciliation.
 The two evaluator durations total 420.696 seconds (7.01 minutes), included once in those estimates.
@@ -1471,10 +1475,10 @@ Assessment: [complete valid Claude outputs and retained invalid setup](runs/fina
 
 All six Codex subjects are complete and directly assessed under the fresh matched runtime: original-body2/3pass, original-examples3/3pass; every F3 is met.
 The [Codex assessment](runs/final-comparison-01/examples-screen-01/codex-final-examples-screen-01-assessment.md) records a conditional rollback workflow concern in original repetition1 and preserves the complete per-run evidence.
-The source requires destination status confirmation/cursor reconciliation before lease release after rollback, while that output puts the sequence under an outstanding-acknowledgement condition; active F1/F2 are not met, awaiting independent review.
+The source requires destination status confirmation/cursor reconciliation before lease release after rollback, while that output puts the sequence under an outstanding-acknowledgement condition; active F1/F2 are not met. Opus initially passed it and changed those factors only after prior-score access; first-pass disagreement and post-prior agreement are preserved separately.
 All six remove the detached reminder and duplicate count; original outputs average890.3words versus915.3for the examples variant, with substantial within-condition variation and no demonstrated readability winner.
 Claude's first attempt failed authentication before inference and is invalid setup, not a skill failure; its retained charge and approved unchanged replacement are described below.
-The opening owns the remaining review scope and current decision authority.
+The opening owns the current conditional choice and any next scope decision.
 
 ### Short examples comparison: Claude portion
 
@@ -1484,7 +1488,8 @@ Original outputs average1090words versus1105for examples; both preserve most sou
 The original removes the detached reminder in2/3 versus examples1/3; this limited cleanup difference is not an automatic failure for the retained sections.
 No consistent examples advantage is established in the active Claude assessment.
 The full retry index and typed results pass validation and manual scope/retry/aggregate audit; the runner's no-retry batch-assessment checker is unsupported for this index, not passed.
-The two independent Opus first passes and combined reconciliation remain separate; no historical outputs or reviews are pooled.
+The [completed output review](runs/final-comparison-01/examples-screen-01/evaluation/assessment.md) records both independent first passes, two post-prior factor changes on Codex original repetition1 and no changes on Claude.
+It finds no repeated examples improvement under the precommitted rule; no historical outputs or reviews are pooled.
 
 ### Five-repetition long-handoff comparison
 
