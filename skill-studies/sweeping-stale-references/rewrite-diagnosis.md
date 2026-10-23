@@ -9,6 +9,7 @@ SSR resumed after CW closure on 2026-10-22 for audit and recommendation only, wi
 The [resumption audit](../../reviews/2026-10-22-ssr-resumption-audit.md) reviews coverage, evidence, evaluation and the complete parked draft under the process refined during CW; its findings leave the tested and draft bytes unchanged.
 The owner's subsequent [compact-rewrite exploration](drafts/compact-rewrite/README.md) produced three new drafts and a synthesized finalist, preserving both tested versions and the combined draft below.
 Its whole-version comparison question is separate from this earlier focused diagnostic proposal; the owner subsequently approved [compact-semantic-01](protocol.md#comparison-compact-semantic-01), while this earlier diagnostic remains unapproved.
+That [checkpoint](runs/compact-semantic-01/compact-semantic-01-assessment.md) is now complete: all three versions pass five fresh explicit-load attempts, with independent first-pass agreement on all 45 functional factors. This does not reproduce or explain away the historical loaded failure, and no causal fix or broader reliability is established. Further regression remains a separate owner decision.
 
 ## Evidence and limits
 

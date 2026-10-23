@@ -1,0 +1,275 @@
+{
+  "run_id": "20261023T213831057Z-ssr-compact-semantic-opus-output-review-dec341c2-499b-422c-b5e6-b9c07d3b4a9c-x_eg42vy",
+  "first_pass_event": 72,
+  "first_pass": {
+    "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/evaluation/first-pass.md",
+    "sha256": "65cf89b4acc5e992b4f40d761389fe42d1b7020c56ab9b4e3837fa4b30e29b8e"
+  },
+  "prior_first_access_event": 73,
+  "prior_read_event": 75,
+  "post_prior_event": 81,
+  "post_prior": {
+    "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/reviews/20261023T213831057Z-ssr-compact-semantic-opus-output-review-dec341c2-499b-422c-b5e6-b9c07d3b4a9c-x_eg42vy/final.txt",
+    "sha256": "de516507562af4f4515946eb84889ce6c8c5da24c798ba7ff52c64cfd2ad6dfe"
+  },
+  "required_complete_files": 22,
+  "complete_delivery_before_first_pass": [
+    {
+      "path": "EVALUATION-INDEX.json",
+      "sha256": "128e35950aa745f88543b525a823cf8cd7f26031ecf75e5389c55d8502a2b8ec",
+      "complete_delivery": [
+        {
+          "call_event": 10,
+          "response_event": 11,
+          "call_id": "toolu_01KGnAK4yoDdqAkxKredskxy"
+        }
+      ]
+    },
+    {
+      "path": "TASK.md",
+      "sha256": "6c9685054ae4f4dd6f32a76a18401366e4206b829466367640370554bf33f683",
+      "complete_delivery": [
+        {
+          "call_event": 13,
+          "response_event": 14,
+          "call_id": "toolu_018iit8GktMy7Y47Sj9CLDqv"
+        }
+      ]
+    },
+    {
+      "path": "SOURCE-PROJECT.md",
+      "sha256": "15fdc57210740c88d45eddba4f6a10030488ec7a3cce3d81f62ed496ae5c3fd6",
+      "complete_delivery": [
+        {
+          "call_event": 15,
+          "response_event": 16,
+          "call_id": "toolu_01JHTEATFGn2BBayicquhimj"
+        }
+      ]
+    },
+    {
+      "path": "criteria.md",
+      "sha256": "bae6463893e23dba7238e0de74d0accb1ced5d4e22ad04cb7f17bfcebc557253",
+      "complete_delivery": [
+        {
+          "call_event": 17,
+          "response_event": 18,
+          "call_id": "toolu_01Yc8cWMXkUUB3GSF9pmw2Kg"
+        }
+      ]
+    },
+    {
+      "path": "policy.txt",
+      "sha256": "5d057d11f678ae3fa63c48957446aded13ccc5dcb8babab2856d0232d49e08bb",
+      "complete_delivery": [
+        {
+          "call_event": 19,
+          "response_event": 20,
+          "call_id": "toolu_014MSvBFAoEsUYbayyiuum56"
+        }
+      ]
+    },
+    {
+      "path": "INTERPRETATION.md",
+      "sha256": "7c85f31e283a26315c6e7270720e17ed370fe6d2026de295b0522384975f8803",
+      "complete_delivery": [
+        {
+          "call_event": 21,
+          "response_event": 22,
+          "call_id": "toolu_01U28N41MaeuaJm3Nq57dLW9"
+        }
+      ]
+    },
+    {
+      "path": "NEUTRAL-FACTS.json",
+      "sha256": "5c2864f8e22a3e98389063a70ac1844534e4c85aac4a82fefb7514d599179dfd",
+      "complete_delivery": [
+        {
+          "call_event": 23,
+          "response_event": 24,
+          "call_id": "toolu_01Eptxq6djrouWBHidnY3jFE"
+        }
+      ]
+    },
+    {
+      "path": "projects/01-original-1.md",
+      "sha256": "3943f2fdd647e01868c012b6668f3004af5916a7869c1f345ba67f32a5702991",
+      "complete_delivery": [
+        {
+          "call_event": 27,
+          "response_event": 28,
+          "call_id": "toolu_01FpPxU2v8RhnFeYdL8vpjcG"
+        }
+      ]
+    },
+    {
+      "path": "projects/02-candidate-1.md",
+      "sha256": "0168e2b6df75ccf6c57661f2f941e316aed1fff49aeca742b308dd73c6a2dfea",
+      "complete_delivery": [
+        {
+          "call_event": 29,
+          "response_event": 30,
+          "call_id": "toolu_01JbSwcre5ZzqhBopSMrDEKC"
+        }
+      ]
+    },
+    {
+      "path": "projects/03-finalist-1.md",
+      "sha256": "23b21a2d1df53597c5c958958cea8ccf6623df3dc1491758dd5d3f91ef07e81c",
+      "complete_delivery": [
+        {
+          "call_event": 31,
+          "response_event": 32,
+          "call_id": "toolu_01BQPjBDFoVYSzsgbPnUZf38"
+        }
+      ]
+    },
+    {
+      "path": "projects/04-candidate-2.md",
+      "sha256": "10730daf22eb97ba63069c0be00313cfd358c26bddee1132cdd5c10a43a08428",
+      "complete_delivery": [
+        {
+          "call_event": 33,
+          "response_event": 34,
+          "call_id": "toolu_01D1P9peasJcP4FTHRytaVs4"
+        }
+      ]
+    },
+    {
+      "path": "projects/05-finalist-2.md",
+      "sha256": "07cf9307d26e465483b96d24f04e4d8de58f2e3cd1fd725ba793d1e1f375acef",
+      "complete_delivery": [
+        {
+          "call_event": 35,
+          "response_event": 36,
+          "call_id": "toolu_014rNuNMoT5bgDNbt9PwCuwg"
+        }
+      ]
+    },
+    {
+      "path": "projects/06-original-2.md",
+      "sha256": "c2cfd1a75d6a9f5feb6e73b213dad6ad800d5f25bbe4e2ba66ae2612d74ba628",
+      "complete_delivery": [
+        {
+          "call_event": 37,
+          "response_event": 38,
+          "call_id": "toolu_01RD1pnz7HpFGMGjb5qPE8Tj"
+        }
+      ]
+    },
+    {
+      "path": "projects/07-finalist-3.md",
+      "sha256": "2452b8f88f4b53209406781548eeaffff063c7d35a982605c487b674accf78ca",
+      "complete_delivery": [
+        {
+          "call_event": 39,
+          "response_event": 40,
+          "call_id": "toolu_01AaL62n13g3Q1jbEGVBSCx3"
+        }
+      ]
+    },
+    {
+      "path": "projects/08-original-3.md",
+      "sha256": "cf2acbeb8a7105644dc1dea1176b30bd5abb2fc75af8c60b3ee45a9c02e445a6",
+      "complete_delivery": [
+        {
+          "call_event": 41,
+          "response_event": 42,
+          "call_id": "toolu_01KUHSjio7i7zmoBSUgLj4Hu"
+        }
+      ]
+    },
+    {
+      "path": "projects/09-candidate-3.md",
+      "sha256": "fb0e06feec73d5e9b8f36c88b5636ba847563c8e0d615398cb9f015a007445ea",
+      "complete_delivery": [
+        {
+          "call_event": 43,
+          "response_event": 44,
+          "call_id": "toolu_01TrXgSeggC1wu99jU98pUbr"
+        }
+      ]
+    },
+    {
+      "path": "projects/10-original-4.md",
+      "sha256": "332a059ff9f8f04b078e84cd18cb8aba90853b11a44f4c922d125a0ee0cc06e3",
+      "complete_delivery": [
+        {
+          "call_event": 45,
+          "response_event": 46,
+          "call_id": "toolu_01V6Md2CYZkhewLTXNT3L41V"
+        }
+      ]
+    },
+    {
+      "path": "projects/11-finalist-4.md",
+      "sha256": "6fc00057f43acf345fe2ee762f973b36094b3e4950d2a2a3ce2e2005ac13c451",
+      "complete_delivery": [
+        {
+          "call_event": 47,
+          "response_event": 48,
+          "call_id": "toolu_01WEtBVo8apwSEaieTGB5xDc"
+        }
+      ]
+    },
+    {
+      "path": "projects/12-candidate-4.md",
+      "sha256": "0ca7e6b1ca9fdb89b3a4c06d05b074c91dd2dd3b190e2a5f4c064436964b5d99",
+      "complete_delivery": [
+        {
+          "call_event": 49,
+          "response_event": 50,
+          "call_id": "toolu_01MPT6YVZXqCEuNEicbSzakf"
+        }
+      ]
+    },
+    {
+      "path": "projects/13-candidate-5.md",
+      "sha256": "cf3515a1ffa318930cde336558206c38e734652415bf5cf7b8e2b65669571c02",
+      "complete_delivery": [
+        {
+          "call_event": 51,
+          "response_event": 52,
+          "call_id": "toolu_01Sy9iKUQG7tVx2HEm6QpXQT"
+        }
+      ]
+    },
+    {
+      "path": "projects/14-original-5.md",
+      "sha256": "3df12c08c8dc38e4302179bfd54d663220004bb845ab44c966a28f7355a430be",
+      "complete_delivery": [
+        {
+          "call_event": 53,
+          "response_event": 54,
+          "call_id": "toolu_01MDxzWRuhtVyR2FjKpWVVDh"
+        }
+      ]
+    },
+    {
+      "path": "projects/15-finalist-5.md",
+      "sha256": "1e26cfbbdd36e81c2262062a7f60fa8a0c155918c20488d72989fb197d33ee33",
+      "complete_delivery": [
+        {
+          "call_event": 55,
+          "response_event": 56,
+          "call_id": "toolu_01NQEyyHg2CEGScDjgi8R8Wq"
+        }
+      ]
+    }
+  ],
+  "full_inventory_verified": true,
+  "all_23_protected_inputs_verified": true,
+  "model_and_native_Read_Glob_Grep_tools_verified": true,
+  "pre_prior_grep_calls": [],
+  "pre_prior_scope": "Verified all calls: Glob limited to evaluation index, then Read required source/project files; first prior Glob only after full first pass. Prior was physically present, not blinded.",
+  "semantic_audit": "Active assessor manually read full first pass and post-prior output against source and all complete subject projects. All fifteen full IDs, 45 factor judgments and evidence-backed preservation/commit/clarity comparison are present. Functional judgments agree; no changes after prior.",
+  "precision_notes": [
+    "Reviewer infers amendments only from prior; neutral final-history facts do not establish amendments. Active trace separately establishes amendments in C2. No F3 difference.",
+    "O3/C2 omit retry arithmetic in overview but retain it in linked operations; both assessors accept whole-project completeness. Wording of the prior summary does not mean every individual document independently repeats every fact.",
+    "Reviewer checks code/test byte flag plus full helper/history text; active disposable diff separately establishes their unchanged bytes. No F2 difference."
+  ],
+  "independence_limits": [
+    "Condition labels visible. Same-family subject/reviewer pairing can share errors. Active assessor authored/prepared drafts and knew history.",
+    "One exposed synthetic case; no unguided contribution, native discovery, broad transfer, population reliability or adoption claim."
+  ]
+}

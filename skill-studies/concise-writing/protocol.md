@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `concise-writing`
 Status: closed; the owner approved adopting the original body with the selected rewritten description on 2026-10-22.
-Current action: none for CW. The [SSR protocol](../sweeping-stale-references/protocol.md) owns its completed audit, compact rewrite preparation and pending test selection. No model runs are authorized; runner follow-ups remain in the shared plan.
+Current action: none for CW. The [SSR protocol](../sweeping-stale-references/protocol.md) owns its completed compact comparison and the next testing/adoption decision. No further model runs are authorized; runner follow-ups remain in the shared plan.
 
 ## Closure and adoption
 
@@ -1008,14 +1008,15 @@ The comment continuation uses [frozen review inputs](runs/final-comparison-01/sc
 The first handoff stage uses its [two-call evaluator ledger](runs/final-comparison-01/handoff-01/evaluation/evaluator-run-index.json).
 The handoff continuation uses its [two-call evaluator ledger](runs/final-comparison-01/handoff-02/evaluation/evaluator-run-index.json).
 The short examples screen uses its [two-call evaluator ledger](runs/final-comparison-01/examples-screen-01/evaluation/evaluator-run-index.json).
-Dispatched calls are **657 subject, 48 evaluator, 0 authoring, 3 retry**; remaining outer capacity is **0 / 1 / 4 / 1** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
+Dispatched calls are **657 subject, 49 evaluator, 0 authoring, 3 retry**; remaining outer capacity is **0 / 0 / 4 / 1** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **3,570 active minutes booked; 2,370 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **3,630 active minutes booked; 2,430 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
 The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 657/657, with 0 approved SSR compact-semantic calls available; the earlier E diagnostic and CW examples screen are spent.
 The supplemental work used 40 estimated active minutes against its 40-minute forecast; model waits are included once.
+The SSR compact checkpoint used 60 estimated active minutes against 90 forecast, including 327.519 subject and 129.286 reviewer seconds once (456.805 total); categories were not separately timed. Its fifteen subject and one evaluator calls are spent, with no retry or further allocation.
 
 | Work | Estimated active minutes |
 | --- | ---: |
@@ -1150,7 +1151,8 @@ The supplemental work used 40 estimated active minutes against its 40-minute for
 | SSR resumption coverage/evidence/evaluation audit, complete draft review, recommendation and zero-model verification | 30 |
 | SSR coverage acceptance, cross-model review process adoption and documentation verification | 5 |
 | SSR process publication, three compact authoring passes, comparative/finalist review and zero-model verification | 25 |
-| **Total** | **3,570** |
+| SSR compact comparison qualification/freeze, fifteen subjects, complete-project review/audit, reconciliation and publication | 60 |
+| **Total** | **3,630** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.

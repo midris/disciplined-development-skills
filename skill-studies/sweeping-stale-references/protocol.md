@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `sweeping-stale-references`
 Status: all authorized comparison batches are complete; the owner selected the comprehensive rewrite as the development base and accepts its changed local reporting. The original and tested rewrite snapshots remain preserved; no new skill version is adopted.
-Current action: the owner approved [compact-semantic-01](#comparison-compact-semantic-01) on 2026-10-23: fifteen explicit-load semantic-repair subjects (five per version) plus one cross-model output review. Preparation/freeze and installed-runtime qualification precede collection; no later regression batch, retry, candidate edit or adoption follows automatically. Preserve both tested snapshots, the compact finalist and the parked combined draft. Current combined accounting remains in [CW accounting](../concise-writing/protocol.md#storage-and-accounting).
+Current action: [compact-semantic-01](runs/compact-semantic-01/compact-semantic-01-assessment.md) is complete: all fifteen explicit-load subjects are valid and functionally successful, and the sole audited Opus review independently agrees on all 45 functional factors. The compact finalist preserves performance on this exposed case without demonstrated functional improvement. Consider the assessment's bounded existing-case regression recommendation; no later batch, retry, edit or adoption is authorized. Preserve all tested/draft skill bytes. Current combined accounting remains in [CW accounting](../concise-writing/protocol.md#storage-and-accounting).
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](runs/core-baseline-01/core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -254,7 +254,7 @@ The earlier 15-subject/one-review proposal remains unapproved and does not autom
 
 ### Comparison: compact-semantic-01
 
-Status: owner-approved; source inputs frozen at `3800c049ab0496964c264e911bda8235f5b909ad`, installed-runtime qualification and collection readiness passed; all fifteen subjects retained and assessed with valid setup; sole output review pending.
+Status: complete; all fifteen subjects retained and assessed with valid setup, sole output review audited. Source inputs were frozen at `3800c049ab0496964c264e911bda8235f5b909ad`; installed-runtime qualification and collection readiness passed before dispatch. See [assessment](runs/compact-semantic-01/compact-semantic-01-assessment.md).
 Owner authority, 2026-10-23: “ok, please proceed” after confirming one semantic-repair scenario, baseline/comprehensive/finalist, five fresh attempts each (15 subjects), then one cross-model output review.
 Question: does the compact finalist preserve or improve complete committed semantic reconciliation relative to the two preserved skill versions on the known failing situation?
 Scope: semantic-delivery only; fifteen sequential explicit-load attempts in the rotated order below. `original` is the preserved baseline, `candidate` the preserved comprehensive rewrite, and `finalist` the unchanged 814-word compact finalist.
@@ -268,9 +268,12 @@ Assessment: unchanged SSR-assessment-3 and semantic F1–F3/P1–P3; definition3
 Commands: invoke the existing runner once for each fixed CONFIG through the recorded unchanged runtime wrapper, using private per-user TMPDIR. Retain each stopped bundle via `docs retain`, inspect/score it, then proceed to the next slot. Pin the full runner/source authority revision before dispatch.
 Storage: `/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/`, under the accepted single-host recovery arrangement. Keep one verified inventory per complete bundle; inspect Git/runtime only in disposable copies.
 Attempt index: [compact-semantic-01-run-index.json](runs/compact-semantic-01/compact-semantic-01-run-index.json).
-Output review: one fresh Opus-medium read-only session, different family from active Codex assessor and same family as subjects, covers all fifteen complete projects under fixed SSR F1–F3 and neutral committed-state evidence. [Fixed prompt](runs/compact-semantic-01/evaluation/prompt.md); [evaluator ledger](runs/compact-semantic-01/evaluation/evaluator-run-index.json). Use native Read/Glob/Grep-only tools and the existing verified process sandbox. Source/task/criteria/full-project inputs precede a retained independent first pass; prior scores stay in a separate file and may be read only afterwards, with actual read timing audited. Preserve first-pass judgments and post-prior changes separately. No review retry is allocated.
-Freeze reviewer input packet identities after all subjects are retained/assessed, before its sole dispatch; fixed reviewer instructions are frozen before subjects. Inspect complete delivery, all45 factors, actual tools/model, protected bytes and semantic completeness. Missing/incomplete review is a disclosed limit and stops the decision, not a subject failure or automatic replacement.
+Output review: one fresh Opus-medium read-only session, different family from active Codex assessor and same family as subjects, covers all fifteen complete projects under fixed SSR F1–F3 and neutral committed-state evidence. [Fixed prompt](runs/compact-semantic-01/evaluation/prompt.md); [review package](runs/compact-semantic-01/evaluation/README.md). Use native Read/Glob/Grep-only tools and the existing verified process sandbox. Source/task/criteria/full-project inputs precede a retained independent first pass; prior scores stay in a separate file and may be read only afterwards, with actual read timing audited. Preserve first-pass judgments and post-prior changes separately. No review retry is allocated.
+Freeze reviewer input packet identities after all subjects are retained/assessed, before its sole dispatch; fixed reviewer instructions are frozen before subjects. Inspect complete delivery, all 45 factors, actual tools/model, protected bytes and semantic completeness. Missing/incomplete review is a disclosed limit and stops the decision, not a subject failure or automatic replacement.
 Checkpoint: inspect every failure and compare passing-output quality. All-success results establish no reproduced gap and no demonstrated functional improvement; shorter instructions remain a potential simplification benefit only after relevant regression. End with this case and review; broader testing needs a separate decision.
+Completed checkpoint, 2026-10-23: original/comprehensive/finalist each meet F1–F3 in 5/5 observations; P3 meets 5/5, 2/5, 3/5 respectively under the fixed semantic-block unit, with broader claim/grouping defects reported separately.
+The sole review read all 22 complete required inputs before first pass, agrees on 45/45 functional factors and changed no judgments after prior access; all 23 protected fixtures and raw inventory verify.
+Observed post-edit search/accounting differences do not establish functional superiority or full conformance. The assessment recommends existing initiating-change, moved-guide and local-change regression against the comprehensive base as a possible next bounded decision; no new calls follow automatically.
 
 | Order | Case | Condition | Repetition | CONFIG |
 |---:|---|---|---:|---|
@@ -667,11 +670,11 @@ At that checkpoint, 136 subjects were dispatched; unspent historical capacity wa
 The [CW accounting](../concise-writing/protocol.md#storage-and-accounting) owns subsequent combined spending, current ceilings, time and forecast; this historical balance does not authorize further calls.
 All ten expansion slots, both 34-call comparison batches, both Claude smoke calls and all ten Opus invocation calls are spent.
 
-Current SSR-linked mechanical accounting includes the fixed 136-call historical subtotal above plus compact-semantic-01.
+Current SSR-linked mechanical accounting includes the fixed 136-call historical subtotal above plus compact-semantic-01 and its separate [evaluator ledger](runs/compact-semantic-01/evaluation/evaluator-run-index.json).
 For this subset, the historical spent subtotal plus the newly authorized scope gives 151 subject, 1 evaluator, 0 authoring and 0 retry invocations; this is an accounting projection, not a new allocation or pool transfer.
-Dispatched calls are **151 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **0 / 1 / 0 / 0** for this subset.
+Dispatched calls are **151 subject, 1 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **0 / 0 / 0 / 0** for this subset.
 The CW protocol remains authoritative for all current combined spending and outer ceilings; no historical unspent pool is revived.
-Sequential scores have identical repository and externally frozen copies so readiness can cite immutable evidence before the closing repository commit.
+Sequential readiness used identical externally frozen scores; the final index pins the canonical repository results at their committed revision.
 
 
 Historical SSR closing forecast (2026-09-17):

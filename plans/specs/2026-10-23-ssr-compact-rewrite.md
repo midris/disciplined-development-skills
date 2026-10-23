@@ -1,6 +1,6 @@
 # SSR compact rewrite exploration
 
-Status: drafting/static comparison complete; the owner subsequently approved compact-semantic-01 testing, with freeze/readiness preceding collection and adoption still unapproved.
+Status: static authoring and compact-semantic-01 checkpoint complete; fifteen valid subjects and one audited cross-model review establish a functional tie on the exposed semantic case. Further regression and adoption remain unapproved.
 The [testing plan](../2026-09-11-model-driven-skill-testing.md) owns progress; the [SSR protocol](../../skill-studies/sweeping-stale-references/protocol.md) owns study decisions and call authority.
 
 ## Accepted scope
@@ -39,7 +39,7 @@ Static comparison is by the active author, not independent model evaluation or e
 ## Later comparison
 
 Interpret the requested eventual three-way test as preserved baseline, comprehensive rewrite and the new finalist; retain all three exploratory drafts as well.
-This is the author's interpretation of “those 3”, not an approved experiment allocation.
+The owner subsequently accepted this interpretation for compact-semantic-01; it does not allocate a later comparison.
 The new finalist is a whole-version alternative, not the context-only arm of the earlier 15-subject proposal.
 A version comparison does not establish current unguided contribution; any no-SSR question needs its own declared condition.
 Select fixed relevant cases, repetition counts, runtime settings, review packets and call allocation before collection.
@@ -49,10 +49,13 @@ Apply the accepted cross-model output-review process and keep known coverage lim
 
 Check complete source/final meaning, original table byte equality, unchanged descriptions/base/draft bytes, frontmatter shape, word counts, local links and absence of configuration changes pointing at untested candidates.
 Run a deep static adversarial review of the complete finalist and its relationship to the study plan before reporting it ready for future testing.
-Report remaining model validation as unperformed; do not install or promote a draft.
+Separate completed checkpoint evidence from remaining unperformed regression; do not install or promote a draft.
 The first commit/push covers the completed process work; the new rewrite exploration remains a separate change for owner review.
 
 ## Approved first checkpoint
 
 On 2026-10-23 the owner approved the [single semantic scenario](../../skill-studies/sweeping-stale-references/protocol.md#comparison-compact-semantic-01), fifteen Opus-low subjects and one Opus-medium output review.
 The protocol owns exact runtime, order, stop rules and accounting; this grants no later regression batch or candidate change.
+
+The [completed assessment](../../skill-studies/sweeping-stale-references/runs/compact-semantic-01/compact-semantic-01-assessment.md) records five functional successes per version and agreement on all 45 review factors, alongside procedural defects and one-case limits.
+The compact finalist remains unchanged; the next bounded regression is a recommendation requiring owner selection, not an automatic continuation.

@@ -12,7 +12,9 @@ Audit actual read order and full delivery; do not claim physical blinding or ind
 The active Codex assessor and Opus reviewer are different families; reviewer and subjects share a family.
 
 The installed read-only boundary passed fresh qualification on the same pinned runtime; the native Read/Glob/Grep-only transport reuses the unchanged CW restriction.
-Production verification must establish actual model/tools, protected input equality, complete reads before judgment, all45 factors and first pass before prior.
+Production verification must establish actual model/tools, protected input equality, complete reads before judgment, all 45 factors and first pass before prior.
 Preserve the first pass and later reconciliation separately; missing evidence stops the decision without another call.
 
-Status: packet frozen; sole review not yet dispatched.
+Status: complete. The [audit](audit.json) verifies 22 complete required inputs before first-pass event 72, followed by prior search/read at 73/75; all 23 protected fixtures are unchanged.
+The [first pass](first-pass.md) and [judgments](judgments.json) agree with all 45 active functional factors; [reconciliation](reconciliation.md) records no later judgment changes.
+No additional calls or adoption are authorized.
