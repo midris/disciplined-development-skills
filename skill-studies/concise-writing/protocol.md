@@ -1430,6 +1430,7 @@ Acceptance: descriptive correctness, effectiveness/readability, cleanup and comp
 Include all valid-setup executions regardless of outcome. No automatic retry; disclose exclusions, uncertainty and unattempted slots.
 Stop on infrastructure, contamination, capture/retention failure, identity drift or uncertain charge; valid behavioral misses alone do not stop later slots.
 Record: [index](runs/final-comparison-01/examples-screen-01/codex-final-examples-screen-01-run-index.json).
+Assessment: [completed Codex subjects](runs/final-comparison-01/examples-screen-01/codex-final-examples-screen-01-assessment.md).
 
 | Order | Case | Condition | Repetition | CONFIG |
 | ---: | --- | --- | ---: | --- |
@@ -1462,6 +1463,15 @@ Record: [index](runs/final-comparison-01/examples-screen-01/claude-final-example
 | 6 | long-handoff | original-body | 3 | `skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/configs/claude-long-handoff-original-body.json` |
 
 ## Results and decision
+
+### Short examples comparison: Codex portion
+
+All six Codex subjects are complete and directly assessed under the fresh matched runtime: original-body2/3pass, original-examples3/3pass; every F3 is met.
+The [Codex assessment](runs/final-comparison-01/examples-screen-01/codex-final-examples-screen-01-assessment.md) records a conditional rollback workflow concern in original repetition1 and preserves the complete per-run evidence.
+The source requires destination status confirmation/cursor reconciliation before lease release after rollback, while that output puts the sequence under an outstanding-acknowledgement condition; active F1/F2 are not met, awaiting independent review.
+All six remove the detached reminder and duplicate count; original outputs average890.3words versus915.3for the examples variant, with substantial within-condition variation and no demonstrated readability winner.
+Claude's first attempt failed authentication before inference and is invalid setup, not a skill failure; five planned subjects and both reviews remain unattempted at this stop.
+No cross-model agreement or completed comparison/body choice is claimed; the opening owns current sign-in/replacement authority.
 
 ### Five-repetition long-handoff comparison
 
