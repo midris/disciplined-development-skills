@@ -1,0 +1,189 @@
+{
+  "review_scope": "All fifteen complete final projects; 45 functional factors. One Opus medium review.",
+  "subject_index": {
+    "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-semantic-01/compact-semantic-01-run-index.json",
+    "sha256": "175b97153914a4573cb23681fd0077a3a9ab35526d82b4aabd41a6eeaf38a409"
+  },
+  "subject_assessments": [
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T211804448Z-ssr-compact-semantic-original-43eb72dc-bed5-4eff-90a3-ed9c363ce4ce-7g4e9s1p.json",
+      "sha256": "cbc06e70fa4ed11f3a1b610c9845a50ab8e6e5f47cc55a4e7b58f8b299894258"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T212410571Z-ssr-compact-semantic-candidate-b27fa214-9b32-41ae-8717-d64f3ee0e1d4-b_x8sezp.json",
+      "sha256": "369299c6371e3d830875ecbc1512aae6e2431d47d49934e731879f202ca4f38e"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T212516549Z-ssr-compact-semantic-finalist-24f91879-a992-4b12-9026-38a9ebf2143a-sajnmbw3.json",
+      "sha256": "073ac22bffa504ebe2651bf78fcceaa86bcb049cb6797c8cef2870715660298b"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T212607360Z-ssr-compact-semantic-candidate-240ae7cd-4213-40bb-9b01-5c95714b3029-479zhvuo.json",
+      "sha256": "ee9e00991f72ab5a9e09b4b6a1d512c0e7078dab36925c4ec691bb77946dbd7c"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T212705559Z-ssr-compact-semantic-finalist-a9d86334-3445-4590-b3e4-1b132f6df8c7-5nu6_q9_.json",
+      "sha256": "1bfc80341eb4acc2583b89db5399433e678b2f9d5bc19d2df9214ac2e19d2765"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T212809348Z-ssr-compact-semantic-original-e02f2ea8-520d-401d-b326-bd458cc17518-pg2payc3.json",
+      "sha256": "b44718d701ec4122f161b4ca0b7e01220d9cad433ac3390f6faa6f5bb19bb92f"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T212907539Z-ssr-compact-semantic-finalist-c1c662e0-fc86-4656-aaa0-7746f9eab771-idib5g4o.json",
+      "sha256": "38e806f3c4c4ef529f62082cc01c6edf6bef96b539d65c7a5a36c33fd905e719"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T212947093Z-ssr-compact-semantic-original-4c89a89d-1efc-44bf-9832-cf8104dcebcd-n0sj6bjf.json",
+      "sha256": "d7fe95fdcf6d6baf605240caae201abcc0329be7a490dba770c516f8ae81f37e"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T213033879Z-ssr-compact-semantic-candidate-7608f8bc-7450-4b24-a1bb-2284e4011e24-0ieyn2fu.json",
+      "sha256": "e111983bd5cb7155c2fffa627040e4d5a17a8cac03b2b55c89218d8d3a14259f"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T213130992Z-ssr-compact-semantic-original-1fdec10e-64dc-4841-913c-967bc381947b-qjytmvqi.json",
+      "sha256": "44eba8bbafd3d4658e9f913abcebfd02144429323b7cb515dd4735dffb621169"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T213214880Z-ssr-compact-semantic-finalist-52160d4f-1d58-46f5-9b79-deb59490fc80-h_68zmgl.json",
+      "sha256": "0368bf02b039204ede9baa807a6a941904dacf984a894a03a50b974bc427d965"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T213317806Z-ssr-compact-semantic-candidate-0e19c517-ab57-4c9f-a293-8bc999713bb4-468la7hg.json",
+      "sha256": "4cf309e13c42199d78f3383e1640d160e854d933127ba6a41e36fc3e9f0b6230"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T213412662Z-ssr-compact-semantic-candidate-8cf481d8-0405-463b-bc13-d24877855103-lp4o2r6z.json",
+      "sha256": "5582c807db536d251c31203132447d80f77d853492d14bddddff37eff5753793"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T213505114Z-ssr-compact-semantic-original-3102bdf3-bd48-442f-8c61-1660d1ca81a6-mgqevtlv.json",
+      "sha256": "4d9bd585580f73d8136d1a5abf93ca9bf3b06199b961633c21ec94db7c9bf08f"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T213555811Z-ssr-compact-semantic-finalist-5486e457-4782-4591-bb1f-7e90eaa33585-7xawoy6q.json",
+      "sha256": "288a95562d1738b0f7abdb4f6d303641ecc5c38ea78b9e45118f80fbb6e5c988"
+    }
+  ],
+  "configuration": {
+    "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-semantic-01/evaluation/config.json",
+    "sha256": "1d0e6dd51465377ce860247243117450dea8b378071d6bea9751d003b0d57d84"
+  },
+  "prompt": {
+    "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-semantic-01/evaluation/prompt.md",
+    "sha256": "18e08407f70b6e21138c4056a037d1e2bf311a86fbbefdad3aec93cf65d9622b"
+  },
+  "input_files": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/review-inputs/EVALUATION-INDEX.json",
+      "sha256": "128e35950aa745f88543b525a823cf8cd7f26031ecf75e5389c55d8502a2b8ec"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/review-inputs/INTERPRETATION.md",
+      "sha256": "7c85f31e283a26315c6e7270720e17ed370fe6d2026de295b0522384975f8803"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/review-inputs/NEUTRAL-FACTS.json",
+      "sha256": "5c2864f8e22a3e98389063a70ac1844534e4c85aac4a82fefb7514d599179dfd"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/review-inputs/SOURCE-PROJECT.md",
+      "sha256": "15fdc57210740c88d45eddba4f6a10030488ec7a3cce3d81f62ed496ae5c3fd6"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/review-inputs/TASK.md",
+      "sha256": "6c9685054ae4f4dd6f32a76a18401366e4206b829466367640370554bf33f683"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/review-inputs/criteria.md",
+      "sha256": "bae6463893e23dba7238e0de74d0accb1ced5d4e22ad04cb7f17bfcebc557253"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/review-inputs/policy.txt",
+      "sha256": "5d057d11f678ae3fa63c48957446aded13ccc5dcb8babab2856d0232d49e08bb"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/review-inputs/prior-assessment.md",
+      "sha256": "03ef3be0321225f03533468f3ff96bb8956ae2f189b395196787fbc674f52cf2"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/review-inputs/projects/01-original-1.md",
+      "sha256": "3943f2fdd647e01868c012b6668f3004af5916a7869c1f345ba67f32a5702991"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/review-inputs/projects/02-candidate-1.md",
+      "sha256": "0168e2b6df75ccf6c57661f2f941e316aed1fff49aeca742b308dd73c6a2dfea"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/review-inputs/projects/03-finalist-1.md",
+      "sha256": "23b21a2d1df53597c5c958958cea8ccf6623df3dc1491758dd5d3f91ef07e81c"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/review-inputs/projects/04-candidate-2.md",
+      "sha256": "10730daf22eb97ba63069c0be00313cfd358c26bddee1132cdd5c10a43a08428"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/review-inputs/projects/05-finalist-2.md",
+      "sha256": "07cf9307d26e465483b96d24f04e4d8de58f2e3cd1fd725ba793d1e1f375acef"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/review-inputs/projects/06-original-2.md",
+      "sha256": "c2cfd1a75d6a9f5feb6e73b213dad6ad800d5f25bbe4e2ba66ae2612d74ba628"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/review-inputs/projects/07-finalist-3.md",
+      "sha256": "2452b8f88f4b53209406781548eeaffff063c7d35a982605c487b674accf78ca"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/review-inputs/projects/08-original-3.md",
+      "sha256": "cf2acbeb8a7105644dc1dea1176b30bd5abb2fc75af8c60b3ee45a9c02e445a6"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/review-inputs/projects/09-candidate-3.md",
+      "sha256": "fb0e06feec73d5e9b8f36c88b5636ba847563c8e0d615398cb9f015a007445ea"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/review-inputs/projects/10-original-4.md",
+      "sha256": "332a059ff9f8f04b078e84cd18cb8aba90853b11a44f4c922d125a0ee0cc06e3"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/review-inputs/projects/11-finalist-4.md",
+      "sha256": "6fc00057f43acf345fe2ee762f973b36094b3e4950d2a2a3ce2e2005ac13c451"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/review-inputs/projects/12-candidate-4.md",
+      "sha256": "0ca7e6b1ca9fdb89b3a4c06d05b074c91dd2dd3b190e2a5f4c064436964b5d99"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/review-inputs/projects/13-candidate-5.md",
+      "sha256": "cf3515a1ffa318930cde336558206c38e734652415bf5cf7b8e2b65669571c02"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/review-inputs/projects/14-original-5.md",
+      "sha256": "3df12c08c8dc38e4302179bfd54d663220004bb845ab44c966a28f7355a430be"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/review-inputs/projects/15-finalist-5.md",
+      "sha256": "1e26cfbbdd36e81c2262062a7f60fa8a0c155918c20488d72989fb197d33ee33"
+    }
+  ],
+  "controller": {
+    "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/controllers/ssr-compact-review.py",
+    "sha256": "0f36dd59d599e334d242aff36be6b73f30ccfada24e961c648bf5452500ae7b9"
+  },
+  "controller_support": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/controllers/ssr-compact-packet.py",
+      "sha256": "1066997e01b66f1e2ecfd873281f84183f5943264732ec3e3c014f4a14e27604"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/runtime_setup.py",
+      "sha256": "91c8a2a5fccaa22affc662fe8824a2502be8e373e363520f21033a25838afdb2"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/runtime-identities.json",
+      "sha256": "07bdf07ab80630d99496d068464deac9e6233f871afb0cda979f965e33588738"
+    }
+  ]
+}

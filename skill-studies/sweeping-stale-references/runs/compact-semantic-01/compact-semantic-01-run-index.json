@@ -32,7 +32,7 @@
         "charge": 1
       },
       "limitations": [
-        "One exposed semantic-delivery case; complete-body explicit loading. Canonical identical score is checked in under results; external immutable identity permits sequential readiness before the closing score commit."
+        "One exposed semantic-delivery case; complete-body explicit loading."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T211804448Z-ssr-compact-semantic-original-43eb72dc-bed5-4eff-90a3-ed9c363ce4ce-7g4e9s1p",
@@ -45,9 +45,10 @@
       },
       "result": {
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/scores/20261023T211804448Z-ssr-compact-semantic-original-43eb72dc-bed5-4eff-90a3-ed9c363ce4ce-7g4e9s1p.json",
+          "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T211804448Z-ssr-compact-semantic-original-43eb72dc-bed5-4eff-90a3-ed9c363ce4ce-7g4e9s1p.json",
           "sha256": "cbc06e70fa4ed11f3a1b610c9845a50ab8e6e5f47cc55a4e7b58f8b299894258",
-          "version": "2"
+          "version": "2",
+          "git_revision": "348280e03c31b65700680b9c79394bc750883746"
         },
         "result_id": "compact-semantic-01-semantic-delivery-original-1"
       }
@@ -80,7 +81,7 @@
         "charge": 1
       },
       "limitations": [
-        "One exposed semantic-delivery case; complete-body explicit loading. Canonical identical score is checked in under results; external immutable identity permits sequential readiness before the closing score commit."
+        "One exposed semantic-delivery case; complete-body explicit loading."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T212410571Z-ssr-compact-semantic-candidate-b27fa214-9b32-41ae-8717-d64f3ee0e1d4-b_x8sezp",
@@ -93,9 +94,10 @@
       },
       "result": {
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/scores/20261023T212410571Z-ssr-compact-semantic-candidate-b27fa214-9b32-41ae-8717-d64f3ee0e1d4-b_x8sezp.json",
+          "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T212410571Z-ssr-compact-semantic-candidate-b27fa214-9b32-41ae-8717-d64f3ee0e1d4-b_x8sezp.json",
           "sha256": "369299c6371e3d830875ecbc1512aae6e2431d47d49934e731879f202ca4f38e",
-          "version": "2"
+          "version": "2",
+          "git_revision": "348280e03c31b65700680b9c79394bc750883746"
         },
         "result_id": "compact-semantic-01-semantic-delivery-candidate-1"
       }
@@ -128,7 +130,7 @@
         "charge": 1
       },
       "limitations": [
-        "One exposed semantic-delivery case; complete-body explicit loading. Canonical identical score is checked in under results; external immutable identity permits sequential readiness before the closing score commit."
+        "One exposed semantic-delivery case; complete-body explicit loading."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T212516549Z-ssr-compact-semantic-finalist-24f91879-a992-4b12-9026-38a9ebf2143a-sajnmbw3",
@@ -141,9 +143,10 @@
       },
       "result": {
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/scores/20261023T212516549Z-ssr-compact-semantic-finalist-24f91879-a992-4b12-9026-38a9ebf2143a-sajnmbw3.json",
+          "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T212516549Z-ssr-compact-semantic-finalist-24f91879-a992-4b12-9026-38a9ebf2143a-sajnmbw3.json",
           "sha256": "073ac22bffa504ebe2651bf78fcceaa86bcb049cb6797c8cef2870715660298b",
-          "version": "2"
+          "version": "2",
+          "git_revision": "348280e03c31b65700680b9c79394bc750883746"
         },
         "result_id": "compact-semantic-01-semantic-delivery-finalist-1"
       }
@@ -176,7 +179,7 @@
         "charge": 1
       },
       "limitations": [
-        "One exposed semantic-delivery case; complete-body explicit loading. Canonical identical score is checked in under results; external immutable identity permits sequential readiness before the closing score commit."
+        "One exposed semantic-delivery case; complete-body explicit loading."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T212607360Z-ssr-compact-semantic-candidate-240ae7cd-4213-40bb-9b01-5c95714b3029-479zhvuo",
@@ -189,9 +192,10 @@
       },
       "result": {
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/scores/20261023T212607360Z-ssr-compact-semantic-candidate-240ae7cd-4213-40bb-9b01-5c95714b3029-479zhvuo.json",
+          "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T212607360Z-ssr-compact-semantic-candidate-240ae7cd-4213-40bb-9b01-5c95714b3029-479zhvuo.json",
           "sha256": "ee9e00991f72ab5a9e09b4b6a1d512c0e7078dab36925c4ec691bb77946dbd7c",
-          "version": "2"
+          "version": "2",
+          "git_revision": "348280e03c31b65700680b9c79394bc750883746"
         },
         "result_id": "compact-semantic-01-semantic-delivery-candidate-2"
       }
@@ -224,7 +228,7 @@
         "charge": 1
       },
       "limitations": [
-        "One exposed semantic-delivery case; complete-body explicit loading. Canonical identical score is checked in under results; external immutable identity permits sequential readiness before the closing score commit."
+        "One exposed semantic-delivery case; complete-body explicit loading."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T212705559Z-ssr-compact-semantic-finalist-a9d86334-3445-4590-b3e4-1b132f6df8c7-5nu6_q9_",
@@ -237,9 +241,10 @@
       },
       "result": {
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/scores/20261023T212705559Z-ssr-compact-semantic-finalist-a9d86334-3445-4590-b3e4-1b132f6df8c7-5nu6_q9_.json",
+          "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T212705559Z-ssr-compact-semantic-finalist-a9d86334-3445-4590-b3e4-1b132f6df8c7-5nu6_q9_.json",
           "sha256": "1bfc80341eb4acc2583b89db5399433e678b2f9d5bc19d2df9214ac2e19d2765",
-          "version": "2"
+          "version": "2",
+          "git_revision": "348280e03c31b65700680b9c79394bc750883746"
         },
         "result_id": "compact-semantic-01-semantic-delivery-finalist-2"
       }
@@ -272,7 +277,7 @@
         "charge": 1
       },
       "limitations": [
-        "One exposed semantic-delivery case; complete-body explicit loading. Canonical identical score is checked in under results; external immutable identity permits sequential readiness before the closing score commit."
+        "One exposed semantic-delivery case; complete-body explicit loading."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T212809348Z-ssr-compact-semantic-original-e02f2ea8-520d-401d-b326-bd458cc17518-pg2payc3",
@@ -285,9 +290,10 @@
       },
       "result": {
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/scores/20261023T212809348Z-ssr-compact-semantic-original-e02f2ea8-520d-401d-b326-bd458cc17518-pg2payc3.json",
+          "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T212809348Z-ssr-compact-semantic-original-e02f2ea8-520d-401d-b326-bd458cc17518-pg2payc3.json",
           "sha256": "b44718d701ec4122f161b4ca0b7e01220d9cad433ac3390f6faa6f5bb19bb92f",
-          "version": "2"
+          "version": "2",
+          "git_revision": "348280e03c31b65700680b9c79394bc750883746"
         },
         "result_id": "compact-semantic-01-semantic-delivery-original-2"
       }
@@ -320,7 +326,7 @@
         "charge": 1
       },
       "limitations": [
-        "One exposed semantic-delivery case; complete-body explicit loading. Canonical identical score is checked in under results; external immutable identity permits sequential readiness before the closing score commit."
+        "One exposed semantic-delivery case; complete-body explicit loading."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T212907539Z-ssr-compact-semantic-finalist-c1c662e0-fc86-4656-aaa0-7746f9eab771-idib5g4o",
@@ -333,9 +339,10 @@
       },
       "result": {
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/scores/20261023T212907539Z-ssr-compact-semantic-finalist-c1c662e0-fc86-4656-aaa0-7746f9eab771-idib5g4o.json",
+          "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T212907539Z-ssr-compact-semantic-finalist-c1c662e0-fc86-4656-aaa0-7746f9eab771-idib5g4o.json",
           "sha256": "38e806f3c4c4ef529f62082cc01c6edf6bef96b539d65c7a5a36c33fd905e719",
-          "version": "2"
+          "version": "2",
+          "git_revision": "348280e03c31b65700680b9c79394bc750883746"
         },
         "result_id": "compact-semantic-01-semantic-delivery-finalist-3"
       }
@@ -368,7 +375,7 @@
         "charge": 1
       },
       "limitations": [
-        "One exposed semantic-delivery case; complete-body explicit loading. Canonical identical score is checked in under results; external immutable identity permits sequential readiness before the closing score commit."
+        "One exposed semantic-delivery case; complete-body explicit loading."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T212947093Z-ssr-compact-semantic-original-4c89a89d-1efc-44bf-9832-cf8104dcebcd-n0sj6bjf",
@@ -381,9 +388,10 @@
       },
       "result": {
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/scores/20261023T212947093Z-ssr-compact-semantic-original-4c89a89d-1efc-44bf-9832-cf8104dcebcd-n0sj6bjf.json",
+          "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T212947093Z-ssr-compact-semantic-original-4c89a89d-1efc-44bf-9832-cf8104dcebcd-n0sj6bjf.json",
           "sha256": "d7fe95fdcf6d6baf605240caae201abcc0329be7a490dba770c516f8ae81f37e",
-          "version": "2"
+          "version": "2",
+          "git_revision": "348280e03c31b65700680b9c79394bc750883746"
         },
         "result_id": "compact-semantic-01-semantic-delivery-original-3"
       }
@@ -416,7 +424,7 @@
         "charge": 1
       },
       "limitations": [
-        "One exposed semantic-delivery case; complete-body explicit loading. Canonical identical score is checked in under results; external immutable identity permits sequential readiness before the closing score commit."
+        "One exposed semantic-delivery case; complete-body explicit loading."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T213033879Z-ssr-compact-semantic-candidate-7608f8bc-7450-4b24-a1bb-2284e4011e24-0ieyn2fu",
@@ -429,9 +437,10 @@
       },
       "result": {
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/scores/20261023T213033879Z-ssr-compact-semantic-candidate-7608f8bc-7450-4b24-a1bb-2284e4011e24-0ieyn2fu.json",
+          "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T213033879Z-ssr-compact-semantic-candidate-7608f8bc-7450-4b24-a1bb-2284e4011e24-0ieyn2fu.json",
           "sha256": "e111983bd5cb7155c2fffa627040e4d5a17a8cac03b2b55c89218d8d3a14259f",
-          "version": "2"
+          "version": "2",
+          "git_revision": "348280e03c31b65700680b9c79394bc750883746"
         },
         "result_id": "compact-semantic-01-semantic-delivery-candidate-3"
       }
@@ -464,7 +473,7 @@
         "charge": 1
       },
       "limitations": [
-        "One exposed semantic-delivery case; complete-body explicit loading. Canonical identical score is checked in under results; external immutable identity permits sequential readiness before the closing score commit."
+        "One exposed semantic-delivery case; complete-body explicit loading."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T213130992Z-ssr-compact-semantic-original-1fdec10e-64dc-4841-913c-967bc381947b-qjytmvqi",
@@ -477,9 +486,10 @@
       },
       "result": {
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/scores/20261023T213130992Z-ssr-compact-semantic-original-1fdec10e-64dc-4841-913c-967bc381947b-qjytmvqi.json",
+          "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T213130992Z-ssr-compact-semantic-original-1fdec10e-64dc-4841-913c-967bc381947b-qjytmvqi.json",
           "sha256": "44eba8bbafd3d4658e9f913abcebfd02144429323b7cb515dd4735dffb621169",
-          "version": "2"
+          "version": "2",
+          "git_revision": "348280e03c31b65700680b9c79394bc750883746"
         },
         "result_id": "compact-semantic-01-semantic-delivery-original-4"
       }
@@ -512,7 +522,7 @@
         "charge": 1
       },
       "limitations": [
-        "One exposed semantic-delivery case; complete-body explicit loading. Canonical identical score is checked in under results; external immutable identity permits sequential readiness before the closing score commit."
+        "One exposed semantic-delivery case; complete-body explicit loading."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T213214880Z-ssr-compact-semantic-finalist-52160d4f-1d58-46f5-9b79-deb59490fc80-h_68zmgl",
@@ -525,9 +535,10 @@
       },
       "result": {
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/scores/20261023T213214880Z-ssr-compact-semantic-finalist-52160d4f-1d58-46f5-9b79-deb59490fc80-h_68zmgl.json",
+          "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T213214880Z-ssr-compact-semantic-finalist-52160d4f-1d58-46f5-9b79-deb59490fc80-h_68zmgl.json",
           "sha256": "0368bf02b039204ede9baa807a6a941904dacf984a894a03a50b974bc427d965",
-          "version": "2"
+          "version": "2",
+          "git_revision": "348280e03c31b65700680b9c79394bc750883746"
         },
         "result_id": "compact-semantic-01-semantic-delivery-finalist-4"
       }
@@ -560,7 +571,7 @@
         "charge": 1
       },
       "limitations": [
-        "One exposed semantic-delivery case; complete-body explicit loading. Canonical identical score is checked in under results; external immutable identity permits sequential readiness before the closing score commit."
+        "One exposed semantic-delivery case; complete-body explicit loading."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T213317806Z-ssr-compact-semantic-candidate-0e19c517-ab57-4c9f-a293-8bc999713bb4-468la7hg",
@@ -573,9 +584,10 @@
       },
       "result": {
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/scores/20261023T213317806Z-ssr-compact-semantic-candidate-0e19c517-ab57-4c9f-a293-8bc999713bb4-468la7hg.json",
+          "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T213317806Z-ssr-compact-semantic-candidate-0e19c517-ab57-4c9f-a293-8bc999713bb4-468la7hg.json",
           "sha256": "4cf309e13c42199d78f3383e1640d160e854d933127ba6a41e36fc3e9f0b6230",
-          "version": "2"
+          "version": "2",
+          "git_revision": "348280e03c31b65700680b9c79394bc750883746"
         },
         "result_id": "compact-semantic-01-semantic-delivery-candidate-4"
       }
@@ -608,7 +620,7 @@
         "charge": 1
       },
       "limitations": [
-        "One exposed semantic-delivery case; complete-body explicit loading. Canonical identical score is checked in under results; external immutable identity permits sequential readiness before the closing score commit."
+        "One exposed semantic-delivery case; complete-body explicit loading."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T213412662Z-ssr-compact-semantic-candidate-8cf481d8-0405-463b-bc13-d24877855103-lp4o2r6z",
@@ -621,9 +633,10 @@
       },
       "result": {
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/scores/20261023T213412662Z-ssr-compact-semantic-candidate-8cf481d8-0405-463b-bc13-d24877855103-lp4o2r6z.json",
+          "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T213412662Z-ssr-compact-semantic-candidate-8cf481d8-0405-463b-bc13-d24877855103-lp4o2r6z.json",
           "sha256": "5582c807db536d251c31203132447d80f77d853492d14bddddff37eff5753793",
-          "version": "2"
+          "version": "2",
+          "git_revision": "348280e03c31b65700680b9c79394bc750883746"
         },
         "result_id": "compact-semantic-01-semantic-delivery-candidate-5"
       }
@@ -656,7 +669,7 @@
         "charge": 1
       },
       "limitations": [
-        "One exposed semantic-delivery case; complete-body explicit loading. Canonical identical score is checked in under results; external immutable identity permits sequential readiness before the closing score commit."
+        "One exposed semantic-delivery case; complete-body explicit loading."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T213505114Z-ssr-compact-semantic-original-3102bdf3-bd48-442f-8c61-1660d1ca81a6-mgqevtlv",
@@ -669,9 +682,10 @@
       },
       "result": {
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/scores/20261023T213505114Z-ssr-compact-semantic-original-3102bdf3-bd48-442f-8c61-1660d1ca81a6-mgqevtlv.json",
+          "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T213505114Z-ssr-compact-semantic-original-3102bdf3-bd48-442f-8c61-1660d1ca81a6-mgqevtlv.json",
           "sha256": "4d9bd585580f73d8136d1a5abf93ca9bf3b06199b961633c21ec94db7c9bf08f",
-          "version": "2"
+          "version": "2",
+          "git_revision": "348280e03c31b65700680b9c79394bc750883746"
         },
         "result_id": "compact-semantic-01-semantic-delivery-original-5"
       }
@@ -704,7 +718,7 @@
         "charge": 1
       },
       "limitations": [
-        "One exposed semantic-delivery case; complete-body explicit loading. Canonical identical score is checked in under results; external immutable identity permits sequential readiness before the closing score commit."
+        "One exposed semantic-delivery case; complete-body explicit loading."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T213555811Z-ssr-compact-semantic-finalist-5486e457-4782-4591-bb1f-7e90eaa33585-7xawoy6q",
@@ -717,9 +731,10 @@
       },
       "result": {
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/scores/20261023T213555811Z-ssr-compact-semantic-finalist-5486e457-4782-4591-bb1f-7e90eaa33585-7xawoy6q.json",
+          "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T213555811Z-ssr-compact-semantic-finalist-5486e457-4782-4591-bb1f-7e90eaa33585-7xawoy6q.json",
           "sha256": "288a95562d1738b0f7abdb4f6d303641ecc5c38ea78b9e45118f80fbb6e5c988",
-          "version": "2"
+          "version": "2",
+          "git_revision": "348280e03c31b65700680b9c79394bc750883746"
         },
         "result_id": "compact-semantic-01-semantic-delivery-finalist-5"
       }
