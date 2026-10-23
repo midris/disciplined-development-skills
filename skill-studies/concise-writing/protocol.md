@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `concise-writing`
 Status: closed; the owner approved adopting the original body with the selected rewritten description on 2026-10-22.
-Current action: none for CW. SSR resumed for the owner-requested audit/recommendation only; its [protocol](../sweeping-stale-references/protocol.md) owns current scope. No model runs are authorized; runner follow-ups remain in the shared plan.
+Current action: none for CW. The [SSR protocol](../sweeping-stale-references/protocol.md) owns its completed audit, compact rewrite preparation and pending test selection. No model runs are authorized; runner follow-ups remain in the shared plan.
 
 ## Closure and adoption
 
@@ -998,6 +998,8 @@ Canonical checkout: `/Users/simon/work/personal/disciplined-development-skills`.
 Approved durable raw evidence directory: `/Users/simon/work/personal/skill-study-private/concise-writing/development/`, created and verified with a disposable local copy/hash-inventory probe. All sixteen CW bundles (eight baseline, eight comparison) are stored there with verified version-1 inventories. After the runner stops writing, copy its complete emitted bundle from `/private/tmp/cw-contribution-baseline-01/skilltest-runs/` under the same unique directory name, without overwriting an existing destination. Preserve all files, including hidden/Git files and the provider session; compare the complete source/destination inventory (paths, types, modes, sizes and hashes or symlink targets), write one sibling `.inventory.json` using the existing version-1 inventory shape, and verify it before recording preservation or dispatching again. Unexpected entries or copy/cleanup errors require inspection. Keep failed attempts too; scratch cleanup is not evidence preservation.
 Owner-accepted recovery decision for CW: single-host retention, as used for SSR, with one verified canonical raw bundle per attempt. The current `tmutil destinationinfo` check reports no destinations configured; `tmutil isexcluded` reports the parent private store is Included. No other working backup arrangement has been established. Machine loss or disk failure could therefore destroy CW raw evidence; Git holds case inputs and assessments but cannot recover those external bundles. Creating the directory and passing a local copy check do not establish host-loss recovery. The owner explicitly accepted this CW risk together with the eight-execution scope above.
 
+Combined accounting also includes the [SSR compact-semantic index](../sweeping-stale-references/runs/compact-semantic-01/compact-semantic-01-run-index.json) and [its evaluator ledger](../sweeping-stale-references/runs/compact-semantic-01/evaluation/evaluator-run-index.json).
+
 Combined accounting sources: closed SSR [pilot 01](../sweeping-stale-references/runs/pilot-01/pilot-run-index.json), [pilot 02](../sweeping-stale-references/runs/pilot-02/pilot-02-run-index.json), [semantic delivery](../sweeping-stale-references/runs/semantic-delivery-01/semantic-delivery-01-run-index.json), [core baseline](../sweeping-stale-references/runs/core-baseline-01/core-baseline-01-run-index.json), [comparison](../sweeping-stale-references/runs/comprehensive-comparison-01/comprehensive-comparison-01-run-index.json), the SSR [completed expansion](../sweeping-stale-references/runs/coverage-baseline-01/coverage-baseline-01-run-index.json), the SSR [completed comparison](../sweeping-stale-references/runs/comprehensive-comparison-02/comprehensive-comparison-02-run-index.json), the SSR [Claude smoke](../sweeping-stale-references/runs/claude-smoke-01/claude-smoke-01-run-index.json), the SSR [Claude comparison](../sweeping-stale-references/runs/claude-comparison-01/claude-comparison-01-run-index.json), the SSR [Opus invocation comparison](../sweeping-stale-references/runs/claude-opus-invocation-01/claude-opus-invocation-01-run-index.json), and both CW indexes above. Historical pilot links contribute accounting only; they are not reclassified or reassessed.
 The new E reviews use the [fixed review package](runs/baseline-iteration-e-01/evaluation/README.md) and [supplemental Opus accounting](runs/baseline-iteration-e-01/evaluation/evaluator-run-index.json).
 The remaining-suite reviews use the [fourteen-packet package](runs/baseline-iteration-suite-01/evaluation/README.md) and [evaluator ledger](runs/baseline-iteration-suite-01/evaluation/evaluator-run-index.json); their allocation is included in the current ceiling.
@@ -1006,13 +1008,13 @@ The comment continuation uses [frozen review inputs](runs/final-comparison-01/sc
 The first handoff stage uses its [two-call evaluator ledger](runs/final-comparison-01/handoff-01/evaluation/evaluator-run-index.json).
 The handoff continuation uses its [two-call evaluator ledger](runs/final-comparison-01/handoff-02/evaluation/evaluator-run-index.json).
 The short examples screen uses its [two-call evaluator ledger](runs/final-comparison-01/examples-screen-01/evaluation/evaluator-run-index.json).
-Dispatched calls are **642 subject, 48 evaluator, 0 authoring, 3 retry**; remaining outer capacity is **0 / 0 / 4 / 1** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
+Dispatched calls are **642 subject, 48 evaluator, 0 authoring, 3 retry**; remaining outer capacity is **15 / 1 / 4 / 1** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **3,545 active minutes booked; 2,345 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **3,570 active minutes booked; 2,370 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
-The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 642/642, with 0 approved examples-screen calls available; the earlier E diagnostic is spent.
+The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 642/657, with 15 approved SSR compact-semantic calls available; the earlier E diagnostic and CW examples screen are spent.
 The supplemental work used 40 estimated active minutes against its 40-minute forecast; model waits are included once.
 
 | Work | Estimated active minutes |
@@ -1147,7 +1149,8 @@ The supplemental work used 40 estimated active minutes against its 40-minute for
 | CW description promotion, closure reconciliation and verification | 15 |
 | SSR resumption coverage/evidence/evaluation audit, complete draft review, recommendation and zero-model verification | 30 |
 | SSR coverage acceptance, cross-model review process adoption and documentation verification | 5 |
-| **Total** | **3,545** |
+| SSR process publication, three compact authoring passes, comparative/finalist review and zero-model verification | 25 |
+| **Total** | **3,570** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.

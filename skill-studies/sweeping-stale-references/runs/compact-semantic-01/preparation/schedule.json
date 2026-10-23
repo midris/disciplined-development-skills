@@ -1,0 +1,110 @@
+{
+  "batch": "compact-semantic-01",
+  "slots": [
+    {
+      "order": 1,
+      "case_id": "semantic-delivery",
+      "condition": "original",
+      "repetition": 1,
+      "config": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/original.json"
+    },
+    {
+      "order": 2,
+      "case_id": "semantic-delivery",
+      "condition": "candidate",
+      "repetition": 1,
+      "config": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/candidate.json"
+    },
+    {
+      "order": 3,
+      "case_id": "semantic-delivery",
+      "condition": "finalist",
+      "repetition": 1,
+      "config": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/finalist.json"
+    },
+    {
+      "order": 4,
+      "case_id": "semantic-delivery",
+      "condition": "candidate",
+      "repetition": 2,
+      "config": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/candidate.json"
+    },
+    {
+      "order": 5,
+      "case_id": "semantic-delivery",
+      "condition": "finalist",
+      "repetition": 2,
+      "config": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/finalist.json"
+    },
+    {
+      "order": 6,
+      "case_id": "semantic-delivery",
+      "condition": "original",
+      "repetition": 2,
+      "config": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/original.json"
+    },
+    {
+      "order": 7,
+      "case_id": "semantic-delivery",
+      "condition": "finalist",
+      "repetition": 3,
+      "config": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/finalist.json"
+    },
+    {
+      "order": 8,
+      "case_id": "semantic-delivery",
+      "condition": "original",
+      "repetition": 3,
+      "config": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/original.json"
+    },
+    {
+      "order": 9,
+      "case_id": "semantic-delivery",
+      "condition": "candidate",
+      "repetition": 3,
+      "config": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/candidate.json"
+    },
+    {
+      "order": 10,
+      "case_id": "semantic-delivery",
+      "condition": "original",
+      "repetition": 4,
+      "config": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/original.json"
+    },
+    {
+      "order": 11,
+      "case_id": "semantic-delivery",
+      "condition": "finalist",
+      "repetition": 4,
+      "config": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/finalist.json"
+    },
+    {
+      "order": 12,
+      "case_id": "semantic-delivery",
+      "condition": "candidate",
+      "repetition": 4,
+      "config": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/candidate.json"
+    },
+    {
+      "order": 13,
+      "case_id": "semantic-delivery",
+      "condition": "candidate",
+      "repetition": 5,
+      "config": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/candidate.json"
+    },
+    {
+      "order": 14,
+      "case_id": "semantic-delivery",
+      "condition": "original",
+      "repetition": 5,
+      "config": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/original.json"
+    },
+    {
+      "order": 15,
+      "case_id": "semantic-delivery",
+      "condition": "finalist",
+      "repetition": 5,
+      "config": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/finalist.json"
+    }
+  ]
+}

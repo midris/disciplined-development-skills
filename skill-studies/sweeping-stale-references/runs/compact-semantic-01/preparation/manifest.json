@@ -1,0 +1,216 @@
+{
+  "format_version": "1",
+  "manifest_id": "ssr-compact-semantic-01",
+  "study_id": "sweeping-stale-references",
+  "case_id": "semantic-delivery",
+  "status": "draft",
+  "created_at": "2026-10-23",
+  "source_revision": "",
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "684d76df079a1359f998a06f64c98e6234fdb85c71af0969ba99bfa176521708",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/sweeping-stale-references/protocol.md",
+      "sha256": "0c19597072234b2980349340cf85669e042e63fe1e6246c95f64edcc5eecd9d8",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "a90ca386d0b267632b01d8cd0bce8ba4bb4010999c3481e74a318b4d17675e40",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result-v2.schema.json",
+      "sha256": "81902ed03e807804404c0d6ba7a0092a1c311c9eef45ee88c89708ce50d7c2c2",
+      "version": "2"
+    },
+    "policy": {
+      "path": "skill-studies/sweeping-stale-references/assessment-policies/SSR-assessment-3.txt",
+      "sha256": "5d057d11f678ae3fa63c48957446aded13ccc5dcb8babab2856d0232d49e08bb",
+      "version": "SSR-assessment-3"
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/criteria.md",
+        "sha256": "bae6463893e23dba7238e0de74d0accb1ced5d4e22ad04cb7f17bfcebc557253",
+        "version": "3"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "original",
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/original.json",
+        "sha256": "1c1865be1a174f4a54f401c15510df00893a9ab90cb8de5c3b6c3ab102a12850",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/sweeping-stale-references/cases/skill-original/SKILL.md"
+    },
+    {
+      "id": "candidate",
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/candidate.json",
+        "sha256": "81e8ac8657955669e717b8828481859f71eef5fbbe566f770d9df755fd77cb07",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/sweeping-stale-references/cases/skill-candidate-comprehensive/SKILL.md"
+    },
+    {
+      "id": "finalist",
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/finalist.json",
+        "sha256": "2c4e41c9f08a3ce8a7a2186970ca84bc46830859d5bafc8bb0861a6da25067c7",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/sweeping-stale-references/drafts/compact-rewrite/finalist/SKILL.md"
+    }
+  ],
+  "subject_sources": [
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/claude-comparison.gitignore",
+      "sha256": "b9dd267653838ba8fedb6a23b6173254b930948d36492c5c5fdac0219e733f8b",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/README.md",
+      "sha256": "1a4b23b1f53af5b7aa42ac8e72f59282374435831bd35f542c23bd7dfdccb6e3",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/docs/download-helper.md",
+      "sha256": "8d6d58a231c01678279d8e00ea0f03f9306c1b36a474b8cb4dd5967b657453bb",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/docs/operations.md",
+      "sha256": "7d3c3810c532bdd87af795cf543171deeaff0595e4a13f7fdee39e8dfdef18d2",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/docs/troubleshooting.md",
+      "sha256": "8e8a5cb48d7d3f3ca8e7212e9c29764f6e8f6cdaaf4f4d8d0762aaeaca906f1f",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/plans/completed/delivery-policy.md",
+      "sha256": "ef7513eb13148ad5c6b215959ae917c6ef42a24050dc8df5ff64fe814dcfd376",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/src/delivery.py",
+      "sha256": "554df6c0a7d0bf116cc593c4fdf3384e8645ab98c7d4e38780637b75577cda52",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/src/download.py",
+      "sha256": "3a618d709d2be580ccb53f2f660822be9f90b091af41e3ce3b7aaed31e894eb0",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/tests/test_retry_behavior.py",
+      "sha256": "71160952f35e3a255d68cca629a0a66d79e3e4b4c30431786f6945a28ede54f3",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/task.md",
+      "sha256": "6c9685054ae4f4dd6f32a76a18401366e4206b829466367640370554bf33f683",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/skill-candidate-comprehensive/SKILL.md",
+      "sha256": "15992341f7ab2fb1e4d8a775092199d7d4e6a9de1167895dbe5a805aeafbd38c",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/skill-original/SKILL.md",
+      "sha256": "d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/drafts/compact-rewrite/finalist/SKILL.md",
+      "sha256": "f1f297f213855f9b53835dd084b2be6d3d9134cadab47babea08cbdaad9a205e",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/prompt.md",
+      "sha256": "2ab1012e470f5ad978d8f758c974e31b8a6276831cf1eee2527011322deb26b1",
+      "version": null
+    }
+  ],
+  "controller_only": [
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/expected.json",
+      "sha256": "1eccde02cbd1523e4d99a90359fae1d45b494c13a3d4691df83b0b0ab9a011fa",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/preparation.json",
+      "sha256": "53d2e374642598a875fc88b3daf8f97ef02575baa8bd8363b8d8e2c83b2d217b",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/probe_behavior.py",
+      "sha256": "0f8a60b53f48e8fc5e195a60084b75057175ab46df3d2f2f1c0093538bc40cf3",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/qualification-variants.json",
+      "sha256": "a1733b3c4edf68a8bfcf2903f7e2d4427f361616f2552125643b2647ba8a49ce",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/qualification.json",
+      "sha256": "fabc4d6ba4db8b5135a10483df1e5087719fae8224e9c0f0c18ed7ba62f7302d",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/qualify_case.py",
+      "sha256": "cd6f72e97d99bece0e30af4e43f97b92f8098509110a6e420e8aa6ae7cb5f0a4",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/test_probe_behavior.py",
+      "sha256": "309ff619c05e348482e50195ce2a8f1848c350bec66ef2ffc89c04277fe7b268",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/test_qualification.py",
+      "sha256": "3a9d208cc2cb259bfda9af521636c9df16c0a54f839940c02356b86497d616fe",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/interpretation.md",
+      "sha256": "7c85f31e283a26315c6e7270720e17ed370fe6d2026de295b0522384975f8803",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/runtime-identities.json",
+      "sha256": "07bdf07ab80630d99496d068464deac9e6233f871afb0cda979f965e33588738",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/schedule.json",
+      "sha256": "43de3853677c65375f29021e38b7636d85a9dbe99ac1dfe7a6bf4a331e0d0d61",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/README.md",
+      "sha256": "351d511951b11813555952a15383f814fdb4b228b520cae5649b8de88d66ba75",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/evaluation/prompt.md",
+      "sha256": "18e08407f70b6e21138c4056a037d1e2bf311a86fbbefdad3aec93cf65d9622b",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/runtime_setup.py",
+      "sha256": "91c8a2a5fccaa22affc662fe8824a2502be8e373e363520f21033a25838afdb2",
+      "version": null
+    }
+  ]
+}

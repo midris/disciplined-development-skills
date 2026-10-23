@@ -7,6 +7,8 @@ The tested rewrite remains unchanged at [its frozen snapshot](cases/skill-candid
 Any accepted edits must go in a separate candidate, preserving that snapshot and all existing manifests and scores.
 SSR resumed after CW closure on 2026-10-22 for audit and recommendation only, with an explicit instruction not to start model runs.
 The [resumption audit](../../reviews/2026-10-22-ssr-resumption-audit.md) reviews coverage, evidence, evaluation and the complete parked draft under the process refined during CW; its findings leave the tested and draft bytes unchanged.
+The owner's subsequent [compact-rewrite exploration](drafts/compact-rewrite/README.md) produced three new drafts and a synthesized finalist, preserving both tested versions and the combined draft below.
+Its whole-version comparison question is separate from this earlier focused diagnostic proposal; the owner subsequently approved [compact-semantic-01](protocol.md#comparison-compact-semantic-01), while this earlier diagnostic remains unapproved.
 
 ## Evidence and limits
 
@@ -37,9 +39,9 @@ The owner explicitly requested drafting with writing-skills and concise-writing 
 Concise-writing normally excludes skill authoring; its compression pass is applied here at the owner's explicit request, retaining the behavioral requirements.
 The description is byte-identical to the tested rewrite.
 No existing run configuration points to the draft.
-The first proposed experiment still isolates contextual reconciliation: prepare a context-only candidate from the frozen rewrite before freezing inputs; do not dispatch the combined draft in that comparison.
+The earlier focused proposal isolates contextual reconciliation: prepare a context-only candidate from the frozen rewrite before freezing inputs; neither this combined draft nor the new compact finalist is that arm.
 
-The objective is complete semantic reconciliation and accurate accounting, not additional brevity.
+This context/accounting draft targets complete semantic reconciliation and accurate accounting; the later compact exploration separately addresses the owner's readability/compression objective.
 Writing-skills 6.4.1 informs the form: a concrete reading/comparison step, a structural `already current` outcome and template row, and an observable condition for `n/a`.
 Concision removes duplicate post-edit timing from Search and gives it one procedural home in Reconcile.
 The added wording describes general claims, quantities, conditions and outcomes; it does not teach fixture-specific retry numbers or filenames.
@@ -115,7 +117,7 @@ CW is closed and SSR's audit/recommendation is complete; the deferred SSR baseli
 
 ## Parked draft review follow-ups
 
-Keep the committed combined draft unchanged; the owner resumed SSR for review and recommendation, not candidate edits or testing.
+Keep the committed combined draft unchanged; the owner authorized new compact candidates in a separate exploration, not changes to this draft or model testing.
 Its 1,026 words versus the frozen rewrite's 923 measure draft size, not effectiveness or a compression target.
 Before accepting a context-only candidate, resolve these two bounded wording concerns and review the complete skill again:
 

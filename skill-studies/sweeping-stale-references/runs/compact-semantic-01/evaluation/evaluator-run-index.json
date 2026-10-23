@@ -1,0 +1,6 @@
+{
+  "evaluator_ledger_version": "1",
+  "study_id": "sweeping-stale-references",
+  "batch_id": "compact-semantic-01",
+  "runs": []
+}

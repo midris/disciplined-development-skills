@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `sweeping-stale-references`
 Status: all authorized comparison batches are complete; the owner selected the comprehensive rewrite as the development base and accepts its changed local reporting. The original and tested rewrite snapshots remain preserved; no new skill version is adopted.
-Current action: the post-CW [resumption audit](../../reviews/2026-10-22-ssr-resumption-audit.md) and whole-draft review are complete. On 2026-10-23 the owner accepted bounded coverage and added [cross-model output review](#cross-model-output-review) to SSR's testing process. The context-only three-arm proposal remains 15 subjects plus one output review, with its allocation, SSR-specific loaded-baseline interpretation and candidate wording unapproved. Preserve the combined draft and all tested snapshots. The instruction not to start model runs remains in force; no SSR collection or reviewer dispatch is scheduled. Current combined spending remains in [CW accounting](../concise-writing/protocol.md#storage-and-accounting), with subject/evaluator capacity fully spent.
+Current action: the owner approved [compact-semantic-01](#comparison-compact-semantic-01) on 2026-10-23: fifteen explicit-load semantic-repair subjects (five per version) plus one cross-model output review. Preparation/freeze and installed-runtime qualification precede collection; no later regression batch, retry, candidate edit or adoption follows automatically. Preserve both tested snapshots, the compact finalist and the parked combined draft. Current combined accounting remains in [CW accounting](../concise-writing/protocol.md#storage-and-accounting).
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](runs/core-baseline-01/core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -83,7 +83,7 @@ It changes the review workflow, not SSR-assessment-3, frozen case criteria or hi
 6. **Close at the decision boundary.** Retain every evaluator attempt and charge, raw review output, verified inventory, input identities, delivery/access audit and reconciliation in the selected batch's evaluation record. Missing capture or an incomplete first pass limits the review; it does not fail a subject or authorize an automatic replacement. Present consequential unresolved disagreement and the bounded recommendation to the owner before progression/adoption.
 
 The [CW short-screen review](../concise-writing/runs/final-comparison-01/examples-screen-01/evaluation/README.md) illustrates the mechanics; its CW-specific functional factors are not SSR's criteria.
-The next comparison proposal includes one review of all fifteen proposed outputs; grouping and feasibility must be fixed before its allocation is approved.
+The earlier context-only diagnostic proposes one review of its fifteen outputs; the later compact-version comparison needs separately selected grouping and allocation before approval.
 Process acceptance alone authorizes no reviewer invocation, subject call, ceiling increase, candidate edit or deployment.
 
 ### Session evidence amendment: capture-2
@@ -239,6 +239,57 @@ SSR collection used config schema 0.2 and result schema 0.4; retained bundles ke
 Control contribution claims require evidence that omitted guidance was not loaded. Record limits on observed isolation rather than claiming exhaustive host-wide exclusion.
 
 Pre-baseline development is closed at two pairs. Do not reopen it for a new facet; a named readiness defect requires a separately authorized diagnostic exception.
+
+### Compact rewrite preparation
+
+Owner direction, 2026-10-23: commit and push the completed process updates first, then use concise-writing and Superpowers writing-skills to author three compact/readable rewrites, compare them against one another and both base versions, and select or synthesize a finalist for later testing.
+The process work was committed and pushed at `f7f6fa3`; the existing CW fixture edit remained outside that commit.
+The [design](../../plans/specs/2026-10-23-ssr-compact-rewrite.md) records this draft-before-testing exception and the author's interpretation of the eventual three-way comparison.
+The [exploration](drafts/compact-rewrite/README.md) retains all three drafts and the finalist; the [static review](drafts/compact-rewrite/review.md) owns comparative findings, size measurements and selection rationale.
+All four files keep the original ten-row rationalization table and the base description verbatim; the live skill and tested snapshots remain unchanged.
+The finalist adds explicit contextual comparison, already-current accounting and boundary clarifications, so it is a whole-version candidate rather than a pure cleanup or the earlier context-only intervention.
+These are proposed teaching changes under a draft contract, not amendments to frozen criteria or evidence of effectiveness.
+No subject/evaluator/authoring-model call, new ceiling, test configuration, deployment or adoption is authorized; writing-skills model validation remains unperformed.
+The earlier 15-subject/one-review proposal remains unapproved and does not automatically cover this candidate or the desired version comparison.
+
+### Comparison: compact-semantic-01
+
+Status: owner-approved; preparation and installed-runtime qualification complete, committed input freeze/readiness pending.
+Owner authority, 2026-10-23: “ok, please proceed” after confirming one semantic-repair scenario, baseline/comprehensive/finalist, five fresh attempts each (15 subjects), then one cross-model output review.
+Question: does the compact finalist preserve or improve complete committed semantic reconciliation relative to the two preserved skill versions on the known failing situation?
+Scope: semantic-delivery only; fifteen sequential explicit-load attempts in the rotated order below. `original` is the preserved baseline, `candidate` the preserved comprehensive rewrite, and `finalist` the unchanged 814-word compact finalist.
+Inclusion: descriptive-only; Include all valid-setup executions regardless of outcome. Keep invalid setup, unknown evidence and unattempted slots explicit. No automatic retry or replacement. Five repetitions are development observations, not reliability estimates.
+No behavioral early stop, automatic retry/replacement, mid-batch edit, extra case or adoption. Stop for unknown charge, unresolved setup/cleanup fault, model/runtime/input drift, contamination, missing required capture or preservation failure; inspect a changed-runtime first observation before continuing.
+Budget: fifteen subject plus one evaluator invocation. Combined ceilings rise from 642/48 to 657/49; authoring/retry ceilings remain 4/4, with no pool transfer or allocated retry. Active-work forecast: 90 minutes (25 preparation/freeze/qualification, 30 waits/retention, 20 assessment/review, 15 reconciliation/reporting); time remains a guideline.
+Runtime: Claude Code2.1.308, `claude-opus-5-5`, low effort, workspace-write, 900-second limit; [identities](runs/compact-semantic-01/preparation/runtime-identities.json) pin executable, Python3.14.9 and Git2.56.0 hashes. Reuse the unchanged CW toolchain wrapper inside existing scratch grants; no permission expansion. This is a fresh SSR stratum, not pooled with historical2.1.280 evidence. Models expose no immutable backend revision.
+Preflight: five fresh zero-model installed checks cover actual CLI startup, Bash Python/Git/heredocs/skill delivery, both permission modes' input isolation and read-only mutations. Same qualified runtime identities as final CW screen; production model and assigned-body delivery are verified per attempt.
+Inputs: [manifest](runs/compact-semantic-01/preparation/manifest.json), [criteria](runs/compact-semantic-01/preparation/criteria.md), [interpretation](runs/compact-semantic-01/preparation/interpretation.md), [preparation](runs/compact-semantic-01/preparation/README.md). Subject task/project/bootstrap/prompt remain identical across conditions, with only supplied skill bytes differing. No no-guidance or native-discovery claim.
+Assessment: unchanged SSR-assessment-3 and semantic F1–F3/P1–P3; definition3 extends applicability to finalist without changing outcomes, semantic-block units or consequences. Additional own-body context/accounting/search/timing observations are separate and non-blocking; do not import finalist requirements into older bodies or rescore history.
+Commands: invoke the existing runner once for each fixed CONFIG through the recorded unchanged runtime wrapper, using private per-user TMPDIR. Retain each stopped bundle via `docs retain`, inspect/score it, then proceed to the next slot. Pin the full runner/source authority revision before dispatch.
+Storage: `/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/`, under the accepted single-host recovery arrangement. Keep one verified inventory per complete bundle; inspect Git/runtime only in disposable copies.
+Attempt index: [compact-semantic-01-run-index.json](runs/compact-semantic-01/compact-semantic-01-run-index.json).
+Output review: one fresh Opus-medium read-only session, different family from active Codex assessor and same family as subjects, covers all fifteen complete projects under fixed SSR F1–F3 and neutral committed-state evidence. [Fixed prompt](runs/compact-semantic-01/evaluation/prompt.md); [evaluator ledger](runs/compact-semantic-01/evaluation/evaluator-run-index.json). Use native Read/Glob/Grep-only tools and the existing verified process sandbox. Source/task/criteria/full-project inputs precede a retained independent first pass; prior scores stay in a separate file and may be read only afterwards, with actual read timing audited. Preserve first-pass judgments and post-prior changes separately. No review retry is allocated.
+Freeze reviewer input packet identities after all subjects are retained/assessed, before its sole dispatch; fixed reviewer instructions are frozen before subjects. Inspect complete delivery, all45 factors, actual tools/model, protected bytes and semantic completeness. Missing/incomplete review is a disclosed limit and stops the decision, not a subject failure or automatic replacement.
+Checkpoint: inspect every failure and compare passing-output quality. All-success results establish no reproduced gap and no demonstrated functional improvement; shorter instructions remain a potential simplification benefit only after relevant regression. End with this case and review; broader testing needs a separate decision.
+
+| Order | Case | Condition | Repetition | CONFIG |
+|---:|---|---|---:|---|
+| 1 | semantic-delivery | original | 1 | `skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/original.json` |
+| 2 | semantic-delivery | candidate | 1 | `skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/candidate.json` |
+| 3 | semantic-delivery | finalist | 1 | `skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/finalist.json` |
+| 4 | semantic-delivery | candidate | 2 | `skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/candidate.json` |
+| 5 | semantic-delivery | finalist | 2 | `skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/finalist.json` |
+| 6 | semantic-delivery | original | 2 | `skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/original.json` |
+| 7 | semantic-delivery | finalist | 3 | `skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/finalist.json` |
+| 8 | semantic-delivery | original | 3 | `skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/original.json` |
+| 9 | semantic-delivery | candidate | 3 | `skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/candidate.json` |
+| 10 | semantic-delivery | original | 4 | `skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/original.json` |
+| 11 | semantic-delivery | finalist | 4 | `skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/finalist.json` |
+| 12 | semantic-delivery | candidate | 4 | `skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/candidate.json` |
+| 13 | semantic-delivery | candidate | 5 | `skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/candidate.json` |
+| 14 | semantic-delivery | original | 5 | `skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/original.json` |
+| 15 | semantic-delivery | finalist | 5 | `skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/finalist.json` |
+
 ### Comparison: claude-opus-invocation-01
 
 Status: complete; all ten attempts retained and assessed with valid setup, no retries or replacements. See [assessment](runs/claude-opus-invocation-01/claude-opus-invocation-01-assessment.md). Owner request: repeat invocation tests using Opus at low effort to investigate whether the observed misses also occur on that model.
@@ -634,6 +685,7 @@ Historical SSR output assessments lack CW's later decision-boundary cross-model 
 The [rewrite diagnosis](rewrite-diagnosis.md#proposed-allocation-owner-decision-required) retains the proposed experiment and pending interpretation; neither CW's method approval nor this resumption authorizes SSR candidate acceptance, collection or adoption.
 Process decision, 2026-10-23: the owner directed adding cross-model review to SSR testing; the [operational review procedure](#cross-model-output-review) is accepted for future selected decision boundaries.
 Its concrete packets, call allocation and dispatch remain unapproved; historical scores and the comprehensive development base remain unchanged.
+Subsequent authoring decision, 2026-10-23: the owner requested three compact rewrites and a finalist before testing; [preparation](#compact-rewrite-preparation) records that separate authority and its completed static review.
 
 | Evidence | Interpretation |
 |---|---|

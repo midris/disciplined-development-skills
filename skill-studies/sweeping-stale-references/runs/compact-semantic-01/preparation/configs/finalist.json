@@ -1,0 +1,57 @@
+{
+  "schema_version": "0.2",
+  "id": "ssr-compact-semantic-finalist",
+  "prompt": "../prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../cases/semantic-delivery/claude-comparison.gitignore",
+      "target": ".gitignore"
+    },
+    {
+      "source": "../../../../cases/semantic-delivery/fixture/README.md",
+      "target": "README.md"
+    },
+    {
+      "source": "../../../../cases/semantic-delivery/fixture/docs/download-helper.md",
+      "target": "docs/download-helper.md"
+    },
+    {
+      "source": "../../../../cases/semantic-delivery/fixture/docs/operations.md",
+      "target": "docs/operations.md"
+    },
+    {
+      "source": "../../../../cases/semantic-delivery/fixture/docs/troubleshooting.md",
+      "target": "docs/troubleshooting.md"
+    },
+    {
+      "source": "../../../../cases/semantic-delivery/fixture/plans/completed/delivery-policy.md",
+      "target": "plans/completed/delivery-policy.md"
+    },
+    {
+      "source": "../../../../cases/semantic-delivery/fixture/src/delivery.py",
+      "target": "src/delivery.py"
+    },
+    {
+      "source": "../../../../cases/semantic-delivery/fixture/src/download.py",
+      "target": "src/download.py"
+    },
+    {
+      "source": "../../../../cases/semantic-delivery/fixture/tests/test_retry_behavior.py",
+      "target": "tests/test_retry_behavior.py"
+    },
+    {
+      "source": "../../../../cases/semantic-delivery/task.md",
+      "target": "TASK.md"
+    },
+    {
+      "source": "../../../../drafts/compact-rewrite/finalist/SKILL.md",
+      "target": ".claude/skills/sweeping-stale-references/SKILL.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}

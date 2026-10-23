@@ -4,7 +4,7 @@
 - [Session handoff](HANDOFF.md): navigation for resuming study work.
 - [Rewrite diagnosis](rewrite-diagnosis.md): proposed authoring investigation and its unresolved owner decisions.
 - [Case definitions and fixtures](cases/README.md): shared test inputs and preserved skill snapshots.
-- [Candidate drafts](drafts/): authoring material, separate from measured runs.
+- [Candidate drafts](drafts/): authoring material, including the [three compact rewrites and finalist](drafts/compact-rewrite/README.md), separate from measured runs.
 - [Collected evidence](runs/README.md): pilots, baselines, comparisons, runtime qualifications and historical examples.
 - [Source inventory](sources.json): project provenance.
 
