@@ -254,7 +254,7 @@ The earlier 15-subject/one-review proposal remains unapproved and does not autom
 
 ### Comparison: compact-semantic-01
 
-Status: owner-approved; preparation and installed-runtime qualification complete, committed input freeze/readiness pending.
+Status: owner-approved; source inputs frozen at `3800c049ab0496964c264e911bda8235f5b909ad`, installed-runtime qualification and collection readiness passed; subjects not yet dispatched.
 Owner authority, 2026-10-23: “ok, please proceed” after confirming one semantic-repair scenario, baseline/comprehensive/finalist, five fresh attempts each (15 subjects), then one cross-model output review.
 Question: does the compact finalist preserve or improve complete committed semantic reconciliation relative to the two preserved skill versions on the known failing situation?
 Scope: semantic-delivery only; fifteen sequential explicit-load attempts in the rotated order below. `original` is the preserved baseline, `candidate` the preserved comprehensive rewrite, and `finalist` the unchanged 814-word compact finalist.
