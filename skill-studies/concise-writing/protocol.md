@@ -2,13 +2,14 @@
 
 Format version: `1`
 Study ID: `concise-writing`
-Status: all six Codex subjects are retained and directly assessed; collection stopped when the first Claude subject returned401 expired OAuth before inference.
-Current action: restore Claude sign-in and decide the [one-replacement request](runs/final-comparison-01/examples-screen-01/preparation/auth-stop.md). Five planned subject calls and both reviews remain unused; no replacement is authorized yet.
+Status: the owner reports restored Claude sign-in and authorizes one unchanged replacement; six Codex outputs and the original authentication failure remain retained.
+Current action: pin the resumption controller and sign-in/runtime recheck, run the single approved retry, then finish the five planned subjects and two reviews.
+The owner replied “I logged in, please try again” to the concrete one-replacement request; one retry slot is authorized, retaining the failed subject charge and leaving all remaining allocations unchanged. No second replacement is authorized.
 The owner explicitly accepted “Use the qualified installed versions”; the [qualification record](runs/final-comparison-01/examples-screen-01/preparation/runtime-substitution.json) retains thirteen zero-model checks and exact identities. Codex/Git, models/efforts and permission grants are unchanged; this fresh CLI/toolchain stratum is not pooled with earlier runs.
 The owner replied “yeah, let's run the short test. if there is no noticeable change we can go with the original body”.
 This accepts the proposed 642-subject/48-evaluator ceilings, three-repetition exploratory screen and 40–60-minute forecast; authoring/retry ceilings remain four each.
 If the short comparison shows no noticeable improvement, select the unchanged original body with the selected description; do not infer an effect from a single unusually short output or tied passes alone.
-The direction authorizes this fixed comparison and the conditional body choice, not automatic top-up, further wording edits, retry, fallback, next scenario or live deployment.
+The original direction authorized this fixed comparison and conditional body choice; the one separately authorized retry is recorded above. No automatic top-up, further wording edits, additional retry, fallback, next scenario or live deployment is authorized.
 The owner supplied both worked examples and their closing explanations verbatim after the five-repetition handoff comparison.
 The example-authoring direction authorized that substitution in a separate candidate; this newly accepted test allocation is recorded above. Tested bodies, frozen inputs and completed results remain unchanged.
 The owner replied “please proceed” to the concrete +8-subject/+2-review handoff proposal; combined ceilings rise from 622 subject / 44 evaluator to 630 / 46, with authoring/retry ceilings unchanged.
@@ -1236,8 +1237,8 @@ The current remaining-work estimate below covers only the fixed approved scope, 
 
 | Work | Estimate | Basis |
 | --- | ---: | --- |
-| Approved short examples comparison remaining | 35 | Five planned subject sessions and two reviews/audits/publication;25estimated minutes used. One proposed unchanged replacement adds2–4minutes only if accepted; owner sign-in wait excluded. |
-| **Total** | **35** | Replacement forecast is separate and unapproved; no other scenarios, top-ups, wording edits or live adoption. |
+| Approved short examples comparison remaining | 39 | Five planned subject sessions and two reviews/audits/publication;25estimated minutes used. The accepted unchanged replacement adds2–4estimated minutes; owner sign-in wait excluded. |
+| **Total** | **39** | Upper remaining estimate includes the approved replacement; no other scenarios, top-ups, wording edits or live adoption. |
 
 The E stage used 115 estimated active minutes against the 180-minute upper forecast, 65 below it: 35 preparation, 40 subject collection/assessment and 40 evaluator preparation/reconciliation.
 The two evaluator durations total 420.696 seconds (7.01 minutes), included once in those estimates.
