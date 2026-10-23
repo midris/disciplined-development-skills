@@ -12,3 +12,5 @@ The owner-approved [first comment screen](screen-01/README.md) uses only twelve 
 The [long-handoff comparison](handoff-01/README.md) keeps its twelve subjects and two six-output reviews separate from comment evidence.
 
 [Handoff repetitions four and five](handoff-02/README.md) retain eight new subjects and the updated ten-output provider reviews separately from the first stage.
+
+The [short examples comparison](examples-screen-01/README.md) retains fresh original-body/original-examples subjects and reviews as a separate runtime stratum.

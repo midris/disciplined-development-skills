@@ -1,0 +1,23 @@
+--- skill-studies/concise-writing/drafts/baseline-iteration/final-comparison/skills/original-body/SKILL.md
++++ skill-studies/concise-writing/drafts/baseline-iteration/original-examples/SKILL.md
+@@ -49 +49 @@
+-## Before / after
++## Examples
+@@ -51 +51 @@
+-Meta-framing and say-it-twice removed; every fact kept (~45% shorter):
++### Compressing an explanation
+@@ -55 +55,13 @@
+-> **After:** The cache uses LRU eviction, capped at `MAX_CACHE_SIZE_MB`. On write, if it is over the cap, it evicts least-recently-used entries until back under.
++> **After:** The cache uses LRU eviction, capped at `MAX_CACHE_SIZE_MB`. If it would exceed the cap, the service evicts least-recently-used entries until back under.
++
++Meta-framing and say-it-twice removed; the eviction condition and size limit remain.
++
++### Preserving an action and its constraints
++
++> **Before:** This section explains staging access.
++> Engineers must submit the Access form to Platform Operations two days before deployment.
++> The deadline is two days before.
++>
++> **After:** For staging access, engineers must submit the Access form to Platform Operations two days before deployment.
++
++Narration and repetition removed while retaining the actor, action, recipient and deadline.

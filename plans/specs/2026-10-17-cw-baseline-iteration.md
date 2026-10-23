@@ -100,3 +100,22 @@ Its relative comparison uses both providers and the full selected suite, includi
 No fresh no-CW arm is proposed because incremental unguided benefit is outside this final choice; prior controls remain historical evidence.
 The owner accepts additional loading as a caution where output is intact and appropriate Claude loading improves; actual output defects and invocation misses remain visible.
 The protocol owns allocation acceptance, qualification/freeze and execution; the owner makes the final adoption decision after the results.
+
+## Owner-selected original body with replacement examples
+
+After comparing five handoff repetitions per body/provider, the owner selected the original body with a supplied replacement examples section.
+Prepare [original-examples](../../skill-studies/concise-writing/drafts/baseline-iteration/original-examples/SKILL.md) from the tested original-body combination, preserving its selected description and every byte outside the examples section.
+Use the owner's exact two examples and closing explanations: the cache example preserves “would exceed” without adding “on write”; the access-form example retains actor, action, recipient and deadline.
+This is an owner-directed example substitution, not a new claim that either whole body failed the handoff or that the extra example improves effectiveness.
+Keep the tested original/revised combinations and their evidence immutable; their results do not validate this new combination.
+The owner has authorized drafting, not new test calls or live adoption; the protocol owns current authority.
+
+## Accepted short examples screen
+
+The owner accepted the [twelve-subject/two-review proposal](../../skill-studies/concise-writing/drafts/baseline-iteration/original-examples/comparison-proposal.md), explicitly directing use of the original body if there is no noticeable change.
+Compare fresh original-body and original-examples runs, three per condition/provider, on the unchanged handoff task and functional criteria.
+This is an accepted exploratory exception to five-plus wording samples, not completed reliability/equivalence validation.
+A repeated, concrete improvement in readability, cleanup or preserved constraints can motivate keeping the example variant; isolated length changes and threshold ties do not establish that improvement.
+If the result is mixed, minor or indistinguishable, choose the unchanged original body under the owner's instruction rather than automatically extending the sample.
+A real regression remains a regression regardless of word count; preserve independent reviewer disagreement rather than deciding by vote.
+The protocol owns current accounting and dispatch; the accepted conditional body choice grants no live deployment or next-case authority.

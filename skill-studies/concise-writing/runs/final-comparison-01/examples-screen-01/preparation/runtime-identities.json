@@ -1,0 +1,57 @@
+{
+  "qualified": {
+    "codex": {
+      "path": "/opt/homebrew/Caskroom/codex/0.163.0/bin/codex",
+      "sha256": "8813367285524ac798dd96d1b071aea30d58708c7226fd236cd275cf1cfdee31",
+      "version": "codex-cli 0.163.0"
+    },
+    "claude": {
+      "path": "/opt/homebrew/Caskroom/claude-code@latest/2.1.308/claude",
+      "sha256": "ca923c86ac84b30574a82331a05b6e066c27477a926ceaffe46a845a33e4dd37",
+      "version": "2.1.308 (Claude Code)"
+    },
+    "python": {
+      "path": "/opt/homebrew/Cellar/python@3.14/3.14.9/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+      "sha256": "eef18fb5631f0054c2706a24f7f75fd716c9dc3c9a3b0f261f2f87b6385ae2af",
+      "version": "Python 3.14.9"
+    },
+    "git": {
+      "path": "/opt/homebrew/Cellar/git/2.56.0_1/bin/git",
+      "sha256": "40163333061f7223ecb604ed0f12988cfc8096d57ca8b1db006d410d4aeb700e",
+      "version": "git version 2.56.0"
+    }
+  },
+  "subject_models": {
+    "codex": "gpt-5.6-sol",
+    "claude": "claude-sonnet-5"
+  },
+  "subject_effort": "low",
+  "evaluator_model": "claude-opus-5-5",
+  "evaluator_effort": "medium",
+  "evaluator_tools": [
+    "Read",
+    "Glob",
+    "Grep"
+  ],
+  "model_calls": 0,
+  "preflight": {
+    "checked_at": "2026-10-23T00:56:14.116364+00:00",
+    "passed": 13,
+    "claude_logged_in": true,
+    "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/runtime-qualification",
+    "inventory": {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/runtime-qualification.inventory.json",
+      "sha256": "60e92a2f662fd6467a39cf05ff4731f1925bce6ba17aa262eab90f32df398d7f",
+      "version": "1"
+    }
+  },
+  "reused_qualification": {
+    "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/runtime-identities.json",
+    "sha256": "234fa30ad06212431b4691ca18b0d977395e5d4637be1543966d0daf70a0e506",
+    "reason": "Exact binary/toolchain hashes unchanged; explicit-load screen reuses established runtime and Opus transport. No native-discovery claim; every real subject must deliver the complete assigned combined skill before its first edit."
+  },
+  "runtime_acceptance": {
+    "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/runtime-substitution.json",
+    "sha256": "52605ede7e989c73be9b1e43122aedcae8861c50e5b2206a42604739701c5375"
+  }
+}

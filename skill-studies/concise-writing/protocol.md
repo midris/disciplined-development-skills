@@ -2,16 +2,23 @@
 
 Format version: `1`
 Study ID: `concise-writing`
-Status: the five-repetition handoff comparison is complete: eight additions, twenty distinct outputs and two fresh ten-output Opus reviews are assessed and audited.
-Current action: present the combined handoff evidence for the owner’s next-case decision; both bodies remain eligible and no further collection, edit or adoption is authorized.
+Status: the short examples comparison and qualified Claude 2.1.308/Python 3.14.9 substitutions are accepted; committed freeze/readiness precede dispatch.
+Current action: complete committed freeze/readiness, then collect and directly assess the twelve fresh subjects before the two Opus reviews. No subject/evaluator from this screen has started.
+The owner explicitly accepted “Use the qualified installed versions”; the [qualification record](runs/final-comparison-01/examples-screen-01/preparation/runtime-substitution.json) retains thirteen zero-model checks and exact identities. Codex/Git, models/efforts and permission grants are unchanged; this fresh CLI/toolchain stratum is not pooled with earlier runs.
+The owner replied “yeah, let's run the short test. if there is no noticeable change we can go with the original body”.
+This accepts the proposed 642-subject/48-evaluator ceilings, three-repetition exploratory screen and 40–60-minute forecast; authoring/retry ceilings remain four each.
+If the short comparison shows no noticeable improvement, select the unchanged original body with the selected description; do not infer an effect from a single unusually short output or tied passes alone.
+The direction authorizes this fixed comparison and the conditional body choice, not automatic top-up, further wording edits, retry, fallback, next scenario or live deployment.
+The owner supplied both worked examples and their closing explanations verbatim after the five-repetition handoff comparison.
+The example-authoring direction authorized that substitution in a separate candidate; this newly accepted test allocation is recorded above. Tested bodies, frozen inputs and completed results remain unchanged.
 The owner replied “please proceed” to the concrete +8-subject/+2-review handoff proposal; combined ceilings rise from 622 subject / 44 evaluator to 630 / 46, with authoring/retry ceilings unchanged.
-Only this continuation is newly authorized; no automatic retry, split, fallback, body/description edit, next case or adoption is approved.
+That completed continuation authorized eight additions and two reviews only; the separate short examples comparison is authorized above.
 The earlier twelve handoff subjects and two reviews remain immutable; reused outputs add no subject charge and previous Opus reviews are excluded from the new packets.
 The first handoff stage followed the owner’s “ok, please proceed” to the concrete twelve-run/two-review next-scenario recommendation.
 That first-stage approval raised combined ceilings from 610/42 to 622/44; the continuation ceiling is recorded above.
 The first-stage approval covered only its twelve subjects and two reviews; subsequent authority is recorded above.
 The collector must pass collection readiness before any subject claim or invocation, then retain and assess each attempt before advancing.
-No automatic retry, split, fallback or body/description change is authorized.
+The supplied example substitution is frozen for the accepted comparison; no inter-run body/description change, automatic retry, split or fallback is authorized.
 The completed comment comparison found no consequential body advantage and provisionally favors the shorter original for that case; it does not establish a whole-skill winner.
 The first comment screen passed twelve zero-model runtime probes and checked exact binaries, sign-in metadata and paired inputs, with its subject inputs frozen against `dcbb176616bd9ee540a11243c24b8bf740fdd122`.
 First-screen Claude slot 7 received the complete teaching body before editing; the [inspection amendment](runs/final-comparison-01/screen-01/preparation/explicit-inspection-amendment.md) corrects a YAML-header expectation through retained-evidence replay, without repeating the subject.
@@ -1051,13 +1058,14 @@ The focused output reviews use the [ten-packet package](runs/revised-body-discov
 The comment continuation uses [frozen review inputs](runs/final-comparison-01/screen-02/evaluation/inputs.json) and its [two-call evaluator ledger](runs/final-comparison-01/screen-02/evaluation/evaluator-run-index.json); both charges are included in combined evaluator accounting.
 The first handoff stage uses its [two-call evaluator ledger](runs/final-comparison-01/handoff-01/evaluation/evaluator-run-index.json).
 The handoff continuation uses its [two-call evaluator ledger](runs/final-comparison-01/handoff-02/evaluation/evaluator-run-index.json).
-Dispatched calls are **630 subject, 46 evaluator, 0 authoring, 2 retry**; remaining outer capacity is **0 / 0 / 4 / 2** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
+The short examples screen uses its [two-call evaluator ledger](runs/final-comparison-01/examples-screen-01/evaluation/evaluator-run-index.json).
+Dispatched calls are **630 subject, 46 evaluator, 0 authoring, 2 retry**; remaining outer capacity is **12 / 2 / 4 / 2** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **3,425 active minutes booked; 2,225 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **3,435 active minutes booked; 2,235 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
-The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 630/630, with 0 approved handoff continuation calls available; the earlier E diagnostic is spent.
+The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 630/642, with 12 approved examples-screen calls available; the earlier E diagnostic is spent.
 The supplemental work used 40 estimated active minutes against its 40-minute forecast; model waits are included once.
 
 | Work | Estimated active minutes |
@@ -1185,7 +1193,8 @@ The supplemental work used 40 estimated active minutes against its 40-minute for
 | Final handoff reviews and publication | 20 |
 | Handoff continuation preparation and eight subjects | 35 |
 | Handoff continuation reviews, audits, reconciliation and publication | 20 |
-| **Total** | **3,425** |
+| Original-body example substitution, static review and short comparison proposal | 10 |
+| **Total** | **3,435** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.
@@ -1226,8 +1235,8 @@ The current remaining-work estimate below covers only the fixed approved scope, 
 
 | Work | Estimate | Basis |
 | --- | ---: | --- |
-| Approved handoff continuation remaining | 0 | Complete at 55 estimated minutes, including all new model waits once, within the 45–65-minute forecast. |
-| **Total** | **0** | Later scenarios, replacements, further wording edits and adoption remain unapproved. |
+| Approved short examples comparison remaining | 60 | Upper 40–60-minute forecast: input/runtime freeze, twelve subjects/direct assessments and two reviews/audits/publication. |
+| **Total** | **60** | Other scenarios, top-ups, replacements, wording edits and live adoption remain unapproved. |
 
 The E stage used 115 estimated active minutes against the 180-minute upper forecast, 65 below it: 35 preparation, 40 subject collection/assessment and 40 evaluator preparation/reconciliation.
 The two evaluator durations total 420.696 seconds (7.01 minutes), included once in those estimates.
@@ -1408,6 +1417,48 @@ Assessment: [completed additions](runs/final-comparison-01/handoff-02/claude-fin
 | 2 | long-handoff | revised-body | 4 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-long-handoff-revised-body.json` |
 | 3 | long-handoff | revised-body | 5 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-long-handoff-revised-body.json` |
 | 4 | long-handoff | original-body | 5 | `skill-studies/concise-writing/runs/final-comparison-01/preparation/configs/claude-long-handoff-original-body.json` |
+
+### Short examples comparison: codex-final-examples-screen-01
+
+Batch: codex-final-examples-screen-01
+Manifest: [long-handoff](runs/final-comparison-01/examples-screen-01/preparation/manifests/codex-long-handoff-manifest.json).
+Scope: six fresh subjects, three per original-body/original-examples; no historical observations pooled.
+Authority: owner-approved twelve-subject/two-review screen; combined ceilings 642 subject / 48 evaluator.
+Inputs and criteria: [screen](runs/final-comparison-01/examples-screen-01/README.md), unchanged handoff source/task/explicit-load wrapper, CW-expanded-1, definition v5 applicability and unchanged whole-artifact interpretation.
+Acceptance: descriptive correctness, effectiveness/readability, cleanup and compression; use unchanged original if no noticeable improvement is established. Three repetitions are exploratory, not reliability/equivalence validation.
+Include all valid-setup executions regardless of outcome. No automatic retry; disclose exclusions, uncertainty and unattempted slots.
+Stop on infrastructure, contamination, capture/retention failure, identity drift or uncertain charge; valid behavioral misses alone do not stop later slots.
+Record: [index](runs/final-comparison-01/examples-screen-01/codex-final-examples-screen-01-run-index.json).
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | long-handoff | original-body | 1 | `skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/configs/codex-long-handoff-original-body.json` |
+| 2 | long-handoff | original-examples | 1 | `skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/configs/codex-long-handoff-original-examples.json` |
+| 3 | long-handoff | original-examples | 2 | `skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/configs/codex-long-handoff-original-examples.json` |
+| 4 | long-handoff | original-body | 2 | `skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/configs/codex-long-handoff-original-body.json` |
+| 5 | long-handoff | original-body | 3 | `skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/configs/codex-long-handoff-original-body.json` |
+| 6 | long-handoff | original-examples | 3 | `skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/configs/codex-long-handoff-original-examples.json` |
+
+### Short examples comparison: claude-final-examples-screen-01
+
+Batch: claude-final-examples-screen-01
+Manifest: [long-handoff](runs/final-comparison-01/examples-screen-01/preparation/manifests/claude-long-handoff-manifest.json).
+Scope: six fresh subjects, three per original-body/original-examples; no historical observations pooled.
+Authority: owner-approved twelve-subject/two-review screen; combined ceilings 642 subject / 48 evaluator.
+Inputs and criteria: [screen](runs/final-comparison-01/examples-screen-01/README.md), unchanged handoff source/task/explicit-load wrapper, CW-expanded-1, definition v5 applicability and unchanged whole-artifact interpretation.
+Acceptance: descriptive correctness, effectiveness/readability, cleanup and compression; use unchanged original if no noticeable improvement is established. Three repetitions are exploratory, not reliability/equivalence validation.
+Include all valid-setup executions regardless of outcome. No automatic retry; disclose exclusions, uncertainty and unattempted slots.
+Stop on infrastructure, contamination, capture/retention failure, identity drift or uncertain charge; valid behavioral misses alone do not stop later slots.
+Record: [index](runs/final-comparison-01/examples-screen-01/claude-final-examples-screen-01-run-index.json).
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | long-handoff | original-examples | 1 | `skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/configs/claude-long-handoff-original-examples.json` |
+| 2 | long-handoff | original-body | 1 | `skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/configs/claude-long-handoff-original-body.json` |
+| 3 | long-handoff | original-body | 2 | `skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/configs/claude-long-handoff-original-body.json` |
+| 4 | long-handoff | original-examples | 2 | `skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/configs/claude-long-handoff-original-examples.json` |
+| 5 | long-handoff | original-examples | 3 | `skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/configs/claude-long-handoff-original-examples.json` |
+| 6 | long-handoff | original-body | 3 | `skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/configs/claude-long-handoff-original-body.json` |
 
 ## Results and decision
 

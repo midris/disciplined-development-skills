@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.2",
+  "id": "cw-examples-claude-long-handoff-original-examples",
+  "prompt": "../../../preparation/prompts/claude-body.md",
+  "fixtures": [
+    {
+      "source": "../../../preparation/fixtures/long-handoff/report.md",
+      "target": "report.md"
+    },
+    {
+      "source": "../../../preparation/fixtures/long-handoff/TASK.md",
+      "target": "TASK.md"
+    },
+    {
+      "source": "../../../../../drafts/baseline-iteration/original-examples/SKILL.md",
+      "target": ".claude/skills/concise-writing/SKILL.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-sonnet-5",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "status": "Qualified installed runtime substitutions accepted; committed freeze/readiness precede dispatch",
+  "checked_at": "2026-10-23T00:56:14.116364+00:00",
+  "model_calls": 0,
+  "previous": {
+    "codex": {
+      "path": "/opt/homebrew/Caskroom/codex/0.163.0/bin/codex",
+      "sha256": "8813367285524ac798dd96d1b071aea30d58708c7226fd236cd275cf1cfdee31",
+      "version": "codex-cli 0.163.0"
+    },
+    "claude": {
+      "path": "/opt/homebrew/Caskroom/claude-code@latest/2.1.305/claude",
+      "sha256": "ea3ea3c08d2a9634a4651e687fcf900d410c489bce2b00f22bd7352b91ba704f",
+      "version": "2.1.305 (Claude Code)"
+    },
+    "python": {
+      "path": "/opt/homebrew/Cellar/python@3.14/3.14.8_2/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+      "sha256": "1b5cb11d163e5ba34e2a05fc533c0ed89574d4425f9749a9d89405f651980e0d",
+      "version": "Python 3.14.8"
+    },
+    "git": {
+      "path": "/opt/homebrew/Cellar/git/2.56.0_1/bin/git",
+      "sha256": "40163333061f7223ecb604ed0f12988cfc8096d57ca8b1db006d410d4aeb700e",
+      "version": "git version 2.56.0"
+    }
+  },
+  "proposed": {
+    "codex": {
+      "path": "/opt/homebrew/Caskroom/codex/0.163.0/bin/codex",
+      "sha256": "8813367285524ac798dd96d1b071aea30d58708c7226fd236cd275cf1cfdee31",
+      "version": "codex-cli 0.163.0"
+    },
+    "claude": {
+      "path": "/opt/homebrew/Caskroom/claude-code@latest/2.1.308/claude",
+      "sha256": "ca923c86ac84b30574a82331a05b6e066c27477a926ceaffe46a845a33e4dd37",
+      "version": "2.1.308 (Claude Code)"
+    },
+    "python": {
+      "path": "/opt/homebrew/Cellar/python@3.14/3.14.9/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+      "sha256": "eef18fb5631f0054c2706a24f7f75fd716c9dc3c9a3b0f261f2f87b6385ae2af",
+      "version": "Python 3.14.9"
+    },
+    "git": {
+      "path": "/opt/homebrew/Cellar/git/2.56.0_1/bin/git",
+      "sha256": "40163333061f7223ecb604ed0f12988cfc8096d57ca8b1db006d410d4aeb700e",
+      "version": "git version 2.56.0"
+    }
+  },
+  "changed": [
+    "claude",
+    "python"
+  ],
+  "removed_previous_binaries": [
+    "claude",
+    "python"
+  ],
+  "unchanged": [
+    "codex",
+    "git"
+  ],
+  "claude_logged_in": true,
+  "checks": {
+    "installed_shell_git_isolation_read_only_and_skill_delivery": 12,
+    "opus_medium_native_read_transport": 1
+  },
+  "evidence": {
+    "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/runtime-qualification",
+    "inventory": {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/runtime-qualification.inventory.json",
+      "sha256": "60e92a2f662fd6467a39cf05ff4731f1925bce6ba17aa262eab90f32df398d7f",
+      "version": "1"
+    }
+  },
+  "scope": "Fresh matched comparison under the new runtime; no pooling with earlier2.1.305/Python3.14.8 subjects. Models/efforts/call allocation/permission grants unchanged. No model calls dispatched.",
+  "owner_acceptance": {
+    "quote": "Use the qualified installed versions",
+    "context": "Explicit response to Claude2.1.308/Python3.14.9 substitution request; unchanged models/efforts,12subjects/2reviews, no earlier pooling."
+  }
+}

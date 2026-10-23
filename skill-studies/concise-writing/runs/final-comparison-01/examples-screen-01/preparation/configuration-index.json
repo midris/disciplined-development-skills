@@ -1,0 +1,28 @@
+{
+  "configurations": [
+    {
+      "provider": "codex",
+      "condition": "original-body",
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/configs/codex-long-handoff-original-body.json",
+      "sha256": "0e9c190dcaa49e4ea23d6821d71055fedf6435da5f647676d7f63724aa7d3ba0"
+    },
+    {
+      "provider": "codex",
+      "condition": "original-examples",
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/configs/codex-long-handoff-original-examples.json",
+      "sha256": "0400067c04af6f64433273fe7aa4c5a9ca0b8e538c01081e1c7b6ae2c569ebf6"
+    },
+    {
+      "provider": "claude",
+      "condition": "original-body",
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/configs/claude-long-handoff-original-body.json",
+      "sha256": "ccb9da245fc5d153fe9f5ae32a5650ec7958cd6bf0ebf2fabec52de3ee900939"
+    },
+    {
+      "provider": "claude",
+      "condition": "original-examples",
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/configs/claude-long-handoff-original-examples.json",
+      "sha256": "3e468b7221f4494157ff68bf6949c9a2e2b040255fa8dbc865066870d7095501"
+    }
+  ]
+}

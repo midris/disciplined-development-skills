@@ -6,6 +6,8 @@ None is adopted or installed; the protocol links completed comparison evidence a
 
 ## Drafts
 
+- [Original body with the owner’s examples](original-examples/SKILL.md), with its [diff](original-examples.diff): retain the tested original body and selected description, replacing only the examples section with the supplied two examples and explanations. This separate combination is not yet behaviorally tested.
+
 - [Targeted edit](targeted/SKILL.md), with its [diff](targeted.diff): strengthen the existing global pass, unrequested-elaboration rule and final source comparison.
 - [Fuller rewrite](fuller/SKILL.md), with its [diff](fuller.diff): organize the same responsibilities around understanding the reader, arranging the material, trimming and verifying.
 - [Revised targeted draft](targeted-examples/SKILL.md), with its [diff against tested targeted](targeted-examples.diff): remove the four added preservation-check sentences and copy Fuller's complete two-example section. This variant is 971 words; targeted remains 955 words and fuller 1,084.

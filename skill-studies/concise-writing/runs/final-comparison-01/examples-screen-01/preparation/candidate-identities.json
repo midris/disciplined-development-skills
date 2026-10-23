@@ -1,0 +1,17 @@
+{
+  "skills": [
+    {
+      "condition": "original-body",
+      "path": "skill-studies/concise-writing/drafts/baseline-iteration/final-comparison/skills/original-body/SKILL.md",
+      "sha256": "1889d41c2f90ec7c909ebf3baca0dd3c395fbc8d837003b21732599f26735422",
+      "complete_words": 869
+    },
+    {
+      "condition": "original-examples",
+      "path": "skill-studies/concise-writing/drafts/baseline-iteration/original-examples/SKILL.md",
+      "sha256": "af172548e7055d75198046ebb7b1ef64f053b1ac75f09b15da13273385cd7e5f",
+      "complete_words": 938
+    }
+  ],
+  "scope": "Only examples section differs; selected description and all outside bytes identical"
+}

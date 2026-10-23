@@ -1,0 +1,6 @@
+{
+  "model_calls": 0,
+  "stage": "zero-model binary-identity recheck before any manifest freeze/claim/invocation",
+  "error": "Pinned Claude2.1.305 and Python3.14.8 binaries absent; installed versions2.1.308 and3.14.9",
+  "action": "Collection stopped; thirteen zero-model checks qualify proposed substitutions; owner acceptance pending"
+}
