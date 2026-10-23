@@ -1,6 +1,6 @@
 # Concise-writing study
 
-- [Protocol](protocol.md): contract, current decisions, coverage, assessment rules and combined accounting.
+- [Protocol](protocol.md): [adoption and closure](protocol.md#closure-and-adoption), contract, coverage, assessment rules and combined accounting.
 - [Coverage audit](testing-audit.md): scenario design and limitations.
 - [Case definitions and fixtures](cases/README.md): shared test inputs and preserved original/comprehensive snapshots.
 - [Baseline-derived draft package](drafts/baseline-iteration/README.md): targeted and fuller candidate bodies and comparison design.

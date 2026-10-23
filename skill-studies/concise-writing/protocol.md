@@ -2,94 +2,40 @@
 
 Format version: `1`
 Study ID: `concise-writing`
-Status: the short examples comparison is complete: twelve valid outputs, two audited Opus reviews and one retained invalid authentication attempt. The fixed rule finds no repeated examples benefit; retain the original body with the selected description under the owner’s conditional choice.
-Current action: present the completed comparison and agree any remaining combined-skill validation/adoption scope. No additional subject/evaluator capacity or live deployment is authorized.
-The owner replied “I logged in, please try again” to the concrete one-replacement request; one retry slot funded the completed unchanged replacement, retaining the failed subject charge and leaving other allocations unchanged. No second replacement is authorized.
-The owner explicitly accepted “Use the qualified installed versions”; the [qualification record](runs/final-comparison-01/examples-screen-01/preparation/runtime-substitution.json) retains thirteen zero-model checks and exact identities. Codex/Git, models/efforts and permission grants are unchanged; this fresh CLI/toolchain stratum is not pooled with earlier runs.
-The owner replied “yeah, let's run the short test. if there is no noticeable change we can go with the original body”.
-This accepts the proposed 642-subject/48-evaluator ceilings, three-repetition exploratory screen and 40–60-minute forecast; authoring/retry ceilings remain four each.
-The [completed comparison](runs/final-comparison-01/examples-screen-01/evaluation/assessment.md) applies the fixed repeated-difference rule; the one Codex original-body rollback failure remains recorded and does not establish a repeated examples advantage. This conditional choice is not a reliability/equivalence finding or a waiver of that failure.
-The original direction authorized this fixed comparison and conditional body choice; the one separately authorized retry is recorded above. No automatic top-up, further wording edits, additional retry, fallback, next scenario or live deployment is authorized.
-The owner supplied both worked examples and their closing explanations verbatim after the five-repetition handoff comparison.
-The example-authoring direction authorized that substitution in a separate candidate; this newly accepted test allocation is recorded above. Tested bodies, frozen inputs and completed results remain unchanged.
-The owner replied “please proceed” to the concrete +8-subject/+2-review handoff proposal; combined ceilings rise from 622 subject / 44 evaluator to 630 / 46, with authoring/retry ceilings unchanged.
-That completed continuation authorized eight additions and two reviews only; the separate short examples comparison is authorized above.
-The earlier twelve handoff subjects and two reviews remain immutable; reused outputs add no subject charge and previous Opus reviews are excluded from the new packets.
-The first handoff stage followed the owner’s “ok, please proceed” to the concrete twelve-run/two-review next-scenario recommendation.
-That first-stage approval raised combined ceilings from 610/42 to 622/44; the continuation ceiling is recorded above.
-The first-stage approval covered only its twelve subjects and two reviews; subsequent authority is recorded above.
-The collector must pass collection readiness before any subject claim or invocation, then retain and assess each attempt before advancing.
-The supplied example substitution is frozen for the accepted comparison; no inter-run body/description change, automatic retry, split or fallback is authorized.
-The completed comment comparison found no consequential body advantage and provisionally favors the shorter original for that case; it does not establish a whole-skill winner.
-The first comment screen passed twelve zero-model runtime probes and checked exact binaries, sign-in metadata and paired inputs, with its subject inputs frozen against `dcbb176616bd9ee540a11243c24b8bf740fdd122`.
-First-screen Claude slot 7 received the complete teaching body before editing; the [inspection amendment](runs/final-comparison-01/screen-01/preparation/explicit-inspection-amendment.md) corrects a YAML-header expectation through retained-evidence replay, without repeating the subject.
-Its original manifest and charge remain; the amended controller was frozen prospectively before slot 8.
-The owner approved “sounds good, let’s proceeed” after the concrete twelve-subject/two-review proposal; accepted ceilings rise from 590/38 to 602/40, with authoring/retry ceilings unchanged.
-This approval covers explicit comments only: both unchanged bodies with the selected description, three repetitions on Codex and Claude. It does not approve the broader prepared 120/20 proposal.
-After the screen, dropping a clearly inferior candidate or extending promising ones to five repetitions needs the evidence and a bounded continuation decision; no automatic top-up or mid-screen edit is authorized.
-The owner accepts unnecessary loading as a caution where output is intact and appropriate Claude loading improves; this screen explicitly loads both candidates and does not measure native selection.
-The owner selected the unchanged [fully rewritten description](drafts/baseline-iteration/discovery/description-rewrite.txt): “we can go with that”.
-Its prior native discovery evidence uses the revised targeted-examples body; the prepared original-body combination therefore needs measured validation, and selection alone authorizes no live deployment.
-No confirmed revised-body regression blocks eligibility for remaining coverage, but no overall consequential-quality advantage over the shorter original is established; Opus locally prefers the revised Claude explicit comments.
-The owner accepts additional unwanted Codex loading as “a note to keep in mind” rather than a blocker when output is not impaired and appropriate Claude loading improves.
-This changes prospective decision weighting, not the frozen rule, recorded scores or historical comparison; it authorizes no further calls or live-skill deployment.
-The comparison preserves one disputed Codex document-addition control sequence as unresolved interpretation, with insufficient evidence to settle it; original active and Opus scores remain intact.
-That earlier focused comparison had no setup exclusions or retries; its runtime qualification and records remain historical evidence.
-The first Claude discovery subject is complete and assessed after correcting a name-only-init inspection error through retained-evidence replay; it was not repeated.
-The [Codex discovery assessment](runs/revised-body-discovery-01/codex-discovery-focused-01-assessment.md) separates body delivery, comment quality and numeric-task observations.
-The [Codex](runs/revised-body-discovery-01/codex-body-focused-01-assessment.md) and [Claude](runs/revised-body-discovery-01/claude-body-focused-01-assessment.md) body assessments record all three cases passing five repetitions per condition/provider, with concrete quality differences separate from those thresholds.
-The owner accepted the qualified Claude 2.1.305 substitution for removed 2.1.301 by directing continuation on 2026-10-21; [runtime acceptance](runs/revised-body-discovery-01/preparation/runtime-recheck-20261021.json) retains the quote, checks and unchanged models/efforts/ceilings.
-Live skills are unchanged; later regression, automatic retries, further wording changes and adoption remain unapproved.
-The approved [core/runs directory layout](../../plans/specs/2026-10-18-study-directory-layout.md) is implemented and verified for both studies; [navigation](README.md) separates core guidance from collected evidence.
-On 2026-10-18 the owner replied “ok, let’s do it” to the concrete remaining allocation of 144 subject calls plus fourteen evaluator calls. This accepts unchanged targeted/fuller bodies, fresh original/control comparisons, three repetitions per selected condition/provider and reuse of the separate completed E stratum while input/runtime qualification holds.
-The authorized sequence is 72 ordinary A/B/C subjects, then 72 native N1–N4 subjects, plus six ordinary and eight native Opus 5.5 medium reviews.
-Combined ceilings rise from 296 to 440 subject and fourteen to twenty-eight evaluator calls; authoring/retry ceilings remain four each. No new SSR calls, automatic retry, further wording iteration or adoption is authorized.
-The approved remaining forecast is 390–540 active minutes, including preparation, qualification, collection, direct assessment, grouped review and reconciliation. The active-time figure remains a planning guideline.
-The owner’s “Approve one replacement review” funds exactly the unchanged Codex handoff packet from one unused retry slot, preserving its failed evaluator charge. The [resumption record](runs/baseline-iteration-suite-01/evaluation/resumption.json) pins a prospective controller and unchanged input identities. Sign-in metadata and all pinned binaries were rechecked without a model call; actual server acceptance is verified by the approved resumed invocation. The replacement adds an estimated 10–15 minutes, updating the total forecast to 400–555.
-Under owner-authorized CW-E-contact-interpretation-1, thirteen prior E failures become passes; explicit recording remains a precision observation rather than a demonstrated functional gap.
-The original result records and Fable/Opus judgments remain historical evidence; the versioned reassessment index owns the superseding E judgments.
-Both E attempt indexes identify complete committed result records; the [Codex assessment](runs/baseline-iteration-e-01/codex-e-iteration-01-assessment.md) and [Claude batch assessment](runs/baseline-iteration-e-01/claude-e-iteration-01-assessment.md) summarize them.
-The amended Claude controller applies prospectively from its second attempt, with byte-identical subject inputs and criteria.
-The collector used the wrong inventory version field; conforming wrappers are published separately, with original wrappers and every raw byte retained. No model call is repeated or excluded for this metadata correction.
-Both provider scopes pass collection readiness with frozen input revision `2936749c332f083e49f603eaed15b65d92158568`; all forty completed attempts are recorded in the two E indexes.
-The combined draft/proposal review is resolved and preparation commit `c8b8c3b` is pushed; [runtime qualification](runs/baseline-iteration-e-01/preparation/runtime-qualification.md) passes twelve zero-model controls.
-On 2026-10-18 the owner authorized the first-stage 40 subject and two evaluator calls: “do a consistency pass over the skills rewrites, commit and push any changes, then start the testing”.
-The subsequent external-review request was resolved before dispatch; the [combined review](../../reviews/2026-10-18-cw-draft-consistency-review.md) records dispositions and final verification.
-The active assessor is this Codex controller; the separate Opus 5.5 medium reviewer is cross-family relative to it.
-The first E allocation used ceilings of 296 subject and fourteen evaluator; it is complete. Current remaining-suite authority is recorded above.
-The [evaluation record](runs/cross-model-evaluation-01/README.md) owns method and evidence: all 136 CW outputs were reviewed through Fable 5.1 at medium effort, in twelve primary sessions plus one owner-approved correction from the retry pool.
-The incomplete original Codex E review remains retained; the correction closes its missing-input gap without new subject runs.
-SSR evaluation remains deferred until its rewrite.
-The [baseline iteration design](../../plans/specs/2026-10-17-cw-baseline-iteration.md) records the owner’s effectiveness-before-compression direction, retention of original rationalizations and use of all completed CW evidence.
-The owner explicitly approved loaded-baseline failures as RED while keeping no-CW controls even if they pass; this CW-specific writing-skills exception does not authorize new calls.
-Future Claude output evaluation is Opus 5.5 at medium or high effort; this diagnostic qualified and used `claude-opus-5-5` at medium.
-Both reviews delivered every required file before first-pass judgments and prior-score exposure; actual identity, native-reader-only tools and protected bytes are verified.
-Claude subject tests remain Sonnet 5 low unless separately changed; the evaluator preference does not change the subject model.
-The owner’s adoption tie-break is shorter SKILL.md when effectiveness and consequential output quality are equivalent; tied pass counts alone do not establish equivalence.
-The owner accepted the scenario designs C, N1–N4 and revised E during the walkthrough, retained A/B, and removed tailored skill-editing/compression tests.
-The owner-requested [preparation review and remediation](../../reviews/2026-09-27-cw-suite-preparation-review.md) are complete.
-On 2026-09-27, the owner replied “approved, please continue” to the 104-call proposal: 72 ordinary calls followed by 32 native calls, raising the combined subject ceiling from 136 to 240.
-This authorizes both stages, runtime qualification, committed input/schedule freeze and collection after readiness, with zero automatic retries; it does not authorize a skill edit or adoption.
-The [preparation package](runs/suite-2026-09-27/preparation/README.md) and [allocation forecast](testing-audit.md#proposed-sequence-and-allocation-forecast) define the approved scope.
-Supplemental subject spending is 16/16; that completed supplement authorizes no further calls.
-The owner clarified that three repetitions are the minimum and authorized the sixteen missing calls: “yeah, go ahead and make those. 2 is definitely not enough. I am pretty sure 3 is what we decided as a our minimum”.
-This raises combined subject capacity from 240 to 256 and the expanded CW scope from 104 to 120 calls.
-Three repetitions now apply to every selected CW scenario/condition/provider; this is a diagnostic minimum, not a reliability threshold or a replacement for the later fresh-wording authoring requirements.
-The sixteen-attempt native indexes and assessments remain immutable batch records; the two eight-call supplements identify repetition 3 and support the combined summary below.
-The supplement used the same qualified CLI binaries, models, low effort, inputs, skills and CW-expanded-1 rules, with identity checks before dispatch.
-The third repetition reversed the second rotation's condition order; an odd number cannot fully balance two-condition order.
-The completed supplement authorizes no automatic replacements or live-skill adoption; current authority is recorded above.
-The initial sixteen manifests pin input revision `96b6e383da39ea807a6ad49d4513cfc1d6f4cd33`; eight supplemental manifests pin `b167a70bd26a03543407d9bae208d78b13432f2b`.
-Both runtimes passed qualification and all six expanded batches passed readiness before dispatch.
-Every attempt records the committed manifest, invocation authority and runner revision.
-Both providers’ original/comprehensive baselines are complete.
-The comprehensive snapshot remains unchanged historical evidence; the next comparison excludes a fresh comprehensive arm to focus cost on the original and its two new interventions, as explained in the proposal.
-Plan: [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#current-next-action)
+Status: closed; the owner approved adopting the original body with the selected rewritten description on 2026-10-22.
+Current action: none for CW. SSR remains parked pending its separate resumption decision; runner follow-ups remain in the shared plan.
+
+## Closure and adoption
+
+The owner directed: “let's call CW done and update the skill”.
+The shipped [skill](../../skills/concise-writing/SKILL.md) now matches the tested [original-body combination](drafts/baseline-iteration/final-comparison/skills/original-body/SKILL.md), SHA-256 `1889d41c2f90ec7c909ebf3baca0dd3c395fbc8d837003b21732599f26735422` (869 words).
+Only the description differs from the preserved original; the body, original worked example, all six rationalizations and companion boundaries are unchanged.
+The selected [rewritten description](drafts/baseline-iteration/discovery/description-rewrite.txt) covers composing or changing reader-facing text, including document additions and code comments, while excluding skill/reference authoring and tasks with no text to compose or revise.
+
+The [focused body/discovery comparison](runs/revised-body-discovery-01/evaluation/assessment.md), [five-repetition comment comparison](runs/final-comparison-01/screen-02/evaluation/assessment.md), [five-repetition handoff comparison](runs/final-comparison-01/handoff-02/evaluation/assessment.md) and [short examples comparison](runs/final-comparison-01/examples-screen-01/evaluation/assessment.md) support the choice.
+The new description improved appropriate Claude loading in its tested fixed-body discovery stratum.
+The body rewrites and replacement examples showed no consistent consequential benefit over the original body.
+The short screen therefore applied the owner's precommitted original-body fallback; adoption does not assert statistically equivalent reliability.
+
+Known limits remain part of this decision:
+
+- Codex original-body repetition1 in the short examples screen narrows an unconditional rollback recovery step; active F1/F2 remain not met. Opus changed those factors only after reading the prior assessment; its independent first pass is preserved separately.
+- Discovery evidence for the selected description used the revised targeted-examples body. Final original-body comparisons explicitly loaded the skill; they do not establish native discovery for that combination across the full suite.
+- Surplus Codex loading remains the owner's accepted caution where output is intact. Loading and artifact quality are separate observations.
+- The last examples screen has three repetitions per condition/provider; it is exploratory, not reliability or equivalence validation. O4/O5 internal process remained unscored.
+- The broader prepared final regression suite and a separate instruction-compression iteration were not run to completion. The owner closes CW on the collected evidence and selects the unchanged body; these are not outstanding CW tasks or claims of completed coverage.
+- One expired-OAuth subject attempt and its separately authorized retry remain retained and charged. Claude's aggregate checker cannot represent approved retries; the typed records and manual full-index audit passed, and the runner-only follow-up remains tracked separately.
+
+Frozen skills, cases, manifests, attempt indexes, scores, reviewer first passes, corrections and raw evidence remain unchanged.
+Historical collection sections retain their batch-specific authorizations; they do not reopen the closed study.
+No new model calls or consumer installations follow this closure.
+The [completed design](../../plans/completed/specs/2026-10-17-cw-baseline-iteration.md) preserves the authoring method, including the owner-approved loaded-baseline RED exception.
+Plan: [shared testing plan](../../plans/2026-09-11-model-driven-skill-testing.md#current-next-action)
 General spec: [testing framework](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md)
 
 ## Sources and intended use
 
-Original: [checked-in skill](../../skills/concise-writing/SKILL.md), preserved as [study original](cases/skill-original/SKILL.md), from Git `99b3302f047a9b000ff804292d8746dd8bf43e42`, SHA-256 `4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72`. Complete supplied text: 860 words by `wc -w`.
+Original: [study original](cases/skill-original/SKILL.md), preserved before adoption, from Git `99b3302f047a9b000ff804292d8746dd8bf43e42`, SHA-256 `4d12a2eb475c6b2ef57e2300c8c07af3f59c1e07b2b82695a3b7669eee1d6d72`. Complete supplied text: 860 words by `wc -w`.
 Read the complete skill and its [composition map](../../ARCHITECTURE.md#composition-boundaries); relevant rationale and plan-writing companions were inspected for scope. The original snapshot matches its source bytes; it is not a new skill version.
 
 Owner’s intended use: turn existing agent output that is verbose or voluminous into concise, clear, effective material that is easier for the owner to consume. The expanded batches cover ordinary editing, document additions, new updates, code comments and native selection. This contrasts with SSR’s repository repairs and tests semantic assessment through the same session workflow.
@@ -1063,7 +1009,7 @@ The short examples screen uses its [two-call evaluator ledger](runs/final-compar
 Dispatched calls are **642 subject, 48 evaluator, 0 authoring, 3 retry**; remaining outer capacity is **0 / 0 / 4 / 1** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **3,495 active minutes booked; 2,295 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **3,510 active minutes booked; 2,310 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
 The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 642/642, with 0 approved examples-screen calls available; the earlier E diagnostic is spent.
@@ -1198,7 +1144,8 @@ The supplemental work used 40 estimated active minutes against its 40-minute for
 | Short examples-screen qualification/freeze, six Codex subjects and Claude authentication stop | 25 |
 | Approved authentication resumption and six Claude output inspections/assessments | 20 |
 | Short examples-screen two Opus reviews, complete-read audits, reconciliation and publication | 15 |
-| **Total** | **3,495** |
+| CW description promotion, closure reconciliation and verification | 15 |
+| **Total** | **3,510** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.
@@ -1242,8 +1189,8 @@ The current remaining-work estimate below covers only the fixed approved scope, 
 
 | Work | Estimate | Basis |
 | --- | ---: | --- |
-| Approved short examples comparison remaining | 0 | Twelve valid outputs and both reviews are complete; the conditional original-body choice is recorded. |
-| **Total** | **0** | Any further validation, wording edits or live adoption needs a separate decision; unused authoring/retry ceilings are not dispatch authority. |
+| CW study remaining | 0 | Owner-approved adoption and closure; no further CW experiments are planned. |
+| **Total** | **0** | New work or consumer installation needs a separate instruction; unused invocation ceilings are not dispatch authority. |
 
 The E stage used 115 estimated active minutes against the 180-minute upper forecast, 65 below it: 35 preparation, 40 subject collection/assessment and 40 evaluator preparation/reconciliation.
 The two evaluator durations total 420.696 seconds (7.01 minutes), included once in those estimates.
@@ -1478,7 +1425,7 @@ The [Codex assessment](runs/final-comparison-01/examples-screen-01/codex-final-e
 The source requires destination status confirmation/cursor reconciliation before lease release after rollback, while that output puts the sequence under an outstanding-acknowledgement condition; active F1/F2 are not met. Opus initially passed it and changed those factors only after prior-score access; first-pass disagreement and post-prior agreement are preserved separately.
 All six remove the detached reminder and duplicate count; original outputs average890.3words versus915.3for the examples variant, with substantial within-condition variation and no demonstrated readability winner.
 Claude's first attempt failed authentication before inference and is invalid setup, not a skill failure; its retained charge and approved unchanged replacement are described below.
-The opening owns the current conditional choice and any next scope decision.
+The opening owns the final adoption and study-closure decision.
 
 ### Short examples comparison: Claude portion
 
@@ -1509,7 +1456,7 @@ These are quality observations, with no demonstrated consequential body advantag
 Reviewer narrative precision errors are preserved and qualified in the audits rather than adopted as facts.
 The shorter original remains provisionally favored where consequential quality/effectiveness are equivalent, without a whole-skill adoption decision.
 The continuation used 55 estimated active minutes, including 408.434 new subject-runner seconds and 288.837 reviewer seconds once; the earlier twelve subjects/reviews/waits are not charged again.
-Both complete combinations and the live skill remain unchanged; current authority belongs to the opening.
+That collection left both complete combinations and the then-live skill unchanged; the opening owns subsequent adoption.
 
 ### Three-repetition long-handoff comparison
 
@@ -1675,7 +1622,7 @@ Neither review is rewritten or claimed to have applied the later clarification.
 No consequential E regression remained that warranted a body edit; E supported testing both unchanged drafts against the remaining suite, and the owner approved that allocation. Current collection progress and decisions belong to the opening.
 Full-suite completion is not established by E alone; the unchanged live original remains the adoption base.
 The inventory-wrapper correction changes no raw output, task, criterion or model call and excludes no result.
-These are new runtime strata, not pooled historical counts; the live skill remains unchanged.
+Those runtime strata were not pooled with historical counts; that collection left the then-live skill unchanged.
 
 ### Completed baseline and earlier comparisons
 
@@ -1745,7 +1692,7 @@ Original and control each pass 2/2 on Recommendation and 2/2 on Briefing, with n
 Whole-document review withdraws the earlier briefing failures: the conditional recommendation, approval gate and continuing-preview context do not demonstrate a loss of correctness or effectiveness.
 All outputs are readable and shorter; none has a longer-output flag. Length is reported separately and does not determine pass/fail. Process is unscored; Git preserves earlier judgments and original collection identities.
 Pass counts are tied; the assessment reports qualitative differences in reading sequence and safeguard lookup separately. These small, constructed cases do not establish an overall CW advantage. The corrected findings do not support the earlier continuing-permissions rewrite suggestion.
-Baseline collection is closed and adoption remains deferred. The live skill is unchanged; the separate existing candidate completed the comparison above.
+At baseline closure, adoption was deferred and the then-live skill was unchanged; the separate existing candidate completed the comparison above.
 
 Comparison review: [fixed-suite comparison self-review](../../reviews/2026-09-18-cw-comparison-review.md).
 

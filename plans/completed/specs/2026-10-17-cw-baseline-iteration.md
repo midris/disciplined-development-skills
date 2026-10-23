@@ -1,8 +1,7 @@
 # CW iteration from the original skill
 
-Status and current dispatch authority: see the [CW protocol](../../skill-studies/concise-writing/protocol.md).
-The two baseline-derived body drafts are development candidates, not adopted skills; completed evidence and the next decision belong to the protocol.
-Current action and accounting belong to the [CW protocol](../../skill-studies/concise-writing/protocol.md); progress belongs to the [active plan](../2026-09-11-model-driven-skill-testing.md).
+Completed design record.
+The [CW protocol](../../../skill-studies/concise-writing/protocol.md#closure-and-adoption) owns the owner-approved adoption and study closure; the design and candidate instructions below preserve the development choices and grant no further work.
 
 ## Accepted direction
 
@@ -21,7 +20,7 @@ The owner explicitly approved using observed unchanged-baseline failures as RED 
 This is a CW-specific resolution of writing-skills’ no-guidance stop rule, not a claim that passing controls failed or that CW caused the observed defects.
 The currently read source is [writing-skills in the Codex Superpowers 7.0.0 cache](/Users/simon/.codex/plugins/cache/claude-plugins-official/superpowers/7.0.0/skills/writing-skills/SKILL.md), SHA-256 `bbdfe742f853562e643a3d40d64476359d47881e39cef80a189283fa26d11ab9`.
 Its no-guidance stop and five-or-more fresh-sample rules appear under “Micro-Test Wording Before Full Scenarios”.
-The historical [audit](../../skill-studies/concise-writing/testing-audit.md) records 6.4.1; this pass does not assert that Claude’s separate plugin cache contains either version.
+The historical [audit](../../../skill-studies/concise-writing/testing-audit.md) records 6.4.1; this pass does not assert that Claude’s separate plugin cache contains either version.
 No experiment allocation follows from this authoring-method approval.
 
 ## Evidence-led changes
@@ -35,7 +34,7 @@ No experiment allocation follows from this authoring-method approval.
 | Routine A/B passes, historical controls pass, N4 quality passes even without loading | Preserve these behaviors and the code-context judgment; do not add instructions merely to force a measured advantage | Core test, keep rules and composition |
 | Claude positive loads are missed; comprehensive also over-triggers on Codex numeric tasks | Hold the original description fixed during body comparison; investigate wording separately against positive and negative native cases | Later discovery experiment |
 
-The [contact reassessment](../../skill-studies/concise-writing/runs/contact-reassessment-01/README.md) corrects the E diagnosis without changing either draft; other observed failures remain regression targets, not proof of a new-body defect.
+The [contact reassessment](../../../skill-studies/concise-writing/runs/contact-reassessment-01/README.md) corrects the E diagnosis without changing either draft; other observed failures remain regression targets, not proof of a new-body defect.
 The original already requires preservation, a global pass and a diff; appending another generic checklist would repeat those rules without changing their application.
 The targeted draft strengthens those existing locations.
 Writing-skills’ form table recommends a REQUIRED template slot for an omitted element in an existing template.
@@ -45,12 +44,12 @@ It makes no claim to follow the recommended structural intervention or establish
 The fuller draft organizes the same responsibilities into understand, organize, trim and verify, while preserving all original rationalization rows and companion ownership.
 Neither draft adopts the comprehensive version’s detailed-response exemption, removal of the uncertainty flag, broadened authoring scope or all-source-distinctions-explicit rule.
 Fable’s original judgments and the historical active scores remain separate.
-The later [holistic reassessment](../../skill-studies/concise-writing/runs/holistic-dispute-reassessment-01/README.md) corrects C's eleven disputed readability failures to passes with cleanup observations after complete-context rereading; section retention alone is not a failure or a reason to demand maximal cutting.
+The later [holistic reassessment](../../../skill-studies/concise-writing/runs/holistic-dispute-reassessment-01/README.md) corrects C's eleven disputed readability failures to passes with cleanup observations after complete-context rereading; section retention alone is not a failure or a reason to demand maximal cutting.
 
 ## Owner-selected targeted example variant
 
 After the completed full-suite comparison, the owner requested removing the targeted draft's added preservation check and adding Fuller's access-form worked example.
-Prepare [targeted-examples](../../skill-studies/concise-writing/drafts/baseline-iteration/targeted-examples/SKILL.md) from the tested targeted body; preserve both tested candidate files and all completed scores.
+Prepare [targeted-examples](../../../skill-studies/concise-writing/drafts/baseline-iteration/targeted-examples/SKILL.md) from the tested targeted body; preserve both tested candidate files and all completed scores.
 Remove the four sentences added after the original draft-first/source-diff instruction, including the reverse claim-support check.
 Retain the original preservation principle and source-diff instruction, the expanded global pass, evidence/uncertainty guidance, corrected LRU example, unchanged description and all six rationalizations.
 Copy Fuller's complete two-example section: the technical explanation teaches compression, while the access-form example illustrates retaining an action, actor, recipient and deadline.
@@ -69,16 +68,16 @@ Its exclusion applies to tasks with no text to compose or revise, including chan
 The rewrite starts from task intent and gives document additions and source comments as examples.
 Both retain the skill/reference-authoring exclusion and add no workflow or answer-key instruction.
 These are candidate descriptions, not observed discovery improvements, and any apparent description effect remains scoped to the fixed body and test catalog.
-The [body/discovery proposal](../../skill-studies/concise-writing/drafts/baseline-iteration/discovery/proposal.md) owns candidate text locations, the proposed test matrix, scoring prerequisites and call forecasts.
+The [body/discovery proposal](../../../skill-studies/concise-writing/drafts/baseline-iteration/discovery/proposal.md) owns candidate text locations, the proposed test matrix, scoring prerequisites and call forecasts.
 The protocol records the separately approved focused allocation; new calls require its qualification/freeze gates, while later regression, runtime substitutions and adoption need a new decision.
 
 ## Completed comparison and continuing validation requirements
 
-The owner-required full comparison of original, targeted and fuller is complete; its [executed proposal](../../skill-studies/concise-writing/drafts/baseline-iteration/comparison-proposal.md) records the E-first design and full-suite allocation.
-The [reconciliation](../../skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/assessment.md) retains the evidence, disputed judgments and adoption limits.
+The owner-required full comparison of original, targeted and fuller is complete; its [executed proposal](../../../skill-studies/concise-writing/drafts/baseline-iteration/comparison-proposal.md) records the E-first design and full-suite allocation.
+The [reconciliation](../../../skill-studies/concise-writing/runs/baseline-iteration-suite-01/evaluation/assessment.md) retains the evidence, disputed judgments and adoption limits.
 Those observations validate only the tested bytes, not the owner-selected example variant or new descriptions.
 
-The new [body/discovery proposal](../../skill-studies/concise-writing/drafts/baseline-iteration/discovery/proposal.md) separates explicit-load body contribution from native selection, provides focused and remaining coverage, and fixes prospective transition rules for review before collection.
+The new [body/discovery proposal](../../../skill-studies/concise-writing/drafts/baseline-iteration/discovery/proposal.md) separates explicit-load body contribution from native selection, provides focused and remaining coverage, and fixes prospective transition rules for review before collection.
 Review the complete new body and descriptions against original obligations and all retained findings before freezing another comparison.
 Resolve or bound consequential assessment disagreements prospectively; do not turn source-wording preferences into mandatory output text or claim a preservation gap from the withdrawn contact findings.
 Keep no-CW controls, compare relevant behavior on both providers, and report historical/model strata separately.
@@ -95,7 +94,7 @@ Dispatch authority is recorded only in the protocol; this design supplies no ext
 ## Final combination comparison
 
 The owner retained the original and revised targeted-examples bodies as final candidates and selected the fully rewritten description for both.
-The [prepared comparison](../../skill-studies/concise-writing/drafts/baseline-iteration/final-comparison/README.md) changes only each supplied description scalar and preserves the source bodies byte-for-byte.
+The [prepared comparison](../../../skill-studies/concise-writing/drafts/baseline-iteration/final-comparison/README.md) changes only each supplied description scalar and preserves the source bodies byte-for-byte.
 Its relative comparison uses both providers and the full selected suite, including explicit N2/N4 siblings to distinguish loaded-body behavior from natural selection.
 No fresh no-CW arm is proposed because incremental unguided benefit is outside this final choice; prior controls remain historical evidence.
 The owner accepts additional loading as a caution where output is intact and appropriate Claude loading improves; actual output defects and invocation misses remain visible.
@@ -104,7 +103,7 @@ The protocol owns allocation acceptance, qualification/freeze and execution; the
 ## Owner-selected original body with replacement examples
 
 After comparing five handoff repetitions per body/provider, the owner selected the original body with a supplied replacement examples section.
-Prepare [original-examples](../../skill-studies/concise-writing/drafts/baseline-iteration/original-examples/SKILL.md) from the tested original-body combination, preserving its selected description and every byte outside the examples section.
+Prepare [original-examples](../../../skill-studies/concise-writing/drafts/baseline-iteration/original-examples/SKILL.md) from the tested original-body combination, preserving its selected description and every byte outside the examples section.
 Use the owner's exact two examples and closing explanations: the cache example preserves “would exceed” without adding “on write”; the access-form example retains actor, action, recipient and deadline.
 This is an owner-directed example substitution, not a new claim that either whole body failed the handoff or that the extra example improves effectiveness.
 Keep the tested original/revised combinations and their evidence immutable; their results do not validate this new combination.
@@ -112,7 +111,7 @@ The owner has authorized drafting, not new test calls or live adoption; the prot
 
 ## Accepted short examples screen
 
-The owner accepted the [twelve-subject/two-review proposal](../../skill-studies/concise-writing/drafts/baseline-iteration/original-examples/comparison-proposal.md), explicitly directing use of the original body if there is no noticeable change.
+The owner accepted the [twelve-subject/two-review proposal](../../../skill-studies/concise-writing/drafts/baseline-iteration/original-examples/comparison-proposal.md), explicitly directing use of the original body if there is no noticeable change.
 Compare fresh original-body and original-examples runs, three per condition/provider, on the unchanged handoff task and functional criteria.
 This is an accepted exploratory exception to five-plus wording samples, not completed reliability/equivalence validation.
 A repeated, concrete improvement in readability, cleanup or preserved constraints can motivate keeping the example variant; isolated length changes and threshold ties do not establish that improvement.

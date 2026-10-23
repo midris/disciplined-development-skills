@@ -3,7 +3,7 @@
 The [protocol](../../../protocol.md) owns current status, accepted ceilings and dispatch authority.
 The owner approved the focused 150 subjects and ten reviews through the protocol after reviewing this proposal; the later regression stage remains a forecast.
 That approval requires qualification and committed input freeze before collection and authorizes no live-skill change or adoption.
-The [design](../../../../../plans/specs/2026-10-17-cw-baseline-iteration.md) records the owner's request for targeted and fully rewritten descriptions alongside the revised body.
+The [design](../../../../../plans/completed/specs/2026-10-17-cw-baseline-iteration.md) records the owner's request for targeted and fully rewritten descriptions alongside the revised body.
 
 ## Description candidates
 

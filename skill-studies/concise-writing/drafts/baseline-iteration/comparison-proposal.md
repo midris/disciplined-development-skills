@@ -2,7 +2,7 @@
 
 Status and dispatch authority: see the [protocol](../../protocol.md); it records the completed E diagnostic and approved remaining-suite collection.
 The sequence and transition rules below retain the design executed for E; the protocol records the subsequent remaining-suite authorization.
-The [protocol](../../protocol.md) owns spending and current action; the [design](../../../../plans/specs/2026-10-17-cw-baseline-iteration.md) owns the authoring approach.
+The [protocol](../../protocol.md) owns spending and current action; the [design](../../../../plans/completed/specs/2026-10-17-cw-baseline-iteration.md) owns the authoring approach.
 
 ## Sequence
 

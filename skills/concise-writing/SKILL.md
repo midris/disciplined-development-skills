@@ -1,6 +1,6 @@
 ---
 name: concise-writing
-description: 'Use when writing or revising reader-facing prose — docs, READMEs, plans, specs, design notes, commit bodies, or code comments — that risks being verbose, padded, repetitive, wordy, or bulky; also when asked to tighten, trim, shorten, or "get to the point". Excludes skill and reference authoring.'
+description: "Use when the task requires composing or changing text for a reader. This includes drafting a document, adding to one, and editing source-code comments, as well as requests to simplify or tighten wording. Excludes skill/reference authoring and tasks with no text to compose or revise, such as a numeric-only change with a fixed literal reply."
 ---
 
 # Concise writing

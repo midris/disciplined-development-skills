@@ -59,8 +59,8 @@ Nine skills (each a `skills/<name>/SKILL.md`):
   place that encodes it, in one commit.
 - **`writing-explicit-rationale`** — put the *why* on the artifact for choices a
   future reader might re-litigate.
-- **`concise-writing`** — tighten prose a reader must get through (docs, plans,
-  commit bodies, replies); cut padding without cutting substance.
+- **`concise-writing`** — compose or revise reader-facing text, including docs,
+  plans, commit bodies and code comments; cut padding without cutting substance.
 
 For the component-level architecture — the three layers, the review model, and
 the logging path — see [`ARCHITECTURE.md`](ARCHITECTURE.md).
