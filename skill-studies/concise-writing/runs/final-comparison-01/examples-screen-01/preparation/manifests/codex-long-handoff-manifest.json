@@ -3,9 +3,9 @@
   "manifest_id": "cw-codex-final-examples-screen-01",
   "study_id": "concise-writing",
   "case_id": "long-handoff",
-  "status": "draft",
+  "status": "frozen",
   "created_at": "2026-10-23T00:52:05.707333+00:00",
-  "source_revision": null,
+  "source_revision": "991037e03c847f3e60d891891be863d177502216",
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
@@ -14,7 +14,7 @@
     },
     "protocol": {
       "path": "skill-studies/concise-writing/protocol.md",
-      "sha256": "054a28f27df97f256735f3c00b39e06bc1a9b19c2257e2200f65af904bd4a4f3",
+      "sha256": "f2c34b31a534ee25744f6c80c4df966ce962aa2c61a96bdb6ff6549c249ef867",
       "version": "1"
     },
     "format_contract": {
@@ -35,7 +35,7 @@
     "criteria": [
       {
         "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/criteria/long-handoff.md",
-        "sha256": null,
+        "sha256": "1b5b1643e54531a85075dd069ca5d17fabafe2bbae765e38a7dbb16d9eb97cff",
         "version": "5"
       }
     ]
@@ -45,7 +45,7 @@
       "id": "original-body",
       "configuration": {
         "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/configs/codex-long-handoff-original-body.json",
-        "sha256": null,
+        "sha256": "0e9c190dcaa49e4ea23d6821d71055fedf6435da5f647676d7f63724aa7d3ba0",
         "version": "0.2"
       },
       "target_skill": "skill-studies/concise-writing/drafts/baseline-iteration/final-comparison/skills/original-body/SKILL.md"
@@ -54,7 +54,7 @@
       "id": "original-examples",
       "configuration": {
         "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/configs/codex-long-handoff-original-examples.json",
-        "sha256": null,
+        "sha256": "0400067c04af6f64433273fe7aa4c5a9ca0b8e538c01081e1c7b6ae2c569ebf6",
         "version": "0.2"
       },
       "target_skill": "skill-studies/concise-writing/drafts/baseline-iteration/original-examples/SKILL.md"
@@ -63,104 +63,104 @@
   "subject_sources": [
     {
       "path": "skill-studies/concise-writing/drafts/baseline-iteration/final-comparison/skills/original-body/SKILL.md",
-      "sha256": null,
+      "sha256": "1889d41c2f90ec7c909ebf3baca0dd3c395fbc8d837003b21732599f26735422",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/drafts/baseline-iteration/original-examples/SKILL.md",
-      "sha256": null,
+      "sha256": "af172548e7055d75198046ebb7b1ef64f053b1ac75f09b15da13273385cd7e5f",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/long-handoff/TASK.md",
-      "sha256": null,
+      "sha256": "8be0f67fe6b62ca0a1d5f3af9ac2ffea79eef0d0615f0979853079653b8feab8",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/long-handoff/report.md",
-      "sha256": null,
+      "sha256": "0eb0946286d2a4b1708f14bcff5795cd1effdfa64af612a6cb9a89d2fac84737",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/prompts/codex-body.md",
-      "sha256": null,
+      "sha256": "ec75556bc64e9de7ef0ca76ef50fe2db02021e90c8a855901b6e08a854f4d81e",
       "version": null
     }
   ],
   "controller_only": [
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/schedule.json",
-      "sha256": null,
+      "sha256": "33c25c350a11347338749d44cb9139403637db259fbf32163637428a8cec1aec",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/runtime_setup.py",
-      "sha256": null,
+      "sha256": "91c8a2a5fccaa22affc662fe8824a2502be8e373e363520f21033a25838afdb2",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/runtime-identities.json",
-      "sha256": null,
+      "sha256": "3751c76e9f2bce8716a19dcd02e50d7d3026ed29a41a2002a5595f788a9f653b",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/collect_one.py",
-      "sha256": null,
+      "sha256": "77ad15587f628ca875ebe4349980225322ca33b0e3f6584dbe973b79f3973667",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/inspect_one.py",
-      "sha256": null,
+      "sha256": "8dfd5d7c900ea78e5328ee964dae835d2fe2b99835c00d7c2db34fd42be4bac2",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/trace_paths.py",
-      "sha256": null,
+      "sha256": "050a6d29ca6dd59f018651bd8d328b94a2a74b47363ea029df7b6f0978087c79",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/body_delivery.py",
-      "sha256": null,
+      "sha256": "8e084894e036286c8b7735df6a6a1d160eef4e74d609626f1bdfd1667ba1c87a",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/inspection-tests/test_body_delivery.py",
-      "sha256": null,
+      "sha256": "48712f7ab2bbeeefb008cb435325155493f1aa6e3e460b340940449e8eaac4f6",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/inspection-tests/test_collection_guards.py",
-      "sha256": null,
+      "sha256": "7c9d276d1a7d33a702aaea774676e51e043d14f82a563877bee079070e6027ea",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/continuation-recheck.json",
-      "sha256": null,
+      "sha256": "52605ede7e989c73be9b1e43122aedcae8861c50e5b2206a42604739701c5375",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/README.md",
-      "sha256": null,
+      "sha256": "43c98147ace8f139d8138d19e107292f8583c227f38b910aaa71d9c21f0543d8",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/interpretation.md",
-      "sha256": null,
+      "sha256": "dfb3c05d7c5f345ecf7ea939ffbb131eb642df2dd93ee334e13e017fdd3f9df5",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/review.md",
-      "sha256": null,
+      "sha256": "a192bb309d2f2aa4718eee0afd18e8692731860e410dd5599a9e13e90b8bfbed",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/candidate-identities.json",
-      "sha256": null,
+      "sha256": "b2a51f61e25c1701f11de5ec17fedf10065c31224567b99b5b554bdd928ae6a8",
       "version": null
     },
     {
       "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/configuration-index.json",
-      "sha256": null,
+      "sha256": "b51dff0c1c8afeca536846ecebb0e16768c6c1753fb10032b39e295a4933492d",
       "version": null
     }
   ]
