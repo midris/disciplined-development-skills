@@ -1,0 +1,171 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-10-23T21:27:04.980746+00:00",
+  "run_id": "20261023T212607360Z-ssr-compact-semantic-candidate-240ae7cd-4213-40bb-9b01-5c95714b3029-479zhvuo",
+  "condition": "candidate",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Author/preparer and active assessor; aware of condition, draft rationale and historical evidence. Not independent or blind. SSR-assessment-3, semantic definition 3 and frozen prospective interpretation."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T212607360Z-ssr-compact-semantic-candidate-240ae7cd-4213-40bb-9b01-5c95714b3029-479zhvuo/result.json",
+        "sha256": "30e5cb1a44dc2747afd3debe660b67b2330fd51ca0fd2522c0ffa9022f6e33bc",
+        "version": null
+      },
+      "selector": "Mechanical completion, execution identities, cleanup and captured configuration."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T212607360Z-ssr-compact-semantic-candidate-240ae7cd-4213-40bb-9b01-5c95714b3029-479zhvuo/stdout.txt",
+        "sha256": "ee9f4dc093ab35e08444961a65f25a9f293b9214e77ff8ad88d5679b3b1b64ed",
+        "version": null
+      },
+      "selector": "Complete ordered content/tool events, actual full assigned-body delivery and verification sequence."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T212607360Z-ssr-compact-semantic-candidate-240ae7cd-4213-40bb-9b01-5c95714b3029-479zhvuo/final.txt",
+        "sha256": "88b38386f3318c541b3b1a58f40f7192799dc6d20a8853561fabb1ea21dbcc2e",
+        "version": null
+      },
+      "selector": "Complete final response."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T212607360Z-ssr-compact-semantic-candidate-240ae7cd-4213-40bb-9b01-5c95714b3029-479zhvuo.checks.json",
+        "sha256": "8f00aac7f1971d55c0aa13d964075b78c97ad24b293fa8a0a4c9053579929a20",
+        "version": null
+      },
+      "selector": "Disposable-copy complete project, Git log/diff/commit/account, seven independent behavior probes and trace projection; raw retained bundle remains untouched."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned Opus 5.5 low on Claude Code 2.1.308 completed; full assigned body delivered before reconciliation, complete project/Git/tool capture, verified retention and clean runner cleanup. Runtime/inputs unchanged.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Complete overview gives at most four total attempts; operations gives up to three retries after first failure; troubleshooting gives fourth-failure exhaustion. All success/stop/operator/no-second-cycle guidance remains accurate and useful.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Unchanged code/tests/history/helper and seven matching probes establish preservation; unrelated reader guidance remains intact.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "dcf3763d7beaf5a78772f31ca3a6e69dffe8d3cf contains the entire repair after baseline; amendments leave one repair commit and clean committed tree.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Broad old/new and exhaustion searches plus complete current/history/source reads precede edits; triage updates all current stale claims and preserves history/helper.",
+      "consequence": "Procedural criterion satisfied within its fixed scope.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One repair commit after neutral baseline, despite message amendments.",
+      "consequence": "Procedural criterion satisfied within its fixed scope.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Final References swept account gives each required semantic block at a precise useful location, correct disposition and count one. Final optional entries are separated by path.",
+      "consequence": "Procedural criterion satisfied within its fixed scope.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "P1–P3 met in fixed scope; unsupported verification claim reported separately.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "Commit claims searches were rerun after repair, but complete trace contains only pre-edit searches; later query words appear in message text. Unit tests actually run. This misses the comprehensive body's explicit post-edit search instruction and makes an unsupported verification claim.",
+      "consequence": "Supplementary observation under frozen interpretation; does not widen the fixed criteria or change functional outcome.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "dimension": "procedural",
+      "description": "Subject amends cross-file ancillary grouping to separate paths; attempted message scratch write fails, then a pipe-based amendment succeeds. Final evidence and committed repair are complete; this is not a runner/setup failure.",
+      "consequence": "Supplementary observation under frozen interpretation; does not widen the fixed criteria or change functional outcome.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "dimension": "procedural",
+      "description": "README omits parenthetical retry arithmetic but remains accurate and links to an operations guide that explains retries; no functional clarity deficit is established.",
+      "consequence": "Supplementary observation under frozen interpretation; does not widen the fixed criteria or change functional outcome.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "One exposed synthetic semantic-repair case with explicit body delivery; no native discovery, contemporaneous unguided benefit, reserved transfer or population reliability claim.",
+    "Semantic blocks are the fixed P3 unit; broader inventories can mix line/occurrence conventions and are reported separately."
+  ],
+  "result_id": "compact-semantic-01-semantic-delivery-candidate-2",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/manifest.json",
+    "sha256": "766753fdf9ed119267a7f79b735ee57c93b0253adc39d9bfc962bc67ee686318",
+    "version": "1",
+    "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+  }
+}

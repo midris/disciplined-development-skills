@@ -3,5 +3,726 @@
   "index_id": "ssr-compact-semantic-01",
   "study_id": "sweeping-stale-references",
   "batch_id": "compact-semantic-01",
-  "attempts": []
+  "attempts": [
+    {
+      "attempt_id": "compact-semantic-01-semantic-delivery-original-1-1",
+      "case_id": "semantic-delivery",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/manifest.json",
+        "sha256": "766753fdf9ed119267a7f79b735ee57c93b0253adc39d9bfc962bc67ee686318",
+        "version": "1",
+        "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "7ba690d5ae48c9518c60c004d4995dae1c9fe74a97bd4ae25064b9e0c291baf5",
+          "version": "1",
+          "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+        },
+        "selector": "Batch: compact-semantic-01; order 1"
+      },
+      "run_id": "20261023T211804448Z-ssr-compact-semantic-original-43eb72dc-bed5-4eff-90a3-ed9c363ce4ce-7g4e9s1p",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "One exposed semantic-delivery case; complete-body explicit loading. Canonical identical score is checked in under results; external immutable identity permits sequential readiness before the closing score commit."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T211804448Z-ssr-compact-semantic-original-43eb72dc-bed5-4eff-90a3-ed9c363ce4ce-7g4e9s1p",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T211804448Z-ssr-compact-semantic-original-43eb72dc-bed5-4eff-90a3-ed9c363ce4ce-7g4e9s1p.inventory.json",
+          "sha256": "1ddeb85ad495cd19bcfd1857c642dace4203af683d480374bcc284d1681935e2",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/scores/20261023T211804448Z-ssr-compact-semantic-original-43eb72dc-bed5-4eff-90a3-ed9c363ce4ce-7g4e9s1p.json",
+          "sha256": "cbc06e70fa4ed11f3a1b610c9845a50ab8e6e5f47cc55a4e7b58f8b299894258",
+          "version": "2"
+        },
+        "result_id": "compact-semantic-01-semantic-delivery-original-1"
+      }
+    },
+    {
+      "attempt_id": "compact-semantic-01-semantic-delivery-candidate-1-1",
+      "case_id": "semantic-delivery",
+      "condition": "candidate",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/manifest.json",
+        "sha256": "766753fdf9ed119267a7f79b735ee57c93b0253adc39d9bfc962bc67ee686318",
+        "version": "1",
+        "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "7ba690d5ae48c9518c60c004d4995dae1c9fe74a97bd4ae25064b9e0c291baf5",
+          "version": "1",
+          "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+        },
+        "selector": "Batch: compact-semantic-01; order 2"
+      },
+      "run_id": "20261023T212410571Z-ssr-compact-semantic-candidate-b27fa214-9b32-41ae-8717-d64f3ee0e1d4-b_x8sezp",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "One exposed semantic-delivery case; complete-body explicit loading. Canonical identical score is checked in under results; external immutable identity permits sequential readiness before the closing score commit."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T212410571Z-ssr-compact-semantic-candidate-b27fa214-9b32-41ae-8717-d64f3ee0e1d4-b_x8sezp",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T212410571Z-ssr-compact-semantic-candidate-b27fa214-9b32-41ae-8717-d64f3ee0e1d4-b_x8sezp.inventory.json",
+          "sha256": "dc1b6e917222ef4109d4e7702700fc4cdba9cf3f175206290267430128a402a5",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/scores/20261023T212410571Z-ssr-compact-semantic-candidate-b27fa214-9b32-41ae-8717-d64f3ee0e1d4-b_x8sezp.json",
+          "sha256": "369299c6371e3d830875ecbc1512aae6e2431d47d49934e731879f202ca4f38e",
+          "version": "2"
+        },
+        "result_id": "compact-semantic-01-semantic-delivery-candidate-1"
+      }
+    },
+    {
+      "attempt_id": "compact-semantic-01-semantic-delivery-finalist-1-1",
+      "case_id": "semantic-delivery",
+      "condition": "finalist",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/manifest.json",
+        "sha256": "766753fdf9ed119267a7f79b735ee57c93b0253adc39d9bfc962bc67ee686318",
+        "version": "1",
+        "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "7ba690d5ae48c9518c60c004d4995dae1c9fe74a97bd4ae25064b9e0c291baf5",
+          "version": "1",
+          "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+        },
+        "selector": "Batch: compact-semantic-01; order 3"
+      },
+      "run_id": "20261023T212516549Z-ssr-compact-semantic-finalist-24f91879-a992-4b12-9026-38a9ebf2143a-sajnmbw3",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "One exposed semantic-delivery case; complete-body explicit loading. Canonical identical score is checked in under results; external immutable identity permits sequential readiness before the closing score commit."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T212516549Z-ssr-compact-semantic-finalist-24f91879-a992-4b12-9026-38a9ebf2143a-sajnmbw3",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T212516549Z-ssr-compact-semantic-finalist-24f91879-a992-4b12-9026-38a9ebf2143a-sajnmbw3.inventory.json",
+          "sha256": "2d00717cb564cbaae8395d0082008580a32ad1d766c10fac84638ac7e8ee14f4",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/scores/20261023T212516549Z-ssr-compact-semantic-finalist-24f91879-a992-4b12-9026-38a9ebf2143a-sajnmbw3.json",
+          "sha256": "073ac22bffa504ebe2651bf78fcceaa86bcb049cb6797c8cef2870715660298b",
+          "version": "2"
+        },
+        "result_id": "compact-semantic-01-semantic-delivery-finalist-1"
+      }
+    },
+    {
+      "attempt_id": "compact-semantic-01-semantic-delivery-candidate-2-1",
+      "case_id": "semantic-delivery",
+      "condition": "candidate",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/manifest.json",
+        "sha256": "766753fdf9ed119267a7f79b735ee57c93b0253adc39d9bfc962bc67ee686318",
+        "version": "1",
+        "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "7ba690d5ae48c9518c60c004d4995dae1c9fe74a97bd4ae25064b9e0c291baf5",
+          "version": "1",
+          "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+        },
+        "selector": "Batch: compact-semantic-01; order 4"
+      },
+      "run_id": "20261023T212607360Z-ssr-compact-semantic-candidate-240ae7cd-4213-40bb-9b01-5c95714b3029-479zhvuo",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "One exposed semantic-delivery case; complete-body explicit loading. Canonical identical score is checked in under results; external immutable identity permits sequential readiness before the closing score commit."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T212607360Z-ssr-compact-semantic-candidate-240ae7cd-4213-40bb-9b01-5c95714b3029-479zhvuo",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T212607360Z-ssr-compact-semantic-candidate-240ae7cd-4213-40bb-9b01-5c95714b3029-479zhvuo.inventory.json",
+          "sha256": "e994a2caef342fbdaf4a1e31d6fae4713e19e76da310419721e651b53c2a66bb",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/scores/20261023T212607360Z-ssr-compact-semantic-candidate-240ae7cd-4213-40bb-9b01-5c95714b3029-479zhvuo.json",
+          "sha256": "ee9e00991f72ab5a9e09b4b6a1d512c0e7078dab36925c4ec691bb77946dbd7c",
+          "version": "2"
+        },
+        "result_id": "compact-semantic-01-semantic-delivery-candidate-2"
+      }
+    },
+    {
+      "attempt_id": "compact-semantic-01-semantic-delivery-finalist-2-1",
+      "case_id": "semantic-delivery",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/manifest.json",
+        "sha256": "766753fdf9ed119267a7f79b735ee57c93b0253adc39d9bfc962bc67ee686318",
+        "version": "1",
+        "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "7ba690d5ae48c9518c60c004d4995dae1c9fe74a97bd4ae25064b9e0c291baf5",
+          "version": "1",
+          "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+        },
+        "selector": "Batch: compact-semantic-01; order 5"
+      },
+      "run_id": "20261023T212705559Z-ssr-compact-semantic-finalist-a9d86334-3445-4590-b3e4-1b132f6df8c7-5nu6_q9_",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "One exposed semantic-delivery case; complete-body explicit loading. Canonical identical score is checked in under results; external immutable identity permits sequential readiness before the closing score commit."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T212705559Z-ssr-compact-semantic-finalist-a9d86334-3445-4590-b3e4-1b132f6df8c7-5nu6_q9_",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T212705559Z-ssr-compact-semantic-finalist-a9d86334-3445-4590-b3e4-1b132f6df8c7-5nu6_q9_.inventory.json",
+          "sha256": "edb10d8d072c43594720804796a0cd202e05389d2a76a19abb4cbdfcc1c5cd1f",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/scores/20261023T212705559Z-ssr-compact-semantic-finalist-a9d86334-3445-4590-b3e4-1b132f6df8c7-5nu6_q9_.json",
+          "sha256": "1bfc80341eb4acc2583b89db5399433e678b2f9d5bc19d2df9214ac2e19d2765",
+          "version": "2"
+        },
+        "result_id": "compact-semantic-01-semantic-delivery-finalist-2"
+      }
+    },
+    {
+      "attempt_id": "compact-semantic-01-semantic-delivery-original-2-1",
+      "case_id": "semantic-delivery",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/manifest.json",
+        "sha256": "766753fdf9ed119267a7f79b735ee57c93b0253adc39d9bfc962bc67ee686318",
+        "version": "1",
+        "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "7ba690d5ae48c9518c60c004d4995dae1c9fe74a97bd4ae25064b9e0c291baf5",
+          "version": "1",
+          "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+        },
+        "selector": "Batch: compact-semantic-01; order 6"
+      },
+      "run_id": "20261023T212809348Z-ssr-compact-semantic-original-e02f2ea8-520d-401d-b326-bd458cc17518-pg2payc3",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "One exposed semantic-delivery case; complete-body explicit loading. Canonical identical score is checked in under results; external immutable identity permits sequential readiness before the closing score commit."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T212809348Z-ssr-compact-semantic-original-e02f2ea8-520d-401d-b326-bd458cc17518-pg2payc3",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T212809348Z-ssr-compact-semantic-original-e02f2ea8-520d-401d-b326-bd458cc17518-pg2payc3.inventory.json",
+          "sha256": "3fa49429320997ab3c2e3381b0ee583f022e8ab2ef5145e6103f1b61c79ea189",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/scores/20261023T212809348Z-ssr-compact-semantic-original-e02f2ea8-520d-401d-b326-bd458cc17518-pg2payc3.json",
+          "sha256": "b44718d701ec4122f161b4ca0b7e01220d9cad433ac3390f6faa6f5bb19bb92f",
+          "version": "2"
+        },
+        "result_id": "compact-semantic-01-semantic-delivery-original-2"
+      }
+    },
+    {
+      "attempt_id": "compact-semantic-01-semantic-delivery-finalist-3-1",
+      "case_id": "semantic-delivery",
+      "condition": "finalist",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/manifest.json",
+        "sha256": "766753fdf9ed119267a7f79b735ee57c93b0253adc39d9bfc962bc67ee686318",
+        "version": "1",
+        "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "7ba690d5ae48c9518c60c004d4995dae1c9fe74a97bd4ae25064b9e0c291baf5",
+          "version": "1",
+          "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+        },
+        "selector": "Batch: compact-semantic-01; order 7"
+      },
+      "run_id": "20261023T212907539Z-ssr-compact-semantic-finalist-c1c662e0-fc86-4656-aaa0-7746f9eab771-idib5g4o",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "One exposed semantic-delivery case; complete-body explicit loading. Canonical identical score is checked in under results; external immutable identity permits sequential readiness before the closing score commit."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T212907539Z-ssr-compact-semantic-finalist-c1c662e0-fc86-4656-aaa0-7746f9eab771-idib5g4o",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T212907539Z-ssr-compact-semantic-finalist-c1c662e0-fc86-4656-aaa0-7746f9eab771-idib5g4o.inventory.json",
+          "sha256": "277607ca64d0a7926ba9255f8c9924607225170e5c51bdf868acb1a1009097a0",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/scores/20261023T212907539Z-ssr-compact-semantic-finalist-c1c662e0-fc86-4656-aaa0-7746f9eab771-idib5g4o.json",
+          "sha256": "38e806f3c4c4ef529f62082cc01c6edf6bef96b539d65c7a5a36c33fd905e719",
+          "version": "2"
+        },
+        "result_id": "compact-semantic-01-semantic-delivery-finalist-3"
+      }
+    },
+    {
+      "attempt_id": "compact-semantic-01-semantic-delivery-original-3-1",
+      "case_id": "semantic-delivery",
+      "condition": "original",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/manifest.json",
+        "sha256": "766753fdf9ed119267a7f79b735ee57c93b0253adc39d9bfc962bc67ee686318",
+        "version": "1",
+        "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "7ba690d5ae48c9518c60c004d4995dae1c9fe74a97bd4ae25064b9e0c291baf5",
+          "version": "1",
+          "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+        },
+        "selector": "Batch: compact-semantic-01; order 8"
+      },
+      "run_id": "20261023T212947093Z-ssr-compact-semantic-original-4c89a89d-1efc-44bf-9832-cf8104dcebcd-n0sj6bjf",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "One exposed semantic-delivery case; complete-body explicit loading. Canonical identical score is checked in under results; external immutable identity permits sequential readiness before the closing score commit."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T212947093Z-ssr-compact-semantic-original-4c89a89d-1efc-44bf-9832-cf8104dcebcd-n0sj6bjf",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T212947093Z-ssr-compact-semantic-original-4c89a89d-1efc-44bf-9832-cf8104dcebcd-n0sj6bjf.inventory.json",
+          "sha256": "0097ca617e33fcb5eacdcb9b3dc6d34a2ddf05886c60e46853e00658fa8aa774",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/scores/20261023T212947093Z-ssr-compact-semantic-original-4c89a89d-1efc-44bf-9832-cf8104dcebcd-n0sj6bjf.json",
+          "sha256": "d7fe95fdcf6d6baf605240caae201abcc0329be7a490dba770c516f8ae81f37e",
+          "version": "2"
+        },
+        "result_id": "compact-semantic-01-semantic-delivery-original-3"
+      }
+    },
+    {
+      "attempt_id": "compact-semantic-01-semantic-delivery-candidate-3-1",
+      "case_id": "semantic-delivery",
+      "condition": "candidate",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/manifest.json",
+        "sha256": "766753fdf9ed119267a7f79b735ee57c93b0253adc39d9bfc962bc67ee686318",
+        "version": "1",
+        "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "7ba690d5ae48c9518c60c004d4995dae1c9fe74a97bd4ae25064b9e0c291baf5",
+          "version": "1",
+          "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+        },
+        "selector": "Batch: compact-semantic-01; order 9"
+      },
+      "run_id": "20261023T213033879Z-ssr-compact-semantic-candidate-7608f8bc-7450-4b24-a1bb-2284e4011e24-0ieyn2fu",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "One exposed semantic-delivery case; complete-body explicit loading. Canonical identical score is checked in under results; external immutable identity permits sequential readiness before the closing score commit."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T213033879Z-ssr-compact-semantic-candidate-7608f8bc-7450-4b24-a1bb-2284e4011e24-0ieyn2fu",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T213033879Z-ssr-compact-semantic-candidate-7608f8bc-7450-4b24-a1bb-2284e4011e24-0ieyn2fu.inventory.json",
+          "sha256": "a139bc8800b3a25816f98854adbc02444fa4b4747c59821cf07bf55db962ee00",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/scores/20261023T213033879Z-ssr-compact-semantic-candidate-7608f8bc-7450-4b24-a1bb-2284e4011e24-0ieyn2fu.json",
+          "sha256": "e111983bd5cb7155c2fffa627040e4d5a17a8cac03b2b55c89218d8d3a14259f",
+          "version": "2"
+        },
+        "result_id": "compact-semantic-01-semantic-delivery-candidate-3"
+      }
+    },
+    {
+      "attempt_id": "compact-semantic-01-semantic-delivery-original-4-1",
+      "case_id": "semantic-delivery",
+      "condition": "original",
+      "repetition": 4,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/manifest.json",
+        "sha256": "766753fdf9ed119267a7f79b735ee57c93b0253adc39d9bfc962bc67ee686318",
+        "version": "1",
+        "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "7ba690d5ae48c9518c60c004d4995dae1c9fe74a97bd4ae25064b9e0c291baf5",
+          "version": "1",
+          "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+        },
+        "selector": "Batch: compact-semantic-01; order 10"
+      },
+      "run_id": "20261023T213130992Z-ssr-compact-semantic-original-1fdec10e-64dc-4841-913c-967bc381947b-qjytmvqi",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "One exposed semantic-delivery case; complete-body explicit loading. Canonical identical score is checked in under results; external immutable identity permits sequential readiness before the closing score commit."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T213130992Z-ssr-compact-semantic-original-1fdec10e-64dc-4841-913c-967bc381947b-qjytmvqi",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T213130992Z-ssr-compact-semantic-original-1fdec10e-64dc-4841-913c-967bc381947b-qjytmvqi.inventory.json",
+          "sha256": "04749eec25841e19c6990df248ae1c04f6e77b263538952d35ba8e527e579576",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/scores/20261023T213130992Z-ssr-compact-semantic-original-1fdec10e-64dc-4841-913c-967bc381947b-qjytmvqi.json",
+          "sha256": "44eba8bbafd3d4658e9f913abcebfd02144429323b7cb515dd4735dffb621169",
+          "version": "2"
+        },
+        "result_id": "compact-semantic-01-semantic-delivery-original-4"
+      }
+    },
+    {
+      "attempt_id": "compact-semantic-01-semantic-delivery-finalist-4-1",
+      "case_id": "semantic-delivery",
+      "condition": "finalist",
+      "repetition": 4,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/manifest.json",
+        "sha256": "766753fdf9ed119267a7f79b735ee57c93b0253adc39d9bfc962bc67ee686318",
+        "version": "1",
+        "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "7ba690d5ae48c9518c60c004d4995dae1c9fe74a97bd4ae25064b9e0c291baf5",
+          "version": "1",
+          "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+        },
+        "selector": "Batch: compact-semantic-01; order 11"
+      },
+      "run_id": "20261023T213214880Z-ssr-compact-semantic-finalist-52160d4f-1d58-46f5-9b79-deb59490fc80-h_68zmgl",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "One exposed semantic-delivery case; complete-body explicit loading. Canonical identical score is checked in under results; external immutable identity permits sequential readiness before the closing score commit."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T213214880Z-ssr-compact-semantic-finalist-52160d4f-1d58-46f5-9b79-deb59490fc80-h_68zmgl",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T213214880Z-ssr-compact-semantic-finalist-52160d4f-1d58-46f5-9b79-deb59490fc80-h_68zmgl.inventory.json",
+          "sha256": "f27e161725f70c050c628d886d7474cb7fdff4bfe3289736dce885a2b41d5f7a",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/scores/20261023T213214880Z-ssr-compact-semantic-finalist-52160d4f-1d58-46f5-9b79-deb59490fc80-h_68zmgl.json",
+          "sha256": "0368bf02b039204ede9baa807a6a941904dacf984a894a03a50b974bc427d965",
+          "version": "2"
+        },
+        "result_id": "compact-semantic-01-semantic-delivery-finalist-4"
+      }
+    },
+    {
+      "attempt_id": "compact-semantic-01-semantic-delivery-candidate-4-1",
+      "case_id": "semantic-delivery",
+      "condition": "candidate",
+      "repetition": 4,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/manifest.json",
+        "sha256": "766753fdf9ed119267a7f79b735ee57c93b0253adc39d9bfc962bc67ee686318",
+        "version": "1",
+        "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "7ba690d5ae48c9518c60c004d4995dae1c9fe74a97bd4ae25064b9e0c291baf5",
+          "version": "1",
+          "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+        },
+        "selector": "Batch: compact-semantic-01; order 12"
+      },
+      "run_id": "20261023T213317806Z-ssr-compact-semantic-candidate-0e19c517-ab57-4c9f-a293-8bc999713bb4-468la7hg",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "One exposed semantic-delivery case; complete-body explicit loading. Canonical identical score is checked in under results; external immutable identity permits sequential readiness before the closing score commit."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T213317806Z-ssr-compact-semantic-candidate-0e19c517-ab57-4c9f-a293-8bc999713bb4-468la7hg",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T213317806Z-ssr-compact-semantic-candidate-0e19c517-ab57-4c9f-a293-8bc999713bb4-468la7hg.inventory.json",
+          "sha256": "4625dc0ae5c170a6b33006cebc785d328c65be183c15a7c7337b4c4447a524e1",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/scores/20261023T213317806Z-ssr-compact-semantic-candidate-0e19c517-ab57-4c9f-a293-8bc999713bb4-468la7hg.json",
+          "sha256": "4cf309e13c42199d78f3383e1640d160e854d933127ba6a41e36fc3e9f0b6230",
+          "version": "2"
+        },
+        "result_id": "compact-semantic-01-semantic-delivery-candidate-4"
+      }
+    },
+    {
+      "attempt_id": "compact-semantic-01-semantic-delivery-candidate-5-1",
+      "case_id": "semantic-delivery",
+      "condition": "candidate",
+      "repetition": 5,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/manifest.json",
+        "sha256": "766753fdf9ed119267a7f79b735ee57c93b0253adc39d9bfc962bc67ee686318",
+        "version": "1",
+        "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "7ba690d5ae48c9518c60c004d4995dae1c9fe74a97bd4ae25064b9e0c291baf5",
+          "version": "1",
+          "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+        },
+        "selector": "Batch: compact-semantic-01; order 13"
+      },
+      "run_id": "20261023T213412662Z-ssr-compact-semantic-candidate-8cf481d8-0405-463b-bc13-d24877855103-lp4o2r6z",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "One exposed semantic-delivery case; complete-body explicit loading. Canonical identical score is checked in under results; external immutable identity permits sequential readiness before the closing score commit."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T213412662Z-ssr-compact-semantic-candidate-8cf481d8-0405-463b-bc13-d24877855103-lp4o2r6z",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T213412662Z-ssr-compact-semantic-candidate-8cf481d8-0405-463b-bc13-d24877855103-lp4o2r6z.inventory.json",
+          "sha256": "1183c1d918519f48c6292b605aa1b9d4a4da2e38da774fa7525650c0d7eb30b0",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/scores/20261023T213412662Z-ssr-compact-semantic-candidate-8cf481d8-0405-463b-bc13-d24877855103-lp4o2r6z.json",
+          "sha256": "5582c807db536d251c31203132447d80f77d853492d14bddddff37eff5753793",
+          "version": "2"
+        },
+        "result_id": "compact-semantic-01-semantic-delivery-candidate-5"
+      }
+    },
+    {
+      "attempt_id": "compact-semantic-01-semantic-delivery-original-5-1",
+      "case_id": "semantic-delivery",
+      "condition": "original",
+      "repetition": 5,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/manifest.json",
+        "sha256": "766753fdf9ed119267a7f79b735ee57c93b0253adc39d9bfc962bc67ee686318",
+        "version": "1",
+        "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "7ba690d5ae48c9518c60c004d4995dae1c9fe74a97bd4ae25064b9e0c291baf5",
+          "version": "1",
+          "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+        },
+        "selector": "Batch: compact-semantic-01; order 14"
+      },
+      "run_id": "20261023T213505114Z-ssr-compact-semantic-original-3102bdf3-bd48-442f-8c61-1660d1ca81a6-mgqevtlv",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "One exposed semantic-delivery case; complete-body explicit loading. Canonical identical score is checked in under results; external immutable identity permits sequential readiness before the closing score commit."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T213505114Z-ssr-compact-semantic-original-3102bdf3-bd48-442f-8c61-1660d1ca81a6-mgqevtlv",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T213505114Z-ssr-compact-semantic-original-3102bdf3-bd48-442f-8c61-1660d1ca81a6-mgqevtlv.inventory.json",
+          "sha256": "7b142234244c80affc13a2fd5d7a941e11579b59f1cb5e768eba493bb82bc2ff",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/scores/20261023T213505114Z-ssr-compact-semantic-original-3102bdf3-bd48-442f-8c61-1660d1ca81a6-mgqevtlv.json",
+          "sha256": "4d9bd585580f73d8136d1a5abf93ca9bf3b06199b961633c21ec94db7c9bf08f",
+          "version": "2"
+        },
+        "result_id": "compact-semantic-01-semantic-delivery-original-5"
+      }
+    },
+    {
+      "attempt_id": "compact-semantic-01-semantic-delivery-finalist-5-1",
+      "case_id": "semantic-delivery",
+      "condition": "finalist",
+      "repetition": 5,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/manifest.json",
+        "sha256": "766753fdf9ed119267a7f79b735ee57c93b0253adc39d9bfc962bc67ee686318",
+        "version": "1",
+        "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "7ba690d5ae48c9518c60c004d4995dae1c9fe74a97bd4ae25064b9e0c291baf5",
+          "version": "1",
+          "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+        },
+        "selector": "Batch: compact-semantic-01; order 15"
+      },
+      "run_id": "20261023T213555811Z-ssr-compact-semantic-finalist-5486e457-4782-4591-bb1f-7e90eaa33585-7xawoy6q",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "One exposed semantic-delivery case; complete-body explicit loading. Canonical identical score is checked in under results; external immutable identity permits sequential readiness before the closing score commit."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T213555811Z-ssr-compact-semantic-finalist-5486e457-4782-4591-bb1f-7e90eaa33585-7xawoy6q",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T213555811Z-ssr-compact-semantic-finalist-5486e457-4782-4591-bb1f-7e90eaa33585-7xawoy6q.inventory.json",
+          "sha256": "5dd3d6ab56e1f51d9eb51d9f8d91037e94d9b3471b12de24b90a96d12664d7e4",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/scores/20261023T213555811Z-ssr-compact-semantic-finalist-5486e457-4782-4591-bb1f-7e90eaa33585-7xawoy6q.json",
+          "sha256": "288a95562d1738b0f7abdb4f6d303641ecc5c38ea78b9e45118f80fbb6e5c988",
+          "version": "2"
+        },
+        "result_id": "compact-semantic-01-semantic-delivery-finalist-5"
+      }
+    }
+  ]
 }

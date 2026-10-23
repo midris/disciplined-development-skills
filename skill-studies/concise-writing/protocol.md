@@ -1008,13 +1008,13 @@ The comment continuation uses [frozen review inputs](runs/final-comparison-01/sc
 The first handoff stage uses its [two-call evaluator ledger](runs/final-comparison-01/handoff-01/evaluation/evaluator-run-index.json).
 The handoff continuation uses its [two-call evaluator ledger](runs/final-comparison-01/handoff-02/evaluation/evaluator-run-index.json).
 The short examples screen uses its [two-call evaluator ledger](runs/final-comparison-01/examples-screen-01/evaluation/evaluator-run-index.json).
-Dispatched calls are **642 subject, 48 evaluator, 0 authoring, 3 retry**; remaining outer capacity is **15 / 1 / 4 / 1** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
+Dispatched calls are **657 subject, 48 evaluator, 0 authoring, 3 retry**; remaining outer capacity is **0 / 1 / 4 / 1** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
 Current combined accounting: **3,570 active minutes booked; 2,370 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
-The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 642/657, with 15 approved SSR compact-semantic calls available; the earlier E diagnostic and CW examples screen are spent.
+The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 657/657, with 0 approved SSR compact-semantic calls available; the earlier E diagnostic and CW examples screen are spent.
 The supplemental work used 40 estimated active minutes against its 40-minute forecast; model waits are included once.
 
 | Work | Estimated active minutes |

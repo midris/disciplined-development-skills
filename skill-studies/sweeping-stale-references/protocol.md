@@ -254,7 +254,7 @@ The earlier 15-subject/one-review proposal remains unapproved and does not autom
 
 ### Comparison: compact-semantic-01
 
-Status: owner-approved; source inputs frozen at `3800c049ab0496964c264e911bda8235f5b909ad`, installed-runtime qualification and collection readiness passed; subjects not yet dispatched.
+Status: owner-approved; source inputs frozen at `3800c049ab0496964c264e911bda8235f5b909ad`, installed-runtime qualification and collection readiness passed; all fifteen subjects retained and assessed with valid setup; sole output review pending.
 Owner authority, 2026-10-23: “ok, please proceed” after confirming one semantic-repair scenario, baseline/comprehensive/finalist, five fresh attempts each (15 subjects), then one cross-model output review.
 Question: does the compact finalist preserve or improve complete committed semantic reconciliation relative to the two preserved skill versions on the known failing situation?
 Scope: semantic-delivery only; fifteen sequential explicit-load attempts in the rotated order below. `original` is the preserved baseline, `candidate` the preserved comprehensive rewrite, and `finalist` the unchanged 814-word compact finalist.
@@ -662,10 +662,16 @@ At that closing checkpoint, 30 subject calls had been dispatched and capacity wa
 
 
 SSR collection-close invocation accounting includes the CW [baseline](../concise-writing/runs/contribution-baseline-01/contribution-baseline-01-run-index.json) and [comparison](../concise-writing/runs/comprehensive-comparison-01/comprehensive-comparison-01-run-index.json), plus the expansion, comprehensive-comparison-02, Claude smoke, claude-comparison-01 and claude-opus-invocation-01 indexes above.
-This closed checkpoint uses its then-approved ceilings: 136 subject, 12 evaluator, 4 authoring and 4 retry invocations.
-Dispatched calls are **136 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **0 / 12 / 4 / 4** at that checkpoint.
+This closed checkpoint used subject/evaluator/authoring/retry ceilings of 136 / 12 / 4 / 4.
+At that checkpoint, 136 subjects were dispatched; unspent historical capacity was 0 / 12 / 4 / 4.
 The [CW accounting](../concise-writing/protocol.md#storage-and-accounting) owns subsequent combined spending, current ceilings, time and forecast; this historical balance does not authorize further calls.
 All ten expansion slots, both 34-call comparison batches, both Claude smoke calls and all ten Opus invocation calls are spent.
+
+Current SSR-linked mechanical accounting includes the fixed 136-call historical subtotal above plus compact-semantic-01.
+For this subset, the historical spent subtotal plus the newly authorized scope gives 151 subject, 1 evaluator, 0 authoring and 0 retry invocations; this is an accounting projection, not a new allocation or pool transfer.
+Dispatched calls are **151 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **0 / 1 / 0 / 0** for this subset.
+The CW protocol remains authoritative for all current combined spending and outer ceilings; no historical unspent pool is revived.
+Sequential scores have identical repository and externally frozen copies so readiness can cite immutable evidence before the closing repository commit.
 
 
 Historical SSR closing forecast (2026-09-17):
