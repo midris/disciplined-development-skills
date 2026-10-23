@@ -1,0 +1,160 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "codex-final-examples-screen-01-long-handoff-original-body-3-1-assessment",
+  "assessed_at": "2026-10-23T01:07:03.178309+00:00",
+  "run_id": "20261023T010542011Z-cw-examples-codex-long-handoff-original-body-642bd1f1-d21d-41ce-aa42-7f68113fb5ea-tfemnilb",
+  "condition": "original-body",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same Codex controller authored/reviewed exposed development variants and directly judged complete outputs; no blind, held-out or independent assessor claim. Separate Opus review supplements this."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/manifests/codex-long-handoff-manifest.json",
+    "sha256": "ea05384a0631ef108eed53189390ba58d52746aa4d70040154d952ae655f5550",
+    "version": "1",
+    "git_revision": "ad3f5adcd0f8e351021f7e318201299de5ded7b6"
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/subjects/20261023T010542011Z-cw-examples-codex-long-handoff-original-body-642bd1f1-d21d-41ce-aa42-7f68113fb5ea-tfemnilb/workspace/fixture/report.md",
+        "sha256": "7f848f9a81b98da11a6c70f6f4383b520ee233fa37020cdb39ecf5fbd50f602b",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/subjects/20261023T010542011Z-cw-examples-codex-long-handoff-original-body-642bd1f1-d21d-41ce-aa42-7f68113fb5ea-tfemnilb/provider-session.jsonl",
+        "sha256": "ec4d6e49dc24b9d3c39f2ee93246ab5e2ed2d20c63de6974b99dc0ce7645d9ba",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/subjects/20261023T010542011Z-cw-examples-codex-long-handoff-original-body-642bd1f1-d21d-41ce-aa42-7f68113fb5ea-tfemnilb/result.json",
+        "sha256": "da7135f5c46918ad37937e3bcfeccd2ca69d64a11bed4f068bc7288152a85dc7",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/subjects/20261023T010542011Z-cw-examples-codex-long-handoff-original-body-642bd1f1-d21d-41ce-aa42-7f68113fb5ea-tfemnilb/runner.log",
+        "sha256": "f1a225d97f17bc0c292d130825ee94529dc2d61cff2a8d8a708d313cf75716bc",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/subjects/20261023T010542011Z-cw-examples-codex-long-handoff-original-body-642bd1f1-d21d-41ce-aa42-7f68113fb5ea-tfemnilb/final.txt",
+        "sha256": "344cae703c0956a0d43577ba8bd9dcbb4e56c4bf89ff3fbdc08fed62ea4985b7",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/long-handoff/report.md",
+        "sha256": "0eb0946286d2a4b1708f14bcff5795cd1effdfa64af612a6cb9a89d2fac84737",
+        "version": null,
+        "git_revision": "991037e03c847f3e60d891891be863d177502216"
+      },
+      "selector": "Complete frozen report.md"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/long-handoff/TASK.md",
+        "sha256": "8be0f67fe6b62ca0a1d5f3af9ac2ffea79eef0d0615f0979853079653b8feab8",
+        "version": null,
+        "git_revision": "991037e03c847f3e60d891891be863d177502216"
+      },
+      "selector": "Complete frozen TASK.md"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Fixed provider/model/CLI and retained inventory verified. Complete assigned teaching body in tool output 16 before first task edit 43. Protected input bytes unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The full report preserves unapproved pilot scope and numerical bounds, limited staging/rollback evidence, exact count/latency stops, unresolved acknowledgement/lease requirements, unconditional destination confirmation/cursor reconciliation before rollback lease release, incident-owner artifact authorization and new approval after incidents. No unsupported safety or release conclusion is introduced.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Both operational sections remain actionable with prerequisites, evidence/state protection, exact timing, recovery ordering and escalation. The diagnostic role of artifacts remains explicit in Rollback, and the complete document retains named handoff fields/acceptance and token retention; the shortened Deployment still retains its operational protections.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Clear opening orientation, evidence bullets, numbered preparation and connected monitoring/recovery paragraphs make decisions and actions easy to locate. The detached reminder and duplicate staging count are removed while useful local safeguards remain.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Fixed provider/model/CLI and retained inventory verified. Complete assigned teaching body in tool output 16 before first task edit 43. Protected input bytes unchanged. O4/O5 remain unscored; native D1 is distinct from functional outcome.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Complete output 826 wc-w words; supplied report.md: 1207 words, TASK.md: 68 words. Counts describe length, not semantic success.",
+      "consequence": "Descriptive counts only.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "826words. Strong original-body compression with evidence/preparation lists and the unconditional rollback sequence intact, unlike original repetition1. Account-confirmation ownership is less literal but remains in Rae-owned deployment prerequisites; diagnostic artifact explanation appears in Rollback. No consequential loss established in complete context.",
+      "consequence": "Qualitative comparison is separate from threshold counts.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "uncertainty": []
+}
