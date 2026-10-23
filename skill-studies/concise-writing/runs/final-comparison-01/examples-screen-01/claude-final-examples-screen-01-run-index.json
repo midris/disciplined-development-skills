@@ -52,6 +52,300 @@
           "git_revision": "16733f97485f59f97cfaaf7d81439ea8ab1c007f"
         }
       }
+    },
+    {
+      "attempt_id": "claude-final-examples-screen-01-long-handoff-original-examples-1-2",
+      "case_id": "long-handoff",
+      "condition": "original-examples",
+      "repetition": 1,
+      "attempt_number": 2,
+      "retry_of": "claude-final-examples-screen-01-long-handoff-original-examples-1-1",
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "fa2e0f2866af82219bada43c5194261d33825d38fff68e9eb5b409f9cd1ff6ec",
+        "version": "1",
+        "git_revision": "87ed26d6f215215e0c7d1b57049d9bf2eecbd617"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9c34c6e5d56d2eced711e8b1bb9bd529e3a3fd68ad7f81527ca48fc1b8bc7980",
+          "version": "1",
+          "git_revision": "87ed26d6f215215e0c7d1b57049d9bf2eecbd617"
+        },
+        "selector": "Batch: claude-final-examples-screen-01; order 1"
+      },
+      "run_id": "20261023T012607693Z-cw-examples-claude-long-handoff-original-examples-309d8d81-15fd-468f-8ba4-9c6d1a7eeb15-tb7l7alw",
+      "allocation": {
+        "pool": "retry",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/subjects/20261023T012607693Z-cw-examples-claude-long-handoff-original-examples-309d8d81-15fd-468f-8ba4-9c6d1a7eeb15-tb7l7alw",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/subjects/20261023T012607693Z-cw-examples-claude-long-handoff-original-examples-309d8d81-15fd-468f-8ba4-9c6d1a7eeb15-tb7l7alw.inventory.json",
+          "sha256": "a4e9242dd988e58234e1b07665a8bfeeed80df352f03f771de7d786dbd5c2815",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-final-examples-screen-01-long-handoff-original-examples-1-2-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/results/20261023T012607693Z-cw-examples-claude-long-handoff-original-examples-309d8d81-15fd-468f-8ba4-9c6d1a7eeb15-tb7l7alw.json",
+          "sha256": "6f929e0356c0e630b978ecd95e8fc3df6a03ab283cd446f1e2fd4e339c7526e4",
+          "version": "2",
+          "git_revision": "4b4259d3ff97008ca3575645151852d1953445bd"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-final-examples-screen-01-long-handoff-original-body-1-1",
+      "case_id": "long-handoff",
+      "condition": "original-body",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "fa2e0f2866af82219bada43c5194261d33825d38fff68e9eb5b409f9cd1ff6ec",
+        "version": "1",
+        "git_revision": "87ed26d6f215215e0c7d1b57049d9bf2eecbd617"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9c34c6e5d56d2eced711e8b1bb9bd529e3a3fd68ad7f81527ca48fc1b8bc7980",
+          "version": "1",
+          "git_revision": "87ed26d6f215215e0c7d1b57049d9bf2eecbd617"
+        },
+        "selector": "Batch: claude-final-examples-screen-01; order 2"
+      },
+      "run_id": "20261023T012728500Z-cw-examples-claude-long-handoff-original-body-83c55f7c-2d44-4af8-a700-2500533cc570-gr1b162_",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/subjects/20261023T012728500Z-cw-examples-claude-long-handoff-original-body-83c55f7c-2d44-4af8-a700-2500533cc570-gr1b162_",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/subjects/20261023T012728500Z-cw-examples-claude-long-handoff-original-body-83c55f7c-2d44-4af8-a700-2500533cc570-gr1b162_.inventory.json",
+          "sha256": "545e2d0d43a94f2f93ce8bdc6800af3b2733d1efa99ca2c923dfc9d949fbc39d",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-final-examples-screen-01-long-handoff-original-body-1-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/results/20261023T012728500Z-cw-examples-claude-long-handoff-original-body-83c55f7c-2d44-4af8-a700-2500533cc570-gr1b162_.json",
+          "sha256": "53b5a4523f3b50e4a2d6489a906cab30ade8ea12170df0c7c05d0450940f0f95",
+          "version": "2",
+          "git_revision": "4b4259d3ff97008ca3575645151852d1953445bd"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-final-examples-screen-01-long-handoff-original-body-2-1",
+      "case_id": "long-handoff",
+      "condition": "original-body",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "fa2e0f2866af82219bada43c5194261d33825d38fff68e9eb5b409f9cd1ff6ec",
+        "version": "1",
+        "git_revision": "87ed26d6f215215e0c7d1b57049d9bf2eecbd617"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9c34c6e5d56d2eced711e8b1bb9bd529e3a3fd68ad7f81527ca48fc1b8bc7980",
+          "version": "1",
+          "git_revision": "87ed26d6f215215e0c7d1b57049d9bf2eecbd617"
+        },
+        "selector": "Batch: claude-final-examples-screen-01; order 3"
+      },
+      "run_id": "20261023T012845504Z-cw-examples-claude-long-handoff-original-body-a11f2d5e-ccb8-4675-b2c0-4e61428e5095-k1z0bz79",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/subjects/20261023T012845504Z-cw-examples-claude-long-handoff-original-body-a11f2d5e-ccb8-4675-b2c0-4e61428e5095-k1z0bz79",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/subjects/20261023T012845504Z-cw-examples-claude-long-handoff-original-body-a11f2d5e-ccb8-4675-b2c0-4e61428e5095-k1z0bz79.inventory.json",
+          "sha256": "ac5f7a4580fc836e388754fc6073414c321addfdeb9e7cdd9938f1069b41e83e",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-final-examples-screen-01-long-handoff-original-body-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/results/20261023T012845504Z-cw-examples-claude-long-handoff-original-body-a11f2d5e-ccb8-4675-b2c0-4e61428e5095-k1z0bz79.json",
+          "sha256": "177a175f089aa616b7f5b22edd2fa0aa8000b544ea5d680514ee981b82ff3b71",
+          "version": "2",
+          "git_revision": "4b4259d3ff97008ca3575645151852d1953445bd"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-final-examples-screen-01-long-handoff-original-examples-2-1",
+      "case_id": "long-handoff",
+      "condition": "original-examples",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "fa2e0f2866af82219bada43c5194261d33825d38fff68e9eb5b409f9cd1ff6ec",
+        "version": "1",
+        "git_revision": "87ed26d6f215215e0c7d1b57049d9bf2eecbd617"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9c34c6e5d56d2eced711e8b1bb9bd529e3a3fd68ad7f81527ca48fc1b8bc7980",
+          "version": "1",
+          "git_revision": "87ed26d6f215215e0c7d1b57049d9bf2eecbd617"
+        },
+        "selector": "Batch: claude-final-examples-screen-01; order 4"
+      },
+      "run_id": "20261023T012952263Z-cw-examples-claude-long-handoff-original-examples-3f32c448-e898-4c1b-ac47-66934f707221-96rpex83",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/subjects/20261023T012952263Z-cw-examples-claude-long-handoff-original-examples-3f32c448-e898-4c1b-ac47-66934f707221-96rpex83",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/subjects/20261023T012952263Z-cw-examples-claude-long-handoff-original-examples-3f32c448-e898-4c1b-ac47-66934f707221-96rpex83.inventory.json",
+          "sha256": "7c5ff93f8af848130f83f6484cc48b9c41697e8d282c3e45cfa09b25def1e196",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-final-examples-screen-01-long-handoff-original-examples-2-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/results/20261023T012952263Z-cw-examples-claude-long-handoff-original-examples-3f32c448-e898-4c1b-ac47-66934f707221-96rpex83.json",
+          "sha256": "04e427e423ec92bb852234f6b1fd800033fa352df46fbbc2b521f4f05a5130b4",
+          "version": "2",
+          "git_revision": "4b4259d3ff97008ca3575645151852d1953445bd"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-final-examples-screen-01-long-handoff-original-examples-3-1",
+      "case_id": "long-handoff",
+      "condition": "original-examples",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "fa2e0f2866af82219bada43c5194261d33825d38fff68e9eb5b409f9cd1ff6ec",
+        "version": "1",
+        "git_revision": "87ed26d6f215215e0c7d1b57049d9bf2eecbd617"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9c34c6e5d56d2eced711e8b1bb9bd529e3a3fd68ad7f81527ca48fc1b8bc7980",
+          "version": "1",
+          "git_revision": "87ed26d6f215215e0c7d1b57049d9bf2eecbd617"
+        },
+        "selector": "Batch: claude-final-examples-screen-01; order 5"
+      },
+      "run_id": "20261023T013108850Z-cw-examples-claude-long-handoff-original-examples-80c7a638-7c1f-4241-9d41-aebaeb3550ac-qlxkszwp",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/subjects/20261023T013108850Z-cw-examples-claude-long-handoff-original-examples-80c7a638-7c1f-4241-9d41-aebaeb3550ac-qlxkszwp",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/subjects/20261023T013108850Z-cw-examples-claude-long-handoff-original-examples-80c7a638-7c1f-4241-9d41-aebaeb3550ac-qlxkszwp.inventory.json",
+          "sha256": "23c6b326048b16962130420836e1026a1f13c76768245b355b3fbf40996b5d07",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-final-examples-screen-01-long-handoff-original-examples-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/results/20261023T013108850Z-cw-examples-claude-long-handoff-original-examples-80c7a638-7c1f-4241-9d41-aebaeb3550ac-qlxkszwp.json",
+          "sha256": "da037724c3925c389ce1ab84a23c1d8c8c5d400d76533d564c4c47a46117f320",
+          "version": "2",
+          "git_revision": "4b4259d3ff97008ca3575645151852d1953445bd"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-final-examples-screen-01-long-handoff-original-body-3-1",
+      "case_id": "long-handoff",
+      "condition": "original-body",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/manifests/claude-long-handoff-manifest.json",
+        "sha256": "fa2e0f2866af82219bada43c5194261d33825d38fff68e9eb5b409f9cd1ff6ec",
+        "version": "1",
+        "git_revision": "87ed26d6f215215e0c7d1b57049d9bf2eecbd617"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/concise-writing/protocol.md",
+          "sha256": "9c34c6e5d56d2eced711e8b1bb9bd529e3a3fd68ad7f81527ca48fc1b8bc7980",
+          "version": "1",
+          "git_revision": "87ed26d6f215215e0c7d1b57049d9bf2eecbd617"
+        },
+        "selector": "Batch: claude-final-examples-screen-01; order 6"
+      },
+      "run_id": "20261023T013249417Z-cw-examples-claude-long-handoff-original-body-791606b8-aad0-4259-b299-247e55239676-mnx1yv0c",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed development case assessed by the Codex controller; cross-model review is supplemental. No causal or reliability inference from native counts."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/subjects/20261023T013249417Z-cw-examples-claude-long-handoff-original-body-791606b8-aad0-4259-b299-247e55239676-mnx1yv0c",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/subjects/20261023T013249417Z-cw-examples-claude-long-handoff-original-body-791606b8-aad0-4259-b299-247e55239676-mnx1yv0c.inventory.json",
+          "sha256": "55da055d629352063e875ee882f277b8e17101729c9a3304594326bfd446116d",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-final-examples-screen-01-long-handoff-original-body-3-1-assessment",
+        "record": {
+          "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/results/20261023T013249417Z-cw-examples-claude-long-handoff-original-body-791606b8-aad0-4259-b299-247e55239676-mnx1yv0c.json",
+          "sha256": "a68cd36d474186354e01e2aa7460dba2e9a42373090112f44baea1ad3b94839a",
+          "version": "2",
+          "git_revision": "4b4259d3ff97008ca3575645151852d1953445bd"
+        }
+      }
     }
   ]
 }
