@@ -48,7 +48,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/results/20261023T010028571Z-cw-examples-codex-long-handoff-original-body-84254956-1131-49f3-ac79-2b22abb6ddfb-r87lmamj.json",
           "sha256": "cdab487408f07067eabb6ce9f1223dc9a08e4f39074bffaef95cda90238a0665",
-          "version": "2"
+          "version": "2",
+          "git_revision": "16733f97485f59f97cfaaf7d81439ea8ab1c007f"
         }
       }
     },
@@ -96,7 +97,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/results/20261023T010236240Z-cw-examples-codex-long-handoff-original-examples-8c2a869c-de9a-4e8c-a9f0-a11055daa840-xts9ff2u.json",
           "sha256": "2bb5c66a1ca906989e2c6d2e04ea52c78827e4af497c0d98f12f7fe9aec8ec0e",
-          "version": "2"
+          "version": "2",
+          "git_revision": "16733f97485f59f97cfaaf7d81439ea8ab1c007f"
         }
       }
     },
@@ -144,7 +146,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/results/20261023T010330688Z-cw-examples-codex-long-handoff-original-examples-886c9281-ccc8-49a1-ab7c-d3cf7face16d-z4_l5di3.json",
           "sha256": "2e90b56d0bb8843ab69b6365907636f219fcaa1af95d029a9911aab147805648",
-          "version": "2"
+          "version": "2",
+          "git_revision": "16733f97485f59f97cfaaf7d81439ea8ab1c007f"
         }
       }
     },
@@ -192,7 +195,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/results/20261023T010443848Z-cw-examples-codex-long-handoff-original-body-e915d642-3cfe-4d94-834f-0c24da928d38-_s9iqagw.json",
           "sha256": "fc6a25714558b853b7370d547fafd46186723168f14e0c0a7ad12dc08167f03e",
-          "version": "2"
+          "version": "2",
+          "git_revision": "16733f97485f59f97cfaaf7d81439ea8ab1c007f"
         }
       }
     },
@@ -240,7 +244,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/results/20261023T010542011Z-cw-examples-codex-long-handoff-original-body-642bd1f1-d21d-41ce-aa42-7f68113fb5ea-tfemnilb.json",
           "sha256": "8774647f7ea5d059505f86c73eed30fbe2ac13ade404ee43a02998a82bd10aa8",
-          "version": "2"
+          "version": "2",
+          "git_revision": "16733f97485f59f97cfaaf7d81439ea8ab1c007f"
         }
       }
     },
@@ -288,7 +293,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/results/20261023T010707460Z-cw-examples-codex-long-handoff-original-examples-beb4f08f-e1b3-4357-9760-ccaadd6d16e4-2_zi0zli.json",
           "sha256": "715afbbebb23726601a2140b7600500d7d43a1a5081d23bbb27810aee84285c9",
-          "version": "2"
+          "version": "2",
+          "git_revision": "16733f97485f59f97cfaaf7d81439ea8ab1c007f"
         }
       }
     }

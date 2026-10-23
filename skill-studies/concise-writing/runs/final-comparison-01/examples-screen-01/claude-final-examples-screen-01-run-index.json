@@ -48,7 +48,8 @@
         "record": {
           "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/results/20261023T010814494Z-cw-examples-claude-long-handoff-original-examples-fbc3683d-9f8e-464e-9e06-74202c743f96-w7a2hzdu.json",
           "sha256": "8219d6ffa630b7c471a038e890f5dc56d9655c62c96ee94dbbb763c4e63c91c2",
-          "version": "2"
+          "version": "2",
+          "git_revision": "16733f97485f59f97cfaaf7d81439ea8ab1c007f"
         }
       }
     }
