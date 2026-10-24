@@ -254,7 +254,7 @@ The earlier 15-subject/one-review proposal remains unapproved and does not autom
 
 ### Validation: compact-regression-01
 
-Status: owner-approved; six configurations/cards prepared, source freeze/readiness pending; no subjects dispatched.
+Status: owner-approved; source commit recorded in [source freeze](runs/compact-regression-01/preparation/source-freeze.json), six manifests frozen, offline preparation and collection readiness pass; no subjects dispatched.
 Owner authority, 2026-10-24: “ok, let's move forward with more testing” accepts the preceding proposal for eleven finalist subjects and one cross-model output review; the accidental standalone count edit was removed and exact previously tested bytes verified before preparation.
 Question: does the preferred compact finalist meet existing repair contracts across initiating changes, moved links and local corrections, and select appropriately in the existing Claude native tasks?
 Scope: three explicit repair cases twice each; two native trigger cases twice each; one unrelated native non-use check. Sole condition finalist, SHA-256 f1f297f213855f9b53835dd084b2be6d3d9134cadab47babea08cbdaad9a205e (814 words). Existing task/project/prompt bytes stay unchanged; no old-version/no-target arm.

@@ -3,9 +3,9 @@
   "manifest_id": "ssr-compact-regression-01-local-change",
   "study_id": "sweeping-stale-references",
   "case_id": "local-change",
-  "status": "draft",
+  "status": "frozen",
   "created_at": "2026-10-24",
-  "source_revision": "",
+  "source_revision": "e973e1168b741538a79e3404166f57a644a967b9",
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
