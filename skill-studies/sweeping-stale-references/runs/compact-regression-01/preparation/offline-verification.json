@@ -1,0 +1,74 @@
+{
+  "status": "passed",
+  "model_calls": 0,
+  "six_configs_materialized": [
+    {
+      "case_id": "initiating-change",
+      "fixture_count": 12,
+      "exact_materialized_membership": true,
+      "all_bytes_equal": true,
+      "prompt_mode": "explicit",
+      "configuration_sha256": "2f52f5a9f0f23664596828fb411aa49e5648174291f764f7964a89c8048cb66a"
+    },
+    {
+      "case_id": "invocation-change",
+      "fixture_count": 12,
+      "exact_materialized_membership": true,
+      "all_bytes_equal": true,
+      "prompt_mode": "native",
+      "configuration_sha256": "459e90665f4450818ffd7391ea993dc2e935e740a461d01d4aeb1be66d4e3540"
+    },
+    {
+      "case_id": "invocation-review",
+      "fixture_count": 11,
+      "exact_materialized_membership": true,
+      "all_bytes_equal": true,
+      "prompt_mode": "native",
+      "configuration_sha256": "518df3ba8c0031a63ffb42eca5bbd32fa0c411529026eea17d1fd25f93a0d288"
+    },
+    {
+      "case_id": "invocation-unrelated",
+      "fixture_count": 12,
+      "exact_materialized_membership": true,
+      "all_bytes_equal": true,
+      "prompt_mode": "native",
+      "configuration_sha256": "b5a8e21ae3f11e772177c5d1144cc190ff962549c4a9e7f3d6b0a1742016f262"
+    },
+    {
+      "case_id": "local-change",
+      "fixture_count": 9,
+      "exact_materialized_membership": true,
+      "all_bytes_equal": true,
+      "prompt_mode": "explicit",
+      "configuration_sha256": "792092735fe3a45eac59d58e816ea78d5a32d3e346584d1a47e30e066f1ae8f8"
+    },
+    {
+      "case_id": "moved-guide",
+      "fixture_count": 11,
+      "exact_materialized_membership": true,
+      "all_bytes_equal": true,
+      "prompt_mode": "explicit",
+      "configuration_sha256": "1ab47a65b2af606e4795b0726de70a5849ad54b26e3fbc2de365485137bbac26"
+    }
+  ],
+  "same_runtime_installed_qualification_inventory_verified": {
+    "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/qualification.inventory.json",
+    "sha256": "7dc16083c6869982ca83e619bf97d1a764503df13e18437a779ff985d5d15b3f",
+    "version": "1"
+  },
+  "runtime_hashes_verified": {
+    "claude": {
+      "path": "/opt/homebrew/Caskroom/claude-code@latest/2.1.308/claude",
+      "sha256": "ca923c86ac84b30574a82331a05b6e066c27477a926ceaffe46a845a33e4dd37"
+    },
+    "python": {
+      "path": "/opt/homebrew/Cellar/python@3.14/3.14.9/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+      "sha256": "eef18fb5631f0054c2706a24f7f75fd716c9dc3c9a3b0f261f2f87b6385ae2af"
+    },
+    "git": {
+      "path": "/opt/homebrew/Cellar/git/2.56.0_1/bin/git",
+      "sha256": "40163333061f7223ecb604ed0f12988cfc8096d57ca8b1db006d410d4aeb700e"
+    }
+  },
+  "note": "Native catalog/description/lazy body mechanism qualified on identical CLI/runtime; actual production catalogs/loading/edit events rechecked. One unchanged project skill plus provider bundled skills; no full-bundle competition claim."
+}

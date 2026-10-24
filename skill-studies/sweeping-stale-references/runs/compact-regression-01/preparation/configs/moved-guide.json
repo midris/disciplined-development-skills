@@ -1,0 +1,57 @@
+{
+  "schema_version": "0.2",
+  "id": "ssr-compact-regression-moved-guide",
+  "prompt": "../prompts/moved-guide.md",
+  "fixtures": [
+    {
+      "source": "../../../../cases/moved-guide/claude-comparison.gitignore",
+      "target": ".gitignore"
+    },
+    {
+      "source": "../../../../cases/pilot-02/fixture/README.md",
+      "target": "README.md"
+    },
+    {
+      "source": "../../../../cases/pilot-02/fixture/docs/index.md",
+      "target": "docs/index.md"
+    },
+    {
+      "source": "../../../../cases/pilot-02/fixture/docs/reference/setup.md",
+      "target": "docs/reference/setup.md"
+    },
+    {
+      "source": "../../../../cases/pilot-02/fixture/docs/tutorials/quickstart.md",
+      "target": "docs/tutorials/quickstart.md"
+    },
+    {
+      "source": "../../../../cases/pilot-02/fixture/plans/completed/docs-layout.md",
+      "target": "plans/completed/docs-layout.md"
+    },
+    {
+      "source": "../../../../cases/pilot-02/fixture/scripts/export-guide.sh",
+      "target": "scripts/export-guide.sh"
+    },
+    {
+      "source": "../../../../cases/pilot-02/fixture/vendor/widget/README.md",
+      "target": "vendor/widget/README.md"
+    },
+    {
+      "source": "../../../../cases/pilot-02/fixture/vendor/widget/setup.md",
+      "target": "vendor/widget/setup.md"
+    },
+    {
+      "source": "../../../../cases/pilot-02/task.md",
+      "target": "TASK.md"
+    },
+    {
+      "source": "../../../../drafts/compact-rewrite/finalist/SKILL.md",
+      "target": ".claude/skills/sweeping-stale-references/SKILL.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}

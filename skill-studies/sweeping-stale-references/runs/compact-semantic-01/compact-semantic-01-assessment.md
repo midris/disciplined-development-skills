@@ -92,7 +92,8 @@ Most overviews explicitly spell out initial attempt plus up to three retries; O3
 Both forms meet the complete useful-outcome contract; no consequential clarity or preservation regression is identified.
 
 The finalist remains a reasonable compact candidate: 814 words versus 923 comprehensive and 1,182 baseline, retaining the exact original rationalization table.
-That is a simplification rationale, not a demonstrated behavioral improvement or a selection threshold.
+The owner subsequently selected skill size as the tie-breaker when other things are equal; the [protocol decision](../../protocol.md#comparison-compact-semantic-01) therefore favors the compact finalist at this checkpoint.
+This is a preference based on comparable observed outcomes and smaller instructions, without claiming behavioral improvement or erasing the mixed procedural evidence.
 This fresh explicit-load batch does not reproduce the older loaded failure and cannot explain it away; different CLI strata, context and repetitions preclude pooling.
 
 Recommendation: stop repeating this semantic case and consider one bounded regression of the unchanged finalist against the comprehensive base on existing initiating-change, moved-guide and local-change cases.

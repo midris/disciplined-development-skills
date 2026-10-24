@@ -1,0 +1,33 @@
+{
+  "qualified": {
+    "claude": {
+      "path": "/opt/homebrew/Caskroom/claude-code@latest/2.1.308/claude",
+      "sha256": "ca923c86ac84b30574a82331a05b6e066c27477a926ceaffe46a845a33e4dd37"
+    },
+    "python": {
+      "path": "/opt/homebrew/Cellar/python@3.14/3.14.9/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+      "sha256": "eef18fb5631f0054c2706a24f7f75fd716c9dc3c9a3b0f261f2f87b6385ae2af"
+    },
+    "git": {
+      "path": "/opt/homebrew/Cellar/git/2.56.0_1/bin/git",
+      "sha256": "40163333061f7223ecb604ed0f12988cfc8096d57ca8b1db006d410d4aeb700e"
+    }
+  },
+  "claude_version": "2.1.308",
+  "python_version": "3.14.9",
+  "git_version": "2.56.0",
+  "runtime_setup": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/runtime_setup.py",
+  "qualification": {
+    "status": "passed",
+    "model_calls": 0,
+    "tests": 5,
+    "evidence": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/qualification",
+    "inventory": {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/qualification.inventory.json",
+      "sha256": "7dc16083c6869982ca83e619bf97d1a764503df13e18437a779ff985d5d15b3f",
+      "version": "1"
+    },
+    "native_reader_transport": "Reuse final CW screen same-binary qualification; actual tools and read timing checked on production review."
+  },
+  "reuse": "Exact executable hashes and unchanged sandbox/wrapper verified for 2026-10-24; reuse compact-semantic-01 installed qualification and audited native-reader-only review transport. Offline fixture/description/prompt membership and actual production events checked again."
+}

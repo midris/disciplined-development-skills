@@ -1,0 +1,163 @@
+{
+  "format_version": "1",
+  "manifest_id": "ssr-compact-regression-01-local-change",
+  "study_id": "sweeping-stale-references",
+  "case_id": "local-change",
+  "status": "draft",
+  "created_at": "2026-10-24",
+  "source_revision": "",
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "684d76df079a1359f998a06f64c98e6234fdb85c71af0969ba99bfa176521708",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/sweeping-stale-references/protocol.md",
+      "sha256": "d15cde0ca8b237f2d5f83bf12a404aadb4a99663086d13ef08a5d264f9eee77a",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "a90ca386d0b267632b01d8cd0bce8ba4bb4010999c3481e74a318b4d17675e40",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result-v2.schema.json",
+      "sha256": "81902ed03e807804404c0d6ba7a0092a1c311c9eef45ee88c89708ce50d7c2c2",
+      "version": "2"
+    },
+    "policy": {
+      "path": "skill-studies/sweeping-stale-references/assessment-policies/SSR-assessment-3.txt",
+      "sha256": "5d057d11f678ae3fa63c48957446aded13ccc5dcb8babab2856d0232d49e08bb",
+      "version": "SSR-assessment-3"
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/criteria/local-change.md",
+        "sha256": "6b33f07aca5ca41f0dd09b51a66404c6e3f7029bcc5cfda33a0d58333fbb8bd6",
+        "version": "5"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "finalist",
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/local-change.json",
+        "sha256": "792092735fe3a45eac59d58e816ea78d5a32d3e346584d1a47e30e066f1ae8f8",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/sweeping-stale-references/drafts/compact-rewrite/finalist/SKILL.md"
+    }
+  ],
+  "subject_sources": [
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/claude-comparison.gitignore",
+      "sha256": "25b48a27d48b2bb74e9953545e5d264de141bbc35fed11a9895033aaec4a3837",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/fixture/README.md",
+      "sha256": "e0864145d14cbb34906a8013552375f51cd6229e11cab1b86c9f49f93712999b",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/fixture/archive/2024-membership.md",
+      "sha256": "42ab9ea6404eb9d9efea77a768e6e9b3abbee5331ccd541cfb6e55960d702d47",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/fixture/config/account.json",
+      "sha256": "8bfd24d96962f4ed647f95009a87cf8f08ecd0f4b152c88e05b44b064560ed85",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/fixture/docs/billing.md",
+      "sha256": "8649eba204ece9d490b9506718b805e0cee69dfaad9e975d5232e87a5fa5b028",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/fixture/docs/glossary.md",
+      "sha256": "8330f2c33fb2c6020088abba05b8f7e2eb741b543da73b9e5e89dcaea852a6ec",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/fixture/docs/shipping.md",
+      "sha256": "8e7974b71367741874b70676bbb7105d0c501d02bb2aa6b0743456265f64dea0",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/task.md",
+      "sha256": "088ebc09534a24ec492db6779fd05f6ffe77e87c157f8f45f04b0b18209347ad",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/drafts/compact-rewrite/finalist/SKILL.md",
+      "sha256": "f1f297f213855f9b53835dd084b2be6d3d9134cadab47babea08cbdaad9a205e",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/prompts/local-change.md",
+      "sha256": "2ab1012e470f5ad978d8f758c974e31b8a6276831cf1eee2527011322deb26b1",
+      "version": null
+    }
+  ],
+  "controller_only": [
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/runtime_setup.py",
+      "sha256": "91c8a2a5fccaa22affc662fe8824a2502be8e373e363520f21033a25838afdb2",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/claude-comparison-assessment.md",
+      "sha256": "69b8ed4ed757a5dc11ba000e52719ae61606b4554916a2d4596e9c611553da7f",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/expected.md",
+      "sha256": "c9000020e418a56c56c96886a7863333a53e955464f22d30fd666ca43edcf26d",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/evaluation/prompt.md",
+      "sha256": "39b80540f91d757ea200ac9adcd311ceac7c8f1c46cd82dd478f15303cb14c4e",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/README.md",
+      "sha256": "51ddc65d89829eb28783ac5643ddf5a0c4f9b85be4f7bbc9322a561e1e53290c",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/interpretation.md",
+      "sha256": "c63299af03b1c212e0eb096009cef24a31a35cfba8545bbe33c4350296aa1c0d",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/runtime-identities.json",
+      "sha256": "efd2294d2aa4261f642e0af0ceef93e4aa112bae51c78503b6380988b13b9444",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/schedule.json",
+      "sha256": "8a3bf0f17c06b2e7621f1154985af5cdfd967d3a75bf5e673c7efd4944babcbc",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/comprehensive-comparison-02/invocation-pressure-preparation.md",
+      "sha256": "9bdf14d5acdf1113607c5b845a06f642470218f0047667ebbe6029b8226bd477",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/test_expansion_fixtures.py",
+      "sha256": "ed5b962883e76be91a6b1c3d66e2b03ecc25b9509cd68c9ffe638c62696011a8",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/offline-verification.json",
+      "sha256": "7e6ea3dea0ffc3cde1b2669843871c0985490d40af279b337bb9023c8469b23e",
+      "version": null
+    }
+  ]
+}

@@ -2,8 +2,8 @@
 
 Format version: `1`
 Study ID: `sweeping-stale-references`
-Status: all authorized comparison batches are complete; the owner selected the comprehensive rewrite as the development base and accepts its changed local reporting. The original and tested rewrite snapshots remain preserved; no new skill version is adopted.
-Current action: [compact-semantic-01](runs/compact-semantic-01/compact-semantic-01-assessment.md) is complete: all fifteen explicit-load subjects are valid and functionally successful, and the sole audited Opus review independently agrees on all 45 functional factors. The compact finalist preserves performance on this exposed case without demonstrated functional improvement. Consider the assessment's bounded existing-case regression recommendation; no later batch, retry, edit or adoption is authorized. Preserve all tested/draft skill bytes. Current combined accounting remains in [CW accounting](../concise-writing/protocol.md#storage-and-accounting).
+Status: earlier comparison batches are complete; compact-finalist validation is owner-approved; the owner selected the comprehensive rewrite as the development base and accepts its changed local reporting. The original and tested rewrite snapshots remain preserved; no new skill version is adopted.
+Current action: owner approved [compact-regression-01](#validation-compact-regression-01) on 2026-10-24: eleven unchanged-finalist subjects and one output review. Freeze/readiness precede collection; preserve the completed semantic comparison and existing user changes. No automatic retry, candidate edit, extra case or adoption is included. The [CW accounting](../concise-writing/protocol.md#storage-and-accounting) owns combined spending.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](runs/core-baseline-01/core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -252,6 +252,40 @@ These are proposed teaching changes under a draft contract, not amendments to fr
 No subject/evaluator/authoring-model call, new ceiling, test configuration, deployment or adoption is authorized; writing-skills model validation remains unperformed.
 The earlier 15-subject/one-review proposal remains unapproved and does not automatically cover this candidate or the desired version comparison.
 
+### Validation: compact-regression-01
+
+Status: owner-approved; six configurations/cards prepared, source freeze/readiness pending; no subjects dispatched.
+Owner authority, 2026-10-24: “ok, let's move forward with more testing” accepts the preceding proposal for eleven finalist subjects and one cross-model output review; the accidental standalone count edit was removed and exact previously tested bytes verified before preparation.
+Question: does the preferred compact finalist meet existing repair contracts across initiating changes, moved links and local corrections, and select appropriately in the existing Claude native tasks?
+Scope: three explicit repair cases twice each; two native trigger cases twice each; one unrelated native non-use check. Sole condition finalist, SHA-256 f1f297f213855f9b53835dd084b2be6d3d9134cadab47babea08cbdaad9a205e (814 words). Existing task/project/prompt bytes stay unchanged; no old-version/no-target arm.
+Inclusion: descriptive-only; Include all valid-setup executions regardless of outcome. Keep invalid setup, unknown evidence and unattempted slots explicit. No automatic retry or replacement. Two repetitions are development checks, not reliability estimates.
+Budget: eleven subjects and one evaluator; combined ceilings rise to 668 subject/50 evaluator (726 total with unchanged 4/4 authoring/retry ceilings). No pool transfer or allocated retry. Active-work forecast: 60 minutes including qualification/freeze, waits, retention/assessment, review/audit and reporting; time is a guideline.
+Runtime: same pinned Claude Code 2.1.308, claude-opus-5-5 low, workspace-write and 900-second limit; reviewer Opus medium read-only. [Identities](runs/compact-regression-01/preparation/runtime-identities.json) reuse exact-hash installed qualification and unchanged toolchain/sandbox/native-reader wrapper; no runtime permissions change.
+Setup: provider-free config materialization verifies every supplied byte, task/prompt parity, trigger-only description and controller separation. Inspect actual catalogs/model/body/edit timing and terminal cleanup per subject; first native observation is retained/inspected before proceeding.
+Assessment: SSR-assessment-3, inherited case outcomes and applicability-only cards. Explicit cases use F1–F3/P1–P3; positive native cases F1–F3/D1; unrelated D1 only with functional outcome not measured. Local finalist P3 follows the accepted comprehensive positive-inventory branch; historical criteria/results remain unchanged. Keep broader own-body observations separate.
+Interpretation: [prospective rules](runs/compact-regression-01/preparation/interpretation.md), complete-project semantic inspection and existing case-specific units/alternatives. This validates the finalist against contracts, not contemporary superiority/non-inferiority, causal contribution, held-out transfer or full-catalog discovery.
+Inputs: [preparation](runs/compact-regression-01/preparation/README.md); [initiating manifest](runs/compact-regression-01/preparation/manifests/initiating-change-manifest.json), [moved manifest](runs/compact-regression-01/preparation/manifests/moved-guide-manifest.json), [local manifest](runs/compact-regression-01/preparation/manifests/local-change-manifest.json), [native-change manifest](runs/compact-regression-01/preparation/manifests/invocation-change-manifest.json), [native-review manifest](runs/compact-regression-01/preparation/manifests/invocation-review-manifest.json), [non-use manifest](runs/compact-regression-01/preparation/manifests/invocation-unrelated-manifest.json).
+Commands: invoke existing runner once for each CONFIG through the unchanged qualified wrapper. Retain every stopped bundle with docs retain under this batch/order and full committed authority revision; inspect/score before the next slot. Git and runtime replays use disposable copies only.
+Storage: /Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/, one verified inventory per complete bundle under the existing accepted single-host arrangement; raw traces and scratch controllers stay outside Git.
+Attempt index: [compact-regression-01-run-index.json](runs/compact-regression-01/compact-regression-01-run-index.json).
+Output review: one fresh Opus-medium native Read/Glob/Grep-only session covers all eleven complete outputs and source/task/card/policy/neutral facts, judging 30 F1–F3 factors for ten repairs and keeping unrelated not measured. [Fixed prompt](runs/compact-regression-01/evaluation/prompt.md) is frozen before subjects; packet identities are frozen after subjects before dispatch. No skill bodies, hypotheses or traces supplied. Audit complete input delivery, actual read-only/model/tools/unchanged protected bytes, full independent first pass before separate prior access, and semantic evidence; preserve post-prior changes separately. D1/P1–P3 remain active-session trace judgments.
+Stopping: no behavioral early stop. Stop for unresolved charge/cleanup, retention failure, runtime/input drift, contamination, missing required capture or invalid native availability. No automatic retry/replacement, mid-batch edit, extra calls or adoption. An incomplete review stops the decision without a replacement call.
+Checkpoint: report functional outcomes, five native selection/non-use judgments, procedural defects and review disagreements separately. The owner prefers smaller complete skills when otherwise comparable; material outcome/preservation or selection problems require explanation. Reporting-only defects do not automatically trigger another rewrite. End this scope with an adoption/testing recommendation for owner decision.
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | initiating-change | finalist | 1 | `skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/initiating-change.json` |
+| 2 | invocation-change | finalist | 1 | `skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/invocation-change.json` |
+| 3 | moved-guide | finalist | 1 | `skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/moved-guide.json` |
+| 4 | invocation-review | finalist | 1 | `skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/invocation-review.json` |
+| 5 | local-change | finalist | 1 | `skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/local-change.json` |
+| 6 | invocation-unrelated | finalist | 1 | `skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/invocation-unrelated.json` |
+| 7 | initiating-change | finalist | 2 | `skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/initiating-change.json` |
+| 8 | invocation-review | finalist | 2 | `skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/invocation-review.json` |
+| 9 | moved-guide | finalist | 2 | `skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/moved-guide.json` |
+| 10 | invocation-change | finalist | 2 | `skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/invocation-change.json` |
+| 11 | local-change | finalist | 2 | `skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/local-change.json` |
+
 ### Comparison: compact-semantic-01
 
 Status: complete; all fifteen subjects retained and assessed with valid setup, sole output review audited. Source inputs were frozen at `3800c049ab0496964c264e911bda8235f5b909ad`; installed-runtime qualification and collection readiness passed before dispatch. See [assessment](runs/compact-semantic-01/compact-semantic-01-assessment.md).
@@ -274,6 +308,9 @@ Checkpoint: inspect every failure and compare passing-output quality. All-succes
 Completed checkpoint, 2026-10-23: original/comprehensive/finalist each meet F1–F3 in 5/5 observations; P3 meets 5/5, 2/5, 3/5 respectively under the fixed semantic-block unit, with broader claim/grouping defects reported separately.
 The sole review read all 22 complete required inputs before first pass, agrees on 45/45 functional factors and changed no judgments after prior access; all 23 protected fixtures and raw inventory verify.
 Observed post-edit search/accounting differences do not establish functional superiority or full conformance. The assessment recommends existing initiating-change, moved-guide and local-change regression against the comprehensive base as a possible next bounded decision; no new calls follow automatically.
+Owner decision, 2026-10-23: with other things equal, skill size is the tie-breaker; prefer the smaller complete skill without requiring a functional improvement.
+Applied to this checkpoint, the 814-word compact finalist is the preferred candidate over the 923-word comprehensive rewrite and 1,182-word baseline.
+Keep the recorded procedural differences and coverage limits visible; this preference changes neither scores nor the existing scope for further runs or adoption.
 
 | Order | Case | Condition | Repetition | CONFIG |
 |---:|---|---|---:|---|
@@ -671,8 +708,9 @@ The [CW accounting](../concise-writing/protocol.md#storage-and-accounting) owns 
 All ten expansion slots, both 34-call comparison batches, both Claude smoke calls and all ten Opus invocation calls are spent.
 
 Current SSR-linked mechanical accounting includes the fixed 136-call historical subtotal above plus compact-semantic-01 and its separate [evaluator ledger](runs/compact-semantic-01/evaluation/evaluator-run-index.json).
-For this subset, the historical spent subtotal plus the newly authorized scope gives 151 subject, 1 evaluator, 0 authoring and 0 retry invocations; this is an accounting projection, not a new allocation or pool transfer.
-Dispatched calls are **151 subject, 1 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **0 / 0 / 0 / 0** for this subset.
+The current validation adds its [subject index](runs/compact-regression-01/compact-regression-01-run-index.json) and [evaluator ledger](runs/compact-regression-01/evaluation/evaluator-run-index.json).
+For this subset, the historical spent subtotal plus the newly authorized scope gives 162 subject, 2 evaluator, 0 authoring and 0 retry invocations; this is an accounting projection, not a new allocation or pool transfer.
+Dispatched calls are **151 subject, 1 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **11 / 1 / 0 / 0** for this subset.
 The CW protocol remains authoritative for all current combined spending and outer ceilings; no historical unspent pool is revived.
 Sequential readiness used identical externally frozen scores; the final index pins the canonical repository results at their committed revision.
 

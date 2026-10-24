@@ -1,0 +1,93 @@
+{
+  "batch": "compact-regression-01",
+  "slots": [
+    {
+      "order": 1,
+      "case_id": "initiating-change",
+      "condition": "finalist",
+      "repetition": 1,
+      "config": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/initiating-change.json",
+      "mode": "explicit"
+    },
+    {
+      "order": 2,
+      "case_id": "invocation-change",
+      "condition": "finalist",
+      "repetition": 1,
+      "config": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/invocation-change.json",
+      "mode": "native"
+    },
+    {
+      "order": 3,
+      "case_id": "moved-guide",
+      "condition": "finalist",
+      "repetition": 1,
+      "config": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/moved-guide.json",
+      "mode": "explicit"
+    },
+    {
+      "order": 4,
+      "case_id": "invocation-review",
+      "condition": "finalist",
+      "repetition": 1,
+      "config": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/invocation-review.json",
+      "mode": "native"
+    },
+    {
+      "order": 5,
+      "case_id": "local-change",
+      "condition": "finalist",
+      "repetition": 1,
+      "config": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/local-change.json",
+      "mode": "explicit"
+    },
+    {
+      "order": 6,
+      "case_id": "invocation-unrelated",
+      "condition": "finalist",
+      "repetition": 1,
+      "config": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/invocation-unrelated.json",
+      "mode": "native"
+    },
+    {
+      "order": 7,
+      "case_id": "initiating-change",
+      "condition": "finalist",
+      "repetition": 2,
+      "config": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/initiating-change.json",
+      "mode": "explicit"
+    },
+    {
+      "order": 8,
+      "case_id": "invocation-review",
+      "condition": "finalist",
+      "repetition": 2,
+      "config": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/invocation-review.json",
+      "mode": "native"
+    },
+    {
+      "order": 9,
+      "case_id": "moved-guide",
+      "condition": "finalist",
+      "repetition": 2,
+      "config": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/moved-guide.json",
+      "mode": "explicit"
+    },
+    {
+      "order": 10,
+      "case_id": "invocation-change",
+      "condition": "finalist",
+      "repetition": 2,
+      "config": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/invocation-change.json",
+      "mode": "native"
+    },
+    {
+      "order": 11,
+      "case_id": "local-change",
+      "condition": "finalist",
+      "repetition": 2,
+      "config": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/local-change.json",
+      "mode": "explicit"
+    }
+  ]
+}
