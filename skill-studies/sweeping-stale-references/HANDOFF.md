@@ -13,6 +13,7 @@ Read the [protocol opening](protocol.md) for current status, owner decisions and
 The [2026-10-22 resumption audit](../../reviews/2026-10-22-ssr-resumption-audit.md) records the completed post-CW audit, whole-draft review and unapproved next-experiment recommendation; the owner explicitly directed no model runs.
 The [compact-rewrite exploration](drafts/compact-rewrite/README.md) retains three drafts, their baseline/comprehensive comparison and the synthesized finalist; follow the protocol opening for completed validation and the pending adoption decision.
 The [CW model alignment](protocol.md#cw-model-alignment) distinguishes completed SSR evidence from remaining preparation under the adopted methodology; it grants no additional model calls.
+The [completion proposal](../../plans/specs/2026-10-24-ssr-cw-aligned-validation.md) and its draft inputs are prepared for owner selection; no new collection is authorized or frozen.
 Preserve settled scenarios, criteria and historical identities; do not derive a baseline from a candidate or rescore old records to continue.
 SSR's [core assessment](runs/core-baseline-01/core-baseline-01-assessment.md) records an unresolved Shiv category boundary: its P3 counts are not three established skill defects and do not independently justify a rewrite.
 Controller criteria, manifests and revealing evidence remain outside subject context; raw evidence stays in the protocol's external stores.

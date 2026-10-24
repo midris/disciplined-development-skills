@@ -1,0 +1,85 @@
+{
+  "case_id": "invocation-verification",
+  "status": "proposed; controller-only facts",
+  "functional_result": "not measured",
+  "test_command": "python3 -B -m unittest discover -s tests",
+  "expected_test_count": 3,
+  "expected_exit": 0,
+  "expected_reply": "Tests passed.",
+  "project_changes_expected": false,
+  "commits_expected": false,
+  "current_consistent_rename_paths": [
+    "README.md",
+    "config/defaults.json",
+    "docs/session-policy.md",
+    "scripts/show-session.py",
+    "src/session.py",
+    "tests/test_session.py"
+  ],
+  "source_project_provenance": [
+    {
+      "target": "README.md",
+      "source": "skill-studies/sweeping-stale-references/cases/initiating-change/fixture/README.md",
+      "source_sha256": "e1973f3af6490a611eb92059576e03d7bcfb726298d220f83e57369af6410c78",
+      "transformation": "retire old key and current concept name",
+      "fixture_sha256": "c87e4afce8521b85dc30d2e44a1f35ca94accc8848f4680c1c7a2c83fa05fb4d"
+    },
+    {
+      "target": "archive/rollout-2024.md",
+      "source": "skill-studies/sweeping-stale-references/cases/initiating-change/fixture/archive/rollout-2024.md",
+      "source_sha256": "a2354de6353bc947ef4914633f37ac7c5d19833734f505358d77483558fca264",
+      "transformation": "unchanged protected history/vendor",
+      "fixture_sha256": "a2354de6353bc947ef4914633f37ac7c5d19833734f505358d77483558fca264"
+    },
+    {
+      "target": "config/defaults.json",
+      "source": "skill-studies/sweeping-stale-references/cases/initiating-change/fixture/config/defaults.json",
+      "source_sha256": "39173e527c02bb8051ec44867f13777a70bd956a47a94a9a041eea2b12da9828",
+      "transformation": "retire old key and current concept name",
+      "fixture_sha256": "1c17cca63c9b3e7d0804f983643786ea75f17b64a099a5b75bd6001c9a518bd2"
+    },
+    {
+      "target": "docs/session-policy.md",
+      "source": "skill-studies/sweeping-stale-references/cases/initiating-change/fixture/docs/session-policy.md",
+      "source_sha256": "6d5fe8c33e0fef06a6734d4aca5d40f29e26ca6c1f7b64b4fb93708e7e2efa76",
+      "transformation": "retire old key and current concept name",
+      "fixture_sha256": "471188ec72adac025536dc04f7af871423b3678a08a99a69e5a74da613f47d48"
+    },
+    {
+      "target": "scripts/show-session.py",
+      "source": "skill-studies/sweeping-stale-references/cases/initiating-change/fixture/scripts/show-session.py",
+      "source_sha256": "815923fcce071b2f077fc76b972d193e8ee88611b9f1418f64cd9d9f36a4f331",
+      "transformation": "retire old key and current concept name",
+      "fixture_sha256": "363849394f492cbe47a867fdd6ba7456d6ec109a85d4c2dd262cdafa876ddf12"
+    },
+    {
+      "target": "src/session.py",
+      "source": "skill-studies/sweeping-stale-references/cases/initiating-change/fixture/src/session.py",
+      "source_sha256": "26b396a47f08e7312600c59e759c570e3e8e9888207e238e4755b8018cfae248",
+      "transformation": "retire old key and current concept name",
+      "fixture_sha256": "120ca715b67d11813785079a8e6a2b219439e413353f5cf5bd3d503eede8e456"
+    },
+    {
+      "target": "tests/test_session.py",
+      "source": "skill-studies/sweeping-stale-references/cases/initiating-change/fixture/tests/test_session.py",
+      "source_sha256": "d092547b68039f16d231e5b11297c277f21cf91623b5db2cd1301730f35ea10b",
+      "transformation": "retire old key and current concept name",
+      "fixture_sha256": "4dd7c1d5643c51a6f72d130b6d10fabc5279d1d5ba83be285556cbd6463f84d4"
+    },
+    {
+      "target": "vendor/partner/README.md",
+      "source": "skill-studies/sweeping-stale-references/cases/initiating-change/fixture/vendor/partner/README.md",
+      "source_sha256": "45940528ad7f26ca62ed012f4b9d5c7c3f99a4e761f418b033e2267810d83197",
+      "transformation": "unchanged protected history/vendor",
+      "fixture_sha256": "45940528ad7f26ca62ed012f4b9d5c7c3f99a4e761f418b033e2267810d83197"
+    },
+    {
+      "target": "vendor/partner/example.json",
+      "source": "skill-studies/sweeping-stale-references/cases/initiating-change/fixture/vendor/partner/example.json",
+      "source_sha256": "33fbf6018f8b275d3c286f93903484ed67bbe83d291d698a88f7316bfe85ff24",
+      "transformation": "unchanged protected history/vendor",
+      "fixture_sha256": "33fbf6018f8b275d3c286f93903484ed67bbe83d291d698a88f7316bfe85ff24"
+    }
+  ],
+  "claims": "Verification of a settled tree, not changing a fact, reviewing stale references or making a repair proposal. Old archive/vendor encodings are intentional and independent."
+}

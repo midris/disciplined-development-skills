@@ -1,0 +1,34 @@
+{
+  "status": "observed executable parity; not a new runtime qualification",
+  "checked_at": "2026-10-24T13:34:31.341929+00:00",
+  "model_calls": 0,
+  "executables_matching_prior_qualification": {
+    "codex": {
+      "path": "/opt/homebrew/Caskroom/codex/0.163.0/bin/codex",
+      "sha256": "8813367285524ac798dd96d1b071aea30d58708c7226fd236cd275cf1cfdee31",
+      "version": "codex-cli 0.163.0"
+    },
+    "claude": {
+      "path": "/opt/homebrew/Caskroom/claude-code@latest/2.1.308/claude",
+      "sha256": "ca923c86ac84b30574a82331a05b6e066c27477a926ceaffe46a845a33e4dd37",
+      "version": "2.1.308 (Claude Code)"
+    },
+    "python": {
+      "path": "/opt/homebrew/Cellar/python@3.14/3.14.9/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+      "sha256": "eef18fb5631f0054c2706a24f7f75fd716c9dc3c9a3b0f261f2f87b6385ae2af",
+      "version": "Python 3.14.9"
+    },
+    "git": {
+      "path": "/opt/homebrew/Cellar/git/2.56.0_1/bin/git",
+      "sha256": "40163333061f7223ecb604ed0f12988cfc8096d57ca8b1db006d410d4aeb700e",
+      "version": "git version 2.56.0"
+    }
+  },
+  "qualification_source": {
+    "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/runtime-identities.json",
+    "sha256": "3751c76e9f2bce8716a19dcd02e50d7d3026ed29a41a2002a5595f788a9f653b"
+  },
+  "wrapper": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/runtime_setup.py",
+  "before_freeze": "Verify inventories of applicable retained qualification evidence, matching grants/wrapper and current login; run affected zero-model checks if needed. Production model/catalog/loading/capture/cleanup still require actual observations.",
+  "startup_note": "codex --version reported 0.163.0 with a PATH-alias permission warning outside the prepared runner; claude --version reported 2.1.308. These version reads started no subjects."
+}

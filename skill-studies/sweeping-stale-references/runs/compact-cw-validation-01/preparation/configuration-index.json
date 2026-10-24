@@ -1,0 +1,141 @@
+{
+  "status": "draft; configurations are not authorization",
+  "configurations": [
+    {
+      "provider": "codex",
+      "case_id": "semantic-delivery",
+      "condition": "candidate",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-semantic-delivery-candidate.json"
+    },
+    {
+      "provider": "codex",
+      "case_id": "semantic-delivery",
+      "condition": "finalist",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-semantic-delivery-finalist.json"
+    },
+    {
+      "provider": "codex",
+      "case_id": "moved-guide",
+      "condition": "finalist",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-moved-guide-finalist.json"
+    },
+    {
+      "provider": "codex",
+      "case_id": "local-change",
+      "condition": "finalist",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-local-change-finalist.json"
+    },
+    {
+      "provider": "codex",
+      "case_id": "invocation-change",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-invocation-change-finalist.json"
+    },
+    {
+      "provider": "codex",
+      "case_id": "invocation-review",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-invocation-review-finalist.json"
+    },
+    {
+      "provider": "codex",
+      "case_id": "invocation-verification",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-invocation-verification-finalist.json"
+    },
+    {
+      "provider": "claude",
+      "case_id": "invocation-verification",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-invocation-verification-finalist.json"
+    },
+    {
+      "provider": "claude",
+      "case_id": "initiating-change",
+      "condition": "finalist",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-initiating-change-finalist.json"
+    },
+    {
+      "provider": "claude",
+      "case_id": "moved-guide",
+      "condition": "finalist",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-moved-guide-finalist.json"
+    },
+    {
+      "provider": "claude",
+      "case_id": "local-change",
+      "condition": "finalist",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-local-change-finalist.json"
+    },
+    {
+      "provider": "claude",
+      "case_id": "invocation-change",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-invocation-change-finalist.json"
+    },
+    {
+      "provider": "claude",
+      "case_id": "invocation-review",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-invocation-review-finalist.json"
+    }
+  ],
+  "inherited_criteria": [
+    {
+      "case_id": "semantic-delivery",
+      "source": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/criteria.md",
+      "source_sha256": "bae6463893e23dba7238e0de74d0accb1ced5d4e22ad04cb7f17bfcebc557253",
+      "draft_card": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/criteria/semantic-delivery.md",
+      "change": "metadata/runtime applicability and relative-link rebasing only"
+    },
+    {
+      "case_id": "initiating-change",
+      "source": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/criteria/initiating-change.md",
+      "source_sha256": "45296dea302c9aeabafa1088e992bb1bb2e1f05fadbade33466cf0e4e4cdd657",
+      "draft_card": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/criteria/initiating-change.md",
+      "change": "metadata/runtime applicability and relative-link rebasing only"
+    },
+    {
+      "case_id": "moved-guide",
+      "source": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/criteria/moved-guide.md",
+      "source_sha256": "630c076beb5ce2a773a04c85121cb6716849abb59cdb8e2ac7acc8eddbb7148d",
+      "draft_card": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/criteria/moved-guide.md",
+      "change": "metadata/runtime applicability and relative-link rebasing only"
+    },
+    {
+      "case_id": "local-change",
+      "source": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/criteria/local-change.md",
+      "source_sha256": "6b33f07aca5ca41f0dd09b51a66404c6e3f7029bcc5cfda33a0d58333fbb8bd6",
+      "draft_card": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/criteria/local-change.md",
+      "change": "metadata/runtime applicability and relative-link rebasing only"
+    },
+    {
+      "case_id": "invocation-change",
+      "source": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/criteria/invocation-change.md",
+      "source_sha256": "83187107886ca25aec78db382b50eef8869d78fe41c0acb1ca81bcdb34ea4ff1",
+      "draft_card": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/criteria/invocation-change.md",
+      "change": "metadata/runtime applicability and relative-link rebasing only"
+    },
+    {
+      "case_id": "invocation-review",
+      "source": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/criteria/invocation-review.md",
+      "source_sha256": "6718bcdbca0a2b8944f8bcc909f8e34f4e26b255b86eaac35495dec738ca209b",
+      "draft_card": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/criteria/invocation-review.md",
+      "change": "metadata/runtime applicability and relative-link rebasing only"
+    }
+  ],
+  "new_negative_card": "skill-studies/sweeping-stale-references/cases/invocation-verification/assessment.md"
+}

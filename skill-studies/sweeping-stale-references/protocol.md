@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `sweeping-stale-references`
 Status: the compact comparison and closing validation batches are complete; remaining-scope preparation follows the CW testing model. Skill adoption remains pending.
-Current action: use the [CW model alignment](#cw-model-alignment) to prepare a bounded remaining-scope proposal before the next adoption decision. All earlier allocations are spent; methodology adoption authorizes no further collection, rewrite or deployment. The [CW accounting](../concise-writing/protocol.md#storage-and-accounting) owns combined spending.
+Current action: owner selection of the [CW-aligned completion proposal](../../plans/specs/2026-10-24-ssr-cw-aligned-validation.md), recommending 55 new subjects/five reviews with matching Opus reuse. Draft configurations and a near-boundary case are prepared; no new allocation, collection, rewrite or deployment is authorized. The [CW accounting](../concise-writing/protocol.md#storage-and-accounting) owns combined spending.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](runs/core-baseline-01/core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -123,7 +123,9 @@ The completed pilot's frozen assessment, manifest and raw bundles retain their o
 
 ### Proposed baseline case selection
 
-This inventory records collected development cases; invocation and pressure designs have now been executed. The heading is retained for existing links; the original three-case scope is complete. All cases are exposed development evidence.
+This inventory distinguishes collected development cases from proposed preparation.
+The heading is retained for existing links; the original three-case scope is complete.
+All cases are exposed development material.
 
 | Case | Membership / exposure | Coverage and limits | Rules and evidence |
 |---|---|---|---|
@@ -138,6 +140,7 @@ This inventory records collected development cases; invocation and pressure desi
 | invocation-change | Measured: Codex, Sonnet and Opus original/rewrite comparisons | Natural selection before an initiating rename | [Case](cases/invocation-change/assessment.md), [preparation](runs/comprehensive-comparison-02/invocation-pressure-preparation.md). |
 | invocation-review | Measured: Codex, Sonnet and Opus original/rewrite comparisons | Natural selection before repairing one reviewer-flagged claim | [Case](cases/invocation-review/assessment.md), [preparation](runs/comprehensive-comparison-02/invocation-pressure-preparation.md). |
 | invocation-unrelated | Measured: Codex, Sonnet and Opus original/rewrite comparisons | No deliberate selection for an unchanged-code explanation | [Case](cases/invocation-unrelated/assessment.md), [preparation](runs/comprehensive-comparison-02/invocation-pressure-preparation.md). |
+| invocation-verification | Proposed, not collected | Near-boundary non-use: run existing tests after an already applied rename; body loading and task observations remain separate | [Case](cases/invocation-verification/assessment.md), [proposal](../../plans/specs/2026-10-24-ssr-cw-aligned-validation.md). |
 | pressure-repair | Measured: Codex and Sonnet original/rewrite comparisons | Complete repair despite handoff, prior-effort and green-test incentives | [Case](cases/pressure-repair/assessment.md), [preparation](runs/comprehensive-comparison-02/invocation-pressure-preparation.md). |
 
 The cases exercise broadening beyond the trigger, complete reconciliation, preservation and useful accounting; facets may share a case.
@@ -161,7 +164,7 @@ Current combined accounting remains in the CW protocol as linked below; the open
 ### Facet coverage audit (2026-09-21)
 
 This is the suite-level review required by [spec section 2](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#2-select-representative-tests).
-Updated 2026-09-24 after the Codex, Sonnet and Opus comparisons. The heading retains its original date for existing links.
+The heading retains its original date for existing links; current dispositions distinguish the historical Codex/Sonnet/Opus comparisons from uncollected finalist preparation.
 Design adequacy describes the available task and evidence path, not model success. Evidence includes the [baseline](runs/core-baseline-01/core-baseline-01-assessment.md), [first comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md), [expansion](runs/coverage-baseline-01/coverage-baseline-01-assessment.md), [Codex comparison 02](runs/comprehensive-comparison-02/comprehensive-comparison-02-assessment.md), [Sonnet comparison](runs/claude-comparison-01/claude-comparison-01-assessment.md) and [Opus invocation comparison](runs/claude-opus-invocation-01/claude-opus-invocation-01-assessment.md).
 All five executable cases now have measured evidence. Initiating-change retains two valid originals and one valid control, with one excluded control; local-change has two valid repetitions per condition, and large-sweep-account has two valid procedural-only reports.
 Case definitions and qualification are linked in the inventory above.
@@ -179,7 +182,7 @@ Case definitions and qualification are linked in the inventory above.
 | O4: References swept placement relative to narrative and Verification | Partial | Commit bodies and diagnostic REPORT.md expose placement; diagnostic task requests References swept followed by Verification | Not isolated | Protocol names placement, but case pass/fail rules focus on traceability and do not isolate every ordering error; do not claim comprehensive formatting conformance; revisit before an edit changes this behavior. |
 | O4: preserve necessary audit detail beyond normal length preference | Gap, deferred | Existing diagnostic fits the supplied preference and does not force this exception | None | No brevity score or new brevity scenario selected: maintaining brevity is not SSR’s job. Revisit only if an edit changes whether necessary audit evidence survives a competing output constraint. |
 | O5: justified single-file/no-sweep negative account | Partial | local-change supplies one real correction plus near-matches; criterion v3 distinguishes accepted original/rewrite reporting | Local repair measured on Codex and Sonnet; Codex candidate positive accounts are owner-accepted; Sonnet candidate n/a accounts violate its own positive-inventory rule | Functional locality covered; genuine applicable no-change sweep remains untested. The unrelated explanation is non-applicable and cannot substitute. Revisit if changing no-op handling. |
-| Applicability: explicit load versus autonomous skill discovery | Covered in bounded native context | Two positive trigger cases and one distant non-use sanity case; catalog and full-body timing inspected | Codex: original/rewrite 4/4 positive loads each; Sonnet: 2/4 and 3/4; Opus: 2/4 and 4/4. Both non-use checks pass per model | Known invocation failures, not missing positive-trigger coverage. Catalog is SSR plus built-ins; full-bundle competition and realistic near-boundary false positives remain untested. Investigate misses without claiming population reliability. |
+| Applicability: explicit load versus autonomous skill discovery | Covered in bounded native context; near-boundary case proposed | Two positive trigger cases and one distant non-use sanity case; catalog and full-body timing inspected | Codex: original/rewrite 4/4 positive loads each; Sonnet: 2/4 and 3/4; Opus: 2/4 and 4/4. Both non-use checks pass per model | Known invocation failures, not missing positive-trigger coverage. Catalog is SSR plus built-ins; full-bundle competition remains untested. The new [verification-only case](cases/invocation-verification/assessment.md) is prepared but supplies no measured near-boundary evidence yet. Investigate misses without claiming population reliability. |
 | Discipline under competing incentives | Covered descriptively | pressure-repair combines urgency, sunk effort and green-test confidence with semantic repair | Codex: 2/2 functional per version; Sonnet: original 1/2, rewrite 2/2; ordinary semantic tasks all pass in these batches | Existing failure available for investigation. No pressure no-target control collected; add it if claiming contribution or authoring pressure-specific guidance under writing-skills. No need to repeat this on every model. |
 | Composition, difficult search, conflicting information and transfer | Gap | No DD orchestration, required companion interaction, hostile repository or held-out case is supplied | None | SSR is independently evaluated; these contexts are outside the selected question and must be reconsidered if an edit depends on them |
 | Rewrite-specific extensions | Partial | Initiating-change exercises attached rationale; candidate runs expose old/new searches and post-edit checks | Rationale preservation is measured; post-edit checking has recorded deviations. Large read-only account diagnostic tested original only | No collision/partial-migration case, dedicated candidate read-only proposal check or complete independent scoring of all added search/reporting requirements. Add only the targeted checks needed for an edit or a full-conformance claim; do not silently extend shared historical criteria. |
@@ -253,6 +256,14 @@ DD and other instructions used by the controller session are not subject inputs.
 An explicit sweep request is a different execution-quality question and cannot establish that SSR caused scope expansion.
 
 The prepared original/control configurations retain Codex Sol-low with workspace-write. Configurations and manifests own exact settings and source identities; do not silently pool different models or changed rules.
+
+### Proposal: compact-cw-validation-01
+
+Status: proposed; offline preparation passed, with collection approval, final freeze and readiness pending.
+The owner requested creation of the [CW-aligned proposal](../../plans/specs/2026-10-24-ssr-cw-aligned-validation.md); this authorizes preparation only.
+Recommended scope: 55 new subjects and five output reviews, with ten matching Opus repairs reused under exact identity/inventory checks; [draft preparation](runs/compact-cw-validation-01/preparation/README.md) contains configurations, criteria mapping and the fixed order.
+The proposal owns the prospective matrix, smaller alternative, review packets, stopping/decision rules, effort forecast and requested ceiling extension; current ceilings/spending remain unchanged.
+No candidate edit, dispatch, automatic retry or adoption is selected. The next owner decision is the allocation and its declared limits.
 SSR collection used config schema 0.2 and result schema 0.4; retained bundles keep their emitted versions. The current runner contract is documented in the runner guide below. It prepares a fresh Git boundary, invokes once and captures mechanical completion plus evidence; it does not decide task success.
 [Runner mechanics](../../skill-validation/runner/README.md) and [retained pilot reports](#results-and-decision) establish the available execution path. Recheck changed CLI/runtime/context assumptions before relying on them; directory separation alone does not prove read isolation.
 Control contribution claims require evidence that omitted guidance was not loaded. Record limits on observed isolation rather than claiming exhaustive host-wide exclusion.

@@ -1,0 +1,501 @@
+{
+  "status": "proposed; not dispatch authority",
+  "batch": "compact-cw-validation-01",
+  "slots": [
+    {
+      "order": 1,
+      "provider": "codex",
+      "case_id": "semantic-delivery",
+      "condition": "candidate",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-semantic-delivery-candidate.json",
+      "repetition": 1
+    },
+    {
+      "order": 2,
+      "provider": "codex",
+      "case_id": "semantic-delivery",
+      "condition": "finalist",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-semantic-delivery-finalist.json",
+      "repetition": 1
+    },
+    {
+      "order": 3,
+      "provider": "codex",
+      "case_id": "moved-guide",
+      "condition": "finalist",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-moved-guide-finalist.json",
+      "repetition": 1
+    },
+    {
+      "order": 4,
+      "provider": "codex",
+      "case_id": "local-change",
+      "condition": "finalist",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-local-change-finalist.json",
+      "repetition": 1
+    },
+    {
+      "order": 5,
+      "provider": "codex",
+      "case_id": "invocation-change",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-invocation-change-finalist.json",
+      "repetition": 1
+    },
+    {
+      "order": 6,
+      "provider": "codex",
+      "case_id": "invocation-review",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-invocation-review-finalist.json",
+      "repetition": 1
+    },
+    {
+      "order": 7,
+      "provider": "codex",
+      "case_id": "invocation-verification",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-invocation-verification-finalist.json",
+      "repetition": 1
+    },
+    {
+      "order": 8,
+      "provider": "claude",
+      "case_id": "invocation-verification",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-invocation-verification-finalist.json",
+      "repetition": 1
+    },
+    {
+      "order": 9,
+      "provider": "codex",
+      "case_id": "semantic-delivery",
+      "condition": "finalist",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-semantic-delivery-finalist.json",
+      "repetition": 2
+    },
+    {
+      "order": 10,
+      "provider": "codex",
+      "case_id": "semantic-delivery",
+      "condition": "candidate",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-semantic-delivery-candidate.json",
+      "repetition": 2
+    },
+    {
+      "order": 11,
+      "provider": "claude",
+      "case_id": "invocation-verification",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-invocation-verification-finalist.json",
+      "repetition": 2
+    },
+    {
+      "order": 12,
+      "provider": "codex",
+      "case_id": "invocation-verification",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-invocation-verification-finalist.json",
+      "repetition": 2
+    },
+    {
+      "order": 13,
+      "provider": "codex",
+      "case_id": "invocation-review",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-invocation-review-finalist.json",
+      "repetition": 2
+    },
+    {
+      "order": 14,
+      "provider": "codex",
+      "case_id": "invocation-change",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-invocation-change-finalist.json",
+      "repetition": 2
+    },
+    {
+      "order": 15,
+      "provider": "codex",
+      "case_id": "local-change",
+      "condition": "finalist",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-local-change-finalist.json",
+      "repetition": 2
+    },
+    {
+      "order": 16,
+      "provider": "codex",
+      "case_id": "moved-guide",
+      "condition": "finalist",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-moved-guide-finalist.json",
+      "repetition": 2
+    },
+    {
+      "order": 17,
+      "provider": "codex",
+      "case_id": "semantic-delivery",
+      "condition": "candidate",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-semantic-delivery-candidate.json",
+      "repetition": 3
+    },
+    {
+      "order": 18,
+      "provider": "codex",
+      "case_id": "semantic-delivery",
+      "condition": "finalist",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-semantic-delivery-finalist.json",
+      "repetition": 3
+    },
+    {
+      "order": 19,
+      "provider": "codex",
+      "case_id": "moved-guide",
+      "condition": "finalist",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-moved-guide-finalist.json",
+      "repetition": 3
+    },
+    {
+      "order": 20,
+      "provider": "codex",
+      "case_id": "local-change",
+      "condition": "finalist",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-local-change-finalist.json",
+      "repetition": 3
+    },
+    {
+      "order": 21,
+      "provider": "codex",
+      "case_id": "invocation-change",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-invocation-change-finalist.json",
+      "repetition": 3
+    },
+    {
+      "order": 22,
+      "provider": "codex",
+      "case_id": "invocation-review",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-invocation-review-finalist.json",
+      "repetition": 3
+    },
+    {
+      "order": 23,
+      "provider": "codex",
+      "case_id": "invocation-verification",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-invocation-verification-finalist.json",
+      "repetition": 3
+    },
+    {
+      "order": 24,
+      "provider": "claude",
+      "case_id": "invocation-verification",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-invocation-verification-finalist.json",
+      "repetition": 3
+    },
+    {
+      "order": 25,
+      "provider": "claude",
+      "case_id": "initiating-change",
+      "condition": "finalist",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-initiating-change-finalist.json",
+      "repetition": 3
+    },
+    {
+      "order": 26,
+      "provider": "claude",
+      "case_id": "moved-guide",
+      "condition": "finalist",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-moved-guide-finalist.json",
+      "repetition": 3
+    },
+    {
+      "order": 27,
+      "provider": "claude",
+      "case_id": "local-change",
+      "condition": "finalist",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-local-change-finalist.json",
+      "repetition": 3
+    },
+    {
+      "order": 28,
+      "provider": "claude",
+      "case_id": "invocation-change",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-invocation-change-finalist.json",
+      "repetition": 3
+    },
+    {
+      "order": 29,
+      "provider": "claude",
+      "case_id": "invocation-review",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-invocation-review-finalist.json",
+      "repetition": 3
+    },
+    {
+      "order": 30,
+      "provider": "codex",
+      "case_id": "semantic-delivery",
+      "condition": "finalist",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-semantic-delivery-finalist.json",
+      "repetition": 4
+    },
+    {
+      "order": 31,
+      "provider": "codex",
+      "case_id": "semantic-delivery",
+      "condition": "candidate",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-semantic-delivery-candidate.json",
+      "repetition": 4
+    },
+    {
+      "order": 32,
+      "provider": "claude",
+      "case_id": "invocation-verification",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-invocation-verification-finalist.json",
+      "repetition": 4
+    },
+    {
+      "order": 33,
+      "provider": "codex",
+      "case_id": "invocation-verification",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-invocation-verification-finalist.json",
+      "repetition": 4
+    },
+    {
+      "order": 34,
+      "provider": "codex",
+      "case_id": "invocation-review",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-invocation-review-finalist.json",
+      "repetition": 4
+    },
+    {
+      "order": 35,
+      "provider": "codex",
+      "case_id": "invocation-change",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-invocation-change-finalist.json",
+      "repetition": 4
+    },
+    {
+      "order": 36,
+      "provider": "codex",
+      "case_id": "local-change",
+      "condition": "finalist",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-local-change-finalist.json",
+      "repetition": 4
+    },
+    {
+      "order": 37,
+      "provider": "codex",
+      "case_id": "moved-guide",
+      "condition": "finalist",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-moved-guide-finalist.json",
+      "repetition": 4
+    },
+    {
+      "order": 38,
+      "provider": "claude",
+      "case_id": "initiating-change",
+      "condition": "finalist",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-initiating-change-finalist.json",
+      "repetition": 4
+    },
+    {
+      "order": 39,
+      "provider": "claude",
+      "case_id": "moved-guide",
+      "condition": "finalist",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-moved-guide-finalist.json",
+      "repetition": 4
+    },
+    {
+      "order": 40,
+      "provider": "claude",
+      "case_id": "local-change",
+      "condition": "finalist",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-local-change-finalist.json",
+      "repetition": 4
+    },
+    {
+      "order": 41,
+      "provider": "claude",
+      "case_id": "invocation-change",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-invocation-change-finalist.json",
+      "repetition": 4
+    },
+    {
+      "order": 42,
+      "provider": "claude",
+      "case_id": "invocation-review",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-invocation-review-finalist.json",
+      "repetition": 4
+    },
+    {
+      "order": 43,
+      "provider": "codex",
+      "case_id": "semantic-delivery",
+      "condition": "candidate",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-semantic-delivery-candidate.json",
+      "repetition": 5
+    },
+    {
+      "order": 44,
+      "provider": "codex",
+      "case_id": "semantic-delivery",
+      "condition": "finalist",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-semantic-delivery-finalist.json",
+      "repetition": 5
+    },
+    {
+      "order": 45,
+      "provider": "codex",
+      "case_id": "moved-guide",
+      "condition": "finalist",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-moved-guide-finalist.json",
+      "repetition": 5
+    },
+    {
+      "order": 46,
+      "provider": "codex",
+      "case_id": "local-change",
+      "condition": "finalist",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-local-change-finalist.json",
+      "repetition": 5
+    },
+    {
+      "order": 47,
+      "provider": "codex",
+      "case_id": "invocation-change",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-invocation-change-finalist.json",
+      "repetition": 5
+    },
+    {
+      "order": 48,
+      "provider": "codex",
+      "case_id": "invocation-review",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-invocation-review-finalist.json",
+      "repetition": 5
+    },
+    {
+      "order": 49,
+      "provider": "codex",
+      "case_id": "invocation-verification",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-invocation-verification-finalist.json",
+      "repetition": 5
+    },
+    {
+      "order": 50,
+      "provider": "claude",
+      "case_id": "invocation-verification",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-invocation-verification-finalist.json",
+      "repetition": 5
+    },
+    {
+      "order": 51,
+      "provider": "claude",
+      "case_id": "initiating-change",
+      "condition": "finalist",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-initiating-change-finalist.json",
+      "repetition": 5
+    },
+    {
+      "order": 52,
+      "provider": "claude",
+      "case_id": "moved-guide",
+      "condition": "finalist",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-moved-guide-finalist.json",
+      "repetition": 5
+    },
+    {
+      "order": 53,
+      "provider": "claude",
+      "case_id": "local-change",
+      "condition": "finalist",
+      "mode": "explicit",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-local-change-finalist.json",
+      "repetition": 5
+    },
+    {
+      "order": 54,
+      "provider": "claude",
+      "case_id": "invocation-change",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-invocation-change-finalist.json",
+      "repetition": 5
+    },
+    {
+      "order": 55,
+      "provider": "claude",
+      "case_id": "invocation-review",
+      "condition": "finalist",
+      "mode": "native",
+      "config": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-invocation-review-finalist.json",
+      "repetition": 5
+    }
+  ]
+}

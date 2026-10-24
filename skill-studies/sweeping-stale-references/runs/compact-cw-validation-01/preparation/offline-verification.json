@@ -1,0 +1,150 @@
+{
+  "status": "passed offline proposal checks; no provider/runtime qualification or collection readiness claimed",
+  "model_calls": 0,
+  "new_subjects": 55,
+  "reused_subjects": 10,
+  "configuration_count": 13,
+  "configurations": [
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-semantic-delivery-candidate.json",
+      "sha256": "9f1e2958a1d026051b37895529d03bf5883e2f173fe96353030480f7a261d842",
+      "files": 11,
+      "mode": "explicit",
+      "materialized_input_membership": "exact",
+      "skill_sha256": "15992341f7ab2fb1e4d8a775092199d7d4e6a9de1167895dbe5a805aeafbd38c",
+      "model_calls": 0
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-semantic-delivery-finalist.json",
+      "sha256": "ed3ea3b81d7d672b901807f07788acf30a9c5e0dedda8621daad8ecf52659262",
+      "files": 11,
+      "mode": "explicit",
+      "materialized_input_membership": "exact",
+      "skill_sha256": "f1f297f213855f9b53835dd084b2be6d3d9134cadab47babea08cbdaad9a205e",
+      "model_calls": 0
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-moved-guide-finalist.json",
+      "sha256": "6f61d36d2328f936eb900b295accb016c43dfed1a3e613b5dbaf2ee94bd7839f",
+      "files": 11,
+      "mode": "explicit",
+      "materialized_input_membership": "exact",
+      "skill_sha256": "f1f297f213855f9b53835dd084b2be6d3d9134cadab47babea08cbdaad9a205e",
+      "model_calls": 0
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-local-change-finalist.json",
+      "sha256": "dc26251486cee9c85e3644fda00c8eca743a574e096bd09135a7b991f817edb2",
+      "files": 9,
+      "mode": "explicit",
+      "materialized_input_membership": "exact",
+      "skill_sha256": "f1f297f213855f9b53835dd084b2be6d3d9134cadab47babea08cbdaad9a205e",
+      "model_calls": 0
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-invocation-change-finalist.json",
+      "sha256": "d9e61df05d0182c2e883aa3b384ebb8f6f6b2d8a20bc39bd6f6676ff82d15aa1",
+      "files": 12,
+      "mode": "native",
+      "materialized_input_membership": "exact",
+      "skill_sha256": "f1f297f213855f9b53835dd084b2be6d3d9134cadab47babea08cbdaad9a205e",
+      "model_calls": 0
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-invocation-review-finalist.json",
+      "sha256": "c573f7c2a3c2fc4f2892f279bbf54beb4a95ab16faaeca16101868abbe84aae6",
+      "files": 11,
+      "mode": "native",
+      "materialized_input_membership": "exact",
+      "skill_sha256": "f1f297f213855f9b53835dd084b2be6d3d9134cadab47babea08cbdaad9a205e",
+      "model_calls": 0
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/codex-invocation-verification-finalist.json",
+      "sha256": "f737131f60c074d669c6dc1a7d63af7ab96b8235bf317f35b8e22e24e47ebd7e",
+      "files": 12,
+      "mode": "native",
+      "materialized_input_membership": "exact",
+      "skill_sha256": "f1f297f213855f9b53835dd084b2be6d3d9134cadab47babea08cbdaad9a205e",
+      "model_calls": 0
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-invocation-verification-finalist.json",
+      "sha256": "290e0fbd7aebb61e7fb6b96d9435b85f0637ea068a45595185e3580c3e64ec55",
+      "files": 12,
+      "mode": "native",
+      "materialized_input_membership": "exact",
+      "skill_sha256": "f1f297f213855f9b53835dd084b2be6d3d9134cadab47babea08cbdaad9a205e",
+      "model_calls": 0
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-initiating-change-finalist.json",
+      "sha256": "edde37cbb9f94c1c3688c9623f32c3fe15e4da1b5ca4f7276f59b008a4c596a7",
+      "files": 12,
+      "mode": "explicit",
+      "materialized_input_membership": "exact",
+      "skill_sha256": "f1f297f213855f9b53835dd084b2be6d3d9134cadab47babea08cbdaad9a205e",
+      "model_calls": 0
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-moved-guide-finalist.json",
+      "sha256": "756ca09b32e99795587b9610b0c4617e4fab4a065080d6bcc9e461ce28c0e066",
+      "files": 11,
+      "mode": "explicit",
+      "materialized_input_membership": "exact",
+      "skill_sha256": "f1f297f213855f9b53835dd084b2be6d3d9134cadab47babea08cbdaad9a205e",
+      "model_calls": 0
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-local-change-finalist.json",
+      "sha256": "69d6120b8693cbefc5ab1fa99ecbfaa4eb3f374acb4e365e65d673466cdc4ade",
+      "files": 9,
+      "mode": "explicit",
+      "materialized_input_membership": "exact",
+      "skill_sha256": "f1f297f213855f9b53835dd084b2be6d3d9134cadab47babea08cbdaad9a205e",
+      "model_calls": 0
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-invocation-change-finalist.json",
+      "sha256": "d2ca39de0fdc05be3adb12d12238f4563ef8b29fca3d38d394cc46129169502b",
+      "files": 12,
+      "mode": "native",
+      "materialized_input_membership": "exact",
+      "skill_sha256": "f1f297f213855f9b53835dd084b2be6d3d9134cadab47babea08cbdaad9a205e",
+      "model_calls": 0
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/configs/claude-invocation-review-finalist.json",
+      "sha256": "eb1add357666a29b1c53be3cd21117814291fb3aa2f3e4b651e8cadd74ce276e",
+      "files": 11,
+      "mode": "native",
+      "materialized_input_membership": "exact",
+      "skill_sha256": "f1f297f213855f9b53835dd084b2be6d3d9134cadab47babea08cbdaad9a205e",
+      "model_calls": 0
+    }
+  ],
+  "negative_fixture_observations": {
+    "exit": 0,
+    "stdout": "",
+    "stderr": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n",
+    "script_other_directory": {
+      "exit": 0,
+      "stdout": "session_ttl_minutes=30; expires_at=1900\n",
+      "stderr": ""
+    }
+  },
+  "inherited_criterion_meanings": "unchanged after canonical link rebasing",
+  "existing_opus_topup_source_prompt_fixture_parity": "exact",
+  "local_links": "all resolve",
+  "subject_budget_proposed": {
+    "current_ceiling": 668,
+    "extension": 55,
+    "proposed_ceiling": 723
+  },
+  "review_budget_proposed": {
+    "current_ceiling": 50,
+    "extension": 5,
+    "proposed_ceiling": 55
+  },
+  "proposed_total_ceiling": 786
+}
