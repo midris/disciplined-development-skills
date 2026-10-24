@@ -1,0 +1,193 @@
+{
+  "review_scope": "Eleven complete outputs across six cases; 30 functional factors for ten repairs; unrelated not measured. One Opus medium review.",
+  "subject_index": {
+    "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-regression-01/compact-regression-01-run-index.json",
+    "sha256": "50bb36a9ea366c3970f7a85a0eab9ed104a9e0ac9f09c4484f8a78a381d12a86"
+  },
+  "subject_assessments": [
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-regression-01/results/20261024T060228842Z-ssr-compact-regression-initiating-change-8497abc5-1121-4628-af3f-03eb3a38bb0e-5waqy2no.json",
+      "sha256": "950e2252ebbf866abfc38c7a860f39c662cfd4666a4a96e12c25dd448710c6e4"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-regression-01/results/20261024T060550211Z-ssr-compact-regression-invocation-change-1159453b-4002-4c8a-b340-4ddb44c568df-w47ho2r3.json",
+      "sha256": "ae080018faf95df888d8b91c26d364ad53f52d0e7faf1ca7aae60f4324a3ec67"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-regression-01/results/20261024T060738969Z-ssr-compact-regression-moved-guide-3a8241d0-eb67-4a24-8f49-1f1b24b72db7-9shudgzv.json",
+      "sha256": "2ddefcff378daca0b8fca2a25bf2342ea727ef90ad64d9610f26a2f0b28c1a28"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-regression-01/results/20261024T060904689Z-ssr-compact-regression-invocation-review-2943fb8b-a983-430c-b3be-0e4d6ac38547-pq7u071m.json",
+      "sha256": "0e146f360a6fb4db420617c008f7e0a67d3a2abe472ca238a14a0cb8ae7f072c"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-regression-01/results/20261024T061345945Z-ssr-compact-regression-local-change-842fbb60-cf1b-4deb-acd6-a70e7e8f48f0-o3r593d9.json",
+      "sha256": "246b36510cf5fd2c3539d20f83ba17a0b1f3734b5e5957c0bc4e4a0b52b88f16"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-regression-01/results/20261024T061443495Z-ssr-compact-regression-invocation-unrelated-21a09f5f-a7b3-4320-8955-401a62470b77-7tr59p0l.json",
+      "sha256": "2d47040f40c0d8efd5cab4f269ff91685019e51c5eb1391219eb5e58d659826d"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-regression-01/results/20261024T061519400Z-ssr-compact-regression-initiating-change-16730605-9728-478a-a16e-3546bc7231ca-cj1pgbzp.json",
+      "sha256": "9cd57742247c085e40d6456ae2dba2d05f6d25b07350914f3d0d3e49ce895923"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-regression-01/results/20261024T061612874Z-ssr-compact-regression-invocation-review-3e1c6c38-11ca-4662-b139-99cfda44ec50-5_jh10a3.json",
+      "sha256": "fb76e433cacb3f1d8cbf161bdca2f963b3d372a18251f8764a9f231be5e75f01"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-regression-01/results/20261024T061703945Z-ssr-compact-regression-moved-guide-42f97295-92c5-41e5-bf7b-2c644ab42d1c-0scb5n1v.json",
+      "sha256": "70f45cca76e040a480f32a001400871521bd8b8cedc0dcc4b4c89a2f1f902740"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-regression-01/results/20261024T061754141Z-ssr-compact-regression-invocation-change-c51dc79a-efa5-409d-a953-4c406e11c8ef-u6hucd_f.json",
+      "sha256": "c7d9bb792c91d605298bf981715274997f541f180620c8143758e224909af62e"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-regression-01/results/20261024T061843823Z-ssr-compact-regression-local-change-28981bfb-f81d-4946-8626-9d3d49a747f1-7_ha8zsf.json",
+      "sha256": "7f5ac075d7c7d8b59a361e8d415a52cdc3ddc004472082e09ab2e640c028a600"
+    }
+  ],
+  "configuration": {
+    "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-regression-01/evaluation/config.json",
+    "sha256": "72888900f5dec7899b2e46b964be7df96fb7e39fa14278974081a368bf86b415"
+  },
+  "prompt": {
+    "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-regression-01/evaluation/prompt.md",
+    "sha256": "39b80540f91d757ea200ac9adcd311ceac7c8f1c46cd82dd478f15303cb14c4e"
+  },
+  "input_files": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/EVALUATION-INDEX.json",
+      "sha256": "2296fefdffc33e36dc6559290596ba5b860492e780b64da8cda1cdd7e6770578"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/INTERPRETATION.md",
+      "sha256": "c63299af03b1c212e0eb096009cef24a31a35cfba8545bbe33c4350296aa1c0d"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/NEUTRAL-FACTS.json",
+      "sha256": "cab5e6ef3bff4c83cb11d3efc782c23923b80dbb838fac6232934570aedab2d2"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/policy.txt",
+      "sha256": "5d057d11f678ae3fa63c48957446aded13ccc5dcb8babab2856d0232d49e08bb"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/prior-assessment.md",
+      "sha256": "3a0fbe27082d63a6fc42e0c4070d52dce4054bfaa84bd9613f9a0648259d6cd7"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/projects/01-initiating-change-1.md",
+      "sha256": "9564f70a2325a162249b13dec09b19cf38952fad49a5295b06f901e33b37975f"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/projects/02-invocation-change-1.md",
+      "sha256": "768d1cc706e40ec60dd1a8120b26ff783eb9270e6235c0838a8fccf28b10eb82"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/projects/03-moved-guide-1.md",
+      "sha256": "c83efb779a934be9d19a1dc8767727f0c2de6e0c92140c43d5628932dc9260d6"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/projects/04-invocation-review-1.md",
+      "sha256": "da9387b7d6bf54006e006e02cf9f796fc3fbcbb14cf4e381074eb50067481b54"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/projects/05-local-change-1.md",
+      "sha256": "0d8c23e0a37329e4d74eea0768411e40c91c298c40fa6081e7dcfc9bd4afb637"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/projects/06-invocation-unrelated-1.md",
+      "sha256": "1c165535307d05a343dcc023e894225e0ed223dfa00b690553080c209c3340f6"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/projects/07-initiating-change-2.md",
+      "sha256": "be66e6287e883e6f00f17c1d2f4c3667307854aa7e8cdb2150b56beba0dd5795"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/projects/08-invocation-review-2.md",
+      "sha256": "16dde9990ef7750f781ec175836813dd1f4a8fd4dc0e7a11e0e6870296da0d6a"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/projects/09-moved-guide-2.md",
+      "sha256": "340d84a75bdc4849dfbd55a3fa76461049d3c66b21531891d33793b12c211a70"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/projects/10-invocation-change-2.md",
+      "sha256": "8414869d082e3672f4f1a63afd98de5bad944c57633ff004c89e71b3c1e33f62"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/projects/11-local-change-2.md",
+      "sha256": "e9fa2af4abc0da2b0476ce7f00b4d73473120a1ba5754c4d71a2f1140540a36b"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/sources/initiating-change-criteria.md",
+      "sha256": "45296dea302c9aeabafa1088e992bb1bb2e1f05fadbade33466cf0e4e4cdd657"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/sources/initiating-change.md",
+      "sha256": "9e98b977616871ceb9b6ae59fe619886a8ed15f7660d18e8b7a88ce86e8943ba"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/sources/invocation-change-criteria.md",
+      "sha256": "83187107886ca25aec78db382b50eef8869d78fe41c0acb1ca81bcdb34ea4ff1"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/sources/invocation-change.md",
+      "sha256": "5ab9a85199c6cd2bee32a12a246ffb4db0a426cf4d97907285d612ee068fc75b"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/sources/invocation-review-criteria.md",
+      "sha256": "6718bcdbca0a2b8944f8bcc909f8e34f4e26b255b86eaac35495dec738ca209b"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/sources/invocation-review.md",
+      "sha256": "4692768574b26ac787e0336db4400674081bae2caa24dd6ec4981ed557af8bce"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/sources/invocation-unrelated-criteria.md",
+      "sha256": "3b75a9263209c9c6542f84aba6cf1bdeb03b9048664faa5b2aff2ce270e222e0"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/sources/invocation-unrelated.md",
+      "sha256": "4eb649c1b5c4313948dec3309781824113f58c0a65c839d82479d499d1934d83"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/sources/local-change-criteria.md",
+      "sha256": "6b33f07aca5ca41f0dd09b51a66404c6e3f7029bcc5cfda33a0d58333fbb8bd6"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/sources/local-change.md",
+      "sha256": "b3d771bc12cb794513a15a4f4cf5b582725f04cabba75c0509b416dc412da571"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/sources/moved-guide-criteria.md",
+      "sha256": "630c076beb5ce2a773a04c85121cb6716849abb59cdb8e2ac7acc8eddbb7148d"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/sources/moved-guide.md",
+      "sha256": "64bcde82831f3fd4bf99d7280a3471f1d150ccd559f99cbfb640ff7c5c135c6d"
+    }
+  ],
+  "controller": {
+    "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/controllers/ssr-regression-review.py",
+    "sha256": "7c4e4538db8c32a0801496b8229bc7bb7a4236009d2b05d53315d33310142aa6"
+  },
+  "controller_support": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/controllers/ssr-regression-packet.py",
+      "sha256": "5a5989e93ac7c8d1e2920c10df740e6fba12222375f34aad4645163ea7181be3"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/runtime_setup.py",
+      "sha256": "91c8a2a5fccaa22affc662fe8824a2502be8e373e363520f21033a25838afdb2"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/runtime-identities.json",
+      "sha256": "efd2294d2aa4261f642e0af0ceef93e4aa112bae51c78503b6380988b13b9444"
+    }
+  ]
+}

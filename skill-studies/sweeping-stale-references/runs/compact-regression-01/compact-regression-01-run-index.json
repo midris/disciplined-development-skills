@@ -32,7 +32,7 @@
         "charge": 1
       },
       "limitations": [
-        "Candidate-only exposed development validation. Identical sequential score frozen externally until its closing repository commit."
+        "Candidate-only exposed development validation; sole condition finalist."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T060228842Z-ssr-compact-regression-initiating-change-8497abc5-1121-4628-af3f-03eb3a38bb0e-5waqy2no",
@@ -46,9 +46,10 @@
       "result": {
         "result_id": "compact-regression-01-initiating-change-finalist-1",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/scores/20261024T060228842Z-ssr-compact-regression-initiating-change-8497abc5-1121-4628-af3f-03eb3a38bb0e-5waqy2no.json",
+          "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/results/20261024T060228842Z-ssr-compact-regression-initiating-change-8497abc5-1121-4628-af3f-03eb3a38bb0e-5waqy2no.json",
           "sha256": "950e2252ebbf866abfc38c7a860f39c662cfd4666a4a96e12c25dd448710c6e4",
-          "version": "2"
+          "version": "2",
+          "git_revision": "86f05f14c29a81c5451fa4c82c254d556b624bcf"
         }
       }
     },
@@ -80,7 +81,7 @@
         "charge": 1
       },
       "limitations": [
-        "Candidate-only exposed development validation. Identical sequential score frozen externally until its closing repository commit."
+        "Candidate-only exposed development validation; sole condition finalist."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T060550211Z-ssr-compact-regression-invocation-change-1159453b-4002-4c8a-b340-4ddb44c568df-w47ho2r3",
@@ -94,9 +95,10 @@
       "result": {
         "result_id": "compact-regression-01-invocation-change-finalist-1",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/scores/20261024T060550211Z-ssr-compact-regression-invocation-change-1159453b-4002-4c8a-b340-4ddb44c568df-w47ho2r3.json",
+          "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/results/20261024T060550211Z-ssr-compact-regression-invocation-change-1159453b-4002-4c8a-b340-4ddb44c568df-w47ho2r3.json",
           "sha256": "ae080018faf95df888d8b91c26d364ad53f52d0e7faf1ca7aae60f4324a3ec67",
-          "version": "2"
+          "version": "2",
+          "git_revision": "86f05f14c29a81c5451fa4c82c254d556b624bcf"
         }
       }
     },
@@ -128,7 +130,7 @@
         "charge": 1
       },
       "limitations": [
-        "Candidate-only exposed development validation. Identical sequential score frozen externally until its closing repository commit."
+        "Candidate-only exposed development validation; sole condition finalist."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T060738969Z-ssr-compact-regression-moved-guide-3a8241d0-eb67-4a24-8f49-1f1b24b72db7-9shudgzv",
@@ -142,9 +144,10 @@
       "result": {
         "result_id": "compact-regression-01-moved-guide-finalist-1",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/scores/20261024T060738969Z-ssr-compact-regression-moved-guide-3a8241d0-eb67-4a24-8f49-1f1b24b72db7-9shudgzv.json",
+          "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/results/20261024T060738969Z-ssr-compact-regression-moved-guide-3a8241d0-eb67-4a24-8f49-1f1b24b72db7-9shudgzv.json",
           "sha256": "2ddefcff378daca0b8fca2a25bf2342ea727ef90ad64d9610f26a2f0b28c1a28",
-          "version": "2"
+          "version": "2",
+          "git_revision": "86f05f14c29a81c5451fa4c82c254d556b624bcf"
         }
       }
     },
@@ -176,7 +179,7 @@
         "charge": 1
       },
       "limitations": [
-        "Candidate-only exposed development validation. Identical sequential score frozen externally until its closing repository commit."
+        "Candidate-only exposed development validation; sole condition finalist."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T060904689Z-ssr-compact-regression-invocation-review-2943fb8b-a983-430c-b3be-0e4d6ac38547-pq7u071m",
@@ -190,9 +193,10 @@
       "result": {
         "result_id": "compact-regression-01-invocation-review-finalist-1",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/scores/20261024T060904689Z-ssr-compact-regression-invocation-review-2943fb8b-a983-430c-b3be-0e4d6ac38547-pq7u071m.json",
+          "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/results/20261024T060904689Z-ssr-compact-regression-invocation-review-2943fb8b-a983-430c-b3be-0e4d6ac38547-pq7u071m.json",
           "sha256": "0e146f360a6fb4db420617c008f7e0a67d3a2abe472ca238a14a0cb8ae7f072c",
-          "version": "2"
+          "version": "2",
+          "git_revision": "86f05f14c29a81c5451fa4c82c254d556b624bcf"
         }
       }
     },
@@ -224,7 +228,7 @@
         "charge": 1
       },
       "limitations": [
-        "Candidate-only exposed development validation. Identical sequential score frozen externally until its closing repository commit."
+        "Candidate-only exposed development validation; sole condition finalist."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T061345945Z-ssr-compact-regression-local-change-842fbb60-cf1b-4deb-acd6-a70e7e8f48f0-o3r593d9",
@@ -238,9 +242,10 @@
       "result": {
         "result_id": "compact-regression-01-local-change-finalist-1",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/scores/20261024T061345945Z-ssr-compact-regression-local-change-842fbb60-cf1b-4deb-acd6-a70e7e8f48f0-o3r593d9.json",
+          "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/results/20261024T061345945Z-ssr-compact-regression-local-change-842fbb60-cf1b-4deb-acd6-a70e7e8f48f0-o3r593d9.json",
           "sha256": "246b36510cf5fd2c3539d20f83ba17a0b1f3734b5e5957c0bc4e4a0b52b88f16",
-          "version": "2"
+          "version": "2",
+          "git_revision": "86f05f14c29a81c5451fa4c82c254d556b624bcf"
         }
       }
     },
@@ -272,7 +277,7 @@
         "charge": 1
       },
       "limitations": [
-        "Candidate-only exposed development validation. Identical sequential score frozen externally until its closing repository commit."
+        "Candidate-only exposed development validation; sole condition finalist."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T061443495Z-ssr-compact-regression-invocation-unrelated-21a09f5f-a7b3-4320-8955-401a62470b77-7tr59p0l",
@@ -286,9 +291,10 @@
       "result": {
         "result_id": "compact-regression-01-invocation-unrelated-finalist-1",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/scores/20261024T061443495Z-ssr-compact-regression-invocation-unrelated-21a09f5f-a7b3-4320-8955-401a62470b77-7tr59p0l.json",
+          "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/results/20261024T061443495Z-ssr-compact-regression-invocation-unrelated-21a09f5f-a7b3-4320-8955-401a62470b77-7tr59p0l.json",
           "sha256": "2d47040f40c0d8efd5cab4f269ff91685019e51c5eb1391219eb5e58d659826d",
-          "version": "2"
+          "version": "2",
+          "git_revision": "86f05f14c29a81c5451fa4c82c254d556b624bcf"
         }
       }
     },
@@ -320,7 +326,7 @@
         "charge": 1
       },
       "limitations": [
-        "Candidate-only exposed development validation. Identical sequential score frozen externally until its closing repository commit."
+        "Candidate-only exposed development validation; sole condition finalist."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T061519400Z-ssr-compact-regression-initiating-change-16730605-9728-478a-a16e-3546bc7231ca-cj1pgbzp",
@@ -334,9 +340,10 @@
       "result": {
         "result_id": "compact-regression-01-initiating-change-finalist-2",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/scores/20261024T061519400Z-ssr-compact-regression-initiating-change-16730605-9728-478a-a16e-3546bc7231ca-cj1pgbzp.json",
+          "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/results/20261024T061519400Z-ssr-compact-regression-initiating-change-16730605-9728-478a-a16e-3546bc7231ca-cj1pgbzp.json",
           "sha256": "9cd57742247c085e40d6456ae2dba2d05f6d25b07350914f3d0d3e49ce895923",
-          "version": "2"
+          "version": "2",
+          "git_revision": "86f05f14c29a81c5451fa4c82c254d556b624bcf"
         }
       }
     },
@@ -368,7 +375,7 @@
         "charge": 1
       },
       "limitations": [
-        "Candidate-only exposed development validation. Identical sequential score frozen externally until its closing repository commit."
+        "Candidate-only exposed development validation; sole condition finalist."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T061612874Z-ssr-compact-regression-invocation-review-3e1c6c38-11ca-4662-b139-99cfda44ec50-5_jh10a3",
@@ -382,9 +389,10 @@
       "result": {
         "result_id": "compact-regression-01-invocation-review-finalist-2",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/scores/20261024T061612874Z-ssr-compact-regression-invocation-review-3e1c6c38-11ca-4662-b139-99cfda44ec50-5_jh10a3.json",
+          "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/results/20261024T061612874Z-ssr-compact-regression-invocation-review-3e1c6c38-11ca-4662-b139-99cfda44ec50-5_jh10a3.json",
           "sha256": "fb76e433cacb3f1d8cbf161bdca2f963b3d372a18251f8764a9f231be5e75f01",
-          "version": "2"
+          "version": "2",
+          "git_revision": "86f05f14c29a81c5451fa4c82c254d556b624bcf"
         }
       }
     },
@@ -416,7 +424,7 @@
         "charge": 1
       },
       "limitations": [
-        "Candidate-only exposed development validation. Identical sequential score frozen externally until its closing repository commit."
+        "Candidate-only exposed development validation; sole condition finalist."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T061703945Z-ssr-compact-regression-moved-guide-42f97295-92c5-41e5-bf7b-2c644ab42d1c-0scb5n1v",
@@ -430,9 +438,10 @@
       "result": {
         "result_id": "compact-regression-01-moved-guide-finalist-2",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/scores/20261024T061703945Z-ssr-compact-regression-moved-guide-42f97295-92c5-41e5-bf7b-2c644ab42d1c-0scb5n1v.json",
+          "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/results/20261024T061703945Z-ssr-compact-regression-moved-guide-42f97295-92c5-41e5-bf7b-2c644ab42d1c-0scb5n1v.json",
           "sha256": "70f45cca76e040a480f32a001400871521bd8b8cedc0dcc4b4c89a2f1f902740",
-          "version": "2"
+          "version": "2",
+          "git_revision": "86f05f14c29a81c5451fa4c82c254d556b624bcf"
         }
       }
     },
@@ -464,7 +473,7 @@
         "charge": 1
       },
       "limitations": [
-        "Candidate-only exposed development validation. Identical sequential score frozen externally until its closing repository commit."
+        "Candidate-only exposed development validation; sole condition finalist."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T061754141Z-ssr-compact-regression-invocation-change-c51dc79a-efa5-409d-a953-4c406e11c8ef-u6hucd_f",
@@ -478,9 +487,10 @@
       "result": {
         "result_id": "compact-regression-01-invocation-change-finalist-2",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/scores/20261024T061754141Z-ssr-compact-regression-invocation-change-c51dc79a-efa5-409d-a953-4c406e11c8ef-u6hucd_f.json",
+          "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/results/20261024T061754141Z-ssr-compact-regression-invocation-change-c51dc79a-efa5-409d-a953-4c406e11c8ef-u6hucd_f.json",
           "sha256": "c7d9bb792c91d605298bf981715274997f541f180620c8143758e224909af62e",
-          "version": "2"
+          "version": "2",
+          "git_revision": "86f05f14c29a81c5451fa4c82c254d556b624bcf"
         }
       }
     },
@@ -512,7 +522,7 @@
         "charge": 1
       },
       "limitations": [
-        "Candidate-only exposed development validation. Identical sequential score frozen externally until its closing repository commit."
+        "Candidate-only exposed development validation; sole condition finalist."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T061843823Z-ssr-compact-regression-local-change-28981bfb-f81d-4946-8626-9d3d49a747f1-7_ha8zsf",
@@ -526,9 +536,10 @@
       "result": {
         "result_id": "compact-regression-01-local-change-finalist-2",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/scores/20261024T061843823Z-ssr-compact-regression-local-change-28981bfb-f81d-4946-8626-9d3d49a747f1-7_ha8zsf.json",
+          "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/results/20261024T061843823Z-ssr-compact-regression-local-change-28981bfb-f81d-4946-8626-9d3d49a747f1-7_ha8zsf.json",
           "sha256": "7f5ac075d7c7d8b59a361e8d415a52cdc3ddc004472082e09ab2e640c028a600",
-          "version": "2"
+          "version": "2",
+          "git_revision": "86f05f14c29a81c5451fa4c82c254d556b624bcf"
         }
       }
     }

@@ -1,0 +1,125 @@
+{
+  "schema_version": "0.2",
+  "id": "ssr-compact-regression-opus-output-review",
+  "prompt": "prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../../../skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json"
+    },
+    {
+      "source": "../../../../../../skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/INTERPRETATION.md",
+      "target": "INTERPRETATION.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/NEUTRAL-FACTS.json",
+      "target": "NEUTRAL-FACTS.json"
+    },
+    {
+      "source": "../../../../../../skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/policy.txt",
+      "target": "policy.txt"
+    },
+    {
+      "source": "../../../../../../skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/prior-assessment.md",
+      "target": "prior-assessment.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/projects/01-initiating-change-1.md",
+      "target": "projects/01-initiating-change-1.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/projects/02-invocation-change-1.md",
+      "target": "projects/02-invocation-change-1.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/projects/03-moved-guide-1.md",
+      "target": "projects/03-moved-guide-1.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/projects/04-invocation-review-1.md",
+      "target": "projects/04-invocation-review-1.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/projects/05-local-change-1.md",
+      "target": "projects/05-local-change-1.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/projects/06-invocation-unrelated-1.md",
+      "target": "projects/06-invocation-unrelated-1.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/projects/07-initiating-change-2.md",
+      "target": "projects/07-initiating-change-2.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/projects/08-invocation-review-2.md",
+      "target": "projects/08-invocation-review-2.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/projects/09-moved-guide-2.md",
+      "target": "projects/09-moved-guide-2.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/projects/10-invocation-change-2.md",
+      "target": "projects/10-invocation-change-2.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/projects/11-local-change-2.md",
+      "target": "projects/11-local-change-2.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/sources/initiating-change-criteria.md",
+      "target": "sources/initiating-change-criteria.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/sources/initiating-change.md",
+      "target": "sources/initiating-change.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/sources/invocation-change-criteria.md",
+      "target": "sources/invocation-change-criteria.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/sources/invocation-change.md",
+      "target": "sources/invocation-change.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/sources/invocation-review-criteria.md",
+      "target": "sources/invocation-review-criteria.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/sources/invocation-review.md",
+      "target": "sources/invocation-review.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/sources/invocation-unrelated-criteria.md",
+      "target": "sources/invocation-unrelated-criteria.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/sources/invocation-unrelated.md",
+      "target": "sources/invocation-unrelated.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/sources/local-change-criteria.md",
+      "target": "sources/local-change-criteria.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/sources/local-change.md",
+      "target": "sources/local-change.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/sources/moved-guide-criteria.md",
+      "target": "sources/moved-guide-criteria.md"
+    },
+    {
+      "source": "../../../../../../skill-study-private/sweeping-stale-references/development/compact-regression-01/review-inputs/sources/moved-guide.md",
+      "target": "sources/moved-guide.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}
