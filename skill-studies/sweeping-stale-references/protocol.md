@@ -2,8 +2,8 @@
 
 Format version: `1`
 Study ID: `sweeping-stale-references`
-Status: earlier comparison batches are complete; compact-finalist validation is owner-approved; the owner selected the comprehensive rewrite as the development base and accepts its changed local reporting. The original and tested rewrite snapshots remain preserved; no new skill version is adopted.
-Current action: owner approved [compact-regression-01](#validation-compact-regression-01) on 2026-10-24: eleven unchanged-finalist subjects and one output review. Freeze/readiness precede collection; preserve the completed semantic comparison and existing user changes. No automatic retry, candidate edit, extra case or adoption is included. The [CW accounting](../concise-writing/protocol.md#storage-and-accounting) owns combined spending.
+Status: compact-finalist validation is complete; the assessment recommends adoption of the unchanged compact finalist. Owner adoption remains pending; the shipped original and all tested snapshots are preserved.
+Current action: owner decision on the [compact-regression-01 recommendation](runs/compact-regression-01/compact-regression-01-assessment.md). All eleven subjects and the sole output review are spent; no further collection, rewrite or adoption is authorized. The [CW accounting](../concise-writing/protocol.md#storage-and-accounting) owns combined spending.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](runs/core-baseline-01/core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -254,7 +254,7 @@ The earlier 15-subject/one-review proposal remains unapproved and does not autom
 
 ### Validation: compact-regression-01
 
-Status: owner-approved; source commit recorded in [source freeze](runs/compact-regression-01/preparation/source-freeze.json), six manifests frozen, offline preparation and collection readiness pass; all eleven subjects retained and assessed with valid setup. Sole output review pending; no further subjects allocated.
+Status: complete; all eleven subjects retained and assessed with valid setup, sole output review audited. See [assessment](runs/compact-regression-01/compact-regression-01-assessment.md). Source commit and six manifests remain frozen in [preparation](runs/compact-regression-01/preparation/source-freeze.json).
 Owner authority, 2026-10-24: “ok, let's move forward with more testing” accepts the preceding proposal for eleven finalist subjects and one cross-model output review; the accidental standalone count edit was removed and exact previously tested bytes verified before preparation.
 Question: does the preferred compact finalist meet existing repair contracts across initiating changes, moved links and local corrections, and select appropriately in the existing Claude native tasks?
 Scope: three explicit repair cases twice each; two native trigger cases twice each; one unrelated native non-use check. Sole condition finalist, SHA-256 f1f297f213855f9b53835dd084b2be6d3d9134cadab47babea08cbdaad9a205e (814 words). Existing task/project/prompt bytes stay unchanged; no old-version/no-target arm.
@@ -271,6 +271,8 @@ Attempt index: [compact-regression-01-run-index.json](runs/compact-regression-01
 Output review: one fresh Opus-medium native Read/Glob/Grep-only session covers all eleven complete outputs and source/task/card/policy/neutral facts, judging 30 F1–F3 factors for ten repairs and keeping unrelated not measured. [Fixed prompt](runs/compact-regression-01/evaluation/prompt.md) is frozen before subjects; packet identities are frozen after subjects before dispatch. No skill bodies, hypotheses or traces supplied. Audit complete input delivery, actual read-only/model/tools/unchanged protected bytes, full independent first pass before separate prior access, and semantic evidence; preserve post-prior changes separately. D1/P1–P3 remain active-session trace judgments.
 Stopping: no behavioral early stop. Stop for unresolved charge/cleanup, retention failure, runtime/input drift, contamination, missing required capture or invalid native availability. No automatic retry/replacement, mid-batch edit, extra calls or adoption. An incomplete review stops the decision without a replacement call.
 Checkpoint: report functional outcomes, five native selection/non-use judgments, procedural defects and review disagreements separately. The owner prefers smaller complete skills when otherwise comparable; material outcome/preservation or selection problems require explanation. Reporting-only defects do not automatically trigger another rewrite. End this scope with an adoption/testing recommendation for owner decision.
+Result: ten correct committed repairs; native positive loading 4/4 and unrelated non-use 1/1. P3 fails in both initiating repetitions for cross-path vendor grouping; broader reporting defects are separate. The independent first pass agrees on all thirty functional factors, with no post-prior changes.
+Recommendation: adopt the unchanged 814-word finalist for practical use under the owner's size preference; retain bounded model/context coverage and reporting limitations. This is a recommendation only, with adoption pending owner decision.
 
 | Order | Case | Condition | Repetition | CONFIG |
 | ---: | --- | --- | ---: | --- |
@@ -710,7 +712,7 @@ All ten expansion slots, both 34-call comparison batches, both Claude smoke call
 Current SSR-linked mechanical accounting includes the fixed 136-call historical subtotal above plus compact-semantic-01 and its separate [evaluator ledger](runs/compact-semantic-01/evaluation/evaluator-run-index.json).
 The current validation adds its [subject index](runs/compact-regression-01/compact-regression-01-run-index.json) and [evaluator ledger](runs/compact-regression-01/evaluation/evaluator-run-index.json).
 For this subset, the historical spent subtotal plus the newly authorized scope gives 162 subject, 2 evaluator, 0 authoring and 0 retry invocations; this is an accounting projection, not a new allocation or pool transfer.
-Dispatched calls are **162 subject, 1 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **0 / 1 / 0 / 0** for this subset.
+Dispatched calls are **162 subject, 2 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **0 / 0 / 0 / 0** for this subset.
 The CW protocol remains authoritative for all current combined spending and outer ceilings; no historical unspent pool is revived.
 Sequential readiness used identical externally frozen scores; the final index pins the canonical repository results at their committed revision.
 
@@ -736,6 +738,7 @@ Subsequent authoring decision, 2026-10-23: the owner requested three compact rew
 
 | Evidence | Interpretation |
 |---|---|
+| [Compact closing validation](runs/compact-regression-01/compact-regression-01-assessment.md) | Ten correct committed repairs, timely native loading 4/4 and appropriate non-use 1/1; audited review agrees on all thirty factors. Reporting defects remain non-blocking. Recommends compact adoption; owner decision pending. |
 | [Claude smoke](runs/claude-smoke-01/claude-smoke-01-assessment.md) | Original only: explicit-load Shiv repair succeeds; native reviewer-triggered load is missed and repair incomplete. Runtime/capture viability and model behavior remain separate. |
 | [Sonnet comparison](runs/claude-comparison-01/claude-comparison-01-assessment.md) | Ordinary functional outcomes 10/10 per version; pressure original 1/2 versus rewrite 2/2; positive loads 2/4 versus 3/4; positive native task outcomes 3/4 each. Non-use sanity passes for both. |
 | [Opus invocation comparison](runs/claude-opus-invocation-01/claude-opus-invocation-01-assessment.md) | Positive loads original 2/4 versus rewrite 4/4; task outcomes 4/4 versus 3/4. Both original reviewer repairs succeed without loading; one loaded rewrite repair is incomplete. Non-use sanity passes for both. |

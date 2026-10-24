@@ -1,6 +1,6 @@
 # SSR compact rewrite exploration
 
-Status: static authoring and compact-semantic-01 checkpoint complete; fifteen valid subjects and one audited cross-model review establish a functional tie on the exposed semantic case. The owner approved the bounded closing validation on 2026-10-24; adoption remains unapproved.
+Status: static authoring, compact-semantic comparison and compact-regression closing validation complete. The assessment recommends the unchanged compact finalist; adoption awaits the owner's decision.
 The [testing plan](../2026-09-11-model-driven-skill-testing.md) owns progress; the [SSR protocol](../../skill-studies/sweeping-stale-references/protocol.md) owns study decisions and call authority.
 
 ## Accepted scope
@@ -64,3 +64,6 @@ The compact finalist remains unchanged; the next bounded regression is a recomme
 
 On 2026-10-24 the owner accepted the proposed eleven-subject/one-review [compact-regression-01](../../skill-studies/sweeping-stale-references/protocol.md#validation-compact-regression-01): six explicit repairs across initiating, moved-guide and local cases, four native positive triggers and one unrelated non-use check.
 This is unchanged-finalist validation against fixed existing contracts; the selected scope has no fresh comparison/control, automatic retry, additional rewrite or adoption. The owner-selected size tie-breaker remains the selection preference when other things are equal.
+
+The [completed closing assessment](../../skill-studies/sweeping-stale-references/runs/compact-regression-01/compact-regression-01-assessment.md) records ten correct committed repairs, all five appropriate native selection/non-use judgments and an audited first-pass review agreeing on thirty functional factors.
+Its practical recommendation favors the compact finalist under the owner's size tie-breaker, while preserving reporting defects and coverage limits; no new authoring, collection or promotion is included.

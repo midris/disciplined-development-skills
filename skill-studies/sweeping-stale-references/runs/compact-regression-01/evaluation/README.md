@@ -11,4 +11,4 @@ The verified read-only wrapper exposes native Read/Glob/Grep only and disables s
 D1/P1–P3 remain active-session judgments because invocation and procedure require traces.
 Case labels are visible, the prior is physically present and the reviewer shares the subjects' model family; independence is bounded accordingly.
 
-Status: packet prepared; review and complete-read/semantic audits pending.
+Status: complete; [first pass](first-pass.md), [judgments](judgments.json), [audit](audit.json) and [reconciliation](reconciliation.md) record agreement on all 30 functional factors and no post-prior changes.

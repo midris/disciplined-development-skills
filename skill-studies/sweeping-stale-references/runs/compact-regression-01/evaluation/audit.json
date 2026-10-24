@@ -1,0 +1,546 @@
+{
+  "run_id": "20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27",
+  "first_pass_event": 93,
+  "first_pass": {
+    "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/evaluation/first-pass.md",
+    "sha256": "567c2f279d5c6e5648dd8eb878308758027f48bb7bda6a0af55f3c6117affe83"
+  },
+  "prior_first_access_event": 94,
+  "prior_read_event": 94,
+  "post_prior_event": 99,
+  "post_prior": {
+    "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/reviews/20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27/final.txt",
+    "sha256": "ed9f174acbe310eb0be5b0f22379ed168d2a2a5f543e35387f9fc9974081e845"
+  },
+  "required_complete_files": 27,
+  "complete_delivery_before_first_pass": [
+    {
+      "path": "EVALUATION-INDEX.json",
+      "sha256": "2296fefdffc33e36dc6559290596ba5b860492e780b64da8cda1cdd7e6770578",
+      "complete_delivery": [
+        {
+          "call_event": 11,
+          "response_event": 12,
+          "call_id": "toolu_01Ms9FsgRiW2t76KhG1Xg6xT"
+        }
+      ]
+    },
+    {
+      "path": "policy.txt",
+      "sha256": "5d057d11f678ae3fa63c48957446aded13ccc5dcb8babab2856d0232d49e08bb",
+      "complete_delivery": [
+        {
+          "call_event": 13,
+          "response_event": 14,
+          "call_id": "toolu_01NPxp5ky5G4jrCyDdD3KbzY"
+        }
+      ]
+    },
+    {
+      "path": "INTERPRETATION.md",
+      "sha256": "c63299af03b1c212e0eb096009cef24a31a35cfba8545bbe33c4350296aa1c0d",
+      "complete_delivery": [
+        {
+          "call_event": 15,
+          "response_event": 16,
+          "call_id": "toolu_01CQcjebcGBKpb1hVqgiSy3G"
+        }
+      ]
+    },
+    {
+      "path": "NEUTRAL-FACTS.json",
+      "sha256": "cab5e6ef3bff4c83cb11d3efc782c23923b80dbb838fac6232934570aedab2d2",
+      "complete_delivery": [
+        {
+          "call_event": 17,
+          "response_event": 18,
+          "call_id": "toolu_016RrDiMs592rXDhxSQHs1Cd"
+        }
+      ]
+    },
+    {
+      "path": "sources/initiating-change.md",
+      "sha256": "9e98b977616871ceb9b6ae59fe619886a8ed15f7660d18e8b7a88ce86e8943ba",
+      "complete_delivery": [
+        {
+          "call_event": 20,
+          "response_event": 21,
+          "call_id": "toolu_01FopM1YES2WGQ2dEGgwZvnR"
+        }
+      ]
+    },
+    {
+      "path": "sources/initiating-change-criteria.md",
+      "sha256": "45296dea302c9aeabafa1088e992bb1bb2e1f05fadbade33466cf0e4e4cdd657",
+      "complete_delivery": [
+        {
+          "call_event": 22,
+          "response_event": 23,
+          "call_id": "toolu_01NG8chTWCG7GhUFj8JpRJY5"
+        }
+      ]
+    },
+    {
+      "path": "sources/invocation-change.md",
+      "sha256": "5ab9a85199c6cd2bee32a12a246ffb4db0a426cf4d97907285d612ee068fc75b",
+      "complete_delivery": [
+        {
+          "call_event": 24,
+          "response_event": 25,
+          "call_id": "toolu_01BSVJXfY8p37u9qwWHGnCZs"
+        }
+      ]
+    },
+    {
+      "path": "sources/invocation-change-criteria.md",
+      "sha256": "83187107886ca25aec78db382b50eef8869d78fe41c0acb1ca81bcdb34ea4ff1",
+      "complete_delivery": [
+        {
+          "call_event": 26,
+          "response_event": 27,
+          "call_id": "toolu_01HYzNWzqW3rWZt2iN5T1tqn"
+        }
+      ]
+    },
+    {
+      "path": "sources/moved-guide.md",
+      "sha256": "64bcde82831f3fd4bf99d7280a3471f1d150ccd559f99cbfb640ff7c5c135c6d",
+      "complete_delivery": [
+        {
+          "call_event": 28,
+          "response_event": 29,
+          "call_id": "toolu_01WUdz6uPiCyhQSFaqxvJ6ZS"
+        }
+      ]
+    },
+    {
+      "path": "sources/moved-guide-criteria.md",
+      "sha256": "630c076beb5ce2a773a04c85121cb6716849abb59cdb8e2ac7acc8eddbb7148d",
+      "complete_delivery": [
+        {
+          "call_event": 30,
+          "response_event": 31,
+          "call_id": "toolu_01UBTzmXnGk78C373aQiVvaN"
+        }
+      ]
+    },
+    {
+      "path": "sources/invocation-review.md",
+      "sha256": "4692768574b26ac787e0336db4400674081bae2caa24dd6ec4981ed557af8bce",
+      "complete_delivery": [
+        {
+          "call_event": 32,
+          "response_event": 33,
+          "call_id": "toolu_016gJaoTeyN79bHmdNme8goi"
+        }
+      ]
+    },
+    {
+      "path": "sources/invocation-review-criteria.md",
+      "sha256": "6718bcdbca0a2b8944f8bcc909f8e34f4e26b255b86eaac35495dec738ca209b",
+      "complete_delivery": [
+        {
+          "call_event": 34,
+          "response_event": 35,
+          "call_id": "toolu_016MbuhjrFL2Eoe4FzSpKy5S"
+        }
+      ]
+    },
+    {
+      "path": "sources/local-change.md",
+      "sha256": "b3d771bc12cb794513a15a4f4cf5b582725f04cabba75c0509b416dc412da571",
+      "complete_delivery": [
+        {
+          "call_event": 36,
+          "response_event": 37,
+          "call_id": "toolu_01UQzAjC7nXE1i858BcspU5L"
+        }
+      ]
+    },
+    {
+      "path": "sources/local-change-criteria.md",
+      "sha256": "6b33f07aca5ca41f0dd09b51a66404c6e3f7029bcc5cfda33a0d58333fbb8bd6",
+      "complete_delivery": [
+        {
+          "call_event": 38,
+          "response_event": 39,
+          "call_id": "toolu_01MhFmzMtbMz4q6N8GyHicGV"
+        }
+      ]
+    },
+    {
+      "path": "sources/invocation-unrelated.md",
+      "sha256": "4eb649c1b5c4313948dec3309781824113f58c0a65c839d82479d499d1934d83",
+      "complete_delivery": [
+        {
+          "call_event": 40,
+          "response_event": 41,
+          "call_id": "toolu_013RhPK4PmCFqTuZ4gWX17j5"
+        }
+      ]
+    },
+    {
+      "path": "sources/invocation-unrelated-criteria.md",
+      "sha256": "3b75a9263209c9c6542f84aba6cf1bdeb03b9048664faa5b2aff2ce270e222e0",
+      "complete_delivery": [
+        {
+          "call_event": 42,
+          "response_event": 43,
+          "call_id": "toolu_01F8Mc2mF73b24B1eqQoowjq"
+        }
+      ]
+    },
+    {
+      "path": "projects/01-initiating-change-1.md",
+      "sha256": "9564f70a2325a162249b13dec09b19cf38952fad49a5295b06f901e33b37975f",
+      "complete_delivery": [
+        {
+          "call_event": 45,
+          "response_event": 46,
+          "call_id": "toolu_01GZxVEiaWRYeYjVsf7SCHqh"
+        }
+      ]
+    },
+    {
+      "path": "projects/02-invocation-change-1.md",
+      "sha256": "768d1cc706e40ec60dd1a8120b26ff783eb9270e6235c0838a8fccf28b10eb82",
+      "complete_delivery": [
+        {
+          "call_event": 47,
+          "response_event": 48,
+          "call_id": "toolu_018CqP14X918yXcZ8jc1xpAd"
+        }
+      ]
+    },
+    {
+      "path": "projects/03-moved-guide-1.md",
+      "sha256": "c83efb779a934be9d19a1dc8767727f0c2de6e0c92140c43d5628932dc9260d6",
+      "complete_delivery": [
+        {
+          "call_event": 49,
+          "response_event": 50,
+          "call_id": "toolu_019j6kNLaoT8dLiasgsVs9vg"
+        }
+      ]
+    },
+    {
+      "path": "projects/04-invocation-review-1.md",
+      "sha256": "da9387b7d6bf54006e006e02cf9f796fc3fbcbb14cf4e381074eb50067481b54",
+      "complete_delivery": [
+        {
+          "call_event": 54,
+          "response_event": 55,
+          "call_id": "toolu_01RUahytRKZfVDijrUGDxPLQ"
+        }
+      ]
+    },
+    {
+      "path": "projects/05-local-change-1.md",
+      "sha256": "0d8c23e0a37329e4d74eea0768411e40c91c298c40fa6081e7dcfc9bd4afb637",
+      "complete_delivery": [
+        {
+          "call_event": 56,
+          "response_event": 57,
+          "call_id": "toolu_0155DgTPdUaiF2vcjDbyX3cq"
+        }
+      ]
+    },
+    {
+      "path": "projects/06-invocation-unrelated-1.md",
+      "sha256": "1c165535307d05a343dcc023e894225e0ed223dfa00b690553080c209c3340f6",
+      "complete_delivery": [
+        {
+          "call_event": 58,
+          "response_event": 59,
+          "call_id": "toolu_019FaoSgSPkyCmhQ5CVCFEcy"
+        }
+      ]
+    },
+    {
+      "path": "projects/07-initiating-change-2.md",
+      "sha256": "be66e6287e883e6f00f17c1d2f4c3667307854aa7e8cdb2150b56beba0dd5795",
+      "complete_delivery": [
+        {
+          "call_event": 63,
+          "response_event": 64,
+          "call_id": "toolu_01ARn81qiU7rpRu5SRnXJVGy"
+        }
+      ]
+    },
+    {
+      "path": "projects/08-invocation-review-2.md",
+      "sha256": "16dde9990ef7750f781ec175836813dd1f4a8fd4dc0e7a11e0e6870296da0d6a",
+      "complete_delivery": [
+        {
+          "call_event": 65,
+          "response_event": 66,
+          "call_id": "toolu_01CMUp6VjmxCM8LUJTWhSdM1"
+        }
+      ]
+    },
+    {
+      "path": "projects/09-moved-guide-2.md",
+      "sha256": "340d84a75bdc4849dfbd55a3fa76461049d3c66b21531891d33793b12c211a70",
+      "complete_delivery": [
+        {
+          "call_event": 67,
+          "response_event": 68,
+          "call_id": "toolu_01SaVWSVH2T9aJLr9iSmNdZf"
+        }
+      ]
+    },
+    {
+      "path": "projects/10-invocation-change-2.md",
+      "sha256": "8414869d082e3672f4f1a63afd98de5bad944c57633ff004c89e71b3c1e33f62",
+      "complete_delivery": [
+        {
+          "call_event": 69,
+          "response_event": 70,
+          "call_id": "toolu_017mbwfn192gPL5psCwWtyvQ"
+        }
+      ]
+    },
+    {
+      "path": "projects/11-local-change-2.md",
+      "sha256": "e9fa2af4abc0da2b0476ce7f00b4d73473120a1ba5754c4d71a2f1140540a36b",
+      "complete_delivery": [
+        {
+          "call_event": 71,
+          "response_event": 72,
+          "call_id": "toolu_019C4a6GBLTWLjrjVgnsPdMf"
+        }
+      ]
+    }
+  ],
+  "full_inventory_verified": true,
+  "protected_inputs_verified": 28,
+  "model_and_native_Read_Glob_Grep_tools_verified": true,
+  "all_pre_prior_calls": [
+    {
+      "event": 4,
+      "name": "Glob",
+      "input": {
+        "pattern": "**/EVALUATION-INDEX.json",
+        "path": "/private/tmp/skilltest-runs/20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27/workspace"
+      }
+    },
+    {
+      "event": 7,
+      "name": "Glob",
+      "input": {
+        "pattern": "**/EVALUATION-INDEX.json",
+        "path": "/private/tmp/skilltest-runs/20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27/workspace/evidence"
+      }
+    },
+    {
+      "event": 9,
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*",
+        "path": "/private/tmp/skilltest-runs/20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27/workspace/fixture"
+      }
+    },
+    {
+      "event": 11,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/skilltest-runs/20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27/workspace/fixture/EVALUATION-INDEX.json"
+      }
+    },
+    {
+      "event": 13,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/skilltest-runs/20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27/workspace/fixture/policy.txt"
+      }
+    },
+    {
+      "event": 15,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/skilltest-runs/20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27/workspace/fixture/INTERPRETATION.md"
+      }
+    },
+    {
+      "event": 17,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/skilltest-runs/20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27/workspace/fixture/NEUTRAL-FACTS.json"
+      }
+    },
+    {
+      "event": 20,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/skilltest-runs/20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27/workspace/fixture/sources/initiating-change.md"
+      }
+    },
+    {
+      "event": 22,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/skilltest-runs/20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27/workspace/fixture/sources/initiating-change-criteria.md"
+      }
+    },
+    {
+      "event": 24,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/skilltest-runs/20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27/workspace/fixture/sources/invocation-change.md"
+      }
+    },
+    {
+      "event": 26,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/skilltest-runs/20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27/workspace/fixture/sources/invocation-change-criteria.md"
+      }
+    },
+    {
+      "event": 28,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/skilltest-runs/20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27/workspace/fixture/sources/moved-guide.md"
+      }
+    },
+    {
+      "event": 30,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/skilltest-runs/20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27/workspace/fixture/sources/moved-guide-criteria.md"
+      }
+    },
+    {
+      "event": 32,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/skilltest-runs/20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27/workspace/fixture/sources/invocation-review.md"
+      }
+    },
+    {
+      "event": 34,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/skilltest-runs/20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27/workspace/fixture/sources/invocation-review-criteria.md"
+      }
+    },
+    {
+      "event": 36,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/skilltest-runs/20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27/workspace/fixture/sources/local-change.md"
+      }
+    },
+    {
+      "event": 38,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/skilltest-runs/20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27/workspace/fixture/sources/local-change-criteria.md"
+      }
+    },
+    {
+      "event": 40,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/skilltest-runs/20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27/workspace/fixture/sources/invocation-unrelated.md"
+      }
+    },
+    {
+      "event": 42,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/skilltest-runs/20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27/workspace/fixture/sources/invocation-unrelated-criteria.md"
+      }
+    },
+    {
+      "event": 45,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/skilltest-runs/20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27/workspace/fixture/projects/01-initiating-change-1.md"
+      }
+    },
+    {
+      "event": 47,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/skilltest-runs/20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27/workspace/fixture/projects/02-invocation-change-1.md"
+      }
+    },
+    {
+      "event": 49,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/skilltest-runs/20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27/workspace/fixture/projects/03-moved-guide-1.md"
+      }
+    },
+    {
+      "event": 54,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/skilltest-runs/20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27/workspace/fixture/projects/04-invocation-review-1.md"
+      }
+    },
+    {
+      "event": 56,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/skilltest-runs/20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27/workspace/fixture/projects/05-local-change-1.md"
+      }
+    },
+    {
+      "event": 58,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/skilltest-runs/20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27/workspace/fixture/projects/06-invocation-unrelated-1.md"
+      }
+    },
+    {
+      "event": 63,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/skilltest-runs/20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27/workspace/fixture/projects/07-initiating-change-2.md"
+      }
+    },
+    {
+      "event": 65,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/skilltest-runs/20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27/workspace/fixture/projects/08-invocation-review-2.md"
+      }
+    },
+    {
+      "event": 67,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/skilltest-runs/20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27/workspace/fixture/projects/09-moved-guide-2.md"
+      }
+    },
+    {
+      "event": 69,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/skilltest-runs/20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27/workspace/fixture/projects/10-invocation-change-2.md"
+      }
+    },
+    {
+      "event": 71,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/skilltest-runs/20261024T062107799Z-ssr-compact-regression-opus-output-review-cc27dd38-67b3-4b71-8751-c98c37da405b-dmotto27/workspace/fixture/projects/11-local-change-2.md"
+      }
+    }
+  ],
+  "semantic_audit": "Active assessor manually inspected complete first pass and post-prior output against all source/final projects and fixed cards. All eleven full IDs and thirty F1\u2013F3 factors are present. Ten overall met; unrelated not measured. All functional judgments agree, with no post-prior factor changes.",
+  "independence_limits": [
+    "Visible cases and non-blinded labels; prior physically present but all access timing audited.",
+    "Reviewer is fresh Opus medium, same family as subjects and different from active Codex assessor. Shared-family errors remain possible.",
+    "Exposed reconstructed development cases; no contemporaneous control, causal contribution, broad transfer, full-catalog/DD composition or population reliability claim."
+  ],
+  "precision_notes": [
+    "Reviewer lacks per-commit diffs/subject traces and appropriately limits its commit-grouping claims; active disposable Git history/diffs independently establish P2 and exact repair commits. F3 agrees on complete committed HEAD.",
+    "Reviewer notes that prior lacks unrelated observations and reporting defects. Prior packet intentionally contains functional judgments only; full active records already carry descriptive arithmetic/preservation and several reporting observations.",
+    "Reviewer says agreement comes after prior and is not independent confirmation. Agreement was compared after prior, but complete first-pass judgments actually precede prior access (events93/94), so those judgments remain independently produced within stated shared-family/non-blind limits.",
+    "Reviewer adds final-response moved-guide repetition1 search-summary imprecision, supported by complete response and actual search. It is supplemental, non-blocking and does not alter frozen scores.",
+    "Reviewer summary says stop-on-success sentences are kept in all three current delivery documents; troubleshooting expresses success/no-resend in its own form rather than a literal repeated stopping sentence. Whole-project meaning is correct."
+  ]
+}

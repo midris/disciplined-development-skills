@@ -1,0 +1,148 @@
+{
+  "reviewer": "Opus5.5 medium; fresh context, same family as subjects and different from active Codex assessor",
+  "first_pass_event": 93,
+  "prior_read_event": 94,
+  "post_prior_event": 99,
+  "judgments": [
+    {
+      "run_id": "20261024T060228842Z-ssr-compact-regression-initiating-change-8497abc5-1121-4628-af3f-03eb3a38bb0e-5waqy2no",
+      "case_id": "initiating-change",
+      "repetition": 1,
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "agree; no active score change"
+    },
+    {
+      "run_id": "20261024T060550211Z-ssr-compact-regression-invocation-change-1159453b-4002-4c8a-b340-4ddb44c568df-w47ho2r3",
+      "case_id": "invocation-change",
+      "repetition": 1,
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "agree; no active score change"
+    },
+    {
+      "run_id": "20261024T060738969Z-ssr-compact-regression-moved-guide-3a8241d0-eb67-4a24-8f49-1f1b24b72db7-9shudgzv",
+      "case_id": "moved-guide",
+      "repetition": 1,
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "agree; no active score change"
+    },
+    {
+      "run_id": "20261024T060904689Z-ssr-compact-regression-invocation-review-2943fb8b-a983-430c-b3be-0e4d6ac38547-pq7u071m",
+      "case_id": "invocation-review",
+      "repetition": 1,
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "agree; no active score change"
+    },
+    {
+      "run_id": "20261024T061345945Z-ssr-compact-regression-local-change-842fbb60-cf1b-4deb-acd6-a70e7e8f48f0-o3r593d9",
+      "case_id": "local-change",
+      "repetition": 1,
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "agree; no active score change"
+    },
+    {
+      "run_id": "20261024T061443495Z-ssr-compact-regression-invocation-unrelated-21a09f5f-a7b3-4320-8955-401a62470b77-7tr59p0l",
+      "case_id": "invocation-unrelated",
+      "repetition": 1,
+      "first_pass": {
+        "overall": "not measured"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "agree; no active score change"
+    },
+    {
+      "run_id": "20261024T061519400Z-ssr-compact-regression-initiating-change-16730605-9728-478a-a16e-3546bc7231ca-cj1pgbzp",
+      "case_id": "initiating-change",
+      "repetition": 2,
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "agree; no active score change"
+    },
+    {
+      "run_id": "20261024T061612874Z-ssr-compact-regression-invocation-review-3e1c6c38-11ca-4662-b139-99cfda44ec50-5_jh10a3",
+      "case_id": "invocation-review",
+      "repetition": 2,
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "agree; no active score change"
+    },
+    {
+      "run_id": "20261024T061703945Z-ssr-compact-regression-moved-guide-42f97295-92c5-41e5-bf7b-2c644ab42d1c-0scb5n1v",
+      "case_id": "moved-guide",
+      "repetition": 2,
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "agree; no active score change"
+    },
+    {
+      "run_id": "20261024T061754141Z-ssr-compact-regression-invocation-change-c51dc79a-efa5-409d-a953-4c406e11c8ef-u6hucd_f",
+      "case_id": "invocation-change",
+      "repetition": 2,
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "agree; no active score change"
+    },
+    {
+      "run_id": "20261024T061843823Z-ssr-compact-regression-local-change-28981bfb-f81d-4946-8626-9d3d49a747f1-7_ha8zsf",
+      "case_id": "local-change",
+      "repetition": 2,
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "agree; no active score change"
+    }
+  ]
+}
