@@ -23,6 +23,7 @@ This scope updates guidance and reconciles SSR's remaining evidence needs; it au
 - [x] Adopt the CW testing model in the framework, using Superpowers writing-skills to distinguish application, discovery, controls, pressure and repeated wording tests; effectiveness and consequential quality lead, with complete skill size breaking an equivalence tie.
 - [x] Reconcile SSR's completed evidence and remaining preparation against that model, preserving historical scores, frozen inputs and the unrelated CW fixture edit.
 - [x] Sweep entry-point guidance and verify document consistency, accounting and the hook suite before closing the update.
+- [x] Address Claude's four advisory findings on `0dd7d2e`: consistent framework naming, current-state status lines, a CLAUDE pointer instead of duplicated policy, and the repeated README clause. Preserve methodology, frozen evidence and the unrelated fixture edit.
 
 ## Starting or resuming without conversation history
 

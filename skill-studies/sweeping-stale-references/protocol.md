@@ -2,7 +2,7 @@
 
 Format version: `1`
 Study ID: `sweeping-stale-references`
-Status: the compact comparison and closing validation batches are complete; the owner adopted the CW testing model for continued SSR work on 2026-10-24. Adoption remains pending; completed scores, the shipped original and tested snapshots are preserved.
+Status: the compact comparison and closing validation batches are complete; remaining-scope preparation follows the CW testing model. Skill adoption remains pending.
 Current action: use the [CW model alignment](#cw-model-alignment) to prepare a bounded remaining-scope proposal before the next adoption decision. All earlier allocations are spent; methodology adoption authorizes no further collection, rewrite or deployment. The [CW accounting](../concise-writing/protocol.md#storage-and-accounting) owns combined spending.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](runs/core-baseline-01/core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.

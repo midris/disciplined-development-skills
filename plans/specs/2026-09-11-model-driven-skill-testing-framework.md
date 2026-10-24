@@ -1,8 +1,8 @@
 # Model-driven skill testing and rewriting
 
-Status: current methodology; on 2026-10-24 the owner adopted the CW study's testing approach for continued SSR work and subsequent skills.
+Status: current methodology for SSR and subsequent skill studies, using the CW testing model.
 Follow these requirements when preparing a study; authority to run providers, rewrite a skill or adopt a change comes from the recorded owner decisions in the execution plan and study protocol.
-The [fresh testing plan](../2026-09-11-model-driven-skill-testing.md) owns execution order, progress and the next action.
+The [testing plan](../2026-09-11-model-driven-skill-testing.md) owns execution order, progress and the next action.
 
 ## Goal and starting point
 

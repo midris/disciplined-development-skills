@@ -1012,7 +1012,7 @@ The short examples screen uses its [two-call evaluator ledger](runs/final-compar
 Dispatched calls are **668 subject, 50 evaluator, 0 authoring, 3 retry**; remaining outer capacity is **0 / 0 / 4 / 1** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **3,710 active minutes booked; 2,510 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **3,715 active minutes booked; 2,515 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
 The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 668/668, with 0 approved SSR compact-regression calls available; the earlier E diagnostic and CW examples screen are spent.
@@ -1020,6 +1020,7 @@ The supplemental work used 40 estimated active minutes against its 40-minute for
 The SSR compact checkpoint used 60 estimated active minutes against 90 forecast, including 327.519 subject and 129.286 reviewer seconds once (456.805 total); categories were not separately timed. Its fifteen subject and one evaluator calls are spent, with no retry or further allocation.
 The SSR closing validation used 60 estimated active minutes against its 60-minute forecast, including 238.375 subject and 139.333 reviewer seconds once (377.708 total); categories were not separately timed. All eleven subjects and the sole evaluator are spent; no additional calls are selected.
 The CW-process comparison and methodology adoption used 20 estimated active minutes for evidence review, documentation, SSR gap reconciliation and zero-model verification; no model calls or prior waits are added again.
+The methodology review follow-up used 5 estimated active minutes for the four advisory documentation fixes, verification and publication; no model calls were added.
 
 | Work | Estimated active minutes |
 | --- | ---: |
@@ -1157,7 +1158,8 @@ The CW-process comparison and methodology adoption used 20 estimated active minu
 | SSR compact comparison qualification/freeze, fifteen subjects, complete-project review/audit, reconciliation and publication | 60 |
 | SSR closing validation preparation/freeze, eleven subjects, complete-output review/audit, reconciliation and publication | 60 |
 | CW-process comparison and methodology adoption, SSR gap reconciliation and zero-model verification | 20 |
-| **Total** | **3,710** |
+| CW-methodology advisory review fixes, verification and publication | 5 |
+| **Total** | **3,715** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.
