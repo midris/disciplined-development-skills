@@ -254,7 +254,7 @@ The earlier 15-subject/one-review proposal remains unapproved and does not autom
 
 ### Validation: compact-regression-01
 
-Status: owner-approved; source commit recorded in [source freeze](runs/compact-regression-01/preparation/source-freeze.json), six manifests frozen, offline preparation and collection readiness pass; no subjects dispatched.
+Status: owner-approved; source commit recorded in [source freeze](runs/compact-regression-01/preparation/source-freeze.json), six manifests frozen, offline preparation and collection readiness pass; all eleven subjects retained and assessed with valid setup. Sole output review pending; no further subjects allocated.
 Owner authority, 2026-10-24: “ok, let's move forward with more testing” accepts the preceding proposal for eleven finalist subjects and one cross-model output review; the accidental standalone count edit was removed and exact previously tested bytes verified before preparation.
 Question: does the preferred compact finalist meet existing repair contracts across initiating changes, moved links and local corrections, and select appropriately in the existing Claude native tasks?
 Scope: three explicit repair cases twice each; two native trigger cases twice each; one unrelated native non-use check. Sole condition finalist, SHA-256 f1f297f213855f9b53835dd084b2be6d3d9134cadab47babea08cbdaad9a205e (814 words). Existing task/project/prompt bytes stay unchanged; no old-version/no-target arm.
@@ -710,7 +710,7 @@ All ten expansion slots, both 34-call comparison batches, both Claude smoke call
 Current SSR-linked mechanical accounting includes the fixed 136-call historical subtotal above plus compact-semantic-01 and its separate [evaluator ledger](runs/compact-semantic-01/evaluation/evaluator-run-index.json).
 The current validation adds its [subject index](runs/compact-regression-01/compact-regression-01-run-index.json) and [evaluator ledger](runs/compact-regression-01/evaluation/evaluator-run-index.json).
 For this subset, the historical spent subtotal plus the newly authorized scope gives 162 subject, 2 evaluator, 0 authoring and 0 retry invocations; this is an accounting projection, not a new allocation or pool transfer.
-Dispatched calls are **151 subject, 1 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **11 / 1 / 0 / 0** for this subset.
+Dispatched calls are **162 subject, 1 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **0 / 1 / 0 / 0** for this subset.
 The CW protocol remains authoritative for all current combined spending and outer ceilings; no historical unspent pool is revived.
 Sequential readiness used identical externally frozen scores; the final index pins the canonical repository results at their committed revision.
 

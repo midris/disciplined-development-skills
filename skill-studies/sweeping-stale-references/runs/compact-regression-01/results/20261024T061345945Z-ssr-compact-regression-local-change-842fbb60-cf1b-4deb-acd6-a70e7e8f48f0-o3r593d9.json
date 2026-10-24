@@ -1,0 +1,162 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-10-24T06:14:40.894071+00:00",
+  "run_id": "20261024T061345945Z-ssr-compact-regression-local-change-842fbb60-cf1b-4deb-acd6-a70e7e8f48f0-o3r593d9",
+  "condition": "finalist",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Author/preparer and active assessor with history and condition awareness; not independent or blind. SSR-assessment-3 and frozen case-specific criteria/interpretation. No shared counting unit imported across cases."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T061345945Z-ssr-compact-regression-local-change-842fbb60-cf1b-4deb-acd6-a70e7e8f48f0-o3r593d9/result.json",
+        "sha256": "bdf2c86d175c6fa02642eb7a23e5bb7c4bc0f87d589ab61e75309ebb9b204d3b",
+        "version": null
+      },
+      "selector": "Mechanical completion, execution identities, configured inputs and cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T061345945Z-ssr-compact-regression-local-change-842fbb60-cf1b-4deb-acd6-a70e7e8f48f0-o3r593d9/stdout.txt",
+        "sha256": "20675d4cc685b02adf6755de83fd1c0d8e1948298587dfe0c2af878ab5498052",
+        "version": null
+      },
+      "selector": "Complete ordered model-visible content/tools, catalog, full-body delivery where selected, edits and verification claims."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T061345945Z-ssr-compact-regression-local-change-842fbb60-cf1b-4deb-acd6-a70e7e8f48f0-o3r593d9/final.txt",
+        "sha256": "1387a7ddb8c2050e5a17b9c8708a043fc306006830a4d163da4a0e9bf19e8b2e",
+        "version": null
+      },
+      "selector": "Complete delivered response."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T061345945Z-ssr-compact-regression-local-change-842fbb60-cf1b-4deb-acd6-a70e7e8f48f0-o3r593d9.checks.json",
+        "sha256": "2c7a969fdce9e183e34de4fca55150e3a1a27b34d10bf19f56a34ceedc0d666a",
+        "version": null
+      },
+      "selector": "Disposable-copy complete project/Git/account, source-byte comparisons, ordered trace projection and independent replay observations; retained raw bundle unchanged."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned Opus5.5 low on Claude Code2.1.308 completed with SSR in the native catalog, correct supplied bytes and complete retained capture, verified inventory and clean runner cleanup. Explicit full-body delivery verified where required; native missing loading is assessed under D1, not setup.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Glossary heading corrected to Membership and body remains useful in context.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only heading bytes changed. All membership/billing/shipping meanings, historical record, JSON booleans and two working README links are preserved.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "7d79299c7a4ecbd2c533c940dbe8239733e01833 commits complete correction after baseline with clean final working tree.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Broad member-space/compound and anchor/link searches precede edit; only heading needs updating and shipping phrase is correctly preserved.",
+      "consequence": "Procedural criterion satisfied within fixed case scope.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One reconciliation commit contains complete correction.",
+      "consequence": "Procedural criterion satisfied within fixed case scope.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Positive inventory identifies changed heading, already-correct terms across glossary/billing/shipping/config/archive and shipping false positive, with accurate path/location counts and README link disposition; satisfies accepted candidate branch.",
+      "consequence": "Procedural criterion satisfied within fixed case scope.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "F1–F3 and P1–P3 met; supplemental verification timing issue remains separately visible.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "Commit claims re-ran verification, but actual old-form search runs after the commit in the same Bash call. Search does occur before final response. No new-form post-edit search is captured.",
+      "consequence": "Supplementary/descriptive evidence; fixed criterion scope and consequences unchanged.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "dimension": "procedural",
+      "description": "Historical archive wording is unchanged and described as already spelled correctly; it remains explicitly historical in project text.",
+      "consequence": "Supplementary/descriptive evidence; fixed criterion scope and consequences unchanged.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "Exposed reconstructed case, sole compact-finalist condition and one qualified runtime/model stratum; no contemporaneous superiority, causal-guidance, held-out or reliability claim.",
+    "Case-specific units and accepted alternatives govern; procedure/loading and task correctness remain separately reported."
+  ],
+  "result_id": "compact-regression-01-local-change-finalist-1",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/manifests/local-change-manifest.json",
+    "sha256": "5f177e958709a21cbfe39d685e89498fb80b2b91e135e680ddf07717be386a2a",
+    "version": "1",
+    "git_revision": "3f15fe8a498153c16ba3b48f7bfb74539f37e98f"
+  }
+}

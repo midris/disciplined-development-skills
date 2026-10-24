@@ -3,5 +3,534 @@
   "index_id": "ssr-compact-regression-01",
   "study_id": "sweeping-stale-references",
   "batch_id": "compact-regression-01",
-  "attempts": []
+  "attempts": [
+    {
+      "attempt_id": "compact-regression-01-initiating-change-finalist-1-1",
+      "case_id": "initiating-change",
+      "condition": "finalist",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/manifests/initiating-change-manifest.json",
+        "sha256": "eb8dac57c763dffc169784e0bc110488f6141bbefb8784ba01f19226c0e6e0b1",
+        "version": "1",
+        "git_revision": "3f15fe8a498153c16ba3b48f7bfb74539f37e98f"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "6b91080d1a3937cdfdc06d6bcbc45b152864a70ad2ce054bad6889d639001ca0",
+          "version": "1",
+          "git_revision": "3f15fe8a498153c16ba3b48f7bfb74539f37e98f"
+        },
+        "selector": "Batch: compact-regression-01; order 1"
+      },
+      "run_id": "20261024T060228842Z-ssr-compact-regression-initiating-change-8497abc5-1121-4628-af3f-03eb3a38bb0e-5waqy2no",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Candidate-only exposed development validation. Identical sequential score frozen externally until its closing repository commit."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T060228842Z-ssr-compact-regression-initiating-change-8497abc5-1121-4628-af3f-03eb3a38bb0e-5waqy2no",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T060228842Z-ssr-compact-regression-initiating-change-8497abc5-1121-4628-af3f-03eb3a38bb0e-5waqy2no.inventory.json",
+          "sha256": "35c0b39244d22e73085e5bc3c3a97c7464563212013ff471770a0a9dd8a2228d",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "compact-regression-01-initiating-change-finalist-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/scores/20261024T060228842Z-ssr-compact-regression-initiating-change-8497abc5-1121-4628-af3f-03eb3a38bb0e-5waqy2no.json",
+          "sha256": "950e2252ebbf866abfc38c7a860f39c662cfd4666a4a96e12c25dd448710c6e4",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "compact-regression-01-invocation-change-finalist-1-1",
+      "case_id": "invocation-change",
+      "condition": "finalist",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/manifests/invocation-change-manifest.json",
+        "sha256": "ec325a38ce216ac2c73c146f212c56e57c9f993eba9d66d5480231e35e933ffc",
+        "version": "1",
+        "git_revision": "3f15fe8a498153c16ba3b48f7bfb74539f37e98f"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "6b91080d1a3937cdfdc06d6bcbc45b152864a70ad2ce054bad6889d639001ca0",
+          "version": "1",
+          "git_revision": "3f15fe8a498153c16ba3b48f7bfb74539f37e98f"
+        },
+        "selector": "Batch: compact-regression-01; order 2"
+      },
+      "run_id": "20261024T060550211Z-ssr-compact-regression-invocation-change-1159453b-4002-4c8a-b340-4ddb44c568df-w47ho2r3",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Candidate-only exposed development validation. Identical sequential score frozen externally until its closing repository commit."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T060550211Z-ssr-compact-regression-invocation-change-1159453b-4002-4c8a-b340-4ddb44c568df-w47ho2r3",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T060550211Z-ssr-compact-regression-invocation-change-1159453b-4002-4c8a-b340-4ddb44c568df-w47ho2r3.inventory.json",
+          "sha256": "17c705ab92eb8eb5b6c2f446163209524ada8ba58dc253c2e77fc52c4949445e",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "compact-regression-01-invocation-change-finalist-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/scores/20261024T060550211Z-ssr-compact-regression-invocation-change-1159453b-4002-4c8a-b340-4ddb44c568df-w47ho2r3.json",
+          "sha256": "ae080018faf95df888d8b91c26d364ad53f52d0e7faf1ca7aae60f4324a3ec67",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "compact-regression-01-moved-guide-finalist-1-1",
+      "case_id": "moved-guide",
+      "condition": "finalist",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/manifests/moved-guide-manifest.json",
+        "sha256": "1bd6dfe160ea04d1d5462aca4c7104015f8355cd1a4172fc89723cfcab0c19aa",
+        "version": "1",
+        "git_revision": "3f15fe8a498153c16ba3b48f7bfb74539f37e98f"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "6b91080d1a3937cdfdc06d6bcbc45b152864a70ad2ce054bad6889d639001ca0",
+          "version": "1",
+          "git_revision": "3f15fe8a498153c16ba3b48f7bfb74539f37e98f"
+        },
+        "selector": "Batch: compact-regression-01; order 3"
+      },
+      "run_id": "20261024T060738969Z-ssr-compact-regression-moved-guide-3a8241d0-eb67-4a24-8f49-1f1b24b72db7-9shudgzv",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Candidate-only exposed development validation. Identical sequential score frozen externally until its closing repository commit."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T060738969Z-ssr-compact-regression-moved-guide-3a8241d0-eb67-4a24-8f49-1f1b24b72db7-9shudgzv",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T060738969Z-ssr-compact-regression-moved-guide-3a8241d0-eb67-4a24-8f49-1f1b24b72db7-9shudgzv.inventory.json",
+          "sha256": "03a30ba91404c0b325c24bbb44ddfe242576d980485622647c993e59c969bf97",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "compact-regression-01-moved-guide-finalist-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/scores/20261024T060738969Z-ssr-compact-regression-moved-guide-3a8241d0-eb67-4a24-8f49-1f1b24b72db7-9shudgzv.json",
+          "sha256": "2ddefcff378daca0b8fca2a25bf2342ea727ef90ad64d9610f26a2f0b28c1a28",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "compact-regression-01-invocation-review-finalist-1-1",
+      "case_id": "invocation-review",
+      "condition": "finalist",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/manifests/invocation-review-manifest.json",
+        "sha256": "94468468284a69ac891d1dbc0fc7882b316229c0b2001f76c57da33201f9013c",
+        "version": "1",
+        "git_revision": "3f15fe8a498153c16ba3b48f7bfb74539f37e98f"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "6b91080d1a3937cdfdc06d6bcbc45b152864a70ad2ce054bad6889d639001ca0",
+          "version": "1",
+          "git_revision": "3f15fe8a498153c16ba3b48f7bfb74539f37e98f"
+        },
+        "selector": "Batch: compact-regression-01; order 4"
+      },
+      "run_id": "20261024T060904689Z-ssr-compact-regression-invocation-review-2943fb8b-a983-430c-b3be-0e4d6ac38547-pq7u071m",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Candidate-only exposed development validation. Identical sequential score frozen externally until its closing repository commit."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T060904689Z-ssr-compact-regression-invocation-review-2943fb8b-a983-430c-b3be-0e4d6ac38547-pq7u071m",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T060904689Z-ssr-compact-regression-invocation-review-2943fb8b-a983-430c-b3be-0e4d6ac38547-pq7u071m.inventory.json",
+          "sha256": "4c3454169deba88756be398f48793f2f5cd79e746e1e7d41c262b915b1f045e1",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "compact-regression-01-invocation-review-finalist-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/scores/20261024T060904689Z-ssr-compact-regression-invocation-review-2943fb8b-a983-430c-b3be-0e4d6ac38547-pq7u071m.json",
+          "sha256": "0e146f360a6fb4db420617c008f7e0a67d3a2abe472ca238a14a0cb8ae7f072c",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "compact-regression-01-local-change-finalist-1-1",
+      "case_id": "local-change",
+      "condition": "finalist",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/manifests/local-change-manifest.json",
+        "sha256": "5f177e958709a21cbfe39d685e89498fb80b2b91e135e680ddf07717be386a2a",
+        "version": "1",
+        "git_revision": "3f15fe8a498153c16ba3b48f7bfb74539f37e98f"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "6b91080d1a3937cdfdc06d6bcbc45b152864a70ad2ce054bad6889d639001ca0",
+          "version": "1",
+          "git_revision": "3f15fe8a498153c16ba3b48f7bfb74539f37e98f"
+        },
+        "selector": "Batch: compact-regression-01; order 5"
+      },
+      "run_id": "20261024T061345945Z-ssr-compact-regression-local-change-842fbb60-cf1b-4deb-acd6-a70e7e8f48f0-o3r593d9",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Candidate-only exposed development validation. Identical sequential score frozen externally until its closing repository commit."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T061345945Z-ssr-compact-regression-local-change-842fbb60-cf1b-4deb-acd6-a70e7e8f48f0-o3r593d9",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T061345945Z-ssr-compact-regression-local-change-842fbb60-cf1b-4deb-acd6-a70e7e8f48f0-o3r593d9.inventory.json",
+          "sha256": "d6b86fe1f6e5484fcb8365af3271a68e37039a9eb68a4e251a5336332572f772",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "compact-regression-01-local-change-finalist-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/scores/20261024T061345945Z-ssr-compact-regression-local-change-842fbb60-cf1b-4deb-acd6-a70e7e8f48f0-o3r593d9.json",
+          "sha256": "246b36510cf5fd2c3539d20f83ba17a0b1f3734b5e5957c0bc4e4a0b52b88f16",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "compact-regression-01-invocation-unrelated-finalist-1-1",
+      "case_id": "invocation-unrelated",
+      "condition": "finalist",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/manifests/invocation-unrelated-manifest.json",
+        "sha256": "2c816d3707df4adb0f7d905745db2d23a3ed0b799b5373e56e7d160f4b018788",
+        "version": "1",
+        "git_revision": "3f15fe8a498153c16ba3b48f7bfb74539f37e98f"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "6b91080d1a3937cdfdc06d6bcbc45b152864a70ad2ce054bad6889d639001ca0",
+          "version": "1",
+          "git_revision": "3f15fe8a498153c16ba3b48f7bfb74539f37e98f"
+        },
+        "selector": "Batch: compact-regression-01; order 6"
+      },
+      "run_id": "20261024T061443495Z-ssr-compact-regression-invocation-unrelated-21a09f5f-a7b3-4320-8955-401a62470b77-7tr59p0l",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Candidate-only exposed development validation. Identical sequential score frozen externally until its closing repository commit."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T061443495Z-ssr-compact-regression-invocation-unrelated-21a09f5f-a7b3-4320-8955-401a62470b77-7tr59p0l",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T061443495Z-ssr-compact-regression-invocation-unrelated-21a09f5f-a7b3-4320-8955-401a62470b77-7tr59p0l.inventory.json",
+          "sha256": "3a2779395d2a550f2bcdac4fc864057969c70f8252a8a97e96d406b7d036ef9f",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "compact-regression-01-invocation-unrelated-finalist-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/scores/20261024T061443495Z-ssr-compact-regression-invocation-unrelated-21a09f5f-a7b3-4320-8955-401a62470b77-7tr59p0l.json",
+          "sha256": "2d47040f40c0d8efd5cab4f269ff91685019e51c5eb1391219eb5e58d659826d",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "compact-regression-01-initiating-change-finalist-2-1",
+      "case_id": "initiating-change",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/manifests/initiating-change-manifest.json",
+        "sha256": "eb8dac57c763dffc169784e0bc110488f6141bbefb8784ba01f19226c0e6e0b1",
+        "version": "1",
+        "git_revision": "3f15fe8a498153c16ba3b48f7bfb74539f37e98f"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "6b91080d1a3937cdfdc06d6bcbc45b152864a70ad2ce054bad6889d639001ca0",
+          "version": "1",
+          "git_revision": "3f15fe8a498153c16ba3b48f7bfb74539f37e98f"
+        },
+        "selector": "Batch: compact-regression-01; order 7"
+      },
+      "run_id": "20261024T061519400Z-ssr-compact-regression-initiating-change-16730605-9728-478a-a16e-3546bc7231ca-cj1pgbzp",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Candidate-only exposed development validation. Identical sequential score frozen externally until its closing repository commit."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T061519400Z-ssr-compact-regression-initiating-change-16730605-9728-478a-a16e-3546bc7231ca-cj1pgbzp",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T061519400Z-ssr-compact-regression-initiating-change-16730605-9728-478a-a16e-3546bc7231ca-cj1pgbzp.inventory.json",
+          "sha256": "d112b56985bd96ed7558f12e83d0644ac2c06ed42a6b9337dc8fdf1323301f69",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "compact-regression-01-initiating-change-finalist-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/scores/20261024T061519400Z-ssr-compact-regression-initiating-change-16730605-9728-478a-a16e-3546bc7231ca-cj1pgbzp.json",
+          "sha256": "9cd57742247c085e40d6456ae2dba2d05f6d25b07350914f3d0d3e49ce895923",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "compact-regression-01-invocation-review-finalist-2-1",
+      "case_id": "invocation-review",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/manifests/invocation-review-manifest.json",
+        "sha256": "94468468284a69ac891d1dbc0fc7882b316229c0b2001f76c57da33201f9013c",
+        "version": "1",
+        "git_revision": "3f15fe8a498153c16ba3b48f7bfb74539f37e98f"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "6b91080d1a3937cdfdc06d6bcbc45b152864a70ad2ce054bad6889d639001ca0",
+          "version": "1",
+          "git_revision": "3f15fe8a498153c16ba3b48f7bfb74539f37e98f"
+        },
+        "selector": "Batch: compact-regression-01; order 8"
+      },
+      "run_id": "20261024T061612874Z-ssr-compact-regression-invocation-review-3e1c6c38-11ca-4662-b139-99cfda44ec50-5_jh10a3",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Candidate-only exposed development validation. Identical sequential score frozen externally until its closing repository commit."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T061612874Z-ssr-compact-regression-invocation-review-3e1c6c38-11ca-4662-b139-99cfda44ec50-5_jh10a3",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T061612874Z-ssr-compact-regression-invocation-review-3e1c6c38-11ca-4662-b139-99cfda44ec50-5_jh10a3.inventory.json",
+          "sha256": "1bae2f6aa57036dff07343a97c54cf862d2f5dfa1ab239bfbf22a9b2a898b81f",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "compact-regression-01-invocation-review-finalist-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/scores/20261024T061612874Z-ssr-compact-regression-invocation-review-3e1c6c38-11ca-4662-b139-99cfda44ec50-5_jh10a3.json",
+          "sha256": "fb76e433cacb3f1d8cbf161bdca2f963b3d372a18251f8764a9f231be5e75f01",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "compact-regression-01-moved-guide-finalist-2-1",
+      "case_id": "moved-guide",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/manifests/moved-guide-manifest.json",
+        "sha256": "1bd6dfe160ea04d1d5462aca4c7104015f8355cd1a4172fc89723cfcab0c19aa",
+        "version": "1",
+        "git_revision": "3f15fe8a498153c16ba3b48f7bfb74539f37e98f"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "6b91080d1a3937cdfdc06d6bcbc45b152864a70ad2ce054bad6889d639001ca0",
+          "version": "1",
+          "git_revision": "3f15fe8a498153c16ba3b48f7bfb74539f37e98f"
+        },
+        "selector": "Batch: compact-regression-01; order 9"
+      },
+      "run_id": "20261024T061703945Z-ssr-compact-regression-moved-guide-42f97295-92c5-41e5-bf7b-2c644ab42d1c-0scb5n1v",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Candidate-only exposed development validation. Identical sequential score frozen externally until its closing repository commit."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T061703945Z-ssr-compact-regression-moved-guide-42f97295-92c5-41e5-bf7b-2c644ab42d1c-0scb5n1v",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T061703945Z-ssr-compact-regression-moved-guide-42f97295-92c5-41e5-bf7b-2c644ab42d1c-0scb5n1v.inventory.json",
+          "sha256": "8a4c6568ace796e19f1b179a7c906becc9d26982e47b98064fd8677dbee5de15",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "compact-regression-01-moved-guide-finalist-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/scores/20261024T061703945Z-ssr-compact-regression-moved-guide-42f97295-92c5-41e5-bf7b-2c644ab42d1c-0scb5n1v.json",
+          "sha256": "70f45cca76e040a480f32a001400871521bd8b8cedc0dcc4b4c89a2f1f902740",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "compact-regression-01-invocation-change-finalist-2-1",
+      "case_id": "invocation-change",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/manifests/invocation-change-manifest.json",
+        "sha256": "ec325a38ce216ac2c73c146f212c56e57c9f993eba9d66d5480231e35e933ffc",
+        "version": "1",
+        "git_revision": "3f15fe8a498153c16ba3b48f7bfb74539f37e98f"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "6b91080d1a3937cdfdc06d6bcbc45b152864a70ad2ce054bad6889d639001ca0",
+          "version": "1",
+          "git_revision": "3f15fe8a498153c16ba3b48f7bfb74539f37e98f"
+        },
+        "selector": "Batch: compact-regression-01; order 10"
+      },
+      "run_id": "20261024T061754141Z-ssr-compact-regression-invocation-change-c51dc79a-efa5-409d-a953-4c406e11c8ef-u6hucd_f",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Candidate-only exposed development validation. Identical sequential score frozen externally until its closing repository commit."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T061754141Z-ssr-compact-regression-invocation-change-c51dc79a-efa5-409d-a953-4c406e11c8ef-u6hucd_f",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T061754141Z-ssr-compact-regression-invocation-change-c51dc79a-efa5-409d-a953-4c406e11c8ef-u6hucd_f.inventory.json",
+          "sha256": "ced135ec99edc2e1b2a2f14dad999736d39b2bcd8347ecf34fb4c45adda2e6a7",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "compact-regression-01-invocation-change-finalist-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/scores/20261024T061754141Z-ssr-compact-regression-invocation-change-c51dc79a-efa5-409d-a953-4c406e11c8ef-u6hucd_f.json",
+          "sha256": "c7d9bb792c91d605298bf981715274997f541f180620c8143758e224909af62e",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "compact-regression-01-local-change-finalist-2-1",
+      "case_id": "local-change",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/manifests/local-change-manifest.json",
+        "sha256": "5f177e958709a21cbfe39d685e89498fb80b2b91e135e680ddf07717be386a2a",
+        "version": "1",
+        "git_revision": "3f15fe8a498153c16ba3b48f7bfb74539f37e98f"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "6b91080d1a3937cdfdc06d6bcbc45b152864a70ad2ce054bad6889d639001ca0",
+          "version": "1",
+          "git_revision": "3f15fe8a498153c16ba3b48f7bfb74539f37e98f"
+        },
+        "selector": "Batch: compact-regression-01; order 11"
+      },
+      "run_id": "20261024T061843823Z-ssr-compact-regression-local-change-28981bfb-f81d-4946-8626-9d3d49a747f1-7_ha8zsf",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Candidate-only exposed development validation. Identical sequential score frozen externally until its closing repository commit."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T061843823Z-ssr-compact-regression-local-change-28981bfb-f81d-4946-8626-9d3d49a747f1-7_ha8zsf",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T061843823Z-ssr-compact-regression-local-change-28981bfb-f81d-4946-8626-9d3d49a747f1-7_ha8zsf.inventory.json",
+          "sha256": "5e9899469060def03a304e7188c29b2a6192937b6bd7ffd53999eaed143fdf80",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "compact-regression-01-local-change-finalist-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/scores/20261024T061843823Z-ssr-compact-regression-local-change-28981bfb-f81d-4946-8626-9d3d49a747f1-7_ha8zsf.json",
+          "sha256": "7f5ac075d7c7d8b59a361e8d415a52cdc3ddc004472082e09ab2e640c028a600",
+          "version": "2"
+        }
+      }
+    }
+  ]
 }

@@ -1,0 +1,140 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-10-24T06:18:41.518076+00:00",
+  "run_id": "20261024T061754141Z-ssr-compact-regression-invocation-change-c51dc79a-efa5-409d-a953-4c406e11c8ef-u6hucd_f",
+  "condition": "finalist",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Author/preparer and active assessor with history and condition awareness; not independent or blind. SSR-assessment-3 and frozen case-specific criteria/interpretation. No shared counting unit imported across cases."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T061754141Z-ssr-compact-regression-invocation-change-c51dc79a-efa5-409d-a953-4c406e11c8ef-u6hucd_f/result.json",
+        "sha256": "2881937be323f0f6cf73a6dd1c11e8c1730ad0fb41f36b5e302f9024cb6ec8ba",
+        "version": null
+      },
+      "selector": "Mechanical completion, execution identities, configured inputs and cleanup."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T061754141Z-ssr-compact-regression-invocation-change-c51dc79a-efa5-409d-a953-4c406e11c8ef-u6hucd_f/stdout.txt",
+        "sha256": "14b3c1ffda4859e277d592d8cb152b2003d6505ecca338b24bb5238f7c0af98a",
+        "version": null
+      },
+      "selector": "Complete ordered model-visible content/tools, catalog, full-body delivery where selected, edits and verification claims."
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T061754141Z-ssr-compact-regression-invocation-change-c51dc79a-efa5-409d-a953-4c406e11c8ef-u6hucd_f/final.txt",
+        "sha256": "f0dbcdc69114a6cc10968e7511e78ee0740c6f967434d0fa197c4bacac9b4883",
+        "version": null
+      },
+      "selector": "Complete delivered response."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-regression-01/subjects/20261024T061754141Z-ssr-compact-regression-invocation-change-c51dc79a-efa5-409d-a953-4c406e11c8ef-u6hucd_f.checks.json",
+        "sha256": "ee0fd65433fbbc79069eb084e48c8accd904c5b5ed0ba2a6d273e512d978cb9f",
+        "version": null
+      },
+      "selector": "Disposable-copy complete project/Git/account, source-byte comparisons, ordered trace projection and independent replay observations; retained raw bundle unchanged."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned Opus5.5 low on Claude Code2.1.308 completed with SSR in the native catalog, correct supplied bytes and complete retained capture, verified inventory and clean runner cleanup. Explicit full-body delivery verified where required; native missing loading is assessed under D1, not setup.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Current code/config/script/tests and README/policy consistently use session_ttl_minutes/session TTL; default/custom expiry1900/820, three tests and script execution from both directories pass.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Default30, minute conversion, zero/negative rejection, partner constraint and accepted frequent-refresh cost preserved. Archive/vendor bytes and unrelated meanings unchanged.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "0cd0a04fc146fef4a16747d4a861303ab9f809c3 commits all required current repairs after baseline with clean working tree.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Native Skill selection event6 delivers complete assigned body in user event8 before first reconciliation edit14, without task-level SSR cue.",
+      "consequence": "Procedural criterion satisfied within fixed case scope.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Native D1 met independently of the correct committed task outcome. Complete delivery is verified in Claude's Skill user-message event, not inferred from the launching acknowledgement.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "Actual old-form token search, tests and script run occur before commit; no repeated new-form query. Verification summary accurately describes old-token hits.",
+      "consequence": "Supplementary/descriptive evidence; fixed criterion scope and consequences unchanged.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "dimension": "procedural",
+      "description": "Supplemental inventory mixes occurrence counts (script2) and matching-line count (archive1) and combines vendor paths. These procedural observations do not expand native D1/F1–F3 criteria.",
+      "consequence": "Supplementary/descriptive evidence; fixed criterion scope and consequences unchanged.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "Exposed reconstructed case, sole compact-finalist condition and one qualified runtime/model stratum; no contemporaneous superiority, causal-guidance, held-out or reliability claim.",
+    "Case-specific units and accepted alternatives govern; procedure/loading and task correctness remain separately reported."
+  ],
+  "result_id": "compact-regression-01-invocation-change-finalist-2",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/manifests/invocation-change-manifest.json",
+    "sha256": "ec325a38ce216ac2c73c146f212c56e57c9f993eba9d66d5480231e35e933ffc",
+    "version": "1",
+    "git_revision": "3f15fe8a498153c16ba3b48f7bfb74539f37e98f"
+  }
+}
