@@ -1,6 +1,6 @@
 # Model-driven skill testing and rewriting
 
-Status: current design specification for authorized preparation, under external review.
+Status: current methodology; on 2026-10-24 the owner adopted the CW study's testing approach for continued SSR work and subsequent skills.
 Follow these requirements when preparing a study; authority to run providers, rewrite a skill or adopt a change comes from the recorded owner decisions in the execution plan and study protocol.
 The [fresh testing plan](../2026-09-11-model-driven-skill-testing.md) owns execution order, progress and the next action.
 
@@ -13,24 +13,25 @@ Simple deterministic tools execute bounded operations and preserve evidence so t
 Reliability means traceable expectations, representative coverage, trustworthy execution evidence, sufficiently consistent evaluation and conclusions proportionate to the observations.
 It does not mean that a model's repeated answer is necessarily correct or that a small suite proves universal effectiveness.
 
-Design this framework from scratch using the currently checked-in skills and existing testing tooling.
-Prior charters, catalogs, rubrics, ledgers, acceptance records and review procedures supply no requirements to this design.
+Use the checked-in skills, existing testing tooling and adopted CW process as the foundation.
+Charters, catalogs, rubrics, ledgers, acceptance records and review procedures from the abandoned frameworks supply no requirements to this design.
 The previous testing frameworks and their pending workflows are abandoned; historical approvals and unfinished checklists do not authorize resuming them.
 Preserve prior work, but do not inherit its conclusions or treat an existing test as validated merely because it exists.
 Reconsider the existing layout and framework choices on their merits; retaining a good choice is allowed, and replacing it is not an objective by itself.
-The previously drafted CW review contract remains an unapproved proposal and is not an authority for this framework.
+Earlier abandoned CW framework/review-contract proposals are distinct from the completed CW study adopted here and remain outside this methodology's authority.
 
 The current [runner](../../skill-validation/runner/README.md) accepts a prompt, declared fixtures and a provider/model/effort configuration, invokes one provider, and retains inputs, outputs, files, logs and mechanical status in a run bundle.
 It does not evaluate skill behavior.
 Those are existing mechanical capabilities to reuse; their adequacy for any proposed experiment must be checked against actual behavior before relying on them.
 Specifically, verify context isolation and skill availability rather than assuming a fresh invocation excludes ambient instructions or globally installed skills.
 
-The framework's initial scope is to design and exercise the complete process on one owner-selected skill, then check transfer to a skill with different behavior before standardizing the procedure across the bundle.
+The initial SSR study and contrasting CW study supply the experience for the reusable procedure below.
 There is no requirement for equal test counts, identical fixtures or one universal quality metric across skills.
 
 ## Default work-session workflow
 
 The active session is the assessor by default; a human can apply the same written rules.
+Use the [CW testing model](#cw-testing-model) to plan the selected scope before this execution loop.
 The owner reaffirmed this existing intent on 2026-09-14 after mandatory separate-evaluator steps had contradicted it.
 Responsibilities below are not a pipeline of separately dispatched agents.
 
@@ -50,6 +51,45 @@ Direct-session judgments are first-class assessments, labelled as such, not down
 Record that shared context and bound claims accordingly; do not claim independent or blind validation.
 
 The runner owns predictable execution and evidence structure. The scoring contract owns what facts matter and their weight. The active agent or human owns interpretation. Deterministic generation/validation supports the record structure and mechanical checks, not semantic verdicts.
+
+## CW testing model
+
+Use the completed [CW study](../../skill-studies/concise-writing/protocol.md#closure-and-adoption) as the process model, while deriving each skill's contract, scenarios, criteria and consequences from that skill and its intended use.
+The [focused body/discovery comparison](../../skill-studies/concise-writing/runs/revised-body-discovery-01/evaluation/assessment.md) demonstrates separate experiments; the [final handoff comparison](../../skill-studies/concise-writing/runs/final-comparison-01/handoff-02/evaluation/assessment.md) demonstrates repeated comparison and qualitative review of passing outputs.
+Adopt those methods, rather than CW's prose fixtures, factor names, historical call volume or every exploratory iteration.
+The objective is an effective, compact skill: correctness, useful outcomes and consequential output quality take priority over size.
+When the evidence supports equivalent effectiveness and consequential quality for the selected use and declared limits, use complete skill size as the tie-breaker; equal pass counts alone do not establish that equivalence.
+Keep testing compact too: select cases and staged comparisons that answer named uncertainties, reuse qualified unchanged mechanics, and avoid repeating a campaign merely to match CW's call count.
+
+| Test-design decision | Default for continued SSR and subsequent skill work |
+| --- | --- |
+| Subject providers | Test selected application and discovery cases on both Codex and Claude, with declared model, effort, CLI and permission strata. Keep provider results separate; a cross-model output reviewer does not substitute for testing a subject provider. |
+| Application | Explicitly deliver the complete assigned body, then assess useful task outcomes and consequential preservation in complete context. For a rewrite comparison, pair preserved baseline and candidate versions on the same selected cases and settings. |
+| Discovery | Supply ordinary skill availability without naming the target or requiring its load. Cover the skill's distinct positive triggers and a realistic near-boundary non-applicable task, where related words, files or context could tempt loading. A distant unrelated task alone is a sanity check. Verify availability and complete body delivery before the first relevant action; score selection separately from task success. |
+| Body and description | Hold the description fixed for body comparisons, and the body/name/catalog fixed for description comparisons. An unchanged description needs no speculative alternatives. A whole-version comparison is allowed when declared, but cannot attribute a difference to either component alone. |
+| Repetitions and staging | Default to five fresh-context executions per selected case/condition/provider for decision-stage comparisons and discovery. A smaller fixed screen can precede a separately authorized top-up; it does not establish an uncollected five-repetition scope. Record any smaller final scope, reason and owner-accepted limitation. Five observations are descriptive, not a reliability guarantee. |
+| Controls | Use a contemporaneous no-target control when measuring contribution or testing behavior-shaping guidance under writing-skills. Discovery-description comparisons use naturally available description arms; making the skill unavailable does not measure selection effectiveness. Regression-only validation makes no contribution claim. |
+| Final combination | Check the exact selected body/description combination in relevant application and native-selection cases before recommending adoption. Reuse matching evidence only where input identities and runtime scope support it; evidence for another body or provider is not evidence for the final combination there. |
+| Assessment and decision | Apply fixed criteria, inspect complete outputs including passes, and compare consequential quality beyond categorical totals. Preserve provider trade-offs, unwanted loading, unknowns and reviewer disagreements. Prefer the smaller complete skill when effectiveness and consequential quality are otherwise comparable. |
+
+Use the existing freeze, qualification, retention, scoring and [cross-model review](#cross-model-output-review) mechanics; this model creates no new evaluation service or per-execution reviewer requirement.
+Every study protocol identifies the selected cells, reused evidence, gaps, stopping rules, budget and proposed decision before collection.
+Scope can be staged and the owner can close on bounded evidence, as CW did; record the omissions instead of claiming that every prepared test ran.
+Completing an authorized batch is distinct from completing the selected study coverage or reaching an adoption decision.
+The methodology changes prospectively: completed results and their original scope remain valid records, without retroactive failures, automatic backfilling or new dispatch authority.
+
+### Applying Superpowers writing-skills
+
+Before authoring, read the installed writing-skills and its testing reference, classify the observed failure, and select the instructional form accordingly: pressure/rule violations, wrong-shaped output, omitted structure and conditional behavior need different treatments.
+Establish and inspect the baseline failure before authoring corrective guidance.
+Preserve observed choices and real rationalizations; do not invent a failing control or an excuse to justify new wording.
+For behavior-shaping changes, use fresh-context wording tests against a no-guidance control with at least five samples per variant, then exercise the relevant full application scenarios and combined pressures for discipline skills.
+Discipline pressure scenarios combine at least three realistic incentives to bypass the rule and require an observable decision/action, not just a recital of the skill.
+Micro-tests cannot replace task execution or pressure testing; repeated success cannot prove universal compliance.
+For technique, pattern and reference skills, select application, recognition/counterexample or retrieval/gap cases suited to their function rather than importing discipline pressures mechanically.
+Record an explicit owner-approved adaptation when using a loaded failure or pursuing simplification with passing controls; CW's skill-specific adaptation is not standing permission for another skill.
+After each authorized edit, repeat the affected fixed cases and relevant regression; preserve prior versions and evidence.
+Unchanged historical candidates and this methodology update do not create an unperformed RED/GREEN authoring claim.
 
 ## Why this is a reset
 
@@ -201,7 +241,7 @@ Before provider dispatch, record exact input paths and identities, invocation/se
 Map each case, condition and repetition to all its attempts and retained bundles so another agent can resume without duplicate runs or lost evidence.
 Update this same experiment record when moving from pilot to baseline or rewrite comparison; changed inputs or scope must remain within recorded authorization or receive the needed additional authorization.
 Keep infrastructure failures separate from valid behavioral failures and do not rerun selectively until a desired result appears.
-Choose repetitions after considering pilot variability, the comparison question, consequential failure risk and the owner's budget.
+Apply the [CW testing model](#cw-testing-model) provider and repetition defaults, refining the selected scope for pilot variability, the comparison question, consequential failure risk and the owner's budget.
 Do not claim a universal reliability rate from an arbitrary sample count.
 Agree on the sample and stopping policy before the measured collection; label pilot evidence separately when the protocol changes.
 
@@ -430,12 +470,12 @@ Keep this check within the existing review and plan. It requires no separate tra
 First select one skill with a bounded purpose and observable behavior, then work through the layers in order with scenario and criterion design developed together.
 Preserve known temporary historical material in durable storage; broader archival reorganization is not a prerequisite to the study.
 Keep original copies until preservation is verified and record missing evidence without reconstructing it.
-Use a contrasting second skill to test whether the framework generalizes to a different evidence type or dependency pattern.
+Use the completed CW study as the reusable process model, checking its fit against each new skill's evidence type and dependency pattern.
 Use a minimal practical organization for the first candidate, then settle reusable artifact templates and add tools for recurring mechanical work actually encountered.
 This avoids building a large harness around untested assumptions about evaluation.
 
-Before the next scored collection, settle the fixed rule/record formats, selected scenarios and skill versions, execution settings, authorized run count and handling of evidence gaps. Decide independent review or held-out transfer only if the question needs it.
+Before the next scored collection, settle the fixed rule/record formats, selected scenarios and skill versions, execution settings, authorized run count, cross-model output-review scope and handling of evidence gaps. Select held-out transfer only when that separate claim is needed.
 Before rewriting, settle the change objective, acceptance boundaries and any pure-cleanup conflict with the selected `writing-skills` version.
-These choices depend on the candidate and pilot; they are deliberately not replaced here with universal test counts or numerical acceptance thresholds.
+Apply the CW model's operational defaults with recorded scope decisions; they prescribe neither identical scenario counts across skills nor a universal numerical acceptance threshold.
 
 Track execution in the fresh testing plan rather than duplicating its checklist here.

@@ -26,7 +26,8 @@ Claude Code-specific. See [Requirements](#requirements).
 Start with the [fresh framework specification](plans/specs/2026-09-11-model-driven-skill-testing-framework.md) and [current testing plan](plans/2026-09-11-model-driven-skill-testing.md), including its instructions for resuming without conversation history.
 The [study guide](skill-studies/README.md) separates core guidance and cases from collection assessments, indexes and results.
 The active work session runs fixed scenarios, interprets the captured evidence using versioned rules, and records structured scores; deterministic tools support execution and record consistency.
-The checked-in skills and existing [runner](skill-validation/runner/README.md) are the foundation; the previous framework and layout are being reconsidered on their merits.
+Use the framework's [CW testing model](plans/specs/2026-09-11-model-driven-skill-testing-framework.md#cw-testing-model) for the process, with coverage and scenarios derived from the selected skill.
+The checked-in skills and existing [runner](skill-validation/runner/README.md) support this methodology; historical frameworks do not supply current requirements.
 Derive intended behavior from the complete selected skill and relevant dependencies, review the contract, then design tests, establish measured baselines and compare rewrites through Superpowers `writing-skills`.
 The model designs and judges tests; deterministic tools prepare runs and record evidence.
 The previous testing frameworks are abandoned; the [validation directory](skill-validation/README.md) retains their historical material for later review, without making those records current guidance.

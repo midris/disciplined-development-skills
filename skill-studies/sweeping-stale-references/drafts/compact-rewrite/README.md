@@ -1,6 +1,6 @@
 # Compact SSR rewrite exploration
 
-Status: static comparison, the [three-way semantic checkpoint](../../runs/compact-semantic-01/compact-semantic-01-assessment.md) and [closing validation](../../runs/compact-regression-01/compact-regression-01-assessment.md) are complete. The assessment recommends the unchanged finalist for adoption; owner decision pending.
+Status: static comparison, the [three-way semantic checkpoint](../../runs/compact-semantic-01/compact-semantic-01-assessment.md) and [closing validation](../../runs/compact-regression-01/compact-regression-01-assessment.md) are complete. The protocol's [CW model alignment](../../protocol.md#cw-model-alignment) records remaining scope decisions under the subsequently adopted methodology; finalist bytes and historical recommendations are preserved.
 The [design](../../../../plans/specs/2026-10-23-ssr-compact-rewrite.md) records scope and authoring-method applicability; the [review](review.md) compares all three drafts with both base versions and explains the finalist.
 
 - [Procedure draft](01-procedure/SKILL.md): Search/Triage/Reconcile with a separate commit account.

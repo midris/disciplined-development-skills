@@ -2,8 +2,8 @@
 
 Format version: `1`
 Study ID: `sweeping-stale-references`
-Status: compact-finalist validation is complete; the assessment recommends adoption of the unchanged compact finalist. Owner adoption remains pending; the shipped original and all tested snapshots are preserved.
-Current action: owner decision on the [compact-regression-01 recommendation](runs/compact-regression-01/compact-regression-01-assessment.md). All eleven subjects and the sole output review are spent; no further collection, rewrite or adoption is authorized. The [CW accounting](../concise-writing/protocol.md#storage-and-accounting) owns combined spending.
+Status: the compact comparison and closing validation batches are complete; the owner adopted the CW testing model for continued SSR work on 2026-10-24. Adoption remains pending; completed scores, the shipped original and tested snapshots are preserved.
+Current action: use the [CW model alignment](#cw-model-alignment) to prepare a bounded remaining-scope proposal before the next adoption decision. All earlier allocations are spent; methodology adoption authorizes no further collection, rewrite or deployment. The [CW accounting](../concise-writing/protocol.md#storage-and-accounting) owns combined spending.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](runs/core-baseline-01/core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -194,6 +194,25 @@ Owner coverage decision, 2026-10-23: accept the current suite as sufficient for 
 Further testing should resolve a concrete uncertainty that could change the development or adoption decision; the listed gaps are not automatically additional prerequisites.
 The intended endpoint is real-world use with disclosed limits, followed by evidence-led improvements when actual deficiencies emerge, rather than exhaustive pre-release coverage.
 This accepts bounded coverage, not unresolved consequential regressions, and does not authorize model calls or adoption.
+
+### CW model alignment
+
+Owner direction, 2026-10-24: adopt CW's testing process for continued SSR and upcoming skills, while deriving scenarios and coverage from each skill.
+The owner reaffirmed that effectiveness must not be sacrificed for size; complete skill size breaks a tie only when effectiveness and consequential output quality are equivalent.
+The framework's [CW testing model](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#cw-testing-model) owns the prospective defaults, including writing-skills application; this section reconciles existing SSR evidence without changing its rules or scores.
+
+| Process area | Completed SSR evidence | Remaining proposal decision |
+| --- | --- | --- |
+| Subject providers and comparison | Baseline/comprehensive versions have Codex and Claude evidence. The compact finalist's three-way semantic comparison and later regression use Opus only. | Select representative application/comparison cells for the compact finalist on Codex; use the facet map to decide whether untested finalist mechanisms such as pressure and Shiv consumers need collection or an explicit limitation. Historical versions do not fill those cells. |
+| Native selection and non-use | The exact finalist loads before edits in both Opus positive cases, two repetitions each, and avoids loading in one distant unrelated task. | Add proposed Codex selection coverage and a realistic near-boundary negative on both providers. Keep the prior distant non-use observation as sanity evidence, not a substitute. |
+| Repetitions and reuse | The semantic comparison has five per version on Opus; closing regression has two per repair/positive-trigger case and one negative. | Reconcile selected cells with the five-execution default, specifying any reusable matching observations, top-ups or owner-accepted smaller scope before dispatch. No automatic replay of completed cases follows. |
+| Body, description and controls | All SSR versions retain the same description; the compact comparison changes whole bodies and has no no-target arm. | Keep the description fixed unless a measured selection problem justifies a description experiment. Add a no-target condition only for a selected contribution or behavior-shaping question; no such claim follows from the existing finalist comparison. |
+| Final combination and output review | Opus tests the exact finalist body/description combination; complete-output reviews preserve independent first passes, protected bytes and separate trace judgments. | Preserve this evidence and its reporting defects. Codex final-combination evidence remains absent; no new evaluator layer or retroactive score correction is needed. |
+
+The [compact closing assessment](runs/compact-regression-01/compact-regression-01-assessment.md) remains the completed batch's evidence-backed adoption recommendation under its declared scope.
+That completed batch does not establish parity with the newly adopted process across providers and applicability boundaries.
+Prepare only the selected missing evidence and its budget, review packets and stopping rule; present any required ceiling extension with the scope rather than inferring authority from the methodology.
+The owner may close on explicitly accepted limits; neither exhaustive coverage nor another wording iteration follows automatically.
 
 ### Testing and authoring readiness check (2026-09-24)
 

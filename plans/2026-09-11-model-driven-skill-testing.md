@@ -11,8 +11,18 @@
 The checklist tracks the owner-authorized preparation, collection and authoring scopes under the framework.
 Each protocol owns current decisions and dispatch authority; a historical approval or unchecked step supplies no additional calls or adoption authority.
 The spec governs how the study is designed. Neither document grants provider-run authorization.
+The owner adopted CW's testing approach on 2026-10-24 as the model for continued SSR work and subsequent skills; the [CW testing model](specs/2026-09-11-model-driven-skill-testing-framework.md#cw-testing-model) owns the reusable requirements.
+
 External reviews and responses are recorded in the [review record](../reviews/2026-09-11-model-driven-testing-plan-review.md). Claude passed the committed preparation at `314b72e`; public-source attribution limits and the development exit were then documented. Pre-baseline development is closed; current authority and progress are recorded below.
 On 2026-09-12 the owner selected `sweeping-stale-references`, settled the contract and accepted the outer ceilings while directing minimal initial real-model runs to establish the process. Stage 1 and conceptual coverage review are complete. The first SSR study is closed with both historical pilot pairs, the semantic-delivery pair, the core baseline and the comprehensive comparison assessed. The owner deferred adoption until later experiments; the owner selected concise-writing as the contrasting second skill. Its [protocol](../skill-studies/concise-writing/protocol.md) owns the accepted contract, completed evidence and current decisions.
+
+### Current methodology update
+
+This scope updates guidance and reconciles SSR's remaining evidence needs; it authorizes no model calls, skill rewrite or adoption.
+
+- [x] Adopt the CW testing model in the framework, using Superpowers writing-skills to distinguish application, discovery, controls, pressure and repeated wording tests; effectiveness and consequential quality lead, with complete skill size breaking an equivalence tie.
+- [x] Reconcile SSR's completed evidence and remaining preparation against that model, preserving historical scores, frozen inputs and the unrelated CW fixture edit.
+- [x] Sweep entry-point guidance and verify document consistency, accounting and the hook suite before closing the update.
 
 ## Starting or resuming without conversation history
 
@@ -337,7 +347,9 @@ Reserved bundles and revealing assessments stay entirely in the verified private
 - [x] Record the owner's [size tie-breaker](../skill-studies/sweeping-stale-references/protocol.md#comparison-compact-semantic-01): when other things are equal, prefer the smaller complete skill. The compact finalist is preferred at this checkpoint; scores, further-call authority and adoption status are unchanged.
 - [x] Accept the owner-approved [compact-regression-01](../skill-studies/sweeping-stale-references/protocol.md#validation-compact-regression-01): eleven unchanged-finalist Opus-low subjects and one Opus-medium output review; increase ceilings to 668/50 without a retry or adoption allocation.
 - [x] Complete [compact-regression-01](../skill-studies/sweeping-stale-references/runs/compact-regression-01/compact-regression-01-assessment.md): six frozen configurations, eleven valid subjects, ten correct committed repairs, native loading 4/4 and appropriate non-use 1/1. The sole audited output review agrees on all thirty functional factors before prior access. Preserve separate reporting defects, exact finalist/user bytes and size preference; recommend adoption without promoting automatically.
-- [ ] Owner decision on adopting the unchanged compact finalist for practical use; no additional testing or rewrite is selected.
+- [x] Record the owner's adoption of the CW testing model for continued SSR and subsequent skills, with skill-specific scenarios and effectiveness before size. The [framework](specs/2026-09-11-model-driven-skill-testing-framework.md#cw-testing-model) owns defaults; [SSR alignment](../skill-studies/sweeping-stale-references/protocol.md#cw-model-alignment) preserves completed evidence and identifies remaining proposal decisions.
+- [ ] Prepare a bounded CW-aligned SSR scope proposal, including selected Codex application/native coverage, near-boundary non-use on both providers, repetitions/reuse and any required budget extension; no dispatch is authorized.
+- [ ] Owner decision on the remaining SSR scope or closure with accepted limitations, then adoption of the unchanged compact finalist or another evidence-backed choice. No skill rewrite or further calls are selected by methodology adoption.
 - [x] Runner follow-up: default offline tests cover private `TMPPREFIX`, `ZDOTDIR` and the prepared login profile in both permission modes; removing either setting was verified to fail those tests. See [runner follow-up verification](../reviews/2026-09-24-claude-runner-followups.md).
 - [x] Runner follow-up: process-local `core.excludesFile=/dev/null` and `core.attributesFile=/dev/null` suppress host Git defaults without widening host reads. Offline tests preserve project ignore and attribute files. Actual Claude CLI tests seed both host files before preparation; removing either override independently produces the expected warning and test failure in both permission modes. See the runner follow-up verification above.
 - [x] Runner follow-up: final.txt extraction accepts one successful result followed only by the three observed background bookkeeping event types, while retaining raw output and rejecting ambiguous results. Offline regressions and read-only replay of Sonnet order 4 verify the correction; no model evidence was recollected. See the runner follow-up verification above.

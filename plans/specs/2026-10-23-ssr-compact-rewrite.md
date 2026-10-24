@@ -1,6 +1,6 @@
 # SSR compact rewrite exploration
 
-Status: static authoring, compact-semantic comparison and compact-regression closing validation complete. The assessment recommends the unchanged compact finalist; adoption awaits the owner's decision.
+Status: static authoring and the compact comparison/validation batches are complete. The owner subsequently adopted the CW testing model; the protocol's [alignment](../../skill-studies/sweeping-stale-references/protocol.md#cw-model-alignment) owns remaining evidence-scope decisions before adoption.
 The [testing plan](../2026-09-11-model-driven-skill-testing.md) owns progress; the [SSR protocol](../../skill-studies/sweeping-stale-references/protocol.md) owns study decisions and call authority.
 
 ## Accepted scope

@@ -1,6 +1,7 @@
 # Skill studies
 
 Start with the [testing framework](../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) and [active plan](../plans/2026-09-11-model-driven-skill-testing.md).
+The [CW testing model](../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#cw-testing-model) governs the process for SSR and subsequent skills; each study derives its own contract and scenarios.
 
 - [Concise writing](concise-writing/README.md): core guidance, cases, candidate drafts and collected evidence.
 - [Sweeping stale references](sweeping-stale-references/README.md): core guidance, cases, candidate drafts and collected evidence.

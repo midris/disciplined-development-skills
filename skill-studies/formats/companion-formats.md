@@ -30,6 +30,7 @@ Copy [protocol.template.md](protocol.template.md), retaining its seven sections 
 The protocol owns current study decisions, their authority and brief rationale; the active plan alone owns progress/checklists.
 Maintain one case inventory and facet map, separating covered/partial/gap design adequacy from collected evidence. Give gaps a disposition or revisit trigger and conclude whether coverage supports the baseline question.
 Record why conditions and repetitions answer that question, remaining uncertainty and findings that would warrant more testing; this rationale is not collection authorization.
+The [CW testing model](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#cw-testing-model) supplies process defaults; record selected provider/application/discovery coverage, final-combination evidence and justified departures in the existing suite and execution sections.
 Templates prompt for these existing semantic responsibilities within version-1 sections; they add no parser-enforced fields or scoring rules. Historical records need no migration.
 Link case-specific rules, configuration settings, manifests, attempt indexes and assessments rather than recopying their contents.
 Omit unselected optional provisions, such as reserved-evidence boundaries or a graded numeric mapping; material limits on actual claims remain explicit.

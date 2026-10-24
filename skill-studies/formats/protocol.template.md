@@ -43,12 +43,14 @@ Evidence/checker methods and qualification: <links>
 | <behavior, boundary or exception> | <covered / partial / gap> | <case links and distinguishing evidence> | <assessment links or not collected> | <reason, next decision or revisit trigger> |
 
 Coverage judgment: <sufficient for which conclusion; unsupported claims and consequential gaps>
+CW testing model alignment: <application and native-selection coverage on Codex/Claude, near-boundary non-use, exact final combination, reused evidence and explicit departures from the general spec's defaults>
 Baseline question and design rationale: <what proposed conditions/repetitions establish, remaining uncertainty and findings warranting further tests>
 Keep historical batch status explicit; proposals reference this inventory and facet map. Tasks remain in the plan.
 
 ## Execution scope and authorization
 
 Batch ID, cases, conditions and repetitions: <selected scope>
+Comparison design: <body versus description isolation, contribution controls where applicable, fresh-context repetitions and staged checkpoint; rationale for any bounded exception>
 Configurations/manifests: <links; these own source identities and settings>
 Commands/cwd, CLI identity and context limits: <text/citations>
 Run order, stopping/retry rules and inclusion of attempts in aggregates: <text>

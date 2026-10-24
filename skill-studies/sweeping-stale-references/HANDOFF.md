@@ -4,7 +4,7 @@ Work in `/Users/simon/work/personal/disciplined-development-skills`, branch `cod
 This is navigation, not a duplicate progress or decision record.
 
 1. Read [CLAUDE.md](../../CLAUDE.md) and the [DD doctrine](../../skills/disciplined-development/SKILL.md).
-2. Resume from the [active plan's Current next action](../../plans/2026-09-11-model-driven-skill-testing.md#current-next-action) and [framework spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md).
+2. Resume from the [active plan's Current next action](../../plans/2026-09-11-model-driven-skill-testing.md#current-next-action) and the framework's [CW testing model](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#cw-testing-model).
 3. Use the [SSR protocol](protocol.md) for the completed expanded baseline, measured facet map and declared runtime strata. Use the [CW protocol](../concise-writing/protocol.md) for its current action and combined accounting; each completed study’s assessments retain its conclusions.
 4. Follow the [formats](../formats/README.md) and [runner command guide](../../skill-validation/runner/README.md#study-documents) for mechanics; the historical worksheet is not current study authority.
 5. The [retrospective](../../reviews/2026-09-18-skill-testing-retrospective.md) identifies remaining discovery questions. The plan owns which one is selected next.
@@ -12,6 +12,7 @@ This is navigation, not a duplicate progress or decision record.
 Read the [protocol opening](protocol.md) for current status, owner decisions and next action; its [results index](protocol.md#results-and-decision) links all batch assessments.
 The [2026-10-22 resumption audit](../../reviews/2026-10-22-ssr-resumption-audit.md) records the completed post-CW audit, whole-draft review and unapproved next-experiment recommendation; the owner explicitly directed no model runs.
 The [compact-rewrite exploration](drafts/compact-rewrite/README.md) retains three drafts, their baseline/comprehensive comparison and the synthesized finalist; follow the protocol opening for completed validation and the pending adoption decision.
+The [CW model alignment](protocol.md#cw-model-alignment) distinguishes completed SSR evidence from remaining preparation under the adopted methodology; it grants no additional model calls.
 Preserve settled scenarios, criteria and historical identities; do not derive a baseline from a candidate or rescore old records to continue.
 SSR's [core assessment](runs/core-baseline-01/core-baseline-01-assessment.md) records an unresolved Shiv category boundary: its P3 counts are not three established skill defects and do not independently justify a rewrite.
 Controller criteria, manifests and revealing evidence remain outside subject context; raw evidence stays in the protocol's external stores.
