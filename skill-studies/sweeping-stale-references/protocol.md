@@ -893,7 +893,7 @@ Current SSR-linked mechanical accounting includes the fixed 136-call historical 
 The current validation adds its [subject index](runs/compact-regression-01/compact-regression-01-run-index.json) and [evaluator ledger](runs/compact-regression-01/evaluation/evaluator-run-index.json).
 The fresh original baseline adds [Codex subjects](runs/fresh-baseline-01/fresh-baseline-codex-01-run-index.json), [Opus subjects](runs/fresh-baseline-01/fresh-baseline-opus-01-run-index.json) and [eight review slots](runs/fresh-baseline-01/evaluation/evaluator-run-index.json); the five reused semantic runs are not charged again.
 For this subset, the historical spent subtotal plus the newly authorized scope gives ceilings of 267 subject, 10 evaluator, 0 authoring and 0 retry invocations; this is an accounting projection, not a new allocation or pool transfer.
-Dispatched calls are **162 subject, 2 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **105 / 8 / 0 / 0** for this subset.
+Dispatched calls are **167 subject, 2 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **100 / 8 / 0 / 0** for this subset.
 The CW protocol remains authoritative for all current combined spending and outer ceilings; no historical unspent pool is revived.
 Sequential readiness used identical externally frozen scores; the final index pins the canonical repository results at their committed revision.
 
