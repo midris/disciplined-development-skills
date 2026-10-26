@@ -1,0 +1,122 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-10-26T15:40:37.435442+00:00",
+  "run_id": "20261026T153813745Z-ssr-fresh-baseline-codex-invocation-review-b193f5c0-6ae0-4a5a-ad1e-3d0131b94cc8-070pzqtm",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Preparer and active assessor with condition/history awareness; not blind or independent. Fixed SSR-assessment-3 and case-specific units, inherited explanations and original interpretation."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T153813745Z-ssr-fresh-baseline-codex-invocation-review-b193f5c0-6ae0-4a5a-ad1e-3d0131b94cc8-070pzqtm/result.json",
+        "sha256": "f0f5e040b9c88b6be35377718aaa77a060934d7137863fa82d90415a5ef43401",
+        "version": null
+      },
+      "selector": "Mechanical completion, declared execution and retained capture."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T153813745Z-ssr-fresh-baseline-codex-invocation-review-b193f5c0-6ae0-4a5a-ad1e-3d0131b94cc8-070pzqtm/provider-session.jsonl",
+        "sha256": "15baaa54f378ba4a402808d8aa0e6c5e79abece8a6e53253b891b11e8f7a16d0",
+        "version": null
+      },
+      "selector": "Complete ordered tool calls, responses and subject messages."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T153813745Z-ssr-fresh-baseline-codex-invocation-review-b193f5c0-6ae0-4a5a-ad1e-3d0131b94cc8-070pzqtm.checks.json",
+        "sha256": "4378fe2a7bd28e73ac6a74e734446da21d0e2da8129d6a5536bfe77a12beaf1d",
+        "version": null
+      },
+      "selector": "Disposable full project/Git comparison, protected inputs, delivery/model checks and any trusted replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned model/CLI/effort and source identities verified; complete retained capture and cleanup, with full original-body delivery for explicit application. Native availability is verified; missing/late loading is scored separately.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All three current document roles consistently describe maximum four sends/three retries, fourth-failure exhaustion and immediate success stop, retaining operational follow-up.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only stale prose statements changed; code/tests/helper/history unchanged with all seven trusted runtime boundaries correct.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Complete correct repair committed9d276a3 after baseline; clean final working state.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Complete original body delivered28 before reconciliation patch50, with qualified native availability and no task-level read instruction.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "All functional factors and timely native loading met.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "Commit account counts historical block2 and combines independent source/doc paths. Native card has no P3 factor; supplementary reporting defect only. Actual tests/post-edit searches/diff checks retained.",
+      "consequence": "Descriptive/supplementary; fixed scores and scope unchanged.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "Exposed development case in a declared provider/runtime stratum; no blind, held-out, population reliability or causal-guidance claim.",
+    "Native selection and task success are separate; retain case-specific counting units and Shiv uncertainty."
+  ],
+  "result_id": "fresh-baseline-codex-01-invocation-review-original-4",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/manifests/codex-invocation-review-manifest.json",
+    "sha256": "7b0acb57409eca07c8a74770fb63975760fee6d48b4ecd84e168456aabfa1c76",
+    "version": "1",
+    "git_revision": "75812d6c23ef7e92d5a794b4724e51758f60e7cb"
+  }
+}

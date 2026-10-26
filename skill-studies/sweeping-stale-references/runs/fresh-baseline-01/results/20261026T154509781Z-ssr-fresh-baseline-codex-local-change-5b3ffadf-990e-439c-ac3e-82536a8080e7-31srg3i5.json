@@ -1,0 +1,144 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-10-26T15:47:02.611921+00:00",
+  "run_id": "20261026T154509781Z-ssr-fresh-baseline-codex-local-change-5b3ffadf-990e-439c-ac3e-82536a8080e7-31srg3i5",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Preparer and active assessor with condition/history awareness; not blind or independent. Fixed SSR-assessment-3 and case-specific units, inherited explanations and original interpretation."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T154509781Z-ssr-fresh-baseline-codex-local-change-5b3ffadf-990e-439c-ac3e-82536a8080e7-31srg3i5/result.json",
+        "sha256": "c72e905468d79b67aa4c220fdfe643b114e6e9ee51b41278014b3b842db14b0a",
+        "version": null
+      },
+      "selector": "Mechanical completion, declared execution and retained capture."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T154509781Z-ssr-fresh-baseline-codex-local-change-5b3ffadf-990e-439c-ac3e-82536a8080e7-31srg3i5/provider-session.jsonl",
+        "sha256": "8eb1d87d27289198a043a176ef0e4250448d6e104f75a173c4294b42347dce64",
+        "version": null
+      },
+      "selector": "Complete ordered tool calls, responses and subject messages."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T154509781Z-ssr-fresh-baseline-codex-local-change-5b3ffadf-990e-439c-ac3e-82536a8080e7-31srg3i5.checks.json",
+        "sha256": "c2a154da1a9877026a6d61d4fbb0cdf80c2afdda3641376d35dc892e576e2b1b",
+        "version": null
+      },
+      "selector": "Disposable full project/Git comparison, protected inputs, delivery/model checks and any trusted replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned model/CLI/effort and source identities verified; complete retained capture and cleanup, with full original-body delivery for explicit application. Native availability is verified; missing/late loading is scored separately.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Exact heading typo corrected to Membership; useful definition and existing file links preserved.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only heading changes; billing/shipping distinctions, membership values/config and historical meaning unchanged with link/config replay correct.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Correct heading repair committedd1e9539 after unchanged fixture baseline; clean final working state.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Broad pre-edit spelling/anchor/concept searches and full project inspection establish local typo/no anchor consumers with proper unrelated/current preservation.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One complete local repair commit after neutral baseline.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Required References swept:n/a present with valid single-file reason; actual retained post-edit residual search, diff and target checks substantiate verification. Original locality rule met.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "All fixed functional/procedural criteria met.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "Initial sandbox-blocked combined setup omitted identity before baseline; subject corrected local identity and amended only baseline author before task edits. Final baseline/repair identities and content conform; no setup exclusion or repeat needed.",
+      "consequence": "Descriptive/supplementary; fixed scores and scope unchanged.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "Exposed development case in a declared provider/runtime stratum; no blind, held-out, population reliability or causal-guidance claim.",
+    "Native selection and task success are separate; retain case-specific counting units and Shiv uncertainty."
+  ],
+  "result_id": "fresh-baseline-codex-01-local-change-original-4",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/manifests/codex-local-change-manifest.json",
+    "sha256": "21fc9a86d66890895cc76fcd1759ced8bfafbdfbe770d1e88bb27a50c48617d1",
+    "version": "1",
+    "git_revision": "75812d6c23ef7e92d5a794b4724e51758f60e7cb"
+  }
+}

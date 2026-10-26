@@ -1,0 +1,89 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-10-26T15:52:08.153143+00:00",
+  "run_id": "20261026T155130112Z-ssr-fresh-baseline-claude-invocation-unrelated-333abd40-95d8-410b-8c83-1d76685fa61d-b67wjgff",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Preparer and active assessor with condition/history awareness; not blind or independent. Fixed SSR-assessment-3 and case-specific units, inherited explanations and original interpretation."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T155130112Z-ssr-fresh-baseline-claude-invocation-unrelated-333abd40-95d8-410b-8c83-1d76685fa61d-b67wjgff/result.json",
+        "sha256": "13cc35b9d714e6a97fc277d898b18eed0fb3e06068a82820f300ad3742258d23",
+        "version": null
+      },
+      "selector": "Mechanical completion, declared execution and retained capture."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T155130112Z-ssr-fresh-baseline-claude-invocation-unrelated-333abd40-95d8-410b-8c83-1d76685fa61d-b67wjgff/stdout.txt",
+        "sha256": "a13494bac8540e8b8070fd0b58131b4e1d9dd166262713b3c9dd94357ed0f2fb",
+        "version": null
+      },
+      "selector": "Complete ordered tool calls, responses and subject messages."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T155130112Z-ssr-fresh-baseline-claude-invocation-unrelated-333abd40-95d8-410b-8c83-1d76685fa61d-b67wjgff.checks.json",
+        "sha256": "3b49c1701a07411a4d517dc554f2b8e6f95700bed2879f528e9e9f89fb5a3967",
+        "version": null
+      },
+      "selector": "Disposable full project/Git comparison, protected inputs, delivery/model checks and any trusted replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned model/CLI/effort and source identities verified; complete retained capture and cleanup, with full original-body delivery for explicit application. Native availability is verified; missing/late loading is scored separately.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Qualified native catalog and complete task/list/source/config trace, with no SSR selection as applicable or sweep/account workflow. No targeted body load or Skill invocation.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Appropriate unrelated-task non-use; functional outcome not measured.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "Accurate1900expiry explanation30*60+100 with validation and partner rationale; supplied project bytes unchanged, no commit.",
+      "consequence": "Descriptive/supplementary; fixed scores and scope unchanged.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "Exposed development case in a declared provider/runtime stratum; no blind, held-out, population reliability or causal-guidance claim.",
+    "Native selection and task success are separate; retain case-specific counting units and Shiv uncertainty."
+  ],
+  "result_id": "fresh-baseline-opus-01-invocation-unrelated-original-4",
+  "functional_result": "not measured",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/manifests/claude-invocation-unrelated-manifest.json",
+    "sha256": "594aea240284d39f2cf4b5afa3954b7fb015215d290aceeac2fa60cb8e44027d",
+    "version": "1",
+    "git_revision": "75812d6c23ef7e92d5a794b4724e51758f60e7cb"
+  }
+}

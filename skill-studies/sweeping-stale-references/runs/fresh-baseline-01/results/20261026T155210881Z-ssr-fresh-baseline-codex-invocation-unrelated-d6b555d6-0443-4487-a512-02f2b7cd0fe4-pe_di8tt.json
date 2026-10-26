@@ -1,0 +1,89 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-10-26T15:53:06.542529+00:00",
+  "run_id": "20261026T155210881Z-ssr-fresh-baseline-codex-invocation-unrelated-d6b555d6-0443-4487-a512-02f2b7cd0fe4-pe_di8tt",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Preparer and active assessor with condition/history awareness; not blind or independent. Fixed SSR-assessment-3 and case-specific units, inherited explanations and original interpretation."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T155210881Z-ssr-fresh-baseline-codex-invocation-unrelated-d6b555d6-0443-4487-a512-02f2b7cd0fe4-pe_di8tt/result.json",
+        "sha256": "4dd9918a31ef766e4b71b9974fbf0fd4003c38706c503be357a57dfeb39c45bc",
+        "version": null
+      },
+      "selector": "Mechanical completion, declared execution and retained capture."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T155210881Z-ssr-fresh-baseline-codex-invocation-unrelated-d6b555d6-0443-4487-a512-02f2b7cd0fe4-pe_di8tt/provider-session.jsonl",
+        "sha256": "c32ed4754610ddb315e5adba169c246d79369a5881013f2b7c5c254fcf8c004a",
+        "version": null
+      },
+      "selector": "Complete ordered tool calls, responses and subject messages."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T155210881Z-ssr-fresh-baseline-codex-invocation-unrelated-d6b555d6-0443-4487-a512-02f2b7cd0fe4-pe_di8tt.checks.json",
+        "sha256": "8aa72aea43beec668b9913ebc6a6f92d399333e642912481c9b551a948c179b5",
+        "version": null
+      },
+      "selector": "Disposable full project/Git comparison, protected inputs, delivery/model checks and any trusted replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned model/CLI/effort and source identities verified; complete retained capture and cleanup, with full original-body delivery for explicit application. Native availability is verified; missing/late loading is scored separately.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Qualified native catalog and complete task/source/config/status trace; no SSR selection as applicable, targeted body load or sweep/account procedure.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Appropriate unrelated-task non-use; functional outcome not measured.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "Accurate1900expiry calculation100+30*60, all supplied project bytes unchanged and no task commit.",
+      "consequence": "Descriptive/supplementary; fixed scores and scope unchanged.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "Exposed development case in a declared provider/runtime stratum; no blind, held-out, population reliability or causal-guidance claim.",
+    "Native selection and task success are separate; retain case-specific counting units and Shiv uncertainty."
+  ],
+  "result_id": "fresh-baseline-codex-01-invocation-unrelated-original-4",
+  "functional_result": "not measured",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/manifests/codex-invocation-unrelated-manifest.json",
+    "sha256": "4affea1cae164da9b4273d2ee9ff499229f71db8a609917fd55a3462aef3842b",
+    "version": "1",
+    "git_revision": "75812d6c23ef7e92d5a794b4724e51758f60e7cb"
+  }
+}
