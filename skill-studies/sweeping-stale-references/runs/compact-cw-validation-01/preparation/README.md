@@ -1,5 +1,7 @@
 # Draft preparation
 
+Status: superseded draft inputs; the [staged original-baseline design](../../../../../plans/specs/2026-10-26-ssr-staged-baseline-comparison.md) requires a revised matrix and allocation before any freeze.
+
 The [proposal](../../../../../plans/specs/2026-10-24-ssr-cw-aligned-validation.md) is for owner selection, not collection authority.
 [Configurations](configuration-index.json) map thirteen draft configurations to 55 new subject slots in the [schedule](schedule.json).
 [Reuse identities](reuse.json) identify ten already assessed Opus outputs; they are not new calls or duplicate observations.

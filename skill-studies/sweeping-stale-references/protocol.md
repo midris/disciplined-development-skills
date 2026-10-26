@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `sweeping-stale-references`
 Status: the compact comparison and closing validation batches are complete; remaining-scope preparation follows the CW testing model. Skill adoption remains pending.
-Current action: owner selection of the [CW-aligned completion proposal](../../plans/specs/2026-10-24-ssr-cw-aligned-validation.md), recommending 55 new subjects/five reviews with matching Opus reuse. Draft configurations and a near-boundary case are prepared; no new allocation, collection, rewrite or deployment is authorized. The [CW accounting](../concise-writing/protocol.md#storage-and-accounting) owns combined spending.
+Current action: resolve baseline runtime/reuse scope in the [staged comparison design](../../plans/specs/2026-10-26-ssr-staged-baseline-comparison.md). The original is the fixed baseline across all scenarios; comprehensive and compact rewrites receive initial three-attempt screens before any selected top-up. The previous 55-subject proposal is superseded; no revised allocation, collection, rewrite or deployment is authorized. The [CW accounting](../concise-writing/protocol.md#storage-and-accounting) owns combined spending.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](runs/core-baseline-01/core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -265,7 +265,7 @@ Pre-baseline development is closed at two pairs. Do not reopen it for a new face
 
 ### Proposal: compact-cw-validation-01
 
-Status: proposed; offline preparation passed, with collection approval, final freeze and readiness pending.
+Status: superseded; retained draft inputs belong to the earlier two-version completion proposal and do not implement the [staged original-baseline comparison](../../plans/specs/2026-10-26-ssr-staged-baseline-comparison.md).
 The owner requested creation of the [CW-aligned proposal](../../plans/specs/2026-10-24-ssr-cw-aligned-validation.md); this authorizes preparation only.
 Recommended scope: 55 new subjects and five output reviews, with ten matching Opus repairs reused under exact identity/inventory checks; [draft preparation](runs/compact-cw-validation-01/preparation/README.md) contains configurations, criteria mapping and the fixed order.
 The proposal owns the prospective matrix, smaller alternative, review packets, stopping/decision rules, effort forecast and requested ceiling extension; current ceilings/spending remain unchanged.

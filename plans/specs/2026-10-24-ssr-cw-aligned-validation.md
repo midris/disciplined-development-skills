@@ -1,6 +1,6 @@
 # SSR: proposed CW-aligned completion
 
-Status: proposed; preparation only, with collection and ceiling extension awaiting owner approval.
+Status: superseded by the [original-baseline staged design](2026-10-26-ssr-staged-baseline-comparison.md); this retained 55-subject proposal and its draft inputs are not the current scope or collection authority.
 The [framework](2026-09-11-model-driven-skill-testing-framework.md#cw-testing-model) governs the method; the [active plan](../2026-09-11-model-driven-skill-testing.md) tracks progress and the [SSR protocol](../../skill-studies/sweeping-stale-references/protocol.md#cw-model-alignment) owns authority and current decisions.
 
 ## Recommendation and question
