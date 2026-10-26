@@ -1,0 +1,144 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-10-26T20:44:05.833071+00:00",
+  "run_id": "20261026T204231699Z-ssr-screen-codex-discovery-shiv-finalist-e4f82415-5d91-47f3-8181-3b63e27eb6c4-gjlbbssd",
+  "condition": "finalist",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Preparer and active assessor with condition/history awareness; not blind or independent. Fixed SSR-assessment-3 and case-specific units, inherited explanations and prospective candidate interpretation."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T204231699Z-ssr-screen-codex-discovery-shiv-finalist-e4f82415-5d91-47f3-8181-3b63e27eb6c4-gjlbbssd/result.json",
+        "sha256": "d6f7d95063e04f74d5446ef9b5f51c73fa07a8afd52ca3cfd9fc76765bc7ba3c",
+        "version": null
+      },
+      "selector": "Mechanical completion, declared execution and retained capture."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T204231699Z-ssr-screen-codex-discovery-shiv-finalist-e4f82415-5d91-47f3-8181-3b63e27eb6c4-gjlbbssd/provider-session.jsonl",
+        "sha256": "5bf78cc26ba6820d0a4f7c38f2b8c2e610bd60ba17c01fe57c19666f67480855",
+        "version": null
+      },
+      "selector": "Complete ordered tool calls, responses and subject messages."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/inspection/007.json",
+        "sha256": "493171941fe1149bd06d99c449978226a70f5806302e707bef9c0eb5bda26591",
+        "version": null
+      },
+      "selector": "Disposable full project/Git comparison, protected inputs, delivery/model checks and any trusted replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned model/CLI/effort and source identities verified; complete retained capture and cleanup, with full assigned-body delivery for explicit application. Native availability is verified; missing/late loading is scored separately.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All four consumer commands are corrected to --destination. Controller replay builds and executes the expected greeting archive in every consumer, including script execution from outside the project.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only four consumer files changed. All protected sources/docs/tests/binary files remain identical. Replay verifies payload, entrypoint, greeting output, canonical option, alias and independent inventory; retired option is rejected without artifact creation.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Commit aea5e97eeac1c0b2d78e25e88351759f1aaf35f5 contains all repairs after baseline; final tree clean.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Assigned body delivered16; broad search40 and full consumer/context reads49 precede patch56, with explicit current/history/independent triage48 and repeated search65.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One reconciliation commit after setup baseline.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "The account groups four required update paths into one row and both required independent-tool paths into another, violating fixed same-path/outcome grouping. Locations and combined counts remain useful. Negative-test intentionally-stale classification separately retains the known category uncertainty and is not the basis of this defect.",
+      "consequence": "Report separately; cannot change functional outcome or authorize repetition alone.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Compact Codex Shiv repetition1 passes all functional checks; P3 has an established cross-path-grouping defect, separate from inherited classification uncertainty.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "Initial parent guidance scan was blocked and narrowed to the authorized tree; no protected evidence exposure is shown.",
+      "consequence": "Descriptive/supplementary; fixed scores and scope unchanged.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "Exposed development case in a declared provider/runtime stratum; no blind, held-out, population reliability or causal-guidance claim.",
+    "Native selection and task success are separate; retain case-specific counting units and Shiv uncertainty."
+  ],
+  "result_id": "candidate-screen-codex-01-discovery-shiv-finalist-1",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/codex-discovery-shiv-manifest.json",
+    "sha256": "91b33a31012525a18220fa43e45aa1b8ca72ddb0814d8198d345cd20da77c821",
+    "version": "1",
+    "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+  }
+}

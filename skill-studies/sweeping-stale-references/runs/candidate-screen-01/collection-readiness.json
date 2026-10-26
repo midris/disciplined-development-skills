@@ -1,0 +1,53 @@
+{
+  "source_revision": "f3ea3d094481d77d2aad13d70f8eff54a7c88b71",
+  "authority_revision": "eb1761b",
+  "checks": {
+    "codex": {
+      "diagnostics": [
+        {
+          "file": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/pilot-01/pilot-run-index.json",
+          "location": "attempts",
+          "rule": "historical-accounting",
+          "message": "Only distinct invocation accounting is checked for this historical pilot index",
+          "severity": "info"
+        },
+        {
+          "file": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/pilot-02/pilot-02-run-index.json",
+          "location": "attempts",
+          "rule": "historical-accounting",
+          "message": "Only distinct invocation accounting is checked for this historical pilot index",
+          "severity": "info"
+        }
+      ],
+      "kind": "protocol",
+      "structurally_valid": true,
+      "complete": true,
+      "unsupported": false
+    },
+    "claude": {
+      "diagnostics": [
+        {
+          "file": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/pilot-01/pilot-run-index.json",
+          "location": "attempts",
+          "rule": "historical-accounting",
+          "message": "Only distinct invocation accounting is checked for this historical pilot index",
+          "severity": "info"
+        },
+        {
+          "file": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/pilot-02/pilot-02-run-index.json",
+          "location": "attempts",
+          "rule": "historical-accounting",
+          "message": "Only distinct invocation accounting is checked for this historical pilot index",
+          "severity": "info"
+        }
+      ],
+      "kind": "protocol",
+      "structurally_valid": true,
+      "complete": true,
+      "unsupported": false
+    }
+  },
+  "authentication": "Codex ChatGPT login and Claude production claude.ai login confirmed; sandboxed Claude status lacked Keychain access, confirmed using normal host permissions.",
+  "runtime": "Qualified binary paths/hashes and retained six provider-free checks unchanged.",
+  "model_qualification_calls": 0
+}

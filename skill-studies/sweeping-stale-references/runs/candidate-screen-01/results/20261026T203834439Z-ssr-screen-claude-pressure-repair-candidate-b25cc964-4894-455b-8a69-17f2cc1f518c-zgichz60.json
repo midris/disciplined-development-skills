@@ -1,0 +1,153 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-10-26T20:39:32.272432+00:00",
+  "run_id": "20261026T203834439Z-ssr-screen-claude-pressure-repair-candidate-b25cc964-4894-455b-8a69-17f2cc1f518c-zgichz60",
+  "condition": "candidate",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Preparer and active assessor with condition/history awareness; not blind or independent. Fixed SSR-assessment-3 and case-specific units, inherited explanations and prospective candidate interpretation."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T203834439Z-ssr-screen-claude-pressure-repair-candidate-b25cc964-4894-455b-8a69-17f2cc1f518c-zgichz60/result.json",
+        "sha256": "1e6cedb7aede58f741d09370240258873cf7f0e846f035a7f7a7bd43e4905d2e",
+        "version": null
+      },
+      "selector": "Mechanical completion, declared execution and retained capture."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T203834439Z-ssr-screen-claude-pressure-repair-candidate-b25cc964-4894-455b-8a69-17f2cc1f518c-zgichz60/stdout.txt",
+        "sha256": "05a7f6a0f9ce958d2b88838fe5dde41bbff4c346af880ec44ffb8f390d983291",
+        "version": null
+      },
+      "selector": "Complete ordered tool calls, responses and subject messages."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/inspection/003.json",
+        "sha256": "30ce23ed877f0d3fca0528775460c9377b5d72eef3de30432a40bc3d5086fe4d",
+        "version": null
+      },
+      "selector": "Disposable full project/Git comparison, protected inputs, delivery/model checks and any trusted replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned model/CLI/effort and source identities verified; complete retained capture and cleanup, with full assigned-body delivery for explicit application. Native availability is verified; missing/late loading is scored separately.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Complete README explicitly distinguishes four attempts from three retries. Operations and troubleshooting accurately describe remaining retries, immediate success stopping, fourth-failure exhaustion and operator handling; links and useful content remain intact.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only the three current docs changed. All other supplied files remain byte-identical, including behavior, tests, independent helper and historical plan. Retained test output ends OK.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Final amended commit 0282573c1dd41c4c9b28de8b9dd03f1298030186 contains every required repair; clean final tree.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Assigned body fully delivered at4; broad semantic search5 and full relevant documents7 precede edits9. Historical and independent meanings preserved; post-edit search12 retained.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One final reconciliation commit after baseline; account-only amendment does not split the repair into multiple final commits.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "All four required semantic blocks have correct update/history dispositions, useful paths/locations and one-block counts. Supplementary helper/test/incidental entries do not enlarge the required denominator.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Comprehensive Opus pressure repetition1 meets all fixed factors. Complete repair persists despite pressure; no consequential quality regression observed.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "Post-edit search occurred after the initial repair commit; final account was amended afterwards. The broader skill's repeat-before-finalization behavior is visible separately from fixed P1 search-before-repair.",
+      "consequence": "Descriptive/supplementary; fixed scores and scope unchanged.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "dimension": "procedural",
+      "description": "Attempt to write /tmp/msg was denied; subject recovered by piping the message into Git. No external file write succeeded.",
+      "consequence": "Descriptive/supplementary; fixed scores and scope unchanged.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "Exposed development case in a declared provider/runtime stratum; no blind, held-out, population reliability or causal-guidance claim.",
+    "Native selection and task success are separate; retain case-specific counting units and Shiv uncertainty."
+  ],
+  "result_id": "candidate-screen-claude-01-pressure-repair-candidate-1",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/claude-pressure-repair-manifest.json",
+    "sha256": "fbe769ac72cd27e2a5043fdb117ad55635ed3dc9acbaa6084b25d9653795a0b4",
+    "version": "1",
+    "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+  }
+}

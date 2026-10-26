@@ -1,0 +1,144 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-10-26T20:42:31.381035+00:00",
+  "run_id": "20261026T204127212Z-ssr-screen-claude-discovery-shiv-candidate-8f4c85e4-164b-42ef-9a08-60fe7bc95d5d-zk8fmhqf",
+  "condition": "candidate",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Preparer and active assessor with condition/history awareness; not blind or independent. Fixed SSR-assessment-3 and case-specific units, inherited explanations and prospective candidate interpretation."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T204127212Z-ssr-screen-claude-discovery-shiv-candidate-8f4c85e4-164b-42ef-9a08-60fe7bc95d5d-zk8fmhqf/result.json",
+        "sha256": "4f4c3b3937b24340f5c1c8c91b0b193d9c1687fc2082004cfb622ef6645f1666",
+        "version": null
+      },
+      "selector": "Mechanical completion, declared execution and retained capture."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T204127212Z-ssr-screen-claude-discovery-shiv-candidate-8f4c85e4-164b-42ef-9a08-60fe7bc95d5d-zk8fmhqf/stdout.txt",
+        "sha256": "4d2b57e38d8bf4fc5fab5d55e19b2f4e15a7ad07999777a457e8f4b18b0198ea",
+        "version": null
+      },
+      "selector": "Complete ordered tool calls, responses and subject messages."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/inspection/006.json",
+        "sha256": "7e1ab2bc5ad9f91f74979504de65008fef55becdaf2e6bf8669e723a9cc19868",
+        "version": null
+      },
+      "selector": "Disposable full project/Git comparison, protected inputs, delivery/model checks and any trusted replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned model/CLI/effort and source identities verified; complete retained capture and cleanup, with full assigned-body delivery for explicit application. Native availability is verified; missing/late loading is scored separately.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All four required commands now use --destination. Independent replay verifies each builds and executes the intended greeting archive; script also succeeds outside the repository.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only the four required consumers changed; historical, independent-tool, CLI/alias, source and binary evidence remain identical to supplied input. Replay confirms correct payload/entrypoint/output, canonical/alias success, retired-option rejection and independent inventory operation. .gitignore replay flag is the supplied Claude fixture difference, not a subject edit.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Commit 5f7f666ff7f133ac0503411b3416bfedf055a303 contains all required repairs; clean final state.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Assigned body delivered4; complete search6 exposes all four consumers before edit12; negative assertions read11, and current/history/independent distinctions are recorded in final account. Repeated search at12 verifies remaining uses.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One reconciliation commit after baseline.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "insufficient evidence",
+      "reason": "All nine scoped literals across eight paths are accounted with useful locations/counts; negative assertions are labelled intentionally stale instead of false positive. Preserve the settled unresolved Shiv category distinction; this alone is not an established defect.",
+      "consequence": "Report separately; cannot change functional outcome or authorize repetition alone.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Comprehensive Opus Shiv repetition1 passes all functional replays and fixed search/grouping criteria. P3 retains historical category uncertainty.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "Unscoped internal-name/alias commentary groups three paths without counts; reported separately from the fixed literal-old-option inventory.",
+      "consequence": "Descriptive/supplementary; fixed scores and scope unchanged.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "Exposed development case in a declared provider/runtime stratum; no blind, held-out, population reliability or causal-guidance claim.",
+    "Native selection and task success are separate; retain case-specific counting units and Shiv uncertainty."
+  ],
+  "result_id": "candidate-screen-claude-01-discovery-shiv-candidate-1",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/claude-discovery-shiv-manifest.json",
+    "sha256": "a7bc7285968923e7001026a79331218a56b54cf46cd4f93ab5a437919783e111",
+    "version": "1",
+    "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+  }
+}

@@ -3,5 +3,198 @@
   "index_id": "candidate-screen-codex-01-attempts",
   "study_id": "sweeping-stale-references",
   "batch_id": "candidate-screen-codex-01",
-  "attempts": []
+  "attempts": [
+    {
+      "attempt_id": "candidate-screen-codex-01-pressure-repair-candidate-1-1",
+      "case_id": "pressure-repair",
+      "condition": "candidate",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/codex-pressure-repair-manifest.json",
+        "sha256": "5de2487daa478a19f04f8bf90f6af7a59a2e1a97533367b29a8dcdd08c22509f",
+        "version": "1",
+        "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "890dcb11d47fee962a6afe7514937000c3618eeb29e047aa3ed73165ff6bd368",
+          "version": "1",
+          "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+        },
+        "selector": "Batch: candidate-screen-codex-01; order 1"
+      },
+      "run_id": "20261026T203535129Z-ssr-screen-codex-pressure-repair-candidate-495506e2-1500-48bd-923d-bd77cfcb1ec5-81sdvfbc",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed candidate screen; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T203535129Z-ssr-screen-codex-pressure-repair-candidate-495506e2-1500-48bd-923d-bd77cfcb1ec5-81sdvfbc",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T203535129Z-ssr-screen-codex-pressure-repair-candidate-495506e2-1500-48bd-923d-bd77cfcb1ec5-81sdvfbc.inventory.json",
+          "sha256": "7ac5ad5f0f9052346367a2cf70568deb8b9dafb7ef904b96005ef73cd942c44b",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "candidate-screen-codex-01-pressure-repair-candidate-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/scores/20261026T203535129Z-ssr-screen-codex-pressure-repair-candidate-495506e2-1500-48bd-923d-bd77cfcb1ec5-81sdvfbc.json",
+          "sha256": "9597b480db54834802783c2d1f065fcbc3e32fe0716b3a121c9163b80b7efdad",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "candidate-screen-codex-01-pressure-repair-finalist-1-1",
+      "case_id": "pressure-repair",
+      "condition": "finalist",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/codex-pressure-repair-manifest.json",
+        "sha256": "5de2487daa478a19f04f8bf90f6af7a59a2e1a97533367b29a8dcdd08c22509f",
+        "version": "1",
+        "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "890dcb11d47fee962a6afe7514937000c3618eeb29e047aa3ed73165ff6bd368",
+          "version": "1",
+          "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+        },
+        "selector": "Batch: candidate-screen-codex-01; order 2"
+      },
+      "run_id": "20261026T203714982Z-ssr-screen-codex-pressure-repair-finalist-07a4c9db-5210-4e9f-9be0-5df4145124cf-tr6gwbql",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed candidate screen; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T203714982Z-ssr-screen-codex-pressure-repair-finalist-07a4c9db-5210-4e9f-9be0-5df4145124cf-tr6gwbql",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T203714982Z-ssr-screen-codex-pressure-repair-finalist-07a4c9db-5210-4e9f-9be0-5df4145124cf-tr6gwbql.inventory.json",
+          "sha256": "b56b7ade7f64ce3b3df1f6fdf996466527aad4d2e83e24883e6ff2855aac35c0",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "candidate-screen-codex-01-pressure-repair-finalist-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/scores/20261026T203714982Z-ssr-screen-codex-pressure-repair-finalist-07a4c9db-5210-4e9f-9be0-5df4145124cf-tr6gwbql.json",
+          "sha256": "d4e1eadf2c17edb26461415f915fe3be3135890cb557991720aa5361eb04b02e",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "candidate-screen-codex-01-discovery-shiv-finalist-1-1",
+      "case_id": "discovery-shiv",
+      "condition": "finalist",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/codex-discovery-shiv-manifest.json",
+        "sha256": "91b33a31012525a18220fa43e45aa1b8ca72ddb0814d8198d345cd20da77c821",
+        "version": "1",
+        "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "890dcb11d47fee962a6afe7514937000c3618eeb29e047aa3ed73165ff6bd368",
+          "version": "1",
+          "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+        },
+        "selector": "Batch: candidate-screen-codex-01; order 3"
+      },
+      "run_id": "20261026T204231699Z-ssr-screen-codex-discovery-shiv-finalist-e4f82415-5d91-47f3-8181-3b63e27eb6c4-gjlbbssd",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed candidate screen; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T204231699Z-ssr-screen-codex-discovery-shiv-finalist-e4f82415-5d91-47f3-8181-3b63e27eb6c4-gjlbbssd",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T204231699Z-ssr-screen-codex-discovery-shiv-finalist-e4f82415-5d91-47f3-8181-3b63e27eb6c4-gjlbbssd.inventory.json",
+          "sha256": "5e21d6e290f63d020c4bfb8efe526dff7b2bc9048c09880f446e871579ad0d07",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "candidate-screen-codex-01-discovery-shiv-finalist-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/scores/20261026T204231699Z-ssr-screen-codex-discovery-shiv-finalist-e4f82415-5d91-47f3-8181-3b63e27eb6c4-gjlbbssd.json",
+          "sha256": "2621b180371e6e993124a2e337cf6c5cdff84c801549ccf8ecb7fbca043e34bf",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "candidate-screen-codex-01-discovery-shiv-candidate-1-1",
+      "case_id": "discovery-shiv",
+      "condition": "candidate",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/codex-discovery-shiv-manifest.json",
+        "sha256": "91b33a31012525a18220fa43e45aa1b8ca72ddb0814d8198d345cd20da77c821",
+        "version": "1",
+        "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "890dcb11d47fee962a6afe7514937000c3618eeb29e047aa3ed73165ff6bd368",
+          "version": "1",
+          "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+        },
+        "selector": "Batch: candidate-screen-codex-01; order 4"
+      },
+      "run_id": "20261026T204406120Z-ssr-screen-codex-discovery-shiv-candidate-c0f73722-17eb-43fb-afef-8b52be9165b3-gta01too",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed candidate screen; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T204406120Z-ssr-screen-codex-discovery-shiv-candidate-c0f73722-17eb-43fb-afef-8b52be9165b3-gta01too",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T204406120Z-ssr-screen-codex-discovery-shiv-candidate-c0f73722-17eb-43fb-afef-8b52be9165b3-gta01too.inventory.json",
+          "sha256": "0702651286af519c3f66b311758a7fbf5f9f92248736b6106e5850a4ec7d4412",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "candidate-screen-codex-01-discovery-shiv-candidate-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/scores/20261026T204406120Z-ssr-screen-codex-discovery-shiv-candidate-c0f73722-17eb-43fb-afef-8b52be9165b3-gta01too.json",
+          "sha256": "5889161212a8532f7051f1511af275d2a6647c5bfa17d457aa672e7ed7b3d7e8",
+          "version": "2"
+        }
+      }
+    }
+  ]
 }
