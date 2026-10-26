@@ -1,0 +1,1581 @@
+{
+  "status": "proposed ten-call scope; packets/configs freeze after retained subjects and active scoring",
+  "reviewer": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "permissions": "read-only",
+    "timeout_seconds": 900,
+    "tools": [
+      "Read",
+      "Glob",
+      "Grep"
+    ],
+    "skills": false
+  },
+  "packets": [
+    {
+      "id": "codex-semantic-pressure",
+      "provider": "codex",
+      "case_ids": [
+        "semantic-delivery",
+        "pressure-repair"
+      ],
+      "output_count": 22,
+      "functional_factors": 66,
+      "observations": [
+        {
+          "provider": "codex",
+          "case_id": "pressure-repair",
+          "condition": "original",
+          "repetition": 1,
+          "status": "retained",
+          "run_id": "20261026T133837444Z-ssr-fresh-baseline-codex-pressure-repair-6467a052-3123-4706-9938-82a12b6a0cc8-8_okcgbk"
+        },
+        {
+          "provider": "codex",
+          "case_id": "pressure-repair",
+          "condition": "original",
+          "repetition": 2,
+          "status": "retained",
+          "run_id": "20261026T143412498Z-ssr-fresh-baseline-codex-pressure-repair-9e9e6183-27a3-42e7-8985-782d677d97dd-tsskre8q"
+        },
+        {
+          "provider": "codex",
+          "case_id": "pressure-repair",
+          "condition": "original",
+          "repetition": 3,
+          "status": "retained",
+          "run_id": "20261026T145759014Z-ssr-fresh-baseline-codex-pressure-repair-257cd5f9-61d7-4a47-90dc-d60334c40686-gp86ilqn"
+        },
+        {
+          "provider": "codex",
+          "case_id": "pressure-repair",
+          "condition": "original",
+          "repetition": 4,
+          "status": "retained",
+          "run_id": "20261026T152652005Z-ssr-fresh-baseline-codex-pressure-repair-88adacf2-1128-4b8a-bb92-ec7756839f0b-tecko1da"
+        },
+        {
+          "provider": "codex",
+          "case_id": "pressure-repair",
+          "condition": "original",
+          "repetition": 5,
+          "status": "retained",
+          "run_id": "20261026T155641100Z-ssr-fresh-baseline-codex-pressure-repair-adfd498a-0d27-4549-9410-3914f16f5b02-opye7i2r"
+        },
+        {
+          "provider": "codex",
+          "case_id": "pressure-repair",
+          "condition": "candidate",
+          "repetition": 1,
+          "status": "proposed new",
+          "order": 1
+        },
+        {
+          "provider": "codex",
+          "case_id": "pressure-repair",
+          "condition": "candidate",
+          "repetition": 2,
+          "status": "proposed new",
+          "order": 40
+        },
+        {
+          "provider": "codex",
+          "case_id": "pressure-repair",
+          "condition": "candidate",
+          "repetition": 3,
+          "status": "proposed new",
+          "order": 74
+        },
+        {
+          "provider": "codex",
+          "case_id": "pressure-repair",
+          "condition": "finalist",
+          "repetition": 1,
+          "status": "proposed new",
+          "order": 2
+        },
+        {
+          "provider": "codex",
+          "case_id": "pressure-repair",
+          "condition": "finalist",
+          "repetition": 2,
+          "status": "proposed new",
+          "order": 39
+        },
+        {
+          "provider": "codex",
+          "case_id": "pressure-repair",
+          "condition": "finalist",
+          "repetition": 3,
+          "status": "proposed new",
+          "order": 75
+        },
+        {
+          "provider": "codex",
+          "case_id": "semantic-delivery",
+          "condition": "original",
+          "repetition": 1,
+          "status": "retained",
+          "run_id": "20261026T133436927Z-ssr-fresh-baseline-codex-semantic-delivery-a705672d-b862-4541-af12-d3d88b5d2742-f3puqmj4"
+        },
+        {
+          "provider": "codex",
+          "case_id": "semantic-delivery",
+          "condition": "original",
+          "repetition": 2,
+          "status": "retained",
+          "run_id": "20261026T143111482Z-ssr-fresh-baseline-codex-semantic-delivery-5980d576-4a6c-47ea-b04b-399ddcf459be-mmghqytm"
+        },
+        {
+          "provider": "codex",
+          "case_id": "semantic-delivery",
+          "condition": "original",
+          "repetition": 3,
+          "status": "retained",
+          "run_id": "20261026T145614690Z-ssr-fresh-baseline-codex-semantic-delivery-cbec7a28-8fdd-46a7-ad5f-e572c40d8bfb-x3551ydz"
+        },
+        {
+          "provider": "codex",
+          "case_id": "semantic-delivery",
+          "condition": "original",
+          "repetition": 4,
+          "status": "retained",
+          "run_id": "20261026T152435135Z-ssr-fresh-baseline-codex-semantic-delivery-ad65b54c-58b4-45dd-82eb-564814ede4a6-ev4tkama"
+        },
+        {
+          "provider": "codex",
+          "case_id": "semantic-delivery",
+          "condition": "original",
+          "repetition": 5,
+          "status": "retained",
+          "run_id": "20261026T155347173Z-ssr-fresh-baseline-codex-semantic-delivery-184d95f2-da8b-4178-9baa-4e31afca4d9e-2nu79qkx"
+        },
+        {
+          "provider": "codex",
+          "case_id": "semantic-delivery",
+          "condition": "candidate",
+          "repetition": 1,
+          "status": "proposed new",
+          "order": 28
+        },
+        {
+          "provider": "codex",
+          "case_id": "semantic-delivery",
+          "condition": "candidate",
+          "repetition": 2,
+          "status": "proposed new",
+          "order": 65
+        },
+        {
+          "provider": "codex",
+          "case_id": "semantic-delivery",
+          "condition": "candidate",
+          "repetition": 3,
+          "status": "proposed new",
+          "order": 106
+        },
+        {
+          "provider": "codex",
+          "case_id": "semantic-delivery",
+          "condition": "finalist",
+          "repetition": 1,
+          "status": "proposed new",
+          "order": 29
+        },
+        {
+          "provider": "codex",
+          "case_id": "semantic-delivery",
+          "condition": "finalist",
+          "repetition": 2,
+          "status": "proposed new",
+          "order": 64
+        },
+        {
+          "provider": "codex",
+          "case_id": "semantic-delivery",
+          "condition": "finalist",
+          "repetition": 3,
+          "status": "proposed new",
+          "order": 107
+        }
+      ]
+    },
+    {
+      "id": "codex-shiv",
+      "provider": "codex",
+      "case_ids": [
+        "discovery-shiv"
+      ],
+      "output_count": 11,
+      "functional_factors": 33,
+      "observations": [
+        {
+          "provider": "codex",
+          "case_id": "discovery-shiv",
+          "condition": "original",
+          "repetition": 1,
+          "status": "retained",
+          "run_id": "20261026T134721172Z-ssr-fresh-baseline-codex-discovery-shiv-b2bf1cab-ce90-43ab-bf0b-742deab69f41-fmmcjc30"
+        },
+        {
+          "provider": "codex",
+          "case_id": "discovery-shiv",
+          "condition": "original",
+          "repetition": 2,
+          "status": "retained",
+          "run_id": "20261026T143914253Z-ssr-fresh-baseline-codex-discovery-shiv-34bef055-5156-4912-b368-f30fd19f79ec-ezh96m4u"
+        },
+        {
+          "provider": "codex",
+          "case_id": "discovery-shiv",
+          "condition": "original",
+          "repetition": 3,
+          "status": "retained",
+          "run_id": "20261026T150353909Z-ssr-fresh-baseline-codex-discovery-shiv-8b7b2c1e-7ceb-4889-b85e-61e914680960-lmwtlkmw"
+        },
+        {
+          "provider": "codex",
+          "case_id": "discovery-shiv",
+          "condition": "original",
+          "repetition": 4,
+          "status": "retained",
+          "run_id": "20261026T153200730Z-ssr-fresh-baseline-codex-discovery-shiv-6aea74e1-b2ad-4844-96f1-8226ed7231aa-yc3bh5xi"
+        },
+        {
+          "provider": "codex",
+          "case_id": "discovery-shiv",
+          "condition": "original",
+          "repetition": 5,
+          "status": "retained",
+          "run_id": "20261026T160215005Z-ssr-fresh-baseline-codex-discovery-shiv-443053da-c094-4120-a779-90b810030140-5efwd34u"
+        },
+        {
+          "provider": "codex",
+          "case_id": "discovery-shiv",
+          "condition": "candidate",
+          "repetition": 1,
+          "status": "proposed new",
+          "order": 8
+        },
+        {
+          "provider": "codex",
+          "case_id": "discovery-shiv",
+          "condition": "candidate",
+          "repetition": 2,
+          "status": "proposed new",
+          "order": 41
+        },
+        {
+          "provider": "codex",
+          "case_id": "discovery-shiv",
+          "condition": "candidate",
+          "repetition": 3,
+          "status": "proposed new",
+          "order": 81
+        },
+        {
+          "provider": "codex",
+          "case_id": "discovery-shiv",
+          "condition": "finalist",
+          "repetition": 1,
+          "status": "proposed new",
+          "order": 7
+        },
+        {
+          "provider": "codex",
+          "case_id": "discovery-shiv",
+          "condition": "finalist",
+          "repetition": 2,
+          "status": "proposed new",
+          "order": 42
+        },
+        {
+          "provider": "codex",
+          "case_id": "discovery-shiv",
+          "condition": "finalist",
+          "repetition": 3,
+          "status": "proposed new",
+          "order": 80
+        }
+      ]
+    },
+    {
+      "id": "codex-moved",
+      "provider": "codex",
+      "case_ids": [
+        "moved-guide"
+      ],
+      "output_count": 11,
+      "functional_factors": 33,
+      "observations": [
+        {
+          "provider": "codex",
+          "case_id": "moved-guide",
+          "condition": "original",
+          "repetition": 1,
+          "status": "retained",
+          "run_id": "20261026T135423106Z-ssr-fresh-baseline-codex-moved-guide-3961fa8e-89bf-4c90-8499-5a3be88f3e6b-dhwjxka7"
+        },
+        {
+          "provider": "codex",
+          "case_id": "moved-guide",
+          "condition": "original",
+          "repetition": 2,
+          "status": "retained",
+          "run_id": "20261026T144158372Z-ssr-fresh-baseline-codex-moved-guide-1464c41d-e203-45b1-991f-7aafeb7a0826-w7945l8m"
+        },
+        {
+          "provider": "codex",
+          "case_id": "moved-guide",
+          "condition": "original",
+          "repetition": 3,
+          "status": "retained",
+          "run_id": "20261026T150725919Z-ssr-fresh-baseline-codex-moved-guide-6e927f28-a909-4be3-ad52-3f084793bc0a-34wbpaet"
+        },
+        {
+          "provider": "codex",
+          "case_id": "moved-guide",
+          "condition": "original",
+          "repetition": 4,
+          "status": "retained",
+          "run_id": "20261026T153437339Z-ssr-fresh-baseline-codex-moved-guide-158319e3-366b-4dbf-8e6d-1e014a67ac94-1lps5oor"
+        },
+        {
+          "provider": "codex",
+          "case_id": "moved-guide",
+          "condition": "original",
+          "repetition": 5,
+          "status": "retained",
+          "run_id": "20261026T160541170Z-ssr-fresh-baseline-codex-moved-guide-eedfa38a-4422-4996-b67f-54a75b5a56c7-ndpar6uq"
+        },
+        {
+          "provider": "codex",
+          "case_id": "moved-guide",
+          "condition": "candidate",
+          "repetition": 1,
+          "status": "proposed new",
+          "order": 27
+        },
+        {
+          "provider": "codex",
+          "case_id": "moved-guide",
+          "condition": "candidate",
+          "repetition": 2,
+          "status": "proposed new",
+          "order": 61
+        },
+        {
+          "provider": "codex",
+          "case_id": "moved-guide",
+          "condition": "candidate",
+          "repetition": 3,
+          "status": "proposed new",
+          "order": 105
+        },
+        {
+          "provider": "codex",
+          "case_id": "moved-guide",
+          "condition": "finalist",
+          "repetition": 1,
+          "status": "proposed new",
+          "order": 26
+        },
+        {
+          "provider": "codex",
+          "case_id": "moved-guide",
+          "condition": "finalist",
+          "repetition": 2,
+          "status": "proposed new",
+          "order": 62
+        },
+        {
+          "provider": "codex",
+          "case_id": "moved-guide",
+          "condition": "finalist",
+          "repetition": 3,
+          "status": "proposed new",
+          "order": 104
+        }
+      ]
+    },
+    {
+      "id": "codex-initiating-local",
+      "provider": "codex",
+      "case_ids": [
+        "initiating-change",
+        "local-change"
+      ],
+      "output_count": 22,
+      "functional_factors": 66,
+      "observations": [
+        {
+          "provider": "codex",
+          "case_id": "initiating-change",
+          "condition": "original",
+          "repetition": 1,
+          "status": "retained",
+          "run_id": "20261026T140546843Z-ssr-fresh-baseline-codex-initiating-change-83467fd1-3781-446b-a164-bed6c7c0117f-9jmeyyww"
+        },
+        {
+          "provider": "codex",
+          "case_id": "initiating-change",
+          "condition": "original",
+          "repetition": 2,
+          "status": "retained",
+          "run_id": "20261026T144704352Z-ssr-fresh-baseline-codex-initiating-change-f8840c93-a991-4a72-82a0-5fb037a4ed73-cm8_tcbo"
+        },
+        {
+          "provider": "codex",
+          "case_id": "initiating-change",
+          "condition": "original",
+          "repetition": 3,
+          "status": "retained",
+          "run_id": "20261026T151239770Z-ssr-fresh-baseline-codex-initiating-change-67127b6d-a501-47b6-bba8-4de2fcea9540-sskrnwu7"
+        },
+        {
+          "provider": "codex",
+          "case_id": "initiating-change",
+          "condition": "original",
+          "repetition": 4,
+          "status": "retained",
+          "run_id": "20261026T154139635Z-ssr-fresh-baseline-codex-initiating-change-17dded1d-3d32-4cb6-9651-23fb952a72a4-54rv74mt"
+        },
+        {
+          "provider": "codex",
+          "case_id": "initiating-change",
+          "condition": "original",
+          "repetition": 5,
+          "status": "retained",
+          "run_id": "20261026T161406484Z-ssr-fresh-baseline-codex-initiating-change-45fab7dc-3c94-49af-a64d-56a3f803812e-4qwsbxeq"
+        },
+        {
+          "provider": "codex",
+          "case_id": "initiating-change",
+          "condition": "candidate",
+          "repetition": 1,
+          "status": "proposed new",
+          "order": 9
+        },
+        {
+          "provider": "codex",
+          "case_id": "initiating-change",
+          "condition": "candidate",
+          "repetition": 2,
+          "status": "proposed new",
+          "order": 47
+        },
+        {
+          "provider": "codex",
+          "case_id": "initiating-change",
+          "condition": "candidate",
+          "repetition": 3,
+          "status": "proposed new",
+          "order": 82
+        },
+        {
+          "provider": "codex",
+          "case_id": "initiating-change",
+          "condition": "finalist",
+          "repetition": 1,
+          "status": "proposed new",
+          "order": 10
+        },
+        {
+          "provider": "codex",
+          "case_id": "initiating-change",
+          "condition": "finalist",
+          "repetition": 2,
+          "status": "proposed new",
+          "order": 46
+        },
+        {
+          "provider": "codex",
+          "case_id": "initiating-change",
+          "condition": "finalist",
+          "repetition": 3,
+          "status": "proposed new",
+          "order": 83
+        },
+        {
+          "provider": "codex",
+          "case_id": "local-change",
+          "condition": "original",
+          "repetition": 1,
+          "status": "retained",
+          "run_id": "20261026T141313656Z-ssr-fresh-baseline-codex-local-change-cd1737e2-9ab1-49c9-8393-3eb5e58bc5c5-7z505eid"
+        },
+        {
+          "provider": "codex",
+          "case_id": "local-change",
+          "condition": "original",
+          "repetition": 2,
+          "status": "retained",
+          "run_id": "20261026T144939668Z-ssr-fresh-baseline-codex-local-change-a9b768e9-f6f6-4792-a2cd-bd9a389b817e-wfkiwz3e"
+        },
+        {
+          "provider": "codex",
+          "case_id": "local-change",
+          "condition": "original",
+          "repetition": 3,
+          "status": "retained",
+          "run_id": "20261026T151525768Z-ssr-fresh-baseline-codex-local-change-0cddf436-ece9-4d65-80b6-f909a2e7e7f3-d94fwzcg"
+        },
+        {
+          "provider": "codex",
+          "case_id": "local-change",
+          "condition": "original",
+          "repetition": 4,
+          "status": "retained",
+          "run_id": "20261026T154509781Z-ssr-fresh-baseline-codex-local-change-5b3ffadf-990e-439c-ac3e-82536a8080e7-31srg3i5"
+        },
+        {
+          "provider": "codex",
+          "case_id": "local-change",
+          "condition": "original",
+          "repetition": 5,
+          "status": "retained",
+          "run_id": "20261026T161700582Z-ssr-fresh-baseline-codex-local-change-8a29c68f-378f-44d8-bf6d-c659714a1836-tq2dseko"
+        },
+        {
+          "provider": "codex",
+          "case_id": "local-change",
+          "condition": "candidate",
+          "repetition": 1,
+          "status": "proposed new",
+          "order": 22
+        },
+        {
+          "provider": "codex",
+          "case_id": "local-change",
+          "condition": "candidate",
+          "repetition": 2,
+          "status": "proposed new",
+          "order": 60
+        },
+        {
+          "provider": "codex",
+          "case_id": "local-change",
+          "condition": "candidate",
+          "repetition": 3,
+          "status": "proposed new",
+          "order": 98
+        },
+        {
+          "provider": "codex",
+          "case_id": "local-change",
+          "condition": "finalist",
+          "repetition": 1,
+          "status": "proposed new",
+          "order": 23
+        },
+        {
+          "provider": "codex",
+          "case_id": "local-change",
+          "condition": "finalist",
+          "repetition": 2,
+          "status": "proposed new",
+          "order": 59
+        },
+        {
+          "provider": "codex",
+          "case_id": "local-change",
+          "condition": "finalist",
+          "repetition": 3,
+          "status": "proposed new",
+          "order": 99
+        }
+      ]
+    },
+    {
+      "id": "codex-native-positive",
+      "provider": "codex",
+      "case_ids": [
+        "invocation-change",
+        "invocation-review"
+      ],
+      "output_count": 22,
+      "functional_factors": 66,
+      "observations": [
+        {
+          "provider": "codex",
+          "case_id": "invocation-change",
+          "condition": "original",
+          "repetition": 1,
+          "status": "retained",
+          "run_id": "20261026T134245334Z-ssr-fresh-baseline-codex-invocation-change-f0f0a9ee-37d0-466b-abf4-4ba50bb9030e-8joxuexg"
+        },
+        {
+          "provider": "codex",
+          "case_id": "invocation-change",
+          "condition": "original",
+          "repetition": 2,
+          "status": "retained",
+          "run_id": "20261026T143618995Z-ssr-fresh-baseline-codex-invocation-change-8e62c8d0-fd1b-476d-9bce-ad7d42e475df-x9tj5hw9"
+        },
+        {
+          "provider": "codex",
+          "case_id": "invocation-change",
+          "condition": "original",
+          "repetition": 3,
+          "status": "retained",
+          "run_id": "20261026T150117283Z-ssr-fresh-baseline-codex-invocation-change-dbb48864-3418-4976-8f5f-8e1dac46c320-1hlsr6yu"
+        },
+        {
+          "provider": "codex",
+          "case_id": "invocation-change",
+          "condition": "original",
+          "repetition": 4,
+          "status": "retained",
+          "run_id": "20261026T152934740Z-ssr-fresh-baseline-codex-invocation-change-851ff07c-9b8e-48ae-900d-01569aa001d2-m67mwqvl"
+        },
+        {
+          "provider": "codex",
+          "case_id": "invocation-change",
+          "condition": "original",
+          "repetition": 5,
+          "status": "retained",
+          "run_id": "20261026T155930969Z-ssr-fresh-baseline-codex-invocation-change-badd3adf-2c86-44de-8ec8-10e60e2a784b-juvar6m0"
+        },
+        {
+          "provider": "codex",
+          "case_id": "invocation-change",
+          "condition": "candidate",
+          "repetition": 1,
+          "status": "proposed new",
+          "order": 14
+        },
+        {
+          "provider": "codex",
+          "case_id": "invocation-change",
+          "condition": "candidate",
+          "repetition": 2,
+          "status": "proposed new",
+          "order": 48
+        },
+        {
+          "provider": "codex",
+          "case_id": "invocation-change",
+          "condition": "candidate",
+          "repetition": 3,
+          "status": "proposed new",
+          "order": 89
+        },
+        {
+          "provider": "codex",
+          "case_id": "invocation-change",
+          "condition": "finalist",
+          "repetition": 1,
+          "status": "proposed new",
+          "order": 13
+        },
+        {
+          "provider": "codex",
+          "case_id": "invocation-change",
+          "condition": "finalist",
+          "repetition": 2,
+          "status": "proposed new",
+          "order": 49
+        },
+        {
+          "provider": "codex",
+          "case_id": "invocation-change",
+          "condition": "finalist",
+          "repetition": 3,
+          "status": "proposed new",
+          "order": 88
+        },
+        {
+          "provider": "codex",
+          "case_id": "invocation-review",
+          "condition": "original",
+          "repetition": 1,
+          "status": "retained",
+          "run_id": "20261026T135904152Z-ssr-fresh-baseline-codex-invocation-review-31649107-f152-4b8b-8e2c-a16167e02426-3ywc8wq4"
+        },
+        {
+          "provider": "codex",
+          "case_id": "invocation-review",
+          "condition": "original",
+          "repetition": 2,
+          "status": "retained",
+          "run_id": "20261026T144440056Z-ssr-fresh-baseline-codex-invocation-review-b52a9798-cc51-40b4-a3ff-6449616186ec-0u6xy1kc"
+        },
+        {
+          "provider": "codex",
+          "case_id": "invocation-review",
+          "condition": "original",
+          "repetition": 3,
+          "status": "retained",
+          "run_id": "20261026T151006832Z-ssr-fresh-baseline-codex-invocation-review-8b77a4cc-a528-4553-98bc-77150e8feb14-yxaiykrt"
+        },
+        {
+          "provider": "codex",
+          "case_id": "invocation-review",
+          "condition": "original",
+          "repetition": 4,
+          "status": "retained",
+          "run_id": "20261026T153813745Z-ssr-fresh-baseline-codex-invocation-review-b193f5c0-6ae0-4a5a-ad1e-3d0131b94cc8-070pzqtm"
+        },
+        {
+          "provider": "codex",
+          "case_id": "invocation-review",
+          "condition": "original",
+          "repetition": 5,
+          "status": "retained",
+          "run_id": "20261026T161052183Z-ssr-fresh-baseline-codex-invocation-review-6a00071d-9d44-495d-9ed6-c3d29526328e-s2cddd8y"
+        },
+        {
+          "provider": "codex",
+          "case_id": "invocation-review",
+          "condition": "candidate",
+          "repetition": 1,
+          "status": "proposed new",
+          "order": 15
+        },
+        {
+          "provider": "codex",
+          "case_id": "invocation-review",
+          "condition": "candidate",
+          "repetition": 2,
+          "status": "proposed new",
+          "order": 53
+        },
+        {
+          "provider": "codex",
+          "case_id": "invocation-review",
+          "condition": "candidate",
+          "repetition": 3,
+          "status": "proposed new",
+          "order": 90
+        },
+        {
+          "provider": "codex",
+          "case_id": "invocation-review",
+          "condition": "finalist",
+          "repetition": 1,
+          "status": "proposed new",
+          "order": 16
+        },
+        {
+          "provider": "codex",
+          "case_id": "invocation-review",
+          "condition": "finalist",
+          "repetition": 2,
+          "status": "proposed new",
+          "order": 52
+        },
+        {
+          "provider": "codex",
+          "case_id": "invocation-review",
+          "condition": "finalist",
+          "repetition": 3,
+          "status": "proposed new",
+          "order": 91
+        }
+      ]
+    },
+    {
+      "id": "claude-semantic-pressure",
+      "provider": "claude",
+      "case_ids": [
+        "semantic-delivery",
+        "pressure-repair"
+      ],
+      "output_count": 26,
+      "functional_factors": 78,
+      "observations": [
+        {
+          "provider": "claude",
+          "case_id": "pressure-repair",
+          "condition": "original",
+          "repetition": 1,
+          "status": "retained",
+          "run_id": "20261026T134047500Z-ssr-fresh-baseline-claude-pressure-repair-55614d69-4b94-4d9d-b31e-01f1af6dc872-way5p3cv"
+        },
+        {
+          "provider": "claude",
+          "case_id": "pressure-repair",
+          "condition": "original",
+          "repetition": 2,
+          "status": "retained",
+          "run_id": "20261026T143252395Z-ssr-fresh-baseline-claude-pressure-repair-cc578997-b8de-4662-8a88-483f96ba1cea-bbokxzpi"
+        },
+        {
+          "provider": "claude",
+          "case_id": "pressure-repair",
+          "condition": "original",
+          "repetition": 3,
+          "status": "retained",
+          "run_id": "20261026T145923944Z-ssr-fresh-baseline-claude-pressure-repair-dd0528fe-9c2e-453b-9d51-364a0cc86908-xqzjqcbb"
+        },
+        {
+          "provider": "claude",
+          "case_id": "pressure-repair",
+          "condition": "original",
+          "repetition": 4,
+          "status": "retained",
+          "run_id": "20261026T152558462Z-ssr-fresh-baseline-claude-pressure-repair-84e9e455-5b05-4bc1-9196-e6701b29d180-jjt0x2z7"
+        },
+        {
+          "provider": "claude",
+          "case_id": "pressure-repair",
+          "condition": "original",
+          "repetition": 5,
+          "status": "retained",
+          "run_id": "20261026T155839032Z-ssr-fresh-baseline-claude-pressure-repair-0d785870-e06c-4285-8816-f7592b2e0dbb-5xd49rt8"
+        },
+        {
+          "provider": "claude",
+          "case_id": "pressure-repair",
+          "condition": "candidate",
+          "repetition": 1,
+          "status": "proposed new",
+          "order": 3
+        },
+        {
+          "provider": "claude",
+          "case_id": "pressure-repair",
+          "condition": "candidate",
+          "repetition": 2,
+          "status": "proposed new",
+          "order": 38
+        },
+        {
+          "provider": "claude",
+          "case_id": "pressure-repair",
+          "condition": "candidate",
+          "repetition": 3,
+          "status": "proposed new",
+          "order": 76
+        },
+        {
+          "provider": "claude",
+          "case_id": "pressure-repair",
+          "condition": "finalist",
+          "repetition": 1,
+          "status": "proposed new",
+          "order": 4
+        },
+        {
+          "provider": "claude",
+          "case_id": "pressure-repair",
+          "condition": "finalist",
+          "repetition": 2,
+          "status": "proposed new",
+          "order": 37
+        },
+        {
+          "provider": "claude",
+          "case_id": "pressure-repair",
+          "condition": "finalist",
+          "repetition": 3,
+          "status": "proposed new",
+          "order": 77
+        },
+        {
+          "provider": "claude",
+          "case_id": "semantic-delivery",
+          "condition": "original",
+          "repetition": 1,
+          "status": "retained",
+          "run_id": "20261023T211804448Z-ssr-compact-semantic-original-43eb72dc-bed5-4eff-90a3-ed9c363ce4ce-7g4e9s1p"
+        },
+        {
+          "provider": "claude",
+          "case_id": "semantic-delivery",
+          "condition": "original",
+          "repetition": 2,
+          "status": "retained",
+          "run_id": "20261023T212809348Z-ssr-compact-semantic-original-e02f2ea8-520d-401d-b326-bd458cc17518-pg2payc3"
+        },
+        {
+          "provider": "claude",
+          "case_id": "semantic-delivery",
+          "condition": "original",
+          "repetition": 3,
+          "status": "retained",
+          "run_id": "20261023T212947093Z-ssr-compact-semantic-original-4c89a89d-1efc-44bf-9832-cf8104dcebcd-n0sj6bjf"
+        },
+        {
+          "provider": "claude",
+          "case_id": "semantic-delivery",
+          "condition": "original",
+          "repetition": 4,
+          "status": "retained",
+          "run_id": "20261023T213130992Z-ssr-compact-semantic-original-1fdec10e-64dc-4841-913c-967bc381947b-qjytmvqi"
+        },
+        {
+          "provider": "claude",
+          "case_id": "semantic-delivery",
+          "condition": "original",
+          "repetition": 5,
+          "status": "retained",
+          "run_id": "20261023T213505114Z-ssr-compact-semantic-original-3102bdf3-bd48-442f-8c61-1660d1ca81a6-mgqevtlv"
+        },
+        {
+          "provider": "claude",
+          "case_id": "semantic-delivery",
+          "condition": "candidate",
+          "repetition": 1,
+          "status": "retained",
+          "run_id": "20261023T212410571Z-ssr-compact-semantic-candidate-b27fa214-9b32-41ae-8717-d64f3ee0e1d4-b_x8sezp"
+        },
+        {
+          "provider": "claude",
+          "case_id": "semantic-delivery",
+          "condition": "candidate",
+          "repetition": 2,
+          "status": "retained",
+          "run_id": "20261023T212607360Z-ssr-compact-semantic-candidate-240ae7cd-4213-40bb-9b01-5c95714b3029-479zhvuo"
+        },
+        {
+          "provider": "claude",
+          "case_id": "semantic-delivery",
+          "condition": "candidate",
+          "repetition": 3,
+          "status": "retained",
+          "run_id": "20261023T213033879Z-ssr-compact-semantic-candidate-7608f8bc-7450-4b24-a1bb-2284e4011e24-0ieyn2fu"
+        },
+        {
+          "provider": "claude",
+          "case_id": "semantic-delivery",
+          "condition": "candidate",
+          "repetition": 4,
+          "status": "retained",
+          "run_id": "20261023T213317806Z-ssr-compact-semantic-candidate-0e19c517-ab57-4c9f-a293-8bc999713bb4-468la7hg"
+        },
+        {
+          "provider": "claude",
+          "case_id": "semantic-delivery",
+          "condition": "candidate",
+          "repetition": 5,
+          "status": "retained",
+          "run_id": "20261023T213412662Z-ssr-compact-semantic-candidate-8cf481d8-0405-463b-bc13-d24877855103-lp4o2r6z"
+        },
+        {
+          "provider": "claude",
+          "case_id": "semantic-delivery",
+          "condition": "finalist",
+          "repetition": 1,
+          "status": "retained",
+          "run_id": "20261023T212516549Z-ssr-compact-semantic-finalist-24f91879-a992-4b12-9026-38a9ebf2143a-sajnmbw3"
+        },
+        {
+          "provider": "claude",
+          "case_id": "semantic-delivery",
+          "condition": "finalist",
+          "repetition": 2,
+          "status": "retained",
+          "run_id": "20261023T212705559Z-ssr-compact-semantic-finalist-a9d86334-3445-4590-b3e4-1b132f6df8c7-5nu6_q9_"
+        },
+        {
+          "provider": "claude",
+          "case_id": "semantic-delivery",
+          "condition": "finalist",
+          "repetition": 3,
+          "status": "retained",
+          "run_id": "20261023T212907539Z-ssr-compact-semantic-finalist-c1c662e0-fc86-4656-aaa0-7746f9eab771-idib5g4o"
+        },
+        {
+          "provider": "claude",
+          "case_id": "semantic-delivery",
+          "condition": "finalist",
+          "repetition": 4,
+          "status": "retained",
+          "run_id": "20261023T213214880Z-ssr-compact-semantic-finalist-52160d4f-1d58-46f5-9b79-deb59490fc80-h_68zmgl"
+        },
+        {
+          "provider": "claude",
+          "case_id": "semantic-delivery",
+          "condition": "finalist",
+          "repetition": 5,
+          "status": "retained",
+          "run_id": "20261023T213555811Z-ssr-compact-semantic-finalist-5486e457-4782-4591-bb1f-7e90eaa33585-7xawoy6q"
+        }
+      ]
+    },
+    {
+      "id": "claude-shiv",
+      "provider": "claude",
+      "case_ids": [
+        "discovery-shiv"
+      ],
+      "output_count": 11,
+      "functional_factors": 33,
+      "observations": [
+        {
+          "provider": "claude",
+          "case_id": "discovery-shiv",
+          "condition": "original",
+          "repetition": 1,
+          "status": "retained",
+          "run_id": "20261026T135122580Z-ssr-fresh-baseline-claude-discovery-shiv-57a33052-c40a-4da6-86bb-f7ef26471f1c-2sr8cacs"
+        },
+        {
+          "provider": "claude",
+          "case_id": "discovery-shiv",
+          "condition": "original",
+          "repetition": 2,
+          "status": "retained",
+          "run_id": "20261026T143736299Z-ssr-fresh-baseline-claude-discovery-shiv-4c9a1ff7-d139-47cf-a149-3e3610e8846e-2_jd8aly"
+        },
+        {
+          "provider": "claude",
+          "case_id": "discovery-shiv",
+          "condition": "original",
+          "repetition": 3,
+          "status": "retained",
+          "run_id": "20261026T150542611Z-ssr-fresh-baseline-claude-discovery-shiv-12060293-68fc-4aad-b179-1167dd86712b-d9tpcdl7"
+        },
+        {
+          "provider": "claude",
+          "case_id": "discovery-shiv",
+          "condition": "original",
+          "repetition": 4,
+          "status": "retained",
+          "run_id": "20261026T153052393Z-ssr-fresh-baseline-claude-discovery-shiv-154d57c7-7497-4c7f-a3e2-bfd98dbf9e86-6ym5l74b"
+        },
+        {
+          "provider": "claude",
+          "case_id": "discovery-shiv",
+          "condition": "original",
+          "repetition": 5,
+          "status": "retained",
+          "run_id": "20261026T160403275Z-ssr-fresh-baseline-claude-discovery-shiv-68f079bc-6b6e-474e-a153-b43c5b2f6d4c-_5a6h6x8"
+        },
+        {
+          "provider": "claude",
+          "case_id": "discovery-shiv",
+          "condition": "candidate",
+          "repetition": 1,
+          "status": "proposed new",
+          "order": 6
+        },
+        {
+          "provider": "claude",
+          "case_id": "discovery-shiv",
+          "condition": "candidate",
+          "repetition": 2,
+          "status": "proposed new",
+          "order": 43
+        },
+        {
+          "provider": "claude",
+          "case_id": "discovery-shiv",
+          "condition": "candidate",
+          "repetition": 3,
+          "status": "proposed new",
+          "order": 79
+        },
+        {
+          "provider": "claude",
+          "case_id": "discovery-shiv",
+          "condition": "finalist",
+          "repetition": 1,
+          "status": "proposed new",
+          "order": 5
+        },
+        {
+          "provider": "claude",
+          "case_id": "discovery-shiv",
+          "condition": "finalist",
+          "repetition": 2,
+          "status": "proposed new",
+          "order": 44
+        },
+        {
+          "provider": "claude",
+          "case_id": "discovery-shiv",
+          "condition": "finalist",
+          "repetition": 3,
+          "status": "proposed new",
+          "order": 78
+        }
+      ]
+    },
+    {
+      "id": "claude-moved",
+      "provider": "claude",
+      "case_ids": [
+        "moved-guide"
+      ],
+      "output_count": 11,
+      "functional_factors": 33,
+      "observations": [
+        {
+          "provider": "claude",
+          "case_id": "moved-guide",
+          "condition": "original",
+          "repetition": 1,
+          "status": "retained",
+          "run_id": "20261026T135650028Z-ssr-fresh-baseline-claude-moved-guide-da811995-0ecf-4bdf-89a8-f997b6f9cd40-o89dadrq"
+        },
+        {
+          "provider": "claude",
+          "case_id": "moved-guide",
+          "condition": "original",
+          "repetition": 2,
+          "status": "retained",
+          "run_id": "20261026T144052901Z-ssr-fresh-baseline-claude-moved-guide-87640d7a-aa26-4bfb-a16d-8dd22bd36898-a87ygsrv"
+        },
+        {
+          "provider": "claude",
+          "case_id": "moved-guide",
+          "condition": "original",
+          "repetition": 3,
+          "status": "retained",
+          "run_id": "20261026T150908932Z-ssr-fresh-baseline-claude-moved-guide-091246d0-6355-4742-8d11-60c79a334d60-xqh45qhl"
+        },
+        {
+          "provider": "claude",
+          "case_id": "moved-guide",
+          "condition": "original",
+          "repetition": 4,
+          "status": "retained",
+          "run_id": "20261026T153330184Z-ssr-fresh-baseline-claude-moved-guide-45aa004a-7e30-4fe8-b3a1-08d265a7f9fd-rx7pg01j"
+        },
+        {
+          "provider": "claude",
+          "case_id": "moved-guide",
+          "condition": "original",
+          "repetition": 5,
+          "status": "retained",
+          "run_id": "20261026T160936719Z-ssr-fresh-baseline-claude-moved-guide-6f8fe2b0-7064-417d-9011-c12f818448ea-glsel8dw"
+        },
+        {
+          "provider": "claude",
+          "case_id": "moved-guide",
+          "condition": "candidate",
+          "repetition": 1,
+          "status": "proposed new",
+          "order": 25
+        },
+        {
+          "provider": "claude",
+          "case_id": "moved-guide",
+          "condition": "candidate",
+          "repetition": 2,
+          "status": "proposed new",
+          "order": 63
+        },
+        {
+          "provider": "claude",
+          "case_id": "moved-guide",
+          "condition": "candidate",
+          "repetition": 3,
+          "status": "proposed new",
+          "order": 103
+        },
+        {
+          "provider": "claude",
+          "case_id": "moved-guide",
+          "condition": "finalist",
+          "repetition": 1,
+          "status": "retained",
+          "run_id": "20261024T060738969Z-ssr-compact-regression-moved-guide-3a8241d0-eb67-4a24-8f49-1f1b24b72db7-9shudgzv"
+        },
+        {
+          "provider": "claude",
+          "case_id": "moved-guide",
+          "condition": "finalist",
+          "repetition": 2,
+          "status": "retained",
+          "run_id": "20261024T061703945Z-ssr-compact-regression-moved-guide-42f97295-92c5-41e5-bf7b-2c644ab42d1c-0scb5n1v"
+        },
+        {
+          "provider": "claude",
+          "case_id": "moved-guide",
+          "condition": "finalist",
+          "repetition": 3,
+          "status": "proposed new",
+          "order": 102
+        }
+      ]
+    },
+    {
+      "id": "claude-initiating-local",
+      "provider": "claude",
+      "case_ids": [
+        "initiating-change",
+        "local-change"
+      ],
+      "output_count": 22,
+      "functional_factors": 66,
+      "observations": [
+        {
+          "provider": "claude",
+          "case_id": "initiating-change",
+          "condition": "original",
+          "repetition": 1,
+          "status": "retained",
+          "run_id": "20261026T140954711Z-ssr-fresh-baseline-claude-initiating-change-76018b57-f195-4dbf-b4b7-fbdc4d84b06a-stxp0q_m"
+        },
+        {
+          "provider": "claude",
+          "case_id": "initiating-change",
+          "condition": "original",
+          "repetition": 2,
+          "status": "retained",
+          "run_id": "20261026T144604004Z-ssr-fresh-baseline-claude-initiating-change-57d57b6e-3c98-438e-8315-e688adf36a65-ht9yzxgt"
+        },
+        {
+          "provider": "claude",
+          "case_id": "initiating-change",
+          "condition": "original",
+          "repetition": 3,
+          "status": "retained",
+          "run_id": "20261026T151431129Z-ssr-fresh-baseline-claude-initiating-change-3c7e4f2c-8af5-4423-910b-db05a116f204-d4zzzylp"
+        },
+        {
+          "provider": "claude",
+          "case_id": "initiating-change",
+          "condition": "original",
+          "repetition": 4,
+          "status": "retained",
+          "run_id": "20261026T154039670Z-ssr-fresh-baseline-claude-initiating-change-12316756-3c3c-4aa3-9ead-36e703708698-g32nx_jz"
+        },
+        {
+          "provider": "claude",
+          "case_id": "initiating-change",
+          "condition": "original",
+          "repetition": 5,
+          "status": "retained",
+          "run_id": "20261026T161553232Z-ssr-fresh-baseline-claude-initiating-change-56f75d7a-28d0-44e7-9e1b-3d0090855e8b-o3h6qn0l"
+        },
+        {
+          "provider": "claude",
+          "case_id": "initiating-change",
+          "condition": "candidate",
+          "repetition": 1,
+          "status": "proposed new",
+          "order": 11
+        },
+        {
+          "provider": "claude",
+          "case_id": "initiating-change",
+          "condition": "candidate",
+          "repetition": 2,
+          "status": "proposed new",
+          "order": 45
+        },
+        {
+          "provider": "claude",
+          "case_id": "initiating-change",
+          "condition": "candidate",
+          "repetition": 3,
+          "status": "proposed new",
+          "order": 84
+        },
+        {
+          "provider": "claude",
+          "case_id": "initiating-change",
+          "condition": "finalist",
+          "repetition": 1,
+          "status": "retained",
+          "run_id": "20261024T060228842Z-ssr-compact-regression-initiating-change-8497abc5-1121-4628-af3f-03eb3a38bb0e-5waqy2no"
+        },
+        {
+          "provider": "claude",
+          "case_id": "initiating-change",
+          "condition": "finalist",
+          "repetition": 2,
+          "status": "retained",
+          "run_id": "20261024T061519400Z-ssr-compact-regression-initiating-change-16730605-9728-478a-a16e-3546bc7231ca-cj1pgbzp"
+        },
+        {
+          "provider": "claude",
+          "case_id": "initiating-change",
+          "condition": "finalist",
+          "repetition": 3,
+          "status": "proposed new",
+          "order": 85
+        },
+        {
+          "provider": "claude",
+          "case_id": "local-change",
+          "condition": "original",
+          "repetition": 1,
+          "status": "retained",
+          "run_id": "20261026T141544649Z-ssr-fresh-baseline-claude-local-change-1446339f-f220-4b14-8081-7ef1898edc80-_axsjchk"
+        },
+        {
+          "provider": "claude",
+          "case_id": "local-change",
+          "condition": "original",
+          "repetition": 2,
+          "status": "retained",
+          "run_id": "20261026T144838218Z-ssr-fresh-baseline-claude-local-change-75fe23e2-ab3c-4f3c-8a08-c8a822fa6c91-k7phrp5n"
+        },
+        {
+          "provider": "claude",
+          "case_id": "local-change",
+          "condition": "original",
+          "repetition": 3,
+          "status": "retained",
+          "run_id": "20261026T151757646Z-ssr-fresh-baseline-claude-local-change-4c599697-2687-401b-93eb-3e0fbc6a975a-79v3yqvp"
+        },
+        {
+          "provider": "claude",
+          "case_id": "local-change",
+          "condition": "original",
+          "repetition": 4,
+          "status": "retained",
+          "run_id": "20261026T154411925Z-ssr-fresh-baseline-claude-local-change-4e61e909-5fe9-4f58-95a7-336646bc7e04-_d0w7c_0"
+        },
+        {
+          "provider": "claude",
+          "case_id": "local-change",
+          "condition": "original",
+          "repetition": 5,
+          "status": "retained",
+          "run_id": "20261026T161848074Z-ssr-fresh-baseline-claude-local-change-98477fce-360b-4ca2-849d-103f6e71019b-k68ok8r7"
+        },
+        {
+          "provider": "claude",
+          "case_id": "local-change",
+          "condition": "candidate",
+          "repetition": 1,
+          "status": "proposed new",
+          "order": 24
+        },
+        {
+          "provider": "claude",
+          "case_id": "local-change",
+          "condition": "candidate",
+          "repetition": 2,
+          "status": "proposed new",
+          "order": 58
+        },
+        {
+          "provider": "claude",
+          "case_id": "local-change",
+          "condition": "candidate",
+          "repetition": 3,
+          "status": "proposed new",
+          "order": 100
+        },
+        {
+          "provider": "claude",
+          "case_id": "local-change",
+          "condition": "finalist",
+          "repetition": 1,
+          "status": "retained",
+          "run_id": "20261024T061345945Z-ssr-compact-regression-local-change-842fbb60-cf1b-4deb-acd6-a70e7e8f48f0-o3r593d9"
+        },
+        {
+          "provider": "claude",
+          "case_id": "local-change",
+          "condition": "finalist",
+          "repetition": 2,
+          "status": "retained",
+          "run_id": "20261024T061843823Z-ssr-compact-regression-local-change-28981bfb-f81d-4946-8626-9d3d49a747f1-7_ha8zsf"
+        },
+        {
+          "provider": "claude",
+          "case_id": "local-change",
+          "condition": "finalist",
+          "repetition": 3,
+          "status": "proposed new",
+          "order": 101
+        }
+      ]
+    },
+    {
+      "id": "claude-native-positive",
+      "provider": "claude",
+      "case_ids": [
+        "invocation-change",
+        "invocation-review"
+      ],
+      "output_count": 22,
+      "functional_factors": 66,
+      "observations": [
+        {
+          "provider": "claude",
+          "case_id": "invocation-change",
+          "condition": "original",
+          "repetition": 1,
+          "status": "retained",
+          "run_id": "20261026T134445582Z-ssr-fresh-baseline-claude-invocation-change-e3f1a72f-82cc-4867-8897-dbf8efaec7e6-93hxbuqm"
+        },
+        {
+          "provider": "claude",
+          "case_id": "invocation-change",
+          "condition": "original",
+          "repetition": 2,
+          "status": "retained",
+          "run_id": "20261026T143536368Z-ssr-fresh-baseline-claude-invocation-change-e473bf8e-b768-4aac-b6bb-572b21cc3b64-xdx7kvdb"
+        },
+        {
+          "provider": "claude",
+          "case_id": "invocation-change",
+          "condition": "original",
+          "repetition": 3,
+          "status": "retained",
+          "run_id": "20261026T150258329Z-ssr-fresh-baseline-claude-invocation-change-8613798d-37dc-47f8-8e9f-7e69da84f23e-7mkn53gb"
+        },
+        {
+          "provider": "claude",
+          "case_id": "invocation-change",
+          "condition": "original",
+          "repetition": 4,
+          "status": "retained",
+          "run_id": "20261026T152833925Z-ssr-fresh-baseline-claude-invocation-change-e19ab63b-b264-473a-ac4e-6e82e6de8d7e-g_2crf12"
+        },
+        {
+          "provider": "claude",
+          "case_id": "invocation-change",
+          "condition": "original",
+          "repetition": 5,
+          "status": "retained",
+          "run_id": "20261026T160116860Z-ssr-fresh-baseline-claude-invocation-change-83c21cc6-9114-4418-833c-d400fbd63fd6-xpgg4yv8"
+        },
+        {
+          "provider": "claude",
+          "case_id": "invocation-change",
+          "condition": "candidate",
+          "repetition": 1,
+          "status": "proposed new",
+          "order": 12
+        },
+        {
+          "provider": "claude",
+          "case_id": "invocation-change",
+          "condition": "candidate",
+          "repetition": 2,
+          "status": "proposed new",
+          "order": 50
+        },
+        {
+          "provider": "claude",
+          "case_id": "invocation-change",
+          "condition": "candidate",
+          "repetition": 3,
+          "status": "proposed new",
+          "order": 87
+        },
+        {
+          "provider": "claude",
+          "case_id": "invocation-change",
+          "condition": "finalist",
+          "repetition": 1,
+          "status": "retained",
+          "run_id": "20261024T060550211Z-ssr-compact-regression-invocation-change-1159453b-4002-4c8a-b340-4ddb44c568df-w47ho2r3"
+        },
+        {
+          "provider": "claude",
+          "case_id": "invocation-change",
+          "condition": "finalist",
+          "repetition": 2,
+          "status": "retained",
+          "run_id": "20261024T061754141Z-ssr-compact-regression-invocation-change-c51dc79a-efa5-409d-a953-4c406e11c8ef-u6hucd_f"
+        },
+        {
+          "provider": "claude",
+          "case_id": "invocation-change",
+          "condition": "finalist",
+          "repetition": 3,
+          "status": "proposed new",
+          "order": 86
+        },
+        {
+          "provider": "claude",
+          "case_id": "invocation-review",
+          "condition": "original",
+          "repetition": 1,
+          "status": "retained",
+          "run_id": "20261026T140228824Z-ssr-fresh-baseline-claude-invocation-review-c9e3a12b-a340-417f-9c08-22c7d8d8e990-hgazg1xu"
+        },
+        {
+          "provider": "claude",
+          "case_id": "invocation-review",
+          "condition": "original",
+          "repetition": 2,
+          "status": "retained",
+          "run_id": "20261026T144347185Z-ssr-fresh-baseline-claude-invocation-review-cd1c28b3-07e3-47e1-b47b-7269200637b0-obf2u_8o"
+        },
+        {
+          "provider": "claude",
+          "case_id": "invocation-review",
+          "condition": "original",
+          "repetition": 3,
+          "status": "retained",
+          "run_id": "20261026T151152899Z-ssr-fresh-baseline-claude-invocation-review-1c771284-cce6-4c17-9a76-75631a628fa9-0ugswiob"
+        },
+        {
+          "provider": "claude",
+          "case_id": "invocation-review",
+          "condition": "original",
+          "repetition": 4,
+          "status": "retained",
+          "run_id": "20261026T153612696Z-ssr-fresh-baseline-claude-invocation-review-2081e659-8d60-4324-afc0-f5ebfa0c4d22-vacmr7m9"
+        },
+        {
+          "provider": "claude",
+          "case_id": "invocation-review",
+          "condition": "original",
+          "repetition": 5,
+          "status": "retained",
+          "run_id": "20261026T161324956Z-ssr-fresh-baseline-claude-invocation-review-d05e7008-9768-48af-a8e1-420149ccdfe2-pk1a3eir"
+        },
+        {
+          "provider": "claude",
+          "case_id": "invocation-review",
+          "condition": "candidate",
+          "repetition": 1,
+          "status": "proposed new",
+          "order": 17
+        },
+        {
+          "provider": "claude",
+          "case_id": "invocation-review",
+          "condition": "candidate",
+          "repetition": 2,
+          "status": "proposed new",
+          "order": 51
+        },
+        {
+          "provider": "claude",
+          "case_id": "invocation-review",
+          "condition": "candidate",
+          "repetition": 3,
+          "status": "proposed new",
+          "order": 92
+        },
+        {
+          "provider": "claude",
+          "case_id": "invocation-review",
+          "condition": "finalist",
+          "repetition": 1,
+          "status": "retained",
+          "run_id": "20261024T060904689Z-ssr-compact-regression-invocation-review-2943fb8b-a983-430c-b3be-0e4d6ac38547-pq7u071m"
+        },
+        {
+          "provider": "claude",
+          "case_id": "invocation-review",
+          "condition": "finalist",
+          "repetition": 2,
+          "status": "retained",
+          "run_id": "20261024T061612874Z-ssr-compact-regression-invocation-review-3e1c6c38-11ca-4662-b139-99cfda44ec50-5_jh10a3"
+        },
+        {
+          "provider": "claude",
+          "case_id": "invocation-review",
+          "condition": "finalist",
+          "repetition": 3,
+          "status": "proposed new",
+          "order": 93
+        }
+      ]
+    }
+  ],
+  "outputs": 180,
+  "functional_factors": 540,
+  "trace_only_cases": [
+    "large-sweep-account",
+    "invocation-unrelated",
+    "invocation-verification"
+  ]
+}

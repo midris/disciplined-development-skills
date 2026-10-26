@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `sweeping-stale-references`
 Status: fresh original baseline complete under the CW testing model; candidate screens and skill adoption remain pending.
-Current action: select a bounded three-repetition comparison of both unchanged rewrites against the established original baseline, including exact reuse, review scope and any required allocation. Candidate screens, edits, retries and adoption remain unallocated. The [staged design](../../plans/specs/2026-10-26-ssr-staged-baseline-comparison.md) owns comparison intent; [CW accounting](../concise-writing/protocol.md#storage-and-accounting) owns combined spending.
+Current action: owner selection of the prepared [candidate-screen-01 proposal](#proposal-candidate-screen-01): 115 subjects and ten comparison reviews, with verified reuse and early failure checkpoints. Candidate screens, edits, retries and adoption remain unallocated. The [staged design](../../plans/specs/2026-10-26-ssr-staged-baseline-comparison.md#candidate-screen-candidate-screen-01) owns comparison intent; [CW accounting](../concise-writing/protocol.md#storage-and-accounting) owns combined spending.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](runs/core-baseline-01/core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -262,6 +262,20 @@ SSR collection used config schema 0.2 and result schema 0.4; retained bundles ke
 Control contribution claims require evidence that omitted guidance was not loaded. Record limits on observed isolation rather than claiming exhaustive host-wide exclusion.
 
 Pre-baseline development is closed at two pairs. Do not reopen it for a new facet; a named readiness defect requires a separately authorized diagnostic exception.
+
+### Proposal: candidate-screen-01
+
+Status: prepared for owner selection; not dispatch authority.
+The owner authorized proposal preparation after fresh-baseline-01; no new model run follows until this concrete scope is selected.
+Proposed scope: all eleven cases on current Codex/Opus for both unchanged rewrites, initially three observations per cell, retaining five completed Opus semantic observations per version. Original remains the fixed 110-observation baseline.
+New calls: 63 comprehensive subjects and 52 compact subjects, plus ten Opus-medium complete-output comparison reviews. Reuse 21 matching candidate observations without charging again; all 131 retained original/candidate inventories and scored identities verified offline.
+Runtime: unchanged gpt-5.6-sol low / Codex 0.163.0 and claude-opus-5-5 low / Claude 2.1.308, workspace-write, 900 seconds; reviewers use qualified read-only native Read/Glob/Grep, skills disabled, Opus medium, 900 seconds.
+The [design](../../plans/specs/2026-10-26-ssr-staged-baseline-comparison.md#candidate-screen-candidate-screen-01) owns the exact matrix, review rationale, 350–440-minute remaining forecast and checkpoint policy. The [preparation](runs/candidate-screen-01/preparation/README.md) links 44 configurations, unchanged criterion blocks with prospective applicability, verified reuse, ordered slots and fixed review instructions.
+Pressure, Shiv and initiating-change run first in each repetition round; assess each stopped attempt before continuing. A substantive failure pauses that candidate for owner retain/drop/repair direction; reporting-only defects remain non-blocking. Native misses remain separate selection outcomes, without replacements or body-success claims. Capture/runtime/cleanup/retention or uncertain-charge problems stop all dispatch.
+Review scope: ten packets cover all 180 repair outputs and 540 functional judgments across original/comprehensive/compact. Accounting and both non-use cases remain active-session judgments outside functional packets. Retain independent first-pass judgments before prior access, then audit and reconcile separately under the cross-model policy above.
+Proposed ceilings: 888 subjects / 68 evaluators / unchanged 4 authoring / 4 retries = 964; current accepted 773/58 ceilings remain unchanged. No retry, authoring, adoption or automatic five-repetition continuation is allocated. Preserve unattempted slots if stopped; no pool transfers.
+After approval, freeze source/configuration/card/policy/runtime identities and provider-specific manifests, record immutable invocation authority and pass collection readiness before dispatch. Actual packet inputs/configurations freeze after complete subject retention/scoring. Offline parity is not collection readiness or model behavior evidence.
+Proposed raw storage: /Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/, with verified whole-bundle inventories and the existing single-host recovery arrangement; raw evidence and scratch controllers remain outside Git.
 
 ### Batch: fresh-baseline-codex-01
 

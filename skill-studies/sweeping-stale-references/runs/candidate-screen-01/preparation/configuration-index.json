@@ -1,0 +1,574 @@
+[
+  {
+    "provider": "codex",
+    "case_id": "pressure-repair",
+    "condition": "candidate",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-pressure-repair-candidate.json",
+      "sha256": "e97d0643777fff590bdf700963679343f2748945e9c7445811047282f463eeab"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-pressure-repair.json",
+      "sha256": "9fdf25a8525bd17947ed2fd68e73e79d552cf0c1007840a0dad597897dca145a"
+    }
+  },
+  {
+    "provider": "codex",
+    "case_id": "pressure-repair",
+    "condition": "finalist",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-pressure-repair-finalist.json",
+      "sha256": "792d1b810e2ccdba33c854d734debae63df9a23eccaff96b3b3b9ab7ff996aeb"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-pressure-repair.json",
+      "sha256": "9fdf25a8525bd17947ed2fd68e73e79d552cf0c1007840a0dad597897dca145a"
+    }
+  },
+  {
+    "provider": "codex",
+    "case_id": "discovery-shiv",
+    "condition": "candidate",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-discovery-shiv-candidate.json",
+      "sha256": "5573e76c2f1c207d458081d680de4328b5560bb3fb18c413c3df12061bb1b9cb"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-discovery-shiv.json",
+      "sha256": "e8766cb4df0342115cce19c5a739b84607a68abba4958bcb479ff0f738e05096"
+    }
+  },
+  {
+    "provider": "codex",
+    "case_id": "discovery-shiv",
+    "condition": "finalist",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-discovery-shiv-finalist.json",
+      "sha256": "162c1a7ea733687cd9f2b85c531675d7bfd29a5a35f74f94a07e87788f2dcbab"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-discovery-shiv.json",
+      "sha256": "e8766cb4df0342115cce19c5a739b84607a68abba4958bcb479ff0f738e05096"
+    }
+  },
+  {
+    "provider": "codex",
+    "case_id": "initiating-change",
+    "condition": "candidate",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-initiating-change-candidate.json",
+      "sha256": "eb1905c538febd9bcca3d3dcf2107d232f89f849d0eab3d81eaeda6ac5a3cf8b"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-initiating-change.json",
+      "sha256": "879dbec478ce67184f8ce2e021e62d7d396ea20ca7b13a19e0c27b844b85456a"
+    }
+  },
+  {
+    "provider": "codex",
+    "case_id": "initiating-change",
+    "condition": "finalist",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-initiating-change-finalist.json",
+      "sha256": "f1aaafa1e9e9d9cd7d0c62538e0a9a277dc3984ee2c4a3a471b7978e3216be7a"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-initiating-change.json",
+      "sha256": "879dbec478ce67184f8ce2e021e62d7d396ea20ca7b13a19e0c27b844b85456a"
+    }
+  },
+  {
+    "provider": "codex",
+    "case_id": "invocation-change",
+    "condition": "candidate",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-change-candidate.json",
+      "sha256": "ee27da7414e1340200e9855e0a8f4085a124301d8a69cab9d1c6897053217130"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-invocation-change.json",
+      "sha256": "820e1364ea2fbd3574ac8c8a54a972dd6648371a96115b0dd31f39b1f06f96ac"
+    }
+  },
+  {
+    "provider": "codex",
+    "case_id": "invocation-change",
+    "condition": "finalist",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-change-finalist.json",
+      "sha256": "9523815296c150cb41cf30ec353bbf0d5499d79252ed7e39318ce40d25bde8f6"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-invocation-change.json",
+      "sha256": "820e1364ea2fbd3574ac8c8a54a972dd6648371a96115b0dd31f39b1f06f96ac"
+    }
+  },
+  {
+    "provider": "codex",
+    "case_id": "invocation-review",
+    "condition": "candidate",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-review-candidate.json",
+      "sha256": "852704fb47073ebc714f5dec912c55fbeacff754ae3540c91fe0c605938c9b96"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-invocation-review.json",
+      "sha256": "ce40d6d164ae16e43c80599c5a8db9aa5ea4700d9591708ed72a91b9328c454c"
+    }
+  },
+  {
+    "provider": "codex",
+    "case_id": "invocation-review",
+    "condition": "finalist",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-review-finalist.json",
+      "sha256": "d3ae13baae21ba0bb9ef234f98f8922f467521f13ea73fa7452012191f5693ec"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-invocation-review.json",
+      "sha256": "ce40d6d164ae16e43c80599c5a8db9aa5ea4700d9591708ed72a91b9328c454c"
+    }
+  },
+  {
+    "provider": "codex",
+    "case_id": "invocation-verification",
+    "condition": "candidate",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-verification-candidate.json",
+      "sha256": "758d4a8b6cff49ed5e1fcebd8cc3af10ab84f2b496ab666e9bd2fcffc659e695"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-invocation-verification.json",
+      "sha256": "d63b7f8fceacccb31efb433250fae44e344a466f184c54704734d69bdcfb903d"
+    }
+  },
+  {
+    "provider": "codex",
+    "case_id": "invocation-verification",
+    "condition": "finalist",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-verification-finalist.json",
+      "sha256": "650842e02801ab2440c2fb3d36560e2ba1517fd5ea61f3140d9093a7e17dc1f3"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-invocation-verification.json",
+      "sha256": "d63b7f8fceacccb31efb433250fae44e344a466f184c54704734d69bdcfb903d"
+    }
+  },
+  {
+    "provider": "codex",
+    "case_id": "local-change",
+    "condition": "candidate",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-local-change-candidate.json",
+      "sha256": "3c36cde01aacb740a51880c1cacf35e9d7857caf2ce0cc5a365b053f27fc5be0"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-local-change.json",
+      "sha256": "e65204b0185eaae19afeb571a72332760e929f9d5d51322242249f250226d3d2"
+    }
+  },
+  {
+    "provider": "codex",
+    "case_id": "local-change",
+    "condition": "finalist",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-local-change-finalist.json",
+      "sha256": "000de8675f4135a6ab536a9f5f6cacb89992ebf48f2ada6335151ac617c44f58"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-local-change.json",
+      "sha256": "e65204b0185eaae19afeb571a72332760e929f9d5d51322242249f250226d3d2"
+    }
+  },
+  {
+    "provider": "codex",
+    "case_id": "moved-guide",
+    "condition": "candidate",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-moved-guide-candidate.json",
+      "sha256": "a0e872de2cc55abc836753cc14e83d97f8427c3a8dbe9880218b79f3ad80c572"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-moved-guide.json",
+      "sha256": "c5e37dd1ce79a070103ebe6a88b8ccb431a5d9f9a4e86889fabcd94db5250d4f"
+    }
+  },
+  {
+    "provider": "codex",
+    "case_id": "moved-guide",
+    "condition": "finalist",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-moved-guide-finalist.json",
+      "sha256": "500a9f7173dcc3e34489e21e2f5b68bc66dcd1ee29c262fc6906e5c1df026766"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-moved-guide.json",
+      "sha256": "c5e37dd1ce79a070103ebe6a88b8ccb431a5d9f9a4e86889fabcd94db5250d4f"
+    }
+  },
+  {
+    "provider": "codex",
+    "case_id": "semantic-delivery",
+    "condition": "candidate",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-semantic-delivery-candidate.json",
+      "sha256": "e51fa283e958beba6281ad9914bb454ecf3ea3e74a4bb149cc1a62ef77d3f032"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-semantic-delivery.json",
+      "sha256": "956d0b5c6778eafaef524fbcbbcd90233987c88be4d79c6f94a4c0f4e064d62c"
+    }
+  },
+  {
+    "provider": "codex",
+    "case_id": "semantic-delivery",
+    "condition": "finalist",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-semantic-delivery-finalist.json",
+      "sha256": "3623659c5bfdb0ad35e9b648ce987bbcb93c1b60059fd60d585cbd563f89cbb5"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-semantic-delivery.json",
+      "sha256": "956d0b5c6778eafaef524fbcbbcd90233987c88be4d79c6f94a4c0f4e064d62c"
+    }
+  },
+  {
+    "provider": "codex",
+    "case_id": "large-sweep-account",
+    "condition": "candidate",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-large-sweep-account-candidate.json",
+      "sha256": "974a2d499a6cf916ac663991bb8bb1d78cdb3d79aa9559acf8286be937dbdf25"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-large-sweep-account.json",
+      "sha256": "8287112c180089031a8d249cb7a62159d9df2b8ceae8e46cbb8739cb83d4dcca"
+    }
+  },
+  {
+    "provider": "codex",
+    "case_id": "large-sweep-account",
+    "condition": "finalist",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-large-sweep-account-finalist.json",
+      "sha256": "58bf1602b705a8bdca1f6da03074216d6a16e3313a8909b7c23b8bb1dbb543f0"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-large-sweep-account.json",
+      "sha256": "8287112c180089031a8d249cb7a62159d9df2b8ceae8e46cbb8739cb83d4dcca"
+    }
+  },
+  {
+    "provider": "codex",
+    "case_id": "invocation-unrelated",
+    "condition": "candidate",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-unrelated-candidate.json",
+      "sha256": "a23282a695781169e2504c1edb37c232dfbd1bc819bafa15b0e1b36fa9043a17"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-invocation-unrelated.json",
+      "sha256": "a440c172a27dd5a8ae1fcda3c0612da14ba68364797b2eb41ca58c5df7ed50c4"
+    }
+  },
+  {
+    "provider": "codex",
+    "case_id": "invocation-unrelated",
+    "condition": "finalist",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-unrelated-finalist.json",
+      "sha256": "6a798bed8debe321010cec3487f4382f6ef2ab99ebcf96eef6af6f57c8b022dd"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-invocation-unrelated.json",
+      "sha256": "a440c172a27dd5a8ae1fcda3c0612da14ba68364797b2eb41ca58c5df7ed50c4"
+    }
+  },
+  {
+    "provider": "claude",
+    "case_id": "pressure-repair",
+    "condition": "candidate",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-pressure-repair-candidate.json",
+      "sha256": "7e694e826d1b27b33a05838be7d96315fbac0344383d656e87032fceb0a8fb84"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-pressure-repair.json",
+      "sha256": "681b8af75915443aa1f13932bd2e4379f51852a9cc6c5ce7d3e41d3500a979ac"
+    }
+  },
+  {
+    "provider": "claude",
+    "case_id": "pressure-repair",
+    "condition": "finalist",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-pressure-repair-finalist.json",
+      "sha256": "d3857b73e0f1c6a1a331ba19ce4739bbff0e4b9755668bf85cba00310b82778f"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-pressure-repair.json",
+      "sha256": "681b8af75915443aa1f13932bd2e4379f51852a9cc6c5ce7d3e41d3500a979ac"
+    }
+  },
+  {
+    "provider": "claude",
+    "case_id": "discovery-shiv",
+    "condition": "candidate",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-discovery-shiv-candidate.json",
+      "sha256": "97d403f722e79268e9d9845c178fb8f6c8f09519f38644328153d2a748c1a66a"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-discovery-shiv.json",
+      "sha256": "4781cfa74ce582633cb76d92d1a2dcd9e34091f0d020a1cd9187bd64ce75d3f2"
+    }
+  },
+  {
+    "provider": "claude",
+    "case_id": "discovery-shiv",
+    "condition": "finalist",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-discovery-shiv-finalist.json",
+      "sha256": "fbf3c1f692a8f82172d21b17c370389fe7fbc45e66fc6731df475d683dee4e84"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-discovery-shiv.json",
+      "sha256": "4781cfa74ce582633cb76d92d1a2dcd9e34091f0d020a1cd9187bd64ce75d3f2"
+    }
+  },
+  {
+    "provider": "claude",
+    "case_id": "initiating-change",
+    "condition": "candidate",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-initiating-change-candidate.json",
+      "sha256": "c2ef35279f7ff2dab878b4ddc0df20833547a7c7e70e4923cb8d7f8bba022ca1"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-initiating-change.json",
+      "sha256": "77e3fc7c8ed076aff46347ce24dead11b3870db7dfba35f431324eaf4c0b2a16"
+    }
+  },
+  {
+    "provider": "claude",
+    "case_id": "initiating-change",
+    "condition": "finalist",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-initiating-change-finalist.json",
+      "sha256": "26174f64f7d98d5973eaff11e3cddc49d2ac0a84c31e3bdf915fc9e425c4ecbb"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-initiating-change.json",
+      "sha256": "77e3fc7c8ed076aff46347ce24dead11b3870db7dfba35f431324eaf4c0b2a16"
+    }
+  },
+  {
+    "provider": "claude",
+    "case_id": "invocation-change",
+    "condition": "candidate",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-change-candidate.json",
+      "sha256": "ed40738f4e013065b3209a0d768e61a3c64a5959012382a3e8c075e9bd9e1d12"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-invocation-change.json",
+      "sha256": "b9c2f60f9d7ec9510b0f766b20818983ec1e8026dea6e824acc1df9938baa04c"
+    }
+  },
+  {
+    "provider": "claude",
+    "case_id": "invocation-change",
+    "condition": "finalist",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-change-finalist.json",
+      "sha256": "9388e79dca3aa7954966d44f8e70dda063040f20a2e334bf1b71ccb404e1bc2e"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-invocation-change.json",
+      "sha256": "b9c2f60f9d7ec9510b0f766b20818983ec1e8026dea6e824acc1df9938baa04c"
+    }
+  },
+  {
+    "provider": "claude",
+    "case_id": "invocation-review",
+    "condition": "candidate",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-review-candidate.json",
+      "sha256": "b6cb2890afa2c3ea7085511761962095f5355407c62ebb8ef46aab486d04e9fc"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-invocation-review.json",
+      "sha256": "f26c5f4b82cf395968f8b3f2a141274c312e7f89008d08297222f08da12117c9"
+    }
+  },
+  {
+    "provider": "claude",
+    "case_id": "invocation-review",
+    "condition": "finalist",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-review-finalist.json",
+      "sha256": "47b560a91ac8a97acff61c0ce39d965b0aad346c85c86fdaf1642c35470341c5"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-invocation-review.json",
+      "sha256": "f26c5f4b82cf395968f8b3f2a141274c312e7f89008d08297222f08da12117c9"
+    }
+  },
+  {
+    "provider": "claude",
+    "case_id": "invocation-verification",
+    "condition": "candidate",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-verification-candidate.json",
+      "sha256": "82b3f89caa7aae336e11135662bc72a46beb411d395d6ec8bd9b0c9b419a2c92"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-invocation-verification.json",
+      "sha256": "c0b75058972c5d56053e786002b1b1b4a747de2cbccf0e192b94982fb3897663"
+    }
+  },
+  {
+    "provider": "claude",
+    "case_id": "invocation-verification",
+    "condition": "finalist",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-verification-finalist.json",
+      "sha256": "2cc52e23a5874360113101c3348f9826577a7ef38050bf10e71b27085ad8c9f8"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-invocation-verification.json",
+      "sha256": "c0b75058972c5d56053e786002b1b1b4a747de2cbccf0e192b94982fb3897663"
+    }
+  },
+  {
+    "provider": "claude",
+    "case_id": "local-change",
+    "condition": "candidate",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-local-change-candidate.json",
+      "sha256": "a9a161d66456b390ebd653f08e02cf2250947b6e3bd70167e1b759536e018f81"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-local-change.json",
+      "sha256": "a9828604de9afab61bac8dc0f64b9d8fd1a6acbbae5c95b4729f293ea53d9421"
+    }
+  },
+  {
+    "provider": "claude",
+    "case_id": "local-change",
+    "condition": "finalist",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-local-change-finalist.json",
+      "sha256": "912126e79fee717dd812dcc438111571ce240bd88faf2b86ba977f1ff9e57a4c"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-local-change.json",
+      "sha256": "a9828604de9afab61bac8dc0f64b9d8fd1a6acbbae5c95b4729f293ea53d9421"
+    }
+  },
+  {
+    "provider": "claude",
+    "case_id": "moved-guide",
+    "condition": "candidate",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-moved-guide-candidate.json",
+      "sha256": "69ca8cda21491d15a23248656b135a28be8579d16486020e43cc2ee6720c8db4"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-moved-guide.json",
+      "sha256": "373405839736dfa5133b4be34e84bf2cef696c408a1cc3e6bcbbf11b35751ea0"
+    }
+  },
+  {
+    "provider": "claude",
+    "case_id": "moved-guide",
+    "condition": "finalist",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-moved-guide-finalist.json",
+      "sha256": "0af1fe3dab1617679607cd47e258c301b050430c119b6f5f6dd3768bf9300663"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-moved-guide.json",
+      "sha256": "373405839736dfa5133b4be34e84bf2cef696c408a1cc3e6bcbbf11b35751ea0"
+    }
+  },
+  {
+    "provider": "claude",
+    "case_id": "semantic-delivery",
+    "condition": "candidate",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-semantic-delivery-candidate.json",
+      "sha256": "5e93ff26bdd747cbc81ce42648637f4dccbd659b03eec9c75dd181587b6da3bf"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-semantic-delivery.json",
+      "sha256": "1185424c39d1cbb4a571defce82c74f5905b161ddda45fd2602eff64df2d23f8"
+    }
+  },
+  {
+    "provider": "claude",
+    "case_id": "semantic-delivery",
+    "condition": "finalist",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-semantic-delivery-finalist.json",
+      "sha256": "9972273b9f9d1cefce35b083505b39f42dfb31310555bffd9416fb83fc7fcc40"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-semantic-delivery.json",
+      "sha256": "1185424c39d1cbb4a571defce82c74f5905b161ddda45fd2602eff64df2d23f8"
+    }
+  },
+  {
+    "provider": "claude",
+    "case_id": "large-sweep-account",
+    "condition": "candidate",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-large-sweep-account-candidate.json",
+      "sha256": "f9c548083844beeeca5f9775b6365b63f27a5224921e3d264ead4086edd84b9b"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-large-sweep-account.json",
+      "sha256": "612e30a109426167b5fe0923b005b3020e4f3398be2e36950f2c13c3e72a44d8"
+    }
+  },
+  {
+    "provider": "claude",
+    "case_id": "large-sweep-account",
+    "condition": "finalist",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-large-sweep-account-finalist.json",
+      "sha256": "e52bc76264812b28381d2056a4eb98a5cdeaaed713e75f2a690f1abedd35984e"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-large-sweep-account.json",
+      "sha256": "612e30a109426167b5fe0923b005b3020e4f3398be2e36950f2c13c3e72a44d8"
+    }
+  },
+  {
+    "provider": "claude",
+    "case_id": "invocation-unrelated",
+    "condition": "candidate",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-unrelated-candidate.json",
+      "sha256": "7e67faff25703946b11db4dba47e3b7fc60e54ef7e51976c1d6cb7c604e29d22"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-invocation-unrelated.json",
+      "sha256": "c30a1c825493762e91458f5ad899dedb2356bfeb741d92eb7d8c7424d8b33ab8"
+    }
+  },
+  {
+    "provider": "claude",
+    "case_id": "invocation-unrelated",
+    "condition": "finalist",
+    "configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-unrelated-finalist.json",
+      "sha256": "0fe53ab201ee093e232c38e921cdeb0cbc0166c2d8ca56373785ce5baee9fdb9"
+    },
+    "baseline_configuration": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-invocation-unrelated.json",
+      "sha256": "c30a1c825493762e91458f5ad899dedb2356bfeb741d92eb7d8c7424d8b33ab8"
+    }
+  }
+]

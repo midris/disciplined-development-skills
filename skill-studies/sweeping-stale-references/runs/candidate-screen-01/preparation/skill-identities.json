@@ -1,0 +1,23 @@
+{
+  "original": {
+    "path": "skill-studies/sweeping-stale-references/cases/skill-original/SKILL.md",
+    "sha256": "d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157",
+    "words": 1182,
+    "characters": 7623,
+    "bytes": 7689
+  },
+  "candidate": {
+    "path": "skill-studies/sweeping-stale-references/cases/skill-candidate-comprehensive/SKILL.md",
+    "sha256": "15992341f7ab2fb1e4d8a775092199d7d4e6a9de1167895dbe5a805aeafbd38c",
+    "words": 923,
+    "characters": 6123,
+    "bytes": 6189
+  },
+  "finalist": {
+    "path": "skill-studies/sweeping-stale-references/drafts/compact-rewrite/finalist/SKILL.md",
+    "sha256": "f1f297f213855f9b53835dd084b2be6d3d9134cadab47babea08cbdaad9a205e",
+    "words": 814,
+    "characters": 5321,
+    "bytes": 5355
+  }
+}

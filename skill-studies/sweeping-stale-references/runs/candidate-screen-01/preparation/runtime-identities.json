@@ -1,0 +1,33 @@
+{
+  "status": "unchanged binaries/wrapper and retained six-check qualification verified offline; check again at dispatch",
+  "source": {
+    "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/runtime-identities.json",
+    "sha256": "4d1b7a9deacc099357ff7e132b32a26e0b6ffc4284850b76390206a467ac73b3"
+  },
+  "qualified": {
+    "codex": {
+      "path": "/opt/homebrew/Caskroom/codex/0.163.0/bin/codex",
+      "sha256": "8813367285524ac798dd96d1b071aea30d58708c7226fd236cd275cf1cfdee31",
+      "version": "codex-cli 0.163.0"
+    },
+    "claude": {
+      "path": "/opt/homebrew/Caskroom/claude-code@latest/2.1.308/claude",
+      "sha256": "ca923c86ac84b30574a82331a05b6e066c27477a926ceaffe46a845a33e4dd37",
+      "version": "2.1.308 (Claude Code)"
+    },
+    "python": {
+      "path": "/opt/homebrew/Cellar/python@3.14/3.14.9/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+      "sha256": "eef18fb5631f0054c2706a24f7f75fd716c9dc3c9a3b0f261f2f87b6385ae2af",
+      "version": "Python 3.14.9"
+    },
+    "git": {
+      "path": "/opt/homebrew/Cellar/git/2.56.0_1/bin/git",
+      "sha256": "40163333061f7223ecb604ed0f12988cfc8096d57ca8b1db006d410d4aeb700e",
+      "version": "git version 2.56.0"
+    }
+  },
+  "runtime_setup": {
+    "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/runtime_setup.py",
+    "sha256": "91c8a2a5fccaa22affc662fe8824a2502be8e373e363520f21033a25838afdb2"
+  }
+}

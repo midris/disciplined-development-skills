@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "model_calls": 0,
+  "collection_readiness": "not claimed: owner allocation, committed freeze/authority and readiness remain pending",
+  "checks": {
+    "matched_configurations": 44,
+    "verified_retained_subjects": 131,
+    "exact_candidate_reuse": 21,
+    "unchanged_criterion_blocks": 11,
+    "reused_provider_free_qualification_checks": 6
+  },
+  "new_subjects": 115,
+  "new_by_provider_condition": {
+    "codex/candidate": 33,
+    "codex/finalist": 33,
+    "claude/candidate": 30,
+    "claude/finalist": 19
+  },
+  "total_observations": 246,
+  "existing_original": 110,
+  "existing_candidate": 5,
+  "existing_finalist": 16,
+  "review_calls_proposed": 10,
+  "repair_outputs": 180,
+  "functional_judgments": 540,
+  "trace_only_observations": 66,
+  "user_fixture_preserved": true,
+  "skills_unchanged": true,
+  "verification_commands": [
+    {
+      "command": "skill-validation/runner/.venv/bin/python /private/tmp/ssr-candidate-audit.py",
+      "result": "44 loader/parity checks; 131 retained inventory/capture/score checks; 21 exact candidate reuse checks; eleven unchanged criterion blocks; matrix/packet/runtime/body/user-byte checks passed"
+    },
+    {
+      "command": "skilltest docs check for every preparation/criteria/*.md",
+      "result": "eleven passed"
+    },
+    {
+      "command": "runner virtual-environment Python -m pytest -q in skills/disciplined-development/hooks",
+      "result": "263 passed, 3 skipped"
+    },
+    {
+      "command": "skill-validation/runner/.venv/bin/python -m pytest skill-studies/formats/test_execution_result.py -q",
+      "result": "9 passed"
+    },
+    {
+      "command": "active Markdown target/anchor audit and effort-table reconciliation",
+      "result": "424 targets/anchors resolve; effort sum 4170"
+    },
+    {
+      "command": "git diff --check",
+      "result": "clean"
+    }
+  ],
+  "review": "Active-session builder adversarial review; see review.md. No fresh model dispatch."
+}

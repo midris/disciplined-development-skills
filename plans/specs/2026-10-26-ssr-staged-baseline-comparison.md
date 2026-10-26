@@ -1,9 +1,8 @@
 # SSR: original baseline and staged candidate comparison
 
-Status: original baseline complete; candidate screen budgets remain pending.
+Status: original baseline complete; candidate screen prepared, allocation pending.
 The [framework](2026-09-11-model-driven-skill-testing-framework.md#cw-testing-model) governs the method; the [active plan](../2026-09-11-model-driven-skill-testing.md) owns progress and the [SSR protocol](../../skill-studies/sweeping-stale-references/protocol.md) owns dispatch authority.
 This replaces the [55-subject completion proposal](2026-10-24-ssr-cw-aligned-validation.md); its draft configuration set does not implement this design.
-Owner direction, 2026-10-26: “ok, let's create fresh baselines then” selects the current Codex/Opus baseline option below: 105 new subjects plus five matching retained Opus semantic originals, followed by eight bounded artifact reviews.
 No candidate call, skill edit, retry or adoption is authorized.
 
 ## Settled comparison
@@ -26,53 +25,121 @@ An unchanged promising candidate can receive two additional attempts to reach fi
 If a candidate changes, give it a new identity and repeat affected cases and relevant regression; earlier-version runs cannot complete its five-attempt cells.
 Effectiveness leads; complete skill size breaks a supported tie.
 
-## Existing original-skill coverage
+## Fixed original baseline
 
-These are valid-setup scored observations from the canonical [SSR batch records](../../skill-studies/sweeping-stale-references/protocol.md#results-and-decision), excluding the two legacy pilots and two excluded original attempts.
-Counts describe observations, not passes; native task outcomes remain separate from whether the original skill actually loaded in time.
-CLI/runtime strata and differences in repetitions remain explicit; adding counts does not create a uniform benchmark or a reliability estimate.
+The [completed fresh baseline](../../skill-studies/sweeping-stale-references/runs/fresh-baseline-01/fresh-baseline-01-assessment.md) supplies 110 observations: five in each of eleven case/two-provider cells, from 105 new subjects and five matching retained Opus semantic originals.
+Its eight output reviews and canonical results retain their original identities and scores; task outcomes, native loading and accounting remain separate.
+The owner selected baseline collection before candidate screening. Reuse this recent matching baseline rather than recollecting or interleaving another original arm; remote-model temporal drift remains an accepted attribution limit below.
+Older heterogeneous runs remain contextual evidence rather than additional repetitions in these cells.
 
-| Scenario | Codex Sol | Claude Sonnet | Claude Opus | Total |
+## Candidate screen: candidate-screen-01
+
+Status: preparation complete; 115 subjects and ten reviews proposed, no dispatch allocation.
+The owner authorized preparing this scope after baseline closure; collection still requires selection of this concrete allocation under the protocol.
+The [preparation package](../../skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/README.md) contains 44 matched configurations, eleven prospective cards, the exact schedule and verified reuse.
+
+### Matrix and reuse
+
+The original contributes its complete 110-observation baseline, five per case/provider; no new original subjects are proposed.
+Each rewrite reaches three observations in every cell, retaining all five already completed Opus semantic repetitions.
+That produces 68 observations per rewrite, rather than discarding two valid semantic observations to force uniform counts.
+Each table entry is **new + retained**; provider strata stay separate.
+
+| Scenario | Comprehensive Codex | Comprehensive Opus | Compact Codex | Compact Opus |
 | --- | ---: | ---: | ---: | ---: |
-| discovery-shiv | 5 | 3 | 0 | 8 |
-| semantic-delivery | 6 | 2 | 5 | 13 |
-| moved-guide | 6 | 2 | 0 | 8 |
-| initiating-change | 4 | 2 | 0 | 6 |
-| local-change | 4 | 2 | 0 | 6 |
-| pressure-repair | 2 | 2 | 0 | 4 |
-| large-sweep-account | 2 | 0 | 0 | 2 |
-| invocation-change | 2 | 2 | 2 | 6 |
-| invocation-review | 2 | 3 | 2 | 7 |
-| invocation-unrelated | 1 | 1 | 1 | 3 |
-| invocation-verification | 0 | 0 | 0 | 0 |
-| **Total** | **34** | **19** | **10** | **63** |
+| pressure-repair | 3 + 0 | 3 + 0 | 3 + 0 | 3 + 0 |
+| discovery-shiv | 3 + 0 | 3 + 0 | 3 + 0 | 3 + 0 |
+| initiating-change | 3 + 0 | 3 + 0 | 3 + 0 | 1 + 2 |
+| invocation-change | 3 + 0 | 3 + 0 | 3 + 0 | 1 + 2 |
+| invocation-review | 3 + 0 | 3 + 0 | 3 + 0 | 1 + 2 |
+| invocation-verification | 3 + 0 | 3 + 0 | 3 + 0 | 3 + 0 |
+| local-change | 3 + 0 | 3 + 0 | 3 + 0 | 1 + 2 |
+| moved-guide | 3 + 0 | 3 + 0 | 3 + 0 | 1 + 2 |
+| semantic-delivery | 3 + 0 | 0 + 5 | 3 + 0 | 0 + 5 |
+| large-sweep-account | 3 + 0 | 3 + 0 | 3 + 0 | 3 + 0 |
+| invocation-unrelated | 3 + 0 | 3 + 0 | 3 + 0 | 2 + 1 |
+| **Total** | **33 + 0** | **30 + 5** | **33 + 0** | **19 + 16** |
 
-The original has observations for all ten established scenarios; only the new verification-only negative is wholly uncollected.
-The two older original pilot runs remain separate historical evidence.
-Two additional original attempts in core-baseline-01 were excluded: Shiv for invalid setup and semantic-delivery for insufficient exposure evidence.
-Across all versions and controls, the direct SSR subject indexes contain 146 attempts: 67 original, 50 comprehensive, 16 compact and 13 no-target controls.
-The protocol's 162-subject linked accounting projection also includes sixteen CW calls; it is not another SSR-only collection to add to these indexes.
+The [reuse audit](../../skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/reuse-audit.json) verifies all 131 retained subjects' inventories, capture and scored identities: 110 original, five comprehensive and sixteen compact.
+For the 21 candidate observations, prompt bytes, fixture target/hash mappings, complete skill bytes, model/effort/permissions and 900-second timeout match the prepared cell exactly.
+The installed executable hashes, runner source and qualified wrapper remain unchanged; six actual provider-free baseline qualification checks are retained, not represented as newly executed checks.
+Recheck these facts before dispatch; any relevant drift stops preparation for a revised scope rather than silently filling a cell with a new stratum.
+The remote model implementation cannot be pinned; matching local settings and recent baseline observations do not eliminate temporal confounding.
+Older heterogeneous runs remain contextual evidence outside these denominators.
 
-## Selected baseline scope and later candidate allocation
+All three [skill identities and sizes](../../skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/skill-identities.json) are fixed: original 1,182 words, comprehensive 923, compact 814, including frontmatter and rationalizations.
+Descriptions remain identical; the experiment compares complete versions, including their different local-account obligations.
+The unchanged comprehensive does not gain the compact version's contextual-reading or already-current triage additions through scoring instructions.
+No new no-guidance arm is proposed: this question compares versions, and no causal contribution claim follows.
 
-Coverage across all scenarios is already broad, but it is not five baseline observations per scenario on the current Codex/Opus pair.
-Preserve the historical observations as evidence; do not rerun them merely because the process changed or silently pool them with new runtime strata.
-The owner selected five repetitions in every current Codex/Opus cell for a matched comparison; historical coverage stays separately labelled.
-Only exact input/body/runtime matches may supply reused repetitions within a current cell.
+### Execution and early decisions
 
-All eleven non-pilot scenarios on both current providers give 22 cells per version.
-Five original repetitions require 110 observations; the five matching Opus semantic originals leave **105 new baseline subjects**.
-The initial candidate screens would need **63 new comprehensive and 52 new compact subjects**, provisionally reusing five comprehensive semantic and sixteen compact observations from the two completed compact batches.
-That is **220 new subjects through the screen**; existing five-repetition candidate semantic cells stay complete rather than discarding observations to force three.
-If both unchanged candidates continue, each needs 42 more subjects, for **304 new subjects overall**.
-Only the 105-new-subject original baseline is selected; candidate counts remain planning estimates without dispatch allocation.
-Recheck exact identities and inventories before booking reuse; relevant drift changes these counts and requires a revised scope.
+Use the [115-slot schedule](../../skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/schedule.json) sequentially, with repetition rounds and pressure, Shiv and initiating-change first in each round.
+Alternate provider and candidate order across cells/repetitions; this is declared interleaving, not randomization.
+Already retained compact repetitions remain 1–2; new top-ups are repetition 3, with unrelated top-ups 2–3 and completed Opus semantic cells omitted from dispatch.
+Inspect, retain and assess every stopped attempt before the next; do not batch-launch an entire candidate before inspecting its first result.
 
-The protocol fixes the two original-provider batches, eight ten-output repair-review packets, effort forecast, stopping rules and 773/58 ceilings.
-Complete qualification, source freeze and collection readiness before dispatch; prepare later candidate allocations only after the baseline checkpoint.
-Retain the reviewed separation of explicit application and native selection, case-specific accounting rules, trace-only non-use assessment and independent artifact review.
-A native task success without timely complete skill delivery is not evidence of that version's application effectiveness.
-No-target controls remain a separate contribution question, not the meaning of the original baseline.
+Pause the affected candidate immediately for a functional failure, damaged preservation, unauthorized work or a consequential quality regression; present evidence and a retain/drop/specific-repair recommendation before further calls to that candidate.
+Other candidate slots may continue in their existing relative order if their setup is sound; paused slots remain unattempted and do not migrate to another pool.
+Native loading misses are valid selection outcomes, retained separately from functional task scores; inspect them promptly and compare each completed three-attempt cell against the baseline before further progression.
+A missed load cannot count as body-application coverage or be replaced to improve the loading denominator.
+A reporting-only defect, including an unresolved Shiv classification, is visible and does not automatically stop or eliminate a candidate.
+Any missing capture, uncertain charge, runtime/input/permission drift, cleanup or retention failure stops all dispatch until resolved; no automatic retry, replacement or authoring call is allocated.
 
-The [completed original baseline](../../skill-studies/sweeping-stale-references/runs/fresh-baseline-01/fresh-baseline-01-assessment.md) supplies five observations in every declared case/provider cell and eight audited output reviews.
-Its task outcomes, loading misses and accounting limitations remain separate; the candidate screen/review allocation is the next owner decision.
+Apply SSR-assessment-3 and the eleven [prospective cards](../../skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/criteria-index.json).
+The criterion blocks, alternatives, consequences and counting units are unchanged; applicability expands to both rewrites.
+Local original uses its settled negative account; both rewrites use the accepted Candidate branch, including the outside-file/already-current positive-inventory interpretation.
+Do not import semantic-delivery's four-block count into other cases, relabel historical scores or resolve Shiv's ambiguous category by fiat.
+Complete repair/preservation/committed state, search/triage, loading and accounting remain separate results.
+Existing cards do not establish full conformance to every comprehensive/compact-only instruction; record additional observations without inventing new functional criteria.
+
+### Complete-output comparison review
+
+Propose ten fresh Opus-medium reviews using the unchanged qualified read-only native Read/Glob/Grep transport, skills disabled, 900 seconds per call.
+The [packet plan](../../skill-studies/sweeping-stale-references/runs/candidate-screen-01/evaluation/packet-plan.json) includes **180 repair outputs and 540 F1–F3 judgments**, with every original repetition and every candidate repetition, including retained five-repetition Opus semantic cells.
+For each subject provider, review semantic/pressure together, initiating/local together, native positives together, Shiv alone and moved-guide alone.
+The baseline Shiv/moved packets measured 336–346 KB of supplied files, versus 129–152 KB for the smaller families.
+Split this largest family to limit growth while keeping comparable outputs together; eight larger packets would save two calls but concentrate the heaviest reading, while sixteen single-case packets would add six calls without a corresponding observed size need.
+Measure complete assembled packets before review; if a packet cannot be delivered/read completely within the qualified boundary, stop and revise the scope rather than trim evidence or launch an unallocated split/retry.
+
+Supply the complete original project, settled task, applicable rules/interpretation, every complete final project and neutral Git/runtime facts.
+Deduplicate identical whole-file objects with explicit complete path mappings, including hidden files and unchanged relevant files; preserve full text and binary objects rather than replacing outputs with snippets, diffs or tests.
+For binary evidence, use exact source/final identities for preservation and disclose native rendering limits; case-specific notes must identify the actual PNG/ZIP evidence instead of imposing irrelevant generic instructions on other cases.
+Exclude skill bodies, descriptions, hypotheses, raw subject traces and prior judgments from first-pass inputs; labels remain visible, so no blinding claim follows.
+Codex remains the active assessor; Opus is a different review family, but shares Opus subjects' family.
+
+Use the fixed [review prompt](../../skill-studies/sweeping-stale-references/runs/candidate-screen-01/evaluation/prompt.md), requiring independent F1–F3 judgments, concrete evidence and consequential quality comparison among passing outputs.
+Retain a complete first-pass message before any prior-score access; keep priors as a separately named input and audit actual access timing.
+Reconciliation follows separately, preserving disagreements, post-prior changes and limits; reviewer agreement cannot substitute for inspecting semantic correctness and passing-output quality.
+The active session assesses ordered search/loading traces and P criteria; accounting and both non-use cases remain outside functional review packets, leaving 66 not-measured observations.
+If a candidate is stopped/dropped, review completed repair outputs in their already allocated packet only; report missing slots and actual packet size. No extra failure-review call is implicit.
+
+### Allocation, effort and checkpoint
+
+Current accepted ceilings remain **773 subjects / 58 evaluators / 4 authoring / 4 retries = 839**; the subject and evaluator capacity is spent.
+The proposed extension is **115 subjects + ten evaluators**, giving ceilings **888 / 68 / 4 / 4 = 964**.
+No authoring, retry, qualification-model or adoption allocation is added; the existing unused authoring/retry pools are not dispatched by this proposal.
+Reused subjects are charged zero additional calls. All new attempts count, including stopped, failed or invalid attempts; there is no replacement allocation.
+If a candidate is dropped, unused slots/reviews remain unspent, rather than reassigned.
+SSR-linked projections would become 382 subjects / twenty evaluators if the full allocation is spent; current accounting stays unchanged until owner approval and actual invocations.
+
+Remaining execution forecast, excluding this separately booked preparation: **350–440 active minutes**.
+
+| Work | Minutes |
+| --- | ---: |
+| Final source freeze/readiness and unchanged-runtime checks | 20–30 |
+| Subject waits | 70–90 |
+| Retention and per-attempt capture/setup checks | 30–40 |
+| Direct whole-project assessment and trace scoring | 70–85 |
+| Ten reviewer waits | 50–65 |
+| Delivery/semantic audits and reconciliation | 65–80 |
+| Comparison/reporting | 25–30 |
+| Contingency | 20 |
+| **Total** | **350–440** |
+
+Waits are counted once; historical baseline runner/reviewer timings inform this forecast, with larger comparison packets explicitly budgeted.
+At an early stop or the completed screen, report per-case/provider/condition outcomes, unknowns, all loading/non-use attempts, procedural patterns, consequential passing-output differences and complete skill size.
+Recommend retain/drop/specific repair for each candidate; ambiguous differences remain inconclusive.
+Three successes or equal criterion totals alone do not establish equivalence; skill size breaks a supported effectiveness/quality tie.
+If promising unchanged candidates continue, each requires 42 additional subjects to reach five in the other 21 cells; that top-up, its updated reviews and any repairs require a new bounded owner decision.
+No automatic five-repetition continuation or rollout follows this screen.

@@ -1,0 +1,402 @@
+{
+  "status": "passed offline; no subject/reviewer invocation",
+  "candidate_reuse": [
+    {
+      "run_id": "20261023T212410571Z-ssr-compact-semantic-candidate-b27fa214-9b32-41ae-8717-d64f3ee0e1d4-b_x8sezp",
+      "case_id": "semantic-delivery",
+      "condition": "candidate",
+      "provider": "claude",
+      "repetition": 1,
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-semantic-delivery-candidate.json",
+        "sha256": "5e93ff26bdd747cbc81ce42648637f4dccbd659b03eec9c75dd181587b6da3bf"
+      },
+      "source_configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/candidate.json",
+        "sha256": "81e8ac8657955669e717b8828481859f71eef5fbbe566f770d9df755fd77cb07",
+        "version": "0.2"
+      },
+      "prompt_and_target_hashes_equal": true,
+      "inventory_and_scored_record_verified": true
+    },
+    {
+      "run_id": "20261023T212516549Z-ssr-compact-semantic-finalist-24f91879-a992-4b12-9026-38a9ebf2143a-sajnmbw3",
+      "case_id": "semantic-delivery",
+      "condition": "finalist",
+      "provider": "claude",
+      "repetition": 1,
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-semantic-delivery-finalist.json",
+        "sha256": "9972273b9f9d1cefce35b083505b39f42dfb31310555bffd9416fb83fc7fcc40"
+      },
+      "source_configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/finalist.json",
+        "sha256": "2c4e41c9f08a3ce8a7a2186970ca84bc46830859d5bafc8bb0861a6da25067c7",
+        "version": "0.2"
+      },
+      "prompt_and_target_hashes_equal": true,
+      "inventory_and_scored_record_verified": true
+    },
+    {
+      "run_id": "20261023T212607360Z-ssr-compact-semantic-candidate-240ae7cd-4213-40bb-9b01-5c95714b3029-479zhvuo",
+      "case_id": "semantic-delivery",
+      "condition": "candidate",
+      "provider": "claude",
+      "repetition": 2,
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-semantic-delivery-candidate.json",
+        "sha256": "5e93ff26bdd747cbc81ce42648637f4dccbd659b03eec9c75dd181587b6da3bf"
+      },
+      "source_configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/candidate.json",
+        "sha256": "81e8ac8657955669e717b8828481859f71eef5fbbe566f770d9df755fd77cb07",
+        "version": "0.2"
+      },
+      "prompt_and_target_hashes_equal": true,
+      "inventory_and_scored_record_verified": true
+    },
+    {
+      "run_id": "20261023T212705559Z-ssr-compact-semantic-finalist-a9d86334-3445-4590-b3e4-1b132f6df8c7-5nu6_q9_",
+      "case_id": "semantic-delivery",
+      "condition": "finalist",
+      "provider": "claude",
+      "repetition": 2,
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-semantic-delivery-finalist.json",
+        "sha256": "9972273b9f9d1cefce35b083505b39f42dfb31310555bffd9416fb83fc7fcc40"
+      },
+      "source_configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/finalist.json",
+        "sha256": "2c4e41c9f08a3ce8a7a2186970ca84bc46830859d5bafc8bb0861a6da25067c7",
+        "version": "0.2"
+      },
+      "prompt_and_target_hashes_equal": true,
+      "inventory_and_scored_record_verified": true
+    },
+    {
+      "run_id": "20261023T212907539Z-ssr-compact-semantic-finalist-c1c662e0-fc86-4656-aaa0-7746f9eab771-idib5g4o",
+      "case_id": "semantic-delivery",
+      "condition": "finalist",
+      "provider": "claude",
+      "repetition": 3,
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-semantic-delivery-finalist.json",
+        "sha256": "9972273b9f9d1cefce35b083505b39f42dfb31310555bffd9416fb83fc7fcc40"
+      },
+      "source_configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/finalist.json",
+        "sha256": "2c4e41c9f08a3ce8a7a2186970ca84bc46830859d5bafc8bb0861a6da25067c7",
+        "version": "0.2"
+      },
+      "prompt_and_target_hashes_equal": true,
+      "inventory_and_scored_record_verified": true
+    },
+    {
+      "run_id": "20261023T213033879Z-ssr-compact-semantic-candidate-7608f8bc-7450-4b24-a1bb-2284e4011e24-0ieyn2fu",
+      "case_id": "semantic-delivery",
+      "condition": "candidate",
+      "provider": "claude",
+      "repetition": 3,
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-semantic-delivery-candidate.json",
+        "sha256": "5e93ff26bdd747cbc81ce42648637f4dccbd659b03eec9c75dd181587b6da3bf"
+      },
+      "source_configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/candidate.json",
+        "sha256": "81e8ac8657955669e717b8828481859f71eef5fbbe566f770d9df755fd77cb07",
+        "version": "0.2"
+      },
+      "prompt_and_target_hashes_equal": true,
+      "inventory_and_scored_record_verified": true
+    },
+    {
+      "run_id": "20261023T213214880Z-ssr-compact-semantic-finalist-52160d4f-1d58-46f5-9b79-deb59490fc80-h_68zmgl",
+      "case_id": "semantic-delivery",
+      "condition": "finalist",
+      "provider": "claude",
+      "repetition": 4,
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-semantic-delivery-finalist.json",
+        "sha256": "9972273b9f9d1cefce35b083505b39f42dfb31310555bffd9416fb83fc7fcc40"
+      },
+      "source_configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/finalist.json",
+        "sha256": "2c4e41c9f08a3ce8a7a2186970ca84bc46830859d5bafc8bb0861a6da25067c7",
+        "version": "0.2"
+      },
+      "prompt_and_target_hashes_equal": true,
+      "inventory_and_scored_record_verified": true
+    },
+    {
+      "run_id": "20261023T213317806Z-ssr-compact-semantic-candidate-0e19c517-ab57-4c9f-a293-8bc999713bb4-468la7hg",
+      "case_id": "semantic-delivery",
+      "condition": "candidate",
+      "provider": "claude",
+      "repetition": 4,
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-semantic-delivery-candidate.json",
+        "sha256": "5e93ff26bdd747cbc81ce42648637f4dccbd659b03eec9c75dd181587b6da3bf"
+      },
+      "source_configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/candidate.json",
+        "sha256": "81e8ac8657955669e717b8828481859f71eef5fbbe566f770d9df755fd77cb07",
+        "version": "0.2"
+      },
+      "prompt_and_target_hashes_equal": true,
+      "inventory_and_scored_record_verified": true
+    },
+    {
+      "run_id": "20261023T213412662Z-ssr-compact-semantic-candidate-8cf481d8-0405-463b-bc13-d24877855103-lp4o2r6z",
+      "case_id": "semantic-delivery",
+      "condition": "candidate",
+      "provider": "claude",
+      "repetition": 5,
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-semantic-delivery-candidate.json",
+        "sha256": "5e93ff26bdd747cbc81ce42648637f4dccbd659b03eec9c75dd181587b6da3bf"
+      },
+      "source_configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/candidate.json",
+        "sha256": "81e8ac8657955669e717b8828481859f71eef5fbbe566f770d9df755fd77cb07",
+        "version": "0.2"
+      },
+      "prompt_and_target_hashes_equal": true,
+      "inventory_and_scored_record_verified": true
+    },
+    {
+      "run_id": "20261023T213555811Z-ssr-compact-semantic-finalist-5486e457-4782-4591-bb1f-7e90eaa33585-7xawoy6q",
+      "case_id": "semantic-delivery",
+      "condition": "finalist",
+      "provider": "claude",
+      "repetition": 5,
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-semantic-delivery-finalist.json",
+        "sha256": "9972273b9f9d1cefce35b083505b39f42dfb31310555bffd9416fb83fc7fcc40"
+      },
+      "source_configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/configs/finalist.json",
+        "sha256": "2c4e41c9f08a3ce8a7a2186970ca84bc46830859d5bafc8bb0861a6da25067c7",
+        "version": "0.2"
+      },
+      "prompt_and_target_hashes_equal": true,
+      "inventory_and_scored_record_verified": true
+    },
+    {
+      "run_id": "20261024T060228842Z-ssr-compact-regression-initiating-change-8497abc5-1121-4628-af3f-03eb3a38bb0e-5waqy2no",
+      "case_id": "initiating-change",
+      "condition": "finalist",
+      "provider": "claude",
+      "repetition": 1,
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-initiating-change-finalist.json",
+        "sha256": "26174f64f7d98d5973eaff11e3cddc49d2ac0a84c31e3bdf915fc9e425c4ecbb"
+      },
+      "source_configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/initiating-change.json",
+        "sha256": "2f52f5a9f0f23664596828fb411aa49e5648174291f764f7964a89c8048cb66a",
+        "version": "0.2"
+      },
+      "prompt_and_target_hashes_equal": true,
+      "inventory_and_scored_record_verified": true
+    },
+    {
+      "run_id": "20261024T060550211Z-ssr-compact-regression-invocation-change-1159453b-4002-4c8a-b340-4ddb44c568df-w47ho2r3",
+      "case_id": "invocation-change",
+      "condition": "finalist",
+      "provider": "claude",
+      "repetition": 1,
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-change-finalist.json",
+        "sha256": "9388e79dca3aa7954966d44f8e70dda063040f20a2e334bf1b71ccb404e1bc2e"
+      },
+      "source_configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/invocation-change.json",
+        "sha256": "459e90665f4450818ffd7391ea993dc2e935e740a461d01d4aeb1be66d4e3540",
+        "version": "0.2"
+      },
+      "prompt_and_target_hashes_equal": true,
+      "inventory_and_scored_record_verified": true
+    },
+    {
+      "run_id": "20261024T060738969Z-ssr-compact-regression-moved-guide-3a8241d0-eb67-4a24-8f49-1f1b24b72db7-9shudgzv",
+      "case_id": "moved-guide",
+      "condition": "finalist",
+      "provider": "claude",
+      "repetition": 1,
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-moved-guide-finalist.json",
+        "sha256": "0af1fe3dab1617679607cd47e258c301b050430c119b6f5f6dd3768bf9300663"
+      },
+      "source_configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/moved-guide.json",
+        "sha256": "1ab47a65b2af606e4795b0726de70a5849ad54b26e3fbc2de365485137bbac26",
+        "version": "0.2"
+      },
+      "prompt_and_target_hashes_equal": true,
+      "inventory_and_scored_record_verified": true
+    },
+    {
+      "run_id": "20261024T060904689Z-ssr-compact-regression-invocation-review-2943fb8b-a983-430c-b3be-0e4d6ac38547-pq7u071m",
+      "case_id": "invocation-review",
+      "condition": "finalist",
+      "provider": "claude",
+      "repetition": 1,
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-review-finalist.json",
+        "sha256": "47b560a91ac8a97acff61c0ce39d965b0aad346c85c86fdaf1642c35470341c5"
+      },
+      "source_configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/invocation-review.json",
+        "sha256": "518df3ba8c0031a63ffb42eca5bbd32fa0c411529026eea17d1fd25f93a0d288",
+        "version": "0.2"
+      },
+      "prompt_and_target_hashes_equal": true,
+      "inventory_and_scored_record_verified": true
+    },
+    {
+      "run_id": "20261024T061345945Z-ssr-compact-regression-local-change-842fbb60-cf1b-4deb-acd6-a70e7e8f48f0-o3r593d9",
+      "case_id": "local-change",
+      "condition": "finalist",
+      "provider": "claude",
+      "repetition": 1,
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-local-change-finalist.json",
+        "sha256": "912126e79fee717dd812dcc438111571ce240bd88faf2b86ba977f1ff9e57a4c"
+      },
+      "source_configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/local-change.json",
+        "sha256": "792092735fe3a45eac59d58e816ea78d5a32d3e346584d1a47e30e066f1ae8f8",
+        "version": "0.2"
+      },
+      "prompt_and_target_hashes_equal": true,
+      "inventory_and_scored_record_verified": true
+    },
+    {
+      "run_id": "20261024T061443495Z-ssr-compact-regression-invocation-unrelated-21a09f5f-a7b3-4320-8955-401a62470b77-7tr59p0l",
+      "case_id": "invocation-unrelated",
+      "condition": "finalist",
+      "provider": "claude",
+      "repetition": 1,
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-unrelated-finalist.json",
+        "sha256": "0fe53ab201ee093e232c38e921cdeb0cbc0166c2d8ca56373785ce5baee9fdb9"
+      },
+      "source_configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/invocation-unrelated.json",
+        "sha256": "b5a8e21ae3f11e772177c5d1144cc190ff962549c4a9e7f3d6b0a1742016f262",
+        "version": "0.2"
+      },
+      "prompt_and_target_hashes_equal": true,
+      "inventory_and_scored_record_verified": true
+    },
+    {
+      "run_id": "20261024T061519400Z-ssr-compact-regression-initiating-change-16730605-9728-478a-a16e-3546bc7231ca-cj1pgbzp",
+      "case_id": "initiating-change",
+      "condition": "finalist",
+      "provider": "claude",
+      "repetition": 2,
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-initiating-change-finalist.json",
+        "sha256": "26174f64f7d98d5973eaff11e3cddc49d2ac0a84c31e3bdf915fc9e425c4ecbb"
+      },
+      "source_configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/initiating-change.json",
+        "sha256": "2f52f5a9f0f23664596828fb411aa49e5648174291f764f7964a89c8048cb66a",
+        "version": "0.2"
+      },
+      "prompt_and_target_hashes_equal": true,
+      "inventory_and_scored_record_verified": true
+    },
+    {
+      "run_id": "20261024T061612874Z-ssr-compact-regression-invocation-review-3e1c6c38-11ca-4662-b139-99cfda44ec50-5_jh10a3",
+      "case_id": "invocation-review",
+      "condition": "finalist",
+      "provider": "claude",
+      "repetition": 2,
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-review-finalist.json",
+        "sha256": "47b560a91ac8a97acff61c0ce39d965b0aad346c85c86fdaf1642c35470341c5"
+      },
+      "source_configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/invocation-review.json",
+        "sha256": "518df3ba8c0031a63ffb42eca5bbd32fa0c411529026eea17d1fd25f93a0d288",
+        "version": "0.2"
+      },
+      "prompt_and_target_hashes_equal": true,
+      "inventory_and_scored_record_verified": true
+    },
+    {
+      "run_id": "20261024T061703945Z-ssr-compact-regression-moved-guide-42f97295-92c5-41e5-bf7b-2c644ab42d1c-0scb5n1v",
+      "case_id": "moved-guide",
+      "condition": "finalist",
+      "provider": "claude",
+      "repetition": 2,
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-moved-guide-finalist.json",
+        "sha256": "0af1fe3dab1617679607cd47e258c301b050430c119b6f5f6dd3768bf9300663"
+      },
+      "source_configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/moved-guide.json",
+        "sha256": "1ab47a65b2af606e4795b0726de70a5849ad54b26e3fbc2de365485137bbac26",
+        "version": "0.2"
+      },
+      "prompt_and_target_hashes_equal": true,
+      "inventory_and_scored_record_verified": true
+    },
+    {
+      "run_id": "20261024T061754141Z-ssr-compact-regression-invocation-change-c51dc79a-efa5-409d-a953-4c406e11c8ef-u6hucd_f",
+      "case_id": "invocation-change",
+      "condition": "finalist",
+      "provider": "claude",
+      "repetition": 2,
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-change-finalist.json",
+        "sha256": "9388e79dca3aa7954966d44f8e70dda063040f20a2e334bf1b71ccb404e1bc2e"
+      },
+      "source_configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/invocation-change.json",
+        "sha256": "459e90665f4450818ffd7391ea993dc2e935e740a461d01d4aeb1be66d4e3540",
+        "version": "0.2"
+      },
+      "prompt_and_target_hashes_equal": true,
+      "inventory_and_scored_record_verified": true
+    },
+    {
+      "run_id": "20261024T061843823Z-ssr-compact-regression-local-change-28981bfb-f81d-4946-8626-9d3d49a747f1-7_ha8zsf",
+      "case_id": "local-change",
+      "condition": "finalist",
+      "provider": "claude",
+      "repetition": 2,
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-local-change-finalist.json",
+        "sha256": "912126e79fee717dd812dcc438111571ce240bd88faf2b86ba977f1ff9e57a4c"
+      },
+      "source_configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/configs/local-change.json",
+        "sha256": "792092735fe3a45eac59d58e816ea78d5a32d3e346584d1a47e30e066f1ae8f8",
+        "version": "0.2"
+      },
+      "prompt_and_target_hashes_equal": true,
+      "inventory_and_scored_record_verified": true
+    }
+  ],
+  "baseline_reuse_count": 110,
+  "runtime": {
+    "source": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/runtime-identities.json",
+    "sha256": "4d1b7a9deacc099357ff7e132b32a26e0b6ffc4284850b76390206a467ac73b3",
+    "executable_hashes_unchanged": true,
+    "runner_and_wrapper_unchanged_since_semantic_source": true,
+    "actual_prior_zero_model_checks": 6,
+    "new_provider_or_model_checks": 0
+  },
+  "baseline_review_packet_input_bytes": {
+    "codex-initiating-local": 129409,
+    "codex-semantic-pressure": 136232,
+    "claude-initiating-local": 135859,
+    "claude-semantic-pressure": 137255,
+    "codex-shiv-moved": 336494,
+    "claude-native-positive": 152483,
+    "codex-native-positive": 144889,
+    "claude-shiv-moved": 346048
+  }
+}

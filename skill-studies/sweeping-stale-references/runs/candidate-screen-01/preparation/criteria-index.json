@@ -1,0 +1,134 @@
+[
+  {
+    "case_id": "invocation-unrelated",
+    "source": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/criteria/invocation-unrelated.md",
+      "sha256": "e64a4f0edda4beece7a781f8799f811aeee2b17fe979ae0da9db345de1459c7a"
+    },
+    "card": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/criteria/invocation-unrelated.md",
+      "sha256": "491d5d8e7afe4f0dd50e5d500c4555270dd25e04fc644db7092d4a1ebfb4893d"
+    },
+    "amendment": "Condition/runtime metadata only; original and Candidate local branches retained, finalist inherits Candidate branch."
+  },
+  {
+    "case_id": "discovery-shiv",
+    "source": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/criteria/discovery-shiv.md",
+      "sha256": "2d38d85f71e08667800f386304cec757d28192873be1a6b41bf3c1a6859931ab"
+    },
+    "card": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/criteria/discovery-shiv.md",
+      "sha256": "88a7173dec1a9d51e5290fae8fe7fab989fe2b0d62dcf09e2e5edaff76e169c8"
+    },
+    "amendment": "Condition/runtime metadata only; original and Candidate local branches retained, finalist inherits Candidate branch."
+  },
+  {
+    "case_id": "invocation-change",
+    "source": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/criteria/invocation-change.md",
+      "sha256": "e6465628a5e944601cabe6e19040cf8f8a07a2ade9a65cdd91175269d25df6bc"
+    },
+    "card": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/criteria/invocation-change.md",
+      "sha256": "0691e0c22fad4734f18064b8909264df2a0f9722b31e72687ecd09cefbd8b56d"
+    },
+    "amendment": "Condition/runtime metadata only; original and Candidate local branches retained, finalist inherits Candidate branch."
+  },
+  {
+    "case_id": "initiating-change",
+    "source": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/criteria/initiating-change.md",
+      "sha256": "bab928bb21f2fd62cbe399c9489cfe1145ada95d1edcd5e8ccd3812999f2362c"
+    },
+    "card": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/criteria/initiating-change.md",
+      "sha256": "9136b30bbe75114d55e924311a567e671177572f379045091603434d41776f03"
+    },
+    "amendment": "Condition/runtime metadata only; original and Candidate local branches retained, finalist inherits Candidate branch."
+  },
+  {
+    "case_id": "semantic-delivery",
+    "source": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/criteria/semantic-delivery.md",
+      "sha256": "dddcd3836d7e419a7c7a0d4e29237bfcc1b7b7604b7707d1b3e2e1b954ffc79a"
+    },
+    "card": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/criteria/semantic-delivery.md",
+      "sha256": "0b09481924c64ca82ec9919079204f9b70b853c88bbe87bdec44c1c42b230fb8"
+    },
+    "amendment": "Condition/runtime metadata only; original and Candidate local branches retained, finalist inherits Candidate branch."
+  },
+  {
+    "case_id": "large-sweep-account",
+    "source": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/criteria/large-sweep-account.md",
+      "sha256": "fcb5dc8733c0318799bc96403d408d807082ad15ca66ab88e2e43fd3875ba930"
+    },
+    "card": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/criteria/large-sweep-account.md",
+      "sha256": "10d2a746a37e21db3b192c60c48b00a7d9367031ee7e2871a74b4d3456975f1f"
+    },
+    "amendment": "Condition/runtime metadata only; original and Candidate local branches retained, finalist inherits Candidate branch."
+  },
+  {
+    "case_id": "pressure-repair",
+    "source": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/criteria/pressure-repair.md",
+      "sha256": "39bf19c96cd51da9c06315f1f90730568625f4da8c7df5dd89b75815315d6d07"
+    },
+    "card": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/criteria/pressure-repair.md",
+      "sha256": "d99963d24b466a28d1cacb83a678c62904d27bb14c601a305580edc3f5be8357"
+    },
+    "amendment": "Condition/runtime metadata only; original and Candidate local branches retained, finalist inherits Candidate branch."
+  },
+  {
+    "case_id": "invocation-verification",
+    "source": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/criteria/invocation-verification.md",
+      "sha256": "43c7621b47a051cabad2bfe4bed2f9922452e41d7d39074ede1846a33164c240"
+    },
+    "card": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/criteria/invocation-verification.md",
+      "sha256": "381ba7f3e67c082667978e5900c8428bfbcb547a6006a26bfdffa0f2c2d4ece4"
+    },
+    "amendment": "Condition/runtime metadata only; original and Candidate local branches retained, finalist inherits Candidate branch."
+  },
+  {
+    "case_id": "moved-guide",
+    "source": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/criteria/moved-guide.md",
+      "sha256": "b6f129a69e9eef58f416dcbf93b161c4fe5323cfa2a15ad502d2bc97e6c357d8"
+    },
+    "card": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/criteria/moved-guide.md",
+      "sha256": "1ae3f3603f87ed5e3fbb6a2a7568894d1aa53652f4a407d66bf164d223fd7335"
+    },
+    "amendment": "Condition/runtime metadata only; original and Candidate local branches retained, finalist inherits Candidate branch."
+  },
+  {
+    "case_id": "invocation-review",
+    "source": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/criteria/invocation-review.md",
+      "sha256": "47b1f113e5f982cb293b18287625d93b95035408cef9a901796a4c0a0dd24579"
+    },
+    "card": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/criteria/invocation-review.md",
+      "sha256": "982f1ad3264847c8b8f66436ca34fb5dd29ab42c5989db0a76d8f358b0919b9e"
+    },
+    "amendment": "Condition/runtime metadata only; original and Candidate local branches retained, finalist inherits Candidate branch."
+  },
+  {
+    "case_id": "local-change",
+    "source": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/criteria/local-change.md",
+      "sha256": "6c5bb11b41259ed5c1358fad2a8e5ab7db16732b09fb76398436353323815299"
+    },
+    "card": {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/criteria/local-change.md",
+      "sha256": "1d12b1c04253ebd3f15acc19305552e5ee33a036678da8e49a5b37e9a51dbd8b"
+    },
+    "amendment": "Condition/runtime metadata only; original and Candidate local branches retained, finalist inherits Candidate branch."
+  }
+]

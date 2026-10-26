@@ -1014,7 +1014,7 @@ The short examples screen uses its [two-call evaluator ledger](runs/final-compar
 Dispatched calls are **773 subject, 58 evaluator, 0 authoring, 3 retry**; remaining outer capacity is **0 / 0 / 4 / 1** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **4,080 active minutes booked; 2,880 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **4,170 active minutes booked; 2,970 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
 The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 773/773, with all approved fresh original SSR baseline calls spent; the earlier E diagnostic and CW examples screen are spent.
@@ -1031,6 +1031,8 @@ This covers preparation/qualification/freeze, 105 new subjects, direct whole-art
 New subject runner durations total 3,427.837 seconds and review durations 1,809.602 seconds (5,237.439 seconds combined), included once in that estimate.
 The five matching semantic originals add no subject charge and their historical waits are not booked again.
 All 105 new subjects and eight reviewers are spent, with no new retry or authoring call; candidate screens remain unallocated.
+The [SSR candidate-screen preparation](../sweeping-stale-references/runs/candidate-screen-01/preparation/README.md) used 90 estimated active minutes for source/reuse review, matched inputs, schedule/review design, offline verification and active-session review; no subject, evaluator, authoring or retry call was added.
+Its proposed 350–440-minute execution forecast remains unallocated and excludes these booked preparation minutes and all historical waits.
 
 | Work | Estimated active minutes |
 | --- | ---: |
@@ -1173,7 +1175,8 @@ All 105 new subjects and eight reviewers are spent, with no new retry or authori
 | SSR completion proposal review fixes and offline verification | 15 |
 | Original SSR baseline inventory and staged-comparison design | 10 |
 | Fresh original SSR baseline qualification/freeze, 105 subjects, eight reviews/audits, reconciliation and closure | 310 |
-| **Total** | **4,080** |
+| SSR candidate-screen proposal, matched inputs, reuse/inventory checks and offline review | 90 |
+| **Total** | **4,170** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.
