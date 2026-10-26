@@ -1,0 +1,89 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-10-26T15:21:31.369427+00:00",
+  "run_id": "20261026T152049365Z-ssr-fresh-baseline-codex-invocation-verification-425bfced-1c52-4977-a1f6-06d5bca09b3a-askhea_x",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Preparer and active assessor with condition/history awareness; not blind or independent. Fixed SSR-assessment-3 and case-specific units, inherited explanations and original interpretation."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T152049365Z-ssr-fresh-baseline-codex-invocation-verification-425bfced-1c52-4977-a1f6-06d5bca09b3a-askhea_x/result.json",
+        "sha256": "f0d95cdf9c0a649f31799416a4f7db71942f2b66d2cf540c8c2a0da9b9d61443",
+        "version": null
+      },
+      "selector": "Mechanical completion, declared execution and retained capture."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T152049365Z-ssr-fresh-baseline-codex-invocation-verification-425bfced-1c52-4977-a1f6-06d5bca09b3a-askhea_x/provider-session.jsonl",
+        "sha256": "3d2bc8999ee725e32a5c77a42fbaf2b473392eb3c65e7bd78b8dda7f51c39aa3",
+        "version": null
+      },
+      "selector": "Complete ordered tool calls, responses and subject messages."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T152049365Z-ssr-fresh-baseline-codex-invocation-verification-425bfced-1c52-4977-a1f6-06d5bca09b3a-askhea_x.checks.json",
+        "sha256": "69b1c23f7aff77be49be7a045ff77a7d450bafd5402c83f5c2c59f76675b52cc",
+        "version": null
+      },
+      "selector": "Disposable full project/Git comparison, protected inputs, delivery/model checks and any trusted replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned model/CLI/effort and source identities verified; complete retained capture and cleanup, with full original-body delivery for explicit application. Native availability is verified; missing/late loading is scored separately.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Qualified native original catalog available; complete trace only reads TASK/discovers guidance and runs requested tests once. No Skill invocation, targeted SSR body delivery or sweep/account application.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Appropriate verification-only non-use; functional outcome not measured.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "Exactly one command,3testsOK/exit0, accurately reported; all supplied inputs unchanged, no commit.",
+      "consequence": "Descriptive/supplementary; fixed scores and scope unchanged.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "Exposed development case in a declared provider/runtime stratum; no blind, held-out, population reliability or causal-guidance claim.",
+    "Native selection and task success are separate; retain case-specific counting units and Shiv uncertainty."
+  ],
+  "result_id": "fresh-baseline-codex-01-invocation-verification-original-3",
+  "functional_result": "not measured",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/manifests/codex-invocation-verification-manifest.json",
+    "sha256": "4b7670042a310b32e762090f3f93bbdc5e0d767d412d07ce46405f32ff0e9a9d",
+    "version": "1",
+    "git_revision": "75812d6c23ef7e92d5a794b4724e51758f60e7cb"
+  }
+}

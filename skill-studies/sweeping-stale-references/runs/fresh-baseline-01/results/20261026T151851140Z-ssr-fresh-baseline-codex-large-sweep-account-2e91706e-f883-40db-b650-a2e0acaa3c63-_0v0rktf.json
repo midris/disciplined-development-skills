@@ -1,0 +1,79 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-10-26T15:19:50.684930+00:00",
+  "run_id": "20261026T151851140Z-ssr-fresh-baseline-codex-large-sweep-account-2e91706e-f883-40db-b650-a2e0acaa3c63-_0v0rktf",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Preparer and active assessor with condition/history awareness; not blind or independent. Fixed SSR-assessment-3 and case-specific units, inherited explanations and original interpretation."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T151851140Z-ssr-fresh-baseline-codex-large-sweep-account-2e91706e-f883-40db-b650-a2e0acaa3c63-_0v0rktf/result.json",
+        "sha256": "b09cd05e293a23d2d5a130fa182ec9c097b61cfd23ccd734a4d687cb1ff7ce35",
+        "version": null
+      },
+      "selector": "Mechanical completion, declared execution and retained capture."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T151851140Z-ssr-fresh-baseline-codex-large-sweep-account-2e91706e-f883-40db-b650-a2e0acaa3c63-_0v0rktf/provider-session.jsonl",
+        "sha256": "dfae3c73cb970ebc151ae76566ea05937e2d26c7a3ff09072068e8864c1c42ac",
+        "version": null
+      },
+      "selector": "Complete ordered tool calls, responses and subject messages."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T151851140Z-ssr-fresh-baseline-codex-large-sweep-account-2e91706e-f883-40db-b650-a2e0acaa3c63-_0v0rktf.checks.json",
+        "sha256": "d59c911cd1661a5aa02f4755d4851a37e5c7cc178faba53ab2d0ed7aceca01e2",
+        "version": null
+      },
+      "selector": "Disposable full project/Git comparison, protected inputs, delivery/model checks and any trusted replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned model/CLI/effort and source identities verified; complete retained capture and cleanup, with full original-body delivery for explicit application. Native availability is verified; missing/late loading is scored separately.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "All11supplied path/outcome groups accurately retained with original inclusive line ranges and counts totaling126across10paths (80update/40historical/6independent). Separate docs/cache outcomes preserved. Verification attributes facts to inventory and claims no independent repair/search/test evidence; supplied inputs unchanged.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Accounting-only P3 met; functional outcome not measured.",
+  "observations": [],
+  "uncertainty": [
+    "Exposed development case in a declared provider/runtime stratum; no blind, held-out, population reliability or causal-guidance claim.",
+    "Native selection and task success are separate; retain case-specific counting units and Shiv uncertainty."
+  ],
+  "result_id": "fresh-baseline-codex-01-large-sweep-account-original-3",
+  "functional_result": "not measured",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/manifests/codex-large-sweep-account-manifest.json",
+    "sha256": "116e0faea61d02cc1be9fb4ec44070e8d050514c84802567f5e79ab3029e9659",
+    "version": "1",
+    "git_revision": "75812d6c23ef7e92d5a794b4724e51758f60e7cb"
+  }
+}
