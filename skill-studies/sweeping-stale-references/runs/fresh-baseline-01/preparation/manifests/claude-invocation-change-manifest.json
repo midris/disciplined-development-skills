@@ -3,9 +3,9 @@
   "manifest_id": "ssr-fresh-baseline-claude-invocation-change",
   "study_id": "sweeping-stale-references",
   "case_id": "invocation-change",
-  "status": "draft",
+  "status": "frozen",
   "created_at": "2026-10-26",
-  "source_revision": "",
+  "source_revision": "ceb11bf2717aede33eb5008845fb9bba06d21ffc",
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
@@ -14,7 +14,7 @@
     },
     "protocol": {
       "path": "skill-studies/sweeping-stale-references/protocol.md",
-      "sha256": "7c280b376caf15ce6e72666769a9baeb6cc38354ccb44374b886294094893c60",
+      "sha256": "47ef66f2218d7d467b06e6a69cfd1edb8fe67ce5328e13991d290492af243dc1",
       "version": "1"
     },
     "format_contract": {
