@@ -1035,7 +1035,7 @@ The five matching semantic originals add no subject charge and their historical 
 All 105 new subjects and eight reviewers are spent, with no new retry or authoring call; the subsequent candidate screen has a separate approved allocation.
 The [SSR candidate-screen preparation](../sweeping-stale-references/runs/candidate-screen-01/preparation/README.md) used 90 estimated active minutes for source/reuse review, matched inputs, schedule/review design, offline verification and active-session review; no subject, evaluator, authoring or retry call was added.
 Its owner-approved 350–440-minute execution forecast excludes these booked preparation minutes and all historical waits.
-Candidate-screen execution through the slot-56 authentication stop adds 85 estimated active minutes, including approval/freeze/readiness, model waits, direct inspections, retention/score audits and stop documentation. Fifty-five valid subjects and one charged invalid setup are retained; 59 subject slots and ten reviews remain unattempted. Claude re-authentication is required; no replacement/retry is allocated.
+Candidate-screen execution through the slot-56 authentication stop adds 85 estimated active minutes, including approval/freeze/readiness, model waits, direct inspections, retention/score audits and stop documentation. Fifty-five valid subjects and one charged invalid setup are retained; 59 subject slots and ten reviews remain unattempted. The owner subsequently re-authenticated Claude and approved exactly one slot56 retry within the remaining retry capacity; see the [amendment](../sweeping-stale-references/runs/candidate-screen-01/retry-56-authorization.md).
 
 | Work | Estimated active minutes |
 | --- | ---: |

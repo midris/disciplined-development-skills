@@ -3,21 +3,22 @@
 Owner-approved scope: 115 new subjects and ten complete-output reviews; immutable invocation authority `eb1761bb7014034a174877d548898417ac4d2030`.
 The active plan owns the remaining checklist; this note records the current evidence boundary.
 
-## Authentication stop
+## Resumption after authentication stop
 
 All dispatch stopped at slot 56 on 2026-10-26 after Claude returned HTTP 401: OAuth access token expired.
 The runner recorded `INFRA_ERROR`, exit 1, with no timeout or cleanup error.
 No subject tool call or actual model output occurred; all twelve supplied files remain unchanged.
 The complete error capture and invalid-setup assessment are retained in the Claude index; absence of skill loading is not scored as successful non-use.
 The invocation started, so its one subject charge is retained even though the provider reported zero tokens/cost.
-No retry, replacement or reviewer was launched.
+No retry, replacement or reviewer was launched before the stop.
 
-Re-authenticate Claude through `claude auth login`, then verify production authentication and unchanged runtime/input identities before resuming collection.
+The owner re-authenticated Claude and approved exactly one retry on 2026-10-26; production authentication and unchanged runtime hashes were verified.
+The [retry authorization](retry-56-authorization.md) governs distinct retry registration and full-index checks.
 Slot 57 is the next unattempted slot; preserve slot 56 as invalid and do not silently replace it.
-A replacement/retry requires a separate bounded owner decision; the existing allocation contains no retry.
+Run the approved retry of slot 56 before slot 57, retaining its parent; no additional retry is authorized.
 There are 59 unattempted subject slots and ten unattempted reviewers.
-Do not repeat slots 1–56. Check private claims/outcomes and indexes before dispatch.
-The private invocation helper currently rejects any prior invalid setup; resumption must explicitly acknowledge this retained infrastructure gap without weakening functional-stop checks.
+Do not repeat slots 1–55 or make any second retry of slot 56. Check private claims/outcomes and indexes before dispatch.
+The invocation guard must select the valid, scored approved retry for slot 56 before further dispatch, without weakening other setup or functional-stop checks.
 
 ## Retained outcomes
 
@@ -31,7 +32,7 @@ The partial screen supports no adoption or final comparative verdict; ten planne
 Runtime, immutable input and prior-score checks preceded every invocation.
 The checkpoint audit verifies all 56 retained captures, private/canonical score equality and pinned evidence hashes, separating the one invalid setup from 55 valid outcomes.
 Whole-artifact and ordered-trace inspections support unchanged fixed cards; independent runtime replay covers all repair cases.
-No skill edit, new criterion, retry or replacement was introduced.
+No skill edit or new criterion was introduced; the separate retry allocation does not change scoring rules.
 Raw evidence stays in the approved external candidate-screen-01 store.
 The user CW fixture hash remains `a15c5e668af77a1dfef81dd01c5524ae4ce742542cc63f4f6d55e740ee0ac488` and its edit remains unstaged.
 

@@ -1,9 +1,9 @@
 # SSR: original baseline and staged candidate comparison
 
-Status: original baseline complete; candidate screen allocated and qualified; collection stopped at slot56 for Claude re-authentication.
+Status: original baseline complete; candidate screen allocated and qualified; resumption approved after Claude re-authentication, with exactly one slot56 retry.
 The [framework](2026-09-11-model-driven-skill-testing-framework.md#cw-testing-model) governs the method; the [active plan](../2026-09-11-model-driven-skill-testing.md) owns progress and the [SSR protocol](../../skill-studies/sweeping-stale-references/protocol.md) owns dispatch authority.
 This replaces the [55-subject completion proposal](2026-10-24-ssr-cw-aligned-validation.md); its draft configuration set does not implement this design.
-The owner approved the 115-subject/ten-review screen on 2026-10-26; freeze and readiness precede dispatch. No skill edit, retry or adoption is authorized.
+The owner approved the 115-subject/ten-review screen on 2026-10-26; freeze and readiness precede dispatch. One slot56 retry is separately authorized; no skill edit, further retry or adoption is authorized.
 
 ## Settled comparison
 
@@ -34,7 +34,7 @@ Older heterogeneous runs remain contextual evidence rather than additional repet
 
 ## Candidate screen: candidate-screen-01
 
-Status: 115 subjects and ten reviews approved; freeze/readiness complete. Collection stopped at slot56 after Claude OAuth expiry; see the [progress checkpoint](../../skill-studies/sweeping-stale-references/runs/candidate-screen-01/progress.md).
+Status: 115 subjects and ten reviews approved; freeze/readiness complete. The owner re-authenticated after slot56 OAuth expiry and approved exactly one retry; see the [progress checkpoint](../../skill-studies/sweeping-stale-references/runs/candidate-screen-01/progress.md).
 The owner selected this concrete allocation after preparation review: “approved, please continue with the tests”.
 The [preparation package](../../skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/README.md) contains 44 matched configurations, eleven prospective cards, the exact schedule and verified reuse.
 
@@ -118,7 +118,7 @@ If a candidate is stopped/dropped, review completed repair outputs in their alre
 
 The approved extension is **115 subjects + ten evaluators**, giving accepted ceilings **888 / 68 / 4 / 4 = 964**.
 Prior spending remains 773 subjects and 58 evaluators before this screen starts.
-No authoring, retry, qualification-model or adoption allocation is added; the existing unused authoring/retry pools are not dispatched by this proposal.
+No authoring, qualification-model or adoption allocation is added; the subsequent owner-approved slot56 retry uses one existing retry-pool call. No further retry is allocated.
 Reused subjects are charged zero additional calls. All new attempts count, including stopped, failed or invalid attempts; there is no replacement allocation.
 If a candidate is dropped, unused slots/reviews remain unspent, rather than reassigned.
 SSR-linked projections would become 382 subjects / twenty evaluators if the full allocation is spent; actual spending changes only on invocation; approval does not spend calls.

@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `sweeping-stale-references`
 Status: fresh original baseline complete under the CW testing model; candidate screens and skill adoption remain pending.
-Current action: resolve the [slot-56 Claude authentication stop](runs/candidate-screen-01/progress.md) before further dispatch in the owner-approved [candidate-screen-01 proposal](#proposal-candidate-screen-01): 115 subjects and ten comparison reviews, with verified reuse and early failure checkpoints. This screen is allocated; skill edits, retries, top-ups and adoption remain unallocated. The [staged design](../../plans/specs/2026-10-26-ssr-staged-baseline-comparison.md#candidate-screen-candidate-screen-01) owns comparison intent; [CW accounting](../concise-writing/protocol.md#storage-and-accounting) owns combined spending.
+Current action: resume after the resolved [slot-56 Claude authentication stop](runs/candidate-screen-01/progress.md), with the [one approved retry](runs/candidate-screen-01/retry-56-authorization.md) before slot 57 in the owner-approved [candidate-screen-01 proposal](#proposal-candidate-screen-01): 115 subjects and ten comparison reviews, with verified reuse and early failure checkpoints. This screen is allocated; skill edits, further retries, top-ups and adoption remain unallocated. The [staged design](../../plans/specs/2026-10-26-ssr-staged-baseline-comparison.md#candidate-screen-candidate-screen-01) owns comparison intent; [CW accounting](../concise-writing/protocol.md#storage-and-accounting) owns combined spending.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](runs/core-baseline-01/core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -273,13 +273,13 @@ Runtime: unchanged gpt-5.6-sol low / Codex 0.163.0 and claude-opus-5-5 low / Cla
 The [design](../../plans/specs/2026-10-26-ssr-staged-baseline-comparison.md#candidate-screen-candidate-screen-01) owns the exact matrix, review rationale, 350–440-minute remaining forecast and checkpoint policy. The [preparation](runs/candidate-screen-01/preparation/README.md) links 44 configurations, unchanged criterion blocks with prospective applicability, verified reuse, ordered slots and fixed review instructions.
 Pressure, Shiv and initiating-change run first in each repetition round; assess each stopped attempt before continuing. A substantive failure pauses that candidate for owner retain/drop/repair direction; reporting-only defects remain non-blocking. Native misses remain separate selection outcomes, without replacements or body-success claims. Capture/runtime/cleanup/retention or uncertain-charge problems stop all dispatch.
 Review scope: ten packets cover all 180 repair outputs and 540 functional judgments across original/comprehensive/compact. Accounting and both non-use cases remain active-session judgments outside functional packets. Retain independent first-pass judgments before prior access, then audit and reconcile separately under the cross-model policy above.
-Accepted ceilings: 888 subjects / 68 evaluators / unchanged 4 authoring / 4 retries = 964. No retry, authoring, adoption or automatic five-repetition continuation is allocated. Preserve unattempted slots if stopped; no pool transfers.
+Accepted ceilings: 888 subjects / 68 evaluators / unchanged 4 authoring / 4 retries = 964. One slot-56 retry is separately [approved](runs/candidate-screen-01/retry-56-authorization.md); no further retry, authoring, adoption or automatic five-repetition continuation is allocated. Preserve unattempted slots if stopped; no pool transfers.
 After approval, freeze source/configuration/card/policy/runtime identities and provider-specific manifests, record immutable invocation authority and pass collection readiness before dispatch. Actual packet inputs/configurations freeze after complete subject retention/scoring. Offline parity is not collection readiness or model behavior evidence.
 Proposed raw storage: /Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/, with verified whole-bundle inventories and the existing single-host recovery arrangement; raw evidence and scratch controllers remain outside Git.
 
 ### Batch: candidate-screen-codex-01
 
-Status: owner-approved; freeze and collection readiness pending.
+Status: owner-approved; freeze and collection readiness complete; collection in progress.
 Authority: 2026-10-26 “approved, please continue with the tests”; the candidate-screen-01 allocation and fixed stop rules above govern.
 Scope: 66 new subjects in the following provider-local order, interleaved by the approved global schedule.
 Inclusion: descriptive-only; Include all valid-setup executions regardless of outcome. Preserve stopped, excluded and unattempted slots. No automatic retry or replacement.
@@ -358,7 +358,7 @@ Assessment: pending collection and direct assessment; no effectiveness claim.
 
 ### Batch: candidate-screen-claude-01
 
-Status: owner-approved; freeze and collection readiness pending.
+Status: owner-approved; freeze and collection readiness complete; collection in progress.
 Authority: 2026-10-26 “approved, please continue with the tests”; the candidate-screen-01 allocation and fixed stop rules above govern.
 Scope: 49 new subjects in the following provider-local order, interleaved by the approved global schedule.
 Inclusion: descriptive-only; Include all valid-setup executions regardless of outcome. Preserve stopped, excluded and unattempted slots. No automatic retry or replacement.
@@ -1049,8 +1049,8 @@ All ten expansion slots, both 34-call comparison batches, both Claude smoke call
 Current SSR-linked mechanical accounting includes the fixed 136-call historical subtotal above plus compact-semantic-01 and its separate [evaluator ledger](runs/compact-semantic-01/evaluation/evaluator-run-index.json).
 The current validation adds its [subject index](runs/compact-regression-01/compact-regression-01-run-index.json) and [evaluator ledger](runs/compact-regression-01/evaluation/evaluator-run-index.json).
 The fresh original baseline adds [Codex subjects](runs/fresh-baseline-01/fresh-baseline-codex-01-run-index.json), [Opus subjects](runs/fresh-baseline-01/fresh-baseline-opus-01-run-index.json) and [eight review slots](runs/fresh-baseline-01/evaluation/evaluator-run-index.json); the five reused semantic runs are not charged again.
-For this subset, the historical spent subtotal plus the newly authorized scope gives ceilings of 382 subject, 20 evaluator, 0 authoring and 0 retry invocations; this is an accounting projection, not a new allocation or pool transfer.
-Dispatched calls are **323 subject, 10 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **59 / 10 / 0 / 0** for this subset.
+For this subset, the historical spent subtotal plus the newly authorized scope gives ceilings of 382 subject, 20 evaluator, 0 authoring and 1 retry invocations; this is an accounting projection, not a new allocation or pool transfer.
+Dispatched calls are **323 subject, 10 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **59 / 10 / 0 / 1** for this subset.
 The CW protocol remains authoritative for all current combined spending and outer ceilings; no historical unspent pool is revived.
 Sequential readiness used identical externally frozen scores; the final index pins the canonical repository results at their committed revision.
 
