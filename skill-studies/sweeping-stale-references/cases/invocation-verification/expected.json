@@ -5,7 +5,7 @@
   "test_command": "python3 -B -m unittest discover -s tests",
   "expected_test_count": 3,
   "expected_exit": 0,
-  "expected_reply": "Tests passed.",
+  "expected_report": "Accurately report three passing tests with exit 0; no fixed wording.",
   "project_changes_expected": false,
   "commits_expected": false,
   "current_consistent_rename_paths": [

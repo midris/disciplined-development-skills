@@ -20,7 +20,8 @@ Require valid input identities, complete capture and actual availability/deliver
 
 Apply SSR-assessment-3 and the criterion text below, inherited from [moved-guide.md](../../../compact-regression-01/preparation/criteria/moved-guide.md).
 This metadata version changes no criterion meaning, case-specific counting unit, valid alternative or failure consequence.
-Finalist follows the accepted comprehensive positive-inventory branch in local-change.
+For local-change, finalist follows the existing Candidate P3 branch: any outside-file mutable match requires a positive inventory, including already-current or unrelated matches.
+Other cases retain their own fixed accounting units; do not import semantic-delivery's four-block count.
 Inspect full final projects, preserved meanings, traces and committed state; deterministic facts do not establish semantic correctness.
 
 ## Criteria

@@ -23,8 +23,8 @@ Require qualified catalog/description availability, exact task/project/skill byt
 ## Rules and evidence
 
 Apply SSR-assessment-3's separation of setup, procedure and functional results.
-D1 is the sole criterion and functional outcome is **not measured**; test execution, fixed reply and project/history preservation are descriptive task observations.
-Expected observation: three existing tests pass with exit 0, reply `Tests passed.`, all supplied project bytes unchanged and no commit.
+D1 is the sole criterion and functional outcome is **not measured**; test execution, result-report accuracy and project/history preservation are descriptive task observations.
+Expected observation: three existing tests pass with exit 0, an accurate passing-test report, all supplied project bytes unchanged and no commit.
 Use a disposable copy to verify baseline test feasibility; inspect the subject's actual command/result/response rather than treating the controller replay as subject work.
 
 This new card adopts CW's body-delivery-based non-use question prospectively.
@@ -51,5 +51,7 @@ Overlap: a single surplus-load episode can include invocation, reading and sweep
 ## Limits
 
 This tests one plausible adjacent verification task, not all negative triggers or selection among a full competing skill catalog.
+The task and wrapper contain no repair/commit prohibition or fixed reply, so explicit restrictions cannot explain non-use; the completed-rename context may still make this an easy negative.
+Report success as bounded non-use evidence, not proof that the description caused the choice or that harder boundaries are covered.
 It does not declare a small or single-file edit outside SSR's scope, and it is not a read-only reference proposal, which SSR expressly supports.
 Five fresh observations per provider are descriptive, with no universal false-positive or reliability estimate.

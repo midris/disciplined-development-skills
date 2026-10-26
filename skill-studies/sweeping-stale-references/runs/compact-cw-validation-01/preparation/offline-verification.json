@@ -146,5 +146,25 @@
     "extension": 5,
     "proposed_ceiling": 55
   },
-  "proposed_total_ceiling": 786
+  "proposed_total_ceiling": 786,
+  "inherited_wrapper_interpretations": "all six cards retain the outside-file/already-current rule and separate per-case accounting units",
+  "negative_task_inputs": [
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/invocation-verification/task.md",
+      "sha256": "06edb9664ded32b484440efc89201d7cbf1ea4a780020f7b5d318cae43cf4ec5"
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/compact-cw-validation-01/preparation/prompts/native-verification.md",
+      "sha256": "0da8a80be29d169ae907c8eb90ba8660d79f8375c7c3aa706f9a6d0c91d2f8bf"
+    }
+  ],
+  "output_review_scope": {
+    "packets": 5,
+    "repair_outputs": 55,
+    "functional_judgments": 165,
+    "negative_outputs": 0
+  },
+  "native_application_scope": "only confirmed timely full-body delivery supports finalist application; missing explicit Codex initiating-change cell declared",
+  "general_execution_rules": "all four general paragraphs remain outside the proposal subsection",
+  "new_fixture_provenance": "all nine source/fixture identities match"
 }

@@ -257,6 +257,12 @@ An explicit sweep request is a different execution-quality question and cannot e
 
 The prepared original/control configurations retain Codex Sol-low with workspace-write. Configurations and manifests own exact settings and source identities; do not silently pool different models or changed rules.
 
+SSR collection used config schema 0.2 and result schema 0.4; retained bundles keep their emitted versions. The current runner contract is documented in the runner guide below. It prepares a fresh Git boundary, invokes once and captures mechanical completion plus evidence; it does not decide task success.
+[Runner mechanics](../../skill-validation/runner/README.md) and [retained pilot reports](#results-and-decision) establish the available execution path. Recheck changed CLI/runtime/context assumptions before relying on them; directory separation alone does not prove read isolation.
+Control contribution claims require evidence that omitted guidance was not loaded. Record limits on observed isolation rather than claiming exhaustive host-wide exclusion.
+
+Pre-baseline development is closed at two pairs. Do not reopen it for a new facet; a named readiness defect requires a separately authorized diagnostic exception.
+
 ### Proposal: compact-cw-validation-01
 
 Status: proposed; offline preparation passed, with collection approval, final freeze and readiness pending.
@@ -264,11 +270,6 @@ The owner requested creation of the [CW-aligned proposal](../../plans/specs/2026
 Recommended scope: 55 new subjects and five output reviews, with ten matching Opus repairs reused under exact identity/inventory checks; [draft preparation](runs/compact-cw-validation-01/preparation/README.md) contains configurations, criteria mapping and the fixed order.
 The proposal owns the prospective matrix, smaller alternative, review packets, stopping/decision rules, effort forecast and requested ceiling extension; current ceilings/spending remain unchanged.
 No candidate edit, dispatch, automatic retry or adoption is selected. The next owner decision is the allocation and its declared limits.
-SSR collection used config schema 0.2 and result schema 0.4; retained bundles keep their emitted versions. The current runner contract is documented in the runner guide below. It prepares a fresh Git boundary, invokes once and captures mechanical completion plus evidence; it does not decide task success.
-[Runner mechanics](../../skill-validation/runner/README.md) and [retained pilot reports](#results-and-decision) establish the available execution path. Recheck changed CLI/runtime/context assumptions before relying on them; directory separation alone does not prove read isolation.
-Control contribution claims require evidence that omitted guidance was not loaded. Record limits on observed isolation rather than claiming exhaustive host-wide exclusion.
-
-Pre-baseline development is closed at two pairs. Do not reopen it for a new facet; a named readiness defect requires a separately authorized diagnostic exception.
 
 ### Compact rewrite preparation
 
