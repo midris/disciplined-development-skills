@@ -1,0 +1,146 @@
+{
+  "format_version": "1",
+  "manifest_id": "ssr-screen-codex-large-sweep-account",
+  "study_id": "sweeping-stale-references",
+  "case_id": "large-sweep-account",
+  "status": "draft",
+  "created_at": "2026-10-26",
+  "source_revision": "",
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "a4038836187dcf16649e8f3ab91d2f5c120e319ce949e932a5627519ea9c2266",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/sweeping-stale-references/protocol.md",
+      "sha256": "c6fbf4a365ea5aa86bc871a6eef3a7ec6e741a669109ff88ef225b314a9ca043",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "f54cb58884f9dbffd39f37746234487d6113e1f01ad3b1d355fe269310895321",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result-v2.schema.json",
+      "sha256": "81902ed03e807804404c0d6ba7a0092a1c311c9eef45ee88c89708ce50d7c2c2",
+      "version": "2"
+    },
+    "policy": {
+      "path": "skill-studies/sweeping-stale-references/assessment-policies/SSR-assessment-3.txt",
+      "sha256": "5d057d11f678ae3fa63c48957446aded13ccc5dcb8babab2856d0232d49e08bb",
+      "version": "SSR-assessment-3"
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/criteria/large-sweep-account.md",
+        "sha256": "10d2a746a37e21db3b192c60c48b00a7d9367031ee7e2871a74b4d3456975f1f",
+        "version": "3"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "original",
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-large-sweep-account.json",
+        "sha256": "8287112c180089031a8d249cb7a62159d9df2b8ceae8e46cbb8739cb83d4dcca",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/sweeping-stale-references/cases/skill-original/SKILL.md"
+    },
+    {
+      "id": "candidate",
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-large-sweep-account-candidate.json",
+        "sha256": "974a2d499a6cf916ac663991bb8bb1d78cdb3d79aa9559acf8286be937dbdf25",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/sweeping-stale-references/cases/skill-candidate-comprehensive/SKILL.md"
+    },
+    {
+      "id": "finalist",
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-large-sweep-account-finalist.json",
+        "sha256": "58bf1602b705a8bdca1f6da03074216d6a16e3313a8909b7c23b8bb1dbb543f0",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/sweeping-stale-references/drafts/compact-rewrite/finalist/SKILL.md"
+    }
+  ],
+  "subject_sources": [
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/large-sweep-account/fixture/inventory.md",
+      "sha256": "b566e44540f768e6138a42b4651f43ba64937464b248f3db2f7073a10cae6df1",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/large-sweep-account/task.md",
+      "sha256": "525d39ced36acfd15d3656dd59701c5e4d5d75918ed1f2a657593e290f614170",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/skill-candidate-comprehensive/SKILL.md",
+      "sha256": "15992341f7ab2fb1e4d8a775092199d7d4e6a9de1167895dbe5a805aeafbd38c",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/skill-original/SKILL.md",
+      "sha256": "d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/drafts/compact-rewrite/finalist/SKILL.md",
+      "sha256": "f1f297f213855f9b53835dd084b2be6d3d9134cadab47babea08cbdaad9a205e",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/prompts/codex-large-sweep-account.md",
+      "sha256": "2f738adcdca13d815e723ffb3dfa413fd0bebf32f9b6aef15462cb319d45c2e8",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/prompts/codex-large-sweep-account.md",
+      "sha256": "2f738adcdca13d815e723ffb3dfa413fd0bebf32f9b6aef15462cb319d45c2e8",
+      "version": null
+    }
+  ],
+  "controller_only": [
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/runtime-identities.json",
+      "sha256": "8e928952ea58e5298b55d0343093760b681cf0b4429c3bd7fdcff93980f3714b",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/schedule.json",
+      "sha256": "8f85389fd56be8f4279175da4ab69868d78f9f424cd500562f03711c4cabd89e",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/interpretation.md",
+      "sha256": "5c817354ca47e8bda3dc94c572237e08deb4307067ba4155f52ded6d4002ff1f",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/README.md",
+      "sha256": "352dc5ab6af68cfa0e51c535110c93edb0de905e9093a3c10685bdb8cea56b55",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/reuse.json",
+      "sha256": "60b8f39f1a4d1e08645ead2fb4fdaf862a340522a7afa42cad03de0beac1f2f3",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/criteria-index.json",
+      "sha256": "dd820ea16e21eb0d334c3f259068849ec58b9ae3ab9f72b74dcb555ecc750959",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/skill-identities.json",
+      "sha256": "545fa8b6ae39a315ffd4a5c1dd920cbd52c75e75786c709216cf53c0ca1ab4f9",
+      "version": null
+    }
+  ]
+}

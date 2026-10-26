@@ -1,6 +1,6 @@
 # Candidate screen preparation
 
-Status: prepared proposal; no model runs or skill edits authorized.
+Status: owner-approved 115-subject/ten-review allocation; freeze and readiness precede model runs. No skill edits authorized.
 The [design](../../../../../plans/specs/2026-10-26-ssr-staged-baseline-comparison.md#candidate-screen-candidate-screen-01) owns the matrix and decision rules; the [protocol proposal](../../../protocol.md#proposal-candidate-screen-01) owns prospective dispatch scope.
 The active plan owns progress. These draft inputs are not frozen collection manifests.
 
@@ -13,7 +13,7 @@ The active plan owns progress. These draft inputs are not frozen collection mani
 - [Review scope](../evaluation/packet-plan.json) and [prompt](../evaluation/prompt.md): ten complete-output comparison reviews, 180 repair outputs and 540 functional judgments. Accounting and non-use remain active trace judgments.
 - [Offline verification](offline-verification.json): configuration loading, parity, criterion-block equality, inventories/capture/results, matrix/packet arithmetic and preserved user bytes. This establishes preparation mechanics, not native selection or model behavior.
 
-After owner selection, record the approved ceiling/scope in the protocol; commit source inputs, prepare provider-specific manifests with both candidate conditions, record immutable invocation authority and pass collection readiness before any subject starts.
+Approval and ceilings are recorded in the protocol; commit source inputs, prepare provider-specific manifests with both candidate conditions, record immutable invocation authority and pass collection readiness before any subject starts.
 Follow the existing fresh-baseline runner path: call `runtime_setup.install()` from the identified unchanged wrapper, then `skilltest.runner.run_once` with the slot configuration, a fresh private run root outside HOME and a 900-second timeout.
 Use `skilltest docs retain` against the approved protocol/provider batch, declared order, immutable revision and external store after each stopped attempt; inspect capture/setup and write its canonical execution result before the next dispatch.
 A private controller may reproduce the existing invocation/retention glue; it must not add slots, model calls, scoring logic or runtime grants.
@@ -24,6 +24,8 @@ Freeze each review packet's complete source/final projects, cards/policy/neutral
 Use the qualified read-only native reader transport; priors remain a separately named input, unread until a complete independent first-pass message is retained.
 Audit full semantic delivery, every factor, access timing, actual tools/model and protected hashes; reconcile separately. If packet size or native binary rendering prevents the required conclusion, retain the limitation and stop for a scope decision; do not trim projects or add an automatic review call.
 
-Raw storage, once selected: `/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/` under the existing single-host recovery arrangement.
+Approved raw storage: `/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/` under the existing single-host recovery arrangement.
 No raw transcript, scratch controller or subject workspace belongs in Git.
 The [preparation review](review.md) records active-session review only; no fresh model reviewer was dispatched under the exhausted evaluator allocation.
+
+Freeze note: manifests include the retained original configuration because shared cards name all three conditions. Only candidate/finalist rows in the approved dispatch tables authorize new attempts; original is reference-only. Proposal-era card status text is preserved as preparation provenance; the current protocol owns approval.

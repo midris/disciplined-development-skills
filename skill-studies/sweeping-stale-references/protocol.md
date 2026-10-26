@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `sweeping-stale-references`
 Status: fresh original baseline complete under the CW testing model; candidate screens and skill adoption remain pending.
-Current action: owner selection of the prepared [candidate-screen-01 proposal](#proposal-candidate-screen-01): 115 subjects and ten comparison reviews, with verified reuse and early failure checkpoints. Candidate screens, edits, retries and adoption remain unallocated. The [staged design](../../plans/specs/2026-10-26-ssr-staged-baseline-comparison.md#candidate-screen-candidate-screen-01) owns comparison intent; [CW accounting](../concise-writing/protocol.md#storage-and-accounting) owns combined spending.
+Current action: execute the owner-approved [candidate-screen-01 proposal](#proposal-candidate-screen-01): 115 subjects and ten comparison reviews, with verified reuse and early failure checkpoints. This screen is allocated; skill edits, retries, top-ups and adoption remain unallocated. The [staged design](../../plans/specs/2026-10-26-ssr-staged-baseline-comparison.md#candidate-screen-candidate-screen-01) owns comparison intent; [CW accounting](../concise-writing/protocol.md#storage-and-accounting) owns combined spending.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](runs/core-baseline-01/core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -265,17 +265,158 @@ Pre-baseline development is closed at two pairs. Do not reopen it for a new face
 
 ### Proposal: candidate-screen-01
 
-Status: prepared for owner selection; not dispatch authority.
-The owner authorized proposal preparation after fresh-baseline-01; no new model run follows until this concrete scope is selected.
+Status: owner-approved allocation; source/manifests freeze and collection readiness precede dispatch.
+Owner authority, 2026-10-26: “approved, please continue with the tests”, approving the prepared 115-subject/ten-review allocation and its fixed early-stop rules.
 Proposed scope: all eleven cases on current Codex/Opus for both unchanged rewrites, initially three observations per cell, retaining five completed Opus semantic observations per version. Original remains the fixed 110-observation baseline.
 New calls: 63 comprehensive subjects and 52 compact subjects, plus ten Opus-medium complete-output comparison reviews. Reuse 21 matching candidate observations without charging again; all 131 retained original/candidate inventories and scored identities verified offline.
 Runtime: unchanged gpt-5.6-sol low / Codex 0.163.0 and claude-opus-5-5 low / Claude 2.1.308, workspace-write, 900 seconds; reviewers use qualified read-only native Read/Glob/Grep, skills disabled, Opus medium, 900 seconds.
 The [design](../../plans/specs/2026-10-26-ssr-staged-baseline-comparison.md#candidate-screen-candidate-screen-01) owns the exact matrix, review rationale, 350–440-minute remaining forecast and checkpoint policy. The [preparation](runs/candidate-screen-01/preparation/README.md) links 44 configurations, unchanged criterion blocks with prospective applicability, verified reuse, ordered slots and fixed review instructions.
 Pressure, Shiv and initiating-change run first in each repetition round; assess each stopped attempt before continuing. A substantive failure pauses that candidate for owner retain/drop/repair direction; reporting-only defects remain non-blocking. Native misses remain separate selection outcomes, without replacements or body-success claims. Capture/runtime/cleanup/retention or uncertain-charge problems stop all dispatch.
 Review scope: ten packets cover all 180 repair outputs and 540 functional judgments across original/comprehensive/compact. Accounting and both non-use cases remain active-session judgments outside functional packets. Retain independent first-pass judgments before prior access, then audit and reconcile separately under the cross-model policy above.
-Proposed ceilings: 888 subjects / 68 evaluators / unchanged 4 authoring / 4 retries = 964; current accepted 773/58 ceilings remain unchanged. No retry, authoring, adoption or automatic five-repetition continuation is allocated. Preserve unattempted slots if stopped; no pool transfers.
+Accepted ceilings: 888 subjects / 68 evaluators / unchanged 4 authoring / 4 retries = 964. No retry, authoring, adoption or automatic five-repetition continuation is allocated. Preserve unattempted slots if stopped; no pool transfers.
 After approval, freeze source/configuration/card/policy/runtime identities and provider-specific manifests, record immutable invocation authority and pass collection readiness before dispatch. Actual packet inputs/configurations freeze after complete subject retention/scoring. Offline parity is not collection readiness or model behavior evidence.
 Proposed raw storage: /Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/, with verified whole-bundle inventories and the existing single-host recovery arrangement; raw evidence and scratch controllers remain outside Git.
+
+### Batch: candidate-screen-codex-01
+
+Status: owner-approved; freeze and collection readiness pending.
+Authority: 2026-10-26 “approved, please continue with the tests”; the candidate-screen-01 allocation and fixed stop rules above govern.
+Scope: 66 new subjects in the following provider-local order, interleaved by the approved global schedule.
+Inclusion: descriptive-only; Include all valid-setup executions regardless of outcome. Preserve stopped, excluded and unattempted slots. No automatic retry or replacement.
+Selected manifests: [discovery-shiv](runs/candidate-screen-01/preparation/manifests/codex-discovery-shiv-manifest.json), [initiating-change](runs/candidate-screen-01/preparation/manifests/codex-initiating-change-manifest.json), [invocation-change](runs/candidate-screen-01/preparation/manifests/codex-invocation-change-manifest.json), [invocation-review](runs/candidate-screen-01/preparation/manifests/codex-invocation-review-manifest.json), [invocation-unrelated](runs/candidate-screen-01/preparation/manifests/codex-invocation-unrelated-manifest.json), [invocation-verification](runs/candidate-screen-01/preparation/manifests/codex-invocation-verification-manifest.json), [large-sweep-account](runs/candidate-screen-01/preparation/manifests/codex-large-sweep-account-manifest.json), [local-change](runs/candidate-screen-01/preparation/manifests/codex-local-change-manifest.json), [moved-guide](runs/candidate-screen-01/preparation/manifests/codex-moved-guide-manifest.json), [pressure-repair](runs/candidate-screen-01/preparation/manifests/codex-pressure-repair-manifest.json), [semantic-delivery](runs/candidate-screen-01/preparation/manifests/codex-semantic-delivery-manifest.json).
+Attempt index: [candidate-screen-codex-01-run-index.json](runs/candidate-screen-01/candidate-screen-codex-01-run-index.json).
+Assessment: pending collection and direct assessment; no effectiveness claim.
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | pressure-repair | candidate | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-pressure-repair-candidate.json` |
+| 2 | pressure-repair | finalist | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-pressure-repair-finalist.json` |
+| 3 | discovery-shiv | finalist | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-discovery-shiv-finalist.json` |
+| 4 | discovery-shiv | candidate | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-discovery-shiv-candidate.json` |
+| 5 | initiating-change | candidate | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-initiating-change-candidate.json` |
+| 6 | initiating-change | finalist | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-initiating-change-finalist.json` |
+| 7 | invocation-change | finalist | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-change-finalist.json` |
+| 8 | invocation-change | candidate | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-change-candidate.json` |
+| 9 | invocation-review | candidate | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-review-candidate.json` |
+| 10 | invocation-review | finalist | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-review-finalist.json` |
+| 11 | invocation-verification | finalist | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-verification-finalist.json` |
+| 12 | invocation-verification | candidate | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-verification-candidate.json` |
+| 13 | local-change | candidate | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-local-change-candidate.json` |
+| 14 | local-change | finalist | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-local-change-finalist.json` |
+| 15 | moved-guide | finalist | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-moved-guide-finalist.json` |
+| 16 | moved-guide | candidate | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-moved-guide-candidate.json` |
+| 17 | semantic-delivery | candidate | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-semantic-delivery-candidate.json` |
+| 18 | semantic-delivery | finalist | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-semantic-delivery-finalist.json` |
+| 19 | large-sweep-account | finalist | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-large-sweep-account-finalist.json` |
+| 20 | large-sweep-account | candidate | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-large-sweep-account-candidate.json` |
+| 21 | invocation-unrelated | candidate | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-unrelated-candidate.json` |
+| 22 | invocation-unrelated | finalist | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-unrelated-finalist.json` |
+| 23 | pressure-repair | finalist | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-pressure-repair-finalist.json` |
+| 24 | pressure-repair | candidate | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-pressure-repair-candidate.json` |
+| 25 | discovery-shiv | candidate | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-discovery-shiv-candidate.json` |
+| 26 | discovery-shiv | finalist | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-discovery-shiv-finalist.json` |
+| 27 | initiating-change | finalist | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-initiating-change-finalist.json` |
+| 28 | initiating-change | candidate | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-initiating-change-candidate.json` |
+| 29 | invocation-change | candidate | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-change-candidate.json` |
+| 30 | invocation-change | finalist | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-change-finalist.json` |
+| 31 | invocation-review | finalist | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-review-finalist.json` |
+| 32 | invocation-review | candidate | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-review-candidate.json` |
+| 33 | invocation-verification | candidate | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-verification-candidate.json` |
+| 34 | invocation-verification | finalist | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-verification-finalist.json` |
+| 35 | local-change | finalist | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-local-change-finalist.json` |
+| 36 | local-change | candidate | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-local-change-candidate.json` |
+| 37 | moved-guide | candidate | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-moved-guide-candidate.json` |
+| 38 | moved-guide | finalist | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-moved-guide-finalist.json` |
+| 39 | semantic-delivery | finalist | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-semantic-delivery-finalist.json` |
+| 40 | semantic-delivery | candidate | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-semantic-delivery-candidate.json` |
+| 41 | large-sweep-account | candidate | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-large-sweep-account-candidate.json` |
+| 42 | large-sweep-account | finalist | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-large-sweep-account-finalist.json` |
+| 43 | invocation-unrelated | finalist | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-unrelated-finalist.json` |
+| 44 | invocation-unrelated | candidate | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-unrelated-candidate.json` |
+| 45 | pressure-repair | candidate | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-pressure-repair-candidate.json` |
+| 46 | pressure-repair | finalist | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-pressure-repair-finalist.json` |
+| 47 | discovery-shiv | finalist | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-discovery-shiv-finalist.json` |
+| 48 | discovery-shiv | candidate | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-discovery-shiv-candidate.json` |
+| 49 | initiating-change | candidate | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-initiating-change-candidate.json` |
+| 50 | initiating-change | finalist | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-initiating-change-finalist.json` |
+| 51 | invocation-change | finalist | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-change-finalist.json` |
+| 52 | invocation-change | candidate | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-change-candidate.json` |
+| 53 | invocation-review | candidate | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-review-candidate.json` |
+| 54 | invocation-review | finalist | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-review-finalist.json` |
+| 55 | invocation-verification | finalist | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-verification-finalist.json` |
+| 56 | invocation-verification | candidate | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-verification-candidate.json` |
+| 57 | local-change | candidate | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-local-change-candidate.json` |
+| 58 | local-change | finalist | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-local-change-finalist.json` |
+| 59 | moved-guide | finalist | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-moved-guide-finalist.json` |
+| 60 | moved-guide | candidate | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-moved-guide-candidate.json` |
+| 61 | semantic-delivery | candidate | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-semantic-delivery-candidate.json` |
+| 62 | semantic-delivery | finalist | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-semantic-delivery-finalist.json` |
+| 63 | large-sweep-account | finalist | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-large-sweep-account-finalist.json` |
+| 64 | large-sweep-account | candidate | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-large-sweep-account-candidate.json` |
+| 65 | invocation-unrelated | candidate | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-unrelated-candidate.json` |
+| 66 | invocation-unrelated | finalist | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/codex-invocation-unrelated-finalist.json` |
+
+### Batch: candidate-screen-claude-01
+
+Status: owner-approved; freeze and collection readiness pending.
+Authority: 2026-10-26 “approved, please continue with the tests”; the candidate-screen-01 allocation and fixed stop rules above govern.
+Scope: 49 new subjects in the following provider-local order, interleaved by the approved global schedule.
+Inclusion: descriptive-only; Include all valid-setup executions regardless of outcome. Preserve stopped, excluded and unattempted slots. No automatic retry or replacement.
+Selected manifests: [discovery-shiv](runs/candidate-screen-01/preparation/manifests/claude-discovery-shiv-manifest.json), [initiating-change](runs/candidate-screen-01/preparation/manifests/claude-initiating-change-manifest.json), [invocation-change](runs/candidate-screen-01/preparation/manifests/claude-invocation-change-manifest.json), [invocation-review](runs/candidate-screen-01/preparation/manifests/claude-invocation-review-manifest.json), [invocation-unrelated](runs/candidate-screen-01/preparation/manifests/claude-invocation-unrelated-manifest.json), [invocation-verification](runs/candidate-screen-01/preparation/manifests/claude-invocation-verification-manifest.json), [large-sweep-account](runs/candidate-screen-01/preparation/manifests/claude-large-sweep-account-manifest.json), [local-change](runs/candidate-screen-01/preparation/manifests/claude-local-change-manifest.json), [moved-guide](runs/candidate-screen-01/preparation/manifests/claude-moved-guide-manifest.json), [pressure-repair](runs/candidate-screen-01/preparation/manifests/claude-pressure-repair-manifest.json).
+Attempt index: [candidate-screen-claude-01-run-index.json](runs/candidate-screen-01/candidate-screen-claude-01-run-index.json).
+Assessment: pending collection and direct assessment; no effectiveness claim.
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | pressure-repair | candidate | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-pressure-repair-candidate.json` |
+| 2 | pressure-repair | finalist | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-pressure-repair-finalist.json` |
+| 3 | discovery-shiv | finalist | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-discovery-shiv-finalist.json` |
+| 4 | discovery-shiv | candidate | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-discovery-shiv-candidate.json` |
+| 5 | initiating-change | candidate | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-initiating-change-candidate.json` |
+| 6 | invocation-change | candidate | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-change-candidate.json` |
+| 7 | invocation-review | candidate | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-review-candidate.json` |
+| 8 | invocation-verification | finalist | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-verification-finalist.json` |
+| 9 | invocation-verification | candidate | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-verification-candidate.json` |
+| 10 | local-change | candidate | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-local-change-candidate.json` |
+| 11 | moved-guide | candidate | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-moved-guide-candidate.json` |
+| 12 | large-sweep-account | finalist | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-large-sweep-account-finalist.json` |
+| 13 | large-sweep-account | candidate | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-large-sweep-account-candidate.json` |
+| 14 | invocation-unrelated | candidate | 1 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-unrelated-candidate.json` |
+| 15 | pressure-repair | finalist | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-pressure-repair-finalist.json` |
+| 16 | pressure-repair | candidate | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-pressure-repair-candidate.json` |
+| 17 | discovery-shiv | candidate | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-discovery-shiv-candidate.json` |
+| 18 | discovery-shiv | finalist | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-discovery-shiv-finalist.json` |
+| 19 | initiating-change | candidate | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-initiating-change-candidate.json` |
+| 20 | invocation-change | candidate | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-change-candidate.json` |
+| 21 | invocation-review | candidate | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-review-candidate.json` |
+| 22 | invocation-verification | candidate | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-verification-candidate.json` |
+| 23 | invocation-verification | finalist | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-verification-finalist.json` |
+| 24 | local-change | candidate | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-local-change-candidate.json` |
+| 25 | moved-guide | candidate | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-moved-guide-candidate.json` |
+| 26 | large-sweep-account | candidate | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-large-sweep-account-candidate.json` |
+| 27 | large-sweep-account | finalist | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-large-sweep-account-finalist.json` |
+| 28 | invocation-unrelated | finalist | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-unrelated-finalist.json` |
+| 29 | invocation-unrelated | candidate | 2 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-unrelated-candidate.json` |
+| 30 | pressure-repair | candidate | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-pressure-repair-candidate.json` |
+| 31 | pressure-repair | finalist | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-pressure-repair-finalist.json` |
+| 32 | discovery-shiv | finalist | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-discovery-shiv-finalist.json` |
+| 33 | discovery-shiv | candidate | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-discovery-shiv-candidate.json` |
+| 34 | initiating-change | candidate | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-initiating-change-candidate.json` |
+| 35 | initiating-change | finalist | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-initiating-change-finalist.json` |
+| 36 | invocation-change | finalist | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-change-finalist.json` |
+| 37 | invocation-change | candidate | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-change-candidate.json` |
+| 38 | invocation-review | candidate | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-review-candidate.json` |
+| 39 | invocation-review | finalist | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-review-finalist.json` |
+| 40 | invocation-verification | finalist | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-verification-finalist.json` |
+| 41 | invocation-verification | candidate | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-verification-candidate.json` |
+| 42 | local-change | candidate | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-local-change-candidate.json` |
+| 43 | local-change | finalist | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-local-change-finalist.json` |
+| 44 | moved-guide | finalist | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-moved-guide-finalist.json` |
+| 45 | moved-guide | candidate | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-moved-guide-candidate.json` |
+| 46 | large-sweep-account | finalist | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-large-sweep-account-finalist.json` |
+| 47 | large-sweep-account | candidate | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-large-sweep-account-candidate.json` |
+| 48 | invocation-unrelated | candidate | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-unrelated-candidate.json` |
+| 49 | invocation-unrelated | finalist | 3 | `skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/configs/claude-invocation-unrelated-finalist.json` |
 
 ### Batch: fresh-baseline-codex-01
 

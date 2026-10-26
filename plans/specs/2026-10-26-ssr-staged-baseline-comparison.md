@@ -1,9 +1,9 @@
 # SSR: original baseline and staged candidate comparison
 
-Status: original baseline complete; candidate screen prepared, allocation pending.
+Status: original baseline complete; candidate screen allocated; collection readiness pending.
 The [framework](2026-09-11-model-driven-skill-testing-framework.md#cw-testing-model) governs the method; the [active plan](../2026-09-11-model-driven-skill-testing.md) owns progress and the [SSR protocol](../../skill-studies/sweeping-stale-references/protocol.md) owns dispatch authority.
 This replaces the [55-subject completion proposal](2026-10-24-ssr-cw-aligned-validation.md); its draft configuration set does not implement this design.
-No candidate call, skill edit, retry or adoption is authorized.
+The owner approved the 115-subject/ten-review screen on 2026-10-26; freeze and readiness precede dispatch. No skill edit, retry or adoption is authorized.
 
 ## Settled comparison
 
@@ -34,8 +34,8 @@ Older heterogeneous runs remain contextual evidence rather than additional repet
 
 ## Candidate screen: candidate-screen-01
 
-Status: preparation complete; 115 subjects and ten reviews proposed, no dispatch allocation.
-The owner authorized preparing this scope after baseline closure; collection still requires selection of this concrete allocation under the protocol.
+Status: 115 subjects and ten reviews approved; freeze and readiness pending.
+The owner selected this concrete allocation after preparation review: “approved, please continue with the tests”.
 The [preparation package](../../skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/README.md) contains 44 matched configurations, eleven prospective cards, the exact schedule and verified reuse.
 
 ### Matrix and reuse
@@ -116,12 +116,12 @@ If a candidate is stopped/dropped, review completed repair outputs in their alre
 
 ### Allocation, effort and checkpoint
 
-Current accepted ceilings remain **773 subjects / 58 evaluators / 4 authoring / 4 retries = 839**; the subject and evaluator capacity is spent.
-The proposed extension is **115 subjects + ten evaluators**, giving ceilings **888 / 68 / 4 / 4 = 964**.
+The approved extension is **115 subjects + ten evaluators**, giving accepted ceilings **888 / 68 / 4 / 4 = 964**.
+Prior spending remains 773 subjects and 58 evaluators before this screen starts.
 No authoring, retry, qualification-model or adoption allocation is added; the existing unused authoring/retry pools are not dispatched by this proposal.
 Reused subjects are charged zero additional calls. All new attempts count, including stopped, failed or invalid attempts; there is no replacement allocation.
 If a candidate is dropped, unused slots/reviews remain unspent, rather than reassigned.
-SSR-linked projections would become 382 subjects / twenty evaluators if the full allocation is spent; current accounting stays unchanged until owner approval and actual invocations.
+SSR-linked projections would become 382 subjects / twenty evaluators if the full allocation is spent; actual spending changes only on invocation; approval does not spend calls.
 
 Remaining execution forecast, excluding this separately booked preparation: **350–440 active minutes**.
 
