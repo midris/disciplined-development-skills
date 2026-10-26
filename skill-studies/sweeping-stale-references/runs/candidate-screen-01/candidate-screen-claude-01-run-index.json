@@ -1059,6 +1059,390 @@
           "version": "2"
         }
       }
+    },
+    {
+      "attempt_id": "candidate-screen-claude-01-invocation-verification-candidate-2-2",
+      "case_id": "invocation-verification",
+      "condition": "candidate",
+      "repetition": 2,
+      "attempt_number": 2,
+      "retry_of": "candidate-screen-claude-01-invocation-verification-candidate-2-1",
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/claude-invocation-verification-manifest.json",
+        "sha256": "b34dc237a4e89ac13ed246c042679912e05b730b503ec9dd42d242d859f5f35f",
+        "version": "1",
+        "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/retry-56-authorization.md",
+          "sha256": "36981c73335c7aec492b2bc310ccae97978ac4710f30f0e9bc4f0abdeae045f0",
+          "git_revision": "67f3602ee0d0a210aeb5c5e5daa0e42734b143a6",
+          "version": null
+        },
+        "selector": "Exactly one retry of global slot 56; Claude invocation-verification candidate repetition 2."
+      },
+      "run_id": "20261026T224529030Z-ssr-screen-claude-invocation-verification-candidate-5c0972cd-6010-4534-bc55-da592231e6ea-4v0q_m6z",
+      "allocation": {
+        "pool": "retry",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed candidate screen; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T224529030Z-ssr-screen-claude-invocation-verification-candidate-5c0972cd-6010-4534-bc55-da592231e6ea-4v0q_m6z",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T224529030Z-ssr-screen-claude-invocation-verification-candidate-5c0972cd-6010-4534-bc55-da592231e6ea-4v0q_m6z.inventory.json",
+          "sha256": "9d1c35c896924855b9996c9b03237900f756c97982ac415827a1d61b2e7d4b88",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "candidate-screen-claude-01-invocation-verification-candidate-2-retry-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/scores/20261026T224529030Z-ssr-screen-claude-invocation-verification-candidate-5c0972cd-6010-4534-bc55-da592231e6ea-4v0q_m6z.json",
+          "sha256": "fffe37d2add50aa8cc752a84b4c1f69cfef59874f5dbe91c2fc3bd3a0257a89f",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "candidate-screen-claude-01-invocation-verification-finalist-2-1",
+      "case_id": "invocation-verification",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/claude-invocation-verification-manifest.json",
+        "sha256": "b34dc237a4e89ac13ed246c042679912e05b730b503ec9dd42d242d859f5f35f",
+        "version": "1",
+        "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "890dcb11d47fee962a6afe7514937000c3618eeb29e047aa3ed73165ff6bd368",
+          "version": "1",
+          "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+        },
+        "selector": "Batch: candidate-screen-claude-01; order 23"
+      },
+      "run_id": "20261026T224557860Z-ssr-screen-claude-invocation-verification-finalist-51c28fa9-042a-4f87-a063-c44eb57ee7d9-vk1uy003",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed candidate screen; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T224557860Z-ssr-screen-claude-invocation-verification-finalist-51c28fa9-042a-4f87-a063-c44eb57ee7d9-vk1uy003",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T224557860Z-ssr-screen-claude-invocation-verification-finalist-51c28fa9-042a-4f87-a063-c44eb57ee7d9-vk1uy003.inventory.json",
+          "sha256": "e678778b85360d113e6b3e2b37bc2e13e251466c4d59018a2efcc6a40be79a3a",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "candidate-screen-claude-01-invocation-verification-finalist-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/scores/20261026T224557860Z-ssr-screen-claude-invocation-verification-finalist-51c28fa9-042a-4f87-a063-c44eb57ee7d9-vk1uy003.json",
+          "sha256": "3bcefae4c2ebfa4d1946bd92a06a3ccc0632a614a920b9f332f90e54a9d80d9a",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "candidate-screen-claude-01-local-change-candidate-2-1",
+      "case_id": "local-change",
+      "condition": "candidate",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/claude-local-change-manifest.json",
+        "sha256": "4bb328005e6cdc7886bca3c59ce7ac7fadf4e736fd69deeb0c4540a37ec3d6be",
+        "version": "1",
+        "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "890dcb11d47fee962a6afe7514937000c3618eeb29e047aa3ed73165ff6bd368",
+          "version": "1",
+          "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+        },
+        "selector": "Batch: candidate-screen-claude-01; order 24"
+      },
+      "run_id": "20261026T224621059Z-ssr-screen-claude-local-change-candidate-fbf93655-3e89-47ab-8bd7-421f6c34290a-o8wy699v",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed candidate screen; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T224621059Z-ssr-screen-claude-local-change-candidate-fbf93655-3e89-47ab-8bd7-421f6c34290a-o8wy699v",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T224621059Z-ssr-screen-claude-local-change-candidate-fbf93655-3e89-47ab-8bd7-421f6c34290a-o8wy699v.inventory.json",
+          "sha256": "29bcded6235ddfefef2c80867e4ded00b6fb07bfbe45c455d3f9af42d9afc2a2",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "candidate-screen-claude-01-local-change-candidate-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/scores/20261026T224621059Z-ssr-screen-claude-local-change-candidate-fbf93655-3e89-47ab-8bd7-421f6c34290a-o8wy699v.json",
+          "sha256": "3740a805dad9cd646daf8926e6a02cabf8ce71e4efd12f6bc242cdbf2dcc7557",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "candidate-screen-claude-01-moved-guide-candidate-2-1",
+      "case_id": "moved-guide",
+      "condition": "candidate",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/claude-moved-guide-manifest.json",
+        "sha256": "f68548b8e6f4e10f0ef03965834c299ecb4b6ec371b91b44ab39e44bcb21984a",
+        "version": "1",
+        "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "890dcb11d47fee962a6afe7514937000c3618eeb29e047aa3ed73165ff6bd368",
+          "version": "1",
+          "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+        },
+        "selector": "Batch: candidate-screen-claude-01; order 25"
+      },
+      "run_id": "20261026T225142332Z-ssr-screen-claude-moved-guide-candidate-0de99024-fcdf-4dc7-85f0-f12cf4096b96-fcx9kq13",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed candidate screen; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T225142332Z-ssr-screen-claude-moved-guide-candidate-0de99024-fcdf-4dc7-85f0-f12cf4096b96-fcx9kq13",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T225142332Z-ssr-screen-claude-moved-guide-candidate-0de99024-fcdf-4dc7-85f0-f12cf4096b96-fcx9kq13.inventory.json",
+          "sha256": "c6e54d5bf77ee4619264160ff7cd7f457ed691cd2d4c933ce0e5d90667afd75c",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "candidate-screen-claude-01-moved-guide-candidate-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/scores/20261026T225142332Z-ssr-screen-claude-moved-guide-candidate-0de99024-fcdf-4dc7-85f0-f12cf4096b96-fcx9kq13.json",
+          "sha256": "f3dcd5e2bdb7068954270b867d3c68aced83851c246155377334c5b24e68f66e",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "candidate-screen-claude-01-large-sweep-account-candidate-2-1",
+      "case_id": "large-sweep-account",
+      "condition": "candidate",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/claude-large-sweep-account-manifest.json",
+        "sha256": "e257f138f567e70e2c41b44f25b498def7e8304d2d386a4e4506d1223c4338e9",
+        "version": "1",
+        "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "890dcb11d47fee962a6afe7514937000c3618eeb29e047aa3ed73165ff6bd368",
+          "version": "1",
+          "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+        },
+        "selector": "Batch: candidate-screen-claude-01; order 26"
+      },
+      "run_id": "20261026T225610840Z-ssr-screen-claude-large-sweep-account-candidate-55fc333b-6c2d-4da2-afef-ff29b6d33cc1-3c0d_bv8",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed candidate screen; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T225610840Z-ssr-screen-claude-large-sweep-account-candidate-55fc333b-6c2d-4da2-afef-ff29b6d33cc1-3c0d_bv8",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T225610840Z-ssr-screen-claude-large-sweep-account-candidate-55fc333b-6c2d-4da2-afef-ff29b6d33cc1-3c0d_bv8.inventory.json",
+          "sha256": "ca1f7ff764a88ba04b95fd213596fab5805746015257bb11ca803e553d75ca2c",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "candidate-screen-claude-01-large-sweep-account-candidate-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/scores/20261026T225610840Z-ssr-screen-claude-large-sweep-account-candidate-55fc333b-6c2d-4da2-afef-ff29b6d33cc1-3c0d_bv8.json",
+          "sha256": "22802e7c2c82bf78d50a30605354f570b64587d442cc2a19275bef2acba46675",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "candidate-screen-claude-01-large-sweep-account-finalist-2-1",
+      "case_id": "large-sweep-account",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/claude-large-sweep-account-manifest.json",
+        "sha256": "e257f138f567e70e2c41b44f25b498def7e8304d2d386a4e4506d1223c4338e9",
+        "version": "1",
+        "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "890dcb11d47fee962a6afe7514937000c3618eeb29e047aa3ed73165ff6bd368",
+          "version": "1",
+          "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+        },
+        "selector": "Batch: candidate-screen-claude-01; order 27"
+      },
+      "run_id": "20261026T225658289Z-ssr-screen-claude-large-sweep-account-finalist-bb4a3f20-69f1-4817-8069-e3a96649ae8c-b3bqe7rq",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed candidate screen; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T225658289Z-ssr-screen-claude-large-sweep-account-finalist-bb4a3f20-69f1-4817-8069-e3a96649ae8c-b3bqe7rq",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T225658289Z-ssr-screen-claude-large-sweep-account-finalist-bb4a3f20-69f1-4817-8069-e3a96649ae8c-b3bqe7rq.inventory.json",
+          "sha256": "2785956d59a979f8ceaedfe6cac03ec99dac31c4a4c04620ff474a4d6c0b8c71",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "candidate-screen-claude-01-large-sweep-account-finalist-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/scores/20261026T225658289Z-ssr-screen-claude-large-sweep-account-finalist-bb4a3f20-69f1-4817-8069-e3a96649ae8c-b3bqe7rq.json",
+          "sha256": "e688b43f585e1a7f137e0dd9753a9c40b4f58482643199a7cadb84c43d05352c",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "candidate-screen-claude-01-invocation-unrelated-finalist-2-1",
+      "case_id": "invocation-unrelated",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/claude-invocation-unrelated-manifest.json",
+        "sha256": "ef0dc1c8680fd5fa9c844d5ee39699f11ba9a76616d7365fd0a6f0c8f538e89b",
+        "version": "1",
+        "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "890dcb11d47fee962a6afe7514937000c3618eeb29e047aa3ed73165ff6bd368",
+          "version": "1",
+          "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+        },
+        "selector": "Batch: candidate-screen-claude-01; order 28"
+      },
+      "run_id": "20261026T225734504Z-ssr-screen-claude-invocation-unrelated-finalist-a5fe6fde-2dda-4da5-ae51-429731edfe5d-_6vloq4_",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed candidate screen; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T225734504Z-ssr-screen-claude-invocation-unrelated-finalist-a5fe6fde-2dda-4da5-ae51-429731edfe5d-_6vloq4_",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T225734504Z-ssr-screen-claude-invocation-unrelated-finalist-a5fe6fde-2dda-4da5-ae51-429731edfe5d-_6vloq4_.inventory.json",
+          "sha256": "a781a0cc7f1ec235ba9095e0816342f2b76dbb5f47191274df447302731fabfc",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "candidate-screen-claude-01-invocation-unrelated-finalist-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/scores/20261026T225734504Z-ssr-screen-claude-invocation-unrelated-finalist-a5fe6fde-2dda-4da5-ae51-429731edfe5d-_6vloq4_.json",
+          "sha256": "68f7ad35e8a1ccb7961ec8cafc22c9d7375ff518d869008f532d000fe416b5e9",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "candidate-screen-claude-01-invocation-unrelated-candidate-2-1",
+      "case_id": "invocation-unrelated",
+      "condition": "candidate",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/claude-invocation-unrelated-manifest.json",
+        "sha256": "ef0dc1c8680fd5fa9c844d5ee39699f11ba9a76616d7365fd0a6f0c8f538e89b",
+        "version": "1",
+        "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "890dcb11d47fee962a6afe7514937000c3618eeb29e047aa3ed73165ff6bd368",
+          "version": "1",
+          "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+        },
+        "selector": "Batch: candidate-screen-claude-01; order 29"
+      },
+      "run_id": "20261026T225810808Z-ssr-screen-claude-invocation-unrelated-candidate-2b023577-1491-49f8-83fa-c62fa9a6dbb7-879yjhqx",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed candidate screen; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T225810808Z-ssr-screen-claude-invocation-unrelated-candidate-2b023577-1491-49f8-83fa-c62fa9a6dbb7-879yjhqx",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T225810808Z-ssr-screen-claude-invocation-unrelated-candidate-2b023577-1491-49f8-83fa-c62fa9a6dbb7-879yjhqx.inventory.json",
+          "sha256": "115b0fe5b3153b19ca049108394eae27c158a664ef23294d2f843c13dcf44a66",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "candidate-screen-claude-01-invocation-unrelated-candidate-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/scores/20261026T225810808Z-ssr-screen-claude-invocation-unrelated-candidate-2b023577-1491-49f8-83fa-c62fa9a6dbb7-879yjhqx.json",
+          "sha256": "3c89a324946aa0c3f50e58732e708df187a911a95956f3c16c1e5aea376c99d9",
+          "version": "2"
+        }
+      }
     }
   ]
 }

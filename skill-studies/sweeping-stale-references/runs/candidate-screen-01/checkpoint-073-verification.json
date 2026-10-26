@@ -1,0 +1,25 @@
+{
+  "attempts": 74,
+  "charges": {
+    "subject": 73,
+    "retry": 1
+  },
+  "counts_excluding_invalid": {
+    "valid": 73,
+    "functional:met": 50,
+    "F1:met": 50,
+    "F2:met": 50,
+    "F3:met": 50,
+    "P1:met": 38,
+    "P2:met": 38,
+    "P3:met": 27,
+    "P3:insufficient evidence": 6,
+    "D1:met": 27,
+    "functional:not measured": 23,
+    "P3:not met": 13
+  },
+  "invalid": [
+    "candidate-screen-claude-01-invocation-verification-candidate-2-1"
+  ],
+  "frozen_inputs_and_user_fixture": "unchanged"
+}
