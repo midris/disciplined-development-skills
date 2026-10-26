@@ -1,7 +1,7 @@
 # Fresh original baseline
 
-Status: all 105 new subjects retained and assessed; eight output reviews pending. Installed qualification, source freeze and both provider readiness checks passed before dispatch.
-Source inputs are frozen at `ceb11bf`; collection authority/manifests at `75812d6`.
-The per-provider attempt indexes and execution-result records own completed and pending observations; no candidate is included.
-Five current-runtime Opus semantic originals are retained as matching evidence. Eight output reviews follow retained/scored subjects.
-See [preparation](preparation/README.md) and the [protocol](../../protocol.md).
+Status: complete; 105 new subjects and five matching reused Opus semantic originals assessed, with all eight output reviews audited.
+The [combined assessment](fresh-baseline-01-assessment.md) owns results and the recommendation; provider assessments and indexes retain detailed criterion evidence.
+Source inputs are frozen at `ceb11bf`; subject manifests/authority at `75812d6`, review inputs at `ce933e2`.
+The original remains the fixed comparison reference; candidate screens, edits, retries and adoption require a separate allocation.
+See [preparation](preparation/README.md), [output review](evaluation/README.md) and the [protocol](../../protocol.md).

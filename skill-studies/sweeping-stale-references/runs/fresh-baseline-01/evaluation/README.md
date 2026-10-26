@@ -1,6 +1,6 @@
 # Original baseline output review
 
-Status: output review in progress under committed input identities; the ledger owns completed and pending reviews.
+Status: complete; eight independent first passes and all 240 functional factors audited, with separate reconciliation.
 The [packet plan](packet-plan.json) fixes eighty repair outputs and 240 functional judgments, including five reused Opus semantic originals.
 Each packet has ten outputs and thirty F1–F3 factors; the active session owns D1 and procedural judgments.
 
@@ -29,3 +29,22 @@ Whole-file deduplication changes packaging only, with no change to cases, criter
 Labels are visible; this is not blind review.
 Opus differs from the active Codex assessor and shares the Opus subjects' family.
 Preserve independent first-pass and post-prior judgments separately; agreement after prior access is not another independent vote.
+
+## Reconciliation records
+
+| Subject provider / cases | Independent first pass and reconciliation |
+| --- | --- |
+| Codex semantic / pressure | [record](codex-semantic-pressure/reconciliation.md) |
+| Codex discovery / moved guide | [record](codex-shiv-moved/reconciliation.md) |
+| Codex initiating / local | [record](codex-initiating-local/reconciliation.md) |
+| Codex native positives | [record](codex-native-positive/reconciliation.md) |
+| Opus semantic / pressure | [record](claude-semantic-pressure/reconciliation.md) |
+| Opus discovery / moved guide | [record](claude-shiv-moved/reconciliation.md) |
+| Opus initiating / local | [record](claude-initiating-local/reconciliation.md) |
+| Opus native positives | [record](claude-native-positive/reconciliation.md) |
+
+All independent functional judgments agree; no score was replaced by a vote.
+Some reviewers end after the complete independent first pass without accessing priors; those records contain no reviewer post-prior judgment and retain active reconciliation separately.
+Others access priors only after the complete first pass; their separate comparisons change no functional factor.
+Incidental filename exposure is disclosed separately from prior-score content access.
+The mechanical audit corrections and binary-rendering limitations are recorded in the affected reconciliations; frozen inputs and raw captures remain unchanged.

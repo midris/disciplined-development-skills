@@ -3,7 +3,7 @@
 Format version: `2`
 Assessment ID: ssr-fresh-baseline-01
 Study / batch: sweeping-stale-references / fresh-baseline-01
-Status: all subject observations assessed; eight-packet output review in progress
+Status: complete; all subjects assessed and all eight output reviews audited
 Scope and acceptance rules: [protocol](../../protocol.md) at Git `75812d6c23ef7e92d5a794b4724e51758f60e7cb`; [staged design](../../../../plans/specs/2026-10-26-ssr-staged-baseline-comparison.md), SSR-assessment-3 and unchanged original-specific case criteria.
 Assessor: Codex active preparer/assessor with version/history awareness; not independent or blind.
 Canonical provider assessments: [Codex](fresh-baseline-codex-01-assessment.md), [Opus](fresh-baseline-opus-01-assessment.md).
@@ -11,7 +11,7 @@ Attempt indexes: [55 new Codex subjects](fresh-baseline-codex-01-run-index.json)
 
 All eleven scenarios have five original observations on each provider: 110 observations, with 105 new calls and five reused without a new charge.
 All eighty repair tasks meet complete useful outcome, preservation and committed completeness; thirty diagnostic/non-use observations are not measured functionally.
-The sixty explicit repairs and fifteen timely native loads establish seventy-five successful body-exposed repairs.
+Sixty explicit repairs and fifteen timely native loads give seventy-five correct repairs after complete skill delivery.
 Five other native tasks succeed without loading SSR; they are task successes, not original-body application evidence.
 No setup exclusions, retries, replacements or unresolved functional outcomes exist.
 
@@ -55,7 +55,9 @@ The three Shiv unknowns concern only the standing classification boundary for ne
 The ten large-inventory diagnostics all reconcile the supplied 126 matches correctly, so reporting weaknesses are context-dependent rather than universal arithmetic failure.
 
 Some correct repairs claim post-edit searches that their traces do not show.
-Individual results retain those discrepancies separately, including the final Opus local run that searches but excludes the task it later claims to have found.
+Reviewers also identify small final-response inaccuracies, such as claiming README carries a concept phrase that appears only in source/policy; those remain reporting observations rather than artifact failures.
+Execution results retain the search/reporting discrepancies, including the final Opus local run that searches but excludes the task it later claims to have found.
+Reviewer-only response observations remain in separate packet reconciliations.
 Working-directory/cache restrictions during some subject checks are disclosed; trusted replay and complete source inspection establish outcomes without repeating subjects.
 
 Native selection is a separate practical limitation: Codex loads in 10/10 positive observations and Opus in 5/10.
@@ -66,7 +68,16 @@ These small observed counts do not establish a provider-wide reliability differe
 
 The [fixed eight-packet plan](evaluation/packet-plan.json) covers all eighty repair outputs and 240 functional factors.
 The [review ledger](evaluation/evaluator-run-index.json) owns actual calls and audits; complete evidence and read-only restrictions are described in [evaluation preparation](evaluation/README.md).
-Review remains in progress; the baseline decision is pending its closure.
+All eight independent first passes agree with the active assessment on all 240 functional factors, with no adopted score correction or unresolved consequential functional disagreement.
+Each reviewer read the complete required evidence before its first pass; model/tools, protected bytes, capture and actual access ordering verify.
+Separate post-prior comparisons change no functional factors; absent prior access is recorded as no reviewer post-prior comparison, with active reconciliation retained separately.
+Among passing project artifacts, reviewers find small clarity differences: some overviews state the retry arithmetic explicitly and some operational wording uses “up to”.
+Renames and local/moved-guide repairs are identical within their provider/case cells; those artifacts offer no quality difference to rank.
+The [packet reconciliations](evaluation/README.md) retain individual evidence clarifications, reviewer count slips, incidental prior-filename exposure, binary Read limits and conservative Git-attribution wording without rewriting the first passes.
+Opus differs from the active Codex assessor but shares the Opus subjects' family; labels are visible and no blinding or independent cross-family validation of those subjects is claimed.
+
+The original baseline is established for the declared comparison cells.
+This closes its authorized collection/review scope and does not select a candidate or adoption.
 
 ## Comparison baseline and limits
 
@@ -84,3 +95,10 @@ Recommend comparing both unchanged rewrites in initial three-repetition screens 
 Put pressure and discovery/inventory weaknesses early; assess substantive failures immediately, then retain, repair with a new identity or drop a candidate at the checkpoint.
 Reverify exact historical reuse and select the screen/review allocation before further calls.
 No candidate, skill edit, retry or adoption is authorized by this baseline scope.
+
+## Accounting and verification
+
+The [CW accounting](../../../concise-writing/protocol.md#storage-and-accounting) owns combined spending: 105 new subjects and eight new reviews, with no retry, authoring or duplicate charge for reused subjects.
+Whole-batch effort is 310 estimated active minutes, including all 5,237.439 measured runner seconds once; it is not a stopwatch or separately timed category total.
+All subject/review raw inventories, capture, score/evidence hashes, complete input delivery, actual model/tools, protected bytes, fixed sources and runtime identities verify.
+Both provider assessment-readiness checks, all nine format tests and the hook suite (263 passed, three environment skips) pass; the unrelated user fixture edit remains intact.

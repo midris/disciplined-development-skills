@@ -1,6 +1,6 @@
 # SSR: original baseline and staged candidate comparison
 
-Status: original baseline collection selected; source qualification/freeze/readiness precede dispatch. Candidate screen budgets remain pending.
+Status: original baseline complete; candidate screen budgets remain pending.
 The [framework](2026-09-11-model-driven-skill-testing-framework.md#cw-testing-model) governs the method; the [active plan](../2026-09-11-model-driven-skill-testing.md) owns progress and the [SSR protocol](../../skill-studies/sweeping-stale-references/protocol.md) owns dispatch authority.
 This replaces the [55-subject completion proposal](2026-10-24-ssr-cw-aligned-validation.md); its draft configuration set does not implement this design.
 Owner direction, 2026-10-26: “ok, let's create fresh baselines then” selects the current Codex/Opus baseline option below: 105 new subjects plus five matching retained Opus semantic originals, followed by eight bounded artifact reviews.
@@ -73,3 +73,6 @@ Complete qualification, source freeze and collection readiness before dispatch; 
 Retain the reviewed separation of explicit application and native selection, case-specific accounting rules, trace-only non-use assessment and independent artifact review.
 A native task success without timely complete skill delivery is not evidence of that version's application effectiveness.
 No-target controls remain a separate contribution question, not the meaning of the original baseline.
+
+The [completed original baseline](../../skill-studies/sweeping-stale-references/runs/fresh-baseline-01/fresh-baseline-01-assessment.md) supplies five observations in every declared case/provider cell and eight audited output reviews.
+Its task outcomes, loading misses and accounting limitations remain separate; the candidate screen/review allocation is the next owner decision.

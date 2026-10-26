@@ -2,8 +2,8 @@
 
 Format version: `1`
 Study ID: `sweeping-stale-references`
-Status: the compact comparison and closing validation batches are complete; remaining-scope preparation follows the CW testing model. Skill adoption remains pending.
-Current action: prepare, freeze and collect the owner-selected fresh original baseline: 105 new subjects and five matching reused Opus semantic observations, followed by eight bounded output reviews. Candidate screens, edits, retries and adoption remain unallocated. The [staged design](../../plans/specs/2026-10-26-ssr-staged-baseline-comparison.md) owns comparison intent; [CW accounting](../concise-writing/protocol.md#storage-and-accounting) owns combined spending.
+Status: fresh original baseline complete under the CW testing model; candidate screens and skill adoption remain pending.
+Current action: select a bounded three-repetition comparison of both unchanged rewrites against the established original baseline, including exact reuse, review scope and any required allocation. Candidate screens, edits, retries and adoption remain unallocated. The [staged design](../../plans/specs/2026-10-26-ssr-staged-baseline-comparison.md) owns comparison intent; [CW accounting](../concise-writing/protocol.md#storage-and-accounting) owns combined spending.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](runs/core-baseline-01/core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -265,7 +265,7 @@ Pre-baseline development is closed at two pairs. Do not reopen it for a new face
 
 ### Batch: fresh-baseline-codex-01
 
-Status: owner-authorized; preparation, freeze and readiness precede dispatch.
+Status: complete; all selected subjects and provider output reviews assessed.
 Owner authority, 2026-10-26: “ok, let's create fresh baselines then”, selecting the offered five-repetition original baseline on current Codex/Opus across all eleven non-pilot cases, with five matching Opus semantic originals reused.
 Scope: 55 new original-only subjects in the fixed order below; this provider batch is part of fresh-baseline-01, not authorization for candidates or automatic repeats.
 Inclusion: descriptive-only; Include all valid-setup executions regardless of outcome. Preserve excluded setups, unknowns and unattempted slots explicitly. No automatic retry or replacement.
@@ -278,7 +278,7 @@ Reuse: [five Opus semantic originals](runs/fresh-baseline-01/preparation/reuse.j
 Commands: invoke the existing runner sequentially through its unchanged qualified toolchain wrapper; use the per-provider table order and global interleaving, retain/inspect/score each stopped attempt before the next. No new evaluator service, controller scoring algorithm or per-run reviewer.
 Storage: /Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/, verified whole-bundle inventories under the accepted single-host recovery arrangement. Scratch controllers and raw evidence stay outside Git; inspect Git/runtime in disposable copies.
 Attempt index: [fresh-baseline-codex-01-run-index.json](runs/fresh-baseline-01/fresh-baseline-codex-01-run-index.json).
-Assessment: [fresh-baseline-codex-01-assessment.md](runs/fresh-baseline-01/fresh-baseline-codex-01-assessment.md); subjects complete, output-review closure pending.
+Assessment: [fresh-baseline-codex-01-assessment.md](runs/fresh-baseline-01/fresh-baseline-codex-01-assessment.md); complete; combined results are linked from the provider assessment.
 Output review: [eight fixed packets](runs/fresh-baseline-01/evaluation/packet-plan.json) cover all eighty repair outputs, ten per packet and 240 F judgments, including five retained Opus semantic originals. Four Opus-medium native Read/Glob/Grep-only reviews cover each subject provider; reviewers differ from active Codex assessor and share Opus subjects' family. Freeze complete source/task/project/card/policy/neutral facts and copied protected inputs after scoring, before each dispatch; omit skill bodies, traces, hypotheses and negative/accounting-only cases. Retain a complete independent first pass before access to separate priors, audit actual read ordering/model/tools/protected bytes and all factors, and preserve reconciliation separately. No blind or extra-vote claim. [Fixed prompt](runs/fresh-baseline-01/evaluation/prompt.md); [evaluation accounting](runs/fresh-baseline-01/evaluation/README.md).
 Stopping: no behavioral early stop for the original baseline. Stop for unknown charge, incomplete capture, unresolved input/runtime/isolation drift, contamination, cleanup/retention fault or invalid availability. Native missed loading with valid availability/capture is a behavioral observation. No automatic retry, replacement, extra call, candidate edit or adoption; an incomplete reviewer stops the decision without replacement.
 Checkpoint: report whole-output repair/preservation results, selection and non-use, P3/accounting defects, uncertainty and cross-model disagreements separately. Establish the original comparison baseline, then return for the separately bounded three-run candidate screen decision; no candidate invocation follows automatically.
@@ -343,7 +343,7 @@ Checkpoint: report whole-output repair/preservation results, selection and non-u
 
 ### Batch: fresh-baseline-opus-01
 
-Status: owner-authorized; preparation, freeze and readiness precede dispatch.
+Status: complete; all selected subjects and provider output reviews assessed.
 Owner authority, 2026-10-26: “ok, let's create fresh baselines then”, selecting the offered five-repetition original baseline on current Codex/Opus across all eleven non-pilot cases, with five matching Opus semantic originals reused.
 Scope: 50 new original-only subjects in the fixed order below; this provider batch is part of fresh-baseline-01, not authorization for candidates or automatic repeats.
 Inclusion: descriptive-only; Include all valid-setup executions regardless of outcome. Preserve excluded setups, unknowns and unattempted slots explicitly. No automatic retry or replacement.
@@ -356,7 +356,7 @@ Reuse: [five Opus semantic originals](runs/fresh-baseline-01/preparation/reuse.j
 Commands: invoke the existing runner sequentially through its unchanged qualified toolchain wrapper; use the per-provider table order and global interleaving, retain/inspect/score each stopped attempt before the next. No new evaluator service, controller scoring algorithm or per-run reviewer.
 Storage: /Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/, verified whole-bundle inventories under the accepted single-host recovery arrangement. Scratch controllers and raw evidence stay outside Git; inspect Git/runtime in disposable copies.
 Attempt index: [fresh-baseline-opus-01-run-index.json](runs/fresh-baseline-01/fresh-baseline-opus-01-run-index.json).
-Assessment: [fresh-baseline-opus-01-assessment.md](runs/fresh-baseline-01/fresh-baseline-opus-01-assessment.md); subjects complete, output-review closure pending.
+Assessment: [fresh-baseline-opus-01-assessment.md](runs/fresh-baseline-01/fresh-baseline-opus-01-assessment.md); complete; combined results are linked from the provider assessment.
 Output review: [eight fixed packets](runs/fresh-baseline-01/evaluation/packet-plan.json) cover all eighty repair outputs, ten per packet and 240 F judgments, including five retained Opus semantic originals. Four Opus-medium native Read/Glob/Grep-only reviews cover each subject provider; reviewers differ from active Codex assessor and share Opus subjects' family. Freeze complete source/task/project/card/policy/neutral facts and copied protected inputs after scoring, before each dispatch; omit skill bodies, traces, hypotheses and negative/accounting-only cases. Retain a complete independent first pass before access to separate priors, audit actual read ordering/model/tools/protected bytes and all factors, and preserve reconciliation separately. No blind or extra-vote claim. [Fixed prompt](runs/fresh-baseline-01/evaluation/prompt.md); [evaluation accounting](runs/fresh-baseline-01/evaluation/README.md).
 Stopping: no behavioral early stop for the original baseline. Stop for unknown charge, incomplete capture, unresolved input/runtime/isolation drift, contamination, cleanup/retention fault or invalid availability. Native missed loading with valid availability/capture is a behavioral observation. No automatic retry, replacement, extra call, candidate edit or adoption; an incomplete reviewer stops the decision without replacement.
 Checkpoint: report whole-output repair/preservation results, selection and non-use, P3/accounting defects, uncertainty and cross-model disagreements separately. Establish the original comparison baseline, then return for the separately bounded three-run candidate screen decision; no candidate invocation follows automatically.
@@ -895,7 +895,7 @@ Current SSR-linked mechanical accounting includes the fixed 136-call historical 
 The current validation adds its [subject index](runs/compact-regression-01/compact-regression-01-run-index.json) and [evaluator ledger](runs/compact-regression-01/evaluation/evaluator-run-index.json).
 The fresh original baseline adds [Codex subjects](runs/fresh-baseline-01/fresh-baseline-codex-01-run-index.json), [Opus subjects](runs/fresh-baseline-01/fresh-baseline-opus-01-run-index.json) and [eight review slots](runs/fresh-baseline-01/evaluation/evaluator-run-index.json); the five reused semantic runs are not charged again.
 For this subset, the historical spent subtotal plus the newly authorized scope gives ceilings of 267 subject, 10 evaluator, 0 authoring and 0 retry invocations; this is an accounting projection, not a new allocation or pool transfer.
-Dispatched calls are **267 subject, 6 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **0 / 4 / 0 / 0** for this subset.
+Dispatched calls are **267 subject, 10 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **0 / 0 / 0 / 0** for this subset.
 The CW protocol remains authoritative for all current combined spending and outer ceilings; no historical unspent pool is revived.
 Sequential readiness used identical externally frozen scores; the final index pins the canonical repository results at their committed revision.
 
@@ -921,6 +921,7 @@ Subsequent authoring decision, 2026-10-23: the owner requested three compact rew
 
 | Evidence | Interpretation |
 |---|---|
+| [Fresh original baseline](runs/fresh-baseline-01/fresh-baseline-01-assessment.md) | All eleven cases have five original observations on each current provider: 105 new and five matching reused. Eighty repairs and all 240 reviewed functional factors meet; native loading 10/10 Codex versus 5/10 Opus, non-use 20/20, reporting defects and three Shiv unknowns separate. Candidate screens remain unallocated. |
 | [Compact closing validation](runs/compact-regression-01/compact-regression-01-assessment.md) | Ten correct committed repairs, timely native loading 4/4 and appropriate non-use 1/1; audited review agrees on all thirty factors. Reporting defects remain non-blocking. Recommends compact adoption; owner decision pending. |
 | [Claude smoke](runs/claude-smoke-01/claude-smoke-01-assessment.md) | Original only: explicit-load Shiv repair succeeds; native reviewer-triggered load is missed and repair incomplete. Runtime/capture viability and model behavior remain separate. |
 | [Sonnet comparison](runs/claude-comparison-01/claude-comparison-01-assessment.md) | Ordinary functional outcomes 10/10 per version; pressure original 1/2 versus rewrite 2/2; positive loads 2/4 versus 3/4; positive native task outcomes 3/4 each. Non-use sanity passes for both. |

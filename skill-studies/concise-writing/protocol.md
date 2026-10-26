@@ -1011,13 +1011,13 @@ The comment continuation uses [frozen review inputs](runs/final-comparison-01/sc
 The first handoff stage uses its [two-call evaluator ledger](runs/final-comparison-01/handoff-01/evaluation/evaluator-run-index.json).
 The handoff continuation uses its [two-call evaluator ledger](runs/final-comparison-01/handoff-02/evaluation/evaluator-run-index.json).
 The short examples screen uses its [two-call evaluator ledger](runs/final-comparison-01/examples-screen-01/evaluation/evaluator-run-index.json).
-Dispatched calls are **773 subject, 54 evaluator, 0 authoring, 3 retry**; remaining outer capacity is **0 / 4 / 4 / 1** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
+Dispatched calls are **773 subject, 58 evaluator, 0 authoring, 3 retry**; remaining outer capacity is **0 / 0 / 4 / 1** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **3,770 active minutes booked; 2,570 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **4,080 active minutes booked; 2,880 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
-The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 773/773, with 0 approved fresh original SSR baseline calls available; the earlier E diagnostic and CW examples screen are spent.
+The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 773/773, with all approved fresh original SSR baseline calls spent; the earlier E diagnostic and CW examples screen are spent.
 The supplemental work used 40 estimated active minutes against its 40-minute forecast; model waits are included once.
 The SSR compact checkpoint used 60 estimated active minutes against 90 forecast, including 327.519 subject and 129.286 reviewer seconds once (456.805 total); categories were not separately timed. Its fifteen subject and one evaluator calls are spent, with no retry or further allocation.
 The SSR closing validation used 60 estimated active minutes against its 60-minute forecast, including 238.375 subject and 139.333 reviewer seconds once (377.708 total); categories were not separately timed. All eleven subjects and the sole evaluator are spent; no additional calls are selected.
@@ -1025,7 +1025,12 @@ The CW-process comparison and methodology adoption used 20 estimated active minu
 The methodology review follow-up used 5 estimated active minutes for the four advisory documentation fixes, verification and publication; no model calls were added.
 The CW-aligned SSR proposal used 30 estimated active minutes for scope/reuse review, the verification-only fixture, draft inputs and offline checks; proposed calls are not allocated or counted as spending.
 The SSR proposal review follow-up used 15 estimated active minutes for scoring/scope corrections, negative-task refinement and offline verification; no model calls were added.
-The original-baseline inventory and staged-comparison design used 10 estimated active minutes; revised runtime/reuse scope and collection budgets remain pending, with no new model calls.
+The original-baseline inventory and staged-comparison design used 10 estimated active minutes; the subsequent owner-selected collection is accounted below.
+The fresh original SSR baseline used 310 estimated active minutes against its 300–420-minute forecast, 110 below the upper forecast.
+This covers preparation/qualification/freeze, 105 new subjects, direct whole-artifact and trace assessment, eight output reviews/audits, reconciliation and closure; categories were not separately timed.
+New subject runner durations total 3,427.837 seconds and review durations 1,809.602 seconds (5,237.439 seconds combined), included once in that estimate.
+The five matching semantic originals add no subject charge and their historical waits are not booked again.
+All 105 new subjects and eight reviewers are spent, with no new retry or authoring call; candidate screens remain unallocated.
 
 | Work | Estimated active minutes |
 | --- | ---: |
@@ -1167,7 +1172,8 @@ The original-baseline inventory and staged-comparison design used 10 estimated a
 | CW-aligned SSR proposal, boundary fixture, draft inputs and offline verification | 30 |
 | SSR completion proposal review fixes and offline verification | 15 |
 | Original SSR baseline inventory and staged-comparison design | 10 |
-| **Total** | **3,770** |
+| Fresh original SSR baseline qualification/freeze, 105 subjects, eight reviews/audits, reconciliation and closure | 310 |
+| **Total** | **4,080** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.

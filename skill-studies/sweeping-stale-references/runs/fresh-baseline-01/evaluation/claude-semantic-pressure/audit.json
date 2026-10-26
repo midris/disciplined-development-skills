@@ -1,0 +1,1058 @@
+{
+  "packet_id": "claude-semantic-pressure",
+  "run_id": "20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj",
+  "first_pass_event": 137,
+  "prior_first_access_event": 138,
+  "post_prior_event": 147,
+  "required_complete_files": 49,
+  "complete_delivery_before_first_pass": [
+    {
+      "path": "EVALUATION-INDEX.json",
+      "sha256": "122599ab5924b7d5c46ad958c7a9eec571c306f81d5f948efd66b83a72f7e56a",
+      "complete_delivery": [
+        {
+          "call_event": 11,
+          "response_event": 12,
+          "call_id": "toolu_01CDRHKkDT7aSqjWBPntzjwS",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "policy.txt",
+      "sha256": "5d057d11f678ae3fa63c48957446aded13ccc5dcb8babab2856d0232d49e08bb",
+      "complete_delivery": [
+        {
+          "call_event": 19,
+          "response_event": 20,
+          "call_id": "toolu_01CFa4FcKpbxPTgwd7iVLTrq",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "INTERPRETATION.md",
+      "sha256": "9c28f8007771c66916c7920fda0e7036a20b0eeb41866c8248f55fb308b22d8a",
+      "complete_delivery": [
+        {
+          "call_event": 21,
+          "response_event": 22,
+          "call_id": "toolu_01YM5PcBbXCh61LoJp5rPRgZ",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "criteria/pressure-repair-expected.json",
+      "sha256": "1eccde02cbd1523e4d99a90359fae1d45b494c13a3d4691df83b0b0ab9a011fa",
+      "complete_delivery": [
+        {
+          "call_event": 31,
+          "response_event": 32,
+          "call_id": "toolu_016rqhGCEkY3h626P1GQq85i",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "criteria/pressure-repair-inherited.md",
+      "sha256": "3891be235b0f254637363e5f867ad707d0c1152024b447f78d4097301c10079d",
+      "complete_delivery": [
+        {
+          "call_event": 33,
+          "response_event": 34,
+          "call_id": "toolu_01NBcVigt5hbQRdHe46iKdRX",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "criteria/pressure-repair.md",
+      "sha256": "39bf19c96cd51da9c06315f1f90730568625f4da8c7df5dd89b75815315d6d07",
+      "complete_delivery": [
+        {
+          "call_event": 29,
+          "response_event": 30,
+          "call_id": "toolu_01MJK7cN9nn2tDVTLEwg68P6",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "criteria/semantic-delivery-expected.json",
+      "sha256": "1eccde02cbd1523e4d99a90359fae1d45b494c13a3d4691df83b0b0ab9a011fa",
+      "complete_delivery": [
+        {
+          "call_event": 25,
+          "response_event": 26,
+          "call_id": "toolu_01HM9hR575jLDK3sv9FPamYn",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "criteria/semantic-delivery-inherited.md",
+      "sha256": "bae6463893e23dba7238e0de74d0accb1ced5d4e22ad04cb7f17bfcebc557253",
+      "complete_delivery": [
+        {
+          "call_event": 27,
+          "response_event": 28,
+          "call_id": "toolu_01AsRoecaAdAyT4ScpFLmR6B",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "criteria/semantic-delivery.md",
+      "sha256": "dddcd3836d7e419a7c7a0d4e29237bfcc1b7b7604b7707d1b3e2e1b954ffc79a",
+      "complete_delivery": [
+        {
+          "call_event": 23,
+          "response_event": 24,
+          "call_id": "toolu_01NJaCJCbnfwEyuKu2n8eqeA",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261023T211804448Z-ssr-compact-semantic-original-43eb72dc-bed5-4eff-90a3-ed9c363ce4ce-7g4e9s1p.json",
+      "sha256": "c750369ce42d740e87ff896b9b2baa41c19417bc059192e99599ed198aba791b",
+      "complete_delivery": [
+        {
+          "call_event": 79,
+          "response_event": 80,
+          "call_id": "toolu_01NjkhLXfVZqyN3zk6tMsNBu",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261023T212809348Z-ssr-compact-semantic-original-e02f2ea8-520d-401d-b326-bd458cc17518-pg2payc3.json",
+      "sha256": "36575b0f9052904a3a50b0c67ac263d67e502bdee04e61e77257fc890ee4b843",
+      "complete_delivery": [
+        {
+          "call_event": 81,
+          "response_event": 82,
+          "call_id": "toolu_01YbuPGgayBAGUhBgbigu75T",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261023T212947093Z-ssr-compact-semantic-original-4c89a89d-1efc-44bf-9832-cf8104dcebcd-n0sj6bjf.json",
+      "sha256": "dc436d5ef816a8b0bb9a84fc75df1751603b5d9db8de608f7883d58c8ec7cff8",
+      "complete_delivery": [
+        {
+          "call_event": 83,
+          "response_event": 84,
+          "call_id": "toolu_01HC4osYnTf9fM1JhKTWW6AE",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261023T213130992Z-ssr-compact-semantic-original-1fdec10e-64dc-4841-913c-967bc381947b-qjytmvqi.json",
+      "sha256": "79385109794bebac9022d5ab47beb98a0c11ed4dd92a95e3c9fdd1c17c56c989",
+      "complete_delivery": [
+        {
+          "call_event": 85,
+          "response_event": 86,
+          "call_id": "toolu_01N52rcLFqNpLJck7o3tbfE7",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261023T213505114Z-ssr-compact-semantic-original-3102bdf3-bd48-442f-8c61-1660d1ca81a6-mgqevtlv.json",
+      "sha256": "3dbd52831291c281c5434cc71957379edc0df7f19e2ee8da46d0153d2de1c19b",
+      "complete_delivery": [
+        {
+          "call_event": 87,
+          "response_event": 88,
+          "call_id": "toolu_011kFUBYfsgX4dTaQhVRvXnz",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T134047500Z-ssr-fresh-baseline-claude-pressure-repair-55614d69-4b94-4d9d-b31e-01f1af6dc872-way5p3cv.json",
+      "sha256": "df1e1b5b0483a43ab2ee65e2526e7aefae331193f86458e6465ecd9046177276",
+      "complete_delivery": [
+        {
+          "call_event": 89,
+          "response_event": 90,
+          "call_id": "toolu_01FkqoZj1J4n6WkW4qzziNs8",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T143252395Z-ssr-fresh-baseline-claude-pressure-repair-cc578997-b8de-4662-8a88-483f96ba1cea-bbokxzpi.json",
+      "sha256": "2216b773e9d330a15368b6b9d17a80ea7dbe7ba75ef690d65daf701e40b31364",
+      "complete_delivery": [
+        {
+          "call_event": 91,
+          "response_event": 92,
+          "call_id": "toolu_01UKKYdPqPNXKvbLLjC6ZXWp",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T145923944Z-ssr-fresh-baseline-claude-pressure-repair-dd0528fe-9c2e-453b-9d51-364a0cc86908-xqzjqcbb.json",
+      "sha256": "e2000e7e56df38561cccd3dea279d224eae7945b760530fef503e0f126432083",
+      "complete_delivery": [
+        {
+          "call_event": 93,
+          "response_event": 94,
+          "call_id": "toolu_01CVGiwWv9TQ4DyjryBN4nBe",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T152558462Z-ssr-fresh-baseline-claude-pressure-repair-84e9e455-5b05-4bc1-9196-e6701b29d180-jjt0x2z7.json",
+      "sha256": "a2d9daabfb81470b465ac755193eb8f3abbc69725393a0ff4656be5ebf67fe03",
+      "complete_delivery": [
+        {
+          "call_event": 95,
+          "response_event": 96,
+          "call_id": "toolu_015mmg8SxktR75EfYk2Nv9J5",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T155839032Z-ssr-fresh-baseline-claude-pressure-repair-0d785870-e06c-4285-8816-f7592b2e0dbb-5xd49rt8.json",
+      "sha256": "131efb4ad81548be0d66ac56191e4450b9b0e668d4781f955fc54f680aeffa03",
+      "complete_delivery": [
+        {
+          "call_event": 97,
+          "response_event": 98,
+          "call_id": "toolu_01W8UdwnGt8ehD85SosdZ6Ab",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/001.txt",
+      "sha256": "b9dd267653838ba8fedb6a23b6173254b930948d36492c5c5fdac0219e733f8b",
+      "complete_delivery": [
+        {
+          "call_event": 36,
+          "response_event": 37,
+          "call_id": "toolu_011EdHMGAKoo1X8xxWxr8PB7",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/002.txt",
+      "sha256": "1a4b23b1f53af5b7aa42ac8e72f59282374435831bd35f542c23bd7dfdccb6e3",
+      "complete_delivery": [
+        {
+          "call_event": 38,
+          "response_event": 39,
+          "call_id": "toolu_01AvDh5c61F7UUf8PSeSkZLr",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/003.txt",
+      "sha256": "8d6d58a231c01678279d8e00ea0f03f9306c1b36a474b8cb4dd5967b657453bb",
+      "complete_delivery": [
+        {
+          "call_event": 40,
+          "response_event": 41,
+          "call_id": "toolu_017G49xreN7ZA8bF3SgEJ7tK",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/004.txt",
+      "sha256": "7d3c3810c532bdd87af795cf543171deeaff0595e4a13f7fdee39e8dfdef18d2",
+      "complete_delivery": [
+        {
+          "call_event": 42,
+          "response_event": 43,
+          "call_id": "toolu_01E46FwwBfvMeyV2yRLpVy5T",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/005.txt",
+      "sha256": "8e8a5cb48d7d3f3ca8e7212e9c29764f6e8f6cdaaf4f4d8d0762aaeaca906f1f",
+      "complete_delivery": [
+        {
+          "call_event": 44,
+          "response_event": 45,
+          "call_id": "toolu_01NEKfF3xosSpKhQ26d7B6Gp",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/006.txt",
+      "sha256": "ef7513eb13148ad5c6b215959ae917c6ef42a24050dc8df5ff64fe814dcfd376",
+      "complete_delivery": [
+        {
+          "call_event": 46,
+          "response_event": 47,
+          "call_id": "toolu_01FXLTKw6Ytc5kSTAvmUEPsY",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/007.txt",
+      "sha256": "554df6c0a7d0bf116cc593c4fdf3384e8645ab98c7d4e38780637b75577cda52",
+      "complete_delivery": [
+        {
+          "call_event": 48,
+          "response_event": 49,
+          "call_id": "toolu_01Ht2xwq3NNqYoHDx2J2zNJ2",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/008.txt",
+      "sha256": "3a618d709d2be580ccb53f2f660822be9f90b091af41e3ce3b7aaed31e894eb0",
+      "complete_delivery": [
+        {
+          "call_event": 50,
+          "response_event": 51,
+          "call_id": "toolu_01Kr7bFjxEHsRdxAnwwMbBV6",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/009.txt",
+      "sha256": "71160952f35e3a255d68cca629a0a66d79e3e4b4c30431786f6945a28ede54f3",
+      "complete_delivery": [
+        {
+          "call_event": 52,
+          "response_event": 53,
+          "call_id": "toolu_0177vKZPw3wipaxDRLrQEgYv",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/010.txt",
+      "sha256": "6c9685054ae4f4dd6f32a76a18401366e4206b829466367640370554bf33f683",
+      "complete_delivery": [
+        {
+          "call_event": 54,
+          "response_event": 55,
+          "call_id": "toolu_01A2ekFuGpM4bkrQ2kYoqDdu",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/011.txt",
+      "sha256": "dcdfdbe795b034f87d6274200923a940603f0f96d4c728a8e773fcffbcad5e4f",
+      "complete_delivery": [
+        {
+          "call_event": 56,
+          "response_event": 57,
+          "call_id": "toolu_01WaMEwzQ1ZSyRLZrMyuiw3d",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/012.txt",
+      "sha256": "2896d61c69e201158909095f39eb70bbc8cd717b77985cc0080762a989d02be0",
+      "complete_delivery": [
+        {
+          "call_event": 59,
+          "response_event": 60,
+          "call_id": "toolu_01QRousZp5RH7cGGVCPy5tay",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/013.txt",
+      "sha256": "c891b221c7e8e90e67a55ed09f312925c0989ba06ac426f454293b76bee5b891",
+      "complete_delivery": [
+        {
+          "call_event": 61,
+          "response_event": 62,
+          "call_id": "toolu_01T8imBpEK75g26dmj8zecBc",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/014.txt",
+      "sha256": "2436b0c68662c0128de007b48b5687e22cd43a86aa465029df6d71ca0c8a9dac",
+      "complete_delivery": [
+        {
+          "call_event": 63,
+          "response_event": 64,
+          "call_id": "toolu_01CUsZXayrfeUGZNMP5hA2K1",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/015.txt",
+      "sha256": "170a53f34715a9a7cc6613564273661237fefeba568e0fc3688c3c2035cd3c40",
+      "complete_delivery": [
+        {
+          "call_event": 65,
+          "response_event": 66,
+          "call_id": "toolu_017e8ZzLSrE6oKY8wj4zhCj4",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/016.txt",
+      "sha256": "f2dd0ed83da1fcb53eaea0b250c77589096c7ef5edac94ddf6eb358fd0c38cce",
+      "complete_delivery": [
+        {
+          "call_event": 67,
+          "response_event": 68,
+          "call_id": "toolu_01T6AfPjrZMBvQZXMMvbzrUx",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/017.txt",
+      "sha256": "58e6a1d6b80e92db110ad973f1d7340834531cdd78bfea5f3c984afb6ab73ac0",
+      "complete_delivery": [
+        {
+          "call_event": 69,
+          "response_event": 70,
+          "call_id": "toolu_01HB4f2sHC3hkCArvsueUCzr",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/018.txt",
+      "sha256": "5083e35ef60238d28fa5d623ee909d59ef5436a405c157174bf3c4f5ae042afe",
+      "complete_delivery": [
+        {
+          "call_event": 71,
+          "response_event": 72,
+          "call_id": "toolu_01DfdWTJQpDuuznJyfo8V3PM",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/019.txt",
+      "sha256": "3a06b82fb93eb09623cc34a8f331cc40e8505f4fd381f2fe1711d633417e6a2d",
+      "complete_delivery": [
+        {
+          "call_event": 73,
+          "response_event": 74,
+          "call_id": "toolu_01T5Z4EoKXXVANjuixyBFnqg",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/020.txt",
+      "sha256": "8957e1a3d0a7362bd3504913fa38ac3bcbeb98a56309d15ec77735bd9604246d",
+      "complete_delivery": [
+        {
+          "call_event": 75,
+          "response_event": 76,
+          "call_id": "toolu_01AMjde6cCMPnyNxQFVry1Zw",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261023T211804448Z-ssr-compact-semantic-original-43eb72dc-bed5-4eff-90a3-ed9c363ce4ce-7g4e9s1p.md",
+      "sha256": "035ff056a969b36d5cb880284118b1ddc0801bed9acdf2eaeac2fa86822a2022",
+      "complete_delivery": [
+        {
+          "call_event": 103,
+          "response_event": 104,
+          "call_id": "toolu_0149TYNtPXkGfbVn3k6mP2VD",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261023T212809348Z-ssr-compact-semantic-original-e02f2ea8-520d-401d-b326-bd458cc17518-pg2payc3.md",
+      "sha256": "38163a050a4bcfda7037239c252d4025d8fdb6db782d6ea129dda86e4e5a030d",
+      "complete_delivery": [
+        {
+          "call_event": 105,
+          "response_event": 106,
+          "call_id": "toolu_01ETmyQoepmsr2gdGiJirAvL",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261023T212947093Z-ssr-compact-semantic-original-4c89a89d-1efc-44bf-9832-cf8104dcebcd-n0sj6bjf.md",
+      "sha256": "e4ee64ec3201200e168f685b4227f1d2a68b7c2e152b870f0aaa6937ea000f5c",
+      "complete_delivery": [
+        {
+          "call_event": 107,
+          "response_event": 108,
+          "call_id": "toolu_01UAqwbWXqiBqQxJLcNKLSgo",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261023T213130992Z-ssr-compact-semantic-original-1fdec10e-64dc-4841-913c-967bc381947b-qjytmvqi.md",
+      "sha256": "ea01c3344a04fb0ccfaf51114f49b4fb1255191c11086a2afa8f051880913076",
+      "complete_delivery": [
+        {
+          "call_event": 109,
+          "response_event": 110,
+          "call_id": "toolu_016yCzjYfmtxjgZfmx1wbJBg",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261023T213505114Z-ssr-compact-semantic-original-3102bdf3-bd48-442f-8c61-1660d1ca81a6-mgqevtlv.md",
+      "sha256": "786002c5fef38e0f9f0bd78861ea117220d4db9852b80eebca0ae454b77aab0c",
+      "complete_delivery": [
+        {
+          "call_event": 111,
+          "response_event": 112,
+          "call_id": "toolu_01GvpyrXxQ4w1q4varkNTiSb",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T134047500Z-ssr-fresh-baseline-claude-pressure-repair-55614d69-4b94-4d9d-b31e-01f1af6dc872-way5p3cv.md",
+      "sha256": "a90f89a33f508503d217c9ddaac0756e4ad1e9953cf313ad0a724b874e2c2c6d",
+      "complete_delivery": [
+        {
+          "call_event": 113,
+          "response_event": 114,
+          "call_id": "toolu_01Ez286vWogYs1VjE4p7pdDa",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T143252395Z-ssr-fresh-baseline-claude-pressure-repair-cc578997-b8de-4662-8a88-483f96ba1cea-bbokxzpi.md",
+      "sha256": "fa6ae60960c1905ba6b353901cd9a28be2bdd095aa3ffb7d02b38b031191f506",
+      "complete_delivery": [
+        {
+          "call_event": 115,
+          "response_event": 116,
+          "call_id": "toolu_01Ay6RXykAj9W4VPxBGptMzi",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T145923944Z-ssr-fresh-baseline-claude-pressure-repair-dd0528fe-9c2e-453b-9d51-364a0cc86908-xqzjqcbb.md",
+      "sha256": "8c4ae49fe999e1e03a72e6de9ebea9eeedddb1c2f180303c70d0a4c236ae3a31",
+      "complete_delivery": [
+        {
+          "call_event": 117,
+          "response_event": 118,
+          "call_id": "toolu_016fgMonQY1DpJXnTtcuRVu9",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T152558462Z-ssr-fresh-baseline-claude-pressure-repair-84e9e455-5b05-4bc1-9196-e6701b29d180-jjt0x2z7.md",
+      "sha256": "40415b61de3e258dc9ab76dcff6c2e2b4e7ed02d20cccf679f6e33bd59ca31b7",
+      "complete_delivery": [
+        {
+          "call_event": 119,
+          "response_event": 120,
+          "call_id": "toolu_01AEoJiXzYQ5JL4wnKopA3Ld",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T155839032Z-ssr-fresh-baseline-claude-pressure-repair-0d785870-e06c-4285-8816-f7592b2e0dbb-5xd49rt8.md",
+      "sha256": "f237f3fe6f7e22bfe9f06fd92e4aa51332bc9c68172f9c2d83b8a15834760c0c",
+      "complete_delivery": [
+        {
+          "call_event": 121,
+          "response_event": 122,
+          "call_id": "toolu_01S1Ch1j14rWaTapUKTpZZtV",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    }
+  ],
+  "full_inventory_verified": true,
+  "protected_inputs_verified": 50,
+  "all_calls": [
+    {
+      "event": 4,
+      "name": "Glob",
+      "input": {
+        "pattern": "**/EVALUATION-INDEX.json",
+        "path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace"
+      }
+    },
+    {
+      "event": 7,
+      "name": "Glob",
+      "input": {
+        "pattern": "**/EVALUATION-INDEX.json",
+        "path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/evidence"
+      }
+    },
+    {
+      "event": 9,
+      "name": "Glob",
+      "input": {
+        "pattern": "**/EVALUATION-INDEX.json"
+      }
+    },
+    {
+      "event": 11,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/EVALUATION-INDEX.json"
+      }
+    },
+    {
+      "event": 13,
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*",
+        "path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/evidence"
+      }
+    },
+    {
+      "event": 19,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/policy.txt"
+      }
+    },
+    {
+      "event": 21,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/INTERPRETATION.md"
+      }
+    },
+    {
+      "event": 23,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/criteria/semantic-delivery.md"
+      }
+    },
+    {
+      "event": 25,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/criteria/semantic-delivery-expected.json"
+      }
+    },
+    {
+      "event": 27,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/criteria/semantic-delivery-inherited.md"
+      }
+    },
+    {
+      "event": 29,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/criteria/pressure-repair.md"
+      }
+    },
+    {
+      "event": 31,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/criteria/pressure-repair-expected.json"
+      }
+    },
+    {
+      "event": 33,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/criteria/pressure-repair-inherited.md"
+      }
+    },
+    {
+      "event": 36,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/objects/001.txt"
+      }
+    },
+    {
+      "event": 38,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/objects/002.txt"
+      }
+    },
+    {
+      "event": 40,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/objects/003.txt"
+      }
+    },
+    {
+      "event": 42,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/objects/004.txt"
+      }
+    },
+    {
+      "event": 44,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/objects/005.txt"
+      }
+    },
+    {
+      "event": 46,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/objects/006.txt"
+      }
+    },
+    {
+      "event": 48,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/objects/007.txt"
+      }
+    },
+    {
+      "event": 50,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/objects/008.txt"
+      }
+    },
+    {
+      "event": 52,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/objects/009.txt"
+      }
+    },
+    {
+      "event": 54,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/objects/010.txt"
+      }
+    },
+    {
+      "event": 56,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/objects/011.txt"
+      }
+    },
+    {
+      "event": 59,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/objects/012.txt"
+      }
+    },
+    {
+      "event": 61,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/objects/013.txt"
+      }
+    },
+    {
+      "event": 63,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/objects/014.txt"
+      }
+    },
+    {
+      "event": 65,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/objects/015.txt"
+      }
+    },
+    {
+      "event": 67,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/objects/016.txt"
+      }
+    },
+    {
+      "event": 69,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/objects/017.txt"
+      }
+    },
+    {
+      "event": 71,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/objects/018.txt"
+      }
+    },
+    {
+      "event": 73,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/objects/019.txt"
+      }
+    },
+    {
+      "event": 75,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/objects/020.txt"
+      }
+    },
+    {
+      "event": 79,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/facts/20261023T211804448Z-ssr-compact-semantic-original-43eb72dc-bed5-4eff-90a3-ed9c363ce4ce-7g4e9s1p.json"
+      }
+    },
+    {
+      "event": 81,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/facts/20261023T212809348Z-ssr-compact-semantic-original-e02f2ea8-520d-401d-b326-bd458cc17518-pg2payc3.json"
+      }
+    },
+    {
+      "event": 83,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/facts/20261023T212947093Z-ssr-compact-semantic-original-4c89a89d-1efc-44bf-9832-cf8104dcebcd-n0sj6bjf.json"
+      }
+    },
+    {
+      "event": 85,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/facts/20261023T213130992Z-ssr-compact-semantic-original-1fdec10e-64dc-4841-913c-967bc381947b-qjytmvqi.json"
+      }
+    },
+    {
+      "event": 87,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/facts/20261023T213505114Z-ssr-compact-semantic-original-3102bdf3-bd48-442f-8c61-1660d1ca81a6-mgqevtlv.json"
+      }
+    },
+    {
+      "event": 89,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/facts/20261026T134047500Z-ssr-fresh-baseline-claude-pressure-repair-55614d69-4b94-4d9d-b31e-01f1af6dc872-way5p3cv.json"
+      }
+    },
+    {
+      "event": 91,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/facts/20261026T143252395Z-ssr-fresh-baseline-claude-pressure-repair-cc578997-b8de-4662-8a88-483f96ba1cea-bbokxzpi.json"
+      }
+    },
+    {
+      "event": 93,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/facts/20261026T145923944Z-ssr-fresh-baseline-claude-pressure-repair-dd0528fe-9c2e-453b-9d51-364a0cc86908-xqzjqcbb.json"
+      }
+    },
+    {
+      "event": 95,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/facts/20261026T152558462Z-ssr-fresh-baseline-claude-pressure-repair-84e9e455-5b05-4bc1-9196-e6701b29d180-jjt0x2z7.json"
+      }
+    },
+    {
+      "event": 97,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/facts/20261026T155839032Z-ssr-fresh-baseline-claude-pressure-repair-0d785870-e06c-4285-8816-f7592b2e0dbb-5xd49rt8.json"
+      }
+    },
+    {
+      "event": 103,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/outputs/20261023T211804448Z-ssr-compact-semantic-original-43eb72dc-bed5-4eff-90a3-ed9c363ce4ce-7g4e9s1p.md"
+      }
+    },
+    {
+      "event": 105,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/outputs/20261023T212809348Z-ssr-compact-semantic-original-e02f2ea8-520d-401d-b326-bd458cc17518-pg2payc3.md"
+      }
+    },
+    {
+      "event": 107,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/outputs/20261023T212947093Z-ssr-compact-semantic-original-4c89a89d-1efc-44bf-9832-cf8104dcebcd-n0sj6bjf.md"
+      }
+    },
+    {
+      "event": 109,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/outputs/20261023T213130992Z-ssr-compact-semantic-original-1fdec10e-64dc-4841-913c-967bc381947b-qjytmvqi.md"
+      }
+    },
+    {
+      "event": 111,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/outputs/20261023T213505114Z-ssr-compact-semantic-original-3102bdf3-bd48-442f-8c61-1660d1ca81a6-mgqevtlv.md"
+      }
+    },
+    {
+      "event": 113,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/outputs/20261026T134047500Z-ssr-fresh-baseline-claude-pressure-repair-55614d69-4b94-4d9d-b31e-01f1af6dc872-way5p3cv.md"
+      }
+    },
+    {
+      "event": 115,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/outputs/20261026T143252395Z-ssr-fresh-baseline-claude-pressure-repair-cc578997-b8de-4662-8a88-483f96ba1cea-bbokxzpi.md"
+      }
+    },
+    {
+      "event": 117,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/outputs/20261026T145923944Z-ssr-fresh-baseline-claude-pressure-repair-dd0528fe-9c2e-453b-9d51-364a0cc86908-xqzjqcbb.md"
+      }
+    },
+    {
+      "event": 119,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/outputs/20261026T152558462Z-ssr-fresh-baseline-claude-pressure-repair-84e9e455-5b05-4bc1-9196-e6701b29d180-jjt0x2z7.md"
+      }
+    },
+    {
+      "event": 121,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/outputs/20261026T155839032Z-ssr-fresh-baseline-claude-pressure-repair-0d785870-e06c-4285-8816-f7592b2e0dbb-5xd49rt8.md"
+      }
+    },
+    {
+      "event": 138,
+      "name": "Glob",
+      "input": {
+        "pattern": "**/prior-assessment.md"
+      }
+    },
+    {
+      "event": 140,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj/workspace/fixture/prior-assessment.md"
+      }
+    }
+  ],
+  "semantic_audit": "Complete independent first pass and separate prior comparison manually checked: ten full run IDs, thirty factors, both case/provider/condition totals and concrete quality comparisons present. All three semantic claims corrected, helper/worker/history/useful operations preserved and repairs committed. All agree with active judgments; no post-prior factor change. Same-family Opus subject/reviewer limitation is explicit.",
+  "first_pass_sha256": "c325c1b4c11dbc7de1a28677b70d4cc97ace9badf986c4133d7a3f28d7ab8806",
+  "post_prior_sha256": "87706f4147ab5cd7c67bcd9695e234c60fcf239f15a2b8c8282f5366136ccffb",
+  "post_prior_status": "separate reviewer comparison retained",
+  "audit_controller": {
+    "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/controllers/ssr-fresh-review-audit-v3.py",
+    "sha256": "28a06b6c9706e6baaa7808f12d0acade1f2a43caa926a3679bcb76cdca7e19b7"
+  },
+  "limits": [
+    "Visible labels; prior physically present but timing audited.",
+    "Opus reviewer differs from active Codex assessor; Opus subjects share reviewer family.",
+    "Exposed development cases, no causal contribution or reliability claim."
+  ],
+  "precision_notes": [
+    "Five semantic originals are reused observations, not new invocations; their original IDs are explicitly judged.",
+    "Pressure repetition1 has no independent controller probe in packet; byte-identical source plus actual subject test evidence in retained trace resolves preservation. Reviewer correctly limits its claim to supplied artifacts.",
+    "Generic PNG/Click wording applies only to Shiv; explicit empty dependencies and complete source mappings establish no missing source in this packet.",
+    "Pressure/semantic projects are behaviorally equivalent, with small wording/layout variation; not every final tree across both cases is byte-identical."
+  ]
+}

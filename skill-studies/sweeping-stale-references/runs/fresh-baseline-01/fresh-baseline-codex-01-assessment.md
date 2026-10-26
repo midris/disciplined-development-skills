@@ -3,7 +3,7 @@
 Format version: `2`
 Assessment ID: ssr-fresh-baseline-codex-01
 Study / batch: sweeping-stale-references / fresh-baseline-codex-01
-Status: all subjects assessed; output-review closure pending
+Status: complete; subjects assessed and four provider output reviews audited
 Scope and acceptance rules: [protocol](../../protocol.md) at Git `75812d6c23ef7e92d5a794b4724e51758f60e7cb`, batch fresh-baseline-codex-01; SSR-assessment-3 and eleven original-specific fixed case cards with inherited interpretations.
 Attempt index: [fresh-baseline-codex-01-run-index.json](fresh-baseline-codex-01-run-index.json) at Git `ce933e2d80829453fa096e0adc50906f03a75fb6`, SHA-256 `25ae33b9a78e6d048e3cf1a8b3fc48d23933a882fbbbfd08622417cb57629369`.
 Assessor and relevant session context: Codex active preparer/assessor, aware of condition, history and intended comparison; not independent or blind.
@@ -119,4 +119,7 @@ These are exposed development cases with five descriptive repetitions, not held-
 Public Shiv-source familiarity remains possible; no-target controls, DD composition and full installed-catalog competition are outside this batch.
 Native task success without timely complete loading is not original-body effectiveness evidence.
 No baseline/candidate quality tie or adoption follows from original-only success.
+Four fresh Opus-medium reviews cover all forty repair outputs for this provider, including the reused semantic originals for Opus.
+Every independent first pass agrees with the active assessment on all 120 functional factors; no adopted score correction or consequential functional disagreement remains.
+Prior access and any separate comparison are recorded per packet; a reviewer that ended after a complete first pass has no post-prior judgment, and active reconciliation is retained separately.
 See the [combined assessment](fresh-baseline-01-assessment.md) for output review, supported comparison baseline and the separately authorized next decision.

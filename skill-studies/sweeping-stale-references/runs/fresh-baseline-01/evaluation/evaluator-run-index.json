@@ -94,6 +94,98 @@
         "sha256": "65c8a7b01d943bf89fc027e1f877030d0c02fe398ae9a4b9daa9f43afa172f65",
         "version": null
       }
+    },
+    {
+      "packet_id": "claude-semantic-pressure",
+      "run_id": "20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "ce933e2d80829453fa096e0adc50906f03a75fb6",
+      "configuration_sha256": "200c73053ce81725c58623ecefa9c48135517a90dcc26df71544137265d77195",
+      "bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/reviews/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/reviews/20261026T165028656Z-ssr-fresh-original-claude-semantic-pressure-review-447dfef0-03d5-4cb2-aa81-4811d8c27453-rimhg0pj.inventory.json",
+        "sha256": "ed483106c7c1649eb38fb1846131abb6964ce3d38a1cb44d322ac721781fa663",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 196.867,
+      "audit_status": "complete",
+      "audit": {
+        "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/evaluation/claude-semantic-pressure/audit.json",
+        "sha256": "7db8e2ca09cc05bd1797b3eec3c8639d98998a695f2092906d7ff82212de68f2",
+        "version": null
+      }
+    },
+    {
+      "packet_id": "claude-shiv-moved",
+      "run_id": "20261026T165451567Z-ssr-fresh-original-claude-shiv-moved-review-c54450b1-257a-469b-a39c-760dd29bde70-elni6ulx",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "658d5d3fd30e46d156838bae09f6b8d16048a110",
+      "configuration_sha256": "1549acda73646816e276e5b3c70b5563d5952d4f4da6ea5aa15d2c837b50b71c",
+      "bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/reviews/20261026T165451567Z-ssr-fresh-original-claude-shiv-moved-review-c54450b1-257a-469b-a39c-760dd29bde70-elni6ulx",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/reviews/20261026T165451567Z-ssr-fresh-original-claude-shiv-moved-review-c54450b1-257a-469b-a39c-760dd29bde70-elni6ulx.inventory.json",
+        "sha256": "d56a27272d1c4696e9b16aa04ae9c64aaa894e152a6a7e861a464912357330dd",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 302.277,
+      "audit_status": "complete",
+      "audit": {
+        "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/evaluation/claude-shiv-moved/audit.json",
+        "sha256": "de391af612dfac09781650afe1d58de76b0ec531a9178bb26e28fa8eb0de2f22",
+        "version": null
+      }
+    },
+    {
+      "packet_id": "claude-initiating-local",
+      "run_id": "20261026T170118634Z-ssr-fresh-original-claude-initiating-local-review-5951f263-86a8-450b-88dc-82f7ecb24c39-wfcooxw5",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "658d5d3fd30e46d156838bae09f6b8d16048a110",
+      "configuration_sha256": "70f67d74917bcc8bdcf00cb451398a4d4b53525394535c97a85767d009951a82",
+      "bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/reviews/20261026T170118634Z-ssr-fresh-original-claude-initiating-local-review-5951f263-86a8-450b-88dc-82f7ecb24c39-wfcooxw5",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/reviews/20261026T170118634Z-ssr-fresh-original-claude-initiating-local-review-5951f263-86a8-450b-88dc-82f7ecb24c39-wfcooxw5.inventory.json",
+        "sha256": "f4a69b482df7c1b86c7d37e8008478346330e6b2ad1cb70d89fbab292a3d731a",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 174.332,
+      "audit_status": "complete",
+      "audit": {
+        "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/evaluation/claude-initiating-local/audit.json",
+        "sha256": "edfc4a12ccb17e913e53ddf7d3e127f202cbcdc35f200ab347c4992b8259579b",
+        "version": null
+      }
+    },
+    {
+      "packet_id": "claude-native-positive",
+      "run_id": "20261026T170532774Z-ssr-fresh-original-claude-native-positive-review-4246dc9c-0bb0-4d08-a8d5-c193a46fa3b1-jlrpxxk1",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "658d5d3fd30e46d156838bae09f6b8d16048a110",
+      "configuration_sha256": "743d1ca9afc55eed8b8a98906f8ceeebcaffbb489ceba0b472ad0e550b88a728",
+      "bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/reviews/20261026T170532774Z-ssr-fresh-original-claude-native-positive-review-4246dc9c-0bb0-4d08-a8d5-c193a46fa3b1-jlrpxxk1",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/reviews/20261026T170532774Z-ssr-fresh-original-claude-native-positive-review-4246dc9c-0bb0-4d08-a8d5-c193a46fa3b1-jlrpxxk1.inventory.json",
+        "sha256": "c74620f7d7523751141bd00cd4513ad4c509ef7e45d42a11821fb1e2023e73ab",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 247.004,
+      "audit_status": "complete",
+      "audit": {
+        "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/evaluation/claude-native-positive/audit.json",
+        "sha256": "93c5e7477f6440e5ad79ad05479b228e34f65b009bd723d1330ebd1da15f8573",
+        "version": null
+      }
     }
   ]
 }
