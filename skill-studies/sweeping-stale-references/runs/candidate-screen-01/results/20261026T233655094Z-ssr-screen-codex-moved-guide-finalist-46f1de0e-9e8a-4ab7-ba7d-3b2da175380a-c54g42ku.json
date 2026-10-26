@@ -1,0 +1,134 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-10-26T23:38:21.352636+00:00",
+  "run_id": "20261026T233655094Z-ssr-screen-codex-moved-guide-finalist-46f1de0e-9e8a-4ab7-ba7d-3b2da175380a-c54g42ku",
+  "condition": "finalist",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Preparer and active assessor with condition/history awareness; not blind or independent. Fixed SSR-assessment-3 and case-specific units, inherited explanations and prospective candidate interpretation."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T233655094Z-ssr-screen-codex-moved-guide-finalist-46f1de0e-9e8a-4ab7-ba7d-3b2da175380a-c54g42ku/result.json",
+        "sha256": "d2c701fe6048c5704c9fd17b68d57f7f1c787f794fb729030818d91ea01e4717",
+        "version": null
+      },
+      "selector": "Mechanical completion, declared execution and retained capture."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T233655094Z-ssr-screen-codex-moved-guide-finalist-46f1de0e-9e8a-4ab7-ba7d-3b2da175380a-c54g42ku/provider-session.jsonl",
+        "sha256": "4e0bcd0c5737e88159d3c1f370ad75f1976062be4106bd8109d817e8b8173851",
+        "version": null
+      },
+      "selector": "Complete ordered tool calls, responses and subject messages."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/inspection/104.json",
+        "sha256": "4c7fd07871949f5f6650029e14d21940d821ad2041cb707e366edd67fa9267d4",
+        "version": null
+      },
+      "selector": "Disposable full project/Git comparison, protected inputs, delivery/model checks and any trusted replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned model/CLI/effort and source identities verified; complete retained capture and cleanup, with full assigned-body delivery for explicit application. Native availability is verified; missing/late loading is scored separately.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Three current relative links reach the intended guide; independent root/outside export executions emit its exact contents.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Service instructions, history and independent vendor content/link remain preserved; old path absent.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All four consumer changes committed after baseline, tracked worktree clean.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Full body before search/edit; old/new path and concept searches establish four current updates and justified historical/vendor preservation before mutation.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One repair commit contains the complete reconciliation after baseline.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Five scoped references accurately reported in separate path/count-one rows with correct update or historical disposition; supplementary current/vendor rows do not replace them.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Complete moved-guide repair and scoped reporting; no functional regression.",
+  "observations": [],
+  "uncertainty": [
+    "Exposed development case in a declared provider/runtime stratum; no blind, held-out, population reliability or causal-guidance claim.",
+    "Native selection and task success are separate; retain case-specific counting units and Shiv uncertainty."
+  ],
+  "result_id": "candidate-screen-codex-01-moved-guide-finalist-3",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/codex-moved-guide-manifest.json",
+    "sha256": "9e7bc78f6663b7a40b3d7a9188b484235686341bdf0e85f1030a8e54a590d598",
+    "version": "1",
+    "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+  }
+}

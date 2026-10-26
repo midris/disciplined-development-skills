@@ -1,0 +1,349 @@
+{
+  "schema_version": "0.2",
+  "id": "ssr-candidate-screen-codex-shiv-review",
+  "prompt": "../prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/INTERPRETATION.md",
+      "target": "INTERPRETATION.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/criteria/discovery-shiv-expected.json",
+      "target": "criteria/discovery-shiv-expected.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/criteria/discovery-shiv-inherited.md",
+      "target": "criteria/discovery-shiv-inherited.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/criteria/discovery-shiv.md",
+      "target": "criteria/discovery-shiv.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/facts/20261026T134721172Z-ssr-fresh-baseline-codex-discovery-shiv-b2bf1cab-ce90-43ab-bf0b-742deab69f41-fmmcjc30.json",
+      "target": "facts/20261026T134721172Z-ssr-fresh-baseline-codex-discovery-shiv-b2bf1cab-ce90-43ab-bf0b-742deab69f41-fmmcjc30.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/facts/20261026T143914253Z-ssr-fresh-baseline-codex-discovery-shiv-34bef055-5156-4912-b368-f30fd19f79ec-ezh96m4u.json",
+      "target": "facts/20261026T143914253Z-ssr-fresh-baseline-codex-discovery-shiv-34bef055-5156-4912-b368-f30fd19f79ec-ezh96m4u.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/facts/20261026T150353909Z-ssr-fresh-baseline-codex-discovery-shiv-8b7b2c1e-7ceb-4889-b85e-61e914680960-lmwtlkmw.json",
+      "target": "facts/20261026T150353909Z-ssr-fresh-baseline-codex-discovery-shiv-8b7b2c1e-7ceb-4889-b85e-61e914680960-lmwtlkmw.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/facts/20261026T153200730Z-ssr-fresh-baseline-codex-discovery-shiv-6aea74e1-b2ad-4844-96f1-8226ed7231aa-yc3bh5xi.json",
+      "target": "facts/20261026T153200730Z-ssr-fresh-baseline-codex-discovery-shiv-6aea74e1-b2ad-4844-96f1-8226ed7231aa-yc3bh5xi.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/facts/20261026T160215005Z-ssr-fresh-baseline-codex-discovery-shiv-443053da-c094-4120-a779-90b810030140-5efwd34u.json",
+      "target": "facts/20261026T160215005Z-ssr-fresh-baseline-codex-discovery-shiv-443053da-c094-4120-a779-90b810030140-5efwd34u.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/facts/20261026T204231699Z-ssr-screen-codex-discovery-shiv-finalist-e4f82415-5d91-47f3-8181-3b63e27eb6c4-gjlbbssd.json",
+      "target": "facts/20261026T204231699Z-ssr-screen-codex-discovery-shiv-finalist-e4f82415-5d91-47f3-8181-3b63e27eb6c4-gjlbbssd.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/facts/20261026T204406120Z-ssr-screen-codex-discovery-shiv-candidate-c0f73722-17eb-43fb-afef-8b52be9165b3-gta01too.json",
+      "target": "facts/20261026T204406120Z-ssr-screen-codex-discovery-shiv-candidate-c0f73722-17eb-43fb-afef-8b52be9165b3-gta01too.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/facts/20261026T212521143Z-ssr-screen-codex-discovery-shiv-candidate-d74ab21a-21cc-4e9a-b091-1f44bd0b31f3-b5l16_um.json",
+      "target": "facts/20261026T212521143Z-ssr-screen-codex-discovery-shiv-candidate-d74ab21a-21cc-4e9a-b091-1f44bd0b31f3-b5l16_um.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/facts/20261026T212724634Z-ssr-screen-codex-discovery-shiv-finalist-6a0e6721-98f8-4f2c-8aaf-6d047450d96c-25yadmcm.json",
+      "target": "facts/20261026T212724634Z-ssr-screen-codex-discovery-shiv-finalist-6a0e6721-98f8-4f2c-8aaf-6d047450d96c-25yadmcm.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/facts/20261026T230812245Z-ssr-screen-codex-discovery-shiv-finalist-f1797bba-ca58-445d-98bd-bbbc85d5d5e3-silpin_9.json",
+      "target": "facts/20261026T230812245Z-ssr-screen-codex-discovery-shiv-finalist-f1797bba-ca58-445d-98bd-bbbc85d5d5e3-silpin_9.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/facts/20261026T230951628Z-ssr-screen-codex-discovery-shiv-candidate-67852c02-e91f-44a6-861e-3008a8812cc0-r9i4j1y0.json",
+      "target": "facts/20261026T230951628Z-ssr-screen-codex-discovery-shiv-candidate-67852c02-e91f-44a6-861e-3008a8812cc0-r9i4j1y0.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/001.txt",
+      "target": "objects/001.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/002.txt",
+      "target": "objects/002.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/003.txt",
+      "target": "objects/003.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/004.txt",
+      "target": "objects/004.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/005.txt",
+      "target": "objects/005.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/006.txt",
+      "target": "objects/006.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/007.txt",
+      "target": "objects/007.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/008.txt",
+      "target": "objects/008.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/009.txt",
+      "target": "objects/009.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/010.txt",
+      "target": "objects/010.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/011.txt",
+      "target": "objects/011.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/012.txt",
+      "target": "objects/012.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/013.txt",
+      "target": "objects/013.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/014.txt",
+      "target": "objects/014.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/015.txt",
+      "target": "objects/015.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/016.txt",
+      "target": "objects/016.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/017.txt",
+      "target": "objects/017.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/018.txt",
+      "target": "objects/018.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/019.txt",
+      "target": "objects/019.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/020.txt",
+      "target": "objects/020.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/021.txt",
+      "target": "objects/021.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/022.png",
+      "target": "objects/022.png"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/023.txt",
+      "target": "objects/023.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/024.txt",
+      "target": "objects/024.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/025.txt",
+      "target": "objects/025.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/026.txt",
+      "target": "objects/026.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/027.txt",
+      "target": "objects/027.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/028.txt",
+      "target": "objects/028.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/029.txt",
+      "target": "objects/029.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/030.txt",
+      "target": "objects/030.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/031.txt",
+      "target": "objects/031.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/032.txt",
+      "target": "objects/032.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/033.txt",
+      "target": "objects/033.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/034.txt",
+      "target": "objects/034.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/035.txt",
+      "target": "objects/035.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/036.txt",
+      "target": "objects/036.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/037.txt",
+      "target": "objects/037.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/038.txt",
+      "target": "objects/038.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/039.txt",
+      "target": "objects/039.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/040.txt",
+      "target": "objects/040.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/041.txt",
+      "target": "objects/041.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/042.txt",
+      "target": "objects/042.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/043.txt",
+      "target": "objects/043.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/044.txt",
+      "target": "objects/044.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/045.txt",
+      "target": "objects/045.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/046.txt",
+      "target": "objects/046.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/047.txt",
+      "target": "objects/047.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/048.txt",
+      "target": "objects/048.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/049.txt",
+      "target": "objects/049.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/050.txt",
+      "target": "objects/050.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/051.txt",
+      "target": "objects/051.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/052.txt",
+      "target": "objects/052.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/053.txt",
+      "target": "objects/053.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/054.txt",
+      "target": "objects/054.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/objects/055.txt",
+      "target": "objects/055.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/outputs/20261026T134721172Z-ssr-fresh-baseline-codex-discovery-shiv-b2bf1cab-ce90-43ab-bf0b-742deab69f41-fmmcjc30.md",
+      "target": "outputs/20261026T134721172Z-ssr-fresh-baseline-codex-discovery-shiv-b2bf1cab-ce90-43ab-bf0b-742deab69f41-fmmcjc30.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/outputs/20261026T143914253Z-ssr-fresh-baseline-codex-discovery-shiv-34bef055-5156-4912-b368-f30fd19f79ec-ezh96m4u.md",
+      "target": "outputs/20261026T143914253Z-ssr-fresh-baseline-codex-discovery-shiv-34bef055-5156-4912-b368-f30fd19f79ec-ezh96m4u.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/outputs/20261026T150353909Z-ssr-fresh-baseline-codex-discovery-shiv-8b7b2c1e-7ceb-4889-b85e-61e914680960-lmwtlkmw.md",
+      "target": "outputs/20261026T150353909Z-ssr-fresh-baseline-codex-discovery-shiv-8b7b2c1e-7ceb-4889-b85e-61e914680960-lmwtlkmw.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/outputs/20261026T153200730Z-ssr-fresh-baseline-codex-discovery-shiv-6aea74e1-b2ad-4844-96f1-8226ed7231aa-yc3bh5xi.md",
+      "target": "outputs/20261026T153200730Z-ssr-fresh-baseline-codex-discovery-shiv-6aea74e1-b2ad-4844-96f1-8226ed7231aa-yc3bh5xi.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/outputs/20261026T160215005Z-ssr-fresh-baseline-codex-discovery-shiv-443053da-c094-4120-a779-90b810030140-5efwd34u.md",
+      "target": "outputs/20261026T160215005Z-ssr-fresh-baseline-codex-discovery-shiv-443053da-c094-4120-a779-90b810030140-5efwd34u.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/outputs/20261026T204231699Z-ssr-screen-codex-discovery-shiv-finalist-e4f82415-5d91-47f3-8181-3b63e27eb6c4-gjlbbssd.md",
+      "target": "outputs/20261026T204231699Z-ssr-screen-codex-discovery-shiv-finalist-e4f82415-5d91-47f3-8181-3b63e27eb6c4-gjlbbssd.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/outputs/20261026T204406120Z-ssr-screen-codex-discovery-shiv-candidate-c0f73722-17eb-43fb-afef-8b52be9165b3-gta01too.md",
+      "target": "outputs/20261026T204406120Z-ssr-screen-codex-discovery-shiv-candidate-c0f73722-17eb-43fb-afef-8b52be9165b3-gta01too.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/outputs/20261026T212521143Z-ssr-screen-codex-discovery-shiv-candidate-d74ab21a-21cc-4e9a-b091-1f44bd0b31f3-b5l16_um.md",
+      "target": "outputs/20261026T212521143Z-ssr-screen-codex-discovery-shiv-candidate-d74ab21a-21cc-4e9a-b091-1f44bd0b31f3-b5l16_um.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/outputs/20261026T212724634Z-ssr-screen-codex-discovery-shiv-finalist-6a0e6721-98f8-4f2c-8aaf-6d047450d96c-25yadmcm.md",
+      "target": "outputs/20261026T212724634Z-ssr-screen-codex-discovery-shiv-finalist-6a0e6721-98f8-4f2c-8aaf-6d047450d96c-25yadmcm.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/outputs/20261026T230812245Z-ssr-screen-codex-discovery-shiv-finalist-f1797bba-ca58-445d-98bd-bbbc85d5d5e3-silpin_9.md",
+      "target": "outputs/20261026T230812245Z-ssr-screen-codex-discovery-shiv-finalist-f1797bba-ca58-445d-98bd-bbbc85d5d5e3-silpin_9.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/outputs/20261026T230951628Z-ssr-screen-codex-discovery-shiv-candidate-67852c02-e91f-44a6-861e-3008a8812cc0-r9i4j1y0.md",
+      "target": "outputs/20261026T230951628Z-ssr-screen-codex-discovery-shiv-candidate-67852c02-e91f-44a6-861e-3008a8812cc0-r9i4j1y0.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/policy.txt",
+      "target": "policy.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-shiv/prior-assessment.md",
+      "target": "prior-assessment.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}

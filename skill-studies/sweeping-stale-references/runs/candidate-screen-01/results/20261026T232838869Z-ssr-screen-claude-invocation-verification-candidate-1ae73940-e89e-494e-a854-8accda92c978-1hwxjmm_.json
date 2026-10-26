@@ -1,0 +1,79 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-10-26T23:29:07.665326+00:00",
+  "run_id": "20261026T232838869Z-ssr-screen-claude-invocation-verification-candidate-1ae73940-e89e-494e-a854-8accda92c978-1hwxjmm_",
+  "condition": "candidate",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Preparer and active assessor with condition/history awareness; not blind or independent. Fixed SSR-assessment-3 and case-specific units, inherited explanations and prospective candidate interpretation."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T232838869Z-ssr-screen-claude-invocation-verification-candidate-1ae73940-e89e-494e-a854-8accda92c978-1hwxjmm_/result.json",
+        "sha256": "23c1a07b4dc380ebd2204592d5a88b219f085196579af2472b1079bcda3abd19",
+        "version": null
+      },
+      "selector": "Mechanical completion, declared execution and retained capture."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T232838869Z-ssr-screen-claude-invocation-verification-candidate-1ae73940-e89e-494e-a854-8accda92c978-1hwxjmm_/stdout.txt",
+        "sha256": "b45c9360db7c2e2f5f80c6dd6013576d2aab6fa4e907996d4c8ce7ec3b4edf3a",
+        "version": null
+      },
+      "selector": "Complete ordered tool calls, responses and subject messages."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/inspection/095.json",
+        "sha256": "8c2a6e9c80d5e08aada115fb166db342a0ab8e162f4056e578fb2e7212149a53",
+        "version": null
+      },
+      "selector": "Disposable full project/Git comparison, protected inputs, delivery/model checks and any trusted replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned model/CLI/effort and source identities verified; complete retained capture and cleanup, with full assigned-body delivery for explicit application. Native availability is verified; missing/late loading is scored separately.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Complete trace reads TASK and lists tracked files, then runs the requested test suite once (three tests pass). No SSR invocation, targeted body read, or sweep; all supplied bytes are unchanged.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Appropriate SSR non-use during verification; functional result not measured.",
+  "observations": [],
+  "uncertainty": [
+    "Exposed development case in a declared provider/runtime stratum; no blind, held-out, population reliability or causal-guidance claim.",
+    "Native selection and task success are separate; retain case-specific counting units and Shiv uncertainty."
+  ],
+  "result_id": "candidate-screen-claude-01-invocation-verification-candidate-3",
+  "functional_result": "not measured",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/claude-invocation-verification-manifest.json",
+    "sha256": "b34dc237a4e89ac13ed246c042679912e05b730b503ec9dd42d242d859f5f35f",
+    "version": "1",
+    "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+  }
+}

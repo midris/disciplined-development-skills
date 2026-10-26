@@ -1,0 +1,107 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-10-26T23:44:11.940903+00:00",
+  "run_id": "20261026T234242412Z-ssr-screen-claude-large-sweep-account-finalist-942f7949-732e-4d2b-a7b7-9ee214b2669e-f4faecd1",
+  "condition": "finalist",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Preparer and active assessor with condition/history awareness; not blind or independent. Fixed SSR-assessment-3 and case-specific units, inherited explanations and prospective candidate interpretation."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T234242412Z-ssr-screen-claude-large-sweep-account-finalist-942f7949-732e-4d2b-a7b7-9ee214b2669e-f4faecd1/result.json",
+        "sha256": "7681ba01757fee6b600aa82b739bc544f3b5f6d42985e2e6c400873dd140d95f",
+        "version": null
+      },
+      "selector": "Mechanical completion, declared execution and retained capture."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T234242412Z-ssr-screen-claude-large-sweep-account-finalist-942f7949-732e-4d2b-a7b7-9ee214b2669e-f4faecd1/stdout.txt",
+        "sha256": "447317d0f1b2629465782e2d7f04c075db4069c9ae58ee65d5694e23870306b0",
+        "version": null
+      },
+      "selector": "Complete ordered tool calls, responses and subject messages."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/inspection/108.json",
+        "sha256": "8dd2e528b1c3f12789bb4e777558120a637a74e422e0afbab09328a2e7d9b572",
+        "version": null
+      },
+      "selector": "Disposable full project/Git comparison, protected inputs, delivery/model checks and any trusted replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned model/CLI/effort and source identities verified; complete retained capture and cleanup, with full assigned-body delivery for explicit application. Native availability is verified; missing/late loading is scored separately.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Complete REPORT preserves all eleven path/outcome groups across ten paths, exact inclusive locations and counts: 80 updates, 40 historical, six unrelated, 126 total. Mixed docs/cache.md outcomes remain separate. Verification explicitly limits itself to supplied inventory reconciliation and does not claim actual listed-project repair/search/tests. Supplied inputs unchanged.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Faithful complete inventory account; no functional denominator.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "Report wording that no commands were run is broad: the trace contains setup/read/listing commands, but none operating on the unavailable listed project. No fabricated project verification is asserted.",
+      "consequence": "Descriptive/supplementary; fixed scores and scope unchanged.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "dimension": "procedural",
+      "description": "Final response calls the 72-line preference a limit; this did not cause omitted evidence.",
+      "consequence": "Descriptive/supplementary; fixed scores and scope unchanged.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "dimension": "procedural",
+      "description": "The subject listed the empty workspace evidence directory; no controller-only evidence was exposed. Initial echo separator error was recovered before task processing.",
+      "consequence": "Descriptive/supplementary; fixed scores and scope unchanged.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "Exposed development case in a declared provider/runtime stratum; no blind, held-out, population reliability or causal-guidance claim.",
+    "Native selection and task success are separate; retain case-specific counting units and Shiv uncertainty."
+  ],
+  "result_id": "candidate-screen-claude-01-large-sweep-account-finalist-3",
+  "functional_result": "not measured",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/claude-large-sweep-account-manifest.json",
+    "sha256": "e257f138f567e70e2c41b44f25b498def7e8304d2d386a4e4506d1223c4338e9",
+    "version": "1",
+    "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+  }
+}

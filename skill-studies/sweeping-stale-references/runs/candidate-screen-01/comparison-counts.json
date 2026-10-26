@@ -1,0 +1,4622 @@
+{
+  "invalid_attempts": [
+    "20261026T214426922Z-ssr-screen-claude-invocation-verification-candidate-2642b050-3c55-4693-b576-a32f4a02d929-anjx72q4"
+  ],
+  "valid_observations": 246,
+  "groups": [
+    {
+      "provider": "all",
+      "condition": "all",
+      "case_id": "all",
+      "counts": {
+        "observations": 246,
+        "functional:met": 180,
+        "F1:met": 180,
+        "F2:met": 180,
+        "F3:met": 180,
+        "P1:met": 136,
+        "P2:met": 136,
+        "P3:met": 100,
+        "D1:met": 82,
+        "P3:insufficient evidence": 10,
+        "functional:not measured": 66,
+        "P3:not met": 48,
+        "D1:not met": 6
+      }
+    },
+    {
+      "provider": "all",
+      "condition": "candidate",
+      "case_id": "all",
+      "counts": {
+        "observations": 68,
+        "functional:met": 50,
+        "F1:met": 50,
+        "F2:met": 50,
+        "F3:met": 50,
+        "P1:met": 38,
+        "P2:met": 38,
+        "P3:not met": 16,
+        "P3:met": 23,
+        "P3:insufficient evidence": 5,
+        "D1:met": 24,
+        "functional:not measured": 18
+      }
+    },
+    {
+      "provider": "all",
+      "condition": "finalist",
+      "case_id": "all",
+      "counts": {
+        "observations": 68,
+        "functional:met": 50,
+        "F1:met": 50,
+        "F2:met": 50,
+        "F3:met": 50,
+        "P1:met": 38,
+        "P2:met": 38,
+        "P3:met": 31,
+        "P3:not met": 11,
+        "D1:met": 23,
+        "functional:not measured": 18,
+        "P3:insufficient evidence": 2,
+        "D1:not met": 1
+      }
+    },
+    {
+      "provider": "all",
+      "condition": "original",
+      "case_id": "all",
+      "counts": {
+        "observations": 110,
+        "functional:met": 80,
+        "F1:met": 80,
+        "F2:met": 80,
+        "F3:met": 80,
+        "P1:met": 60,
+        "P2:met": 60,
+        "P3:met": 46,
+        "D1:met": 35,
+        "P3:insufficient evidence": 3,
+        "functional:not measured": 30,
+        "P3:not met": 21,
+        "D1:not met": 5
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "all",
+      "counts": {
+        "observations": 35,
+        "functional:met": 26,
+        "F1:met": 26,
+        "F2:met": 26,
+        "F3:met": 26,
+        "P1:met": 20,
+        "P2:met": 20,
+        "P3:not met": 8,
+        "P3:met": 13,
+        "P3:insufficient evidence": 2,
+        "D1:met": 12,
+        "functional:not measured": 9
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "discovery-shiv",
+      "counts": {
+        "observations": 3,
+        "functional:met": 3,
+        "F1:met": 3,
+        "F2:met": 3,
+        "F3:met": 3,
+        "P1:met": 3,
+        "P2:met": 3,
+        "P3:insufficient evidence": 2,
+        "P3:not met": 1
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "initiating-change",
+      "counts": {
+        "observations": 3,
+        "functional:met": 3,
+        "F1:met": 3,
+        "F2:met": 3,
+        "F3:met": 3,
+        "P1:met": 3,
+        "P2:met": 3,
+        "P3:met": 2,
+        "P3:not met": 1
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "invocation-change",
+      "counts": {
+        "observations": 3,
+        "functional:met": 3,
+        "F1:met": 3,
+        "F2:met": 3,
+        "F3:met": 3,
+        "D1:met": 3
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "invocation-review",
+      "counts": {
+        "observations": 3,
+        "functional:met": 3,
+        "F1:met": 3,
+        "F2:met": 3,
+        "F3:met": 3,
+        "D1:met": 3
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "invocation-unrelated",
+      "counts": {
+        "observations": 3,
+        "functional:not measured": 3,
+        "D1:met": 3
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "invocation-verification",
+      "counts": {
+        "observations": 3,
+        "functional:not measured": 3,
+        "D1:met": 3
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "large-sweep-account",
+      "counts": {
+        "observations": 3,
+        "functional:not measured": 3,
+        "P3:met": 3
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "local-change",
+      "counts": {
+        "observations": 3,
+        "functional:met": 3,
+        "F1:met": 3,
+        "F2:met": 3,
+        "F3:met": 3,
+        "P1:met": 3,
+        "P2:met": 3,
+        "P3:not met": 2,
+        "P3:met": 1
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "moved-guide",
+      "counts": {
+        "observations": 3,
+        "functional:met": 3,
+        "F1:met": 3,
+        "F2:met": 3,
+        "F3:met": 3,
+        "P1:met": 3,
+        "P2:met": 3,
+        "P3:met": 3
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "pressure-repair",
+      "counts": {
+        "observations": 3,
+        "functional:met": 3,
+        "F1:met": 3,
+        "F2:met": 3,
+        "F3:met": 3,
+        "P1:met": 3,
+        "P2:met": 3,
+        "P3:met": 2,
+        "P3:not met": 1
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "semantic-delivery",
+      "counts": {
+        "observations": 5,
+        "functional:met": 5,
+        "F1:met": 5,
+        "F2:met": 5,
+        "F3:met": 5,
+        "P1:met": 5,
+        "P2:met": 5,
+        "P3:not met": 3,
+        "P3:met": 2
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "all",
+      "counts": {
+        "observations": 35,
+        "functional:met": 26,
+        "F1:met": 26,
+        "F2:met": 26,
+        "F3:met": 26,
+        "P1:met": 20,
+        "P2:met": 20,
+        "P3:met": 14,
+        "P3:not met": 8,
+        "D1:met": 11,
+        "functional:not measured": 9,
+        "P3:insufficient evidence": 1,
+        "D1:not met": 1
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "discovery-shiv",
+      "counts": {
+        "observations": 3,
+        "functional:met": 3,
+        "F1:met": 3,
+        "F2:met": 3,
+        "F3:met": 3,
+        "P1:met": 3,
+        "P2:met": 3,
+        "P3:insufficient evidence": 1,
+        "P3:not met": 2
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "initiating-change",
+      "counts": {
+        "observations": 3,
+        "functional:met": 3,
+        "F1:met": 3,
+        "F2:met": 3,
+        "F3:met": 3,
+        "P1:met": 3,
+        "P2:met": 3,
+        "P3:not met": 2,
+        "P3:met": 1
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "invocation-change",
+      "counts": {
+        "observations": 3,
+        "functional:met": 3,
+        "F1:met": 3,
+        "F2:met": 3,
+        "F3:met": 3,
+        "D1:met": 3
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "invocation-review",
+      "counts": {
+        "observations": 3,
+        "functional:met": 3,
+        "F1:met": 3,
+        "F2:met": 3,
+        "F3:met": 3,
+        "D1:met": 2,
+        "D1:not met": 1
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "invocation-unrelated",
+      "counts": {
+        "observations": 3,
+        "functional:not measured": 3,
+        "D1:met": 3
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "invocation-verification",
+      "counts": {
+        "observations": 3,
+        "functional:not measured": 3,
+        "D1:met": 3
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "large-sweep-account",
+      "counts": {
+        "observations": 3,
+        "functional:not measured": 3,
+        "P3:not met": 1,
+        "P3:met": 2
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "local-change",
+      "counts": {
+        "observations": 3,
+        "functional:met": 3,
+        "F1:met": 3,
+        "F2:met": 3,
+        "F3:met": 3,
+        "P1:met": 3,
+        "P2:met": 3,
+        "P3:met": 2,
+        "P3:not met": 1
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "moved-guide",
+      "counts": {
+        "observations": 3,
+        "functional:met": 3,
+        "F1:met": 3,
+        "F2:met": 3,
+        "F3:met": 3,
+        "P1:met": 3,
+        "P2:met": 3,
+        "P3:met": 3
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "pressure-repair",
+      "counts": {
+        "observations": 3,
+        "functional:met": 3,
+        "F1:met": 3,
+        "F2:met": 3,
+        "F3:met": 3,
+        "P1:met": 3,
+        "P2:met": 3,
+        "P3:met": 3
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "semantic-delivery",
+      "counts": {
+        "observations": 5,
+        "functional:met": 5,
+        "F1:met": 5,
+        "F2:met": 5,
+        "F3:met": 5,
+        "P1:met": 5,
+        "P2:met": 5,
+        "P3:met": 3,
+        "P3:not met": 2
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "all",
+      "counts": {
+        "observations": 55,
+        "functional:met": 40,
+        "F1:met": 40,
+        "F2:met": 40,
+        "F3:met": 40,
+        "P1:met": 30,
+        "P2:met": 30,
+        "P3:not met": 11,
+        "D1:not met": 5,
+        "P3:met": 23,
+        "functional:not measured": 15,
+        "D1:met": 15,
+        "P3:insufficient evidence": 1
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "discovery-shiv",
+      "counts": {
+        "observations": 5,
+        "functional:met": 5,
+        "F1:met": 5,
+        "F2:met": 5,
+        "F3:met": 5,
+        "P1:met": 5,
+        "P2:met": 5,
+        "P3:not met": 4,
+        "P3:insufficient evidence": 1
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "initiating-change",
+      "counts": {
+        "observations": 5,
+        "functional:met": 5,
+        "F1:met": 5,
+        "F2:met": 5,
+        "F3:met": 5,
+        "P1:met": 5,
+        "P2:met": 5,
+        "P3:met": 2,
+        "P3:not met": 3
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "invocation-change",
+      "counts": {
+        "observations": 5,
+        "functional:met": 5,
+        "F1:met": 5,
+        "F2:met": 5,
+        "F3:met": 5,
+        "D1:not met": 2,
+        "D1:met": 3
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "invocation-review",
+      "counts": {
+        "observations": 5,
+        "functional:met": 5,
+        "F1:met": 5,
+        "F2:met": 5,
+        "F3:met": 5,
+        "D1:not met": 3,
+        "D1:met": 2
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "invocation-unrelated",
+      "counts": {
+        "observations": 5,
+        "functional:not measured": 5,
+        "D1:met": 5
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "invocation-verification",
+      "counts": {
+        "observations": 5,
+        "functional:not measured": 5,
+        "D1:met": 5
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "large-sweep-account",
+      "counts": {
+        "observations": 5,
+        "functional:not measured": 5,
+        "P3:met": 5
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "local-change",
+      "counts": {
+        "observations": 5,
+        "functional:met": 5,
+        "F1:met": 5,
+        "F2:met": 5,
+        "F3:met": 5,
+        "P1:met": 5,
+        "P2:met": 5,
+        "P3:met": 5
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "moved-guide",
+      "counts": {
+        "observations": 5,
+        "functional:met": 5,
+        "F1:met": 5,
+        "F2:met": 5,
+        "F3:met": 5,
+        "P1:met": 5,
+        "P2:met": 5,
+        "P3:met": 5
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "pressure-repair",
+      "counts": {
+        "observations": 5,
+        "functional:met": 5,
+        "F1:met": 5,
+        "F2:met": 5,
+        "F3:met": 5,
+        "P1:met": 5,
+        "P2:met": 5,
+        "P3:not met": 4,
+        "P3:met": 1
+      }
+    },
+    {
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "semantic-delivery",
+      "counts": {
+        "observations": 5,
+        "functional:met": 5,
+        "F1:met": 5,
+        "F2:met": 5,
+        "F3:met": 5,
+        "P1:met": 5,
+        "P2:met": 5,
+        "P3:met": 5
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "all",
+      "counts": {
+        "observations": 33,
+        "functional:met": 24,
+        "F1:met": 24,
+        "F2:met": 24,
+        "F3:met": 24,
+        "P1:met": 18,
+        "P2:met": 18,
+        "P3:not met": 8,
+        "P3:insufficient evidence": 3,
+        "P3:met": 10,
+        "D1:met": 12,
+        "functional:not measured": 9
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "discovery-shiv",
+      "counts": {
+        "observations": 3,
+        "functional:met": 3,
+        "F1:met": 3,
+        "F2:met": 3,
+        "F3:met": 3,
+        "P1:met": 3,
+        "P2:met": 3,
+        "P3:insufficient evidence": 3
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "initiating-change",
+      "counts": {
+        "observations": 3,
+        "functional:met": 3,
+        "F1:met": 3,
+        "F2:met": 3,
+        "F3:met": 3,
+        "P1:met": 3,
+        "P2:met": 3,
+        "P3:met": 3
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "invocation-change",
+      "counts": {
+        "observations": 3,
+        "functional:met": 3,
+        "F1:met": 3,
+        "F2:met": 3,
+        "F3:met": 3,
+        "D1:met": 3
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "invocation-review",
+      "counts": {
+        "observations": 3,
+        "functional:met": 3,
+        "F1:met": 3,
+        "F2:met": 3,
+        "F3:met": 3,
+        "D1:met": 3
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "invocation-unrelated",
+      "counts": {
+        "observations": 3,
+        "functional:not measured": 3,
+        "D1:met": 3
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "invocation-verification",
+      "counts": {
+        "observations": 3,
+        "functional:not measured": 3,
+        "D1:met": 3
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "large-sweep-account",
+      "counts": {
+        "observations": 3,
+        "functional:not measured": 3,
+        "P3:met": 3
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "local-change",
+      "counts": {
+        "observations": 3,
+        "functional:met": 3,
+        "F1:met": 3,
+        "F2:met": 3,
+        "F3:met": 3,
+        "P1:met": 3,
+        "P2:met": 3,
+        "P3:not met": 2,
+        "P3:met": 1
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "moved-guide",
+      "counts": {
+        "observations": 3,
+        "functional:met": 3,
+        "F1:met": 3,
+        "F2:met": 3,
+        "F3:met": 3,
+        "P1:met": 3,
+        "P2:met": 3,
+        "P3:met": 3
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "pressure-repair",
+      "counts": {
+        "observations": 3,
+        "functional:met": 3,
+        "F1:met": 3,
+        "F2:met": 3,
+        "F3:met": 3,
+        "P1:met": 3,
+        "P2:met": 3,
+        "P3:not met": 3
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "semantic-delivery",
+      "counts": {
+        "observations": 3,
+        "functional:met": 3,
+        "F1:met": 3,
+        "F2:met": 3,
+        "F3:met": 3,
+        "P1:met": 3,
+        "P2:met": 3,
+        "P3:not met": 3
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "all",
+      "counts": {
+        "observations": 33,
+        "functional:met": 24,
+        "F1:met": 24,
+        "F2:met": 24,
+        "F3:met": 24,
+        "P1:met": 18,
+        "P2:met": 18,
+        "P3:met": 17,
+        "P3:not met": 3,
+        "D1:met": 12,
+        "functional:not measured": 9,
+        "P3:insufficient evidence": 1
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "discovery-shiv",
+      "counts": {
+        "observations": 3,
+        "functional:met": 3,
+        "F1:met": 3,
+        "F2:met": 3,
+        "F3:met": 3,
+        "P1:met": 3,
+        "P2:met": 3,
+        "P3:not met": 2,
+        "P3:insufficient evidence": 1
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "initiating-change",
+      "counts": {
+        "observations": 3,
+        "functional:met": 3,
+        "F1:met": 3,
+        "F2:met": 3,
+        "F3:met": 3,
+        "P1:met": 3,
+        "P2:met": 3,
+        "P3:met": 3
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "invocation-change",
+      "counts": {
+        "observations": 3,
+        "functional:met": 3,
+        "F1:met": 3,
+        "F2:met": 3,
+        "F3:met": 3,
+        "D1:met": 3
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "invocation-review",
+      "counts": {
+        "observations": 3,
+        "functional:met": 3,
+        "F1:met": 3,
+        "F2:met": 3,
+        "F3:met": 3,
+        "D1:met": 3
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "invocation-unrelated",
+      "counts": {
+        "observations": 3,
+        "functional:not measured": 3,
+        "D1:met": 3
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "invocation-verification",
+      "counts": {
+        "observations": 3,
+        "functional:not measured": 3,
+        "D1:met": 3
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "large-sweep-account",
+      "counts": {
+        "observations": 3,
+        "functional:not measured": 3,
+        "P3:met": 3
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "local-change",
+      "counts": {
+        "observations": 3,
+        "functional:met": 3,
+        "F1:met": 3,
+        "F2:met": 3,
+        "F3:met": 3,
+        "P1:met": 3,
+        "P2:met": 3,
+        "P3:met": 3
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "moved-guide",
+      "counts": {
+        "observations": 3,
+        "functional:met": 3,
+        "F1:met": 3,
+        "F2:met": 3,
+        "F3:met": 3,
+        "P1:met": 3,
+        "P2:met": 3,
+        "P3:met": 3
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "pressure-repair",
+      "counts": {
+        "observations": 3,
+        "functional:met": 3,
+        "F1:met": 3,
+        "F2:met": 3,
+        "F3:met": 3,
+        "P1:met": 3,
+        "P2:met": 3,
+        "P3:met": 2,
+        "P3:not met": 1
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "semantic-delivery",
+      "counts": {
+        "observations": 3,
+        "functional:met": 3,
+        "F1:met": 3,
+        "F2:met": 3,
+        "F3:met": 3,
+        "P1:met": 3,
+        "P2:met": 3,
+        "P3:met": 3
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "all",
+      "counts": {
+        "observations": 55,
+        "functional:met": 40,
+        "F1:met": 40,
+        "F2:met": 40,
+        "F3:met": 40,
+        "P1:met": 30,
+        "P2:met": 30,
+        "P3:met": 23,
+        "D1:met": 20,
+        "P3:insufficient evidence": 2,
+        "functional:not measured": 15,
+        "P3:not met": 10
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "discovery-shiv",
+      "counts": {
+        "observations": 5,
+        "functional:met": 5,
+        "F1:met": 5,
+        "F2:met": 5,
+        "F3:met": 5,
+        "P1:met": 5,
+        "P2:met": 5,
+        "P3:insufficient evidence": 2,
+        "P3:not met": 3
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "initiating-change",
+      "counts": {
+        "observations": 5,
+        "functional:met": 5,
+        "F1:met": 5,
+        "F2:met": 5,
+        "F3:met": 5,
+        "P1:met": 5,
+        "P2:met": 5,
+        "P3:met": 3,
+        "P3:not met": 2
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "invocation-change",
+      "counts": {
+        "observations": 5,
+        "functional:met": 5,
+        "F1:met": 5,
+        "F2:met": 5,
+        "F3:met": 5,
+        "D1:met": 5
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "invocation-review",
+      "counts": {
+        "observations": 5,
+        "functional:met": 5,
+        "F1:met": 5,
+        "F2:met": 5,
+        "F3:met": 5,
+        "D1:met": 5
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "invocation-unrelated",
+      "counts": {
+        "observations": 5,
+        "functional:not measured": 5,
+        "D1:met": 5
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "invocation-verification",
+      "counts": {
+        "observations": 5,
+        "functional:not measured": 5,
+        "D1:met": 5
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "large-sweep-account",
+      "counts": {
+        "observations": 5,
+        "functional:not measured": 5,
+        "P3:met": 5
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "local-change",
+      "counts": {
+        "observations": 5,
+        "functional:met": 5,
+        "F1:met": 5,
+        "F2:met": 5,
+        "F3:met": 5,
+        "P1:met": 5,
+        "P2:met": 5,
+        "P3:met": 4,
+        "P3:not met": 1
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "moved-guide",
+      "counts": {
+        "observations": 5,
+        "functional:met": 5,
+        "F1:met": 5,
+        "F2:met": 5,
+        "F3:met": 5,
+        "P1:met": 5,
+        "P2:met": 5,
+        "P3:met": 5
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "pressure-repair",
+      "counts": {
+        "observations": 5,
+        "functional:met": 5,
+        "F1:met": 5,
+        "F2:met": 5,
+        "F3:met": 5,
+        "P1:met": 5,
+        "P2:met": 5,
+        "P3:met": 1,
+        "P3:not met": 4
+      }
+    },
+    {
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "semantic-delivery",
+      "counts": {
+        "observations": 5,
+        "functional:met": 5,
+        "F1:met": 5,
+        "F2:met": 5,
+        "F3:met": 5,
+        "P1:met": 5,
+        "P2:met": 5,
+        "P3:met": 5
+      }
+    }
+  ],
+  "observations": [
+    {
+      "run_id": "20261026T133436927Z-ssr-fresh-baseline-codex-semantic-delivery-a705672d-b862-4541-af12-d3d88b5d2742-f3puqmj4",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "semantic-delivery",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T133837444Z-ssr-fresh-baseline-codex-pressure-repair-6467a052-3123-4706-9938-82a12b6a0cc8-8_okcgbk",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "pressure-repair",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T134245334Z-ssr-fresh-baseline-codex-invocation-change-f0f0a9ee-37d0-466b-abf4-4ba50bb9030e-8joxuexg",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "invocation-change",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T134721172Z-ssr-fresh-baseline-codex-discovery-shiv-b2bf1cab-ce90-43ab-bf0b-742deab69f41-fmmcjc30",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "discovery-shiv",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "insufficient evidence"
+      }
+    },
+    {
+      "run_id": "20261026T135423106Z-ssr-fresh-baseline-codex-moved-guide-3961fa8e-89bf-4c90-8499-5a3be88f3e6b-dhwjxka7",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "moved-guide",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T135904152Z-ssr-fresh-baseline-codex-invocation-review-31649107-f152-4b8b-8e2c-a16167e02426-3ywc8wq4",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "invocation-review",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T140546843Z-ssr-fresh-baseline-codex-initiating-change-83467fd1-3781-446b-a164-bed6c7c0117f-9jmeyyww",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "initiating-change",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T141313656Z-ssr-fresh-baseline-codex-local-change-cd1737e2-9ab1-49c9-8393-3eb5e58bc5c5-7z505eid",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "local-change",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T141941315Z-ssr-fresh-baseline-codex-large-sweep-account-6ac23fdf-d8fe-49bf-a95e-4969e62b2db7-vbbemyul",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "large-sweep-account",
+      "repetition": 1,
+      "functional_result": "not measured",
+      "criteria": {
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T142821667Z-ssr-fresh-baseline-codex-invocation-verification-09d8f7e3-a56b-4d81-8b17-ca7f4a892f76-ttp_42ja",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "invocation-verification",
+      "repetition": 1,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T142949755Z-ssr-fresh-baseline-codex-invocation-unrelated-0b42f49c-30e9-4915-9225-c6b4f3d0f0d4-zgx8g8ps",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "invocation-unrelated",
+      "repetition": 1,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T143111482Z-ssr-fresh-baseline-codex-semantic-delivery-5980d576-4a6c-47ea-b04b-399ddcf459be-mmghqytm",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "semantic-delivery",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T143412498Z-ssr-fresh-baseline-codex-pressure-repair-9e9e6183-27a3-42e7-8985-782d677d97dd-tsskre8q",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "pressure-repair",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T143618995Z-ssr-fresh-baseline-codex-invocation-change-8e62c8d0-fd1b-476d-9bce-ad7d42e475df-x9tj5hw9",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "invocation-change",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T143914253Z-ssr-fresh-baseline-codex-discovery-shiv-34bef055-5156-4912-b368-f30fd19f79ec-ezh96m4u",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "discovery-shiv",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T144158372Z-ssr-fresh-baseline-codex-moved-guide-1464c41d-e203-45b1-991f-7aafeb7a0826-w7945l8m",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "moved-guide",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T144440056Z-ssr-fresh-baseline-codex-invocation-review-b52a9798-cc51-40b4-a3ff-6449616186ec-0u6xy1kc",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "invocation-review",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T144704352Z-ssr-fresh-baseline-codex-initiating-change-f8840c93-a991-4a72-82a0-5fb037a4ed73-cm8_tcbo",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "initiating-change",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T144939668Z-ssr-fresh-baseline-codex-local-change-a9b768e9-f6f6-4792-a2cd-bd9a389b817e-wfkiwz3e",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "local-change",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T145134782Z-ssr-fresh-baseline-codex-large-sweep-account-c0c4d9d4-2faf-44fa-8898-0d45f074671e-7ths7kjz",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "large-sweep-account",
+      "repetition": 2,
+      "functional_result": "not measured",
+      "criteria": {
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T145326565Z-ssr-fresh-baseline-codex-invocation-verification-3044cc76-c943-45ba-8ee1-a45cfd44875c-qs24di32",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "invocation-verification",
+      "repetition": 2,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T145445369Z-ssr-fresh-baseline-codex-invocation-unrelated-9753cc9e-92b1-4fc6-9d82-ac24c92c9d38-rm39k5hc",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "invocation-unrelated",
+      "repetition": 2,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T145614690Z-ssr-fresh-baseline-codex-semantic-delivery-cbec7a28-8fdd-46a7-ad5f-e572c40d8bfb-x3551ydz",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "semantic-delivery",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T145759014Z-ssr-fresh-baseline-codex-pressure-repair-257cd5f9-61d7-4a47-90dc-d60334c40686-gp86ilqn",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "pressure-repair",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T150117283Z-ssr-fresh-baseline-codex-invocation-change-dbb48864-3418-4976-8f5f-8e1dac46c320-1hlsr6yu",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "invocation-change",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T150353909Z-ssr-fresh-baseline-codex-discovery-shiv-8b7b2c1e-7ceb-4889-b85e-61e914680960-lmwtlkmw",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "discovery-shiv",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T150725919Z-ssr-fresh-baseline-codex-moved-guide-6e927f28-a909-4be3-ad52-3f084793bc0a-34wbpaet",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "moved-guide",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T151006832Z-ssr-fresh-baseline-codex-invocation-review-8b77a4cc-a528-4553-98bc-77150e8feb14-yxaiykrt",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "invocation-review",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T151239770Z-ssr-fresh-baseline-codex-initiating-change-67127b6d-a501-47b6-bba8-4de2fcea9540-sskrnwu7",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "initiating-change",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T151525768Z-ssr-fresh-baseline-codex-local-change-0cddf436-ece9-4d65-80b6-f909a2e7e7f3-d94fwzcg",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "local-change",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T151851140Z-ssr-fresh-baseline-codex-large-sweep-account-2e91706e-f883-40db-b650-a2e0acaa3c63-_0v0rktf",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "large-sweep-account",
+      "repetition": 3,
+      "functional_result": "not measured",
+      "criteria": {
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T152049365Z-ssr-fresh-baseline-codex-invocation-verification-425bfced-1c52-4977-a1f6-06d5bca09b3a-askhea_x",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "invocation-verification",
+      "repetition": 3,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T152215124Z-ssr-fresh-baseline-codex-invocation-unrelated-ac859acb-64ca-43d2-9efe-8bfc5af78367-db7xsqyj",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "invocation-unrelated",
+      "repetition": 3,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T152435135Z-ssr-fresh-baseline-codex-semantic-delivery-ad65b54c-58b4-45dd-82eb-564814ede4a6-ev4tkama",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "semantic-delivery",
+      "repetition": 4,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T152652005Z-ssr-fresh-baseline-codex-pressure-repair-88adacf2-1128-4b8a-bb92-ec7756839f0b-tecko1da",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "pressure-repair",
+      "repetition": 4,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T152934740Z-ssr-fresh-baseline-codex-invocation-change-851ff07c-9b8e-48ae-900d-01569aa001d2-m67mwqvl",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "invocation-change",
+      "repetition": 4,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T153200730Z-ssr-fresh-baseline-codex-discovery-shiv-6aea74e1-b2ad-4844-96f1-8226ed7231aa-yc3bh5xi",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "discovery-shiv",
+      "repetition": 4,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T153437339Z-ssr-fresh-baseline-codex-moved-guide-158319e3-366b-4dbf-8e6d-1e014a67ac94-1lps5oor",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "moved-guide",
+      "repetition": 4,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T153813745Z-ssr-fresh-baseline-codex-invocation-review-b193f5c0-6ae0-4a5a-ad1e-3d0131b94cc8-070pzqtm",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "invocation-review",
+      "repetition": 4,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T154139635Z-ssr-fresh-baseline-codex-initiating-change-17dded1d-3d32-4cb6-9651-23fb952a72a4-54rv74mt",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "initiating-change",
+      "repetition": 4,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T154509781Z-ssr-fresh-baseline-codex-local-change-5b3ffadf-990e-439c-ac3e-82536a8080e7-31srg3i5",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "local-change",
+      "repetition": 4,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T154811209Z-ssr-fresh-baseline-codex-large-sweep-account-abf38e10-83c8-4dba-8c4b-a597ea939d39-to6si1te",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "large-sweep-account",
+      "repetition": 4,
+      "functional_result": "not measured",
+      "criteria": {
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T155014985Z-ssr-fresh-baseline-codex-invocation-verification-f5640327-ecad-4387-b9d0-ad87f2384986-3h0vsctw",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "invocation-verification",
+      "repetition": 4,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T155210881Z-ssr-fresh-baseline-codex-invocation-unrelated-d6b555d6-0443-4487-a512-02f2b7cd0fe4-pe_di8tt",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "invocation-unrelated",
+      "repetition": 4,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T155347173Z-ssr-fresh-baseline-codex-semantic-delivery-184d95f2-da8b-4178-9baa-4e31afca4d9e-2nu79qkx",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "semantic-delivery",
+      "repetition": 5,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T155641100Z-ssr-fresh-baseline-codex-pressure-repair-adfd498a-0d27-4549-9410-3914f16f5b02-opye7i2r",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "pressure-repair",
+      "repetition": 5,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T155930969Z-ssr-fresh-baseline-codex-invocation-change-badd3adf-2c86-44de-8ec8-10e60e2a784b-juvar6m0",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "invocation-change",
+      "repetition": 5,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T160215005Z-ssr-fresh-baseline-codex-discovery-shiv-443053da-c094-4120-a779-90b810030140-5efwd34u",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "discovery-shiv",
+      "repetition": 5,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "insufficient evidence"
+      }
+    },
+    {
+      "run_id": "20261026T160541170Z-ssr-fresh-baseline-codex-moved-guide-eedfa38a-4422-4996-b67f-54a75b5a56c7-ndpar6uq",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "moved-guide",
+      "repetition": 5,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T161052183Z-ssr-fresh-baseline-codex-invocation-review-6a00071d-9d44-495d-9ed6-c3d29526328e-s2cddd8y",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "invocation-review",
+      "repetition": 5,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T161406484Z-ssr-fresh-baseline-codex-initiating-change-45fab7dc-3c94-49af-a64d-56a3f803812e-4qwsbxeq",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "initiating-change",
+      "repetition": 5,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T161700582Z-ssr-fresh-baseline-codex-local-change-8a29c68f-378f-44d8-bf6d-c659714a1836-tq2dseko",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "local-change",
+      "repetition": 5,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T162005215Z-ssr-fresh-baseline-codex-large-sweep-account-40bb40eb-d2b6-4ff5-9fc7-b7402a8efd9c-eghq7dti",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "large-sweep-account",
+      "repetition": 5,
+      "functional_result": "not measured",
+      "criteria": {
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T162217345Z-ssr-fresh-baseline-codex-invocation-verification-ecf50eed-3637-41bd-8275-bd7920a53b8f-30a2bdsv",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "invocation-verification",
+      "repetition": 5,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T162413552Z-ssr-fresh-baseline-codex-invocation-unrelated-b6fd1d26-3f2e-4446-a560-2a7066c49ab2-5f_dho5x",
+      "provider": "codex",
+      "condition": "original",
+      "case_id": "invocation-unrelated",
+      "repetition": 5,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T134047500Z-ssr-fresh-baseline-claude-pressure-repair-55614d69-4b94-4d9d-b31e-01f1af6dc872-way5p3cv",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "pressure-repair",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T134445582Z-ssr-fresh-baseline-claude-invocation-change-e3f1a72f-82cc-4867-8897-dbf8efaec7e6-93hxbuqm",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "invocation-change",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T135122580Z-ssr-fresh-baseline-claude-discovery-shiv-57a33052-c40a-4da6-86bb-f7ef26471f1c-2sr8cacs",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "discovery-shiv",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T135650028Z-ssr-fresh-baseline-claude-moved-guide-da811995-0ecf-4bdf-89a8-f997b6f9cd40-o89dadrq",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "moved-guide",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T140228824Z-ssr-fresh-baseline-claude-invocation-review-c9e3a12b-a340-417f-9c08-22c7d8d8e990-hgazg1xu",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "invocation-review",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T140954711Z-ssr-fresh-baseline-claude-initiating-change-76018b57-f195-4dbf-b4b7-fbdc4d84b06a-stxp0q_m",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "initiating-change",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T141544649Z-ssr-fresh-baseline-claude-local-change-1446339f-f220-4b14-8081-7ef1898edc80-_axsjchk",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "local-change",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T142301133Z-ssr-fresh-baseline-claude-large-sweep-account-a05017e2-5735-401a-b13d-8a789f445cfc-bz3czw3l",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "large-sweep-account",
+      "repetition": 1,
+      "functional_result": "not measured",
+      "criteria": {
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T142911180Z-ssr-fresh-baseline-claude-invocation-verification-e187ecdd-ad59-4926-90a7-579eb22e984c-c35jttgg",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "invocation-verification",
+      "repetition": 1,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T143037507Z-ssr-fresh-baseline-claude-invocation-unrelated-5d476ce0-3d25-4122-8803-767cdc9ceacd-dln_iomo",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "invocation-unrelated",
+      "repetition": 1,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T143252395Z-ssr-fresh-baseline-claude-pressure-repair-cc578997-b8de-4662-8a88-483f96ba1cea-bbokxzpi",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "pressure-repair",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T143536368Z-ssr-fresh-baseline-claude-invocation-change-e473bf8e-b768-4aac-b6bb-572b21cc3b64-xdx7kvdb",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "invocation-change",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T143736299Z-ssr-fresh-baseline-claude-discovery-shiv-4c9a1ff7-d139-47cf-a149-3e3610e8846e-2_jd8aly",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "discovery-shiv",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T144052901Z-ssr-fresh-baseline-claude-moved-guide-87640d7a-aa26-4bfb-a16d-8dd22bd36898-a87ygsrv",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "moved-guide",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T144347185Z-ssr-fresh-baseline-claude-invocation-review-cd1c28b3-07e3-47e1-b47b-7269200637b0-obf2u_8o",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "invocation-review",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T144604004Z-ssr-fresh-baseline-claude-initiating-change-57d57b6e-3c98-438e-8315-e688adf36a65-ht9yzxgt",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "initiating-change",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T144838218Z-ssr-fresh-baseline-claude-local-change-75fe23e2-ab3c-4f3c-8a08-c8a822fa6c91-k7phrp5n",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "local-change",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T145045964Z-ssr-fresh-baseline-claude-large-sweep-account-0cba8a35-b4d5-41af-a341-d908516a7582-q1yckd17",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "large-sweep-account",
+      "repetition": 2,
+      "functional_result": "not measured",
+      "criteria": {
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T145232995Z-ssr-fresh-baseline-claude-invocation-verification-1c24c4c8-27e2-47f4-a98e-e59dcd787347-y1vyb87v",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "invocation-verification",
+      "repetition": 2,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T145405943Z-ssr-fresh-baseline-claude-invocation-unrelated-29151839-1931-47b9-9c4f-08cd3fe74072-2nnf7m5r",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "invocation-unrelated",
+      "repetition": 2,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T145923944Z-ssr-fresh-baseline-claude-pressure-repair-dd0528fe-9c2e-453b-9d51-364a0cc86908-xqzjqcbb",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "pressure-repair",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T150258329Z-ssr-fresh-baseline-claude-invocation-change-8613798d-37dc-47f8-8e9f-7e69da84f23e-7mkn53gb",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "invocation-change",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T150542611Z-ssr-fresh-baseline-claude-discovery-shiv-12060293-68fc-4aad-b179-1167dd86712b-d9tpcdl7",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "discovery-shiv",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T150908932Z-ssr-fresh-baseline-claude-moved-guide-091246d0-6355-4742-8d11-60c79a334d60-xqh45qhl",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "moved-guide",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T151152899Z-ssr-fresh-baseline-claude-invocation-review-1c771284-cce6-4c17-9a76-75631a628fa9-0ugswiob",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "invocation-review",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T151431129Z-ssr-fresh-baseline-claude-initiating-change-3c7e4f2c-8af5-4423-910b-db05a116f204-d4zzzylp",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "initiating-change",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T151757646Z-ssr-fresh-baseline-claude-local-change-4c599697-2687-401b-93eb-3e0fbc6a975a-79v3yqvp",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "local-change",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T151952741Z-ssr-fresh-baseline-claude-large-sweep-account-e095dbe9-2cff-4393-8ce1-9064735d0318-18kn89x1",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "large-sweep-account",
+      "repetition": 3,
+      "functional_result": "not measured",
+      "criteria": {
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T152133449Z-ssr-fresh-baseline-claude-invocation-verification-7453fd6b-7f8e-4fc4-b52e-538078febd11-_iugsv9g",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "invocation-verification",
+      "repetition": 3,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T152257755Z-ssr-fresh-baseline-claude-invocation-unrelated-db34e4dd-44d4-4d32-a2d3-8b4fd0495151-nv1tayfe",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "invocation-unrelated",
+      "repetition": 3,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T152558462Z-ssr-fresh-baseline-claude-pressure-repair-84e9e455-5b05-4bc1-9196-e6701b29d180-jjt0x2z7",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "pressure-repair",
+      "repetition": 4,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T152833925Z-ssr-fresh-baseline-claude-invocation-change-e19ab63b-b264-473a-ac4e-6e82e6de8d7e-g_2crf12",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "invocation-change",
+      "repetition": 4,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T153052393Z-ssr-fresh-baseline-claude-discovery-shiv-154d57c7-7497-4c7f-a3e2-bfd98dbf9e86-6ym5l74b",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "discovery-shiv",
+      "repetition": 4,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T153330184Z-ssr-fresh-baseline-claude-moved-guide-45aa004a-7e30-4fe8-b3a1-08d265a7f9fd-rx7pg01j",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "moved-guide",
+      "repetition": 4,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T153612696Z-ssr-fresh-baseline-claude-invocation-review-2081e659-8d60-4324-afc0-f5ebfa0c4d22-vacmr7m9",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "invocation-review",
+      "repetition": 4,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T154039670Z-ssr-fresh-baseline-claude-initiating-change-12316756-3c3c-4aa3-9ead-36e703708698-g32nx_jz",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "initiating-change",
+      "repetition": 4,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T154411925Z-ssr-fresh-baseline-claude-local-change-4e61e909-5fe9-4f58-95a7-336646bc7e04-_d0w7c_0",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "local-change",
+      "repetition": 4,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T154705661Z-ssr-fresh-baseline-claude-large-sweep-account-11b425ee-f540-432b-9a5d-f022e82450f0-sdk7tczx",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "large-sweep-account",
+      "repetition": 4,
+      "functional_result": "not measured",
+      "criteria": {
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T154902871Z-ssr-fresh-baseline-claude-invocation-verification-beff7296-324b-4dc7-bd8d-24939acebb63-8nvxww1q",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "invocation-verification",
+      "repetition": 4,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T155130112Z-ssr-fresh-baseline-claude-invocation-unrelated-333abd40-95d8-410b-8c83-1d76685fa61d-b67wjgff",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "invocation-unrelated",
+      "repetition": 4,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T155839032Z-ssr-fresh-baseline-claude-pressure-repair-0d785870-e06c-4285-8816-f7592b2e0dbb-5xd49rt8",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "pressure-repair",
+      "repetition": 5,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T160116860Z-ssr-fresh-baseline-claude-invocation-change-83c21cc6-9114-4418-833c-d400fbd63fd6-xpgg4yv8",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "invocation-change",
+      "repetition": 5,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T160403275Z-ssr-fresh-baseline-claude-discovery-shiv-68f079bc-6b6e-474e-a153-b43c5b2f6d4c-_5a6h6x8",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "discovery-shiv",
+      "repetition": 5,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "insufficient evidence"
+      }
+    },
+    {
+      "run_id": "20261026T160936719Z-ssr-fresh-baseline-claude-moved-guide-6f8fe2b0-7064-417d-9011-c12f818448ea-glsel8dw",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "moved-guide",
+      "repetition": 5,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T161324956Z-ssr-fresh-baseline-claude-invocation-review-d05e7008-9768-48af-a8e1-420149ccdfe2-pk1a3eir",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "invocation-review",
+      "repetition": 5,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T161553232Z-ssr-fresh-baseline-claude-initiating-change-56f75d7a-28d0-44e7-9e1b-3d0090855e8b-o3h6qn0l",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "initiating-change",
+      "repetition": 5,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T161848074Z-ssr-fresh-baseline-claude-local-change-98477fce-360b-4ca2-849d-103f6e71019b-k68ok8r7",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "local-change",
+      "repetition": 5,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T162101109Z-ssr-fresh-baseline-claude-large-sweep-account-17cbd519-3b07-47a2-9746-35fa55066946-l7tm64gk",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "large-sweep-account",
+      "repetition": 5,
+      "functional_result": "not measured",
+      "criteria": {
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T162317917Z-ssr-fresh-baseline-claude-invocation-verification-d9121315-6e88-4289-8d14-b85694dd6c44-7_y0e0rd",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "invocation-verification",
+      "repetition": 5,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T162459763Z-ssr-fresh-baseline-claude-invocation-unrelated-11234588-1850-4f36-9ac3-ab1f1f36364c-hh5avelg",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "invocation-unrelated",
+      "repetition": 5,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261023T211804448Z-ssr-compact-semantic-original-43eb72dc-bed5-4eff-90a3-ed9c363ce4ce-7g4e9s1p",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "semantic-delivery",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261023T212410571Z-ssr-compact-semantic-candidate-b27fa214-9b32-41ae-8717-d64f3ee0e1d4-b_x8sezp",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "semantic-delivery",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261023T212516549Z-ssr-compact-semantic-finalist-24f91879-a992-4b12-9026-38a9ebf2143a-sajnmbw3",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "semantic-delivery",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261023T212607360Z-ssr-compact-semantic-candidate-240ae7cd-4213-40bb-9b01-5c95714b3029-479zhvuo",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "semantic-delivery",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261023T212705559Z-ssr-compact-semantic-finalist-a9d86334-3445-4590-b3e4-1b132f6df8c7-5nu6_q9_",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "semantic-delivery",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261023T212809348Z-ssr-compact-semantic-original-e02f2ea8-520d-401d-b326-bd458cc17518-pg2payc3",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "semantic-delivery",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261023T212907539Z-ssr-compact-semantic-finalist-c1c662e0-fc86-4656-aaa0-7746f9eab771-idib5g4o",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "semantic-delivery",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261023T212947093Z-ssr-compact-semantic-original-4c89a89d-1efc-44bf-9832-cf8104dcebcd-n0sj6bjf",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "semantic-delivery",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261023T213033879Z-ssr-compact-semantic-candidate-7608f8bc-7450-4b24-a1bb-2284e4011e24-0ieyn2fu",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "semantic-delivery",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261023T213130992Z-ssr-compact-semantic-original-1fdec10e-64dc-4841-913c-967bc381947b-qjytmvqi",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "semantic-delivery",
+      "repetition": 4,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261023T213214880Z-ssr-compact-semantic-finalist-52160d4f-1d58-46f5-9b79-deb59490fc80-h_68zmgl",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "semantic-delivery",
+      "repetition": 4,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261023T213317806Z-ssr-compact-semantic-candidate-0e19c517-ab57-4c9f-a293-8bc999713bb4-468la7hg",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "semantic-delivery",
+      "repetition": 4,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261023T213412662Z-ssr-compact-semantic-candidate-8cf481d8-0405-463b-bc13-d24877855103-lp4o2r6z",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "semantic-delivery",
+      "repetition": 5,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261023T213505114Z-ssr-compact-semantic-original-3102bdf3-bd48-442f-8c61-1660d1ca81a6-mgqevtlv",
+      "provider": "claude",
+      "condition": "original",
+      "case_id": "semantic-delivery",
+      "repetition": 5,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261023T213555811Z-ssr-compact-semantic-finalist-5486e457-4782-4591-bb1f-7e90eaa33585-7xawoy6q",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "semantic-delivery",
+      "repetition": 5,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261024T060228842Z-ssr-compact-regression-initiating-change-8497abc5-1121-4628-af3f-03eb3a38bb0e-5waqy2no",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "initiating-change",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261024T060550211Z-ssr-compact-regression-invocation-change-1159453b-4002-4c8a-b340-4ddb44c568df-w47ho2r3",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "invocation-change",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261024T060738969Z-ssr-compact-regression-moved-guide-3a8241d0-eb67-4a24-8f49-1f1b24b72db7-9shudgzv",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "moved-guide",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261024T060904689Z-ssr-compact-regression-invocation-review-2943fb8b-a983-430c-b3be-0e4d6ac38547-pq7u071m",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "invocation-review",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261024T061345945Z-ssr-compact-regression-local-change-842fbb60-cf1b-4deb-acd6-a70e7e8f48f0-o3r593d9",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "local-change",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261024T061443495Z-ssr-compact-regression-invocation-unrelated-21a09f5f-a7b3-4320-8955-401a62470b77-7tr59p0l",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "invocation-unrelated",
+      "repetition": 1,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261024T061519400Z-ssr-compact-regression-initiating-change-16730605-9728-478a-a16e-3546bc7231ca-cj1pgbzp",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "initiating-change",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261024T061612874Z-ssr-compact-regression-invocation-review-3e1c6c38-11ca-4662-b139-99cfda44ec50-5_jh10a3",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "invocation-review",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261024T061703945Z-ssr-compact-regression-moved-guide-42f97295-92c5-41e5-bf7b-2c644ab42d1c-0scb5n1v",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "moved-guide",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261024T061754141Z-ssr-compact-regression-invocation-change-c51dc79a-efa5-409d-a953-4c406e11c8ef-u6hucd_f",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "invocation-change",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261024T061843823Z-ssr-compact-regression-local-change-28981bfb-f81d-4946-8626-9d3d49a747f1-7_ha8zsf",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "local-change",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T203535129Z-ssr-screen-codex-pressure-repair-candidate-495506e2-1500-48bd-923d-bd77cfcb1ec5-81sdvfbc",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "pressure-repair",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T203714982Z-ssr-screen-codex-pressure-repair-finalist-07a4c9db-5210-4e9f-9be0-5df4145124cf-tr6gwbql",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "pressure-repair",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T204231699Z-ssr-screen-codex-discovery-shiv-finalist-e4f82415-5d91-47f3-8181-3b63e27eb6c4-gjlbbssd",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "discovery-shiv",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T204406120Z-ssr-screen-codex-discovery-shiv-candidate-c0f73722-17eb-43fb-afef-8b52be9165b3-gta01too",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "discovery-shiv",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "insufficient evidence"
+      }
+    },
+    {
+      "run_id": "20261026T204553292Z-ssr-screen-codex-initiating-change-candidate-2989e459-1e03-42a1-966c-221dbe18da15-8ucpa5he",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "initiating-change",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T204730849Z-ssr-screen-codex-initiating-change-finalist-16f26925-b90f-4860-8fb2-2fbb5e3da71e-skboyzjx",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "initiating-change",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T205200723Z-ssr-screen-codex-invocation-change-finalist-898af4f8-c6a8-4072-b2cf-a8abf8bd899c-0yq8fgda",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "invocation-change",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T205305311Z-ssr-screen-codex-invocation-change-candidate-4867cd89-09bd-4bbb-81e0-c070a1b4236d-co2yij6t",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "invocation-change",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T205445588Z-ssr-screen-codex-invocation-review-candidate-56f0913f-2065-45f7-9c01-5571f82f45a1-cwx_fjag",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "invocation-review",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T205622496Z-ssr-screen-codex-invocation-review-finalist-fd0dc116-b15d-47cc-bdd4-08408b4a89a8-l8ag_o9y",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "invocation-review",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T210206457Z-ssr-screen-codex-invocation-verification-finalist-b6adacdf-c889-4ec7-b0aa-127c65412b2b-8qaf7qu5",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "invocation-verification",
+      "repetition": 1,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T210238850Z-ssr-screen-codex-invocation-verification-candidate-c44b7010-bdef-4029-8ded-e966ef8fdcd5-gnbygoi4",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "invocation-verification",
+      "repetition": 1,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T210321206Z-ssr-screen-codex-local-change-candidate-27ab5d13-b63f-4541-87cf-d583178cbc67-v42k2z3i",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "local-change",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T210448065Z-ssr-screen-codex-local-change-finalist-fd8ef6e4-16fd-4b4b-a8b1-6c5c762df5e9-2qavq8_x",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "local-change",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T210827783Z-ssr-screen-codex-moved-guide-finalist-65f840b2-16a1-4e42-97c3-17b0be66d851-4y4ke0bj",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "moved-guide",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T211013125Z-ssr-screen-codex-moved-guide-candidate-f4c5289a-8fda-4b56-b1a0-c16373c8b857-bghdfn9u",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "moved-guide",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T211116900Z-ssr-screen-codex-semantic-delivery-candidate-77e9eae3-566f-47b0-977a-3b2916692842-ifqovc4m",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "semantic-delivery",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T211248054Z-ssr-screen-codex-semantic-delivery-finalist-b3a2019a-2a34-4482-929a-5f9c6757a6f8-052cfl6_",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "semantic-delivery",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T211556024Z-ssr-screen-codex-large-sweep-account-finalist-e0f7b23e-af88-4fa2-8d31-125feb4b4247-k11m1g3f",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "large-sweep-account",
+      "repetition": 1,
+      "functional_result": "not measured",
+      "criteria": {
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T211646466Z-ssr-screen-codex-large-sweep-account-candidate-10963b8b-f3a7-4113-ac7f-37df693ab004-f3zh5wzk",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "large-sweep-account",
+      "repetition": 1,
+      "functional_result": "not measured",
+      "criteria": {
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T211743024Z-ssr-screen-codex-invocation-unrelated-candidate-bcec6015-aadb-44dc-a28d-6a6c932007a9-v3ee2ou2",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "invocation-unrelated",
+      "repetition": 1,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T211826429Z-ssr-screen-codex-invocation-unrelated-finalist-f399b712-3c51-4a9f-b6ad-965b17cf4664-puo4uidq",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "invocation-unrelated",
+      "repetition": 1,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T212231168Z-ssr-screen-codex-pressure-repair-finalist-97ef6cd4-7956-4c00-a625-020bcdaf5ac3-91n2b_2j",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "pressure-repair",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T212348582Z-ssr-screen-codex-pressure-repair-candidate-55174ebf-a2aa-4caa-9381-6fa237cdae89-07v7m1d5",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "pressure-repair",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T212521143Z-ssr-screen-codex-discovery-shiv-candidate-d74ab21a-21cc-4e9a-b091-1f44bd0b31f3-b5l16_um",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "discovery-shiv",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "insufficient evidence"
+      }
+    },
+    {
+      "run_id": "20261026T212724634Z-ssr-screen-codex-discovery-shiv-finalist-6a0e6721-98f8-4f2c-8aaf-6d047450d96c-25yadmcm",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "discovery-shiv",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "insufficient evidence"
+      }
+    },
+    {
+      "run_id": "20261026T213244285Z-ssr-screen-codex-initiating-change-finalist-12c3d16a-5721-4dfa-baf2-662bbcd1e9aa-o64sbbbk",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "initiating-change",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T213417777Z-ssr-screen-codex-initiating-change-candidate-4a4076cb-355d-4117-84f0-7acd7b5bf0cd-_ub7kiio",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "initiating-change",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T213601032Z-ssr-screen-codex-invocation-change-candidate-ab35c656-b6e3-4835-b42f-db825d4c44f5-v0s8shsd",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "invocation-change",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T213725688Z-ssr-screen-codex-invocation-change-finalist-18fbe788-21dd-4291-bf85-d2ca87ee4e1e-ah208ag9",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "invocation-change",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T214011854Z-ssr-screen-codex-invocation-review-finalist-bb2abd2b-f0f7-460f-82db-66c573d88c50-nmkx8_0e",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "invocation-review",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T214138608Z-ssr-screen-codex-invocation-review-candidate-4b1e465c-057f-44a7-85b8-d5b7cfbf8757-6nvm1z5a",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "invocation-review",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T214307686Z-ssr-screen-codex-invocation-verification-candidate-fed63c2d-c3f0-40ad-8d46-76bbb37db531-8wb0kpv7",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "invocation-verification",
+      "repetition": 2,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T214348701Z-ssr-screen-codex-invocation-verification-finalist-a72fe7c2-9210-4fca-9d2e-796a04d95785-gt0livgs",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "invocation-verification",
+      "repetition": 2,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T224700541Z-ssr-screen-codex-local-change-finalist-00975e7a-d19a-495c-86dc-671688192f4f-39206r7q",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "local-change",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T224804855Z-ssr-screen-codex-local-change-candidate-a21fc716-a4d6-4e94-bcde-59c34d519928-r9sqzaxm",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "local-change",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T224906809Z-ssr-screen-codex-moved-guide-candidate-c520fa3e-080f-467b-a691-15ecc031ae63-dsdftik_",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "moved-guide",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T225022624Z-ssr-screen-codex-moved-guide-finalist-0977eac1-7444-4ae4-a683-3c4457777f39-ga7g1kpd",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "moved-guide",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T225218601Z-ssr-screen-codex-semantic-delivery-finalist-a20d2777-0f44-40d7-ab61-0069946425a7-6gi2_8j7",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "semantic-delivery",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T225336383Z-ssr-screen-codex-semantic-delivery-candidate-d4674a19-2c36-4175-9335-8faec79d7dc0-tgl7dz4t",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "semantic-delivery",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T225442195Z-ssr-screen-codex-large-sweep-account-candidate-a22ff110-591b-45f2-bfaa-0cf7f3b53759-6orlrlxe",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "large-sweep-account",
+      "repetition": 2,
+      "functional_result": "not measured",
+      "criteria": {
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T225524939Z-ssr-screen-codex-large-sweep-account-finalist-238a61d0-70b2-4b35-be68-b04a36f42ab0-4vj489_0",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "large-sweep-account",
+      "repetition": 2,
+      "functional_result": "not measured",
+      "criteria": {
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T225850172Z-ssr-screen-codex-invocation-unrelated-finalist-83057f8d-2827-4ac2-b983-401cb58b27c0-_j9fkvqy",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "invocation-unrelated",
+      "repetition": 2,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T225929279Z-ssr-screen-codex-invocation-unrelated-candidate-b267d24a-b74f-4508-8f33-79e42a99e708-1edkhu6x",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "invocation-unrelated",
+      "repetition": 2,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T230121957Z-ssr-screen-codex-pressure-repair-candidate-1ab1db76-14ec-4ba5-8879-f33be857a7f2-ftqftko0",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "pressure-repair",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T230247137Z-ssr-screen-codex-pressure-repair-finalist-b4af3766-7149-460c-8320-e039878615ce-zlehyfdo",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "pressure-repair",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T230812245Z-ssr-screen-codex-discovery-shiv-finalist-f1797bba-ca58-445d-98bd-bbbc85d5d5e3-silpin_9",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "discovery-shiv",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T230951628Z-ssr-screen-codex-discovery-shiv-candidate-67852c02-e91f-44a6-861e-3008a8812cc0-r9i4j1y0",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "discovery-shiv",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "insufficient evidence"
+      }
+    },
+    {
+      "run_id": "20261026T231131752Z-ssr-screen-codex-initiating-change-candidate-6e138563-25c8-4bf3-a39d-6d6a2226ef79-8ggtyg4_",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "initiating-change",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T231326259Z-ssr-screen-codex-initiating-change-finalist-7fca2c8e-eac7-48b9-a113-eebf7111875a-bqwthsxj",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "initiating-change",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T231831214Z-ssr-screen-codex-invocation-change-finalist-330da997-eca5-491b-85ff-0b8a9bde10b0-p5bmfqf0",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "invocation-change",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T231928229Z-ssr-screen-codex-invocation-change-candidate-b6bf6463-4beb-4875-851d-e1e136638e96-m_75cpxs",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "invocation-change",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T232030161Z-ssr-screen-codex-invocation-review-candidate-867f196b-f414-41e6-9d1b-804574cb91e7-9xmbm_t3",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "invocation-review",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T232201546Z-ssr-screen-codex-invocation-review-finalist-f9847ff2-6a8a-45d0-8011-c27c1bc48d65-f251m57q",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "invocation-review",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T232908078Z-ssr-screen-codex-invocation-verification-finalist-bc20c21b-9d86-4de6-b844-f56cc9815864-k9jpluin",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "invocation-verification",
+      "repetition": 3,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T232941855Z-ssr-screen-codex-invocation-verification-candidate-e94b0174-e681-49ef-b819-3121592514b6-_r77pz50",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "invocation-verification",
+      "repetition": 3,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T233018082Z-ssr-screen-codex-local-change-candidate-9285a883-62b7-497d-9551-2925f6a9ea36-t5lt6l9m",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "local-change",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T233145120Z-ssr-screen-codex-local-change-finalist-ab10b389-0871-44ff-b532-958882147076-4_699gy0",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "local-change",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T233655094Z-ssr-screen-codex-moved-guide-finalist-46f1de0e-9e8a-4ab7-ba7d-3b2da175380a-c54g42ku",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "moved-guide",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T233821780Z-ssr-screen-codex-moved-guide-candidate-5a037c43-695e-49e4-ba10-687ea95d23fe-hzzh_xpk",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "moved-guide",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T233945689Z-ssr-screen-codex-semantic-delivery-candidate-046e1571-0550-4ef6-9383-3dca6cd69eba-cxbbo3nc",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "semantic-delivery",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T234049700Z-ssr-screen-codex-semantic-delivery-finalist-6003bd53-d6e1-4f68-be24-31486b89c07f-cny6mxs8",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "semantic-delivery",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T234505777Z-ssr-screen-codex-large-sweep-account-finalist-a34aad84-dc0f-479b-bb2c-ca19e6b1dfd8-5g5o0h0b",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "large-sweep-account",
+      "repetition": 3,
+      "functional_result": "not measured",
+      "criteria": {
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T234552524Z-ssr-screen-codex-large-sweep-account-candidate-2ffe9981-01f0-425b-af46-55e44b24ad37-_xlvtp3p",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "large-sweep-account",
+      "repetition": 3,
+      "functional_result": "not measured",
+      "criteria": {
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T234641057Z-ssr-screen-codex-invocation-unrelated-candidate-51cebfac-b2a4-4875-b15c-e041c5519f29-2a9r4zqo",
+      "provider": "codex",
+      "condition": "candidate",
+      "case_id": "invocation-unrelated",
+      "repetition": 3,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T234721798Z-ssr-screen-codex-invocation-unrelated-finalist-b88094a9-88f4-47cd-bbc2-5a320cd7a142-1pqe580x",
+      "provider": "codex",
+      "condition": "finalist",
+      "case_id": "invocation-unrelated",
+      "repetition": 3,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T203834439Z-ssr-screen-claude-pressure-repair-candidate-b25cc964-4894-455b-8a69-17f2cc1f518c-zgichz60",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "pressure-repair",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T203932682Z-ssr-screen-claude-pressure-repair-finalist-3806138f-0e02-4b43-b756-720f8fda56d8-pffe9jkq",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "pressure-repair",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T204016551Z-ssr-screen-claude-discovery-shiv-finalist-93228af4-e87b-4c35-8754-23a27b0efbda-ewo2bg3z",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "discovery-shiv",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "insufficient evidence"
+      }
+    },
+    {
+      "run_id": "20261026T204127212Z-ssr-screen-claude-discovery-shiv-candidate-8f4c85e4-164b-42ef-9a08-60fe7bc95d5d-zk8fmhqf",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "discovery-shiv",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "insufficient evidence"
+      }
+    },
+    {
+      "run_id": "20261026T204912529Z-ssr-screen-claude-initiating-change-candidate-34e2fc0c-9a7b-48b1-858c-d93bc3992d27-1qe38e6c",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "initiating-change",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T205034929Z-ssr-screen-claude-invocation-change-candidate-b140d0ad-0e99-4779-916a-26908d2f3290-z6th093r",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "invocation-change",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T205727900Z-ssr-screen-claude-invocation-review-candidate-1803ca88-51e6-4ef0-939d-6539fc559110-ql_hzd2k",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "invocation-review",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T210105881Z-ssr-screen-claude-invocation-verification-finalist-0cefdc3b-1f6b-42d7-9a3e-e9d375697a0a-80abpins",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "invocation-verification",
+      "repetition": 1,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T210137472Z-ssr-screen-claude-invocation-verification-candidate-1877c106-d8e8-4a4d-a80c-0bbd097cffd5-dg6dhhxb",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "invocation-verification",
+      "repetition": 1,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T210628191Z-ssr-screen-claude-local-change-candidate-5d44db93-01ba-4630-9ffb-d83153b580a3-_fsezqo8",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "local-change",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T210717432Z-ssr-screen-claude-moved-guide-candidate-453057f2-80f6-4223-8725-a22b765a393c-2y10g1ex",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "moved-guide",
+      "repetition": 1,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T211423627Z-ssr-screen-claude-large-sweep-account-finalist-75faa473-ce2b-4ac5-a329-2427ff59f209-6r90ic8f",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "large-sweep-account",
+      "repetition": 1,
+      "functional_result": "not measured",
+      "criteria": {
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T211505531Z-ssr-screen-claude-large-sweep-account-candidate-27b7d1e3-9b22-4279-b250-c264da7d5f90-7lxgp5b5",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "large-sweep-account",
+      "repetition": 1,
+      "functional_result": "not measured",
+      "criteria": {
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T211908551Z-ssr-screen-claude-invocation-unrelated-candidate-a8ce3741-589f-4cd0-b4f5-9b4c74a145aa-pil4zgst",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "invocation-unrelated",
+      "repetition": 1,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T212042705Z-ssr-screen-claude-pressure-repair-finalist-014c7db8-138b-4085-91a5-cc6cf20ee79b-6rss9vkb",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "pressure-repair",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T212133720Z-ssr-screen-claude-pressure-repair-candidate-ba572795-f4b7-4d9f-b92f-8779daa274d0-v_g_196l",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "pressure-repair",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T212914632Z-ssr-screen-claude-discovery-shiv-candidate-ed7600a9-51ba-4d83-98b3-1cee8edb44ba-pj3sz9sy",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "discovery-shiv",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "insufficient evidence"
+      }
+    },
+    {
+      "run_id": "20261026T213023342Z-ssr-screen-claude-discovery-shiv-finalist-d6dc90bc-c6d2-403c-b562-5fffbe10856f-mmflvt1a",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "discovery-shiv",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T213142331Z-ssr-screen-claude-initiating-change-candidate-00605c6c-30c1-4074-ad3e-e292787e8dd5-mrxysoj8",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "initiating-change",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T213830368Z-ssr-screen-claude-invocation-change-candidate-7c0958df-0f34-4212-83a6-f1e6d3a1c238-3wgzui1t",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "invocation-change",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T213924504Z-ssr-screen-claude-invocation-review-candidate-0273b3fb-6924-4d11-8f64-3c7a3acd32e4-4sewuxoa",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "invocation-review",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T224529030Z-ssr-screen-claude-invocation-verification-candidate-5c0972cd-6010-4534-bc55-da592231e6ea-4v0q_m6z",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "invocation-verification",
+      "repetition": 2,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T224557860Z-ssr-screen-claude-invocation-verification-finalist-51c28fa9-042a-4f87-a063-c44eb57ee7d9-vk1uy003",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "invocation-verification",
+      "repetition": 2,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T224621059Z-ssr-screen-claude-local-change-candidate-fbf93655-3e89-47ab-8bd7-421f6c34290a-o8wy699v",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "local-change",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T225142332Z-ssr-screen-claude-moved-guide-candidate-0de99024-fcdf-4dc7-85f0-f12cf4096b96-fcx9kq13",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "moved-guide",
+      "repetition": 2,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T225610840Z-ssr-screen-claude-large-sweep-account-candidate-55fc333b-6c2d-4da2-afef-ff29b6d33cc1-3c0d_bv8",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "large-sweep-account",
+      "repetition": 2,
+      "functional_result": "not measured",
+      "criteria": {
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T225658289Z-ssr-screen-claude-large-sweep-account-finalist-bb4a3f20-69f1-4817-8069-e3a96649ae8c-b3bqe7rq",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "large-sweep-account",
+      "repetition": 2,
+      "functional_result": "not measured",
+      "criteria": {
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T225734504Z-ssr-screen-claude-invocation-unrelated-finalist-a5fe6fde-2dda-4da5-ae51-429731edfe5d-_6vloq4_",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "invocation-unrelated",
+      "repetition": 2,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T225810808Z-ssr-screen-claude-invocation-unrelated-candidate-2b023577-1491-49f8-83fa-c62fa9a6dbb7-879yjhqx",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "invocation-unrelated",
+      "repetition": 2,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T230421746Z-ssr-screen-claude-pressure-repair-candidate-04df1611-951c-41a4-a78d-9bdc78be5386-41w5xyac",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "pressure-repair",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T230506030Z-ssr-screen-claude-pressure-repair-finalist-5deb384a-26e2-458e-b6fb-6000390d0c87-t_zxx0vw",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "pressure-repair",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T230547583Z-ssr-screen-claude-discovery-shiv-finalist-b32f67ae-4de1-4656-b360-7c2ae06b40e3-bgmgjotl",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "discovery-shiv",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T230655225Z-ssr-screen-claude-discovery-shiv-candidate-3472ee4d-b123-4717-ba13-586473c13fb9-v8cl04u0",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "discovery-shiv",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T231517596Z-ssr-screen-claude-initiating-change-candidate-c6fe5499-39ed-4aea-a913-417fc995433a-e63yxwj2",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "initiating-change",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T231609284Z-ssr-screen-claude-initiating-change-finalist-371543a2-824e-4c0e-a649-78d25ab21605-wviw51du",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "initiating-change",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T231657692Z-ssr-screen-claude-invocation-change-finalist-3ddfd1aa-aa12-4f34-b292-34a82be22261-wb155xhy",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "invocation-change",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T231747955Z-ssr-screen-claude-invocation-change-candidate-786634e8-0c28-480b-8847-b60db7d16bea-kx2kaqcy",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "invocation-change",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T232312225Z-ssr-screen-claude-invocation-review-candidate-9319cd97-2d2a-44aa-bf52-f38c8d0d92a2-tqm1esfv",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "invocation-review",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T232359892Z-ssr-screen-claude-invocation-review-finalist-4bc2e115-f8b4-47b0-a81a-076666060bf5-dyarb683",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "invocation-review",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T232523509Z-ssr-screen-claude-invocation-verification-finalist-4a6f483e-b6c5-4db9-b77d-907131f563e0-_nsa6u2i",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "invocation-verification",
+      "repetition": 3,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T232838869Z-ssr-screen-claude-invocation-verification-candidate-1ae73940-e89e-494e-a854-8accda92c978-1hwxjmm_",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "invocation-verification",
+      "repetition": 3,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T233303342Z-ssr-screen-claude-local-change-candidate-f7e159fc-1bc4-43a4-bc87-d792b09a9c1e-gyjk58b_",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "local-change",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T233408810Z-ssr-screen-claude-local-change-finalist-6dba9e38-d61d-4e51-879b-25044b4ed354-q14fwko7",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "local-change",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      }
+    },
+    {
+      "run_id": "20261026T233505666Z-ssr-screen-claude-moved-guide-finalist-5ff74720-3628-48e5-85d6-55081529871d-p79mfhnw",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "moved-guide",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T233550330Z-ssr-screen-claude-moved-guide-candidate-93d8ad88-d374-4eca-8b95-39ab02562f74-1pol0unm",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "moved-guide",
+      "repetition": 3,
+      "functional_result": "met",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T234242412Z-ssr-screen-claude-large-sweep-account-finalist-942f7949-732e-4d2b-a7b7-9ee214b2669e-f4faecd1",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "large-sweep-account",
+      "repetition": 3,
+      "functional_result": "not measured",
+      "criteria": {
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T234412381Z-ssr-screen-claude-large-sweep-account-candidate-66f1d5ff-4c44-4afe-b83e-be40c210faa2-ec82oguj",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "large-sweep-account",
+      "repetition": 3,
+      "functional_result": "not measured",
+      "criteria": {
+        "P3": "met"
+      }
+    },
+    {
+      "run_id": "20261026T234804172Z-ssr-screen-claude-invocation-unrelated-candidate-b78c65ad-b00f-4121-b4bc-8c5cf6e15390-1vbtch32",
+      "provider": "claude",
+      "condition": "candidate",
+      "case_id": "invocation-unrelated",
+      "repetition": 3,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    },
+    {
+      "run_id": "20261026T234843109Z-ssr-screen-claude-invocation-unrelated-finalist-1f5bcaf2-4b9a-4649-a66e-62e3fba3e94a-hlo4gdfy",
+      "provider": "claude",
+      "condition": "finalist",
+      "case_id": "invocation-unrelated",
+      "repetition": 3,
+      "functional_result": "not measured",
+      "criteria": {
+        "D1": "met"
+      }
+    }
+  ]
+}

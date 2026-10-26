@@ -1,0 +1,333 @@
+{
+  "schema_version": "0.2",
+  "id": "ssr-candidate-screen-codex-initiating-local-review",
+  "prompt": "../prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/INTERPRETATION.md",
+      "target": "INTERPRETATION.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/criteria/initiating-change-expected.md",
+      "target": "criteria/initiating-change-expected.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/criteria/initiating-change-inherited.md",
+      "target": "criteria/initiating-change-inherited.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/criteria/initiating-change.md",
+      "target": "criteria/initiating-change.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/criteria/local-change-expected.md",
+      "target": "criteria/local-change-expected.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/criteria/local-change-inherited.md",
+      "target": "criteria/local-change-inherited.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/criteria/local-change.md",
+      "target": "criteria/local-change.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/facts/20261026T140546843Z-ssr-fresh-baseline-codex-initiating-change-83467fd1-3781-446b-a164-bed6c7c0117f-9jmeyyww.json",
+      "target": "facts/20261026T140546843Z-ssr-fresh-baseline-codex-initiating-change-83467fd1-3781-446b-a164-bed6c7c0117f-9jmeyyww.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/facts/20261026T141313656Z-ssr-fresh-baseline-codex-local-change-cd1737e2-9ab1-49c9-8393-3eb5e58bc5c5-7z505eid.json",
+      "target": "facts/20261026T141313656Z-ssr-fresh-baseline-codex-local-change-cd1737e2-9ab1-49c9-8393-3eb5e58bc5c5-7z505eid.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/facts/20261026T144704352Z-ssr-fresh-baseline-codex-initiating-change-f8840c93-a991-4a72-82a0-5fb037a4ed73-cm8_tcbo.json",
+      "target": "facts/20261026T144704352Z-ssr-fresh-baseline-codex-initiating-change-f8840c93-a991-4a72-82a0-5fb037a4ed73-cm8_tcbo.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/facts/20261026T144939668Z-ssr-fresh-baseline-codex-local-change-a9b768e9-f6f6-4792-a2cd-bd9a389b817e-wfkiwz3e.json",
+      "target": "facts/20261026T144939668Z-ssr-fresh-baseline-codex-local-change-a9b768e9-f6f6-4792-a2cd-bd9a389b817e-wfkiwz3e.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/facts/20261026T151239770Z-ssr-fresh-baseline-codex-initiating-change-67127b6d-a501-47b6-bba8-4de2fcea9540-sskrnwu7.json",
+      "target": "facts/20261026T151239770Z-ssr-fresh-baseline-codex-initiating-change-67127b6d-a501-47b6-bba8-4de2fcea9540-sskrnwu7.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/facts/20261026T151525768Z-ssr-fresh-baseline-codex-local-change-0cddf436-ece9-4d65-80b6-f909a2e7e7f3-d94fwzcg.json",
+      "target": "facts/20261026T151525768Z-ssr-fresh-baseline-codex-local-change-0cddf436-ece9-4d65-80b6-f909a2e7e7f3-d94fwzcg.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/facts/20261026T154139635Z-ssr-fresh-baseline-codex-initiating-change-17dded1d-3d32-4cb6-9651-23fb952a72a4-54rv74mt.json",
+      "target": "facts/20261026T154139635Z-ssr-fresh-baseline-codex-initiating-change-17dded1d-3d32-4cb6-9651-23fb952a72a4-54rv74mt.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/facts/20261026T154509781Z-ssr-fresh-baseline-codex-local-change-5b3ffadf-990e-439c-ac3e-82536a8080e7-31srg3i5.json",
+      "target": "facts/20261026T154509781Z-ssr-fresh-baseline-codex-local-change-5b3ffadf-990e-439c-ac3e-82536a8080e7-31srg3i5.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/facts/20261026T161406484Z-ssr-fresh-baseline-codex-initiating-change-45fab7dc-3c94-49af-a64d-56a3f803812e-4qwsbxeq.json",
+      "target": "facts/20261026T161406484Z-ssr-fresh-baseline-codex-initiating-change-45fab7dc-3c94-49af-a64d-56a3f803812e-4qwsbxeq.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/facts/20261026T161700582Z-ssr-fresh-baseline-codex-local-change-8a29c68f-378f-44d8-bf6d-c659714a1836-tq2dseko.json",
+      "target": "facts/20261026T161700582Z-ssr-fresh-baseline-codex-local-change-8a29c68f-378f-44d8-bf6d-c659714a1836-tq2dseko.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/facts/20261026T204553292Z-ssr-screen-codex-initiating-change-candidate-2989e459-1e03-42a1-966c-221dbe18da15-8ucpa5he.json",
+      "target": "facts/20261026T204553292Z-ssr-screen-codex-initiating-change-candidate-2989e459-1e03-42a1-966c-221dbe18da15-8ucpa5he.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/facts/20261026T204730849Z-ssr-screen-codex-initiating-change-finalist-16f26925-b90f-4860-8fb2-2fbb5e3da71e-skboyzjx.json",
+      "target": "facts/20261026T204730849Z-ssr-screen-codex-initiating-change-finalist-16f26925-b90f-4860-8fb2-2fbb5e3da71e-skboyzjx.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/facts/20261026T210321206Z-ssr-screen-codex-local-change-candidate-27ab5d13-b63f-4541-87cf-d583178cbc67-v42k2z3i.json",
+      "target": "facts/20261026T210321206Z-ssr-screen-codex-local-change-candidate-27ab5d13-b63f-4541-87cf-d583178cbc67-v42k2z3i.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/facts/20261026T210448065Z-ssr-screen-codex-local-change-finalist-fd8ef6e4-16fd-4b4b-a8b1-6c5c762df5e9-2qavq8_x.json",
+      "target": "facts/20261026T210448065Z-ssr-screen-codex-local-change-finalist-fd8ef6e4-16fd-4b4b-a8b1-6c5c762df5e9-2qavq8_x.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/facts/20261026T213244285Z-ssr-screen-codex-initiating-change-finalist-12c3d16a-5721-4dfa-baf2-662bbcd1e9aa-o64sbbbk.json",
+      "target": "facts/20261026T213244285Z-ssr-screen-codex-initiating-change-finalist-12c3d16a-5721-4dfa-baf2-662bbcd1e9aa-o64sbbbk.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/facts/20261026T213417777Z-ssr-screen-codex-initiating-change-candidate-4a4076cb-355d-4117-84f0-7acd7b5bf0cd-_ub7kiio.json",
+      "target": "facts/20261026T213417777Z-ssr-screen-codex-initiating-change-candidate-4a4076cb-355d-4117-84f0-7acd7b5bf0cd-_ub7kiio.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/facts/20261026T224700541Z-ssr-screen-codex-local-change-finalist-00975e7a-d19a-495c-86dc-671688192f4f-39206r7q.json",
+      "target": "facts/20261026T224700541Z-ssr-screen-codex-local-change-finalist-00975e7a-d19a-495c-86dc-671688192f4f-39206r7q.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/facts/20261026T224804855Z-ssr-screen-codex-local-change-candidate-a21fc716-a4d6-4e94-bcde-59c34d519928-r9sqzaxm.json",
+      "target": "facts/20261026T224804855Z-ssr-screen-codex-local-change-candidate-a21fc716-a4d6-4e94-bcde-59c34d519928-r9sqzaxm.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/facts/20261026T231131752Z-ssr-screen-codex-initiating-change-candidate-6e138563-25c8-4bf3-a39d-6d6a2226ef79-8ggtyg4_.json",
+      "target": "facts/20261026T231131752Z-ssr-screen-codex-initiating-change-candidate-6e138563-25c8-4bf3-a39d-6d6a2226ef79-8ggtyg4_.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/facts/20261026T231326259Z-ssr-screen-codex-initiating-change-finalist-7fca2c8e-eac7-48b9-a113-eebf7111875a-bqwthsxj.json",
+      "target": "facts/20261026T231326259Z-ssr-screen-codex-initiating-change-finalist-7fca2c8e-eac7-48b9-a113-eebf7111875a-bqwthsxj.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/facts/20261026T233018082Z-ssr-screen-codex-local-change-candidate-9285a883-62b7-497d-9551-2925f6a9ea36-t5lt6l9m.json",
+      "target": "facts/20261026T233018082Z-ssr-screen-codex-local-change-candidate-9285a883-62b7-497d-9551-2925f6a9ea36-t5lt6l9m.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/facts/20261026T233145120Z-ssr-screen-codex-local-change-finalist-ab10b389-0871-44ff-b532-958882147076-4_699gy0.json",
+      "target": "facts/20261026T233145120Z-ssr-screen-codex-local-change-finalist-ab10b389-0871-44ff-b532-958882147076-4_699gy0.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/objects/001.txt",
+      "target": "objects/001.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/objects/002.txt",
+      "target": "objects/002.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/objects/003.txt",
+      "target": "objects/003.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/objects/004.txt",
+      "target": "objects/004.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/objects/005.txt",
+      "target": "objects/005.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/objects/006.txt",
+      "target": "objects/006.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/objects/007.txt",
+      "target": "objects/007.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/objects/008.txt",
+      "target": "objects/008.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/objects/009.txt",
+      "target": "objects/009.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/objects/010.txt",
+      "target": "objects/010.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/objects/011.txt",
+      "target": "objects/011.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/objects/012.txt",
+      "target": "objects/012.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/objects/013.txt",
+      "target": "objects/013.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/objects/014.txt",
+      "target": "objects/014.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/objects/015.txt",
+      "target": "objects/015.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/objects/016.txt",
+      "target": "objects/016.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/objects/017.txt",
+      "target": "objects/017.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/objects/018.txt",
+      "target": "objects/018.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/objects/019.txt",
+      "target": "objects/019.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/objects/020.txt",
+      "target": "objects/020.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/objects/021.txt",
+      "target": "objects/021.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/objects/022.txt",
+      "target": "objects/022.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/objects/023.txt",
+      "target": "objects/023.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/objects/024.txt",
+      "target": "objects/024.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/objects/025.txt",
+      "target": "objects/025.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/objects/026.txt",
+      "target": "objects/026.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/outputs/20261026T140546843Z-ssr-fresh-baseline-codex-initiating-change-83467fd1-3781-446b-a164-bed6c7c0117f-9jmeyyww.md",
+      "target": "outputs/20261026T140546843Z-ssr-fresh-baseline-codex-initiating-change-83467fd1-3781-446b-a164-bed6c7c0117f-9jmeyyww.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/outputs/20261026T141313656Z-ssr-fresh-baseline-codex-local-change-cd1737e2-9ab1-49c9-8393-3eb5e58bc5c5-7z505eid.md",
+      "target": "outputs/20261026T141313656Z-ssr-fresh-baseline-codex-local-change-cd1737e2-9ab1-49c9-8393-3eb5e58bc5c5-7z505eid.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/outputs/20261026T144704352Z-ssr-fresh-baseline-codex-initiating-change-f8840c93-a991-4a72-82a0-5fb037a4ed73-cm8_tcbo.md",
+      "target": "outputs/20261026T144704352Z-ssr-fresh-baseline-codex-initiating-change-f8840c93-a991-4a72-82a0-5fb037a4ed73-cm8_tcbo.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/outputs/20261026T144939668Z-ssr-fresh-baseline-codex-local-change-a9b768e9-f6f6-4792-a2cd-bd9a389b817e-wfkiwz3e.md",
+      "target": "outputs/20261026T144939668Z-ssr-fresh-baseline-codex-local-change-a9b768e9-f6f6-4792-a2cd-bd9a389b817e-wfkiwz3e.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/outputs/20261026T151239770Z-ssr-fresh-baseline-codex-initiating-change-67127b6d-a501-47b6-bba8-4de2fcea9540-sskrnwu7.md",
+      "target": "outputs/20261026T151239770Z-ssr-fresh-baseline-codex-initiating-change-67127b6d-a501-47b6-bba8-4de2fcea9540-sskrnwu7.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/outputs/20261026T151525768Z-ssr-fresh-baseline-codex-local-change-0cddf436-ece9-4d65-80b6-f909a2e7e7f3-d94fwzcg.md",
+      "target": "outputs/20261026T151525768Z-ssr-fresh-baseline-codex-local-change-0cddf436-ece9-4d65-80b6-f909a2e7e7f3-d94fwzcg.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/outputs/20261026T154139635Z-ssr-fresh-baseline-codex-initiating-change-17dded1d-3d32-4cb6-9651-23fb952a72a4-54rv74mt.md",
+      "target": "outputs/20261026T154139635Z-ssr-fresh-baseline-codex-initiating-change-17dded1d-3d32-4cb6-9651-23fb952a72a4-54rv74mt.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/outputs/20261026T154509781Z-ssr-fresh-baseline-codex-local-change-5b3ffadf-990e-439c-ac3e-82536a8080e7-31srg3i5.md",
+      "target": "outputs/20261026T154509781Z-ssr-fresh-baseline-codex-local-change-5b3ffadf-990e-439c-ac3e-82536a8080e7-31srg3i5.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/outputs/20261026T161406484Z-ssr-fresh-baseline-codex-initiating-change-45fab7dc-3c94-49af-a64d-56a3f803812e-4qwsbxeq.md",
+      "target": "outputs/20261026T161406484Z-ssr-fresh-baseline-codex-initiating-change-45fab7dc-3c94-49af-a64d-56a3f803812e-4qwsbxeq.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/outputs/20261026T161700582Z-ssr-fresh-baseline-codex-local-change-8a29c68f-378f-44d8-bf6d-c659714a1836-tq2dseko.md",
+      "target": "outputs/20261026T161700582Z-ssr-fresh-baseline-codex-local-change-8a29c68f-378f-44d8-bf6d-c659714a1836-tq2dseko.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/outputs/20261026T204553292Z-ssr-screen-codex-initiating-change-candidate-2989e459-1e03-42a1-966c-221dbe18da15-8ucpa5he.md",
+      "target": "outputs/20261026T204553292Z-ssr-screen-codex-initiating-change-candidate-2989e459-1e03-42a1-966c-221dbe18da15-8ucpa5he.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/outputs/20261026T204730849Z-ssr-screen-codex-initiating-change-finalist-16f26925-b90f-4860-8fb2-2fbb5e3da71e-skboyzjx.md",
+      "target": "outputs/20261026T204730849Z-ssr-screen-codex-initiating-change-finalist-16f26925-b90f-4860-8fb2-2fbb5e3da71e-skboyzjx.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/outputs/20261026T210321206Z-ssr-screen-codex-local-change-candidate-27ab5d13-b63f-4541-87cf-d583178cbc67-v42k2z3i.md",
+      "target": "outputs/20261026T210321206Z-ssr-screen-codex-local-change-candidate-27ab5d13-b63f-4541-87cf-d583178cbc67-v42k2z3i.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/outputs/20261026T210448065Z-ssr-screen-codex-local-change-finalist-fd8ef6e4-16fd-4b4b-a8b1-6c5c762df5e9-2qavq8_x.md",
+      "target": "outputs/20261026T210448065Z-ssr-screen-codex-local-change-finalist-fd8ef6e4-16fd-4b4b-a8b1-6c5c762df5e9-2qavq8_x.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/outputs/20261026T213244285Z-ssr-screen-codex-initiating-change-finalist-12c3d16a-5721-4dfa-baf2-662bbcd1e9aa-o64sbbbk.md",
+      "target": "outputs/20261026T213244285Z-ssr-screen-codex-initiating-change-finalist-12c3d16a-5721-4dfa-baf2-662bbcd1e9aa-o64sbbbk.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/outputs/20261026T213417777Z-ssr-screen-codex-initiating-change-candidate-4a4076cb-355d-4117-84f0-7acd7b5bf0cd-_ub7kiio.md",
+      "target": "outputs/20261026T213417777Z-ssr-screen-codex-initiating-change-candidate-4a4076cb-355d-4117-84f0-7acd7b5bf0cd-_ub7kiio.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/outputs/20261026T224700541Z-ssr-screen-codex-local-change-finalist-00975e7a-d19a-495c-86dc-671688192f4f-39206r7q.md",
+      "target": "outputs/20261026T224700541Z-ssr-screen-codex-local-change-finalist-00975e7a-d19a-495c-86dc-671688192f4f-39206r7q.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/outputs/20261026T224804855Z-ssr-screen-codex-local-change-candidate-a21fc716-a4d6-4e94-bcde-59c34d519928-r9sqzaxm.md",
+      "target": "outputs/20261026T224804855Z-ssr-screen-codex-local-change-candidate-a21fc716-a4d6-4e94-bcde-59c34d519928-r9sqzaxm.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/outputs/20261026T231131752Z-ssr-screen-codex-initiating-change-candidate-6e138563-25c8-4bf3-a39d-6d6a2226ef79-8ggtyg4_.md",
+      "target": "outputs/20261026T231131752Z-ssr-screen-codex-initiating-change-candidate-6e138563-25c8-4bf3-a39d-6d6a2226ef79-8ggtyg4_.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/outputs/20261026T231326259Z-ssr-screen-codex-initiating-change-finalist-7fca2c8e-eac7-48b9-a113-eebf7111875a-bqwthsxj.md",
+      "target": "outputs/20261026T231326259Z-ssr-screen-codex-initiating-change-finalist-7fca2c8e-eac7-48b9-a113-eebf7111875a-bqwthsxj.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/outputs/20261026T233018082Z-ssr-screen-codex-local-change-candidate-9285a883-62b7-497d-9551-2925f6a9ea36-t5lt6l9m.md",
+      "target": "outputs/20261026T233018082Z-ssr-screen-codex-local-change-candidate-9285a883-62b7-497d-9551-2925f6a9ea36-t5lt6l9m.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/outputs/20261026T233145120Z-ssr-screen-codex-local-change-finalist-ab10b389-0871-44ff-b532-958882147076-4_699gy0.md",
+      "target": "outputs/20261026T233145120Z-ssr-screen-codex-local-change-finalist-ab10b389-0871-44ff-b532-958882147076-4_699gy0.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/policy.txt",
+      "target": "policy.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-initiating-local/prior-assessment.md",
+      "target": "prior-assessment.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}

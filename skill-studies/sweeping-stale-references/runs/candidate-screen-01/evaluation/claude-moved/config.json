@@ -1,0 +1,185 @@
+{
+  "schema_version": "0.2",
+  "id": "ssr-candidate-screen-claude-moved-review",
+  "prompt": "../prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/INTERPRETATION.md",
+      "target": "INTERPRETATION.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/criteria/moved-guide-expected.json",
+      "target": "criteria/moved-guide-expected.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/criteria/moved-guide-inherited.md",
+      "target": "criteria/moved-guide-inherited.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/criteria/moved-guide.md",
+      "target": "criteria/moved-guide.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/facts/20261024T060738969Z-ssr-compact-regression-moved-guide-3a8241d0-eb67-4a24-8f49-1f1b24b72db7-9shudgzv.json",
+      "target": "facts/20261024T060738969Z-ssr-compact-regression-moved-guide-3a8241d0-eb67-4a24-8f49-1f1b24b72db7-9shudgzv.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/facts/20261024T061703945Z-ssr-compact-regression-moved-guide-42f97295-92c5-41e5-bf7b-2c644ab42d1c-0scb5n1v.json",
+      "target": "facts/20261024T061703945Z-ssr-compact-regression-moved-guide-42f97295-92c5-41e5-bf7b-2c644ab42d1c-0scb5n1v.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/facts/20261026T135650028Z-ssr-fresh-baseline-claude-moved-guide-da811995-0ecf-4bdf-89a8-f997b6f9cd40-o89dadrq.json",
+      "target": "facts/20261026T135650028Z-ssr-fresh-baseline-claude-moved-guide-da811995-0ecf-4bdf-89a8-f997b6f9cd40-o89dadrq.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/facts/20261026T144052901Z-ssr-fresh-baseline-claude-moved-guide-87640d7a-aa26-4bfb-a16d-8dd22bd36898-a87ygsrv.json",
+      "target": "facts/20261026T144052901Z-ssr-fresh-baseline-claude-moved-guide-87640d7a-aa26-4bfb-a16d-8dd22bd36898-a87ygsrv.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/facts/20261026T150908932Z-ssr-fresh-baseline-claude-moved-guide-091246d0-6355-4742-8d11-60c79a334d60-xqh45qhl.json",
+      "target": "facts/20261026T150908932Z-ssr-fresh-baseline-claude-moved-guide-091246d0-6355-4742-8d11-60c79a334d60-xqh45qhl.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/facts/20261026T153330184Z-ssr-fresh-baseline-claude-moved-guide-45aa004a-7e30-4fe8-b3a1-08d265a7f9fd-rx7pg01j.json",
+      "target": "facts/20261026T153330184Z-ssr-fresh-baseline-claude-moved-guide-45aa004a-7e30-4fe8-b3a1-08d265a7f9fd-rx7pg01j.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/facts/20261026T160936719Z-ssr-fresh-baseline-claude-moved-guide-6f8fe2b0-7064-417d-9011-c12f818448ea-glsel8dw.json",
+      "target": "facts/20261026T160936719Z-ssr-fresh-baseline-claude-moved-guide-6f8fe2b0-7064-417d-9011-c12f818448ea-glsel8dw.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/facts/20261026T210717432Z-ssr-screen-claude-moved-guide-candidate-453057f2-80f6-4223-8725-a22b765a393c-2y10g1ex.json",
+      "target": "facts/20261026T210717432Z-ssr-screen-claude-moved-guide-candidate-453057f2-80f6-4223-8725-a22b765a393c-2y10g1ex.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/facts/20261026T225142332Z-ssr-screen-claude-moved-guide-candidate-0de99024-fcdf-4dc7-85f0-f12cf4096b96-fcx9kq13.json",
+      "target": "facts/20261026T225142332Z-ssr-screen-claude-moved-guide-candidate-0de99024-fcdf-4dc7-85f0-f12cf4096b96-fcx9kq13.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/facts/20261026T233505666Z-ssr-screen-claude-moved-guide-finalist-5ff74720-3628-48e5-85d6-55081529871d-p79mfhnw.json",
+      "target": "facts/20261026T233505666Z-ssr-screen-claude-moved-guide-finalist-5ff74720-3628-48e5-85d6-55081529871d-p79mfhnw.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/facts/20261026T233550330Z-ssr-screen-claude-moved-guide-candidate-93d8ad88-d374-4eca-8b95-39ab02562f74-1pol0unm.json",
+      "target": "facts/20261026T233550330Z-ssr-screen-claude-moved-guide-candidate-93d8ad88-d374-4eca-8b95-39ab02562f74-1pol0unm.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/objects/001.txt",
+      "target": "objects/001.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/objects/002.txt",
+      "target": "objects/002.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/objects/003.txt",
+      "target": "objects/003.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/objects/004.txt",
+      "target": "objects/004.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/objects/005.txt",
+      "target": "objects/005.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/objects/006.txt",
+      "target": "objects/006.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/objects/007.txt",
+      "target": "objects/007.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/objects/008.txt",
+      "target": "objects/008.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/objects/009.txt",
+      "target": "objects/009.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/objects/010.txt",
+      "target": "objects/010.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/objects/011.txt",
+      "target": "objects/011.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/objects/012.txt",
+      "target": "objects/012.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/objects/013.txt",
+      "target": "objects/013.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/objects/014.txt",
+      "target": "objects/014.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/outputs/20261024T060738969Z-ssr-compact-regression-moved-guide-3a8241d0-eb67-4a24-8f49-1f1b24b72db7-9shudgzv.md",
+      "target": "outputs/20261024T060738969Z-ssr-compact-regression-moved-guide-3a8241d0-eb67-4a24-8f49-1f1b24b72db7-9shudgzv.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/outputs/20261024T061703945Z-ssr-compact-regression-moved-guide-42f97295-92c5-41e5-bf7b-2c644ab42d1c-0scb5n1v.md",
+      "target": "outputs/20261024T061703945Z-ssr-compact-regression-moved-guide-42f97295-92c5-41e5-bf7b-2c644ab42d1c-0scb5n1v.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/outputs/20261026T135650028Z-ssr-fresh-baseline-claude-moved-guide-da811995-0ecf-4bdf-89a8-f997b6f9cd40-o89dadrq.md",
+      "target": "outputs/20261026T135650028Z-ssr-fresh-baseline-claude-moved-guide-da811995-0ecf-4bdf-89a8-f997b6f9cd40-o89dadrq.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/outputs/20261026T144052901Z-ssr-fresh-baseline-claude-moved-guide-87640d7a-aa26-4bfb-a16d-8dd22bd36898-a87ygsrv.md",
+      "target": "outputs/20261026T144052901Z-ssr-fresh-baseline-claude-moved-guide-87640d7a-aa26-4bfb-a16d-8dd22bd36898-a87ygsrv.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/outputs/20261026T150908932Z-ssr-fresh-baseline-claude-moved-guide-091246d0-6355-4742-8d11-60c79a334d60-xqh45qhl.md",
+      "target": "outputs/20261026T150908932Z-ssr-fresh-baseline-claude-moved-guide-091246d0-6355-4742-8d11-60c79a334d60-xqh45qhl.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/outputs/20261026T153330184Z-ssr-fresh-baseline-claude-moved-guide-45aa004a-7e30-4fe8-b3a1-08d265a7f9fd-rx7pg01j.md",
+      "target": "outputs/20261026T153330184Z-ssr-fresh-baseline-claude-moved-guide-45aa004a-7e30-4fe8-b3a1-08d265a7f9fd-rx7pg01j.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/outputs/20261026T160936719Z-ssr-fresh-baseline-claude-moved-guide-6f8fe2b0-7064-417d-9011-c12f818448ea-glsel8dw.md",
+      "target": "outputs/20261026T160936719Z-ssr-fresh-baseline-claude-moved-guide-6f8fe2b0-7064-417d-9011-c12f818448ea-glsel8dw.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/outputs/20261026T210717432Z-ssr-screen-claude-moved-guide-candidate-453057f2-80f6-4223-8725-a22b765a393c-2y10g1ex.md",
+      "target": "outputs/20261026T210717432Z-ssr-screen-claude-moved-guide-candidate-453057f2-80f6-4223-8725-a22b765a393c-2y10g1ex.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/outputs/20261026T225142332Z-ssr-screen-claude-moved-guide-candidate-0de99024-fcdf-4dc7-85f0-f12cf4096b96-fcx9kq13.md",
+      "target": "outputs/20261026T225142332Z-ssr-screen-claude-moved-guide-candidate-0de99024-fcdf-4dc7-85f0-f12cf4096b96-fcx9kq13.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/outputs/20261026T233505666Z-ssr-screen-claude-moved-guide-finalist-5ff74720-3628-48e5-85d6-55081529871d-p79mfhnw.md",
+      "target": "outputs/20261026T233505666Z-ssr-screen-claude-moved-guide-finalist-5ff74720-3628-48e5-85d6-55081529871d-p79mfhnw.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/outputs/20261026T233550330Z-ssr-screen-claude-moved-guide-candidate-93d8ad88-d374-4eca-8b95-39ab02562f74-1pol0unm.md",
+      "target": "outputs/20261026T233550330Z-ssr-screen-claude-moved-guide-candidate-93d8ad88-d374-4eca-8b95-39ab02562f74-1pol0unm.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/policy.txt",
+      "target": "policy.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/claude-moved/prior-assessment.md",
+      "target": "prior-assessment.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}

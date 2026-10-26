@@ -1,0 +1,109 @@
+{
+  "packets": [
+    {
+      "packet_id": "codex-semantic-pressure",
+      "outputs": 22,
+      "functional_factors": 66,
+      "required_complete_reads": 77,
+      "input_bytes": 211379,
+      "largest_file_bytes": 37415,
+      "largest_text_lines": 814,
+      "configuration_loaded": true
+    },
+    {
+      "packet_id": "codex-shiv",
+      "outputs": 11,
+      "functional_factors": 33,
+      "required_complete_reads": 83,
+      "input_bytes": 384477,
+      "largest_file_bytes": 57873,
+      "largest_text_lines": 1303,
+      "configuration_loaded": true
+    },
+    {
+      "packet_id": "codex-moved",
+      "outputs": 11,
+      "functional_factors": 33,
+      "required_complete_reads": 42,
+      "input_bytes": 121508,
+      "largest_file_bytes": 19197,
+      "largest_text_lines": 428,
+      "configuration_loaded": true
+    },
+    {
+      "packet_id": "codex-initiating-local",
+      "outputs": 22,
+      "functional_factors": 66,
+      "required_complete_reads": 79,
+      "input_bytes": 200716,
+      "largest_file_bytes": 36396,
+      "largest_text_lines": 816,
+      "configuration_loaded": true
+    },
+    {
+      "packet_id": "codex-native-positive",
+      "outputs": 22,
+      "functional_factors": 66,
+      "required_complete_reads": 87,
+      "input_bytes": 227729,
+      "largest_file_bytes": 40745,
+      "largest_text_lines": 896,
+      "configuration_loaded": true
+    },
+    {
+      "packet_id": "claude-semantic-pressure",
+      "outputs": 26,
+      "functional_factors": 78,
+      "required_complete_reads": 85,
+      "input_bytes": 249433,
+      "largest_file_bytes": 41686,
+      "largest_text_lines": 922,
+      "configuration_loaded": true
+    },
+    {
+      "packet_id": "claude-shiv",
+      "outputs": 11,
+      "functional_factors": 33,
+      "required_complete_reads": 83,
+      "input_bytes": 398019,
+      "largest_file_bytes": 57932,
+      "largest_text_lines": 1303,
+      "configuration_loaded": true
+    },
+    {
+      "packet_id": "claude-moved",
+      "outputs": 11,
+      "functional_factors": 33,
+      "required_complete_reads": 42,
+      "input_bytes": 129397,
+      "largest_file_bytes": 19222,
+      "largest_text_lines": 428,
+      "configuration_loaded": true
+    },
+    {
+      "packet_id": "claude-initiating-local",
+      "outputs": 22,
+      "functional_factors": 66,
+      "required_complete_reads": 78,
+      "input_bytes": 213695,
+      "largest_file_bytes": 36107,
+      "largest_text_lines": 809,
+      "configuration_loaded": true
+    },
+    {
+      "packet_id": "claude-native-positive",
+      "outputs": 22,
+      "functional_factors": 66,
+      "required_complete_reads": 87,
+      "input_bytes": 247129,
+      "largest_file_bytes": 40791,
+      "largest_text_lines": 896,
+      "configuration_loaded": true
+    }
+  ],
+  "unique_outputs": 180,
+  "functional_factors": 540,
+  "new_model_calls": 0,
+  "boundary": "Existing qualified read-only native Read/Glob/Grep transport; disabled skills, no execution tools. Exact delivery, timing and protected inputs must be audited after each actual review.",
+  "packaging": "Complete source/final project mappings to full content-addressed objects; hidden files and binary assets included; unchanged runtime dependency identities retained."
+}

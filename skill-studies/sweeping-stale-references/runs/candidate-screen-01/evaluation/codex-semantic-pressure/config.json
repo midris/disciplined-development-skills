@@ -1,0 +1,325 @@
+{
+  "schema_version": "0.2",
+  "id": "ssr-candidate-screen-codex-semantic-pressure-review",
+  "prompt": "../prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/INTERPRETATION.md",
+      "target": "INTERPRETATION.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/criteria/pressure-repair-expected.json",
+      "target": "criteria/pressure-repair-expected.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/criteria/pressure-repair-inherited.md",
+      "target": "criteria/pressure-repair-inherited.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/criteria/pressure-repair.md",
+      "target": "criteria/pressure-repair.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/criteria/semantic-delivery-expected.json",
+      "target": "criteria/semantic-delivery-expected.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/criteria/semantic-delivery-inherited.md",
+      "target": "criteria/semantic-delivery-inherited.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/criteria/semantic-delivery.md",
+      "target": "criteria/semantic-delivery.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/facts/20261026T133436927Z-ssr-fresh-baseline-codex-semantic-delivery-a705672d-b862-4541-af12-d3d88b5d2742-f3puqmj4.json",
+      "target": "facts/20261026T133436927Z-ssr-fresh-baseline-codex-semantic-delivery-a705672d-b862-4541-af12-d3d88b5d2742-f3puqmj4.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/facts/20261026T133837444Z-ssr-fresh-baseline-codex-pressure-repair-6467a052-3123-4706-9938-82a12b6a0cc8-8_okcgbk.json",
+      "target": "facts/20261026T133837444Z-ssr-fresh-baseline-codex-pressure-repair-6467a052-3123-4706-9938-82a12b6a0cc8-8_okcgbk.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/facts/20261026T143111482Z-ssr-fresh-baseline-codex-semantic-delivery-5980d576-4a6c-47ea-b04b-399ddcf459be-mmghqytm.json",
+      "target": "facts/20261026T143111482Z-ssr-fresh-baseline-codex-semantic-delivery-5980d576-4a6c-47ea-b04b-399ddcf459be-mmghqytm.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/facts/20261026T143412498Z-ssr-fresh-baseline-codex-pressure-repair-9e9e6183-27a3-42e7-8985-782d677d97dd-tsskre8q.json",
+      "target": "facts/20261026T143412498Z-ssr-fresh-baseline-codex-pressure-repair-9e9e6183-27a3-42e7-8985-782d677d97dd-tsskre8q.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/facts/20261026T145614690Z-ssr-fresh-baseline-codex-semantic-delivery-cbec7a28-8fdd-46a7-ad5f-e572c40d8bfb-x3551ydz.json",
+      "target": "facts/20261026T145614690Z-ssr-fresh-baseline-codex-semantic-delivery-cbec7a28-8fdd-46a7-ad5f-e572c40d8bfb-x3551ydz.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/facts/20261026T145759014Z-ssr-fresh-baseline-codex-pressure-repair-257cd5f9-61d7-4a47-90dc-d60334c40686-gp86ilqn.json",
+      "target": "facts/20261026T145759014Z-ssr-fresh-baseline-codex-pressure-repair-257cd5f9-61d7-4a47-90dc-d60334c40686-gp86ilqn.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/facts/20261026T152435135Z-ssr-fresh-baseline-codex-semantic-delivery-ad65b54c-58b4-45dd-82eb-564814ede4a6-ev4tkama.json",
+      "target": "facts/20261026T152435135Z-ssr-fresh-baseline-codex-semantic-delivery-ad65b54c-58b4-45dd-82eb-564814ede4a6-ev4tkama.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/facts/20261026T152652005Z-ssr-fresh-baseline-codex-pressure-repair-88adacf2-1128-4b8a-bb92-ec7756839f0b-tecko1da.json",
+      "target": "facts/20261026T152652005Z-ssr-fresh-baseline-codex-pressure-repair-88adacf2-1128-4b8a-bb92-ec7756839f0b-tecko1da.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/facts/20261026T155347173Z-ssr-fresh-baseline-codex-semantic-delivery-184d95f2-da8b-4178-9baa-4e31afca4d9e-2nu79qkx.json",
+      "target": "facts/20261026T155347173Z-ssr-fresh-baseline-codex-semantic-delivery-184d95f2-da8b-4178-9baa-4e31afca4d9e-2nu79qkx.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/facts/20261026T155641100Z-ssr-fresh-baseline-codex-pressure-repair-adfd498a-0d27-4549-9410-3914f16f5b02-opye7i2r.json",
+      "target": "facts/20261026T155641100Z-ssr-fresh-baseline-codex-pressure-repair-adfd498a-0d27-4549-9410-3914f16f5b02-opye7i2r.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/facts/20261026T203535129Z-ssr-screen-codex-pressure-repair-candidate-495506e2-1500-48bd-923d-bd77cfcb1ec5-81sdvfbc.json",
+      "target": "facts/20261026T203535129Z-ssr-screen-codex-pressure-repair-candidate-495506e2-1500-48bd-923d-bd77cfcb1ec5-81sdvfbc.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/facts/20261026T203714982Z-ssr-screen-codex-pressure-repair-finalist-07a4c9db-5210-4e9f-9be0-5df4145124cf-tr6gwbql.json",
+      "target": "facts/20261026T203714982Z-ssr-screen-codex-pressure-repair-finalist-07a4c9db-5210-4e9f-9be0-5df4145124cf-tr6gwbql.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/facts/20261026T211116900Z-ssr-screen-codex-semantic-delivery-candidate-77e9eae3-566f-47b0-977a-3b2916692842-ifqovc4m.json",
+      "target": "facts/20261026T211116900Z-ssr-screen-codex-semantic-delivery-candidate-77e9eae3-566f-47b0-977a-3b2916692842-ifqovc4m.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/facts/20261026T211248054Z-ssr-screen-codex-semantic-delivery-finalist-b3a2019a-2a34-4482-929a-5f9c6757a6f8-052cfl6_.json",
+      "target": "facts/20261026T211248054Z-ssr-screen-codex-semantic-delivery-finalist-b3a2019a-2a34-4482-929a-5f9c6757a6f8-052cfl6_.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/facts/20261026T212231168Z-ssr-screen-codex-pressure-repair-finalist-97ef6cd4-7956-4c00-a625-020bcdaf5ac3-91n2b_2j.json",
+      "target": "facts/20261026T212231168Z-ssr-screen-codex-pressure-repair-finalist-97ef6cd4-7956-4c00-a625-020bcdaf5ac3-91n2b_2j.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/facts/20261026T212348582Z-ssr-screen-codex-pressure-repair-candidate-55174ebf-a2aa-4caa-9381-6fa237cdae89-07v7m1d5.json",
+      "target": "facts/20261026T212348582Z-ssr-screen-codex-pressure-repair-candidate-55174ebf-a2aa-4caa-9381-6fa237cdae89-07v7m1d5.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/facts/20261026T225218601Z-ssr-screen-codex-semantic-delivery-finalist-a20d2777-0f44-40d7-ab61-0069946425a7-6gi2_8j7.json",
+      "target": "facts/20261026T225218601Z-ssr-screen-codex-semantic-delivery-finalist-a20d2777-0f44-40d7-ab61-0069946425a7-6gi2_8j7.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/facts/20261026T225336383Z-ssr-screen-codex-semantic-delivery-candidate-d4674a19-2c36-4175-9335-8faec79d7dc0-tgl7dz4t.json",
+      "target": "facts/20261026T225336383Z-ssr-screen-codex-semantic-delivery-candidate-d4674a19-2c36-4175-9335-8faec79d7dc0-tgl7dz4t.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/facts/20261026T230121957Z-ssr-screen-codex-pressure-repair-candidate-1ab1db76-14ec-4ba5-8879-f33be857a7f2-ftqftko0.json",
+      "target": "facts/20261026T230121957Z-ssr-screen-codex-pressure-repair-candidate-1ab1db76-14ec-4ba5-8879-f33be857a7f2-ftqftko0.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/facts/20261026T230247137Z-ssr-screen-codex-pressure-repair-finalist-b4af3766-7149-460c-8320-e039878615ce-zlehyfdo.json",
+      "target": "facts/20261026T230247137Z-ssr-screen-codex-pressure-repair-finalist-b4af3766-7149-460c-8320-e039878615ce-zlehyfdo.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/facts/20261026T233945689Z-ssr-screen-codex-semantic-delivery-candidate-046e1571-0550-4ef6-9383-3dca6cd69eba-cxbbo3nc.json",
+      "target": "facts/20261026T233945689Z-ssr-screen-codex-semantic-delivery-candidate-046e1571-0550-4ef6-9383-3dca6cd69eba-cxbbo3nc.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/facts/20261026T234049700Z-ssr-screen-codex-semantic-delivery-finalist-6003bd53-d6e1-4f68-be24-31486b89c07f-cny6mxs8.json",
+      "target": "facts/20261026T234049700Z-ssr-screen-codex-semantic-delivery-finalist-6003bd53-d6e1-4f68-be24-31486b89c07f-cny6mxs8.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/objects/001.txt",
+      "target": "objects/001.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/objects/002.txt",
+      "target": "objects/002.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/objects/003.txt",
+      "target": "objects/003.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/objects/004.txt",
+      "target": "objects/004.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/objects/005.txt",
+      "target": "objects/005.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/objects/006.txt",
+      "target": "objects/006.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/objects/007.txt",
+      "target": "objects/007.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/objects/008.txt",
+      "target": "objects/008.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/objects/009.txt",
+      "target": "objects/009.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/objects/010.txt",
+      "target": "objects/010.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/objects/011.txt",
+      "target": "objects/011.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/objects/012.txt",
+      "target": "objects/012.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/objects/013.txt",
+      "target": "objects/013.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/objects/014.txt",
+      "target": "objects/014.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/objects/015.txt",
+      "target": "objects/015.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/objects/016.txt",
+      "target": "objects/016.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/objects/017.txt",
+      "target": "objects/017.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/objects/018.txt",
+      "target": "objects/018.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/objects/019.txt",
+      "target": "objects/019.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/objects/020.txt",
+      "target": "objects/020.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/objects/021.txt",
+      "target": "objects/021.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/objects/022.txt",
+      "target": "objects/022.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/objects/023.txt",
+      "target": "objects/023.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/objects/024.txt",
+      "target": "objects/024.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/outputs/20261026T133436927Z-ssr-fresh-baseline-codex-semantic-delivery-a705672d-b862-4541-af12-d3d88b5d2742-f3puqmj4.md",
+      "target": "outputs/20261026T133436927Z-ssr-fresh-baseline-codex-semantic-delivery-a705672d-b862-4541-af12-d3d88b5d2742-f3puqmj4.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/outputs/20261026T133837444Z-ssr-fresh-baseline-codex-pressure-repair-6467a052-3123-4706-9938-82a12b6a0cc8-8_okcgbk.md",
+      "target": "outputs/20261026T133837444Z-ssr-fresh-baseline-codex-pressure-repair-6467a052-3123-4706-9938-82a12b6a0cc8-8_okcgbk.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/outputs/20261026T143111482Z-ssr-fresh-baseline-codex-semantic-delivery-5980d576-4a6c-47ea-b04b-399ddcf459be-mmghqytm.md",
+      "target": "outputs/20261026T143111482Z-ssr-fresh-baseline-codex-semantic-delivery-5980d576-4a6c-47ea-b04b-399ddcf459be-mmghqytm.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/outputs/20261026T143412498Z-ssr-fresh-baseline-codex-pressure-repair-9e9e6183-27a3-42e7-8985-782d677d97dd-tsskre8q.md",
+      "target": "outputs/20261026T143412498Z-ssr-fresh-baseline-codex-pressure-repair-9e9e6183-27a3-42e7-8985-782d677d97dd-tsskre8q.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/outputs/20261026T145614690Z-ssr-fresh-baseline-codex-semantic-delivery-cbec7a28-8fdd-46a7-ad5f-e572c40d8bfb-x3551ydz.md",
+      "target": "outputs/20261026T145614690Z-ssr-fresh-baseline-codex-semantic-delivery-cbec7a28-8fdd-46a7-ad5f-e572c40d8bfb-x3551ydz.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/outputs/20261026T145759014Z-ssr-fresh-baseline-codex-pressure-repair-257cd5f9-61d7-4a47-90dc-d60334c40686-gp86ilqn.md",
+      "target": "outputs/20261026T145759014Z-ssr-fresh-baseline-codex-pressure-repair-257cd5f9-61d7-4a47-90dc-d60334c40686-gp86ilqn.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/outputs/20261026T152435135Z-ssr-fresh-baseline-codex-semantic-delivery-ad65b54c-58b4-45dd-82eb-564814ede4a6-ev4tkama.md",
+      "target": "outputs/20261026T152435135Z-ssr-fresh-baseline-codex-semantic-delivery-ad65b54c-58b4-45dd-82eb-564814ede4a6-ev4tkama.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/outputs/20261026T152652005Z-ssr-fresh-baseline-codex-pressure-repair-88adacf2-1128-4b8a-bb92-ec7756839f0b-tecko1da.md",
+      "target": "outputs/20261026T152652005Z-ssr-fresh-baseline-codex-pressure-repair-88adacf2-1128-4b8a-bb92-ec7756839f0b-tecko1da.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/outputs/20261026T155347173Z-ssr-fresh-baseline-codex-semantic-delivery-184d95f2-da8b-4178-9baa-4e31afca4d9e-2nu79qkx.md",
+      "target": "outputs/20261026T155347173Z-ssr-fresh-baseline-codex-semantic-delivery-184d95f2-da8b-4178-9baa-4e31afca4d9e-2nu79qkx.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/outputs/20261026T155641100Z-ssr-fresh-baseline-codex-pressure-repair-adfd498a-0d27-4549-9410-3914f16f5b02-opye7i2r.md",
+      "target": "outputs/20261026T155641100Z-ssr-fresh-baseline-codex-pressure-repair-adfd498a-0d27-4549-9410-3914f16f5b02-opye7i2r.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/outputs/20261026T203535129Z-ssr-screen-codex-pressure-repair-candidate-495506e2-1500-48bd-923d-bd77cfcb1ec5-81sdvfbc.md",
+      "target": "outputs/20261026T203535129Z-ssr-screen-codex-pressure-repair-candidate-495506e2-1500-48bd-923d-bd77cfcb1ec5-81sdvfbc.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/outputs/20261026T203714982Z-ssr-screen-codex-pressure-repair-finalist-07a4c9db-5210-4e9f-9be0-5df4145124cf-tr6gwbql.md",
+      "target": "outputs/20261026T203714982Z-ssr-screen-codex-pressure-repair-finalist-07a4c9db-5210-4e9f-9be0-5df4145124cf-tr6gwbql.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/outputs/20261026T211116900Z-ssr-screen-codex-semantic-delivery-candidate-77e9eae3-566f-47b0-977a-3b2916692842-ifqovc4m.md",
+      "target": "outputs/20261026T211116900Z-ssr-screen-codex-semantic-delivery-candidate-77e9eae3-566f-47b0-977a-3b2916692842-ifqovc4m.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/outputs/20261026T211248054Z-ssr-screen-codex-semantic-delivery-finalist-b3a2019a-2a34-4482-929a-5f9c6757a6f8-052cfl6_.md",
+      "target": "outputs/20261026T211248054Z-ssr-screen-codex-semantic-delivery-finalist-b3a2019a-2a34-4482-929a-5f9c6757a6f8-052cfl6_.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/outputs/20261026T212231168Z-ssr-screen-codex-pressure-repair-finalist-97ef6cd4-7956-4c00-a625-020bcdaf5ac3-91n2b_2j.md",
+      "target": "outputs/20261026T212231168Z-ssr-screen-codex-pressure-repair-finalist-97ef6cd4-7956-4c00-a625-020bcdaf5ac3-91n2b_2j.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/outputs/20261026T212348582Z-ssr-screen-codex-pressure-repair-candidate-55174ebf-a2aa-4caa-9381-6fa237cdae89-07v7m1d5.md",
+      "target": "outputs/20261026T212348582Z-ssr-screen-codex-pressure-repair-candidate-55174ebf-a2aa-4caa-9381-6fa237cdae89-07v7m1d5.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/outputs/20261026T225218601Z-ssr-screen-codex-semantic-delivery-finalist-a20d2777-0f44-40d7-ab61-0069946425a7-6gi2_8j7.md",
+      "target": "outputs/20261026T225218601Z-ssr-screen-codex-semantic-delivery-finalist-a20d2777-0f44-40d7-ab61-0069946425a7-6gi2_8j7.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/outputs/20261026T225336383Z-ssr-screen-codex-semantic-delivery-candidate-d4674a19-2c36-4175-9335-8faec79d7dc0-tgl7dz4t.md",
+      "target": "outputs/20261026T225336383Z-ssr-screen-codex-semantic-delivery-candidate-d4674a19-2c36-4175-9335-8faec79d7dc0-tgl7dz4t.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/outputs/20261026T230121957Z-ssr-screen-codex-pressure-repair-candidate-1ab1db76-14ec-4ba5-8879-f33be857a7f2-ftqftko0.md",
+      "target": "outputs/20261026T230121957Z-ssr-screen-codex-pressure-repair-candidate-1ab1db76-14ec-4ba5-8879-f33be857a7f2-ftqftko0.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/outputs/20261026T230247137Z-ssr-screen-codex-pressure-repair-finalist-b4af3766-7149-460c-8320-e039878615ce-zlehyfdo.md",
+      "target": "outputs/20261026T230247137Z-ssr-screen-codex-pressure-repair-finalist-b4af3766-7149-460c-8320-e039878615ce-zlehyfdo.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/outputs/20261026T233945689Z-ssr-screen-codex-semantic-delivery-candidate-046e1571-0550-4ef6-9383-3dca6cd69eba-cxbbo3nc.md",
+      "target": "outputs/20261026T233945689Z-ssr-screen-codex-semantic-delivery-candidate-046e1571-0550-4ef6-9383-3dca6cd69eba-cxbbo3nc.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/outputs/20261026T234049700Z-ssr-screen-codex-semantic-delivery-finalist-6003bd53-d6e1-4f68-be24-31486b89c07f-cny6mxs8.md",
+      "target": "outputs/20261026T234049700Z-ssr-screen-codex-semantic-delivery-finalist-6003bd53-d6e1-4f68-be24-31486b89c07f-cny6mxs8.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/policy.txt",
+      "target": "policy.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/candidate-screen-01/review-inputs/codex-semantic-pressure/prior-assessment.md",
+      "target": "prior-assessment.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}

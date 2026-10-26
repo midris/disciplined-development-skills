@@ -1,0 +1,134 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-10-26T23:40:49.279591+00:00",
+  "run_id": "20261026T233945689Z-ssr-screen-codex-semantic-delivery-candidate-046e1571-0550-4ef6-9383-3dca6cd69eba-cxbbo3nc",
+  "condition": "candidate",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Preparer and active assessor with condition/history awareness; not blind or independent. Fixed SSR-assessment-3 and case-specific units, inherited explanations and prospective candidate interpretation."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T233945689Z-ssr-screen-codex-semantic-delivery-candidate-046e1571-0550-4ef6-9383-3dca6cd69eba-cxbbo3nc/result.json",
+        "sha256": "b9dd8337b6e7413489a1515569229f76d43ea5a13555be354b2e23301b1e565b",
+        "version": null
+      },
+      "selector": "Mechanical completion, declared execution and retained capture."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T233945689Z-ssr-screen-codex-semantic-delivery-candidate-046e1571-0550-4ef6-9383-3dca6cd69eba-cxbbo3nc/provider-session.jsonl",
+        "sha256": "924726a46be544dbc2e9e74fcf5fe5581f26a3717d44096fdf1a65ae428b7dc9",
+        "version": null
+      },
+      "selector": "Complete ordered tool calls, responses and subject messages."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/inspection/106.json",
+        "sha256": "e0e9b20a7d6cb43bfa41c4767b617bbaa6a2d3312de9a5fa9fc185c95f322dd5",
+        "version": null
+      },
+      "selector": "Disposable full project/Git comparison, protected inputs, delivery/model checks and any trusted replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned model/CLI/effort and source identities verified; complete retained capture and cleanup, with full assigned-body delivery for explicit application. Native availability is verified; missing/late loading is scored separately.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Complete current README, operations and troubleshooting consistently state four total attempts, three retries after initial failure, and exhaustion on fourth failure. Existing early-success/operator guidance retained; seven independent behavior probes confirm delivery and helper contracts.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only the three current description blocks change; implementation/tests, separate three-attempt helper policy and historical plan remain intact.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All required semantic repairs committed after baseline; clean tracked worktree.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Full body and broad numeric/prose/concept search before edits; current contradictions, history and independent helper policy appropriately triaged.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One complete reconciliation commit after baseline.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "Historical plan lines 4-5 are counted as two matches, but fixed semantic accounting defines that historical policy block as one reference. Three current update blocks are correctly reported; required four-block scope is miscounted.",
+      "consequence": "Report separately; cannot change functional outcome or authorize repetition alone.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Complete semantic repair and preservation; historical semantic block miscount is a non-blocking reporting defect.",
+  "observations": [],
+  "uncertainty": [
+    "Exposed development case in a declared provider/runtime stratum; no blind, held-out, population reliability or causal-guidance claim.",
+    "Native selection and task success are separate; retain case-specific counting units and Shiv uncertainty."
+  ],
+  "result_id": "candidate-screen-codex-01-semantic-delivery-candidate-3",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/codex-semantic-delivery-manifest.json",
+    "sha256": "467ab194bd019faad14e0e9a55bc4b4056e563ea2e0c5056aba2a752884645c3",
+    "version": "1",
+    "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+  }
+}
