@@ -2,5 +2,98 @@
   "evaluator_ledger_version": "1",
   "study_id": "sweeping-stale-references",
   "batch_id": "fresh-baseline-01",
-  "runs": []
+  "runs": [
+    {
+      "packet_id": "codex-semantic-pressure",
+      "run_id": "20261026T162753817Z-ssr-fresh-original-codex-semantic-pressure-review-a55379d3-e8c4-46d6-a1db-988cbe25a6dd-y3qej8l2",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "ce933e2d80829453fa096e0adc50906f03a75fb6",
+      "configuration_sha256": "89d22f116a8417d6c28ab7ce5664c459d53aa747a479f235c1da3eb33340b8a5",
+      "bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/reviews/20261026T162753817Z-ssr-fresh-original-codex-semantic-pressure-review-a55379d3-e8c4-46d6-a1db-988cbe25a6dd-y3qej8l2",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/reviews/20261026T162753817Z-ssr-fresh-original-codex-semantic-pressure-review-a55379d3-e8c4-46d6-a1db-988cbe25a6dd-y3qej8l2.inventory.json",
+        "sha256": "9f1899b04a92675301dc95278a7396e1aaaa96cc1901e1ac6485db24c035e298",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 192.185,
+      "audit_status": "complete",
+      "audit": {
+        "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/evaluation/codex-semantic-pressure/audit.json",
+        "sha256": "54e99ce0cd2cb3caeb48a637fa72cbd26c14a69cca417ff7a58523530a536950",
+        "version": null
+      }
+    },
+    {
+      "packet_id": "codex-shiv-moved",
+      "run_id": "20261026T163410396Z-ssr-fresh-original-codex-shiv-moved-review-457efb56-bdd4-451e-9c53-656e9f20cbc2-58l4mmvv",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "ce933e2d80829453fa096e0adc50906f03a75fb6",
+      "configuration_sha256": "07d9d000efc1585ed22f28edcaaa7b48ab9ae25d473e342c849b709cc8e8eb3a",
+      "bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/reviews/20261026T163410396Z-ssr-fresh-original-codex-shiv-moved-review-457efb56-bdd4-451e-9c53-656e9f20cbc2-58l4mmvv",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/reviews/20261026T163410396Z-ssr-fresh-original-codex-shiv-moved-review-457efb56-bdd4-451e-9c53-656e9f20cbc2-58l4mmvv.inventory.json",
+        "sha256": "6d78967508b4dc99d00166b93e307c8331c9c87fae2bf8f57d31b83837f462c6",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 291.731,
+      "audit_status": "complete",
+      "audit": {
+        "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/evaluation/codex-shiv-moved/audit.json",
+        "sha256": "77f0ae2c551a0c30f4ad8e6b756b980556f775b63b314e196fea2198ee3a2c19",
+        "version": null
+      }
+    },
+    {
+      "packet_id": "codex-initiating-local",
+      "run_id": "20261026T164125872Z-ssr-fresh-original-codex-initiating-local-review-d5c4861b-27da-4af1-b8f6-c1bb7f0f3f23-1wfpr1l7",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "ce933e2d80829453fa096e0adc50906f03a75fb6",
+      "configuration_sha256": "c7c2e93264d2f17babbc01a621d3e2d1b148afa173adb6efe385871b283689c7",
+      "bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/reviews/20261026T164125872Z-ssr-fresh-original-codex-initiating-local-review-d5c4861b-27da-4af1-b8f6-c1bb7f0f3f23-1wfpr1l7",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/reviews/20261026T164125872Z-ssr-fresh-original-codex-initiating-local-review-d5c4861b-27da-4af1-b8f6-c1bb7f0f3f23-1wfpr1l7.inventory.json",
+        "sha256": "32df9ef249f45f9b80627013ed86ce8e720636aaa95cf7257ee489f79687fb6b",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 180.933,
+      "audit_status": "complete",
+      "audit": {
+        "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/evaluation/codex-initiating-local/audit.json",
+        "sha256": "963bc792b72375f1c4ac16e49a996787ae4ca8da72b6dbf4855a4d22561a423d",
+        "version": null
+      }
+    },
+    {
+      "packet_id": "codex-native-positive",
+      "run_id": "20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "ce933e2d80829453fa096e0adc50906f03a75fb6",
+      "configuration_sha256": "cb03bab694a5d1ad374d7c9f5ab5af77fc3f52a581e1de3f6b9dae73193411a8",
+      "bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/reviews/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/reviews/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl.inventory.json",
+        "sha256": "723478bbc28f38534d1c081a9b7cf3d6bd32be401292b67e759911eb8d077005",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 224.273,
+      "audit_status": "complete",
+      "audit": {
+        "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/evaluation/codex-native-positive/audit.json",
+        "sha256": "65c8a7b01d943bf89fc027e1f877030d0c02fe398ae9a4b9daa9f43afa172f65",
+        "version": null
+      }
+    }
+  ]
 }

@@ -1,6 +1,6 @@
 # Original baseline output review
 
-Status: eight complete packets prepared; dispatch follows committed input identities.
+Status: output review in progress under committed input identities; the ledger owns completed and pending reviews.
 The [packet plan](packet-plan.json) fixes eighty repair outputs and 240 functional judgments, including five reused Opus semantic originals.
 Each packet has ten outputs and thirty F1–F3 factors; the active session owns D1 and procedural judgments.
 
@@ -22,6 +22,8 @@ The task, original-specific case card, inherited explanations, expected facts, p
 Target skill bodies/descriptions, authoring hypotheses and subject traces are excluded.
 The unchanged `.runtime` Click files are qualified toolchain dependencies rather than authored project source; their exact identities and preservation are recorded without repeating their bodies.
 All authored project files, including `.gitignore` and `.github`, remain in the complete mappings.
+The unchanged ZIP test asset is also supplied completely; native Read renders its bytes lossily as text, so binary preservation rests on the exact shared source/final object identity and protected-input hashes.
+The PNG tool response is checked against the exact original image bytes.
 Whole-file deduplication changes packaging only, with no change to cases, criteria, output count, review count or budget.
 
 Labels are visible; this is not blind review.

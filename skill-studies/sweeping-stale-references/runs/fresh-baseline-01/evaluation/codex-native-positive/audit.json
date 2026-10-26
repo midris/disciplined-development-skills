@@ -1,0 +1,1303 @@
+{
+  "packet_id": "codex-native-positive",
+  "run_id": "20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl",
+  "first_pass_event": 166,
+  "prior_first_access_event": 167,
+  "post_prior_event": 174,
+  "required_complete_files": 62,
+  "complete_delivery_before_first_pass": [
+    {
+      "path": "EVALUATION-INDEX.json",
+      "sha256": "c52b0c6d5107c94cdc2bbb7fe2d696a2a72f383b5d9aa2ba8cec0a03f79b5e21",
+      "complete_delivery": [
+        {
+          "call_event": 15,
+          "response_event": 16,
+          "call_id": "toolu_012pfNR6PPUC959KpoquHxuB",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "policy.txt",
+      "sha256": "5d057d11f678ae3fa63c48957446aded13ccc5dcb8babab2856d0232d49e08bb",
+      "complete_delivery": [
+        {
+          "call_event": 20,
+          "response_event": 21,
+          "call_id": "toolu_01HmepS3DWTzhJRum6auNBgY",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "INTERPRETATION.md",
+      "sha256": "9c28f8007771c66916c7920fda0e7036a20b0eeb41866c8248f55fb308b22d8a",
+      "complete_delivery": [
+        {
+          "call_event": 22,
+          "response_event": 23,
+          "call_id": "toolu_01BV6kvZgzxGEsMpRd77iaGU",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "criteria/invocation-change-expected.md",
+      "sha256": "be770c6e7a05bd72e9704a4ed3e385efe72be0f1cc89e7b96c584fa0e6d64331",
+      "complete_delivery": [
+        {
+          "call_event": 28,
+          "response_event": 29,
+          "call_id": "toolu_01Bc6u3cxRfCT485eKSdXHob",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "criteria/invocation-change-inherited.md",
+      "sha256": "7e6461fc94ea0c4d02bb62f7b43613d8fd86673ee1aa93ed0f3956b1c194fa26",
+      "complete_delivery": [
+        {
+          "call_event": 26,
+          "response_event": 27,
+          "call_id": "toolu_012FkpAhp4nSuPJEqGGuKG9z",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "criteria/invocation-change.md",
+      "sha256": "e6465628a5e944601cabe6e19040cf8f8a07a2ade9a65cdd91175269d25df6bc",
+      "complete_delivery": [
+        {
+          "call_event": 24,
+          "response_event": 25,
+          "call_id": "toolu_01TdmTHMLXa4MxfDdoGGVLcs",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "criteria/invocation-review-expected.json",
+      "sha256": "1eccde02cbd1523e4d99a90359fae1d45b494c13a3d4691df83b0b0ab9a011fa",
+      "complete_delivery": [
+        {
+          "call_event": 34,
+          "response_event": 35,
+          "call_id": "toolu_011vm5RcZKRbP7aYTdyk4D88",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "criteria/invocation-review-inherited.md",
+      "sha256": "b897054d0ec6a5aacac614bc2d88145731791d18c10df60929fe9d27087c0ed8",
+      "complete_delivery": [
+        {
+          "call_event": 32,
+          "response_event": 33,
+          "call_id": "toolu_01K7as9mcXQidfG2wH8VezDJ",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "criteria/invocation-review.md",
+      "sha256": "47b1f113e5f982cb293b18287625d93b95035408cef9a901796a4c0a0dd24579",
+      "complete_delivery": [
+        {
+          "call_event": 30,
+          "response_event": 31,
+          "call_id": "toolu_01NdMufC9nUSqMiE9MYLzULD",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T134245334Z-ssr-fresh-baseline-codex-invocation-change-f0f0a9ee-37d0-466b-abf4-4ba50bb9030e-8joxuexg.json",
+      "sha256": "59c280a984d5da5d864d8d15e64ddf5c1d5fa7bb0db5ad4742b0d756d27c8a10",
+      "complete_delivery": [
+        {
+          "call_event": 111,
+          "response_event": 112,
+          "call_id": "toolu_01Wd5oCgTcjYPkdSCyX67ASu",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T143618995Z-ssr-fresh-baseline-codex-invocation-change-8e62c8d0-fd1b-476d-9bce-ad7d42e475df-x9tj5hw9.json",
+      "sha256": "9517b234b78e791f565dc9a8c325e8d23e6e1ef7cb2cea2e441010be972f4d91",
+      "complete_delivery": [
+        {
+          "call_event": 113,
+          "response_event": 114,
+          "call_id": "toolu_01QNJdQnRzcru8W3j8prT6QN",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T150117283Z-ssr-fresh-baseline-codex-invocation-change-dbb48864-3418-4976-8f5f-8e1dac46c320-1hlsr6yu.json",
+      "sha256": "7024b58feea081d715dfcb69417560edb8009894ac9ffcc35edb029d731fe54a",
+      "complete_delivery": [
+        {
+          "call_event": 115,
+          "response_event": 116,
+          "call_id": "toolu_01Sk6ki6qqzcgSsxggf8c7Lp",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T152934740Z-ssr-fresh-baseline-codex-invocation-change-851ff07c-9b8e-48ae-900d-01569aa001d2-m67mwqvl.json",
+      "sha256": "062905cae128c562d8b37c00d6cf3b0a081c49f44534a0fc15c11be74a9de00e",
+      "complete_delivery": [
+        {
+          "call_event": 117,
+          "response_event": 118,
+          "call_id": "toolu_01X5HCeQmq3Jba4m5DqxNnHo",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T155930969Z-ssr-fresh-baseline-codex-invocation-change-badd3adf-2c86-44de-8ec8-10e60e2a784b-juvar6m0.json",
+      "sha256": "8adb62bf546b7bd9b017a573395416edb6d4868af0f2e58093707388b84cbd5a",
+      "complete_delivery": [
+        {
+          "call_event": 119,
+          "response_event": 120,
+          "call_id": "toolu_011MsYTSSEEafzVM1XtGkXaK",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T135904152Z-ssr-fresh-baseline-codex-invocation-review-31649107-f152-4b8b-8e2c-a16167e02426-3ywc8wq4.json",
+      "sha256": "03794e32d23eb2530e0a074ce6dc34ac6626fddea0f70c3621b6b237364f2cf4",
+      "complete_delivery": [
+        {
+          "call_event": 124,
+          "response_event": 125,
+          "call_id": "toolu_01N4cFGqm7Zw61mWcJ4koAyU",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T144440056Z-ssr-fresh-baseline-codex-invocation-review-b52a9798-cc51-40b4-a3ff-6449616186ec-0u6xy1kc.json",
+      "sha256": "607b22c47b28156f222db9a8f25f4e3fcc6e9dbdd7d3f9c8cd8aff0ba679dfa0",
+      "complete_delivery": [
+        {
+          "call_event": 126,
+          "response_event": 127,
+          "call_id": "toolu_017bYqBXHhSssZH9XTmWxU9c",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T151006832Z-ssr-fresh-baseline-codex-invocation-review-8b77a4cc-a528-4553-98bc-77150e8feb14-yxaiykrt.json",
+      "sha256": "d7a1e45793767c4a3966c747489cb157869ab265305d9fbd4b2f3551706c8df1",
+      "complete_delivery": [
+        {
+          "call_event": 128,
+          "response_event": 129,
+          "call_id": "toolu_01Cf6CX2bG9HevcVkiGNnuxC",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T153813745Z-ssr-fresh-baseline-codex-invocation-review-b193f5c0-6ae0-4a5a-ad1e-3d0131b94cc8-070pzqtm.json",
+      "sha256": "34dd0bfa598453f6f70951278af2f0894247f85a4f674c4918a5a756b7abc2db",
+      "complete_delivery": [
+        {
+          "call_event": 130,
+          "response_event": 131,
+          "call_id": "toolu_01M7L3WEP96ReEw1dxvaot3c",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T161052183Z-ssr-fresh-baseline-codex-invocation-review-6a00071d-9d44-495d-9ed6-c3d29526328e-s2cddd8y.json",
+      "sha256": "577e70c76021bf4eb9e3c0aa967fccd9f04d2e1e9fd6d30da9806893dc93374f",
+      "complete_delivery": [
+        {
+          "call_event": 132,
+          "response_event": 133,
+          "call_id": "toolu_01PFAG76QmtkM8RLeQvP99zY",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/001.txt",
+      "sha256": "f6b4553712a7e85344204a512f685b41ab572796d6293e7e0b5737a525e0d456",
+      "complete_delivery": [
+        {
+          "call_event": 37,
+          "response_event": 38,
+          "call_id": "toolu_01Gba6QykuveNkNmZ7iv2nVt",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/002.txt",
+      "sha256": "e1973f3af6490a611eb92059576e03d7bcfb726298d220f83e57369af6410c78",
+      "complete_delivery": [
+        {
+          "call_event": 39,
+          "response_event": 40,
+          "call_id": "toolu_01KNjEeaaTW35LjXRcGuXhDS",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/003.txt",
+      "sha256": "a2354de6353bc947ef4914633f37ac7c5d19833734f505358d77483558fca264",
+      "complete_delivery": [
+        {
+          "call_event": 41,
+          "response_event": 42,
+          "call_id": "toolu_016PNPi6BY4RkLybbVbx75qg",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/004.txt",
+      "sha256": "39173e527c02bb8051ec44867f13777a70bd956a47a94a9a041eea2b12da9828",
+      "complete_delivery": [
+        {
+          "call_event": 43,
+          "response_event": 44,
+          "call_id": "toolu_01KJh6xYVQu89RCiMLjG8Hh2",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/005.txt",
+      "sha256": "6d5fe8c33e0fef06a6734d4aca5d40f29e26ca6c1f7b64b4fb93708e7e2efa76",
+      "complete_delivery": [
+        {
+          "call_event": 45,
+          "response_event": 46,
+          "call_id": "toolu_01VjpKLD4dy57YieCfjJ9iaW",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/006.txt",
+      "sha256": "815923fcce071b2f077fc76b972d193e8ee88611b9f1418f64cd9d9f36a4f331",
+      "complete_delivery": [
+        {
+          "call_event": 47,
+          "response_event": 48,
+          "call_id": "toolu_01AdH1QbtG2oM9gXMWddguMa",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/007.txt",
+      "sha256": "26b396a47f08e7312600c59e759c570e3e8e9888207e238e4755b8018cfae248",
+      "complete_delivery": [
+        {
+          "call_event": 49,
+          "response_event": 50,
+          "call_id": "toolu_01GR62fwD9rBshTwcsUKaiVq",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/008.txt",
+      "sha256": "d092547b68039f16d231e5b11297c277f21cf91623b5db2cd1301730f35ea10b",
+      "complete_delivery": [
+        {
+          "call_event": 51,
+          "response_event": 52,
+          "call_id": "toolu_013jyGmmF7SeQmP9GBTsVT2R",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/009.txt",
+      "sha256": "45940528ad7f26ca62ed012f4b9d5c7c3f99a4e761f418b033e2267810d83197",
+      "complete_delivery": [
+        {
+          "call_event": 53,
+          "response_event": 54,
+          "call_id": "toolu_01FrPiKKioCKwuHpMB1Ugye9",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/010.txt",
+      "sha256": "33fbf6018f8b275d3c286f93903484ed67bbe83d291d698a88f7316bfe85ff24",
+      "complete_delivery": [
+        {
+          "call_event": 55,
+          "response_event": 56,
+          "call_id": "toolu_019eKugvWbpcjEYRSJQy672c",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/011.txt",
+      "sha256": "93df2d8204ae7fa57b01cdfc7693cc5cd37b69c52a6048b07bc73d085329fb1c",
+      "complete_delivery": [
+        {
+          "call_event": 57,
+          "response_event": 58,
+          "call_id": "toolu_01YPwS37WDHr5ArH7N9V8a9h",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/012.txt",
+      "sha256": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2",
+      "complete_delivery": [
+        {
+          "call_event": 74,
+          "response_event": 75,
+          "call_id": "toolu_01Xze1Q7ipt96npA1wfEkBF4",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/013.txt",
+      "sha256": "1a4b23b1f53af5b7aa42ac8e72f59282374435831bd35f542c23bd7dfdccb6e3",
+      "complete_delivery": [
+        {
+          "call_event": 76,
+          "response_event": 77,
+          "call_id": "toolu_01A9d3HhfLXrmqCnNoAFNHUt",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/014.txt",
+      "sha256": "8d6d58a231c01678279d8e00ea0f03f9306c1b36a474b8cb4dd5967b657453bb",
+      "complete_delivery": [
+        {
+          "call_event": 78,
+          "response_event": 79,
+          "call_id": "toolu_01NdX2MEAeHRmM42jbB5gMsZ",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/015.txt",
+      "sha256": "7d3c3810c532bdd87af795cf543171deeaff0595e4a13f7fdee39e8dfdef18d2",
+      "complete_delivery": [
+        {
+          "call_event": 80,
+          "response_event": 81,
+          "call_id": "toolu_0113325tmWbVKy7ps3SSzCVT",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/016.txt",
+      "sha256": "8e8a5cb48d7d3f3ca8e7212e9c29764f6e8f6cdaaf4f4d8d0762aaeaca906f1f",
+      "complete_delivery": [
+        {
+          "call_event": 82,
+          "response_event": 83,
+          "call_id": "toolu_015nNL6Y4s26uqwfxpE2i9zU",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/017.txt",
+      "sha256": "ef7513eb13148ad5c6b215959ae917c6ef42a24050dc8df5ff64fe814dcfd376",
+      "complete_delivery": [
+        {
+          "call_event": 84,
+          "response_event": 85,
+          "call_id": "toolu_01EGAP3M5ioQ3aRmwR2v77iX",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/018.txt",
+      "sha256": "554df6c0a7d0bf116cc593c4fdf3384e8645ab98c7d4e38780637b75577cda52",
+      "complete_delivery": [
+        {
+          "call_event": 86,
+          "response_event": 87,
+          "call_id": "toolu_01DHcYUZ2P8zGbQmEHNpHH5L",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/019.txt",
+      "sha256": "3a618d709d2be580ccb53f2f660822be9f90b091af41e3ce3b7aaed31e894eb0",
+      "complete_delivery": [
+        {
+          "call_event": 88,
+          "response_event": 89,
+          "call_id": "toolu_012RkpnVu7NX7yRYLFvLQKMB",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/020.txt",
+      "sha256": "71160952f35e3a255d68cca629a0a66d79e3e4b4c30431786f6945a28ede54f3",
+      "complete_delivery": [
+        {
+          "call_event": 90,
+          "response_event": 91,
+          "call_id": "toolu_01MkLYAsBPi8zgrQefVGnKyr",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/021.txt",
+      "sha256": "6c9685054ae4f4dd6f32a76a18401366e4206b829466367640370554bf33f683",
+      "complete_delivery": [
+        {
+          "call_event": 92,
+          "response_event": 93,
+          "call_id": "toolu_01QnRMF6aD6ktUchjn1aHP3o",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/022.txt",
+      "sha256": "c87e4afce8521b85dc30d2e44a1f35ca94accc8848f4680c1c7a2c83fa05fb4d",
+      "complete_delivery": [
+        {
+          "call_event": 59,
+          "response_event": 60,
+          "call_id": "toolu_015DoF3wHF1RgA2NSEjJLiYD",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/023.txt",
+      "sha256": "1c17cca63c9b3e7d0804f983643786ea75f17b64a099a5b75bd6001c9a518bd2",
+      "complete_delivery": [
+        {
+          "call_event": 61,
+          "response_event": 62,
+          "call_id": "toolu_019YRYYvstTU7sfWQzCRteaL",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/024.txt",
+      "sha256": "471188ec72adac025536dc04f7af871423b3678a08a99a69e5a74da613f47d48",
+      "complete_delivery": [
+        {
+          "call_event": 63,
+          "response_event": 64,
+          "call_id": "toolu_012A5bh71hCn9Fcrku6YYU4S",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/025.txt",
+      "sha256": "363849394f492cbe47a867fdd6ba7456d6ec109a85d4c2dd262cdafa876ddf12",
+      "complete_delivery": [
+        {
+          "call_event": 65,
+          "response_event": 66,
+          "call_id": "toolu_012phW39pKuUHDBDSq6D14dF",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/026.txt",
+      "sha256": "120ca715b67d11813785079a8e6a2b219439e413353f5cf5bd3d503eede8e456",
+      "complete_delivery": [
+        {
+          "call_event": 67,
+          "response_event": 68,
+          "call_id": "toolu_01561dynovsX9UADLHSiicbN",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/027.txt",
+      "sha256": "4dd7c1d5643c51a6f72d130b6d10fabc5279d1d5ba83be285556cbd6463f84d4",
+      "complete_delivery": [
+        {
+          "call_event": 69,
+          "response_event": 70,
+          "call_id": "toolu_013WWpGk5AWSdxNkWyrpzaKA",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/028.txt",
+      "sha256": "7e3566cc4f0d51da1302368281a8b3b0f2f4e4ea92919c1ecbc2ce68b62d38f5",
+      "complete_delivery": [
+        {
+          "call_event": 94,
+          "response_event": 95,
+          "call_id": "toolu_01MfrUP4AY6A9QemvqdQJnGC",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/029.txt",
+      "sha256": "c891b221c7e8e90e67a55ed09f312925c0989ba06ac426f454293b76bee5b891",
+      "complete_delivery": [
+        {
+          "call_event": 96,
+          "response_event": 97,
+          "call_id": "toolu_018icffwt1ZvvcAqJSkiXV1y",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/030.txt",
+      "sha256": "2436b0c68662c0128de007b48b5687e22cd43a86aa465029df6d71ca0c8a9dac",
+      "complete_delivery": [
+        {
+          "call_event": 98,
+          "response_event": 99,
+          "call_id": "toolu_01Pi2GwAjqusDo9cWMRsRs6L",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/031.txt",
+      "sha256": "5627a38e33e0da57f237f96c3981dd64527c7cfd41abf3e24360bfa16725df7d",
+      "complete_delivery": [
+        {
+          "call_event": 100,
+          "response_event": 101,
+          "call_id": "toolu_015Krr6W5JSJXfjZbyBwWVbD",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/032.txt",
+      "sha256": "946a77884f4c5a8a451c3b0c10c3f80c96c60004b809eb44182869ef689fb80e",
+      "complete_delivery": [
+        {
+          "call_event": 102,
+          "response_event": 103,
+          "call_id": "toolu_01VPvfgyGkAQRMJqpzhSjPmC",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/033.txt",
+      "sha256": "8957e1a3d0a7362bd3504913fa38ac3bcbeb98a56309d15ec77735bd9604246d",
+      "complete_delivery": [
+        {
+          "call_event": 104,
+          "response_event": 106,
+          "call_id": "toolu_01MG4WHYRmYCQyjauqrC7nYb",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T134245334Z-ssr-fresh-baseline-codex-invocation-change-f0f0a9ee-37d0-466b-abf4-4ba50bb9030e-8joxuexg.md",
+      "sha256": "00e3e4e7dcb15e2af660b4fa4ffb3609ab95a45d58111e223552bc6b60f68cea",
+      "complete_delivery": [
+        {
+          "call_event": 135,
+          "response_event": 136,
+          "call_id": "toolu_01PZmqtYBh89Qvev32bq9YYR",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T143618995Z-ssr-fresh-baseline-codex-invocation-change-8e62c8d0-fd1b-476d-9bce-ad7d42e475df-x9tj5hw9.md",
+      "sha256": "810384089d614988853a99c9e9f9f37f96d9574ec39bc2affe765c0b454886ff",
+      "complete_delivery": [
+        {
+          "call_event": 137,
+          "response_event": 138,
+          "call_id": "toolu_01STAFCqgf6igZVgrMbZ3BrG",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T150117283Z-ssr-fresh-baseline-codex-invocation-change-dbb48864-3418-4976-8f5f-8e1dac46c320-1hlsr6yu.md",
+      "sha256": "113128f4218c73f25d27c08047931a5c9cf6d6372a459683247de06481ee5e6a",
+      "complete_delivery": [
+        {
+          "call_event": 139,
+          "response_event": 140,
+          "call_id": "toolu_018324erbherFB9dHjg2nDLY",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T152934740Z-ssr-fresh-baseline-codex-invocation-change-851ff07c-9b8e-48ae-900d-01569aa001d2-m67mwqvl.md",
+      "sha256": "522afba61839b0098264a9ec5df3b94810ac865b2fdae7543e17000459d23c93",
+      "complete_delivery": [
+        {
+          "call_event": 141,
+          "response_event": 142,
+          "call_id": "toolu_01Ht8pRXuiaQYsvTWcXWWbPw",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T155930969Z-ssr-fresh-baseline-codex-invocation-change-badd3adf-2c86-44de-8ec8-10e60e2a784b-juvar6m0.md",
+      "sha256": "326860ec1f61632fbe715dc6b3b128b0ef2545058097c0fb1faca5ac06db3c29",
+      "complete_delivery": [
+        {
+          "call_event": 143,
+          "response_event": 144,
+          "call_id": "toolu_01L8hLN7titiCPMaGem9gCoc",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T135904152Z-ssr-fresh-baseline-codex-invocation-review-31649107-f152-4b8b-8e2c-a16167e02426-3ywc8wq4.md",
+      "sha256": "0697d1f93e04a0f47c3d22c70479d7888274f3392df21acc92713b7c7496dc57",
+      "complete_delivery": [
+        {
+          "call_event": 145,
+          "response_event": 146,
+          "call_id": "toolu_01QMTTLbLWsBUxgopM3a8bYA",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T144440056Z-ssr-fresh-baseline-codex-invocation-review-b52a9798-cc51-40b4-a3ff-6449616186ec-0u6xy1kc.md",
+      "sha256": "30e1aac1b84339e16267f9cd7297ca7b7ff863a425c95b79be7f926c72ede065",
+      "complete_delivery": [
+        {
+          "call_event": 147,
+          "response_event": 148,
+          "call_id": "toolu_01WgVQEEsi4i5PZ9RshCxh7z",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T151006832Z-ssr-fresh-baseline-codex-invocation-review-8b77a4cc-a528-4553-98bc-77150e8feb14-yxaiykrt.md",
+      "sha256": "0076f9008aace5e676dafd04c0b549359775729fdf0a4ab16a287a8af3293abc",
+      "complete_delivery": [
+        {
+          "call_event": 149,
+          "response_event": 150,
+          "call_id": "toolu_01VJDrZ3ELSpSQRHJRWsPeTC",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T153813745Z-ssr-fresh-baseline-codex-invocation-review-b193f5c0-6ae0-4a5a-ad1e-3d0131b94cc8-070pzqtm.md",
+      "sha256": "990371d9a5ea7f19e092a12322672f6852c9c5196347f65127d242a81b0120e1",
+      "complete_delivery": [
+        {
+          "call_event": 151,
+          "response_event": 152,
+          "call_id": "toolu_015JL7S7ed47uLXwGcuBus1k",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T161052183Z-ssr-fresh-baseline-codex-invocation-review-6a00071d-9d44-495d-9ed6-c3d29526328e-s2cddd8y.md",
+      "sha256": "aea2ffd52df39acc83ef6b8b871d40d5634abd2be33e9a547b3adfc09c608816",
+      "complete_delivery": [
+        {
+          "call_event": 153,
+          "response_event": 154,
+          "call_id": "toolu_012XPWatAqmy2i9koHfbFSaf",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    }
+  ],
+  "full_inventory_verified": true,
+  "protected_inputs_verified": 63,
+  "all_calls": [
+    {
+      "event": 4,
+      "name": "Glob",
+      "input": {
+        "pattern": "**/EVALUATION-INDEX.json",
+        "path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace"
+      }
+    },
+    {
+      "event": 7,
+      "name": "Glob",
+      "input": {
+        "pattern": "**/EVALUATION-INDEX.json",
+        "path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/evidence"
+      }
+    },
+    {
+      "event": 9,
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*",
+        "path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture"
+      }
+    },
+    {
+      "event": 15,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/EVALUATION-INDEX.json"
+      }
+    },
+    {
+      "event": 20,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/policy.txt"
+      }
+    },
+    {
+      "event": 22,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/INTERPRETATION.md"
+      }
+    },
+    {
+      "event": 24,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/criteria/invocation-change.md"
+      }
+    },
+    {
+      "event": 26,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/criteria/invocation-change-inherited.md"
+      }
+    },
+    {
+      "event": 28,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/criteria/invocation-change-expected.md"
+      }
+    },
+    {
+      "event": 30,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/criteria/invocation-review.md"
+      }
+    },
+    {
+      "event": 32,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/criteria/invocation-review-inherited.md"
+      }
+    },
+    {
+      "event": 34,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/criteria/invocation-review-expected.json"
+      }
+    },
+    {
+      "event": 37,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/001.txt"
+      }
+    },
+    {
+      "event": 39,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/002.txt"
+      }
+    },
+    {
+      "event": 41,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/003.txt"
+      }
+    },
+    {
+      "event": 43,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/004.txt"
+      }
+    },
+    {
+      "event": 45,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/005.txt"
+      }
+    },
+    {
+      "event": 47,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/006.txt"
+      }
+    },
+    {
+      "event": 49,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/007.txt"
+      }
+    },
+    {
+      "event": 51,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/008.txt"
+      }
+    },
+    {
+      "event": 53,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/009.txt"
+      }
+    },
+    {
+      "event": 55,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/010.txt"
+      }
+    },
+    {
+      "event": 57,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/011.txt"
+      }
+    },
+    {
+      "event": 59,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/022.txt"
+      }
+    },
+    {
+      "event": 61,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/023.txt"
+      }
+    },
+    {
+      "event": 63,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/024.txt"
+      }
+    },
+    {
+      "event": 65,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/025.txt"
+      }
+    },
+    {
+      "event": 67,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/026.txt"
+      }
+    },
+    {
+      "event": 69,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/027.txt"
+      }
+    },
+    {
+      "event": 74,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/012.txt"
+      }
+    },
+    {
+      "event": 76,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/013.txt"
+      }
+    },
+    {
+      "event": 78,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/014.txt"
+      }
+    },
+    {
+      "event": 80,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/015.txt"
+      }
+    },
+    {
+      "event": 82,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/016.txt"
+      }
+    },
+    {
+      "event": 84,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/017.txt"
+      }
+    },
+    {
+      "event": 86,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/018.txt"
+      }
+    },
+    {
+      "event": 88,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/019.txt"
+      }
+    },
+    {
+      "event": 90,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/020.txt"
+      }
+    },
+    {
+      "event": 92,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/021.txt"
+      }
+    },
+    {
+      "event": 94,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/028.txt"
+      }
+    },
+    {
+      "event": 96,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/029.txt"
+      }
+    },
+    {
+      "event": 98,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/030.txt"
+      }
+    },
+    {
+      "event": 100,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/031.txt"
+      }
+    },
+    {
+      "event": 102,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/032.txt"
+      }
+    },
+    {
+      "event": 104,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/objects/033.txt"
+      }
+    },
+    {
+      "event": 111,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/facts/20261026T134245334Z-ssr-fresh-baseline-codex-invocation-change-f0f0a9ee-37d0-466b-abf4-4ba50bb9030e-8joxuexg.json"
+      }
+    },
+    {
+      "event": 113,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/facts/20261026T143618995Z-ssr-fresh-baseline-codex-invocation-change-8e62c8d0-fd1b-476d-9bce-ad7d42e475df-x9tj5hw9.json"
+      }
+    },
+    {
+      "event": 115,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/facts/20261026T150117283Z-ssr-fresh-baseline-codex-invocation-change-dbb48864-3418-4976-8f5f-8e1dac46c320-1hlsr6yu.json"
+      }
+    },
+    {
+      "event": 117,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/facts/20261026T152934740Z-ssr-fresh-baseline-codex-invocation-change-851ff07c-9b8e-48ae-900d-01569aa001d2-m67mwqvl.json"
+      }
+    },
+    {
+      "event": 119,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/facts/20261026T155930969Z-ssr-fresh-baseline-codex-invocation-change-badd3adf-2c86-44de-8ec8-10e60e2a784b-juvar6m0.json"
+      }
+    },
+    {
+      "event": 124,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/facts/20261026T135904152Z-ssr-fresh-baseline-codex-invocation-review-31649107-f152-4b8b-8e2c-a16167e02426-3ywc8wq4.json"
+      }
+    },
+    {
+      "event": 126,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/facts/20261026T144440056Z-ssr-fresh-baseline-codex-invocation-review-b52a9798-cc51-40b4-a3ff-6449616186ec-0u6xy1kc.json"
+      }
+    },
+    {
+      "event": 128,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/facts/20261026T151006832Z-ssr-fresh-baseline-codex-invocation-review-8b77a4cc-a528-4553-98bc-77150e8feb14-yxaiykrt.json"
+      }
+    },
+    {
+      "event": 130,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/facts/20261026T153813745Z-ssr-fresh-baseline-codex-invocation-review-b193f5c0-6ae0-4a5a-ad1e-3d0131b94cc8-070pzqtm.json"
+      }
+    },
+    {
+      "event": 132,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/facts/20261026T161052183Z-ssr-fresh-baseline-codex-invocation-review-6a00071d-9d44-495d-9ed6-c3d29526328e-s2cddd8y.json"
+      }
+    },
+    {
+      "event": 135,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/outputs/20261026T134245334Z-ssr-fresh-baseline-codex-invocation-change-f0f0a9ee-37d0-466b-abf4-4ba50bb9030e-8joxuexg.md"
+      }
+    },
+    {
+      "event": 137,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/outputs/20261026T143618995Z-ssr-fresh-baseline-codex-invocation-change-8e62c8d0-fd1b-476d-9bce-ad7d42e475df-x9tj5hw9.md"
+      }
+    },
+    {
+      "event": 139,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/outputs/20261026T150117283Z-ssr-fresh-baseline-codex-invocation-change-dbb48864-3418-4976-8f5f-8e1dac46c320-1hlsr6yu.md"
+      }
+    },
+    {
+      "event": 141,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/outputs/20261026T152934740Z-ssr-fresh-baseline-codex-invocation-change-851ff07c-9b8e-48ae-900d-01569aa001d2-m67mwqvl.md"
+      }
+    },
+    {
+      "event": 143,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/outputs/20261026T155930969Z-ssr-fresh-baseline-codex-invocation-change-badd3adf-2c86-44de-8ec8-10e60e2a784b-juvar6m0.md"
+      }
+    },
+    {
+      "event": 145,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/outputs/20261026T135904152Z-ssr-fresh-baseline-codex-invocation-review-31649107-f152-4b8b-8e2c-a16167e02426-3ywc8wq4.md"
+      }
+    },
+    {
+      "event": 147,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/outputs/20261026T144440056Z-ssr-fresh-baseline-codex-invocation-review-b52a9798-cc51-40b4-a3ff-6449616186ec-0u6xy1kc.md"
+      }
+    },
+    {
+      "event": 149,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/outputs/20261026T151006832Z-ssr-fresh-baseline-codex-invocation-review-8b77a4cc-a528-4553-98bc-77150e8feb14-yxaiykrt.md"
+      }
+    },
+    {
+      "event": 151,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/outputs/20261026T153813745Z-ssr-fresh-baseline-codex-invocation-review-b193f5c0-6ae0-4a5a-ad1e-3d0131b94cc8-070pzqtm.md"
+      }
+    },
+    {
+      "event": 153,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/outputs/20261026T161052183Z-ssr-fresh-baseline-codex-invocation-review-6a00071d-9d44-495d-9ed6-c3d29526328e-s2cddd8y.md"
+      }
+    },
+    {
+      "event": 167,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T164515424Z-ssr-fresh-original-codex-native-positive-review-cae979f7-a273-449f-97c5-f3754e79899b-62q6yphl/workspace/fixture/prior-assessment.md"
+      }
+    }
+  ],
+  "semantic_audit": "Full first pass and separate post-prior comparison manually read: all ten full IDs/thirty factors/case-provider-condition totals and concrete passing-quality evidence complete. All six rename consumers preserve values/units/rationale/history/vendor; all three semantic docs preserve behavior and operational usefulness. Independent functional judgments agree; no factor changes after prior. Native D1 remains solely trace-based active assessment.",
+  "first_pass_sha256": "ba433d8e3cf77bef6f577f7c0630952a33b89f4533e6d22c2857de39853096be",
+  "post_prior_sha256": "17ffd4747ab891736a3e66dbbaa761ca694d18a80700ed620912bf4e631c6a48",
+  "post_prior_status": "separate reviewer comparison retained",
+  "audit_controller": {
+    "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/controllers/ssr-fresh-review-audit-v3.py",
+    "sha256": "28a06b6c9706e6baaa7808f12d0acade1f2a43caa926a3679bcb76cdca7e19b7"
+  },
+  "limits": [
+    "Visible labels; prior physically present but timing audited.",
+    "Opus reviewer differs from active Codex assessor; Opus subjects share reviewer family.",
+    "Exposed development cases, no causal contribution or reliability claim."
+  ],
+  "precision_notes": [
+    "Initial broad Glob incidentally lists prior-assessment.md before first pass, but no score content is searched/read then. Deliberate prior access starts167 after complete firstpass166. Filename exposure is disclosed, not blinding or score exposure.",
+    "Reviewer corrects its nine-update-path summary to six update paths among nine total after prior access. First-pass evidence already explicitly inspected all six updates and three protected paths; no factor changes.",
+    "Generic PNG/Click packaging note does not apply to these cases; empty dependency lists are explicit."
+  ]
+}
