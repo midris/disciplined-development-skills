@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `sweeping-stale-references`
 Status: the compact comparison and closing validation batches are complete; remaining-scope preparation follows the CW testing model. Skill adoption remains pending.
-Current action: resolve baseline runtime/reuse scope in the [staged comparison design](../../plans/specs/2026-10-26-ssr-staged-baseline-comparison.md). The original is the fixed baseline across all scenarios; comprehensive and compact rewrites receive initial three-attempt screens before any selected top-up. The previous 55-subject proposal is superseded; no revised allocation, collection, rewrite or deployment is authorized. The [CW accounting](../concise-writing/protocol.md#storage-and-accounting) owns combined spending.
+Current action: prepare, freeze and collect the owner-selected fresh original baseline: 105 new subjects and five matching reused Opus semantic observations, followed by eight bounded output reviews. Candidate screens, edits, retries and adoption remain unallocated. The [staged design](../../plans/specs/2026-10-26-ssr-staged-baseline-comparison.md) owns comparison intent; [CW accounting](../concise-writing/protocol.md#storage-and-accounting) owns combined spending.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](runs/core-baseline-01/core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -262,6 +262,155 @@ SSR collection used config schema 0.2 and result schema 0.4; retained bundles ke
 Control contribution claims require evidence that omitted guidance was not loaded. Record limits on observed isolation rather than claiming exhaustive host-wide exclusion.
 
 Pre-baseline development is closed at two pairs. Do not reopen it for a new facet; a named readiness defect requires a separately authorized diagnostic exception.
+
+### Batch: fresh-baseline-codex-01
+
+Status: owner-authorized; preparation, freeze and readiness precede dispatch.
+Owner authority, 2026-10-26: “ok, let's create fresh baselines then”, selecting the offered five-repetition original baseline on current Codex/Opus across all eleven non-pilot cases, with five matching Opus semantic originals reused.
+Scope: 55 new original-only subjects in the fixed order below; this provider batch is part of fresh-baseline-01, not authorization for candidates or automatic repeats.
+Inclusion: descriptive-only; Include all valid-setup executions regardless of outcome. Preserve excluded setups, unknowns and unattempted slots explicitly. No automatic retry or replacement.
+Runtime: gpt-5.6-sol low, Codex CLI 0.163.0, workspace-write, 900 seconds. [Runtime identities](runs/fresh-baseline-01/preparation/runtime-identities.json) and unchanged toolchain wrapper govern qualification; inspect actual model/catalog/body delivery/capture/cleanup per attempt.
+Original identity: preserved cases/skill-original/SKILL.md, SHA-256 d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157. No skill body or description changes.
+Assessment: SSR-assessment-3 and [case cards](runs/fresh-baseline-01/preparation/criteria-index.json), retaining inherited meanings, counting units, original locality rule and Shiv uncertainty. F1–F3 for eight repair cases; P3 only for accounting; D1 only for both non-use cases, functional outcome not measured. Positive native task correctness and timely skill loading are separate.
+Budget: this batch allocates 55 subjects; the two provider batches together allocate 105 subjects and eight required cross-model artifact reviews. Combined ceilings rise to 773 subjects/58 evaluators (839 total with unchanged 4/4 authoring/retry ceilings); no retry or authoring allocation. Shared active-effort forecast: 300–420 minutes (45–60 preparation/qualification/freeze, 80–110 subject waits, 100–140 direct assessment/retention, 55–80 review/audit, 20–30 closure); waits included once. Time remains a guideline.
+Preparation: [README](runs/fresh-baseline-01/preparation/README.md), [interpretation](runs/fresh-baseline-01/preparation/interpretation.md), and [global schedule](runs/fresh-baseline-01/preparation/schedule.json). Selected manifests: [codex-discovery-shiv-manifest](runs/fresh-baseline-01/preparation/manifests/codex-discovery-shiv-manifest.json), [codex-initiating-change-manifest](runs/fresh-baseline-01/preparation/manifests/codex-initiating-change-manifest.json), [codex-invocation-change-manifest](runs/fresh-baseline-01/preparation/manifests/codex-invocation-change-manifest.json), [codex-invocation-review-manifest](runs/fresh-baseline-01/preparation/manifests/codex-invocation-review-manifest.json), [codex-invocation-unrelated-manifest](runs/fresh-baseline-01/preparation/manifests/codex-invocation-unrelated-manifest.json), [codex-invocation-verification-manifest](runs/fresh-baseline-01/preparation/manifests/codex-invocation-verification-manifest.json), [codex-large-sweep-account-manifest](runs/fresh-baseline-01/preparation/manifests/codex-large-sweep-account-manifest.json), [codex-local-change-manifest](runs/fresh-baseline-01/preparation/manifests/codex-local-change-manifest.json), [codex-moved-guide-manifest](runs/fresh-baseline-01/preparation/manifests/codex-moved-guide-manifest.json), [codex-pressure-repair-manifest](runs/fresh-baseline-01/preparation/manifests/codex-pressure-repair-manifest.json), [codex-semantic-delivery-manifest](runs/fresh-baseline-01/preparation/manifests/codex-semantic-delivery-manifest.json).
+Reuse: [five Opus semantic originals](runs/fresh-baseline-01/preparation/reuse.json) retain their original index/results/manifest identities and are not new invocations or re-registered attempts. Exact matching prompt/project/body/model/effort/permissions/toolchain and retained inventories must pass before reuse. Other historical baselines stay separate.
+Commands: invoke the existing runner sequentially through its unchanged qualified toolchain wrapper; use the per-provider table order and global interleaving, retain/inspect/score each stopped attempt before the next. No new evaluator service, controller scoring algorithm or per-run reviewer.
+Storage: /Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/, verified whole-bundle inventories under the accepted single-host recovery arrangement. Scratch controllers and raw evidence stay outside Git; inspect Git/runtime in disposable copies.
+Attempt index: [fresh-baseline-codex-01-run-index.json](runs/fresh-baseline-01/fresh-baseline-codex-01-run-index.json).
+Output review: [eight fixed packets](runs/fresh-baseline-01/evaluation/packet-plan.json) cover all eighty repair outputs, ten per packet and 240 F judgments, including five retained Opus semantic originals. Four Opus-medium native Read/Glob/Grep-only reviews cover each subject provider; reviewers differ from active Codex assessor and share Opus subjects' family. Freeze complete source/task/project/card/policy/neutral facts and copied protected inputs after scoring, before each dispatch; omit skill bodies, traces, hypotheses and negative/accounting-only cases. Retain a complete independent first pass before access to separate priors, audit actual read ordering/model/tools/protected bytes and all factors, and preserve reconciliation separately. No blind or extra-vote claim. [Fixed prompt](runs/fresh-baseline-01/evaluation/prompt.md); [evaluator ledger](runs/fresh-baseline-01/evaluation/evaluator-run-index.json).
+Stopping: no behavioral early stop for the original baseline. Stop for unknown charge, incomplete capture, unresolved input/runtime/isolation drift, contamination, cleanup/retention fault or invalid availability. Native missed loading with valid availability/capture is a behavioral observation. No automatic retry, replacement, extra call, candidate edit or adoption; an incomplete reviewer stops the decision without replacement.
+Checkpoint: report whole-output repair/preservation results, selection and non-use, P3/accounting defects, uncertainty and cross-model disagreements separately. Establish the original comparison baseline, then return for the separately bounded three-run candidate screen decision; no candidate invocation follows automatically.
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | semantic-delivery | original | 1 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-semantic-delivery.json` |
+| 2 | pressure-repair | original | 1 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-pressure-repair.json` |
+| 3 | invocation-change | original | 1 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-invocation-change.json` |
+| 4 | discovery-shiv | original | 1 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-discovery-shiv.json` |
+| 5 | moved-guide | original | 1 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-moved-guide.json` |
+| 6 | invocation-review | original | 1 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-invocation-review.json` |
+| 7 | initiating-change | original | 1 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-initiating-change.json` |
+| 8 | local-change | original | 1 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-local-change.json` |
+| 9 | large-sweep-account | original | 1 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-large-sweep-account.json` |
+| 10 | invocation-verification | original | 1 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-invocation-verification.json` |
+| 11 | invocation-unrelated | original | 1 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-invocation-unrelated.json` |
+| 12 | semantic-delivery | original | 2 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-semantic-delivery.json` |
+| 13 | pressure-repair | original | 2 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-pressure-repair.json` |
+| 14 | invocation-change | original | 2 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-invocation-change.json` |
+| 15 | discovery-shiv | original | 2 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-discovery-shiv.json` |
+| 16 | moved-guide | original | 2 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-moved-guide.json` |
+| 17 | invocation-review | original | 2 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-invocation-review.json` |
+| 18 | initiating-change | original | 2 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-initiating-change.json` |
+| 19 | local-change | original | 2 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-local-change.json` |
+| 20 | large-sweep-account | original | 2 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-large-sweep-account.json` |
+| 21 | invocation-verification | original | 2 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-invocation-verification.json` |
+| 22 | invocation-unrelated | original | 2 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-invocation-unrelated.json` |
+| 23 | semantic-delivery | original | 3 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-semantic-delivery.json` |
+| 24 | pressure-repair | original | 3 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-pressure-repair.json` |
+| 25 | invocation-change | original | 3 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-invocation-change.json` |
+| 26 | discovery-shiv | original | 3 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-discovery-shiv.json` |
+| 27 | moved-guide | original | 3 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-moved-guide.json` |
+| 28 | invocation-review | original | 3 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-invocation-review.json` |
+| 29 | initiating-change | original | 3 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-initiating-change.json` |
+| 30 | local-change | original | 3 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-local-change.json` |
+| 31 | large-sweep-account | original | 3 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-large-sweep-account.json` |
+| 32 | invocation-verification | original | 3 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-invocation-verification.json` |
+| 33 | invocation-unrelated | original | 3 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-invocation-unrelated.json` |
+| 34 | semantic-delivery | original | 4 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-semantic-delivery.json` |
+| 35 | pressure-repair | original | 4 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-pressure-repair.json` |
+| 36 | invocation-change | original | 4 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-invocation-change.json` |
+| 37 | discovery-shiv | original | 4 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-discovery-shiv.json` |
+| 38 | moved-guide | original | 4 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-moved-guide.json` |
+| 39 | invocation-review | original | 4 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-invocation-review.json` |
+| 40 | initiating-change | original | 4 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-initiating-change.json` |
+| 41 | local-change | original | 4 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-local-change.json` |
+| 42 | large-sweep-account | original | 4 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-large-sweep-account.json` |
+| 43 | invocation-verification | original | 4 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-invocation-verification.json` |
+| 44 | invocation-unrelated | original | 4 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-invocation-unrelated.json` |
+| 45 | semantic-delivery | original | 5 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-semantic-delivery.json` |
+| 46 | pressure-repair | original | 5 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-pressure-repair.json` |
+| 47 | invocation-change | original | 5 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-invocation-change.json` |
+| 48 | discovery-shiv | original | 5 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-discovery-shiv.json` |
+| 49 | moved-guide | original | 5 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-moved-guide.json` |
+| 50 | invocation-review | original | 5 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-invocation-review.json` |
+| 51 | initiating-change | original | 5 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-initiating-change.json` |
+| 52 | local-change | original | 5 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-local-change.json` |
+| 53 | large-sweep-account | original | 5 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-large-sweep-account.json` |
+| 54 | invocation-verification | original | 5 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-invocation-verification.json` |
+| 55 | invocation-unrelated | original | 5 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/codex-invocation-unrelated.json` |
+
+### Batch: fresh-baseline-opus-01
+
+Status: owner-authorized; preparation, freeze and readiness precede dispatch.
+Owner authority, 2026-10-26: “ok, let's create fresh baselines then”, selecting the offered five-repetition original baseline on current Codex/Opus across all eleven non-pilot cases, with five matching Opus semantic originals reused.
+Scope: 50 new original-only subjects in the fixed order below; this provider batch is part of fresh-baseline-01, not authorization for candidates or automatic repeats.
+Inclusion: descriptive-only; Include all valid-setup executions regardless of outcome. Preserve excluded setups, unknowns and unattempted slots explicitly. No automatic retry or replacement.
+Runtime: claude-opus-5-5 low, Claude Code 2.1.308, workspace-write, 900 seconds. [Runtime identities](runs/fresh-baseline-01/preparation/runtime-identities.json) and unchanged toolchain wrapper govern qualification; inspect actual model/catalog/body delivery/capture/cleanup per attempt.
+Original identity: preserved cases/skill-original/SKILL.md, SHA-256 d6812c33cae026807bbb3ebe851d93b60b513dd87ea5efd98aea28f5c02f9157. No skill body or description changes.
+Assessment: SSR-assessment-3 and [case cards](runs/fresh-baseline-01/preparation/criteria-index.json), retaining inherited meanings, counting units, original locality rule and Shiv uncertainty. F1–F3 for eight repair cases; P3 only for accounting; D1 only for both non-use cases, functional outcome not measured. Positive native task correctness and timely skill loading are separate.
+Budget: this batch allocates 50 subjects; the two provider batches together allocate 105 subjects and eight required cross-model artifact reviews. Combined ceilings rise to 773 subjects/58 evaluators (839 total with unchanged 4/4 authoring/retry ceilings); no retry or authoring allocation. Shared active-effort forecast: 300–420 minutes (45–60 preparation/qualification/freeze, 80–110 subject waits, 100–140 direct assessment/retention, 55–80 review/audit, 20–30 closure); waits included once. Time remains a guideline.
+Preparation: [README](runs/fresh-baseline-01/preparation/README.md), [interpretation](runs/fresh-baseline-01/preparation/interpretation.md), and [global schedule](runs/fresh-baseline-01/preparation/schedule.json). Selected manifests: [claude-discovery-shiv-manifest](runs/fresh-baseline-01/preparation/manifests/claude-discovery-shiv-manifest.json), [claude-initiating-change-manifest](runs/fresh-baseline-01/preparation/manifests/claude-initiating-change-manifest.json), [claude-invocation-change-manifest](runs/fresh-baseline-01/preparation/manifests/claude-invocation-change-manifest.json), [claude-invocation-review-manifest](runs/fresh-baseline-01/preparation/manifests/claude-invocation-review-manifest.json), [claude-invocation-unrelated-manifest](runs/fresh-baseline-01/preparation/manifests/claude-invocation-unrelated-manifest.json), [claude-invocation-verification-manifest](runs/fresh-baseline-01/preparation/manifests/claude-invocation-verification-manifest.json), [claude-large-sweep-account-manifest](runs/fresh-baseline-01/preparation/manifests/claude-large-sweep-account-manifest.json), [claude-local-change-manifest](runs/fresh-baseline-01/preparation/manifests/claude-local-change-manifest.json), [claude-moved-guide-manifest](runs/fresh-baseline-01/preparation/manifests/claude-moved-guide-manifest.json), [claude-pressure-repair-manifest](runs/fresh-baseline-01/preparation/manifests/claude-pressure-repair-manifest.json).
+Reuse: [five Opus semantic originals](runs/fresh-baseline-01/preparation/reuse.json) retain their original index/results/manifest identities and are not new invocations or re-registered attempts. Exact matching prompt/project/body/model/effort/permissions/toolchain and retained inventories must pass before reuse. Other historical baselines stay separate.
+Commands: invoke the existing runner sequentially through its unchanged qualified toolchain wrapper; use the per-provider table order and global interleaving, retain/inspect/score each stopped attempt before the next. No new evaluator service, controller scoring algorithm or per-run reviewer.
+Storage: /Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/, verified whole-bundle inventories under the accepted single-host recovery arrangement. Scratch controllers and raw evidence stay outside Git; inspect Git/runtime in disposable copies.
+Attempt index: [fresh-baseline-opus-01-run-index.json](runs/fresh-baseline-01/fresh-baseline-opus-01-run-index.json).
+Output review: [eight fixed packets](runs/fresh-baseline-01/evaluation/packet-plan.json) cover all eighty repair outputs, ten per packet and 240 F judgments, including five retained Opus semantic originals. Four Opus-medium native Read/Glob/Grep-only reviews cover each subject provider; reviewers differ from active Codex assessor and share Opus subjects' family. Freeze complete source/task/project/card/policy/neutral facts and copied protected inputs after scoring, before each dispatch; omit skill bodies, traces, hypotheses and negative/accounting-only cases. Retain a complete independent first pass before access to separate priors, audit actual read ordering/model/tools/protected bytes and all factors, and preserve reconciliation separately. No blind or extra-vote claim. [Fixed prompt](runs/fresh-baseline-01/evaluation/prompt.md); [evaluator ledger](runs/fresh-baseline-01/evaluation/evaluator-run-index.json).
+Stopping: no behavioral early stop for the original baseline. Stop for unknown charge, incomplete capture, unresolved input/runtime/isolation drift, contamination, cleanup/retention fault or invalid availability. Native missed loading with valid availability/capture is a behavioral observation. No automatic retry, replacement, extra call, candidate edit or adoption; an incomplete reviewer stops the decision without replacement.
+Checkpoint: report whole-output repair/preservation results, selection and non-use, P3/accounting defects, uncertainty and cross-model disagreements separately. Establish the original comparison baseline, then return for the separately bounded three-run candidate screen decision; no candidate invocation follows automatically.
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | pressure-repair | original | 1 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-pressure-repair.json` |
+| 2 | invocation-change | original | 1 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-invocation-change.json` |
+| 3 | discovery-shiv | original | 1 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-discovery-shiv.json` |
+| 4 | moved-guide | original | 1 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-moved-guide.json` |
+| 5 | invocation-review | original | 1 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-invocation-review.json` |
+| 6 | initiating-change | original | 1 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-initiating-change.json` |
+| 7 | local-change | original | 1 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-local-change.json` |
+| 8 | large-sweep-account | original | 1 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-large-sweep-account.json` |
+| 9 | invocation-verification | original | 1 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-invocation-verification.json` |
+| 10 | invocation-unrelated | original | 1 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-invocation-unrelated.json` |
+| 11 | pressure-repair | original | 2 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-pressure-repair.json` |
+| 12 | invocation-change | original | 2 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-invocation-change.json` |
+| 13 | discovery-shiv | original | 2 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-discovery-shiv.json` |
+| 14 | moved-guide | original | 2 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-moved-guide.json` |
+| 15 | invocation-review | original | 2 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-invocation-review.json` |
+| 16 | initiating-change | original | 2 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-initiating-change.json` |
+| 17 | local-change | original | 2 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-local-change.json` |
+| 18 | large-sweep-account | original | 2 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-large-sweep-account.json` |
+| 19 | invocation-verification | original | 2 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-invocation-verification.json` |
+| 20 | invocation-unrelated | original | 2 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-invocation-unrelated.json` |
+| 21 | pressure-repair | original | 3 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-pressure-repair.json` |
+| 22 | invocation-change | original | 3 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-invocation-change.json` |
+| 23 | discovery-shiv | original | 3 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-discovery-shiv.json` |
+| 24 | moved-guide | original | 3 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-moved-guide.json` |
+| 25 | invocation-review | original | 3 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-invocation-review.json` |
+| 26 | initiating-change | original | 3 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-initiating-change.json` |
+| 27 | local-change | original | 3 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-local-change.json` |
+| 28 | large-sweep-account | original | 3 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-large-sweep-account.json` |
+| 29 | invocation-verification | original | 3 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-invocation-verification.json` |
+| 30 | invocation-unrelated | original | 3 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-invocation-unrelated.json` |
+| 31 | pressure-repair | original | 4 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-pressure-repair.json` |
+| 32 | invocation-change | original | 4 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-invocation-change.json` |
+| 33 | discovery-shiv | original | 4 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-discovery-shiv.json` |
+| 34 | moved-guide | original | 4 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-moved-guide.json` |
+| 35 | invocation-review | original | 4 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-invocation-review.json` |
+| 36 | initiating-change | original | 4 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-initiating-change.json` |
+| 37 | local-change | original | 4 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-local-change.json` |
+| 38 | large-sweep-account | original | 4 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-large-sweep-account.json` |
+| 39 | invocation-verification | original | 4 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-invocation-verification.json` |
+| 40 | invocation-unrelated | original | 4 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-invocation-unrelated.json` |
+| 41 | pressure-repair | original | 5 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-pressure-repair.json` |
+| 42 | invocation-change | original | 5 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-invocation-change.json` |
+| 43 | discovery-shiv | original | 5 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-discovery-shiv.json` |
+| 44 | moved-guide | original | 5 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-moved-guide.json` |
+| 45 | invocation-review | original | 5 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-invocation-review.json` |
+| 46 | initiating-change | original | 5 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-initiating-change.json` |
+| 47 | local-change | original | 5 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-local-change.json` |
+| 48 | large-sweep-account | original | 5 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-large-sweep-account.json` |
+| 49 | invocation-verification | original | 5 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-invocation-verification.json` |
+| 50 | invocation-unrelated | original | 5 | `skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/configs/claude-invocation-unrelated.json` |
 
 ### Proposal: compact-cw-validation-01
 
@@ -742,8 +891,9 @@ All ten expansion slots, both 34-call comparison batches, both Claude smoke call
 
 Current SSR-linked mechanical accounting includes the fixed 136-call historical subtotal above plus compact-semantic-01 and its separate [evaluator ledger](runs/compact-semantic-01/evaluation/evaluator-run-index.json).
 The current validation adds its [subject index](runs/compact-regression-01/compact-regression-01-run-index.json) and [evaluator ledger](runs/compact-regression-01/evaluation/evaluator-run-index.json).
-For this subset, the historical spent subtotal plus the newly authorized scope gives 162 subject, 2 evaluator, 0 authoring and 0 retry invocations; this is an accounting projection, not a new allocation or pool transfer.
-Dispatched calls are **162 subject, 2 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **0 / 0 / 0 / 0** for this subset.
+The fresh original baseline adds [Codex subjects](runs/fresh-baseline-01/fresh-baseline-codex-01-run-index.json), [Opus subjects](runs/fresh-baseline-01/fresh-baseline-opus-01-run-index.json) and [eight review slots](runs/fresh-baseline-01/evaluation/evaluator-run-index.json); the five reused semantic runs are not charged again.
+For this subset, the historical spent subtotal plus the newly authorized scope gives ceilings of 267 subject, 10 evaluator, 0 authoring and 0 retry invocations; this is an accounting projection, not a new allocation or pool transfer.
+Dispatched calls are **162 subject, 2 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **105 / 8 / 0 / 0** for this subset.
 The CW protocol remains authoritative for all current combined spending and outer ceilings; no historical unspent pool is revived.
 Sequential readiness used identical externally frozen scores; the final index pins the canonical repository results at their committed revision.
 

@@ -1,0 +1,92 @@
+{
+  "status": "fixed scope; full packets freeze after subjects retained and scored",
+  "packets": [
+    {
+      "id": "codex-semantic-pressure",
+      "provider": "codex",
+      "case_ids": [
+        "semantic-delivery",
+        "pressure-repair"
+      ],
+      "output_count": 10,
+      "functional_factors": 30
+    },
+    {
+      "id": "codex-shiv-moved",
+      "provider": "codex",
+      "case_ids": [
+        "discovery-shiv",
+        "moved-guide"
+      ],
+      "output_count": 10,
+      "functional_factors": 30
+    },
+    {
+      "id": "codex-initiating-local",
+      "provider": "codex",
+      "case_ids": [
+        "initiating-change",
+        "local-change"
+      ],
+      "output_count": 10,
+      "functional_factors": 30
+    },
+    {
+      "id": "codex-native-positive",
+      "provider": "codex",
+      "case_ids": [
+        "invocation-change",
+        "invocation-review"
+      ],
+      "output_count": 10,
+      "functional_factors": 30
+    },
+    {
+      "id": "claude-semantic-pressure",
+      "provider": "claude",
+      "case_ids": [
+        "semantic-delivery",
+        "pressure-repair"
+      ],
+      "output_count": 10,
+      "functional_factors": 30
+    },
+    {
+      "id": "claude-shiv-moved",
+      "provider": "claude",
+      "case_ids": [
+        "discovery-shiv",
+        "moved-guide"
+      ],
+      "output_count": 10,
+      "functional_factors": 30
+    },
+    {
+      "id": "claude-initiating-local",
+      "provider": "claude",
+      "case_ids": [
+        "initiating-change",
+        "local-change"
+      ],
+      "output_count": 10,
+      "functional_factors": 30
+    },
+    {
+      "id": "claude-native-positive",
+      "provider": "claude",
+      "case_ids": [
+        "invocation-change",
+        "invocation-review"
+      ],
+      "output_count": 10,
+      "functional_factors": 30
+    }
+  ],
+  "outputs": 80,
+  "functional_factors": 240,
+  "trace_only_cases": [
+    "large-sweep-account",
+    "invocation-unrelated",
+    "invocation-verification"
+  ]
+}

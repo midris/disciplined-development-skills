@@ -1,0 +1,255 @@
+{
+  "status": "five current-runtime original Opus semantic observations; reverify exact inventories/identities before dispatch",
+  "source_index": {
+    "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/compact-semantic-01-run-index.json",
+    "sha256": "175b97153914a4573cb23681fd0077a3a9ab35526d82b4aabd41a6eeaf38a409",
+    "version": null
+  },
+  "subjects": [
+    {
+      "attempt_id": "compact-semantic-01-semantic-delivery-original-1-1",
+      "case_id": "semantic-delivery",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/manifest.json",
+        "sha256": "766753fdf9ed119267a7f79b735ee57c93b0253adc39d9bfc962bc67ee686318",
+        "version": "1",
+        "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "7ba690d5ae48c9518c60c004d4995dae1c9fe74a97bd4ae25064b9e0c291baf5",
+          "version": "1",
+          "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+        },
+        "selector": "Batch: compact-semantic-01; order 1"
+      },
+      "run_id": "20261023T211804448Z-ssr-compact-semantic-original-43eb72dc-bed5-4eff-90a3-ed9c363ce4ce-7g4e9s1p",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "One exposed semantic-delivery case; complete-body explicit loading."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T211804448Z-ssr-compact-semantic-original-43eb72dc-bed5-4eff-90a3-ed9c363ce4ce-7g4e9s1p",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T211804448Z-ssr-compact-semantic-original-43eb72dc-bed5-4eff-90a3-ed9c363ce4ce-7g4e9s1p.inventory.json",
+          "sha256": "1ddeb85ad495cd19bcfd1857c642dace4203af683d480374bcc284d1681935e2",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T211804448Z-ssr-compact-semantic-original-43eb72dc-bed5-4eff-90a3-ed9c363ce4ce-7g4e9s1p.json",
+          "sha256": "cbc06e70fa4ed11f3a1b610c9845a50ab8e6e5f47cc55a4e7b58f8b299894258",
+          "version": "2",
+          "git_revision": "348280e03c31b65700680b9c79394bc750883746"
+        },
+        "result_id": "compact-semantic-01-semantic-delivery-original-1"
+      }
+    },
+    {
+      "attempt_id": "compact-semantic-01-semantic-delivery-original-2-1",
+      "case_id": "semantic-delivery",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/manifest.json",
+        "sha256": "766753fdf9ed119267a7f79b735ee57c93b0253adc39d9bfc962bc67ee686318",
+        "version": "1",
+        "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "7ba690d5ae48c9518c60c004d4995dae1c9fe74a97bd4ae25064b9e0c291baf5",
+          "version": "1",
+          "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+        },
+        "selector": "Batch: compact-semantic-01; order 6"
+      },
+      "run_id": "20261023T212809348Z-ssr-compact-semantic-original-e02f2ea8-520d-401d-b326-bd458cc17518-pg2payc3",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "One exposed semantic-delivery case; complete-body explicit loading."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T212809348Z-ssr-compact-semantic-original-e02f2ea8-520d-401d-b326-bd458cc17518-pg2payc3",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T212809348Z-ssr-compact-semantic-original-e02f2ea8-520d-401d-b326-bd458cc17518-pg2payc3.inventory.json",
+          "sha256": "3fa49429320997ab3c2e3381b0ee583f022e8ab2ef5145e6103f1b61c79ea189",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T212809348Z-ssr-compact-semantic-original-e02f2ea8-520d-401d-b326-bd458cc17518-pg2payc3.json",
+          "sha256": "b44718d701ec4122f161b4ca0b7e01220d9cad433ac3390f6faa6f5bb19bb92f",
+          "version": "2",
+          "git_revision": "348280e03c31b65700680b9c79394bc750883746"
+        },
+        "result_id": "compact-semantic-01-semantic-delivery-original-2"
+      }
+    },
+    {
+      "attempt_id": "compact-semantic-01-semantic-delivery-original-3-1",
+      "case_id": "semantic-delivery",
+      "condition": "original",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/manifest.json",
+        "sha256": "766753fdf9ed119267a7f79b735ee57c93b0253adc39d9bfc962bc67ee686318",
+        "version": "1",
+        "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "7ba690d5ae48c9518c60c004d4995dae1c9fe74a97bd4ae25064b9e0c291baf5",
+          "version": "1",
+          "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+        },
+        "selector": "Batch: compact-semantic-01; order 8"
+      },
+      "run_id": "20261023T212947093Z-ssr-compact-semantic-original-4c89a89d-1efc-44bf-9832-cf8104dcebcd-n0sj6bjf",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "One exposed semantic-delivery case; complete-body explicit loading."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T212947093Z-ssr-compact-semantic-original-4c89a89d-1efc-44bf-9832-cf8104dcebcd-n0sj6bjf",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T212947093Z-ssr-compact-semantic-original-4c89a89d-1efc-44bf-9832-cf8104dcebcd-n0sj6bjf.inventory.json",
+          "sha256": "0097ca617e33fcb5eacdcb9b3dc6d34a2ddf05886c60e46853e00658fa8aa774",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T212947093Z-ssr-compact-semantic-original-4c89a89d-1efc-44bf-9832-cf8104dcebcd-n0sj6bjf.json",
+          "sha256": "d7fe95fdcf6d6baf605240caae201abcc0329be7a490dba770c516f8ae81f37e",
+          "version": "2",
+          "git_revision": "348280e03c31b65700680b9c79394bc750883746"
+        },
+        "result_id": "compact-semantic-01-semantic-delivery-original-3"
+      }
+    },
+    {
+      "attempt_id": "compact-semantic-01-semantic-delivery-original-4-1",
+      "case_id": "semantic-delivery",
+      "condition": "original",
+      "repetition": 4,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/manifest.json",
+        "sha256": "766753fdf9ed119267a7f79b735ee57c93b0253adc39d9bfc962bc67ee686318",
+        "version": "1",
+        "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "7ba690d5ae48c9518c60c004d4995dae1c9fe74a97bd4ae25064b9e0c291baf5",
+          "version": "1",
+          "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+        },
+        "selector": "Batch: compact-semantic-01; order 10"
+      },
+      "run_id": "20261023T213130992Z-ssr-compact-semantic-original-1fdec10e-64dc-4841-913c-967bc381947b-qjytmvqi",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "One exposed semantic-delivery case; complete-body explicit loading."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T213130992Z-ssr-compact-semantic-original-1fdec10e-64dc-4841-913c-967bc381947b-qjytmvqi",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T213130992Z-ssr-compact-semantic-original-1fdec10e-64dc-4841-913c-967bc381947b-qjytmvqi.inventory.json",
+          "sha256": "04749eec25841e19c6990df248ae1c04f6e77b263538952d35ba8e527e579576",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T213130992Z-ssr-compact-semantic-original-1fdec10e-64dc-4841-913c-967bc381947b-qjytmvqi.json",
+          "sha256": "44eba8bbafd3d4658e9f913abcebfd02144429323b7cb515dd4735dffb621169",
+          "version": "2",
+          "git_revision": "348280e03c31b65700680b9c79394bc750883746"
+        },
+        "result_id": "compact-semantic-01-semantic-delivery-original-4"
+      }
+    },
+    {
+      "attempt_id": "compact-semantic-01-semantic-delivery-original-5-1",
+      "case_id": "semantic-delivery",
+      "condition": "original",
+      "repetition": 5,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/manifest.json",
+        "sha256": "766753fdf9ed119267a7f79b735ee57c93b0253adc39d9bfc962bc67ee686318",
+        "version": "1",
+        "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "7ba690d5ae48c9518c60c004d4995dae1c9fe74a97bd4ae25064b9e0c291baf5",
+          "version": "1",
+          "git_revision": "4d7a210f4c640ec12d33779df25baa3c63b0799b"
+        },
+        "selector": "Batch: compact-semantic-01; order 14"
+      },
+      "run_id": "20261023T213505114Z-ssr-compact-semantic-original-3102bdf3-bd48-442f-8c61-1660d1ca81a6-mgqevtlv",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "One exposed semantic-delivery case; complete-body explicit loading."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T213505114Z-ssr-compact-semantic-original-3102bdf3-bd48-442f-8c61-1660d1ca81a6-mgqevtlv",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/compact-semantic-01/subjects/20261023T213505114Z-ssr-compact-semantic-original-3102bdf3-bd48-442f-8c61-1660d1ca81a6-mgqevtlv.inventory.json",
+          "sha256": "7b142234244c80affc13a2fd5d7a941e11579b59f1cb5e768eba493bb82bc2ff",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/results/20261023T213505114Z-ssr-compact-semantic-original-3102bdf3-bd48-442f-8c61-1660d1ca81a6-mgqevtlv.json",
+          "sha256": "4d9bd585580f73d8136d1a5abf93ca9bf3b06199b961633c21ec94db7c9bf08f",
+          "version": "2",
+          "git_revision": "348280e03c31b65700680b9c79394bc750883746"
+        },
+        "result_id": "compact-semantic-01-semantic-delivery-original-5"
+      }
+    }
+  ]
+}

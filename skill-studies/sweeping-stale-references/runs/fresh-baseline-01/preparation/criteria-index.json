@@ -1,0 +1,145 @@
+[
+  {
+    "case_id": "semantic-delivery",
+    "source": {
+      "path": "skill-studies/sweeping-stale-references/runs/compact-semantic-01/preparation/criteria.md",
+      "sha256": "bae6463893e23dba7238e0de74d0accb1ced5d4e22ad04cb7f17bfcebc557253",
+      "version": null
+    },
+    "card": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/criteria/semantic-delivery.md",
+      "sha256": "dddcd3836d7e419a7c7a0d4e29237bfcc1b7b7604b7707d1b3e2e1b954ffc79a",
+      "version": "4"
+    }
+  },
+  {
+    "case_id": "pressure-repair",
+    "source": {
+      "path": "skill-studies/sweeping-stale-references/cases/pressure-repair/assessment.md",
+      "sha256": "3891be235b0f254637363e5f867ad707d0c1152024b447f78d4097301c10079d",
+      "version": null
+    },
+    "card": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/criteria/pressure-repair.md",
+      "sha256": "39bf19c96cd51da9c06315f1f90730568625f4da8c7df5dd89b75815315d6d07",
+      "version": "2"
+    }
+  },
+  {
+    "case_id": "invocation-change",
+    "source": {
+      "path": "skill-studies/sweeping-stale-references/cases/invocation-change/assessment.md",
+      "sha256": "7e6461fc94ea0c4d02bb62f7b43613d8fd86673ee1aa93ed0f3956b1c194fa26",
+      "version": null
+    },
+    "card": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/criteria/invocation-change.md",
+      "sha256": "e6465628a5e944601cabe6e19040cf8f8a07a2ade9a65cdd91175269d25df6bc",
+      "version": "2"
+    }
+  },
+  {
+    "case_id": "discovery-shiv",
+    "source": {
+      "path": "skill-studies/sweeping-stale-references/cases/discovery-shiv/assessment.md",
+      "sha256": "cb1d6e5b5003dae298f5127430bd1f9166b5ca168228bbd2fa569c84d4e6f8be",
+      "version": null
+    },
+    "card": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/criteria/discovery-shiv.md",
+      "sha256": "2d38d85f71e08667800f386304cec757d28192873be1a6b41bf3c1a6859931ab",
+      "version": "3"
+    }
+  },
+  {
+    "case_id": "moved-guide",
+    "source": {
+      "path": "skill-studies/sweeping-stale-references/cases/moved-guide/assessment.md",
+      "sha256": "4457007bc2d0fa830e3f2b5cc3b99997827dfd1880878d403d72fbf04d8f6171",
+      "version": null
+    },
+    "card": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/criteria/moved-guide.md",
+      "sha256": "b6f129a69e9eef58f416dcbf93b161c4fe5323cfa2a15ad502d2bc97e6c357d8",
+      "version": "3"
+    }
+  },
+  {
+    "case_id": "invocation-review",
+    "source": {
+      "path": "skill-studies/sweeping-stale-references/cases/invocation-review/assessment.md",
+      "sha256": "b897054d0ec6a5aacac614bc2d88145731791d18c10df60929fe9d27087c0ed8",
+      "version": null
+    },
+    "card": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/criteria/invocation-review.md",
+      "sha256": "47b1f113e5f982cb293b18287625d93b95035408cef9a901796a4c0a0dd24579",
+      "version": "2"
+    }
+  },
+  {
+    "case_id": "initiating-change",
+    "source": {
+      "path": "skill-studies/sweeping-stale-references/cases/initiating-change/comparison-02-assessment.md",
+      "sha256": "992f7981668d99b2f652a06e31bca50a31c24dad13f3ef20c8d94bb6fcc4d508",
+      "version": null
+    },
+    "card": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/criteria/initiating-change.md",
+      "sha256": "bab928bb21f2fd62cbe399c9489cfe1145ada95d1edcd5e8ccd3812999f2362c",
+      "version": "3"
+    }
+  },
+  {
+    "case_id": "local-change",
+    "source": {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/claude-comparison-assessment.md",
+      "sha256": "69b8ed4ed757a5dc11ba000e52719ae61606b4554916a2d4596e9c611553da7f",
+      "version": null
+    },
+    "card": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/criteria/local-change.md",
+      "sha256": "6c5bb11b41259ed5c1358fad2a8e5ab7db16732b09fb76398436353323815299",
+      "version": "5"
+    }
+  },
+  {
+    "case_id": "large-sweep-account",
+    "source": {
+      "path": "skill-studies/sweeping-stale-references/cases/large-sweep-account/assessment.md",
+      "sha256": "ebbcbb895f56d36f80466e3330c7f260cc4e42b817f0cd256f5fd64197ea6ed8",
+      "version": null
+    },
+    "card": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/criteria/large-sweep-account.md",
+      "sha256": "fcb5dc8733c0318799bc96403d408d807082ad15ca66ab88e2e43fd3875ba930",
+      "version": "2"
+    }
+  },
+  {
+    "case_id": "invocation-verification",
+    "source": {
+      "path": "skill-studies/sweeping-stale-references/cases/invocation-verification/assessment.md",
+      "sha256": "9aab9761ce09f194004a63b3d24ccade9cdb5de12d7e5f3f57894b841d1fd01f",
+      "version": null
+    },
+    "card": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/criteria/invocation-verification.md",
+      "sha256": "43c7621b47a051cabad2bfe4bed2f9922452e41d7d39074ede1846a33164c240",
+      "version": "2"
+    }
+  },
+  {
+    "case_id": "invocation-unrelated",
+    "source": {
+      "path": "skill-studies/sweeping-stale-references/cases/invocation-unrelated/assessment.md",
+      "sha256": "fe5506f08ac8910b6ae9e7be5caee58766d0ce6215fe4fe2bae0813b2021c90e",
+      "version": null
+    },
+    "card": {
+      "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/criteria/invocation-unrelated.md",
+      "sha256": "e64a4f0edda4beece7a781f8799f811aeee2b17fe979ae0da9db345de1459c7a",
+      "version": "3"
+    }
+  }
+]

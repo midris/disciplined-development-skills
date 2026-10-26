@@ -1,0 +1,49 @@
+{
+  "qualified": {
+    "codex": {
+      "path": "/opt/homebrew/Caskroom/codex/0.163.0/bin/codex",
+      "sha256": "8813367285524ac798dd96d1b071aea30d58708c7226fd236cd275cf1cfdee31",
+      "version": "codex-cli 0.163.0"
+    },
+    "claude": {
+      "path": "/opt/homebrew/Caskroom/claude-code@latest/2.1.308/claude",
+      "sha256": "ca923c86ac84b30574a82331a05b6e066c27477a926ceaffe46a845a33e4dd37",
+      "version": "2.1.308 (Claude Code)"
+    },
+    "python": {
+      "path": "/opt/homebrew/Cellar/python@3.14/3.14.9/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+      "sha256": "eef18fb5631f0054c2706a24f7f75fd716c9dc3c9a3b0f261f2f87b6385ae2af",
+      "version": "Python 3.14.9"
+    },
+    "git": {
+      "path": "/opt/homebrew/Cellar/git/2.56.0_1/bin/git",
+      "sha256": "40163333061f7223ecb604ed0f12988cfc8096d57ca8b1db006d410d4aeb700e",
+      "version": "git version 2.56.0"
+    }
+  },
+  "qualification_sources": [
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/compact-regression-01/preparation/runtime-identities.json",
+      "sha256": "efd2294d2aa4261f642e0af0ceef93e4aa112bae51c78503b6380988b13b9444",
+      "version": null
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/runtime-identities.json",
+      "sha256": "3751c76e9f2bce8716a19dcd02e50d7d3026ed29a41a2002a5595f788a9f653b",
+      "version": null
+    }
+  ],
+  "runtime_setup": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/runtime_setup.py",
+  "status": "passed: six fresh provider-free installed CLI/sandbox checks; unchanged executable hashes and matching retained qualifications verified",
+  "qualification": {
+    "status": "passed",
+    "model_calls": 0,
+    "tests": 6,
+    "evidence": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/qualification",
+    "inventory": {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/qualification.inventory.json",
+      "sha256": "3076d68436120e08f76f6ec21ea210b0c01d3ad5b8698c28b8ac7922940bfc73",
+      "version": "1"
+    }
+  }
+}

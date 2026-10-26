@@ -1,9 +1,10 @@
 # SSR: original baseline and staged candidate comparison
 
-Status: design in progress; original baseline and staged comparison selected, with runtime/reuse scope and revised collection allocation pending.
+Status: original baseline collection selected; source qualification/freeze/readiness precede dispatch. Candidate screen budgets remain pending.
 The [framework](2026-09-11-model-driven-skill-testing-framework.md#cw-testing-model) governs the method; the [active plan](../2026-09-11-model-driven-skill-testing.md) owns progress and the [SSR protocol](../../skill-studies/sweeping-stale-references/protocol.md) owns dispatch authority.
 This replaces the [55-subject completion proposal](2026-10-24-ssr-cw-aligned-validation.md); its draft configuration set does not implement this design.
-No new model calls, skill edits, retries or adoption are authorized.
+Owner direction, 2026-10-26: “ok, let's create fresh baselines then” selects the current Codex/Opus baseline option below: 105 new subjects plus five matching retained Opus semantic originals, followed by eight bounded artifact reviews.
+No candidate call, skill edit, retry or adoption is authorized.
 
 ## Settled comparison
 
@@ -52,22 +53,23 @@ Two additional original attempts in core-baseline-01 were excluded: Shiv for inv
 Across all versions and controls, the direct SSR subject indexes contain 146 attempts: 67 original, 50 comprehensive, 16 compact and 13 no-target controls.
 The protocol's 162-subject linked accounting projection also includes sixteen CW calls; it is not another SSR-only collection to add to these indexes.
 
-## Baseline scope decision before allocation
+## Selected baseline scope and later candidate allocation
 
 Coverage across all scenarios is already broad, but it is not five baseline observations per scenario on the current Codex/Opus pair.
 Preserve the historical observations as evidence; do not rerun them merely because the process changed or silently pool them with new runtime strata.
-Before selecting new calls, decide whether the baseline should use that historical coverage with explicitly accepted runtime limits, or establish five repetitions in every current Codex/Opus cell for a matched comparison.
+The owner selected five repetitions in every current Codex/Opus cell for a matched comparison; historical coverage stays separately labelled.
 Only exact input/body/runtime matches may supply reused repetitions within a current cell.
 
-For the latter option, all eleven non-pilot scenarios on both current providers give 22 cells per version.
+All eleven non-pilot scenarios on both current providers give 22 cells per version.
 Five original repetitions require 110 observations; the five matching Opus semantic originals leave **105 new baseline subjects**.
 The initial candidate screens would need **63 new comprehensive and 52 new compact subjects**, provisionally reusing five comprehensive semantic and sixteen compact observations from the two completed compact batches.
 That is **220 new subjects through the screen**; existing five-repetition candidate semantic cells stay complete rather than discarding observations to force three.
 If both unchanged candidates continue, each needs 42 more subjects, for **304 new subjects overall**.
-These are conditional subject counts, not a recommendation to repeat the whole baseline, a validated revised configuration set or an approved extension.
+Only the 105-new-subject original baseline is selected; candidate counts remain planning estimates without dispatch allocation.
 Recheck exact identities and inventories before booking reuse; relevant drift changes these counts and requires a revised scope.
 
-Fix the case/provider/reuse matrix, output-review packets, effort forecast, stopping rules and call ceilings before collection approval or freeze.
+The protocol fixes the two original-provider batches, eight ten-output repair-review packets, effort forecast, stopping rules and 773/58 ceilings.
+Complete qualification, source freeze and collection readiness before dispatch; prepare later candidate allocations only after the baseline checkpoint.
 Retain the reviewed separation of explicit application and native selection, case-specific accounting rules, trace-only non-use assessment and independent artifact review.
 A native task success without timely complete skill delivery is not evidence of that version's application effectiveness.
 No-target controls remain a separate contribution question, not the meaning of the original baseline.
