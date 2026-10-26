@@ -1,0 +1,122 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-10-26T14:36:15.514671+00:00",
+  "run_id": "20261026T143536368Z-ssr-fresh-baseline-claude-invocation-change-e473bf8e-b768-4aac-b6bb-572b21cc3b64-xdx7kvdb",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Preparer and active assessor with condition/history awareness; not blind or independent. Fixed SSR-assessment-3 and case-specific units, inherited explanations and original interpretation."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T143536368Z-ssr-fresh-baseline-claude-invocation-change-e473bf8e-b768-4aac-b6bb-572b21cc3b64-xdx7kvdb/result.json",
+        "sha256": "1026264698f98cc3b5437845bbc9c93938560a51bc54bf122037e2e201e9d700",
+        "version": null
+      },
+      "selector": "Mechanical completion, declared execution and retained capture."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T143536368Z-ssr-fresh-baseline-claude-invocation-change-e473bf8e-b768-4aac-b6bb-572b21cc3b64-xdx7kvdb/stdout.txt",
+        "sha256": "cd8c2521d94cf664a4ce30861e92ee56b31b1e95b08fc84264320b6b098a14f9",
+        "version": null
+      },
+      "selector": "Complete ordered tool calls, responses and subject messages."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T143536368Z-ssr-fresh-baseline-claude-invocation-change-e473bf8e-b768-4aac-b6bb-572b21cc3b64-xdx7kvdb.checks.json",
+        "sha256": "2e2f3cebb2ac3d02bf90e27fa133d94dee8c8397db8321eac68c3b8c5e77f23c",
+        "version": null
+      },
+      "selector": "Disposable full project/Git comparison, protected inputs, delivery/model checks and any trusted replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned model/CLI/effort and source identities verified; complete retained capture and cleanup, with full original-body delivery for explicit application. Native availability is verified; missing/late loading is scored separately.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All six current consumers renamed coherently to session_ttl_minutes/session TTL; values/units unchanged, independent replay default1900/custom820 and both script working directories correct.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Partner limit and frequent-refresh trade-off retained in code and policy. Nonpositive rejection, history and independent vendor bytes preserved.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Complete six-file change committed 237cc4d after unchanged fixture baseline; final tree clean.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "Qualified native availability and complete captured trace established, but no Skill call, targeted skill read or delivered body occurs before edits or afterwards. Missed loading, independent of correct rename outcome.",
+      "consequence": "Report separately; cannot change functional outcome or authorize repetition alone.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "All functional criteria met; native selection missed the original body.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "No References swept commit account; native card has no P3 criterion, so report supplementary only. Tests and script actually executed; final old-name search leaves preserved archive/vendor.",
+      "consequence": "Descriptive/supplementary; fixed scores and scope unchanged.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "Exposed development case in a declared provider/runtime stratum; no blind, held-out, population reliability or causal-guidance claim.",
+    "Native selection and task success are separate; retain case-specific counting units and Shiv uncertainty."
+  ],
+  "result_id": "fresh-baseline-opus-01-invocation-change-original-2",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/manifests/claude-invocation-change-manifest.json",
+    "sha256": "aa79614e5ece6c601f77d8a473f8e13dc54bd06554afab3f41f78c6e9adae9f3",
+    "version": "1",
+    "git_revision": "75812d6c23ef7e92d5a794b4724e51758f60e7cb"
+  }
+}

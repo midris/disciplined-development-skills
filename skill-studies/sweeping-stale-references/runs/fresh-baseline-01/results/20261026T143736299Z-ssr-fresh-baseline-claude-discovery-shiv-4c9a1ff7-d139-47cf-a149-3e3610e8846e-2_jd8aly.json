@@ -1,0 +1,144 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-10-26T14:39:12.196007+00:00",
+  "run_id": "20261026T143736299Z-ssr-fresh-baseline-claude-discovery-shiv-4c9a1ff7-d139-47cf-a149-3e3610e8846e-2_jd8aly",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Preparer and active assessor with condition/history awareness; not blind or independent. Fixed SSR-assessment-3 and case-specific units, inherited explanations and original interpretation."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T143736299Z-ssr-fresh-baseline-claude-discovery-shiv-4c9a1ff7-d139-47cf-a149-3e3610e8846e-2_jd8aly/result.json",
+        "sha256": "b4e353db283e66d6777dcd050362c023922002e958457039d2a57c7ff0b84b46",
+        "version": null
+      },
+      "selector": "Mechanical completion, declared execution and retained capture."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T143736299Z-ssr-fresh-baseline-claude-discovery-shiv-4c9a1ff7-d139-47cf-a149-3e3610e8846e-2_jd8aly/stdout.txt",
+        "sha256": "ff6a0c5fa4bcd644268ecbd64626401423832502aa4af8001e00751b362315dd",
+        "version": null
+      },
+      "selector": "Complete ordered tool calls, responses and subject messages."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T143736299Z-ssr-fresh-baseline-claude-discovery-shiv-4c9a1ff7-d139-47cf-a149-3e3610e8846e-2_jd8aly.checks.json",
+        "sha256": "a54b2a73edcfa7e221832c0386acb821bf2824e56bbec9d2aa74e7bd291d176f",
+        "version": null
+      },
+      "selector": "Disposable full project/Git comparison, protected inputs, delivery/model checks and any trusted replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned model/CLI/effort and source identities verified; complete retained capture and cleanup, with full original-body delivery for explicit application. Native availability is verified; missing/late loading is scored separately.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All four current build consumers replace retired --output-file with supported --destination while retaining payload/entrypoint. Trusted disposable replay builds and runs all four greeting artifacts plus script outside project.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only four current consumers changed; canonical CLI, -o alias, retired-option rejection, history, negative assertions and independent inventory preserved and replayed. Provider .gitignore difference from controller pristine is supplied unchanged metadata, not damage.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Four-consumer complete repair committed170135e after neutral baseline; clean working state.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Pre-edit broad literal/synonym search exposes all four consumers including hidden workflow and build recipe; further test/history reads distinguish correct preserved meanings.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One complete repair commit after neutral fixture baseline.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "Final account folds TASK.md into its required inventory, reporting10matches/9paths rather than the fixed9project occurrences/8paths; task text is explicitly excluded and extra exploration must remain separate. Each required path is otherwise present with correct literal counts. Negative-assertion intentionally-stale versus false-positive label remains the standing unresolved classification issue, not a new ruling.",
+      "consequence": "Report separately; cannot change functional outcome or authorize repetition alone.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Complete functional repair, search and commit grouping met; P3 fails inventory scope, with standing negative-assertion label uncertainty retained.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "Initial archive execution without SHIV_ROOT was sandbox-blocked, then recovered with local cache and correct greeting output; ordinary in-run correction, no replacement call. Hosted CI job not run; controller replays its build command.",
+      "consequence": "Descriptive/supplementary; fixed scores and scope unchanged.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "Exposed development case in a declared provider/runtime stratum; no blind, held-out, population reliability or causal-guidance claim.",
+    "Native selection and task success are separate; retain case-specific counting units and Shiv uncertainty."
+  ],
+  "result_id": "fresh-baseline-opus-01-discovery-shiv-original-2",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/manifests/claude-discovery-shiv-manifest.json",
+    "sha256": "18c76b92ccba675f2bcef6147a723d59621ac56c692c2c6799d93664a708246b",
+    "version": "1",
+    "git_revision": "75812d6c23ef7e92d5a794b4724e51758f60e7cb"
+  }
+}

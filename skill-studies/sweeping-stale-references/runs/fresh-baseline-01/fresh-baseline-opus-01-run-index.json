@@ -531,6 +531,438 @@
           "version": "2"
         }
       }
+    },
+    {
+      "attempt_id": "fresh-baseline-opus-01-invocation-change-original-2-1",
+      "case_id": "invocation-change",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/manifests/claude-invocation-change-manifest.json",
+        "sha256": "aa79614e5ece6c601f77d8a473f8e13dc54bd06554afab3f41f78c6e9adae9f3",
+        "version": "1",
+        "git_revision": "75812d6c23ef7e92d5a794b4724e51758f60e7cb"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "47ef66f2218d7d467b06e6a69cfd1edb8fe67ce5328e13991d290492af243dc1",
+          "version": "1",
+          "git_revision": "75812d6c23ef7e92d5a794b4724e51758f60e7cb"
+        },
+        "selector": "Batch: fresh-baseline-opus-01; order 12"
+      },
+      "run_id": "20261026T143536368Z-ssr-fresh-baseline-claude-invocation-change-e473bf8e-b768-4aac-b6bb-572b21cc3b64-xdx7kvdb",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T143536368Z-ssr-fresh-baseline-claude-invocation-change-e473bf8e-b768-4aac-b6bb-572b21cc3b64-xdx7kvdb",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T143536368Z-ssr-fresh-baseline-claude-invocation-change-e473bf8e-b768-4aac-b6bb-572b21cc3b64-xdx7kvdb.inventory.json",
+          "sha256": "6dbba25887199ed0fab40811face81dfe1788902807dd573ba18ec2384d45e3d",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "fresh-baseline-opus-01-invocation-change-original-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T143536368Z-ssr-fresh-baseline-claude-invocation-change-e473bf8e-b768-4aac-b6bb-572b21cc3b64-xdx7kvdb.json",
+          "sha256": "6146acf059be1eff69ee08a59d5c2fa894a9630a2b1f1e635b51a3244b206be2",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "fresh-baseline-opus-01-discovery-shiv-original-2-1",
+      "case_id": "discovery-shiv",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/manifests/claude-discovery-shiv-manifest.json",
+        "sha256": "18c76b92ccba675f2bcef6147a723d59621ac56c692c2c6799d93664a708246b",
+        "version": "1",
+        "git_revision": "75812d6c23ef7e92d5a794b4724e51758f60e7cb"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "47ef66f2218d7d467b06e6a69cfd1edb8fe67ce5328e13991d290492af243dc1",
+          "version": "1",
+          "git_revision": "75812d6c23ef7e92d5a794b4724e51758f60e7cb"
+        },
+        "selector": "Batch: fresh-baseline-opus-01; order 13"
+      },
+      "run_id": "20261026T143736299Z-ssr-fresh-baseline-claude-discovery-shiv-4c9a1ff7-d139-47cf-a149-3e3610e8846e-2_jd8aly",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T143736299Z-ssr-fresh-baseline-claude-discovery-shiv-4c9a1ff7-d139-47cf-a149-3e3610e8846e-2_jd8aly",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T143736299Z-ssr-fresh-baseline-claude-discovery-shiv-4c9a1ff7-d139-47cf-a149-3e3610e8846e-2_jd8aly.inventory.json",
+          "sha256": "23b37898e719ca61d95b73c7365d17016a6fa6dcf97d80c0b9d15353d2b38bba",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "fresh-baseline-opus-01-discovery-shiv-original-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T143736299Z-ssr-fresh-baseline-claude-discovery-shiv-4c9a1ff7-d139-47cf-a149-3e3610e8846e-2_jd8aly.json",
+          "sha256": "11ad1f37271ded8b46e645ec2ab3ec54e59c907154b717ff5c4e885d65725016",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "fresh-baseline-opus-01-moved-guide-original-2-1",
+      "case_id": "moved-guide",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/manifests/claude-moved-guide-manifest.json",
+        "sha256": "775cacfc87824d750785a41a86ee8936b3cf870e0414bd07f55f68adb4f5e6d0",
+        "version": "1",
+        "git_revision": "75812d6c23ef7e92d5a794b4724e51758f60e7cb"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "47ef66f2218d7d467b06e6a69cfd1edb8fe67ce5328e13991d290492af243dc1",
+          "version": "1",
+          "git_revision": "75812d6c23ef7e92d5a794b4724e51758f60e7cb"
+        },
+        "selector": "Batch: fresh-baseline-opus-01; order 14"
+      },
+      "run_id": "20261026T144052901Z-ssr-fresh-baseline-claude-moved-guide-87640d7a-aa26-4bfb-a16d-8dd22bd36898-a87ygsrv",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T144052901Z-ssr-fresh-baseline-claude-moved-guide-87640d7a-aa26-4bfb-a16d-8dd22bd36898-a87ygsrv",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T144052901Z-ssr-fresh-baseline-claude-moved-guide-87640d7a-aa26-4bfb-a16d-8dd22bd36898-a87ygsrv.inventory.json",
+          "sha256": "d93477c76f069726eeba64c5887f83a650dfe0eb0df2c69dc269fc45cdbecc39",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "fresh-baseline-opus-01-moved-guide-original-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T144052901Z-ssr-fresh-baseline-claude-moved-guide-87640d7a-aa26-4bfb-a16d-8dd22bd36898-a87ygsrv.json",
+          "sha256": "e856a0195e696b93439d335823bc18761eb5916a1d570732b65738c5bc9f9e03",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "fresh-baseline-opus-01-invocation-review-original-2-1",
+      "case_id": "invocation-review",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/manifests/claude-invocation-review-manifest.json",
+        "sha256": "6cc96009499feed3d62e733603c7dfd129066968f1503b37798a08b1a6f3b3ce",
+        "version": "1",
+        "git_revision": "75812d6c23ef7e92d5a794b4724e51758f60e7cb"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "47ef66f2218d7d467b06e6a69cfd1edb8fe67ce5328e13991d290492af243dc1",
+          "version": "1",
+          "git_revision": "75812d6c23ef7e92d5a794b4724e51758f60e7cb"
+        },
+        "selector": "Batch: fresh-baseline-opus-01; order 15"
+      },
+      "run_id": "20261026T144347185Z-ssr-fresh-baseline-claude-invocation-review-cd1c28b3-07e3-47e1-b47b-7269200637b0-obf2u_8o",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T144347185Z-ssr-fresh-baseline-claude-invocation-review-cd1c28b3-07e3-47e1-b47b-7269200637b0-obf2u_8o",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T144347185Z-ssr-fresh-baseline-claude-invocation-review-cd1c28b3-07e3-47e1-b47b-7269200637b0-obf2u_8o.inventory.json",
+          "sha256": "6673fd11abb67b75d71d1eed1720ad177bd3fbd9788a9d0c2c9c465fdb02cc7b",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "fresh-baseline-opus-01-invocation-review-original-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T144347185Z-ssr-fresh-baseline-claude-invocation-review-cd1c28b3-07e3-47e1-b47b-7269200637b0-obf2u_8o.json",
+          "sha256": "bbe9630bdc1c73dd066ad9a7f215c91550f6088da0e2fd285b3091b5b793e619",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "fresh-baseline-opus-01-initiating-change-original-2-1",
+      "case_id": "initiating-change",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/manifests/claude-initiating-change-manifest.json",
+        "sha256": "815d3d8b8173cafd58fc71364261eee074f71b6acb22efffc037cb4778e96277",
+        "version": "1",
+        "git_revision": "75812d6c23ef7e92d5a794b4724e51758f60e7cb"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "47ef66f2218d7d467b06e6a69cfd1edb8fe67ce5328e13991d290492af243dc1",
+          "version": "1",
+          "git_revision": "75812d6c23ef7e92d5a794b4724e51758f60e7cb"
+        },
+        "selector": "Batch: fresh-baseline-opus-01; order 16"
+      },
+      "run_id": "20261026T144604004Z-ssr-fresh-baseline-claude-initiating-change-57d57b6e-3c98-438e-8315-e688adf36a65-ht9yzxgt",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T144604004Z-ssr-fresh-baseline-claude-initiating-change-57d57b6e-3c98-438e-8315-e688adf36a65-ht9yzxgt",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T144604004Z-ssr-fresh-baseline-claude-initiating-change-57d57b6e-3c98-438e-8315-e688adf36a65-ht9yzxgt.inventory.json",
+          "sha256": "2dfef364ab2b44e7da155ef9c88475e6c0efc56347c5143332911aa5b8471261",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "fresh-baseline-opus-01-initiating-change-original-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T144604004Z-ssr-fresh-baseline-claude-initiating-change-57d57b6e-3c98-438e-8315-e688adf36a65-ht9yzxgt.json",
+          "sha256": "1502e7862abb49e44ce73136d6ca63f2d3fa34acfcd57d590289927a9207cd46",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "fresh-baseline-opus-01-local-change-original-2-1",
+      "case_id": "local-change",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/manifests/claude-local-change-manifest.json",
+        "sha256": "c2d43abf799ab6af34f0f57ecba93902d253d6fbe59f139601c937eda16250a8",
+        "version": "1",
+        "git_revision": "75812d6c23ef7e92d5a794b4724e51758f60e7cb"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "47ef66f2218d7d467b06e6a69cfd1edb8fe67ce5328e13991d290492af243dc1",
+          "version": "1",
+          "git_revision": "75812d6c23ef7e92d5a794b4724e51758f60e7cb"
+        },
+        "selector": "Batch: fresh-baseline-opus-01; order 17"
+      },
+      "run_id": "20261026T144838218Z-ssr-fresh-baseline-claude-local-change-75fe23e2-ab3c-4f3c-8a08-c8a822fa6c91-k7phrp5n",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T144838218Z-ssr-fresh-baseline-claude-local-change-75fe23e2-ab3c-4f3c-8a08-c8a822fa6c91-k7phrp5n",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T144838218Z-ssr-fresh-baseline-claude-local-change-75fe23e2-ab3c-4f3c-8a08-c8a822fa6c91-k7phrp5n.inventory.json",
+          "sha256": "6cb53752fa5580c1343a5fd23253395ab27cd69110ffce6e6e536116022970eb",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "fresh-baseline-opus-01-local-change-original-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T144838218Z-ssr-fresh-baseline-claude-local-change-75fe23e2-ab3c-4f3c-8a08-c8a822fa6c91-k7phrp5n.json",
+          "sha256": "0a4e5aaaec53655d31315a5ff20006a7d999e6f07d040f4a36bf5057934104b4",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "fresh-baseline-opus-01-large-sweep-account-original-2-1",
+      "case_id": "large-sweep-account",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/manifests/claude-large-sweep-account-manifest.json",
+        "sha256": "aefa0899537c560ef57adec3ca70386925e4429b1e42e78efce974005d549ed2",
+        "version": "1",
+        "git_revision": "75812d6c23ef7e92d5a794b4724e51758f60e7cb"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "47ef66f2218d7d467b06e6a69cfd1edb8fe67ce5328e13991d290492af243dc1",
+          "version": "1",
+          "git_revision": "75812d6c23ef7e92d5a794b4724e51758f60e7cb"
+        },
+        "selector": "Batch: fresh-baseline-opus-01; order 18"
+      },
+      "run_id": "20261026T145045964Z-ssr-fresh-baseline-claude-large-sweep-account-0cba8a35-b4d5-41af-a341-d908516a7582-q1yckd17",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T145045964Z-ssr-fresh-baseline-claude-large-sweep-account-0cba8a35-b4d5-41af-a341-d908516a7582-q1yckd17",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T145045964Z-ssr-fresh-baseline-claude-large-sweep-account-0cba8a35-b4d5-41af-a341-d908516a7582-q1yckd17.inventory.json",
+          "sha256": "8793c718d389d5050eba155e30ff12a915126d2c5902a5df78e5355ca659956c",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "fresh-baseline-opus-01-large-sweep-account-original-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T145045964Z-ssr-fresh-baseline-claude-large-sweep-account-0cba8a35-b4d5-41af-a341-d908516a7582-q1yckd17.json",
+          "sha256": "6ff0a3fd77bec8256f8d78f8fb3366687dba49d299c3fab8246ebffb637059ab",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "fresh-baseline-opus-01-invocation-verification-original-2-1",
+      "case_id": "invocation-verification",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/manifests/claude-invocation-verification-manifest.json",
+        "sha256": "00347d580f9846a37fc4573a1e67c776aa41521feb2b270f75421594a246d6ff",
+        "version": "1",
+        "git_revision": "75812d6c23ef7e92d5a794b4724e51758f60e7cb"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "47ef66f2218d7d467b06e6a69cfd1edb8fe67ce5328e13991d290492af243dc1",
+          "version": "1",
+          "git_revision": "75812d6c23ef7e92d5a794b4724e51758f60e7cb"
+        },
+        "selector": "Batch: fresh-baseline-opus-01; order 19"
+      },
+      "run_id": "20261026T145232995Z-ssr-fresh-baseline-claude-invocation-verification-1c24c4c8-27e2-47f4-a98e-e59dcd787347-y1vyb87v",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T145232995Z-ssr-fresh-baseline-claude-invocation-verification-1c24c4c8-27e2-47f4-a98e-e59dcd787347-y1vyb87v",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T145232995Z-ssr-fresh-baseline-claude-invocation-verification-1c24c4c8-27e2-47f4-a98e-e59dcd787347-y1vyb87v.inventory.json",
+          "sha256": "48a2b4ea5c07454e50e42e9eec96dfd3fee794193610833976f96246e128f676",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "fresh-baseline-opus-01-invocation-verification-original-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T145232995Z-ssr-fresh-baseline-claude-invocation-verification-1c24c4c8-27e2-47f4-a98e-e59dcd787347-y1vyb87v.json",
+          "sha256": "9728512c5fff949675aec732da73cd03bc4d36fb26ecc15723298ae3cd332060",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "fresh-baseline-opus-01-invocation-unrelated-original-2-1",
+      "case_id": "invocation-unrelated",
+      "condition": "original",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/manifests/claude-invocation-unrelated-manifest.json",
+        "sha256": "594aea240284d39f2cf4b5afa3954b7fb015215d290aceeac2fa60cb8e44027d",
+        "version": "1",
+        "git_revision": "75812d6c23ef7e92d5a794b4724e51758f60e7cb"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "47ef66f2218d7d467b06e6a69cfd1edb8fe67ce5328e13991d290492af243dc1",
+          "version": "1",
+          "git_revision": "75812d6c23ef7e92d5a794b4724e51758f60e7cb"
+        },
+        "selector": "Batch: fresh-baseline-opus-01; order 20"
+      },
+      "run_id": "20261026T145405943Z-ssr-fresh-baseline-claude-invocation-unrelated-29151839-1931-47b9-9c4f-08cd3fe74072-2nnf7m5r",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T145405943Z-ssr-fresh-baseline-claude-invocation-unrelated-29151839-1931-47b9-9c4f-08cd3fe74072-2nnf7m5r",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T145405943Z-ssr-fresh-baseline-claude-invocation-unrelated-29151839-1931-47b9-9c4f-08cd3fe74072-2nnf7m5r.inventory.json",
+          "sha256": "f63e9e9135a57dc7e25c44727d9b81cb25608068cd8d10a47d6549abad223416",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "fresh-baseline-opus-01-invocation-unrelated-original-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T145405943Z-ssr-fresh-baseline-claude-invocation-unrelated-29151839-1931-47b9-9c4f-08cd3fe74072-2nnf7m5r.json",
+          "sha256": "d0e7c9ac303331dd84aefca0295f524a73ade6817c0b0c1a4c4ada1bc74496f9",
+          "version": "2"
+        }
+      }
     }
   ]
 }
