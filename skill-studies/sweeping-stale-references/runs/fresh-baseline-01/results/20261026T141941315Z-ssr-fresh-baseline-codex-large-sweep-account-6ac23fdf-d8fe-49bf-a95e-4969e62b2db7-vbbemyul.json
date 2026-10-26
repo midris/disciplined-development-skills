@@ -1,0 +1,79 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-10-26T14:22:56.962409+00:00",
+  "run_id": "20261026T141941315Z-ssr-fresh-baseline-codex-large-sweep-account-6ac23fdf-d8fe-49bf-a95e-4969e62b2db7-vbbemyul",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Preparer and active assessor with condition/history awareness; not blind or independent. Fixed SSR-assessment-3 and case-specific units, inherited explanations and original interpretation."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T141941315Z-ssr-fresh-baseline-codex-large-sweep-account-6ac23fdf-d8fe-49bf-a95e-4969e62b2db7-vbbemyul/result.json",
+        "sha256": "a98de05b8e5a41268fa5fc36fbe667af651a5eddc4a9f3956f4ec4974695469e",
+        "version": null
+      },
+      "selector": "Mechanical completion, declared execution and retained capture."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T141941315Z-ssr-fresh-baseline-codex-large-sweep-account-6ac23fdf-d8fe-49bf-a95e-4969e62b2db7-vbbemyul/provider-session.jsonl",
+        "sha256": "643314b755695bcb9484b46da487b333d0ba36fe75b8c93fb7540190cd2eedfb",
+        "version": null
+      },
+      "selector": "Complete ordered tool calls, responses and subject messages."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T141941315Z-ssr-fresh-baseline-codex-large-sweep-account-6ac23fdf-d8fe-49bf-a95e-4969e62b2db7-vbbemyul.checks.json",
+        "sha256": "4885eafb9f8ca1c360dcbdc7fe6f6ce4d4fc354493af6ce91f8a5b380609a822",
+        "version": null
+      },
+      "selector": "Disposable full project/Git comparison, protected inputs, delivery/model checks and any trusted replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned model/CLI/effort and source identities verified; complete retained capture and cleanup, with full original-body delivery for explicit application. Native availability is verified; missing/late loading is scored separately.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Saved REPORT.md preserves every supplied inclusive range and all eleven path/outcome groups, including separate docs/cache.md update and false-positive rows. Counts reconcile to eighty updates, forty historical and six false positives,126 matches across ten paths. Verification explicitly attributes applied status to the supplied account and states no command/test transcript was provided; it invents no executed project check. Supplied inventory/task/body bytes remain unchanged.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Codex accounting diagnostic repetition1 meets its sole P3 factor. Functional outcome is not measured; this is report traceability/arithmetic evidence, not a repair or test-execution pass.",
+  "observations": [],
+  "uncertainty": [
+    "Exposed development case in a declared provider/runtime stratum; no blind, held-out, population reliability or causal-guidance claim.",
+    "Native selection and task success are separate; retain case-specific counting units and Shiv uncertainty."
+  ],
+  "result_id": "fresh-baseline-codex-01-large-sweep-account-original-1",
+  "functional_result": "not measured",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/manifests/codex-large-sweep-account-manifest.json",
+    "sha256": "116e0faea61d02cc1be9fb4ec44070e8d050514c84802567f5e79ab3029e9659",
+    "version": "1",
+    "git_revision": "75812d6c23ef7e92d5a794b4724e51758f60e7cb"
+  }
+}

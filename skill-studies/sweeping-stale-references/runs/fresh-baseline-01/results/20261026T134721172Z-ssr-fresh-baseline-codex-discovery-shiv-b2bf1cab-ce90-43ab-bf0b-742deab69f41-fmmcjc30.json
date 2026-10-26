@@ -1,0 +1,153 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-10-26T13:51:20.312892+00:00",
+  "run_id": "20261026T134721172Z-ssr-fresh-baseline-codex-discovery-shiv-b2bf1cab-ce90-43ab-bf0b-742deab69f41-fmmcjc30",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Preparer and active assessor with condition/history awareness; not blind or independent. Fixed SSR-assessment-3 and case-specific units, inherited explanations and original interpretation."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T134721172Z-ssr-fresh-baseline-codex-discovery-shiv-b2bf1cab-ce90-43ab-bf0b-742deab69f41-fmmcjc30/result.json",
+        "sha256": "d271f6ad9ce21539e5b3fc4af45d9944922aa639249d10bb74b463c657e28c61",
+        "version": null
+      },
+      "selector": "Mechanical completion, declared execution and retained capture."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T134721172Z-ssr-fresh-baseline-codex-discovery-shiv-b2bf1cab-ce90-43ab-bf0b-742deab69f41-fmmcjc30/provider-session.jsonl",
+        "sha256": "2ecebc0c0824a16b3b484b7e8e213052506d54ceb1b760406ef513a5d67878c6",
+        "version": null
+      },
+      "selector": "Complete ordered tool calls, responses and subject messages."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T134721172Z-ssr-fresh-baseline-codex-discovery-shiv-b2bf1cab-ce90-43ab-bf0b-742deab69f41-fmmcjc30.checks.json",
+        "sha256": "71fb4de02b8ac968e038488e6a1d51bec9d37a3bafa03b20d03e208ba520357e",
+        "version": null
+      },
+      "selector": "Disposable full project/Git comparison, protected inputs, delivery/model checks and any trusted replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned model/CLI/effort and source identities verified; complete retained capture and cleanup, with full original-body delivery for explicit application. Native availability is verified; missing/late loading is scored separately.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All four current consumers now use --destination and build correct runnable greeting archives. Trusted disposable replay verifies README, shell script, release Make recipe and CI build command, including shell-script execution from another directory; each archive has expected payload/entrypoint and prints discovery-fixture-ok.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only four command consumers changed. Settled --destination/-o behavior, rejection of the retired option, historical document, independent inventory CLI/docs, source/runtime/tests and all other supplied project bytes are preserved; independent replay verifies those behaviors.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Commit 7bb8daa5ac766fa1d8ce42ed769ca166126a5660 includes the complete four-consumer repair after neutral baseline, with clean final committed state.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Complete original body at event17 and broad old/new/variant cross-surface search41 precede patch48. Four current commands are reconciled and all independent/history/negative-test matches are explicitly preserved.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "All four reconciliation edits are in one repair commit after fixture baseline.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "insufficient evidence",
+      "reason": "All nine scoped occurrences across eight paths are traceably grouped and counted correctly. However, the two preserved negative CLI assertions are labelled intentionally stale rather than expected.json's false-positive label. The protocol retains this unresolved Shiv category boundary; do not manufacture a new ruling or a demonstrated accounting defect from the standing ambiguity. No independent omission/count/grouping defect was observed.",
+      "consequence": "Report separately; cannot change functional outcome or authorize repetition alone.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Codex Shiv repetition1 meets all functional factors and P1/P2. P3 retains the pre-existing negative-assertion category uncertainty, separately from the complete correct repair.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "The subject's initial pytest attempt failed because pytest is absent, then its four dependency-free unittest tests and documented README build/run succeeded. Final verification claims only observed successful checks.",
+      "consequence": "Descriptive/supplementary; fixed scores and scope unchanged.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "dimension": "procedural",
+      "description": "CI's build command was replayed locally; hosted CI and dependency installation were not executed, and no such success is claimed.",
+      "consequence": "Descriptive/supplementary; fixed scores and scope unchanged.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "Exposed development case in a declared provider/runtime stratum; no blind, held-out, population reliability or causal-guidance claim.",
+    "Native selection and task success are separate; retain case-specific counting units and Shiv uncertainty."
+  ],
+  "result_id": "fresh-baseline-codex-01-discovery-shiv-original-1",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/manifests/codex-discovery-shiv-manifest.json",
+    "sha256": "67276a649c68b92d6a24d3cfe40412fb04d1ebfdd018300f234cd61abd5e27d3",
+    "version": "1",
+    "git_revision": "75812d6c23ef7e92d5a794b4724e51758f60e7cb"
+  }
+}

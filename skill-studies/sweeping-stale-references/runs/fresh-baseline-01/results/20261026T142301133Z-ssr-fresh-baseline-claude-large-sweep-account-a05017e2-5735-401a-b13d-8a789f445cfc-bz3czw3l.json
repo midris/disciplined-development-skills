@@ -1,0 +1,79 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-10-26T14:28:19.179382+00:00",
+  "run_id": "20261026T142301133Z-ssr-fresh-baseline-claude-large-sweep-account-a05017e2-5735-401a-b13d-8a789f445cfc-bz3czw3l",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Preparer and active assessor with condition/history awareness; not blind or independent. Fixed SSR-assessment-3 and case-specific units, inherited explanations and original interpretation."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T142301133Z-ssr-fresh-baseline-claude-large-sweep-account-a05017e2-5735-401a-b13d-8a789f445cfc-bz3czw3l/result.json",
+        "sha256": "a39ec34152e1a8cfbdaa945583f682a446f13e4228feee8c5ac71c52f346c6de",
+        "version": null
+      },
+      "selector": "Mechanical completion, declared execution and retained capture."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T142301133Z-ssr-fresh-baseline-claude-large-sweep-account-a05017e2-5735-401a-b13d-8a789f445cfc-bz3czw3l/stdout.txt",
+        "sha256": "b77b06b6386f4fc89f8a49d9cc757ddb913ed4eab1f3704f82a1808df5f54b1c",
+        "version": null
+      },
+      "selector": "Complete ordered tool calls, responses and subject messages."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T142301133Z-ssr-fresh-baseline-claude-large-sweep-account-a05017e2-5735-401a-b13d-8a789f445cfc-bz3czw3l.checks.json",
+        "sha256": "4e97796e7d27db3e7ea644d38746badbb4c24872902905094ff981389dfa6cbe",
+        "version": null
+      },
+      "selector": "Disposable full project/Git comparison, protected inputs, delivery/model checks and any trusted replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned model/CLI/effort and source identities verified; complete retained capture and cleanup, with full original-body delivery for explicit application. Native availability is verified; missing/late loading is scored separately.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "REPORT.md preserves all eleven supplied path/outcome groups across ten paths, including the separate docs/cache.md outcomes; inclusive ranges and counts total 80 updated, 40 historical and six unrelated matches (126). It truthfully distinguishes supplied applied status and arithmetic from unperformed searches, repairs and tests. Input inventory and TASK are unchanged.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Accounting-only P3 met; all supplied groups, counts and dispositions traceable with truthful verification. Functional outcome not measured.",
+  "observations": [],
+  "uncertainty": [
+    "Exposed development case in a declared provider/runtime stratum; no blind, held-out, population reliability or causal-guidance claim.",
+    "Native selection and task success are separate; retain case-specific counting units and Shiv uncertainty."
+  ],
+  "result_id": "fresh-baseline-opus-01-large-sweep-account-original-1",
+  "functional_result": "not measured",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/manifests/claude-large-sweep-account-manifest.json",
+    "sha256": "aefa0899537c560ef57adec3ca70386925e4429b1e42e78efce974005d549ed2",
+    "version": "1",
+    "git_revision": "75812d6c23ef7e92d5a794b4724e51758f60e7cb"
+  }
+}
