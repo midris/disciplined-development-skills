@@ -1,6 +1,6 @@
 # SSR: original baseline and staged candidate comparison
 
-Status: original baseline complete; candidate screen allocated; collection readiness pending.
+Status: original baseline complete; candidate screen allocated and qualified; collection stopped at slot56 for Claude re-authentication.
 The [framework](2026-09-11-model-driven-skill-testing-framework.md#cw-testing-model) governs the method; the [active plan](../2026-09-11-model-driven-skill-testing.md) owns progress and the [SSR protocol](../../skill-studies/sweeping-stale-references/protocol.md) owns dispatch authority.
 This replaces the [55-subject completion proposal](2026-10-24-ssr-cw-aligned-validation.md); its draft configuration set does not implement this design.
 The owner approved the 115-subject/ten-review screen on 2026-10-26; freeze and readiness precede dispatch. No skill edit, retry or adoption is authorized.
@@ -34,7 +34,7 @@ Older heterogeneous runs remain contextual evidence rather than additional repet
 
 ## Candidate screen: candidate-screen-01
 
-Status: 115 subjects and ten reviews approved; freeze and readiness pending.
+Status: 115 subjects and ten reviews approved; freeze/readiness complete. Collection stopped at slot56 after Claude OAuth expiry; see the [progress checkpoint](../../skill-studies/sweeping-stale-references/runs/candidate-screen-01/progress.md).
 The owner selected this concrete allocation after preparation review: “approved, please continue with the tests”.
 The [preparation package](../../skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/README.md) contains 44 matched configurations, eleven prospective cards, the exact schedule and verified reuse.
 

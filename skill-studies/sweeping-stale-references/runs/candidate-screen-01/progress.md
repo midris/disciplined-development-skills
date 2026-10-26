@@ -3,18 +3,36 @@
 Owner-approved scope: 115 new subjects and ten complete-output reviews; immutable invocation authority `eb1761bb7014034a174877d548898417ac4d2030`.
 The active plan owns the remaining checklist; this note records the current evidence boundary.
 
-Slots 1–36 are retained and scored, completing the first scheduled repetition round.
-All 25 repair outcomes meet F1–F3; eleven accounting/non-use observations have no functional denominator.
-All thirteen native D1 observations meet their case-specific criteria (six positive and seven negative).
-P3 has fourteen met, six not met and three insufficient-evidence judgments; reporting defects and inherited Shiv category uncertainty remain separate from functional outcomes.
-No candidate has reached an early-stop trigger; no output reviewer has started.
-Slot 37 is next; inspect private claims/outcomes and current indexes before dispatch to avoid duplication.
+## Authentication stop
 
-Runtime, immutable input and prior-score checks run before every invocation.
-The first-round audit verified all 36 complete captures, private/canonical score equality and pinned evidence hashes.
-Whole-artifact and ordered-trace inspections support the unchanged fixed cards; independent runtime replay covers every repair case.
-No retry, replacement, skill edit or new criterion was introduced.
-Raw evidence/inspection records remain in the approved external candidate-screen-01 store; no raw project or transcript is copied into Git.
+All dispatch stopped at slot 56 on 2026-10-26 after Claude returned HTTP 401: OAuth access token expired.
+The runner recorded `INFRA_ERROR`, exit 1, with no timeout or cleanup error.
+No subject tool call or actual model output occurred; all twelve supplied files remain unchanged.
+The complete error capture and invalid-setup assessment are retained in the Claude index; absence of skill loading is not scored as successful non-use.
+The invocation started, so its one subject charge is retained even though the provider reported zero tokens/cost.
+No retry, replacement or reviewer was launched.
+
+Re-authenticate Claude through `claude auth login`, then verify production authentication and unchanged runtime/input identities before resuming collection.
+Slot 57 is the next unattempted slot; preserve slot 56 as invalid and do not silently replace it.
+A replacement/retry requires a separate bounded owner decision; the existing allocation contains no retry.
+There are 59 unattempted subject slots and ten unattempted reviewers.
+Do not repeat slots 1–56. Check private claims/outcomes and indexes before dispatch.
+The private invocation helper currently rejects any prior invalid setup; resumption must explicitly acknowledge this retained infrastructure gap without weakening functional-stop checks.
+
+## Retained outcomes
+
+Slots 1–55 are valid and scored; all 42 repair outcomes meet F1–F3.
+Thirteen valid accounting/non-use observations have no functional denominator.
+All 21 native D1 observations meet their case-specific criteria (twelve positive and nine negative).
+Valid P3 judgments: eighteen met, ten not met and six insufficient evidence.
+Reporting defects and inherited Shiv category uncertainty remain separate from functional outcomes; no candidate has reached a functional early-stop trigger.
+The partial screen supports no adoption or final comparative verdict; ten planned complete-output reviews remain unrun.
+
+Runtime, immutable input and prior-score checks preceded every invocation.
+The checkpoint audit verifies all 56 retained captures, private/canonical score equality and pinned evidence hashes, separating the one invalid setup from 55 valid outcomes.
+Whole-artifact and ordered-trace inspections support unchanged fixed cards; independent runtime replay covers all repair cases.
+No skill edit, new criterion, retry or replacement was introduced.
+Raw evidence stays in the approved external candidate-screen-01 store.
 The user CW fixture hash remains `a15c5e668af77a1dfef81dd01c5524ae4ce742542cc63f4f6d55e740ee0ac488` and its edit remains unstaged.
 
-Execution effort through this checkpoint is estimated at 55 active minutes, including model waits, approval recording/freeze/readiness and direct assessment; combined accounting is in the CW protocol.
+Execution effort through this stop is estimated at 85 active minutes, including model waits, approval/freeze/readiness, direct assessment and stop documentation; combined accounting is in the CW protocol.

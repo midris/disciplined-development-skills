@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `sweeping-stale-references`
 Status: fresh original baseline complete under the CW testing model; candidate screens and skill adoption remain pending.
-Current action: execute the owner-approved [candidate-screen-01 proposal](#proposal-candidate-screen-01): 115 subjects and ten comparison reviews, with verified reuse and early failure checkpoints. This screen is allocated; skill edits, retries, top-ups and adoption remain unallocated. The [staged design](../../plans/specs/2026-10-26-ssr-staged-baseline-comparison.md#candidate-screen-candidate-screen-01) owns comparison intent; [CW accounting](../concise-writing/protocol.md#storage-and-accounting) owns combined spending.
+Current action: resolve the [slot-56 Claude authentication stop](runs/candidate-screen-01/progress.md) before further dispatch in the owner-approved [candidate-screen-01 proposal](#proposal-candidate-screen-01): 115 subjects and ten comparison reviews, with verified reuse and early failure checkpoints. This screen is allocated; skill edits, retries, top-ups and adoption remain unallocated. The [staged design](../../plans/specs/2026-10-26-ssr-staged-baseline-comparison.md#candidate-screen-candidate-screen-01) owns comparison intent; [CW accounting](../concise-writing/protocol.md#storage-and-accounting) owns combined spending.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](runs/core-baseline-01/core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -1050,7 +1050,7 @@ Current SSR-linked mechanical accounting includes the fixed 136-call historical 
 The current validation adds its [subject index](runs/compact-regression-01/compact-regression-01-run-index.json) and [evaluator ledger](runs/compact-regression-01/evaluation/evaluator-run-index.json).
 The fresh original baseline adds [Codex subjects](runs/fresh-baseline-01/fresh-baseline-codex-01-run-index.json), [Opus subjects](runs/fresh-baseline-01/fresh-baseline-opus-01-run-index.json) and [eight review slots](runs/fresh-baseline-01/evaluation/evaluator-run-index.json); the five reused semantic runs are not charged again.
 For this subset, the historical spent subtotal plus the newly authorized scope gives ceilings of 382 subject, 20 evaluator, 0 authoring and 0 retry invocations; this is an accounting projection, not a new allocation or pool transfer.
-Dispatched calls are **303 subject, 10 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **79 / 10 / 0 / 0** for this subset.
+Dispatched calls are **323 subject, 10 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **59 / 10 / 0 / 0** for this subset.
 The CW protocol remains authoritative for all current combined spending and outer ceilings; no historical unspent pool is revived.
 Sequential readiness used identical externally frozen scores; the final index pins the canonical repository results at their committed revision.
 

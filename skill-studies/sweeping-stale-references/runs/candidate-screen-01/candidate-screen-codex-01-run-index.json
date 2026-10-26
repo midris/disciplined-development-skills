@@ -1059,6 +1059,582 @@
           "version": "2"
         }
       }
+    },
+    {
+      "attempt_id": "candidate-screen-codex-01-pressure-repair-finalist-2-1",
+      "case_id": "pressure-repair",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/codex-pressure-repair-manifest.json",
+        "sha256": "5de2487daa478a19f04f8bf90f6af7a59a2e1a97533367b29a8dcdd08c22509f",
+        "version": "1",
+        "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "890dcb11d47fee962a6afe7514937000c3618eeb29e047aa3ed73165ff6bd368",
+          "version": "1",
+          "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+        },
+        "selector": "Batch: candidate-screen-codex-01; order 23"
+      },
+      "run_id": "20261026T212231168Z-ssr-screen-codex-pressure-repair-finalist-97ef6cd4-7956-4c00-a625-020bcdaf5ac3-91n2b_2j",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed candidate screen; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T212231168Z-ssr-screen-codex-pressure-repair-finalist-97ef6cd4-7956-4c00-a625-020bcdaf5ac3-91n2b_2j",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T212231168Z-ssr-screen-codex-pressure-repair-finalist-97ef6cd4-7956-4c00-a625-020bcdaf5ac3-91n2b_2j.inventory.json",
+          "sha256": "ddbddbe66815c3587711aff6121fc86364edfdfc41f6cef8ab35eff37d234b06",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "candidate-screen-codex-01-pressure-repair-finalist-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/scores/20261026T212231168Z-ssr-screen-codex-pressure-repair-finalist-97ef6cd4-7956-4c00-a625-020bcdaf5ac3-91n2b_2j.json",
+          "sha256": "608199096442d0377ea2afd027c5eca611953dabcbbac6968a8f6819c51d3d0a",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "candidate-screen-codex-01-pressure-repair-candidate-2-1",
+      "case_id": "pressure-repair",
+      "condition": "candidate",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/codex-pressure-repair-manifest.json",
+        "sha256": "5de2487daa478a19f04f8bf90f6af7a59a2e1a97533367b29a8dcdd08c22509f",
+        "version": "1",
+        "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "890dcb11d47fee962a6afe7514937000c3618eeb29e047aa3ed73165ff6bd368",
+          "version": "1",
+          "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+        },
+        "selector": "Batch: candidate-screen-codex-01; order 24"
+      },
+      "run_id": "20261026T212348582Z-ssr-screen-codex-pressure-repair-candidate-55174ebf-a2aa-4caa-9381-6fa237cdae89-07v7m1d5",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed candidate screen; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T212348582Z-ssr-screen-codex-pressure-repair-candidate-55174ebf-a2aa-4caa-9381-6fa237cdae89-07v7m1d5",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T212348582Z-ssr-screen-codex-pressure-repair-candidate-55174ebf-a2aa-4caa-9381-6fa237cdae89-07v7m1d5.inventory.json",
+          "sha256": "71cc4b9b17bad403d7b11aceb78ef3c4cc680d6c6459e45fec873983fe1e36a3",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "candidate-screen-codex-01-pressure-repair-candidate-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/scores/20261026T212348582Z-ssr-screen-codex-pressure-repair-candidate-55174ebf-a2aa-4caa-9381-6fa237cdae89-07v7m1d5.json",
+          "sha256": "aed3566ad8d49d30232259df70fffa5597412bbdafb6c968974be4d3ee35b309",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "candidate-screen-codex-01-discovery-shiv-candidate-2-1",
+      "case_id": "discovery-shiv",
+      "condition": "candidate",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/codex-discovery-shiv-manifest.json",
+        "sha256": "91b33a31012525a18220fa43e45aa1b8ca72ddb0814d8198d345cd20da77c821",
+        "version": "1",
+        "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "890dcb11d47fee962a6afe7514937000c3618eeb29e047aa3ed73165ff6bd368",
+          "version": "1",
+          "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+        },
+        "selector": "Batch: candidate-screen-codex-01; order 25"
+      },
+      "run_id": "20261026T212521143Z-ssr-screen-codex-discovery-shiv-candidate-d74ab21a-21cc-4e9a-b091-1f44bd0b31f3-b5l16_um",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed candidate screen; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T212521143Z-ssr-screen-codex-discovery-shiv-candidate-d74ab21a-21cc-4e9a-b091-1f44bd0b31f3-b5l16_um",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T212521143Z-ssr-screen-codex-discovery-shiv-candidate-d74ab21a-21cc-4e9a-b091-1f44bd0b31f3-b5l16_um.inventory.json",
+          "sha256": "1f385a2f4855103efcb6e9661f1e57526c666014f989e3e4475ba66a92628e03",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "candidate-screen-codex-01-discovery-shiv-candidate-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/scores/20261026T212521143Z-ssr-screen-codex-discovery-shiv-candidate-d74ab21a-21cc-4e9a-b091-1f44bd0b31f3-b5l16_um.json",
+          "sha256": "96bd07c8efe4f4b601e9a0f8b5a48f706a17f7c59904dc39176c3492748b2096",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "candidate-screen-codex-01-discovery-shiv-finalist-2-1",
+      "case_id": "discovery-shiv",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/codex-discovery-shiv-manifest.json",
+        "sha256": "91b33a31012525a18220fa43e45aa1b8ca72ddb0814d8198d345cd20da77c821",
+        "version": "1",
+        "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "890dcb11d47fee962a6afe7514937000c3618eeb29e047aa3ed73165ff6bd368",
+          "version": "1",
+          "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+        },
+        "selector": "Batch: candidate-screen-codex-01; order 26"
+      },
+      "run_id": "20261026T212724634Z-ssr-screen-codex-discovery-shiv-finalist-6a0e6721-98f8-4f2c-8aaf-6d047450d96c-25yadmcm",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed candidate screen; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T212724634Z-ssr-screen-codex-discovery-shiv-finalist-6a0e6721-98f8-4f2c-8aaf-6d047450d96c-25yadmcm",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T212724634Z-ssr-screen-codex-discovery-shiv-finalist-6a0e6721-98f8-4f2c-8aaf-6d047450d96c-25yadmcm.inventory.json",
+          "sha256": "ebc087f93bb72bb61f76f48fc78febca97783bc8899fe96bee018f76eb02a88a",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "candidate-screen-codex-01-discovery-shiv-finalist-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/scores/20261026T212724634Z-ssr-screen-codex-discovery-shiv-finalist-6a0e6721-98f8-4f2c-8aaf-6d047450d96c-25yadmcm.json",
+          "sha256": "e53e86785baffefce8960f6b1ad30904c8da6a87c58a1e07acabdd70f0862fa2",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "candidate-screen-codex-01-initiating-change-finalist-2-1",
+      "case_id": "initiating-change",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/codex-initiating-change-manifest.json",
+        "sha256": "c7f6f6aeec6c3a6bfeb17bbfa57dd200fefe72a53fa25fe0ce06686cebcdddd3",
+        "version": "1",
+        "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "890dcb11d47fee962a6afe7514937000c3618eeb29e047aa3ed73165ff6bd368",
+          "version": "1",
+          "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+        },
+        "selector": "Batch: candidate-screen-codex-01; order 27"
+      },
+      "run_id": "20261026T213244285Z-ssr-screen-codex-initiating-change-finalist-12c3d16a-5721-4dfa-baf2-662bbcd1e9aa-o64sbbbk",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed candidate screen; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T213244285Z-ssr-screen-codex-initiating-change-finalist-12c3d16a-5721-4dfa-baf2-662bbcd1e9aa-o64sbbbk",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T213244285Z-ssr-screen-codex-initiating-change-finalist-12c3d16a-5721-4dfa-baf2-662bbcd1e9aa-o64sbbbk.inventory.json",
+          "sha256": "bb7c5d83b36a47d660a22f3545ab9bca0322917d37a61b1017e38c81b414d8c0",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "candidate-screen-codex-01-initiating-change-finalist-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/scores/20261026T213244285Z-ssr-screen-codex-initiating-change-finalist-12c3d16a-5721-4dfa-baf2-662bbcd1e9aa-o64sbbbk.json",
+          "sha256": "f05ee0e5f1e4f416583a0d8d7cc855c02a0f4f4e524a51fc4bb6c5f52930445c",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "candidate-screen-codex-01-initiating-change-candidate-2-1",
+      "case_id": "initiating-change",
+      "condition": "candidate",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/codex-initiating-change-manifest.json",
+        "sha256": "c7f6f6aeec6c3a6bfeb17bbfa57dd200fefe72a53fa25fe0ce06686cebcdddd3",
+        "version": "1",
+        "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "890dcb11d47fee962a6afe7514937000c3618eeb29e047aa3ed73165ff6bd368",
+          "version": "1",
+          "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+        },
+        "selector": "Batch: candidate-screen-codex-01; order 28"
+      },
+      "run_id": "20261026T213417777Z-ssr-screen-codex-initiating-change-candidate-4a4076cb-355d-4117-84f0-7acd7b5bf0cd-_ub7kiio",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed candidate screen; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T213417777Z-ssr-screen-codex-initiating-change-candidate-4a4076cb-355d-4117-84f0-7acd7b5bf0cd-_ub7kiio",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T213417777Z-ssr-screen-codex-initiating-change-candidate-4a4076cb-355d-4117-84f0-7acd7b5bf0cd-_ub7kiio.inventory.json",
+          "sha256": "4c9d59888d56ba66be20d3920b43b58ea9eed7af140671a61ae37f6e4b7be684",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "candidate-screen-codex-01-initiating-change-candidate-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/scores/20261026T213417777Z-ssr-screen-codex-initiating-change-candidate-4a4076cb-355d-4117-84f0-7acd7b5bf0cd-_ub7kiio.json",
+          "sha256": "9774a694add34be05a9ad2ce36c6ea84a60aa3631339032bbd3c83adb10d3934",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "candidate-screen-codex-01-invocation-change-candidate-2-1",
+      "case_id": "invocation-change",
+      "condition": "candidate",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/codex-invocation-change-manifest.json",
+        "sha256": "4ed08ac20c0437974f4cae55ab25081d9bd8999b621b6ac623ef11500316372e",
+        "version": "1",
+        "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "890dcb11d47fee962a6afe7514937000c3618eeb29e047aa3ed73165ff6bd368",
+          "version": "1",
+          "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+        },
+        "selector": "Batch: candidate-screen-codex-01; order 29"
+      },
+      "run_id": "20261026T213601032Z-ssr-screen-codex-invocation-change-candidate-ab35c656-b6e3-4835-b42f-db825d4c44f5-v0s8shsd",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed candidate screen; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T213601032Z-ssr-screen-codex-invocation-change-candidate-ab35c656-b6e3-4835-b42f-db825d4c44f5-v0s8shsd",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T213601032Z-ssr-screen-codex-invocation-change-candidate-ab35c656-b6e3-4835-b42f-db825d4c44f5-v0s8shsd.inventory.json",
+          "sha256": "d1a3e821c1dd8b58f1c622c51da0f63b12769c37c27fa1fcef1fe9707923fdf7",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "candidate-screen-codex-01-invocation-change-candidate-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/scores/20261026T213601032Z-ssr-screen-codex-invocation-change-candidate-ab35c656-b6e3-4835-b42f-db825d4c44f5-v0s8shsd.json",
+          "sha256": "a8e0be72f5d3d5aaabcc1f707d80fb46a81966375c507e4ba3f5d56ecb38ad3e",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "candidate-screen-codex-01-invocation-change-finalist-2-1",
+      "case_id": "invocation-change",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/codex-invocation-change-manifest.json",
+        "sha256": "4ed08ac20c0437974f4cae55ab25081d9bd8999b621b6ac623ef11500316372e",
+        "version": "1",
+        "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "890dcb11d47fee962a6afe7514937000c3618eeb29e047aa3ed73165ff6bd368",
+          "version": "1",
+          "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+        },
+        "selector": "Batch: candidate-screen-codex-01; order 30"
+      },
+      "run_id": "20261026T213725688Z-ssr-screen-codex-invocation-change-finalist-18fbe788-21dd-4291-bf85-d2ca87ee4e1e-ah208ag9",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed candidate screen; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T213725688Z-ssr-screen-codex-invocation-change-finalist-18fbe788-21dd-4291-bf85-d2ca87ee4e1e-ah208ag9",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T213725688Z-ssr-screen-codex-invocation-change-finalist-18fbe788-21dd-4291-bf85-d2ca87ee4e1e-ah208ag9.inventory.json",
+          "sha256": "29b7b815364b7ec428ab04e25f1c4c91ed159ef47ace0bcf00322dcc904d48be",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "candidate-screen-codex-01-invocation-change-finalist-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/scores/20261026T213725688Z-ssr-screen-codex-invocation-change-finalist-18fbe788-21dd-4291-bf85-d2ca87ee4e1e-ah208ag9.json",
+          "sha256": "7c36abb443615f43c83d941bfd17a1bbcbca309b66224cd526ca42ff76289f5a",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "candidate-screen-codex-01-invocation-review-finalist-2-1",
+      "case_id": "invocation-review",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/codex-invocation-review-manifest.json",
+        "sha256": "e0524c296cd76d1d676f799bc2795bfbfc057eb009f3e9ccfdd7cc497fb32b49",
+        "version": "1",
+        "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "890dcb11d47fee962a6afe7514937000c3618eeb29e047aa3ed73165ff6bd368",
+          "version": "1",
+          "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+        },
+        "selector": "Batch: candidate-screen-codex-01; order 31"
+      },
+      "run_id": "20261026T214011854Z-ssr-screen-codex-invocation-review-finalist-bb2abd2b-f0f7-460f-82db-66c573d88c50-nmkx8_0e",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed candidate screen; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T214011854Z-ssr-screen-codex-invocation-review-finalist-bb2abd2b-f0f7-460f-82db-66c573d88c50-nmkx8_0e",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T214011854Z-ssr-screen-codex-invocation-review-finalist-bb2abd2b-f0f7-460f-82db-66c573d88c50-nmkx8_0e.inventory.json",
+          "sha256": "4738a02c51f3cbb41c0222a1d322ead3c5293dfb2b9202ae386cfd20b3758d1f",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "candidate-screen-codex-01-invocation-review-finalist-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/scores/20261026T214011854Z-ssr-screen-codex-invocation-review-finalist-bb2abd2b-f0f7-460f-82db-66c573d88c50-nmkx8_0e.json",
+          "sha256": "9a1c764dd676341528cf7cfb45912117dac2a00713bd52a3feb3d653c247bc3b",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "candidate-screen-codex-01-invocation-review-candidate-2-1",
+      "case_id": "invocation-review",
+      "condition": "candidate",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/codex-invocation-review-manifest.json",
+        "sha256": "e0524c296cd76d1d676f799bc2795bfbfc057eb009f3e9ccfdd7cc497fb32b49",
+        "version": "1",
+        "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "890dcb11d47fee962a6afe7514937000c3618eeb29e047aa3ed73165ff6bd368",
+          "version": "1",
+          "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+        },
+        "selector": "Batch: candidate-screen-codex-01; order 32"
+      },
+      "run_id": "20261026T214138608Z-ssr-screen-codex-invocation-review-candidate-4b1e465c-057f-44a7-85b8-d5b7cfbf8757-6nvm1z5a",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed candidate screen; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T214138608Z-ssr-screen-codex-invocation-review-candidate-4b1e465c-057f-44a7-85b8-d5b7cfbf8757-6nvm1z5a",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T214138608Z-ssr-screen-codex-invocation-review-candidate-4b1e465c-057f-44a7-85b8-d5b7cfbf8757-6nvm1z5a.inventory.json",
+          "sha256": "da21b77e223d571a9e64beab7cf4577337c64fa037d1f8cf6af55061d7c8e84d",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "candidate-screen-codex-01-invocation-review-candidate-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/scores/20261026T214138608Z-ssr-screen-codex-invocation-review-candidate-4b1e465c-057f-44a7-85b8-d5b7cfbf8757-6nvm1z5a.json",
+          "sha256": "bd53a9444770413ee34bb820cbac9a2b6deaf1d770a2ed04ae5905425cf429fc",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "candidate-screen-codex-01-invocation-verification-candidate-2-1",
+      "case_id": "invocation-verification",
+      "condition": "candidate",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/codex-invocation-verification-manifest.json",
+        "sha256": "94d19d41a6c7349455eea5268736eb4f50a22ce50174ed558deac362373d60f1",
+        "version": "1",
+        "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "890dcb11d47fee962a6afe7514937000c3618eeb29e047aa3ed73165ff6bd368",
+          "version": "1",
+          "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+        },
+        "selector": "Batch: candidate-screen-codex-01; order 33"
+      },
+      "run_id": "20261026T214307686Z-ssr-screen-codex-invocation-verification-candidate-fed63c2d-c3f0-40ad-8d46-76bbb37db531-8wb0kpv7",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed candidate screen; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T214307686Z-ssr-screen-codex-invocation-verification-candidate-fed63c2d-c3f0-40ad-8d46-76bbb37db531-8wb0kpv7",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T214307686Z-ssr-screen-codex-invocation-verification-candidate-fed63c2d-c3f0-40ad-8d46-76bbb37db531-8wb0kpv7.inventory.json",
+          "sha256": "ab17b637f91c26c82e52662baf54e1699671ead8c4e1b23eda34edfaff1c73df",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "candidate-screen-codex-01-invocation-verification-candidate-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/scores/20261026T214307686Z-ssr-screen-codex-invocation-verification-candidate-fed63c2d-c3f0-40ad-8d46-76bbb37db531-8wb0kpv7.json",
+          "sha256": "f9a3ba7e9bd4a13668899274bbf9f452b4443263a4e65a2c944dbf179dd78ab7",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "candidate-screen-codex-01-invocation-verification-finalist-2-1",
+      "case_id": "invocation-verification",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/codex-invocation-verification-manifest.json",
+        "sha256": "94d19d41a6c7349455eea5268736eb4f50a22ce50174ed558deac362373d60f1",
+        "version": "1",
+        "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "890dcb11d47fee962a6afe7514937000c3618eeb29e047aa3ed73165ff6bd368",
+          "version": "1",
+          "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+        },
+        "selector": "Batch: candidate-screen-codex-01; order 34"
+      },
+      "run_id": "20261026T214348701Z-ssr-screen-codex-invocation-verification-finalist-a72fe7c2-9210-4fca-9d2e-796a04d95785-gt0livgs",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed candidate screen; active-session score retained externally pending canonical publication."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T214348701Z-ssr-screen-codex-invocation-verification-finalist-a72fe7c2-9210-4fca-9d2e-796a04d95785-gt0livgs",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T214348701Z-ssr-screen-codex-invocation-verification-finalist-a72fe7c2-9210-4fca-9d2e-796a04d95785-gt0livgs.inventory.json",
+          "sha256": "9ed9eb36b05fc3c84e6a99ae06d0397326db0c996adf87b1be0fc336e88cd4cb",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "candidate-screen-codex-01-invocation-verification-finalist-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/scores/20261026T214348701Z-ssr-screen-codex-invocation-verification-finalist-a72fe7c2-9210-4fca-9d2e-796a04d95785-gt0livgs.json",
+          "sha256": "dd50b73da22010101c98b3c17fc7adbd1a56de422dac5bc123f4c38f6840a577",
+          "version": "2"
+        }
+      }
     }
   ]
 }

@@ -1,0 +1,122 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-10-26T21:40:11.572380+00:00",
+  "run_id": "20261026T213924504Z-ssr-screen-claude-invocation-review-candidate-0273b3fb-6924-4d11-8f64-3c7a3acd32e4-4sewuxoa",
+  "condition": "candidate",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Preparer and active assessor with condition/history awareness; not blind or independent. Fixed SSR-assessment-3 and case-specific units, inherited explanations and prospective candidate interpretation."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T213924504Z-ssr-screen-claude-invocation-review-candidate-0273b3fb-6924-4d11-8f64-3c7a3acd32e4-4sewuxoa/result.json",
+        "sha256": "4de043f9fcfc5a0ed4152d5770e7385063d3d6c62fd97a98877314a5d251c8b4",
+        "version": null
+      },
+      "selector": "Mechanical completion, declared execution and retained capture."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T213924504Z-ssr-screen-claude-invocation-review-candidate-0273b3fb-6924-4d11-8f64-3c7a3acd32e4-4sewuxoa/stdout.txt",
+        "sha256": "d5b137ce07e029248111cdb3b75e68cd27fde166dd0328fed40b1172b8d8d183",
+        "version": null
+      },
+      "selector": "Complete ordered tool calls, responses and subject messages."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/inspection/051.json",
+        "sha256": "8a4cd8e3e0d97d506c391bb2e643569d36c15bd6f2888504ddf8167d3d197c74",
+        "version": null
+      },
+      "selector": "Disposable full project/Git comparison, protected inputs, delivery/model checks and any trusted replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned model/CLI/effort and source identities verified; complete retained capture and cleanup, with full assigned-body delivery for explicit application. Native availability is verified; missing/late loading is scored separately.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Complete output matches accepted slots2/28/39; all three current delivery docs correctly reconciled with useful guidance preserved.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only three current docs changed; history/helper/code/tests/task inputs preserved. Independent seven-case behavior replay correct.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Repairf007d4a commits complete correct work; clean tree.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Native SSR selected5, invoked6, complete body8 before edit13.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Comprehensive Claude native-review repetition2 meets functional and selection criteria.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "Historical block counted as two and supplemental helper paths combined in account; native card does not score P3.",
+      "consequence": "Descriptive/supplementary; fixed scores and scope unchanged.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "Exposed development case in a declared provider/runtime stratum; no blind, held-out, population reliability or causal-guidance claim.",
+    "Native selection and task success are separate; retain case-specific counting units and Shiv uncertainty."
+  ],
+  "result_id": "candidate-screen-claude-01-invocation-review-candidate-2",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/claude-invocation-review-manifest.json",
+    "sha256": "5168005b35117a5be292f4257d48fa5e1ec731d29acad406e3c8748eff3821f5",
+    "version": "1",
+    "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+  }
+}

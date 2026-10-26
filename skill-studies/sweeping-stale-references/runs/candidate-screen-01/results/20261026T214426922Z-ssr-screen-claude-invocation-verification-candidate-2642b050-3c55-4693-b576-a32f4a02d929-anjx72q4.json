@@ -1,0 +1,79 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-10-26T21:45:46.085685+00:00",
+  "run_id": "20261026T214426922Z-ssr-screen-claude-invocation-verification-candidate-2642b050-3c55-4693-b576-a32f4a02d929-anjx72q4",
+  "condition": "candidate",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Preparer and active assessor with condition/history awareness; not blind or independent. Fixed SSR-assessment-3 and case-specific units, inherited explanations and prospective candidate interpretation."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T214426922Z-ssr-screen-claude-invocation-verification-candidate-2642b050-3c55-4693-b576-a32f4a02d929-anjx72q4/result.json",
+        "sha256": "9707dee6b616c1976223ff9e6a9ef89ca5cc4530f86725e02e28c5ae4dd15a20",
+        "version": null
+      },
+      "selector": "Mechanical completion, declared execution and retained capture."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T214426922Z-ssr-screen-claude-invocation-verification-candidate-2642b050-3c55-4693-b576-a32f4a02d929-anjx72q4/stdout.txt",
+        "sha256": "35e8d3c7306de096ef01c8ee99f0c6565379e9b35c114077702a63d97a05077e",
+        "version": null
+      },
+      "selector": "Complete ordered tool calls, responses and subject messages."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/inspection/056.json",
+        "sha256": "ae33f7c87362adfe414a1f3c2088c42259e28257d4c978431ced76f042239917",
+        "version": null
+      },
+      "selector": "Disposable full project/Git comparison, protected inputs, delivery/model checks and any trusted replay."
+    }
+  ],
+  "setup": {
+    "status": "invalid",
+    "reason": "Claude returned401 authentication_failed: OAuth access token expired, before any subject tool call or actual model output. Runner INFRA_ERROR/exit1, no timeout or cleanup error; complete error capture retained and all configured inputs unchanged. Invocation started and consumes one subject allocation even though provider reports zero tokens/cost.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "insufficient evidence",
+      "reason": "No subject execution occurred after authentication rejection. Absence of a skill load cannot establish appropriate native non-use; exclude this invalid setup from candidate behavior denominators.",
+      "consequence": "Report separately; cannot change functional outcome or authorize repetition alone.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Infrastructure stop at slot56: expired Claude OAuth credential; not a candidate failure. All dispatch stopped with no retry/replacement launched.",
+  "observations": [],
+  "uncertainty": [
+    "Exposed development case in a declared provider/runtime stratum; no blind, held-out, population reliability or causal-guidance claim.",
+    "Native selection and task success are separate; retain case-specific counting units and Shiv uncertainty."
+  ],
+  "result_id": "candidate-screen-claude-01-invocation-verification-candidate-2",
+  "functional_result": "not measured",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/claude-invocation-verification-manifest.json",
+    "sha256": "b34dc237a4e89ac13ed246c042679912e05b730b503ec9dd42d242d859f5f35f",
+    "version": "1",
+    "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+  }
+}
