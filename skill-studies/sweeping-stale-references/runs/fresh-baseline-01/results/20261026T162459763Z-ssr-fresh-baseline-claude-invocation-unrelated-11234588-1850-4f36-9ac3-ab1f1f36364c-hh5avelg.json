@@ -1,0 +1,79 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-10-26T16:25:43.324384+00:00",
+  "run_id": "20261026T162459763Z-ssr-fresh-baseline-claude-invocation-unrelated-11234588-1850-4f36-9ac3-ab1f1f36364c-hh5avelg",
+  "condition": "original",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Preparer and active assessor with condition/history awareness; not blind or independent. Fixed SSR-assessment-3 and case-specific units, inherited explanations and original interpretation."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T162459763Z-ssr-fresh-baseline-claude-invocation-unrelated-11234588-1850-4f36-9ac3-ab1f1f36364c-hh5avelg/result.json",
+        "sha256": "5644302dbdfeb04cc33a9af919c7be3f7e0a2f5ca8ff49b897e39ceefee3fc4e",
+        "version": null
+      },
+      "selector": "Mechanical completion, declared execution and retained capture."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T162459763Z-ssr-fresh-baseline-claude-invocation-unrelated-11234588-1850-4f36-9ac3-ab1f1f36364c-hh5avelg/stdout.txt",
+        "sha256": "b9eef147e1f9a30e7b0b624ab60bc71bc506b2720a768cf589cab6525b84615b",
+        "version": null
+      },
+      "selector": "Complete ordered tool calls, responses and subject messages."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T162459763Z-ssr-fresh-baseline-claude-invocation-unrelated-11234588-1850-4f36-9ac3-ab1f1f36364c-hh5avelg.checks.json",
+        "sha256": "faf42589d49449e52b084e5cc4337fb9907bb0528b1373f5c292e6f799a4e43b",
+        "version": null
+      },
+      "selector": "Disposable full project/Git comparison, protected inputs, delivery/model checks and any trusted replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned model/CLI/effort and source identities verified; complete retained capture and cleanup, with full original-body delivery for explicit application. Native availability is verified; missing/late loading is scored separately.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Catalog availability qualified; complete trace only reads task/project listing/source/defaults, with no SSR selection, body delivery or sweep/accounting application. Accurate1900 explanation and rationale; all supplied bytes unchanged, no edit or commit. Functional SSR outcome not measured.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Appropriate unrelated-task non-use met.",
+  "observations": [],
+  "uncertainty": [
+    "Exposed development case in a declared provider/runtime stratum; no blind, held-out, population reliability or causal-guidance claim.",
+    "Native selection and task success are separate; retain case-specific counting units and Shiv uncertainty."
+  ],
+  "result_id": "fresh-baseline-opus-01-invocation-unrelated-original-5",
+  "functional_result": "not measured",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/manifests/claude-invocation-unrelated-manifest.json",
+    "sha256": "594aea240284d39f2cf4b5afa3954b7fb015215d290aceeac2fa60cb8e44027d",
+    "version": "1",
+    "git_revision": "75812d6c23ef7e92d5a794b4724e51758f60e7cb"
+  }
+}
