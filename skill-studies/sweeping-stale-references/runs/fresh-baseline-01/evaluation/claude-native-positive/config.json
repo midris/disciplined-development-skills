@@ -1,0 +1,265 @@
+{
+  "schema_version": "0.2",
+  "id": "ssr-fresh-original-claude-native-positive-review",
+  "prompt": "../prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/INTERPRETATION.md",
+      "target": "INTERPRETATION.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/criteria/invocation-change-expected.md",
+      "target": "criteria/invocation-change-expected.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/criteria/invocation-change-inherited.md",
+      "target": "criteria/invocation-change-inherited.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/criteria/invocation-change.md",
+      "target": "criteria/invocation-change.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/criteria/invocation-review-expected.json",
+      "target": "criteria/invocation-review-expected.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/criteria/invocation-review-inherited.md",
+      "target": "criteria/invocation-review-inherited.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/criteria/invocation-review.md",
+      "target": "criteria/invocation-review.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/facts/20261026T134445582Z-ssr-fresh-baseline-claude-invocation-change-e3f1a72f-82cc-4867-8897-dbf8efaec7e6-93hxbuqm.json",
+      "target": "facts/20261026T134445582Z-ssr-fresh-baseline-claude-invocation-change-e3f1a72f-82cc-4867-8897-dbf8efaec7e6-93hxbuqm.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/facts/20261026T140228824Z-ssr-fresh-baseline-claude-invocation-review-c9e3a12b-a340-417f-9c08-22c7d8d8e990-hgazg1xu.json",
+      "target": "facts/20261026T140228824Z-ssr-fresh-baseline-claude-invocation-review-c9e3a12b-a340-417f-9c08-22c7d8d8e990-hgazg1xu.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/facts/20261026T143536368Z-ssr-fresh-baseline-claude-invocation-change-e473bf8e-b768-4aac-b6bb-572b21cc3b64-xdx7kvdb.json",
+      "target": "facts/20261026T143536368Z-ssr-fresh-baseline-claude-invocation-change-e473bf8e-b768-4aac-b6bb-572b21cc3b64-xdx7kvdb.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/facts/20261026T144347185Z-ssr-fresh-baseline-claude-invocation-review-cd1c28b3-07e3-47e1-b47b-7269200637b0-obf2u_8o.json",
+      "target": "facts/20261026T144347185Z-ssr-fresh-baseline-claude-invocation-review-cd1c28b3-07e3-47e1-b47b-7269200637b0-obf2u_8o.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/facts/20261026T150258329Z-ssr-fresh-baseline-claude-invocation-change-8613798d-37dc-47f8-8e9f-7e69da84f23e-7mkn53gb.json",
+      "target": "facts/20261026T150258329Z-ssr-fresh-baseline-claude-invocation-change-8613798d-37dc-47f8-8e9f-7e69da84f23e-7mkn53gb.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/facts/20261026T151152899Z-ssr-fresh-baseline-claude-invocation-review-1c771284-cce6-4c17-9a76-75631a628fa9-0ugswiob.json",
+      "target": "facts/20261026T151152899Z-ssr-fresh-baseline-claude-invocation-review-1c771284-cce6-4c17-9a76-75631a628fa9-0ugswiob.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/facts/20261026T152833925Z-ssr-fresh-baseline-claude-invocation-change-e19ab63b-b264-473a-ac4e-6e82e6de8d7e-g_2crf12.json",
+      "target": "facts/20261026T152833925Z-ssr-fresh-baseline-claude-invocation-change-e19ab63b-b264-473a-ac4e-6e82e6de8d7e-g_2crf12.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/facts/20261026T153612696Z-ssr-fresh-baseline-claude-invocation-review-2081e659-8d60-4324-afc0-f5ebfa0c4d22-vacmr7m9.json",
+      "target": "facts/20261026T153612696Z-ssr-fresh-baseline-claude-invocation-review-2081e659-8d60-4324-afc0-f5ebfa0c4d22-vacmr7m9.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/facts/20261026T160116860Z-ssr-fresh-baseline-claude-invocation-change-83c21cc6-9114-4418-833c-d400fbd63fd6-xpgg4yv8.json",
+      "target": "facts/20261026T160116860Z-ssr-fresh-baseline-claude-invocation-change-83c21cc6-9114-4418-833c-d400fbd63fd6-xpgg4yv8.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/facts/20261026T161324956Z-ssr-fresh-baseline-claude-invocation-review-d05e7008-9768-48af-a8e1-420149ccdfe2-pk1a3eir.json",
+      "target": "facts/20261026T161324956Z-ssr-fresh-baseline-claude-invocation-review-d05e7008-9768-48af-a8e1-420149ccdfe2-pk1a3eir.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/001.txt",
+      "target": "objects/001.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/002.txt",
+      "target": "objects/002.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/003.txt",
+      "target": "objects/003.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/004.txt",
+      "target": "objects/004.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/005.txt",
+      "target": "objects/005.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/006.txt",
+      "target": "objects/006.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/007.txt",
+      "target": "objects/007.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/008.txt",
+      "target": "objects/008.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/009.txt",
+      "target": "objects/009.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/010.txt",
+      "target": "objects/010.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/011.txt",
+      "target": "objects/011.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/012.txt",
+      "target": "objects/012.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/013.txt",
+      "target": "objects/013.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/014.txt",
+      "target": "objects/014.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/015.txt",
+      "target": "objects/015.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/016.txt",
+      "target": "objects/016.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/017.txt",
+      "target": "objects/017.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/018.txt",
+      "target": "objects/018.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/019.txt",
+      "target": "objects/019.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/020.txt",
+      "target": "objects/020.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/021.txt",
+      "target": "objects/021.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/022.txt",
+      "target": "objects/022.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/023.txt",
+      "target": "objects/023.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/024.txt",
+      "target": "objects/024.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/025.txt",
+      "target": "objects/025.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/026.txt",
+      "target": "objects/026.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/027.txt",
+      "target": "objects/027.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/028.txt",
+      "target": "objects/028.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/029.txt",
+      "target": "objects/029.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/030.txt",
+      "target": "objects/030.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/031.txt",
+      "target": "objects/031.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/032.txt",
+      "target": "objects/032.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/objects/033.txt",
+      "target": "objects/033.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/outputs/20261026T134445582Z-ssr-fresh-baseline-claude-invocation-change-e3f1a72f-82cc-4867-8897-dbf8efaec7e6-93hxbuqm.md",
+      "target": "outputs/20261026T134445582Z-ssr-fresh-baseline-claude-invocation-change-e3f1a72f-82cc-4867-8897-dbf8efaec7e6-93hxbuqm.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/outputs/20261026T140228824Z-ssr-fresh-baseline-claude-invocation-review-c9e3a12b-a340-417f-9c08-22c7d8d8e990-hgazg1xu.md",
+      "target": "outputs/20261026T140228824Z-ssr-fresh-baseline-claude-invocation-review-c9e3a12b-a340-417f-9c08-22c7d8d8e990-hgazg1xu.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/outputs/20261026T143536368Z-ssr-fresh-baseline-claude-invocation-change-e473bf8e-b768-4aac-b6bb-572b21cc3b64-xdx7kvdb.md",
+      "target": "outputs/20261026T143536368Z-ssr-fresh-baseline-claude-invocation-change-e473bf8e-b768-4aac-b6bb-572b21cc3b64-xdx7kvdb.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/outputs/20261026T144347185Z-ssr-fresh-baseline-claude-invocation-review-cd1c28b3-07e3-47e1-b47b-7269200637b0-obf2u_8o.md",
+      "target": "outputs/20261026T144347185Z-ssr-fresh-baseline-claude-invocation-review-cd1c28b3-07e3-47e1-b47b-7269200637b0-obf2u_8o.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/outputs/20261026T150258329Z-ssr-fresh-baseline-claude-invocation-change-8613798d-37dc-47f8-8e9f-7e69da84f23e-7mkn53gb.md",
+      "target": "outputs/20261026T150258329Z-ssr-fresh-baseline-claude-invocation-change-8613798d-37dc-47f8-8e9f-7e69da84f23e-7mkn53gb.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/outputs/20261026T151152899Z-ssr-fresh-baseline-claude-invocation-review-1c771284-cce6-4c17-9a76-75631a628fa9-0ugswiob.md",
+      "target": "outputs/20261026T151152899Z-ssr-fresh-baseline-claude-invocation-review-1c771284-cce6-4c17-9a76-75631a628fa9-0ugswiob.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/outputs/20261026T152833925Z-ssr-fresh-baseline-claude-invocation-change-e19ab63b-b264-473a-ac4e-6e82e6de8d7e-g_2crf12.md",
+      "target": "outputs/20261026T152833925Z-ssr-fresh-baseline-claude-invocation-change-e19ab63b-b264-473a-ac4e-6e82e6de8d7e-g_2crf12.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/outputs/20261026T153612696Z-ssr-fresh-baseline-claude-invocation-review-2081e659-8d60-4324-afc0-f5ebfa0c4d22-vacmr7m9.md",
+      "target": "outputs/20261026T153612696Z-ssr-fresh-baseline-claude-invocation-review-2081e659-8d60-4324-afc0-f5ebfa0c4d22-vacmr7m9.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/outputs/20261026T160116860Z-ssr-fresh-baseline-claude-invocation-change-83c21cc6-9114-4418-833c-d400fbd63fd6-xpgg4yv8.md",
+      "target": "outputs/20261026T160116860Z-ssr-fresh-baseline-claude-invocation-change-83c21cc6-9114-4418-833c-d400fbd63fd6-xpgg4yv8.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/outputs/20261026T161324956Z-ssr-fresh-baseline-claude-invocation-review-d05e7008-9768-48af-a8e1-420149ccdfe2-pk1a3eir.md",
+      "target": "outputs/20261026T161324956Z-ssr-fresh-baseline-claude-invocation-review-d05e7008-9768-48af-a8e1-420149ccdfe2-pk1a3eir.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/policy.txt",
+      "target": "policy.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/claude-native-positive/prior-assessment.md",
+      "target": "prior-assessment.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}

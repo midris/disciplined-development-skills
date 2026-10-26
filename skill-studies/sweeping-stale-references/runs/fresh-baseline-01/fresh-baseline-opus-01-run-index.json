@@ -32,7 +32,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T134047500Z-ssr-fresh-baseline-claude-pressure-repair-55614d69-4b94-4d9d-b31e-01f1af6dc872-way5p3cv",
@@ -46,9 +46,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-pressure-repair-original-1",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T134047500Z-ssr-fresh-baseline-claude-pressure-repair-55614d69-4b94-4d9d-b31e-01f1af6dc872-way5p3cv.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T134047500Z-ssr-fresh-baseline-claude-pressure-repair-55614d69-4b94-4d9d-b31e-01f1af6dc872-way5p3cv.json",
           "sha256": "2b7902935078c3b900b575d2622a2ac4e341399fcf8f891c0890300bc4d3cf58",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -80,7 +81,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T134445582Z-ssr-fresh-baseline-claude-invocation-change-e3f1a72f-82cc-4867-8897-dbf8efaec7e6-93hxbuqm",
@@ -94,9 +95,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-invocation-change-original-1",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T134445582Z-ssr-fresh-baseline-claude-invocation-change-e3f1a72f-82cc-4867-8897-dbf8efaec7e6-93hxbuqm.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T134445582Z-ssr-fresh-baseline-claude-invocation-change-e3f1a72f-82cc-4867-8897-dbf8efaec7e6-93hxbuqm.json",
           "sha256": "6cde1fe371e7b3dfa70ecaede3f2ed5c10faf5f18c201bd6f6424d0a02389f20",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -128,7 +130,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T135122580Z-ssr-fresh-baseline-claude-discovery-shiv-57a33052-c40a-4da6-86bb-f7ef26471f1c-2sr8cacs",
@@ -142,9 +144,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-discovery-shiv-original-1",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T135122580Z-ssr-fresh-baseline-claude-discovery-shiv-57a33052-c40a-4da6-86bb-f7ef26471f1c-2sr8cacs.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T135122580Z-ssr-fresh-baseline-claude-discovery-shiv-57a33052-c40a-4da6-86bb-f7ef26471f1c-2sr8cacs.json",
           "sha256": "11e53b0b597282942d09db5138b50744580f717b965c6d6e30ff79b03eac0dd4",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -176,7 +179,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T135650028Z-ssr-fresh-baseline-claude-moved-guide-da811995-0ecf-4bdf-89a8-f997b6f9cd40-o89dadrq",
@@ -190,9 +193,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-moved-guide-original-1",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T135650028Z-ssr-fresh-baseline-claude-moved-guide-da811995-0ecf-4bdf-89a8-f997b6f9cd40-o89dadrq.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T135650028Z-ssr-fresh-baseline-claude-moved-guide-da811995-0ecf-4bdf-89a8-f997b6f9cd40-o89dadrq.json",
           "sha256": "c5e5040ddf41ee87b9a680c128ce83be197b973bae3f289ff8b602952ab5f8c7",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -224,7 +228,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T140228824Z-ssr-fresh-baseline-claude-invocation-review-c9e3a12b-a340-417f-9c08-22c7d8d8e990-hgazg1xu",
@@ -238,9 +242,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-invocation-review-original-1",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T140228824Z-ssr-fresh-baseline-claude-invocation-review-c9e3a12b-a340-417f-9c08-22c7d8d8e990-hgazg1xu.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T140228824Z-ssr-fresh-baseline-claude-invocation-review-c9e3a12b-a340-417f-9c08-22c7d8d8e990-hgazg1xu.json",
           "sha256": "0bc12e25b3a7ff27550254d31ce770f559c8c66bea5509f3d46973df86a18168",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -272,7 +277,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T140954711Z-ssr-fresh-baseline-claude-initiating-change-76018b57-f195-4dbf-b4b7-fbdc4d84b06a-stxp0q_m",
@@ -286,9 +291,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-initiating-change-original-1",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T140954711Z-ssr-fresh-baseline-claude-initiating-change-76018b57-f195-4dbf-b4b7-fbdc4d84b06a-stxp0q_m.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T140954711Z-ssr-fresh-baseline-claude-initiating-change-76018b57-f195-4dbf-b4b7-fbdc4d84b06a-stxp0q_m.json",
           "sha256": "37cb541cb53bfbfac730aa0fd8dd3351e7cafe8e400e96d60a57fac667616185",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -320,7 +326,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T141544649Z-ssr-fresh-baseline-claude-local-change-1446339f-f220-4b14-8081-7ef1898edc80-_axsjchk",
@@ -334,9 +340,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-local-change-original-1",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T141544649Z-ssr-fresh-baseline-claude-local-change-1446339f-f220-4b14-8081-7ef1898edc80-_axsjchk.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T141544649Z-ssr-fresh-baseline-claude-local-change-1446339f-f220-4b14-8081-7ef1898edc80-_axsjchk.json",
           "sha256": "9f1858cd97f232f271ee4869d2635207c11fd435631167b9f2fdee12e2adc05c",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -368,7 +375,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T142301133Z-ssr-fresh-baseline-claude-large-sweep-account-a05017e2-5735-401a-b13d-8a789f445cfc-bz3czw3l",
@@ -382,9 +389,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-large-sweep-account-original-1",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T142301133Z-ssr-fresh-baseline-claude-large-sweep-account-a05017e2-5735-401a-b13d-8a789f445cfc-bz3czw3l.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T142301133Z-ssr-fresh-baseline-claude-large-sweep-account-a05017e2-5735-401a-b13d-8a789f445cfc-bz3czw3l.json",
           "sha256": "010cc997471f9840ac2e295e28c495786d22ed7607cc42d9e935a9697f6545d9",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -416,7 +424,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T142911180Z-ssr-fresh-baseline-claude-invocation-verification-e187ecdd-ad59-4926-90a7-579eb22e984c-c35jttgg",
@@ -430,9 +438,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-invocation-verification-original-1",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T142911180Z-ssr-fresh-baseline-claude-invocation-verification-e187ecdd-ad59-4926-90a7-579eb22e984c-c35jttgg.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T142911180Z-ssr-fresh-baseline-claude-invocation-verification-e187ecdd-ad59-4926-90a7-579eb22e984c-c35jttgg.json",
           "sha256": "2ca5db389e5cadf79b6b669db5b7c9048046cd04fb6bc40b602c9b6370f7795a",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -464,7 +473,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T143037507Z-ssr-fresh-baseline-claude-invocation-unrelated-5d476ce0-3d25-4122-8803-767cdc9ceacd-dln_iomo",
@@ -478,9 +487,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-invocation-unrelated-original-1",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T143037507Z-ssr-fresh-baseline-claude-invocation-unrelated-5d476ce0-3d25-4122-8803-767cdc9ceacd-dln_iomo.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T143037507Z-ssr-fresh-baseline-claude-invocation-unrelated-5d476ce0-3d25-4122-8803-767cdc9ceacd-dln_iomo.json",
           "sha256": "b18ee923b874615e6dc0cf1464ed63a548cd6da628f5b3c503c422aa16ce7516",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -512,7 +522,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T143252395Z-ssr-fresh-baseline-claude-pressure-repair-cc578997-b8de-4662-8a88-483f96ba1cea-bbokxzpi",
@@ -526,9 +536,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-pressure-repair-original-2",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T143252395Z-ssr-fresh-baseline-claude-pressure-repair-cc578997-b8de-4662-8a88-483f96ba1cea-bbokxzpi.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T143252395Z-ssr-fresh-baseline-claude-pressure-repair-cc578997-b8de-4662-8a88-483f96ba1cea-bbokxzpi.json",
           "sha256": "9df4a032988d9f12db7a9714a06c4f158c311f50c0591e33fc5e76ef9f1c00c3",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -560,7 +571,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T143536368Z-ssr-fresh-baseline-claude-invocation-change-e473bf8e-b768-4aac-b6bb-572b21cc3b64-xdx7kvdb",
@@ -574,9 +585,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-invocation-change-original-2",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T143536368Z-ssr-fresh-baseline-claude-invocation-change-e473bf8e-b768-4aac-b6bb-572b21cc3b64-xdx7kvdb.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T143536368Z-ssr-fresh-baseline-claude-invocation-change-e473bf8e-b768-4aac-b6bb-572b21cc3b64-xdx7kvdb.json",
           "sha256": "6146acf059be1eff69ee08a59d5c2fa894a9630a2b1f1e635b51a3244b206be2",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -608,7 +620,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T143736299Z-ssr-fresh-baseline-claude-discovery-shiv-4c9a1ff7-d139-47cf-a149-3e3610e8846e-2_jd8aly",
@@ -622,9 +634,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-discovery-shiv-original-2",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T143736299Z-ssr-fresh-baseline-claude-discovery-shiv-4c9a1ff7-d139-47cf-a149-3e3610e8846e-2_jd8aly.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T143736299Z-ssr-fresh-baseline-claude-discovery-shiv-4c9a1ff7-d139-47cf-a149-3e3610e8846e-2_jd8aly.json",
           "sha256": "11ad1f37271ded8b46e645ec2ab3ec54e59c907154b717ff5c4e885d65725016",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -656,7 +669,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T144052901Z-ssr-fresh-baseline-claude-moved-guide-87640d7a-aa26-4bfb-a16d-8dd22bd36898-a87ygsrv",
@@ -670,9 +683,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-moved-guide-original-2",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T144052901Z-ssr-fresh-baseline-claude-moved-guide-87640d7a-aa26-4bfb-a16d-8dd22bd36898-a87ygsrv.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T144052901Z-ssr-fresh-baseline-claude-moved-guide-87640d7a-aa26-4bfb-a16d-8dd22bd36898-a87ygsrv.json",
           "sha256": "e856a0195e696b93439d335823bc18761eb5916a1d570732b65738c5bc9f9e03",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -704,7 +718,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T144347185Z-ssr-fresh-baseline-claude-invocation-review-cd1c28b3-07e3-47e1-b47b-7269200637b0-obf2u_8o",
@@ -718,9 +732,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-invocation-review-original-2",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T144347185Z-ssr-fresh-baseline-claude-invocation-review-cd1c28b3-07e3-47e1-b47b-7269200637b0-obf2u_8o.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T144347185Z-ssr-fresh-baseline-claude-invocation-review-cd1c28b3-07e3-47e1-b47b-7269200637b0-obf2u_8o.json",
           "sha256": "bbe9630bdc1c73dd066ad9a7f215c91550f6088da0e2fd285b3091b5b793e619",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -752,7 +767,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T144604004Z-ssr-fresh-baseline-claude-initiating-change-57d57b6e-3c98-438e-8315-e688adf36a65-ht9yzxgt",
@@ -766,9 +781,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-initiating-change-original-2",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T144604004Z-ssr-fresh-baseline-claude-initiating-change-57d57b6e-3c98-438e-8315-e688adf36a65-ht9yzxgt.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T144604004Z-ssr-fresh-baseline-claude-initiating-change-57d57b6e-3c98-438e-8315-e688adf36a65-ht9yzxgt.json",
           "sha256": "1502e7862abb49e44ce73136d6ca63f2d3fa34acfcd57d590289927a9207cd46",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -800,7 +816,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T144838218Z-ssr-fresh-baseline-claude-local-change-75fe23e2-ab3c-4f3c-8a08-c8a822fa6c91-k7phrp5n",
@@ -814,9 +830,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-local-change-original-2",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T144838218Z-ssr-fresh-baseline-claude-local-change-75fe23e2-ab3c-4f3c-8a08-c8a822fa6c91-k7phrp5n.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T144838218Z-ssr-fresh-baseline-claude-local-change-75fe23e2-ab3c-4f3c-8a08-c8a822fa6c91-k7phrp5n.json",
           "sha256": "0a4e5aaaec53655d31315a5ff20006a7d999e6f07d040f4a36bf5057934104b4",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -848,7 +865,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T145045964Z-ssr-fresh-baseline-claude-large-sweep-account-0cba8a35-b4d5-41af-a341-d908516a7582-q1yckd17",
@@ -862,9 +879,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-large-sweep-account-original-2",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T145045964Z-ssr-fresh-baseline-claude-large-sweep-account-0cba8a35-b4d5-41af-a341-d908516a7582-q1yckd17.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T145045964Z-ssr-fresh-baseline-claude-large-sweep-account-0cba8a35-b4d5-41af-a341-d908516a7582-q1yckd17.json",
           "sha256": "6ff0a3fd77bec8256f8d78f8fb3366687dba49d299c3fab8246ebffb637059ab",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -896,7 +914,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T145232995Z-ssr-fresh-baseline-claude-invocation-verification-1c24c4c8-27e2-47f4-a98e-e59dcd787347-y1vyb87v",
@@ -910,9 +928,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-invocation-verification-original-2",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T145232995Z-ssr-fresh-baseline-claude-invocation-verification-1c24c4c8-27e2-47f4-a98e-e59dcd787347-y1vyb87v.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T145232995Z-ssr-fresh-baseline-claude-invocation-verification-1c24c4c8-27e2-47f4-a98e-e59dcd787347-y1vyb87v.json",
           "sha256": "9728512c5fff949675aec732da73cd03bc4d36fb26ecc15723298ae3cd332060",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -944,7 +963,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T145405943Z-ssr-fresh-baseline-claude-invocation-unrelated-29151839-1931-47b9-9c4f-08cd3fe74072-2nnf7m5r",
@@ -958,9 +977,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-invocation-unrelated-original-2",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T145405943Z-ssr-fresh-baseline-claude-invocation-unrelated-29151839-1931-47b9-9c4f-08cd3fe74072-2nnf7m5r.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T145405943Z-ssr-fresh-baseline-claude-invocation-unrelated-29151839-1931-47b9-9c4f-08cd3fe74072-2nnf7m5r.json",
           "sha256": "d0e7c9ac303331dd84aefca0295f524a73ade6817c0b0c1a4c4ada1bc74496f9",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -992,7 +1012,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T145923944Z-ssr-fresh-baseline-claude-pressure-repair-dd0528fe-9c2e-453b-9d51-364a0cc86908-xqzjqcbb",
@@ -1006,9 +1026,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-pressure-repair-original-3",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T145923944Z-ssr-fresh-baseline-claude-pressure-repair-dd0528fe-9c2e-453b-9d51-364a0cc86908-xqzjqcbb.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T145923944Z-ssr-fresh-baseline-claude-pressure-repair-dd0528fe-9c2e-453b-9d51-364a0cc86908-xqzjqcbb.json",
           "sha256": "db43d7338aae5fc6e83542d5ba730b6d4f0102103ec3e2b6a3aaff4f2a8f399d",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -1040,7 +1061,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T150258329Z-ssr-fresh-baseline-claude-invocation-change-8613798d-37dc-47f8-8e9f-7e69da84f23e-7mkn53gb",
@@ -1054,9 +1075,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-invocation-change-original-3",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T150258329Z-ssr-fresh-baseline-claude-invocation-change-8613798d-37dc-47f8-8e9f-7e69da84f23e-7mkn53gb.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T150258329Z-ssr-fresh-baseline-claude-invocation-change-8613798d-37dc-47f8-8e9f-7e69da84f23e-7mkn53gb.json",
           "sha256": "1a2b7096f87b60158be693263f73b2d1297b72c6bd13937539048583ab53a06b",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -1088,7 +1110,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T150542611Z-ssr-fresh-baseline-claude-discovery-shiv-12060293-68fc-4aad-b179-1167dd86712b-d9tpcdl7",
@@ -1102,9 +1124,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-discovery-shiv-original-3",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T150542611Z-ssr-fresh-baseline-claude-discovery-shiv-12060293-68fc-4aad-b179-1167dd86712b-d9tpcdl7.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T150542611Z-ssr-fresh-baseline-claude-discovery-shiv-12060293-68fc-4aad-b179-1167dd86712b-d9tpcdl7.json",
           "sha256": "c161eaa0a28c72cd86c42bbec812c5a63929322fbb7c2cdecdc37135b759f013",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -1136,7 +1159,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T150908932Z-ssr-fresh-baseline-claude-moved-guide-091246d0-6355-4742-8d11-60c79a334d60-xqh45qhl",
@@ -1150,9 +1173,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-moved-guide-original-3",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T150908932Z-ssr-fresh-baseline-claude-moved-guide-091246d0-6355-4742-8d11-60c79a334d60-xqh45qhl.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T150908932Z-ssr-fresh-baseline-claude-moved-guide-091246d0-6355-4742-8d11-60c79a334d60-xqh45qhl.json",
           "sha256": "fd5a873b2b7e4f5bd91f5ae2311319c72c1e8e0af09923359a417513ac4cc881",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -1184,7 +1208,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T151152899Z-ssr-fresh-baseline-claude-invocation-review-1c771284-cce6-4c17-9a76-75631a628fa9-0ugswiob",
@@ -1198,9 +1222,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-invocation-review-original-3",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T151152899Z-ssr-fresh-baseline-claude-invocation-review-1c771284-cce6-4c17-9a76-75631a628fa9-0ugswiob.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T151152899Z-ssr-fresh-baseline-claude-invocation-review-1c771284-cce6-4c17-9a76-75631a628fa9-0ugswiob.json",
           "sha256": "dc3384ad09e68d4ee2aaa0f3ab112adfbe56ad24cbe35cecf99ef5451cf20813",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -1232,7 +1257,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T151431129Z-ssr-fresh-baseline-claude-initiating-change-3c7e4f2c-8af5-4423-910b-db05a116f204-d4zzzylp",
@@ -1246,9 +1271,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-initiating-change-original-3",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T151431129Z-ssr-fresh-baseline-claude-initiating-change-3c7e4f2c-8af5-4423-910b-db05a116f204-d4zzzylp.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T151431129Z-ssr-fresh-baseline-claude-initiating-change-3c7e4f2c-8af5-4423-910b-db05a116f204-d4zzzylp.json",
           "sha256": "e0357a7bc9a97685d542971f686531b7dc9ed244cd251b3722915893d62d773e",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -1280,7 +1306,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T151757646Z-ssr-fresh-baseline-claude-local-change-4c599697-2687-401b-93eb-3e0fbc6a975a-79v3yqvp",
@@ -1294,9 +1320,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-local-change-original-3",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T151757646Z-ssr-fresh-baseline-claude-local-change-4c599697-2687-401b-93eb-3e0fbc6a975a-79v3yqvp.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T151757646Z-ssr-fresh-baseline-claude-local-change-4c599697-2687-401b-93eb-3e0fbc6a975a-79v3yqvp.json",
           "sha256": "fe4785c994356aedc1d6d59e60889ae2103e61ad0f2777949c002e3b8f9ef6cb",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -1328,7 +1355,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T151952741Z-ssr-fresh-baseline-claude-large-sweep-account-e095dbe9-2cff-4393-8ce1-9064735d0318-18kn89x1",
@@ -1342,9 +1369,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-large-sweep-account-original-3",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T151952741Z-ssr-fresh-baseline-claude-large-sweep-account-e095dbe9-2cff-4393-8ce1-9064735d0318-18kn89x1.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T151952741Z-ssr-fresh-baseline-claude-large-sweep-account-e095dbe9-2cff-4393-8ce1-9064735d0318-18kn89x1.json",
           "sha256": "415017071786ff1a0f2749fbe378d9cc5565b85af02dce5812709b85cf5e627f",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -1376,7 +1404,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T152133449Z-ssr-fresh-baseline-claude-invocation-verification-7453fd6b-7f8e-4fc4-b52e-538078febd11-_iugsv9g",
@@ -1390,9 +1418,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-invocation-verification-original-3",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T152133449Z-ssr-fresh-baseline-claude-invocation-verification-7453fd6b-7f8e-4fc4-b52e-538078febd11-_iugsv9g.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T152133449Z-ssr-fresh-baseline-claude-invocation-verification-7453fd6b-7f8e-4fc4-b52e-538078febd11-_iugsv9g.json",
           "sha256": "3a80301f434958833a334510fac34b5f81fc634f9aae17b625df59f57a1101d1",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -1424,7 +1453,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T152257755Z-ssr-fresh-baseline-claude-invocation-unrelated-db34e4dd-44d4-4d32-a2d3-8b4fd0495151-nv1tayfe",
@@ -1438,9 +1467,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-invocation-unrelated-original-3",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T152257755Z-ssr-fresh-baseline-claude-invocation-unrelated-db34e4dd-44d4-4d32-a2d3-8b4fd0495151-nv1tayfe.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T152257755Z-ssr-fresh-baseline-claude-invocation-unrelated-db34e4dd-44d4-4d32-a2d3-8b4fd0495151-nv1tayfe.json",
           "sha256": "0b431f25cad3f3525e0877f5ef045ddec008eb9a0bc8a86ec64e7d0665d1fec9",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -1472,7 +1502,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T152558462Z-ssr-fresh-baseline-claude-pressure-repair-84e9e455-5b05-4bc1-9196-e6701b29d180-jjt0x2z7",
@@ -1486,9 +1516,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-pressure-repair-original-4",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T152558462Z-ssr-fresh-baseline-claude-pressure-repair-84e9e455-5b05-4bc1-9196-e6701b29d180-jjt0x2z7.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T152558462Z-ssr-fresh-baseline-claude-pressure-repair-84e9e455-5b05-4bc1-9196-e6701b29d180-jjt0x2z7.json",
           "sha256": "546732f0d78bd44363512226259c2ff05e75e14b5d8988ccff13f41e8fb33416",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -1520,7 +1551,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T152833925Z-ssr-fresh-baseline-claude-invocation-change-e19ab63b-b264-473a-ac4e-6e82e6de8d7e-g_2crf12",
@@ -1534,9 +1565,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-invocation-change-original-4",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T152833925Z-ssr-fresh-baseline-claude-invocation-change-e19ab63b-b264-473a-ac4e-6e82e6de8d7e-g_2crf12.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T152833925Z-ssr-fresh-baseline-claude-invocation-change-e19ab63b-b264-473a-ac4e-6e82e6de8d7e-g_2crf12.json",
           "sha256": "5f3f5c36dbcb0db835693c95aba9e39ab0b51983cdc4759e996a1f70bc09958e",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -1568,7 +1600,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T153052393Z-ssr-fresh-baseline-claude-discovery-shiv-154d57c7-7497-4c7f-a3e2-bfd98dbf9e86-6ym5l74b",
@@ -1582,9 +1614,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-discovery-shiv-original-4",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T153052393Z-ssr-fresh-baseline-claude-discovery-shiv-154d57c7-7497-4c7f-a3e2-bfd98dbf9e86-6ym5l74b.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T153052393Z-ssr-fresh-baseline-claude-discovery-shiv-154d57c7-7497-4c7f-a3e2-bfd98dbf9e86-6ym5l74b.json",
           "sha256": "7505d3c245cd0b87577a2283dcc4198e84327cc389a6568a1bc5dd825ff89a2f",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -1616,7 +1649,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T153330184Z-ssr-fresh-baseline-claude-moved-guide-45aa004a-7e30-4fe8-b3a1-08d265a7f9fd-rx7pg01j",
@@ -1630,9 +1663,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-moved-guide-original-4",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T153330184Z-ssr-fresh-baseline-claude-moved-guide-45aa004a-7e30-4fe8-b3a1-08d265a7f9fd-rx7pg01j.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T153330184Z-ssr-fresh-baseline-claude-moved-guide-45aa004a-7e30-4fe8-b3a1-08d265a7f9fd-rx7pg01j.json",
           "sha256": "f2d16b9837e1ac59986c569542479879fd428361be3bde88c2f10a42e1d32a71",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -1664,7 +1698,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T153612696Z-ssr-fresh-baseline-claude-invocation-review-2081e659-8d60-4324-afc0-f5ebfa0c4d22-vacmr7m9",
@@ -1678,9 +1712,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-invocation-review-original-4",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T153612696Z-ssr-fresh-baseline-claude-invocation-review-2081e659-8d60-4324-afc0-f5ebfa0c4d22-vacmr7m9.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T153612696Z-ssr-fresh-baseline-claude-invocation-review-2081e659-8d60-4324-afc0-f5ebfa0c4d22-vacmr7m9.json",
           "sha256": "28f12129a8d23f84bfe9e619e9ebbe2a54137fd15c0dfc16852614bc424dca51",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -1712,7 +1747,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T154039670Z-ssr-fresh-baseline-claude-initiating-change-12316756-3c3c-4aa3-9ead-36e703708698-g32nx_jz",
@@ -1726,9 +1761,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-initiating-change-original-4",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T154039670Z-ssr-fresh-baseline-claude-initiating-change-12316756-3c3c-4aa3-9ead-36e703708698-g32nx_jz.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T154039670Z-ssr-fresh-baseline-claude-initiating-change-12316756-3c3c-4aa3-9ead-36e703708698-g32nx_jz.json",
           "sha256": "d66731829acbd495737137c415b626e93e5bf9bd5afd31dfb8c90c789affc63c",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -1760,7 +1796,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T154411925Z-ssr-fresh-baseline-claude-local-change-4e61e909-5fe9-4f58-95a7-336646bc7e04-_d0w7c_0",
@@ -1774,9 +1810,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-local-change-original-4",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T154411925Z-ssr-fresh-baseline-claude-local-change-4e61e909-5fe9-4f58-95a7-336646bc7e04-_d0w7c_0.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T154411925Z-ssr-fresh-baseline-claude-local-change-4e61e909-5fe9-4f58-95a7-336646bc7e04-_d0w7c_0.json",
           "sha256": "c4f942c471e6ef6395329c74eaa92a2a37ec1020bf145ddff99e2a26cc406f8d",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -1808,7 +1845,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T154705661Z-ssr-fresh-baseline-claude-large-sweep-account-11b425ee-f540-432b-9a5d-f022e82450f0-sdk7tczx",
@@ -1822,9 +1859,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-large-sweep-account-original-4",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T154705661Z-ssr-fresh-baseline-claude-large-sweep-account-11b425ee-f540-432b-9a5d-f022e82450f0-sdk7tczx.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T154705661Z-ssr-fresh-baseline-claude-large-sweep-account-11b425ee-f540-432b-9a5d-f022e82450f0-sdk7tczx.json",
           "sha256": "a5eb8456a8de794d947f26d588503e6a629db79ab434b63a19622a2fbab8e27b",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -1856,7 +1894,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T154902871Z-ssr-fresh-baseline-claude-invocation-verification-beff7296-324b-4dc7-bd8d-24939acebb63-8nvxww1q",
@@ -1870,9 +1908,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-invocation-verification-original-4",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T154902871Z-ssr-fresh-baseline-claude-invocation-verification-beff7296-324b-4dc7-bd8d-24939acebb63-8nvxww1q.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T154902871Z-ssr-fresh-baseline-claude-invocation-verification-beff7296-324b-4dc7-bd8d-24939acebb63-8nvxww1q.json",
           "sha256": "b4c72c7e711134b8a7cb0c65282daffd91204bff81dcea5bda02410630333dad",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -1904,7 +1943,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T155130112Z-ssr-fresh-baseline-claude-invocation-unrelated-333abd40-95d8-410b-8c83-1d76685fa61d-b67wjgff",
@@ -1918,9 +1957,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-invocation-unrelated-original-4",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T155130112Z-ssr-fresh-baseline-claude-invocation-unrelated-333abd40-95d8-410b-8c83-1d76685fa61d-b67wjgff.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T155130112Z-ssr-fresh-baseline-claude-invocation-unrelated-333abd40-95d8-410b-8c83-1d76685fa61d-b67wjgff.json",
           "sha256": "5593701d275a842775835746c923448bc6783c00ef022f23e743f5b088100787",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -1952,7 +1992,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T155839032Z-ssr-fresh-baseline-claude-pressure-repair-0d785870-e06c-4285-8816-f7592b2e0dbb-5xd49rt8",
@@ -1966,9 +2006,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-pressure-repair-original-5",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T155839032Z-ssr-fresh-baseline-claude-pressure-repair-0d785870-e06c-4285-8816-f7592b2e0dbb-5xd49rt8.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T155839032Z-ssr-fresh-baseline-claude-pressure-repair-0d785870-e06c-4285-8816-f7592b2e0dbb-5xd49rt8.json",
           "sha256": "a6656e0092cb9d2336f2669eba21bf46cdd6e2ab6ea498a0f6df536b912849dd",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -2000,7 +2041,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T160116860Z-ssr-fresh-baseline-claude-invocation-change-83c21cc6-9114-4418-833c-d400fbd63fd6-xpgg4yv8",
@@ -2014,9 +2055,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-invocation-change-original-5",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T160116860Z-ssr-fresh-baseline-claude-invocation-change-83c21cc6-9114-4418-833c-d400fbd63fd6-xpgg4yv8.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T160116860Z-ssr-fresh-baseline-claude-invocation-change-83c21cc6-9114-4418-833c-d400fbd63fd6-xpgg4yv8.json",
           "sha256": "c6e4408360055f62d6818b9ac5b140ec45c43422a255ba71e9e34a7e48d6670c",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -2048,7 +2090,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T160403275Z-ssr-fresh-baseline-claude-discovery-shiv-68f079bc-6b6e-474e-a153-b43c5b2f6d4c-_5a6h6x8",
@@ -2062,9 +2104,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-discovery-shiv-original-5",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T160403275Z-ssr-fresh-baseline-claude-discovery-shiv-68f079bc-6b6e-474e-a153-b43c5b2f6d4c-_5a6h6x8.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T160403275Z-ssr-fresh-baseline-claude-discovery-shiv-68f079bc-6b6e-474e-a153-b43c5b2f6d4c-_5a6h6x8.json",
           "sha256": "1684db531757ad031eb6fbe2be9ee2fe81a0d22c06b4a75a403e22e0a4b420e1",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -2096,7 +2139,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T160936719Z-ssr-fresh-baseline-claude-moved-guide-6f8fe2b0-7064-417d-9011-c12f818448ea-glsel8dw",
@@ -2110,9 +2153,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-moved-guide-original-5",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T160936719Z-ssr-fresh-baseline-claude-moved-guide-6f8fe2b0-7064-417d-9011-c12f818448ea-glsel8dw.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T160936719Z-ssr-fresh-baseline-claude-moved-guide-6f8fe2b0-7064-417d-9011-c12f818448ea-glsel8dw.json",
           "sha256": "2411e705e5882f9a553eaba17296020c65f4d01bdd8cfb22dc3477e8aab0cc0e",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -2144,7 +2188,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T161324956Z-ssr-fresh-baseline-claude-invocation-review-d05e7008-9768-48af-a8e1-420149ccdfe2-pk1a3eir",
@@ -2158,9 +2202,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-invocation-review-original-5",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T161324956Z-ssr-fresh-baseline-claude-invocation-review-d05e7008-9768-48af-a8e1-420149ccdfe2-pk1a3eir.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T161324956Z-ssr-fresh-baseline-claude-invocation-review-d05e7008-9768-48af-a8e1-420149ccdfe2-pk1a3eir.json",
           "sha256": "33eed4aaf8750b0abbd8f6136bf37fe6d67d77059f524701793da488614b2dc8",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -2192,7 +2237,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T161553232Z-ssr-fresh-baseline-claude-initiating-change-56f75d7a-28d0-44e7-9e1b-3d0090855e8b-o3h6qn0l",
@@ -2206,9 +2251,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-initiating-change-original-5",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T161553232Z-ssr-fresh-baseline-claude-initiating-change-56f75d7a-28d0-44e7-9e1b-3d0090855e8b-o3h6qn0l.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T161553232Z-ssr-fresh-baseline-claude-initiating-change-56f75d7a-28d0-44e7-9e1b-3d0090855e8b-o3h6qn0l.json",
           "sha256": "3c4eca53f93ffee82b1a2d96b5f18b7b2b8eec6926a334da9794896b08569861",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -2240,7 +2286,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T161848074Z-ssr-fresh-baseline-claude-local-change-98477fce-360b-4ca2-849d-103f6e71019b-k68ok8r7",
@@ -2254,9 +2300,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-local-change-original-5",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T161848074Z-ssr-fresh-baseline-claude-local-change-98477fce-360b-4ca2-849d-103f6e71019b-k68ok8r7.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T161848074Z-ssr-fresh-baseline-claude-local-change-98477fce-360b-4ca2-849d-103f6e71019b-k68ok8r7.json",
           "sha256": "1f75144db9d7f1544564b4a553c5402fcf38c1b2fbeceab26a3440368d20af1a",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -2288,7 +2335,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T162101109Z-ssr-fresh-baseline-claude-large-sweep-account-17cbd519-3b07-47a2-9746-35fa55066946-l7tm64gk",
@@ -2302,9 +2349,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-large-sweep-account-original-5",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T162101109Z-ssr-fresh-baseline-claude-large-sweep-account-17cbd519-3b07-47a2-9746-35fa55066946-l7tm64gk.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T162101109Z-ssr-fresh-baseline-claude-large-sweep-account-17cbd519-3b07-47a2-9746-35fa55066946-l7tm64gk.json",
           "sha256": "dec703fc05b34523c15f54b20efee612cae9f5bb968e9938eeb21363a904d7b2",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -2336,7 +2384,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T162317917Z-ssr-fresh-baseline-claude-invocation-verification-d9121315-6e88-4289-8d14-b85694dd6c44-7_y0e0rd",
@@ -2350,9 +2398,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-invocation-verification-original-5",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T162317917Z-ssr-fresh-baseline-claude-invocation-verification-d9121315-6e88-4289-8d14-b85694dd6c44-7_y0e0rd.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T162317917Z-ssr-fresh-baseline-claude-invocation-verification-d9121315-6e88-4289-8d14-b85694dd6c44-7_y0e0rd.json",
           "sha256": "bfe298dac399c2c50d75512cbc32b292060cd178f625e97e2f68c0700baec60b",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     },
@@ -2384,7 +2433,7 @@
         "charge": 1
       },
       "limitations": [
-        "Original-only exposed baseline; active-session score retained externally pending canonical publication."
+        "Exposed original-only development baseline; provider/runtime and native-loading limits retained in the assessment."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/subjects/20261026T162459763Z-ssr-fresh-baseline-claude-invocation-unrelated-11234588-1850-4f36-9ac3-ab1f1f36364c-hh5avelg",
@@ -2398,9 +2447,10 @@
       "result": {
         "result_id": "fresh-baseline-opus-01-invocation-unrelated-original-5",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/scores/20261026T162459763Z-ssr-fresh-baseline-claude-invocation-unrelated-11234588-1850-4f36-9ac3-ab1f1f36364c-hh5avelg.json",
+          "path": "skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T162459763Z-ssr-fresh-baseline-claude-invocation-unrelated-11234588-1850-4f36-9ac3-ab1f1f36364c-hh5avelg.json",
           "sha256": "efee15713b290962a380f2b532ce0a9d3d3970559d925dd5440be68be21c9fcf",
-          "version": "2"
+          "version": "2",
+          "git_revision": "5ef277111a4aabf36d18810f3dd34fef7a98a879"
         }
       }
     }

@@ -1,0 +1,265 @@
+{
+  "schema_version": "0.2",
+  "id": "ssr-fresh-original-codex-native-positive-review",
+  "prompt": "../prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/INTERPRETATION.md",
+      "target": "INTERPRETATION.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/criteria/invocation-change-expected.md",
+      "target": "criteria/invocation-change-expected.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/criteria/invocation-change-inherited.md",
+      "target": "criteria/invocation-change-inherited.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/criteria/invocation-change.md",
+      "target": "criteria/invocation-change.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/criteria/invocation-review-expected.json",
+      "target": "criteria/invocation-review-expected.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/criteria/invocation-review-inherited.md",
+      "target": "criteria/invocation-review-inherited.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/criteria/invocation-review.md",
+      "target": "criteria/invocation-review.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/facts/20261026T134245334Z-ssr-fresh-baseline-codex-invocation-change-f0f0a9ee-37d0-466b-abf4-4ba50bb9030e-8joxuexg.json",
+      "target": "facts/20261026T134245334Z-ssr-fresh-baseline-codex-invocation-change-f0f0a9ee-37d0-466b-abf4-4ba50bb9030e-8joxuexg.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/facts/20261026T135904152Z-ssr-fresh-baseline-codex-invocation-review-31649107-f152-4b8b-8e2c-a16167e02426-3ywc8wq4.json",
+      "target": "facts/20261026T135904152Z-ssr-fresh-baseline-codex-invocation-review-31649107-f152-4b8b-8e2c-a16167e02426-3ywc8wq4.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/facts/20261026T143618995Z-ssr-fresh-baseline-codex-invocation-change-8e62c8d0-fd1b-476d-9bce-ad7d42e475df-x9tj5hw9.json",
+      "target": "facts/20261026T143618995Z-ssr-fresh-baseline-codex-invocation-change-8e62c8d0-fd1b-476d-9bce-ad7d42e475df-x9tj5hw9.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/facts/20261026T144440056Z-ssr-fresh-baseline-codex-invocation-review-b52a9798-cc51-40b4-a3ff-6449616186ec-0u6xy1kc.json",
+      "target": "facts/20261026T144440056Z-ssr-fresh-baseline-codex-invocation-review-b52a9798-cc51-40b4-a3ff-6449616186ec-0u6xy1kc.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/facts/20261026T150117283Z-ssr-fresh-baseline-codex-invocation-change-dbb48864-3418-4976-8f5f-8e1dac46c320-1hlsr6yu.json",
+      "target": "facts/20261026T150117283Z-ssr-fresh-baseline-codex-invocation-change-dbb48864-3418-4976-8f5f-8e1dac46c320-1hlsr6yu.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/facts/20261026T151006832Z-ssr-fresh-baseline-codex-invocation-review-8b77a4cc-a528-4553-98bc-77150e8feb14-yxaiykrt.json",
+      "target": "facts/20261026T151006832Z-ssr-fresh-baseline-codex-invocation-review-8b77a4cc-a528-4553-98bc-77150e8feb14-yxaiykrt.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/facts/20261026T152934740Z-ssr-fresh-baseline-codex-invocation-change-851ff07c-9b8e-48ae-900d-01569aa001d2-m67mwqvl.json",
+      "target": "facts/20261026T152934740Z-ssr-fresh-baseline-codex-invocation-change-851ff07c-9b8e-48ae-900d-01569aa001d2-m67mwqvl.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/facts/20261026T153813745Z-ssr-fresh-baseline-codex-invocation-review-b193f5c0-6ae0-4a5a-ad1e-3d0131b94cc8-070pzqtm.json",
+      "target": "facts/20261026T153813745Z-ssr-fresh-baseline-codex-invocation-review-b193f5c0-6ae0-4a5a-ad1e-3d0131b94cc8-070pzqtm.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/facts/20261026T155930969Z-ssr-fresh-baseline-codex-invocation-change-badd3adf-2c86-44de-8ec8-10e60e2a784b-juvar6m0.json",
+      "target": "facts/20261026T155930969Z-ssr-fresh-baseline-codex-invocation-change-badd3adf-2c86-44de-8ec8-10e60e2a784b-juvar6m0.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/facts/20261026T161052183Z-ssr-fresh-baseline-codex-invocation-review-6a00071d-9d44-495d-9ed6-c3d29526328e-s2cddd8y.json",
+      "target": "facts/20261026T161052183Z-ssr-fresh-baseline-codex-invocation-review-6a00071d-9d44-495d-9ed6-c3d29526328e-s2cddd8y.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/001.txt",
+      "target": "objects/001.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/002.txt",
+      "target": "objects/002.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/003.txt",
+      "target": "objects/003.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/004.txt",
+      "target": "objects/004.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/005.txt",
+      "target": "objects/005.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/006.txt",
+      "target": "objects/006.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/007.txt",
+      "target": "objects/007.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/008.txt",
+      "target": "objects/008.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/009.txt",
+      "target": "objects/009.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/010.txt",
+      "target": "objects/010.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/011.txt",
+      "target": "objects/011.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/012.txt",
+      "target": "objects/012.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/013.txt",
+      "target": "objects/013.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/014.txt",
+      "target": "objects/014.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/015.txt",
+      "target": "objects/015.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/016.txt",
+      "target": "objects/016.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/017.txt",
+      "target": "objects/017.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/018.txt",
+      "target": "objects/018.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/019.txt",
+      "target": "objects/019.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/020.txt",
+      "target": "objects/020.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/021.txt",
+      "target": "objects/021.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/022.txt",
+      "target": "objects/022.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/023.txt",
+      "target": "objects/023.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/024.txt",
+      "target": "objects/024.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/025.txt",
+      "target": "objects/025.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/026.txt",
+      "target": "objects/026.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/027.txt",
+      "target": "objects/027.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/028.txt",
+      "target": "objects/028.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/029.txt",
+      "target": "objects/029.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/030.txt",
+      "target": "objects/030.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/031.txt",
+      "target": "objects/031.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/032.txt",
+      "target": "objects/032.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/033.txt",
+      "target": "objects/033.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/outputs/20261026T134245334Z-ssr-fresh-baseline-codex-invocation-change-f0f0a9ee-37d0-466b-abf4-4ba50bb9030e-8joxuexg.md",
+      "target": "outputs/20261026T134245334Z-ssr-fresh-baseline-codex-invocation-change-f0f0a9ee-37d0-466b-abf4-4ba50bb9030e-8joxuexg.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/outputs/20261026T135904152Z-ssr-fresh-baseline-codex-invocation-review-31649107-f152-4b8b-8e2c-a16167e02426-3ywc8wq4.md",
+      "target": "outputs/20261026T135904152Z-ssr-fresh-baseline-codex-invocation-review-31649107-f152-4b8b-8e2c-a16167e02426-3ywc8wq4.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/outputs/20261026T143618995Z-ssr-fresh-baseline-codex-invocation-change-8e62c8d0-fd1b-476d-9bce-ad7d42e475df-x9tj5hw9.md",
+      "target": "outputs/20261026T143618995Z-ssr-fresh-baseline-codex-invocation-change-8e62c8d0-fd1b-476d-9bce-ad7d42e475df-x9tj5hw9.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/outputs/20261026T144440056Z-ssr-fresh-baseline-codex-invocation-review-b52a9798-cc51-40b4-a3ff-6449616186ec-0u6xy1kc.md",
+      "target": "outputs/20261026T144440056Z-ssr-fresh-baseline-codex-invocation-review-b52a9798-cc51-40b4-a3ff-6449616186ec-0u6xy1kc.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/outputs/20261026T150117283Z-ssr-fresh-baseline-codex-invocation-change-dbb48864-3418-4976-8f5f-8e1dac46c320-1hlsr6yu.md",
+      "target": "outputs/20261026T150117283Z-ssr-fresh-baseline-codex-invocation-change-dbb48864-3418-4976-8f5f-8e1dac46c320-1hlsr6yu.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/outputs/20261026T151006832Z-ssr-fresh-baseline-codex-invocation-review-8b77a4cc-a528-4553-98bc-77150e8feb14-yxaiykrt.md",
+      "target": "outputs/20261026T151006832Z-ssr-fresh-baseline-codex-invocation-review-8b77a4cc-a528-4553-98bc-77150e8feb14-yxaiykrt.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/outputs/20261026T152934740Z-ssr-fresh-baseline-codex-invocation-change-851ff07c-9b8e-48ae-900d-01569aa001d2-m67mwqvl.md",
+      "target": "outputs/20261026T152934740Z-ssr-fresh-baseline-codex-invocation-change-851ff07c-9b8e-48ae-900d-01569aa001d2-m67mwqvl.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/outputs/20261026T153813745Z-ssr-fresh-baseline-codex-invocation-review-b193f5c0-6ae0-4a5a-ad1e-3d0131b94cc8-070pzqtm.md",
+      "target": "outputs/20261026T153813745Z-ssr-fresh-baseline-codex-invocation-review-b193f5c0-6ae0-4a5a-ad1e-3d0131b94cc8-070pzqtm.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/outputs/20261026T155930969Z-ssr-fresh-baseline-codex-invocation-change-badd3adf-2c86-44de-8ec8-10e60e2a784b-juvar6m0.md",
+      "target": "outputs/20261026T155930969Z-ssr-fresh-baseline-codex-invocation-change-badd3adf-2c86-44de-8ec8-10e60e2a784b-juvar6m0.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/outputs/20261026T161052183Z-ssr-fresh-baseline-codex-invocation-review-6a00071d-9d44-495d-9ed6-c3d29526328e-s2cddd8y.md",
+      "target": "outputs/20261026T161052183Z-ssr-fresh-baseline-codex-invocation-review-6a00071d-9d44-495d-9ed6-c3d29526328e-s2cddd8y.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/policy.txt",
+      "target": "policy.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/prior-assessment.md",
+      "target": "prior-assessment.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}

@@ -1,0 +1,301 @@
+{
+  "packet_id": "codex-semantic-pressure",
+  "output_count": 10,
+  "functional_factors": 30,
+  "subject_indexes": [
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/fresh-baseline-codex-01-run-index.json",
+      "sha256": "25ae33b9a78e6d048e3cf1a8b3fc48d23933a882fbbbfd08622417cb57629369"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/fresh-baseline-opus-01-run-index.json",
+      "sha256": "172feb89fcb3bed2f2398960b10c2943d776fc5939e13d4daa7a1adaaff7e046"
+    }
+  ],
+  "reuse": {
+    "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/reuse.json",
+    "sha256": "5190a949c00ec5ad4ff17947e13d312cbbf30da8e52f0af0b0e660021cf218ed"
+  },
+  "subject_assessments": [
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T133436927Z-ssr-fresh-baseline-codex-semantic-delivery-a705672d-b862-4541-af12-d3d88b5d2742-f3puqmj4.json",
+      "sha256": "29bb99de13a3a2d85e075c4de705105c9ebe1ef91597bffaebee9b210432dd94"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T143111482Z-ssr-fresh-baseline-codex-semantic-delivery-5980d576-4a6c-47ea-b04b-399ddcf459be-mmghqytm.json",
+      "sha256": "d2585b9a404144a279fe50723eba2219342590c6cf752623f3465c81ab49991a"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T145614690Z-ssr-fresh-baseline-codex-semantic-delivery-cbec7a28-8fdd-46a7-ad5f-e572c40d8bfb-x3551ydz.json",
+      "sha256": "88bbab89dc43256f95625aa2ef0432e0154411f8152f689c0c1171fe2a88ed7b"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T152435135Z-ssr-fresh-baseline-codex-semantic-delivery-ad65b54c-58b4-45dd-82eb-564814ede4a6-ev4tkama.json",
+      "sha256": "a933e7c281086d08e3aad29cbcf7400834f3b83949c82ec8f93e11e117e9c7f2"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T155347173Z-ssr-fresh-baseline-codex-semantic-delivery-184d95f2-da8b-4178-9baa-4e31afca4d9e-2nu79qkx.json",
+      "sha256": "b9a54f7c05166d6fb13476e75eb2b15f17a5279c354c44d22dbd40c2258f1e97"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T133837444Z-ssr-fresh-baseline-codex-pressure-repair-6467a052-3123-4706-9938-82a12b6a0cc8-8_okcgbk.json",
+      "sha256": "70c3e40f4db9aea29b82d767537c0e812ab224ee3828f78da8febb4fc1c0009d"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T143412498Z-ssr-fresh-baseline-codex-pressure-repair-9e9e6183-27a3-42e7-8985-782d677d97dd-tsskre8q.json",
+      "sha256": "6a4e49b8285f3f8b5161872a7651ce56fef10f64dcf61a418677419e4e2219f2"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T145759014Z-ssr-fresh-baseline-codex-pressure-repair-257cd5f9-61d7-4a47-90dc-d60334c40686-gp86ilqn.json",
+      "sha256": "eefe97fdbfc4fc53dd382f635701d763cd0a99546cd9b5facf6e0bb2c4349f34"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T152652005Z-ssr-fresh-baseline-codex-pressure-repair-88adacf2-1128-4b8a-bb92-ec7756839f0b-tecko1da.json",
+      "sha256": "9394a4b3d6c8ac7aac2e20b73a27d20f68dd03a604c48dbff1ac97733003f3c2"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T155641100Z-ssr-fresh-baseline-codex-pressure-repair-adfd498a-0d27-4549-9410-3914f16f5b02-opye7i2r.json",
+      "sha256": "6e7412bfcb800477b8654f4d6cc265a6a3b779c365876b9689336eed265ec13e"
+    }
+  ],
+  "configuration": {
+    "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/evaluation/codex-semantic-pressure/config.json",
+    "sha256": "89d22f116a8417d6c28ab7ce5664c459d53aa747a479f235c1da3eb33340b8a5"
+  },
+  "prompt": {
+    "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/evaluation/prompt.md",
+    "sha256": "6e5dd9cf0a64d845a0dbc32a1e80aa47cc22aadb03aedabdc8786c06e62dbecb"
+  },
+  "input_files": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/EVALUATION-INDEX.json",
+      "sha256": "b72200653cf273336b77d7f13e288ea96519f01d66dcce05e9bb49b752eac8ee"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/INTERPRETATION.md",
+      "sha256": "9c28f8007771c66916c7920fda0e7036a20b0eeb41866c8248f55fb308b22d8a"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/criteria/pressure-repair-expected.json",
+      "sha256": "1eccde02cbd1523e4d99a90359fae1d45b494c13a3d4691df83b0b0ab9a011fa"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/criteria/pressure-repair-inherited.md",
+      "sha256": "3891be235b0f254637363e5f867ad707d0c1152024b447f78d4097301c10079d"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/criteria/pressure-repair.md",
+      "sha256": "39bf19c96cd51da9c06315f1f90730568625f4da8c7df5dd89b75815315d6d07"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/criteria/semantic-delivery-expected.json",
+      "sha256": "1eccde02cbd1523e4d99a90359fae1d45b494c13a3d4691df83b0b0ab9a011fa"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/criteria/semantic-delivery-inherited.md",
+      "sha256": "bae6463893e23dba7238e0de74d0accb1ced5d4e22ad04cb7f17bfcebc557253"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/criteria/semantic-delivery.md",
+      "sha256": "dddcd3836d7e419a7c7a0d4e29237bfcc1b7b7604b7707d1b3e2e1b954ffc79a"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/facts/20261026T133436927Z-ssr-fresh-baseline-codex-semantic-delivery-a705672d-b862-4541-af12-d3d88b5d2742-f3puqmj4.json",
+      "sha256": "4c81e8be027d56712862a8fe7f26d1ef0618fd5ae39f4eae8fa58cf39d88b16a"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/facts/20261026T133837444Z-ssr-fresh-baseline-codex-pressure-repair-6467a052-3123-4706-9938-82a12b6a0cc8-8_okcgbk.json",
+      "sha256": "7419910af5ad8f91f45038dc8d0685864aa9b5cbddc90c660533d2012b57dd85"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/facts/20261026T143111482Z-ssr-fresh-baseline-codex-semantic-delivery-5980d576-4a6c-47ea-b04b-399ddcf459be-mmghqytm.json",
+      "sha256": "a9deeb600e72e9517e1e144a057b14952548e6b54816bc2714442a15e46fe4c6"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/facts/20261026T143412498Z-ssr-fresh-baseline-codex-pressure-repair-9e9e6183-27a3-42e7-8985-782d677d97dd-tsskre8q.json",
+      "sha256": "3d7674414170f4f77e6947d4ef56c404c5c7bf0f21c72c5d7ef7df3549721bfe"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/facts/20261026T145614690Z-ssr-fresh-baseline-codex-semantic-delivery-cbec7a28-8fdd-46a7-ad5f-e572c40d8bfb-x3551ydz.json",
+      "sha256": "53987652d14e7e5ddda337726e68c5a3659f33ae218c2139d9fb458ac032c5ce"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/facts/20261026T145759014Z-ssr-fresh-baseline-codex-pressure-repair-257cd5f9-61d7-4a47-90dc-d60334c40686-gp86ilqn.json",
+      "sha256": "18cb21ed6c7f42e2a35f1c975313356060a67e3812f3bca0b7885f34aca53fec"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/facts/20261026T152435135Z-ssr-fresh-baseline-codex-semantic-delivery-ad65b54c-58b4-45dd-82eb-564814ede4a6-ev4tkama.json",
+      "sha256": "7bce81b6c4b6ca2159404302f865bd134933c34bae7db84da377a8f57ec85f0c"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/facts/20261026T152652005Z-ssr-fresh-baseline-codex-pressure-repair-88adacf2-1128-4b8a-bb92-ec7756839f0b-tecko1da.json",
+      "sha256": "67c72d578a394c60f94ce9df88b84cf4dbf161b658fb791f5cdbfdaf4d5e06d5"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/facts/20261026T155347173Z-ssr-fresh-baseline-codex-semantic-delivery-184d95f2-da8b-4178-9baa-4e31afca4d9e-2nu79qkx.json",
+      "sha256": "b6ec6b007a85557416169ac270672f7fb617c870fd34f347b152e95e7874bcc1"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/facts/20261026T155641100Z-ssr-fresh-baseline-codex-pressure-repair-adfd498a-0d27-4549-9410-3914f16f5b02-opye7i2r.json",
+      "sha256": "ab559f571066cce2ba49b2f3e03c5bed2700ca332fd527668236f171bf33a844"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/objects/001.txt",
+      "sha256": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/objects/002.txt",
+      "sha256": "1a4b23b1f53af5b7aa42ac8e72f59282374435831bd35f542c23bd7dfdccb6e3"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/objects/003.txt",
+      "sha256": "8d6d58a231c01678279d8e00ea0f03f9306c1b36a474b8cb4dd5967b657453bb"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/objects/004.txt",
+      "sha256": "7d3c3810c532bdd87af795cf543171deeaff0595e4a13f7fdee39e8dfdef18d2"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/objects/005.txt",
+      "sha256": "8e8a5cb48d7d3f3ca8e7212e9c29764f6e8f6cdaaf4f4d8d0762aaeaca906f1f"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/objects/006.txt",
+      "sha256": "ef7513eb13148ad5c6b215959ae917c6ef42a24050dc8df5ff64fe814dcfd376"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/objects/007.txt",
+      "sha256": "554df6c0a7d0bf116cc593c4fdf3384e8645ab98c7d4e38780637b75577cda52"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/objects/008.txt",
+      "sha256": "3a618d709d2be580ccb53f2f660822be9f90b091af41e3ce3b7aaed31e894eb0"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/objects/009.txt",
+      "sha256": "71160952f35e3a255d68cca629a0a66d79e3e4b4c30431786f6945a28ede54f3"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/objects/010.txt",
+      "sha256": "6c9685054ae4f4dd6f32a76a18401366e4206b829466367640370554bf33f683"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/objects/011.txt",
+      "sha256": "dcdfdbe795b034f87d6274200923a940603f0f96d4c728a8e773fcffbcad5e4f"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/objects/012.txt",
+      "sha256": "f68c833c2bb8d9ff8cee87db1d7bc0d79d5217684b1ac712ab25d43af74ab509"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/objects/013.txt",
+      "sha256": "c891b221c7e8e90e67a55ed09f312925c0989ba06ac426f454293b76bee5b891"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/objects/014.txt",
+      "sha256": "2436b0c68662c0128de007b48b5687e22cd43a86aa465029df6d71ca0c8a9dac"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/objects/015.txt",
+      "sha256": "7e3566cc4f0d51da1302368281a8b3b0f2f4e4ea92919c1ecbc2ce68b62d38f5"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/objects/016.txt",
+      "sha256": "8957e1a3d0a7362bd3504913fa38ac3bcbeb98a56309d15ec77735bd9604246d"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/objects/017.txt",
+      "sha256": "946a77884f4c5a8a451c3b0c10c3f80c96c60004b809eb44182869ef689fb80e"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/objects/018.txt",
+      "sha256": "4b00a08900bde52907fb6d538ad1fc8245b76d92b2cf29d76887b3f41118dcdc"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/objects/019.txt",
+      "sha256": "c02b7809abac11089ac9d7f8bb3212c3b9d10e15e4b8abfb1c6531f5640a4357"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/objects/020.txt",
+      "sha256": "69c173a7a35335918188b5968c02d6e449649f01d5a0d16f429b63121d314a24"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/objects/021.txt",
+      "sha256": "f2dd0ed83da1fcb53eaea0b250c77589096c7ef5edac94ddf6eb358fd0c38cce"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/objects/022.txt",
+      "sha256": "691e6a2a6e64042506675bbd34eed6ff0fc997ae28820a7f1ebb89e766dc34de"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/outputs/20261026T133436927Z-ssr-fresh-baseline-codex-semantic-delivery-a705672d-b862-4541-af12-d3d88b5d2742-f3puqmj4.md",
+      "sha256": "f91615cb556a9336fef021fd1ddfdf53b1a0654c6f36ec4ff9682ed058dfa51c"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/outputs/20261026T133837444Z-ssr-fresh-baseline-codex-pressure-repair-6467a052-3123-4706-9938-82a12b6a0cc8-8_okcgbk.md",
+      "sha256": "d73a10ad6c3c52f494f80a530853faf44b064e8b371eaaaaf87ea0aef1d49724"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/outputs/20261026T143111482Z-ssr-fresh-baseline-codex-semantic-delivery-5980d576-4a6c-47ea-b04b-399ddcf459be-mmghqytm.md",
+      "sha256": "b6ad5e6d16abde3119d6d38c98c516c1c924d9f766bff0ad86ffc2794ea27fa3"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/outputs/20261026T143412498Z-ssr-fresh-baseline-codex-pressure-repair-9e9e6183-27a3-42e7-8985-782d677d97dd-tsskre8q.md",
+      "sha256": "d360036cb6d6c8df123ef263647b9b0e604c720f151eb21c7a2b2558cee9fb22"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/outputs/20261026T145614690Z-ssr-fresh-baseline-codex-semantic-delivery-cbec7a28-8fdd-46a7-ad5f-e572c40d8bfb-x3551ydz.md",
+      "sha256": "5a741d448ac2ac8acc20a360c2131c17d95e2404522a1dd7c4f0fbd67f97208c"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/outputs/20261026T145759014Z-ssr-fresh-baseline-codex-pressure-repair-257cd5f9-61d7-4a47-90dc-d60334c40686-gp86ilqn.md",
+      "sha256": "3bb3f2426af8c7bf93b5d41038ce947972dbd718c43331ab85cc4b3a81e316da"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/outputs/20261026T152435135Z-ssr-fresh-baseline-codex-semantic-delivery-ad65b54c-58b4-45dd-82eb-564814ede4a6-ev4tkama.md",
+      "sha256": "c44b5faa7d126b00a0571058cae0114a44e9a045c10e64eb5b07e806c6842683"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/outputs/20261026T152652005Z-ssr-fresh-baseline-codex-pressure-repair-88adacf2-1128-4b8a-bb92-ec7756839f0b-tecko1da.md",
+      "sha256": "6719e07b03e21a97a3e49ce3ab97fef14ad40929ba95509f05c8032e6b8a1966"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/outputs/20261026T155347173Z-ssr-fresh-baseline-codex-semantic-delivery-184d95f2-da8b-4178-9baa-4e31afca4d9e-2nu79qkx.md",
+      "sha256": "f81c527a2d5a54dbeaa001a87c09858c5e2ba5fe04a46a71dd2c96ae2a10a65b"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/outputs/20261026T155641100Z-ssr-fresh-baseline-codex-pressure-repair-adfd498a-0d27-4549-9410-3914f16f5b02-opye7i2r.md",
+      "sha256": "fb65e42bcacda812f809e061dcc46452c70bc1b0c70acaad0b1c9dcacd5cd018"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/policy.txt",
+      "sha256": "5d057d11f678ae3fa63c48957446aded13ccc5dcb8babab2856d0232d49e08bb"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-semantic-pressure/prior-assessment.md",
+      "sha256": "d5c36b6696b2adac0a105f842b49857da7230f6d2ff57303a2a0991c6780f9cb"
+    }
+  ],
+  "controller": {
+    "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/controllers/ssr-fresh-reviews.py",
+    "sha256": "0a09e6f73355fd8c332cea034304cee8a11220f1e0edc8d8b98e061cdbe09858"
+  },
+  "controller_support": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/controllers/ssr-fresh-packets.py",
+      "sha256": "8eb40491b39e0461136aa4ea0e4859ffc7b8f3fd9e9e70eeac597662fbe0f153"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/controllers/ssr-fresh-review-audit.py",
+      "sha256": "7b9af3259864848d5929f21fc36e962bf87fb9c5374a6fb693ad8365ae6f78d4"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/runtime_setup.py",
+      "sha256": "91c8a2a5fccaa22affc662fe8824a2502be8e373e363520f21033a25838afdb2"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/runtime-identities.json",
+      "sha256": "4d1b7a9deacc099357ff7e132b32a26e0b6ffc4284850b76390206a467ac73b3"
+    }
+  ]
+}

@@ -1,0 +1,345 @@
+{
+  "packet_id": "codex-native-positive",
+  "output_count": 10,
+  "functional_factors": 30,
+  "subject_indexes": [
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/fresh-baseline-codex-01-run-index.json",
+      "sha256": "25ae33b9a78e6d048e3cf1a8b3fc48d23933a882fbbbfd08622417cb57629369"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/fresh-baseline-opus-01-run-index.json",
+      "sha256": "172feb89fcb3bed2f2398960b10c2943d776fc5939e13d4daa7a1adaaff7e046"
+    }
+  ],
+  "reuse": {
+    "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/reuse.json",
+    "sha256": "5190a949c00ec5ad4ff17947e13d312cbbf30da8e52f0af0b0e660021cf218ed"
+  },
+  "subject_assessments": [
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T134245334Z-ssr-fresh-baseline-codex-invocation-change-f0f0a9ee-37d0-466b-abf4-4ba50bb9030e-8joxuexg.json",
+      "sha256": "631c2044992543161175c60adb597236b67030e8d6bde811a298879ba2505755"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T143618995Z-ssr-fresh-baseline-codex-invocation-change-8e62c8d0-fd1b-476d-9bce-ad7d42e475df-x9tj5hw9.json",
+      "sha256": "2a48855dff32dbd1f3b1f5b6f93d81a51bd2de66f521cda6ad180ed997ea59b1"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T150117283Z-ssr-fresh-baseline-codex-invocation-change-dbb48864-3418-4976-8f5f-8e1dac46c320-1hlsr6yu.json",
+      "sha256": "8e0233e958b6def799fa08264dfa06c1e30b0573a987331043855b07cf3510a5"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T152934740Z-ssr-fresh-baseline-codex-invocation-change-851ff07c-9b8e-48ae-900d-01569aa001d2-m67mwqvl.json",
+      "sha256": "3139e0ddabdf62df3d99b57ba6953c857c15605b0462c13de2939d3fab808165"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T155930969Z-ssr-fresh-baseline-codex-invocation-change-badd3adf-2c86-44de-8ec8-10e60e2a784b-juvar6m0.json",
+      "sha256": "ad4a24af4f1fa3e163b69f4f70c940b4eef70a269a025175a755cd85a310712e"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T135904152Z-ssr-fresh-baseline-codex-invocation-review-31649107-f152-4b8b-8e2c-a16167e02426-3ywc8wq4.json",
+      "sha256": "ae8c4299e75bd54033195e14503cb96a66cfca8effc0d72d54748d862620d2ba"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T144440056Z-ssr-fresh-baseline-codex-invocation-review-b52a9798-cc51-40b4-a3ff-6449616186ec-0u6xy1kc.json",
+      "sha256": "842d736dea7812cfa764b7db9363e9b110888dd2339a42ddf9ad28ba6d9c1f7e"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T151006832Z-ssr-fresh-baseline-codex-invocation-review-8b77a4cc-a528-4553-98bc-77150e8feb14-yxaiykrt.json",
+      "sha256": "c679a48e9573810643086d0da3c08a66e64fed88ba8733dc187fa2216ec629cf"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T153813745Z-ssr-fresh-baseline-codex-invocation-review-b193f5c0-6ae0-4a5a-ad1e-3d0131b94cc8-070pzqtm.json",
+      "sha256": "615bbec4c70927ce18cc89f223818d7a62a3449410fe2d4b3900fb061865f4d4"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/results/20261026T161052183Z-ssr-fresh-baseline-codex-invocation-review-6a00071d-9d44-495d-9ed6-c3d29526328e-s2cddd8y.json",
+      "sha256": "ea4ce88645a6dc78435cddd48e3f894ce652e4490619f4bdd72600d13c522875"
+    }
+  ],
+  "configuration": {
+    "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/evaluation/codex-native-positive/config.json",
+    "sha256": "cb03bab694a5d1ad374d7c9f5ab5af77fc3f52a581e1de3f6b9dae73193411a8"
+  },
+  "prompt": {
+    "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/evaluation/prompt.md",
+    "sha256": "6e5dd9cf0a64d845a0dbc32a1e80aa47cc22aadb03aedabdc8786c06e62dbecb"
+  },
+  "input_files": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/EVALUATION-INDEX.json",
+      "sha256": "c52b0c6d5107c94cdc2bbb7fe2d696a2a72f383b5d9aa2ba8cec0a03f79b5e21"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/INTERPRETATION.md",
+      "sha256": "9c28f8007771c66916c7920fda0e7036a20b0eeb41866c8248f55fb308b22d8a"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/criteria/invocation-change-expected.md",
+      "sha256": "be770c6e7a05bd72e9704a4ed3e385efe72be0f1cc89e7b96c584fa0e6d64331"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/criteria/invocation-change-inherited.md",
+      "sha256": "7e6461fc94ea0c4d02bb62f7b43613d8fd86673ee1aa93ed0f3956b1c194fa26"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/criteria/invocation-change.md",
+      "sha256": "e6465628a5e944601cabe6e19040cf8f8a07a2ade9a65cdd91175269d25df6bc"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/criteria/invocation-review-expected.json",
+      "sha256": "1eccde02cbd1523e4d99a90359fae1d45b494c13a3d4691df83b0b0ab9a011fa"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/criteria/invocation-review-inherited.md",
+      "sha256": "b897054d0ec6a5aacac614bc2d88145731791d18c10df60929fe9d27087c0ed8"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/criteria/invocation-review.md",
+      "sha256": "47b1f113e5f982cb293b18287625d93b95035408cef9a901796a4c0a0dd24579"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/facts/20261026T134245334Z-ssr-fresh-baseline-codex-invocation-change-f0f0a9ee-37d0-466b-abf4-4ba50bb9030e-8joxuexg.json",
+      "sha256": "59c280a984d5da5d864d8d15e64ddf5c1d5fa7bb0db5ad4742b0d756d27c8a10"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/facts/20261026T135904152Z-ssr-fresh-baseline-codex-invocation-review-31649107-f152-4b8b-8e2c-a16167e02426-3ywc8wq4.json",
+      "sha256": "03794e32d23eb2530e0a074ce6dc34ac6626fddea0f70c3621b6b237364f2cf4"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/facts/20261026T143618995Z-ssr-fresh-baseline-codex-invocation-change-8e62c8d0-fd1b-476d-9bce-ad7d42e475df-x9tj5hw9.json",
+      "sha256": "9517b234b78e791f565dc9a8c325e8d23e6e1ef7cb2cea2e441010be972f4d91"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/facts/20261026T144440056Z-ssr-fresh-baseline-codex-invocation-review-b52a9798-cc51-40b4-a3ff-6449616186ec-0u6xy1kc.json",
+      "sha256": "607b22c47b28156f222db9a8f25f4e3fcc6e9dbdd7d3f9c8cd8aff0ba679dfa0"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/facts/20261026T150117283Z-ssr-fresh-baseline-codex-invocation-change-dbb48864-3418-4976-8f5f-8e1dac46c320-1hlsr6yu.json",
+      "sha256": "7024b58feea081d715dfcb69417560edb8009894ac9ffcc35edb029d731fe54a"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/facts/20261026T151006832Z-ssr-fresh-baseline-codex-invocation-review-8b77a4cc-a528-4553-98bc-77150e8feb14-yxaiykrt.json",
+      "sha256": "d7a1e45793767c4a3966c747489cb157869ab265305d9fbd4b2f3551706c8df1"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/facts/20261026T152934740Z-ssr-fresh-baseline-codex-invocation-change-851ff07c-9b8e-48ae-900d-01569aa001d2-m67mwqvl.json",
+      "sha256": "062905cae128c562d8b37c00d6cf3b0a081c49f44534a0fc15c11be74a9de00e"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/facts/20261026T153813745Z-ssr-fresh-baseline-codex-invocation-review-b193f5c0-6ae0-4a5a-ad1e-3d0131b94cc8-070pzqtm.json",
+      "sha256": "34dd0bfa598453f6f70951278af2f0894247f85a4f674c4918a5a756b7abc2db"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/facts/20261026T155930969Z-ssr-fresh-baseline-codex-invocation-change-badd3adf-2c86-44de-8ec8-10e60e2a784b-juvar6m0.json",
+      "sha256": "8adb62bf546b7bd9b017a573395416edb6d4868af0f2e58093707388b84cbd5a"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/facts/20261026T161052183Z-ssr-fresh-baseline-codex-invocation-review-6a00071d-9d44-495d-9ed6-c3d29526328e-s2cddd8y.json",
+      "sha256": "577e70c76021bf4eb9e3c0aa967fccd9f04d2e1e9fd6d30da9806893dc93374f"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/001.txt",
+      "sha256": "f6b4553712a7e85344204a512f685b41ab572796d6293e7e0b5737a525e0d456"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/002.txt",
+      "sha256": "e1973f3af6490a611eb92059576e03d7bcfb726298d220f83e57369af6410c78"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/003.txt",
+      "sha256": "a2354de6353bc947ef4914633f37ac7c5d19833734f505358d77483558fca264"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/004.txt",
+      "sha256": "39173e527c02bb8051ec44867f13777a70bd956a47a94a9a041eea2b12da9828"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/005.txt",
+      "sha256": "6d5fe8c33e0fef06a6734d4aca5d40f29e26ca6c1f7b64b4fb93708e7e2efa76"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/006.txt",
+      "sha256": "815923fcce071b2f077fc76b972d193e8ee88611b9f1418f64cd9d9f36a4f331"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/007.txt",
+      "sha256": "26b396a47f08e7312600c59e759c570e3e8e9888207e238e4755b8018cfae248"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/008.txt",
+      "sha256": "d092547b68039f16d231e5b11297c277f21cf91623b5db2cd1301730f35ea10b"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/009.txt",
+      "sha256": "45940528ad7f26ca62ed012f4b9d5c7c3f99a4e761f418b033e2267810d83197"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/010.txt",
+      "sha256": "33fbf6018f8b275d3c286f93903484ed67bbe83d291d698a88f7316bfe85ff24"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/011.txt",
+      "sha256": "93df2d8204ae7fa57b01cdfc7693cc5cd37b69c52a6048b07bc73d085329fb1c"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/012.txt",
+      "sha256": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/013.txt",
+      "sha256": "1a4b23b1f53af5b7aa42ac8e72f59282374435831bd35f542c23bd7dfdccb6e3"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/014.txt",
+      "sha256": "8d6d58a231c01678279d8e00ea0f03f9306c1b36a474b8cb4dd5967b657453bb"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/015.txt",
+      "sha256": "7d3c3810c532bdd87af795cf543171deeaff0595e4a13f7fdee39e8dfdef18d2"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/016.txt",
+      "sha256": "8e8a5cb48d7d3f3ca8e7212e9c29764f6e8f6cdaaf4f4d8d0762aaeaca906f1f"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/017.txt",
+      "sha256": "ef7513eb13148ad5c6b215959ae917c6ef42a24050dc8df5ff64fe814dcfd376"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/018.txt",
+      "sha256": "554df6c0a7d0bf116cc593c4fdf3384e8645ab98c7d4e38780637b75577cda52"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/019.txt",
+      "sha256": "3a618d709d2be580ccb53f2f660822be9f90b091af41e3ce3b7aaed31e894eb0"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/020.txt",
+      "sha256": "71160952f35e3a255d68cca629a0a66d79e3e4b4c30431786f6945a28ede54f3"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/021.txt",
+      "sha256": "6c9685054ae4f4dd6f32a76a18401366e4206b829466367640370554bf33f683"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/022.txt",
+      "sha256": "c87e4afce8521b85dc30d2e44a1f35ca94accc8848f4680c1c7a2c83fa05fb4d"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/023.txt",
+      "sha256": "1c17cca63c9b3e7d0804f983643786ea75f17b64a099a5b75bd6001c9a518bd2"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/024.txt",
+      "sha256": "471188ec72adac025536dc04f7af871423b3678a08a99a69e5a74da613f47d48"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/025.txt",
+      "sha256": "363849394f492cbe47a867fdd6ba7456d6ec109a85d4c2dd262cdafa876ddf12"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/026.txt",
+      "sha256": "120ca715b67d11813785079a8e6a2b219439e413353f5cf5bd3d503eede8e456"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/027.txt",
+      "sha256": "4dd7c1d5643c51a6f72d130b6d10fabc5279d1d5ba83be285556cbd6463f84d4"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/028.txt",
+      "sha256": "7e3566cc4f0d51da1302368281a8b3b0f2f4e4ea92919c1ecbc2ce68b62d38f5"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/029.txt",
+      "sha256": "c891b221c7e8e90e67a55ed09f312925c0989ba06ac426f454293b76bee5b891"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/030.txt",
+      "sha256": "2436b0c68662c0128de007b48b5687e22cd43a86aa465029df6d71ca0c8a9dac"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/031.txt",
+      "sha256": "5627a38e33e0da57f237f96c3981dd64527c7cfd41abf3e24360bfa16725df7d"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/032.txt",
+      "sha256": "946a77884f4c5a8a451c3b0c10c3f80c96c60004b809eb44182869ef689fb80e"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/objects/033.txt",
+      "sha256": "8957e1a3d0a7362bd3504913fa38ac3bcbeb98a56309d15ec77735bd9604246d"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/outputs/20261026T134245334Z-ssr-fresh-baseline-codex-invocation-change-f0f0a9ee-37d0-466b-abf4-4ba50bb9030e-8joxuexg.md",
+      "sha256": "00e3e4e7dcb15e2af660b4fa4ffb3609ab95a45d58111e223552bc6b60f68cea"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/outputs/20261026T135904152Z-ssr-fresh-baseline-codex-invocation-review-31649107-f152-4b8b-8e2c-a16167e02426-3ywc8wq4.md",
+      "sha256": "0697d1f93e04a0f47c3d22c70479d7888274f3392df21acc92713b7c7496dc57"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/outputs/20261026T143618995Z-ssr-fresh-baseline-codex-invocation-change-8e62c8d0-fd1b-476d-9bce-ad7d42e475df-x9tj5hw9.md",
+      "sha256": "810384089d614988853a99c9e9f9f37f96d9574ec39bc2affe765c0b454886ff"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/outputs/20261026T144440056Z-ssr-fresh-baseline-codex-invocation-review-b52a9798-cc51-40b4-a3ff-6449616186ec-0u6xy1kc.md",
+      "sha256": "30e1aac1b84339e16267f9cd7297ca7b7ff863a425c95b79be7f926c72ede065"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/outputs/20261026T150117283Z-ssr-fresh-baseline-codex-invocation-change-dbb48864-3418-4976-8f5f-8e1dac46c320-1hlsr6yu.md",
+      "sha256": "113128f4218c73f25d27c08047931a5c9cf6d6372a459683247de06481ee5e6a"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/outputs/20261026T151006832Z-ssr-fresh-baseline-codex-invocation-review-8b77a4cc-a528-4553-98bc-77150e8feb14-yxaiykrt.md",
+      "sha256": "0076f9008aace5e676dafd04c0b549359775729fdf0a4ab16a287a8af3293abc"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/outputs/20261026T152934740Z-ssr-fresh-baseline-codex-invocation-change-851ff07c-9b8e-48ae-900d-01569aa001d2-m67mwqvl.md",
+      "sha256": "522afba61839b0098264a9ec5df3b94810ac865b2fdae7543e17000459d23c93"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/outputs/20261026T153813745Z-ssr-fresh-baseline-codex-invocation-review-b193f5c0-6ae0-4a5a-ad1e-3d0131b94cc8-070pzqtm.md",
+      "sha256": "990371d9a5ea7f19e092a12322672f6852c9c5196347f65127d242a81b0120e1"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/outputs/20261026T155930969Z-ssr-fresh-baseline-codex-invocation-change-badd3adf-2c86-44de-8ec8-10e60e2a784b-juvar6m0.md",
+      "sha256": "326860ec1f61632fbe715dc6b3b128b0ef2545058097c0fb1faca5ac06db3c29"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/outputs/20261026T161052183Z-ssr-fresh-baseline-codex-invocation-review-6a00071d-9d44-495d-9ed6-c3d29526328e-s2cddd8y.md",
+      "sha256": "aea2ffd52df39acc83ef6b8b871d40d5634abd2be33e9a547b3adfc09c608816"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/policy.txt",
+      "sha256": "5d057d11f678ae3fa63c48957446aded13ccc5dcb8babab2856d0232d49e08bb"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/review-inputs/codex-native-positive/prior-assessment.md",
+      "sha256": "80c18801b3f8ef196c257341d79c817c9de43d4fe12672c4f6a48e404bf97dc3"
+    }
+  ],
+  "controller": {
+    "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/controllers/ssr-fresh-reviews.py",
+    "sha256": "0a09e6f73355fd8c332cea034304cee8a11220f1e0edc8d8b98e061cdbe09858"
+  },
+  "controller_support": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/controllers/ssr-fresh-packets.py",
+      "sha256": "8eb40491b39e0461136aa4ea0e4859ffc7b8f3fd9e9e70eeac597662fbe0f153"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/fresh-baseline-01/controllers/ssr-fresh-review-audit.py",
+      "sha256": "7b9af3259864848d5929f21fc36e962bf87fb9c5374a6fb693ad8365ae6f78d4"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/runtime_setup.py",
+      "sha256": "91c8a2a5fccaa22affc662fe8824a2502be8e373e363520f21033a25838afdb2"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/fresh-baseline-01/preparation/runtime-identities.json",
+      "sha256": "4d1b7a9deacc099357ff7e132b32a26e0b6ffc4284850b76390206a467ac73b3"
+    }
+  ]
+}
