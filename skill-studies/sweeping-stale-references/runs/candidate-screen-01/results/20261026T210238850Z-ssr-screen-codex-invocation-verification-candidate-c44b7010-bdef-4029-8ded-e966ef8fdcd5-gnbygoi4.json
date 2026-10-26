@@ -1,0 +1,89 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-10-26T21:03:20.908208+00:00",
+  "run_id": "20261026T210238850Z-ssr-screen-codex-invocation-verification-candidate-c44b7010-bdef-4029-8ded-e966ef8fdcd5-gnbygoi4",
+  "condition": "candidate",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Preparer and active assessor with condition/history awareness; not blind or independent. Fixed SSR-assessment-3 and case-specific units, inherited explanations and prospective candidate interpretation."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T210238850Z-ssr-screen-codex-invocation-verification-candidate-c44b7010-bdef-4029-8ded-e966ef8fdcd5-gnbygoi4/result.json",
+        "sha256": "08101417bafdf5f9156069668c8dc55124e892e15352403f23594d427eb74951",
+        "version": null
+      },
+      "selector": "Mechanical completion, declared execution and retained capture."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T210238850Z-ssr-screen-codex-invocation-verification-candidate-c44b7010-bdef-4029-8ded-e966ef8fdcd5-gnbygoi4/provider-session.jsonl",
+        "sha256": "e48f285eb121b640bfe9b7add788ac46ad32b288433eac77c278f4666858926c",
+        "version": null
+      },
+      "selector": "Complete ordered tool calls, responses and subject messages."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/inspection/021.json",
+        "sha256": "137b7e0e43c26bd14fdacb2466027dbc59a12b0fc227b6642c40278d9385f05f",
+        "version": null
+      },
+      "selector": "Disposable full project/Git comparison, protected inputs, delivery/model checks and any trusted replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned model/CLI/effort and source identities verified; complete retained capture and cleanup, with full assigned-body delivery for explicit application. Native availability is verified; missing/late loading is scored separately.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Available native SSR was not invoked, read or applied. Complete trace has task discovery and one exact unittest invocation only; supplied files unchanged.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Comprehensive Codex test-only verification avoids unnecessary SSR loading.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "All three requested tests passed; initial generic implementation commentary did not result in edits.",
+      "consequence": "Descriptive/supplementary; fixed scores and scope unchanged.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "Exposed development case in a declared provider/runtime stratum; no blind, held-out, population reliability or causal-guidance claim.",
+    "Native selection and task success are separate; retain case-specific counting units and Shiv uncertainty."
+  ],
+  "result_id": "candidate-screen-codex-01-invocation-verification-candidate-1",
+  "functional_result": "not measured",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/codex-invocation-verification-manifest.json",
+    "sha256": "94d19d41a6c7349455eea5268736eb4f50a22ce50174ed558deac362373d60f1",
+    "version": "1",
+    "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+  }
+}

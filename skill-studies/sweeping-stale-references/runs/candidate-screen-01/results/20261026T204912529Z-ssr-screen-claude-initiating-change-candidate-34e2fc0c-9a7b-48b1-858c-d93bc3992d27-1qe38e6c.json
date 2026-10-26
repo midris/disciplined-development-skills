@@ -1,0 +1,134 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-10-26T20:50:34.654465+00:00",
+  "run_id": "20261026T204912529Z-ssr-screen-claude-initiating-change-candidate-34e2fc0c-9a7b-48b1-858c-d93bc3992d27-1qe38e6c",
+  "condition": "candidate",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Preparer and active assessor with condition/history awareness; not blind or independent. Fixed SSR-assessment-3 and case-specific units, inherited explanations and prospective candidate interpretation."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T204912529Z-ssr-screen-claude-initiating-change-candidate-34e2fc0c-9a7b-48b1-858c-d93bc3992d27-1qe38e6c/result.json",
+        "sha256": "9473f244ddd462468a4b93ca20f8035ecdfef275606db046bc0ed1d17a0f96e7",
+        "version": null
+      },
+      "selector": "Mechanical completion, declared execution and retained capture."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T204912529Z-ssr-screen-claude-initiating-change-candidate-34e2fc0c-9a7b-48b1-858c-d93bc3992d27-1qe38e6c/stdout.txt",
+        "sha256": "6105a656e97e015e2d2d79061691680e2cd839ce280eda9a836b774bb806cfcb",
+        "version": null
+      },
+      "selector": "Complete ordered tool calls, responses and subject messages."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/inspection/011.json",
+        "sha256": "26046942ff190a0d1bd1f3d5946f42b8fbfd25ff8d28e7a634eaacb578010175",
+        "version": null
+      },
+      "selector": "Disposable full project/Git comparison, protected inputs, delivery/model checks and any trusted replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned model/CLI/effort and source identities verified; complete retained capture and cleanup, with full assigned-body delivery for explicit application. Native availability is verified; missing/late loading is scored separately.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Complete current project has the same six-file rename as inspected Codex outputs. Independent replay confirms default1900/custom820, three tests and correct script output from both directories.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Partner-imposed limit and frequent-refresh cost preserved in full comment/policy. Units/default/nonpositive rejection unchanged; historical and vendor records byte-preserved. Independent zero/negative probes raise ValueError.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Commit fcc9d077f32f20838fa971b2152c73d6eec0b413 includes all repairs; clean final tree.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Complete body4; old/new/concept search5 and broader TTL8 precede edits10; policy/source context read and history/vendor dispositions explicit. Search repeated10.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One reconciliation commit after baseline.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "All14 scoped occurrences across nine paths have accurate encodings, locations, counts and same-path grouping; script explicitly counts two occurrences on one line.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Comprehensive Opus initiating-change repetition1 passes all fixed factors; no consequential regression.",
+  "observations": [],
+  "uncertainty": [
+    "Exposed development case in a declared provider/runtime stratum; no blind, held-out, population reliability or causal-guidance claim.",
+    "Native selection and task success are separate; retain case-specific counting units and Shiv uncertainty."
+  ],
+  "result_id": "candidate-screen-claude-01-initiating-change-candidate-1",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/claude-initiating-change-manifest.json",
+    "sha256": "7b045a31e28a510deb8d01155f14f7f0464abc168da7777ee05b1723b68f167a",
+    "version": "1",
+    "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+  }
+}

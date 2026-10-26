@@ -1,0 +1,79 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-10-26T21:17:42.745813+00:00",
+  "run_id": "20261026T211646466Z-ssr-screen-codex-large-sweep-account-candidate-10963b8b-f3a7-4113-ac7f-37df693ab004-f3zh5wzk",
+  "condition": "candidate",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Preparer and active assessor with condition/history awareness; not blind or independent. Fixed SSR-assessment-3 and case-specific units, inherited explanations and prospective candidate interpretation."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T211646466Z-ssr-screen-codex-large-sweep-account-candidate-10963b8b-f3a7-4113-ac7f-37df693ab004-f3zh5wzk/result.json",
+        "sha256": "88ddc87ec46985f74b78ecaf01651780cbdc56ac70a5e3e37e469c0bb1016adf",
+        "version": null
+      },
+      "selector": "Mechanical completion, declared execution and retained capture."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T211646466Z-ssr-screen-codex-large-sweep-account-candidate-10963b8b-f3a7-4113-ac7f-37df693ab004-f3zh5wzk/provider-session.jsonl",
+        "sha256": "6cbaf8db054873eb276495efada2d016f5c0b09ce6ce99b85f6b23a771d596f4",
+        "version": null
+      },
+      "selector": "Complete ordered tool calls, responses and subject messages."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/inspection/033.json",
+        "sha256": "c33075a5926c1893e6a201c694460813124380c9d9be250efc236f274cdc21b2",
+        "version": null
+      },
+      "selector": "Disposable full project/Git comparison, protected inputs, delivery/model checks and any trusted replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned model/CLI/effort and source identities verified; complete retained capture and cleanup, with full assigned-body delivery for explicit application. Native availability is verified; missing/late loading is scored separately.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Complete report preserves all eleven groups and126 matches with exact ranges, correct update/history/false-positive reasons and docs/cache outcomes separated. Updates explicitly attributed to supplied account; absent command/test evidence truthfully stated. No supplied input modified.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Comprehensive Codex large-sweep-account repetition1 meets P3; functional outcome not measured.",
+  "observations": [],
+  "uncertainty": [
+    "Exposed development case in a declared provider/runtime stratum; no blind, held-out, population reliability or causal-guidance claim.",
+    "Native selection and task success are separate; retain case-specific counting units and Shiv uncertainty."
+  ],
+  "result_id": "candidate-screen-codex-01-large-sweep-account-candidate-1",
+  "functional_result": "not measured",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/codex-large-sweep-account-manifest.json",
+    "sha256": "4e7e533b0aa70130320d5890fc938d1af41492ab4d4ebd7ed8b32840643e74a9",
+    "version": "1",
+    "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+  }
+}
