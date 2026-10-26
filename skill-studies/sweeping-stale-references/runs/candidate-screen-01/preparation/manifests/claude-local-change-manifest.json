@@ -3,9 +3,9 @@
   "manifest_id": "ssr-screen-claude-local-change",
   "study_id": "sweeping-stale-references",
   "case_id": "local-change",
-  "status": "draft",
+  "status": "frozen",
   "created_at": "2026-10-26",
-  "source_revision": "",
+  "source_revision": "f3ea3d094481d77d2aad13d70f8eff54a7c88b71",
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
@@ -14,7 +14,7 @@
     },
     "protocol": {
       "path": "skill-studies/sweeping-stale-references/protocol.md",
-      "sha256": "c6fbf4a365ea5aa86bc871a6eef3a7ec6e741a669109ff88ef225b314a9ca043",
+      "sha256": "890dcb11d47fee962a6afe7514937000c3618eeb29e047aa3ed73165ff6bd368",
       "version": "1"
     },
     "format_contract": {
@@ -154,7 +154,7 @@
     },
     {
       "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/README.md",
-      "sha256": "352dc5ab6af68cfa0e51c535110c93edb0de905e9093a3c10685bdb8cea56b55",
+      "sha256": "c3523bbe12c080ea0ac36611d740cac11fa078390626ebe2b9912166c22d973f",
       "version": null
     },
     {
