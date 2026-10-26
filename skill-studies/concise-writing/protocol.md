@@ -1013,13 +1013,13 @@ The comment continuation uses [frozen review inputs](runs/final-comparison-01/sc
 The first handoff stage uses its [two-call evaluator ledger](runs/final-comparison-01/handoff-01/evaluation/evaluator-run-index.json).
 The handoff continuation uses its [two-call evaluator ledger](runs/final-comparison-01/handoff-02/evaluation/evaluator-run-index.json).
 The short examples screen uses its [two-call evaluator ledger](runs/final-comparison-01/examples-screen-01/evaluation/evaluator-run-index.json).
-Dispatched calls are **846 subject, 58 evaluator, 0 authoring, 4 retry**; remaining outer capacity is **42 / 10 / 4 / 0** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
+Dispatched calls are **866 subject, 58 evaluator, 0 authoring, 4 retry**; remaining outer capacity is **22 / 10 / 4 / 0** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **4,280 active minutes booked; 3,080 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **4,305 active minutes booked; 3,105 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
-The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 846/888, with all approved fresh original SSR baseline calls spent; the earlier E diagnostic and CW examples screen are spent.
+The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 866/888, with all approved fresh original SSR baseline calls spent; the earlier E diagnostic and CW examples screen are spent.
 The supplemental work used 40 estimated active minutes against its 40-minute forecast; model waits are included once.
 The SSR compact checkpoint used 60 estimated active minutes against 90 forecast, including 327.519 subject and 129.286 reviewer seconds once (456.805 total); categories were not separately timed. Its fifteen subject and one evaluator calls are spent, with no retry or further allocation.
 The SSR closing validation used 60 estimated active minutes against its 60-minute forecast, including 238.375 subject and 139.333 reviewer seconds once (377.708 total); categories were not separately timed. All eleven subjects and the sole evaluator are spent; no additional calls are selected.
@@ -1036,7 +1036,8 @@ All 105 new subjects and eight reviewers are spent, with no new retry or authori
 The [SSR candidate-screen preparation](../sweeping-stale-references/runs/candidate-screen-01/preparation/README.md) used 90 estimated active minutes for source/reuse review, matched inputs, schedule/review design, offline verification and active-session review; no subject, evaluator, authoring or retry call was added.
 Its owner-approved 350–440-minute execution forecast excludes these booked preparation minutes and all historical waits.
 Candidate-screen execution through the slot-56 authentication stop adds 85 estimated active minutes, including approval/freeze/readiness, model waits, direct inspections, retention/score audits and stop documentation. That stop retained 55 valid subjects and one charged invalid setup. The owner subsequently re-authenticated Claude and approved exactly one slot56 retry within the remaining retry capacity; see the [amendment](../sweeping-stale-references/runs/candidate-screen-01/retry-56-authorization.md).
-Resumption through slot73 adds 25 estimated active minutes: retry registration, model waits, sequential whole-artifact/trace assessment and evidence audit. All 73 initial charges plus one retry are retained; 73 valid outcomes and the original invalid attempt remain visible. Forty-two subjects and ten reviews remain; no retry capacity remains.
+Resumption through slot73 adds 25 estimated active minutes: retry registration, model waits, sequential whole-artifact/trace assessment and evidence audit. All 73 initial charges plus one retry are retained; 73 valid outcomes and the original invalid attempt remain visible. At that checkpoint forty-two subjects and ten reviews remained; no retry capacity remained.
+Collection through slot93 adds another 25 estimated active minutes, including model waits, direct inspection/replay, native timing checks, hook-suite verification and audit. Ninety-three initial subject charges plus the one retry are retained; 22 subjects and ten reviews remain.
 
 | Work | Estimated active minutes |
 | --- | ---: |
@@ -1182,7 +1183,8 @@ Resumption through slot73 adds 25 estimated active minutes: retry registration, 
 | SSR candidate-screen proposal, matched inputs, reuse/inventory checks and offline review | 90 |
 | SSR candidate-screen execution through slot-56 authentication stop | 85 |
 | SSR retry resumption and collection through slot73 | 25 |
-| **Total** | **4,280** |
+| SSR third-round collection through slot93 | 25 |
+| **Total** | **4,305** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.

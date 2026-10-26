@@ -1,0 +1,153 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "2026-10-26T23:06:54.903841+00:00",
+  "run_id": "20261026T230547583Z-ssr-screen-claude-discovery-shiv-finalist-b32f67ae-4de1-4656-b360-7c2ae06b40e3-bgmgjotl",
+  "condition": "finalist",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Preparer and active assessor with condition/history awareness; not blind or independent. Fixed SSR-assessment-3 and case-specific units, inherited explanations and prospective candidate interpretation."
+  },
+  "evidence": [
+    {
+      "id": "runner",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T230547583Z-ssr-screen-claude-discovery-shiv-finalist-b32f67ae-4de1-4656-b360-7c2ae06b40e3-bgmgjotl/result.json",
+        "sha256": "8bf81423e519fb618a40995229a6486153996e6d10b349fc9ce7904928d424d5",
+        "version": null
+      },
+      "selector": "Mechanical completion, declared execution and retained capture."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/subjects/20261026T230547583Z-ssr-screen-claude-discovery-shiv-finalist-b32f67ae-4de1-4656-b360-7c2ae06b40e3-bgmgjotl/stdout.txt",
+        "sha256": "470e2aa49bbdfd3d787dbd716c62c384535653a11d4a6cf0750aa82ed30c9ff2",
+        "version": null
+      },
+      "selector": "Complete ordered tool calls, responses and subject messages."
+    },
+    {
+      "id": "checks",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/inspection/078.json",
+        "sha256": "ece234d1224112807ba8146272682d2ba327600cb7536ec4e1bf7d75e0ed042f",
+        "version": null
+      },
+      "selector": "Disposable full project/Git comparison, protected inputs, delivery/model checks and any trusted replay."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Pinned model/CLI/effort and source identities verified; complete retained capture and cleanup, with full assigned-body delivery for explicit application. Native availability is verified; missing/late loading is scored separately.",
+    "evidence": [
+      "runner",
+      "trace",
+      "checks"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All four consumers changed only the retired option to --destination; full text equals inspected accepted repairs. Independent builds verify exact greeting payload/entrypoint/output for README, script, release and workflow, including outside-directory script execution.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Configured nonconsumer files, binary assets and toolchain unchanged; independent inventory tool, canonical option/alias and retired-option rejection independently pass. Checker .gitignore flag is reference-provider difference; configured byte comparison confirms preservation.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Complete four-consumer repair committed; clean worktree.",
+      "consequence": "Functional criterion satisfied.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Full body delivery then broad option search exposes all four current consumers before edits. History, negative tests and independent tool correctly preserved; repeat search retained.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One complete reconciliation commit after baseline.",
+      "consequence": "Procedural criterion satisfied under fixed case rules.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "Required independent-tool matches in tools/inventory.py and docs/local-development.md are combined across paths into one entry, violating same-path grouping. Nine literal occurrences otherwise traceable; negative-test category uncertainty is separately preserved.",
+      "consequence": "Report separately; cannot change functional outcome or authorize repetition alone.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "procedural_summary": "Functional success; required cross-path reporting defect, with inherited negative-test category uncertainty separately retained.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "Initial archive run lacked SHIV_ROOT and was denied writing ~/.shiv; subject corrected to build/cache and demonstrated greeting output before commit. All four consumers independently replayed successfully.",
+      "consequence": "Descriptive/supplementary; fixed scores and scope unchanged.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    },
+    {
+      "dimension": "procedural",
+      "description": "Subject labels deliberate negative assertions intentionally stale rather than expected false positive; inherited category-boundary uncertainty is not independently called an established defect.",
+      "consequence": "Descriptive/supplementary; fixed scores and scope unchanged.",
+      "evidence": [
+        "trace",
+        "checks"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "Exposed development case in a declared provider/runtime stratum; no blind, held-out, population reliability or causal-guidance claim.",
+    "Native selection and task success are separate; retain case-specific counting units and Shiv uncertainty."
+  ],
+  "result_id": "candidate-screen-claude-01-discovery-shiv-finalist-3",
+  "functional_result": "met",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/manifests/claude-discovery-shiv-manifest.json",
+    "sha256": "a7bc7285968923e7001026a79331218a56b54cf46cd4f93ab5a437919783e111",
+    "version": "1",
+    "git_revision": "eb1761bb7014034a174877d548898417ac4d2030"
+  }
+}
