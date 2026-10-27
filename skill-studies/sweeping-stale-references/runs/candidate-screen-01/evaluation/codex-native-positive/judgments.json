@@ -1,0 +1,249 @@
+{
+  "first_pass_event": 223,
+  "prior_first_access_event": null,
+  "post_prior_event": null,
+  "judgments": [
+    {
+      "run_id": "20261026T134245334Z-ssr-fresh-baseline-codex-invocation-change-f0f0a9ee-37d0-466b-abf4-4ba50bb9030e-8joxuexg",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree with all66 functional factors. Minor explicitness/self-report variations do not establish consequential quality regression. Native load evidence remains active trace assessment and cannot be inferred from these passing outputs."
+    },
+    {
+      "run_id": "20261026T143618995Z-ssr-fresh-baseline-codex-invocation-change-8e62c8d0-fd1b-476d-9bce-ad7d42e475df-x9tj5hw9",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree with all66 functional factors. Minor explicitness/self-report variations do not establish consequential quality regression. Native load evidence remains active trace assessment and cannot be inferred from these passing outputs."
+    },
+    {
+      "run_id": "20261026T150117283Z-ssr-fresh-baseline-codex-invocation-change-dbb48864-3418-4976-8f5f-8e1dac46c320-1hlsr6yu",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree with all66 functional factors. Minor explicitness/self-report variations do not establish consequential quality regression. Native load evidence remains active trace assessment and cannot be inferred from these passing outputs."
+    },
+    {
+      "run_id": "20261026T152934740Z-ssr-fresh-baseline-codex-invocation-change-851ff07c-9b8e-48ae-900d-01569aa001d2-m67mwqvl",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree with all66 functional factors. Minor explicitness/self-report variations do not establish consequential quality regression. Native load evidence remains active trace assessment and cannot be inferred from these passing outputs."
+    },
+    {
+      "run_id": "20261026T155930969Z-ssr-fresh-baseline-codex-invocation-change-badd3adf-2c86-44de-8ec8-10e60e2a784b-juvar6m0",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree with all66 functional factors. Minor explicitness/self-report variations do not establish consequential quality regression. Native load evidence remains active trace assessment and cannot be inferred from these passing outputs."
+    },
+    {
+      "run_id": "20261026T205305311Z-ssr-screen-codex-invocation-change-candidate-4867cd89-09bd-4bbb-81e0-c070a1b4236d-co2yij6t",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree with all66 functional factors. Minor explicitness/self-report variations do not establish consequential quality regression. Native load evidence remains active trace assessment and cannot be inferred from these passing outputs."
+    },
+    {
+      "run_id": "20261026T213601032Z-ssr-screen-codex-invocation-change-candidate-ab35c656-b6e3-4835-b42f-db825d4c44f5-v0s8shsd",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree with all66 functional factors. Minor explicitness/self-report variations do not establish consequential quality regression. Native load evidence remains active trace assessment and cannot be inferred from these passing outputs."
+    },
+    {
+      "run_id": "20261026T231928229Z-ssr-screen-codex-invocation-change-candidate-b6bf6463-4beb-4875-851d-e1e136638e96-m_75cpxs",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree with all66 functional factors. Minor explicitness/self-report variations do not establish consequential quality regression. Native load evidence remains active trace assessment and cannot be inferred from these passing outputs."
+    },
+    {
+      "run_id": "20261026T205200723Z-ssr-screen-codex-invocation-change-finalist-898af4f8-c6a8-4072-b2cf-a8abf8bd899c-0yq8fgda",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree with all66 functional factors. Minor explicitness/self-report variations do not establish consequential quality regression. Native load evidence remains active trace assessment and cannot be inferred from these passing outputs."
+    },
+    {
+      "run_id": "20261026T213725688Z-ssr-screen-codex-invocation-change-finalist-18fbe788-21dd-4291-bf85-d2ca87ee4e1e-ah208ag9",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree with all66 functional factors. Minor explicitness/self-report variations do not establish consequential quality regression. Native load evidence remains active trace assessment and cannot be inferred from these passing outputs."
+    },
+    {
+      "run_id": "20261026T231831214Z-ssr-screen-codex-invocation-change-finalist-330da997-eca5-491b-85ff-0b8a9bde10b0-p5bmfqf0",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree with all66 functional factors. Minor explicitness/self-report variations do not establish consequential quality regression. Native load evidence remains active trace assessment and cannot be inferred from these passing outputs."
+    },
+    {
+      "run_id": "20261026T135904152Z-ssr-fresh-baseline-codex-invocation-review-31649107-f152-4b8b-8e2c-a16167e02426-3ywc8wq4",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree with all66 functional factors. Minor explicitness/self-report variations do not establish consequential quality regression. Native load evidence remains active trace assessment and cannot be inferred from these passing outputs."
+    },
+    {
+      "run_id": "20261026T144440056Z-ssr-fresh-baseline-codex-invocation-review-b52a9798-cc51-40b4-a3ff-6449616186ec-0u6xy1kc",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree with all66 functional factors. Minor explicitness/self-report variations do not establish consequential quality regression. Native load evidence remains active trace assessment and cannot be inferred from these passing outputs."
+    },
+    {
+      "run_id": "20261026T151006832Z-ssr-fresh-baseline-codex-invocation-review-8b77a4cc-a528-4553-98bc-77150e8feb14-yxaiykrt",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree with all66 functional factors. Minor explicitness/self-report variations do not establish consequential quality regression. Native load evidence remains active trace assessment and cannot be inferred from these passing outputs."
+    },
+    {
+      "run_id": "20261026T153813745Z-ssr-fresh-baseline-codex-invocation-review-b193f5c0-6ae0-4a5a-ad1e-3d0131b94cc8-070pzqtm",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree with all66 functional factors. Minor explicitness/self-report variations do not establish consequential quality regression. Native load evidence remains active trace assessment and cannot be inferred from these passing outputs."
+    },
+    {
+      "run_id": "20261026T161052183Z-ssr-fresh-baseline-codex-invocation-review-6a00071d-9d44-495d-9ed6-c3d29526328e-s2cddd8y",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree with all66 functional factors. Minor explicitness/self-report variations do not establish consequential quality regression. Native load evidence remains active trace assessment and cannot be inferred from these passing outputs."
+    },
+    {
+      "run_id": "20261026T205445588Z-ssr-screen-codex-invocation-review-candidate-56f0913f-2065-45f7-9c01-5571f82f45a1-cwx_fjag",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree with all66 functional factors. Minor explicitness/self-report variations do not establish consequential quality regression. Native load evidence remains active trace assessment and cannot be inferred from these passing outputs."
+    },
+    {
+      "run_id": "20261026T214138608Z-ssr-screen-codex-invocation-review-candidate-4b1e465c-057f-44a7-85b8-d5b7cfbf8757-6nvm1z5a",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree with all66 functional factors. Minor explicitness/self-report variations do not establish consequential quality regression. Native load evidence remains active trace assessment and cannot be inferred from these passing outputs."
+    },
+    {
+      "run_id": "20261026T232030161Z-ssr-screen-codex-invocation-review-candidate-867f196b-f414-41e6-9d1b-804574cb91e7-9xmbm_t3",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree with all66 functional factors. Minor explicitness/self-report variations do not establish consequential quality regression. Native load evidence remains active trace assessment and cannot be inferred from these passing outputs."
+    },
+    {
+      "run_id": "20261026T205622496Z-ssr-screen-codex-invocation-review-finalist-fd0dc116-b15d-47cc-bdd4-08408b4a89a8-l8ag_o9y",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree with all66 functional factors. Minor explicitness/self-report variations do not establish consequential quality regression. Native load evidence remains active trace assessment and cannot be inferred from these passing outputs."
+    },
+    {
+      "run_id": "20261026T214011854Z-ssr-screen-codex-invocation-review-finalist-bb2abd2b-f0f7-460f-82db-66c573d88c50-nmkx8_0e",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree with all66 functional factors. Minor explicitness/self-report variations do not establish consequential quality regression. Native load evidence remains active trace assessment and cannot be inferred from these passing outputs."
+    },
+    {
+      "run_id": "20261026T232201546Z-ssr-screen-codex-invocation-review-finalist-f9847ff2-6a8a-45d0-8011-c27c1bc48d65-f251m57q",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree with all66 functional factors. Minor explicitness/self-report variations do not establish consequential quality regression. Native load evidence remains active trace assessment and cannot be inferred from these passing outputs."
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Candidate-screen output reviews
 
-Status: ten complete comparison packets frozen and measured; reviews not yet dispatched.
+Status: all five Codex packets complete and audited (88 outputs,264 functional factors); five Opus packets remain. The ledger records actual calls and audit state.
 The [packet plan](packet-plan.json) covers all180 repair outputs and540 functional factors: original, comprehensive and compact under visible labels.
 The66 accounting/non-use observations remain active trace judgments outside these packets.
 
@@ -24,3 +24,10 @@ No missing delivery, failed review or disagreement authorizes an additional call
 Opus differs from the active Codex assessor but shares the Opus subjects’ family.
 Labels are visible; no blind, held-out, causal-contribution or population-reliability claim follows.
 No skill edit or adoption is authorized by review completion.
+
+## Packaging limitations recorded during review
+
+The frozen index has generic PNG/runtime wording even in packets that contain neither; actual per-case mappings and required-read lists determine the complete evidence. This irrelevant boilerplate supplies no extra evidence requirement or missing-file inference. The first semantic/pressure reviewer explicitly identifies it, reads all77 required files and reaches a complete independent conclusion.
+The stored conditions candidate/finalist correspond to display labels comprehensive/compact. Git facts expose committed state and diffs; full procedural commit-body and trace judgments remain outside functional review.
+
+The Shiv index is delivered across contiguous native Read responses rather than one response. The post-capture v4 audit checks exact source-line coverage across chunks before first pass; omitted chunks and altered-line controls fail. Frozen inputs and the original v3 audit identity remain unchanged, and each actual audit records its controller path/hash.

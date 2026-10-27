@@ -1,0 +1,128 @@
+{
+  "first_pass_event": 255,
+  "prior_first_access_event": null,
+  "post_prior_event": null,
+  "judgments": [
+    {
+      "run_id": "20261026T134721172Z-ssr-fresh-baseline-codex-discovery-shiv-b2bf1cab-ce90-43ab-bf0b-742deab69f41-fmmcjc30",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all33 independent functional factors. Identical complete final artifacts establish no consequential quality difference among these observed outputs. Active procedural/Shiv uncertainty remains separate."
+    },
+    {
+      "run_id": "20261026T143914253Z-ssr-fresh-baseline-codex-discovery-shiv-34bef055-5156-4912-b368-f30fd19f79ec-ezh96m4u",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all33 independent functional factors. Identical complete final artifacts establish no consequential quality difference among these observed outputs. Active procedural/Shiv uncertainty remains separate."
+    },
+    {
+      "run_id": "20261026T150353909Z-ssr-fresh-baseline-codex-discovery-shiv-8b7b2c1e-7ceb-4889-b85e-61e914680960-lmwtlkmw",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all33 independent functional factors. Identical complete final artifacts establish no consequential quality difference among these observed outputs. Active procedural/Shiv uncertainty remains separate."
+    },
+    {
+      "run_id": "20261026T153200730Z-ssr-fresh-baseline-codex-discovery-shiv-6aea74e1-b2ad-4844-96f1-8226ed7231aa-yc3bh5xi",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all33 independent functional factors. Identical complete final artifacts establish no consequential quality difference among these observed outputs. Active procedural/Shiv uncertainty remains separate."
+    },
+    {
+      "run_id": "20261026T160215005Z-ssr-fresh-baseline-codex-discovery-shiv-443053da-c094-4120-a779-90b810030140-5efwd34u",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all33 independent functional factors. Identical complete final artifacts establish no consequential quality difference among these observed outputs. Active procedural/Shiv uncertainty remains separate."
+    },
+    {
+      "run_id": "20261026T204406120Z-ssr-screen-codex-discovery-shiv-candidate-c0f73722-17eb-43fb-afef-8b52be9165b3-gta01too",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all33 independent functional factors. Identical complete final artifacts establish no consequential quality difference among these observed outputs. Active procedural/Shiv uncertainty remains separate."
+    },
+    {
+      "run_id": "20261026T212521143Z-ssr-screen-codex-discovery-shiv-candidate-d74ab21a-21cc-4e9a-b091-1f44bd0b31f3-b5l16_um",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all33 independent functional factors. Identical complete final artifacts establish no consequential quality difference among these observed outputs. Active procedural/Shiv uncertainty remains separate."
+    },
+    {
+      "run_id": "20261026T230951628Z-ssr-screen-codex-discovery-shiv-candidate-67852c02-e91f-44a6-861e-3008a8812cc0-r9i4j1y0",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all33 independent functional factors. Identical complete final artifacts establish no consequential quality difference among these observed outputs. Active procedural/Shiv uncertainty remains separate."
+    },
+    {
+      "run_id": "20261026T204231699Z-ssr-screen-codex-discovery-shiv-finalist-e4f82415-5d91-47f3-8181-3b63e27eb6c4-gjlbbssd",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all33 independent functional factors. Identical complete final artifacts establish no consequential quality difference among these observed outputs. Active procedural/Shiv uncertainty remains separate."
+    },
+    {
+      "run_id": "20261026T212724634Z-ssr-screen-codex-discovery-shiv-finalist-6a0e6721-98f8-4f2c-8aaf-6d047450d96c-25yadmcm",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all33 independent functional factors. Identical complete final artifacts establish no consequential quality difference among these observed outputs. Active procedural/Shiv uncertainty remains separate."
+    },
+    {
+      "run_id": "20261026T230812245Z-ssr-screen-codex-discovery-shiv-finalist-f1797bba-ca58-445d-98bd-bbbc85d5d5e3-silpin_9",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all33 independent functional factors. Identical complete final artifacts establish no consequential quality difference among these observed outputs. Active procedural/Shiv uncertainty remains separate."
+    }
+  ]
+}

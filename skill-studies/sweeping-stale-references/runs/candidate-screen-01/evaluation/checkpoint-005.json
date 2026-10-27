@@ -1,0 +1,13 @@
+{
+  "completed_reviews": 5,
+  "provider": "codex",
+  "outputs": 88,
+  "functional_factors": 264,
+  "counts": {
+    "F1:met": 88,
+    "F2:met": 88,
+    "F3:met": 88,
+    "overall:met": 88
+  },
+  "audit_and_controller_hashes_verified": true
+}

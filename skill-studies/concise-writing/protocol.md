@@ -1003,7 +1003,7 @@ The owner-approved SSR closing validation adds its [subject index](../sweeping-s
 
 The fresh original SSR baseline adds [Codex subjects](../sweeping-stale-references/runs/fresh-baseline-01/fresh-baseline-codex-01-run-index.json), [Opus subjects](../sweeping-stale-references/runs/fresh-baseline-01/fresh-baseline-opus-01-run-index.json) and [eight bounded review slots](../sweeping-stale-references/runs/fresh-baseline-01/evaluation/evaluator-run-index.json); only actual attempts are charged.
 
-The approved SSR candidate screen adds [Codex subjects](../sweeping-stale-references/runs/candidate-screen-01/candidate-screen-codex-01-run-index.json) and [Opus subjects](../sweeping-stale-references/runs/candidate-screen-01/candidate-screen-claude-01-run-index.json); reused observations are not charged again. Ten new output reviews are allocated and none has started.
+The approved SSR candidate screen adds [Codex subjects](../sweeping-stale-references/runs/candidate-screen-01/candidate-screen-codex-01-run-index.json) and [Opus subjects](../sweeping-stale-references/runs/candidate-screen-01/candidate-screen-claude-01-run-index.json); reused observations are not charged again. Ten new output reviews are allocated; the [evaluator ledger](../sweeping-stale-references/runs/candidate-screen-01/evaluation/evaluator-run-index.json) records their sequential collection and audit.
 
 Combined accounting sources: closed SSR [pilot 01](../sweeping-stale-references/runs/pilot-01/pilot-run-index.json), [pilot 02](../sweeping-stale-references/runs/pilot-02/pilot-02-run-index.json), [semantic delivery](../sweeping-stale-references/runs/semantic-delivery-01/semantic-delivery-01-run-index.json), [core baseline](../sweeping-stale-references/runs/core-baseline-01/core-baseline-01-run-index.json), [comparison](../sweeping-stale-references/runs/comprehensive-comparison-01/comprehensive-comparison-01-run-index.json), the SSR [completed expansion](../sweeping-stale-references/runs/coverage-baseline-01/coverage-baseline-01-run-index.json), the SSR [completed comparison](../sweeping-stale-references/runs/comprehensive-comparison-02/comprehensive-comparison-02-run-index.json), the SSR [Claude smoke](../sweeping-stale-references/runs/claude-smoke-01/claude-smoke-01-run-index.json), the SSR [Claude comparison](../sweeping-stale-references/runs/claude-comparison-01/claude-comparison-01-run-index.json), the SSR [Opus invocation comparison](../sweeping-stale-references/runs/claude-opus-invocation-01/claude-opus-invocation-01-run-index.json), and both CW indexes above. Historical pilot links contribute accounting only; they are not reclassified or reassessed.
 The new E reviews use the [fixed review package](runs/baseline-iteration-e-01/evaluation/README.md) and [supplemental Opus accounting](runs/baseline-iteration-e-01/evaluation/evaluator-run-index.json).
@@ -1013,10 +1013,10 @@ The comment continuation uses [frozen review inputs](runs/final-comparison-01/sc
 The first handoff stage uses its [two-call evaluator ledger](runs/final-comparison-01/handoff-01/evaluation/evaluator-run-index.json).
 The handoff continuation uses its [two-call evaluator ledger](runs/final-comparison-01/handoff-02/evaluation/evaluator-run-index.json).
 The short examples screen uses its [two-call evaluator ledger](runs/final-comparison-01/examples-screen-01/evaluation/evaluator-run-index.json).
-Dispatched calls are **888 subject, 58 evaluator, 0 authoring, 4 retry**; remaining outer capacity is **0 / 10 / 4 / 0** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
+Dispatched calls are **888 subject, 63 evaluator, 0 authoring, 4 retry**; remaining outer capacity is **0 / 5 / 4 / 0** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **4,330 active minutes booked; 3,130 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **4,360 active minutes booked; 3,160 minutes above the historical 1,200-minute planning guideline**.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
 The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 888/888, with all approved fresh original SSR baseline calls spent; the earlier E diagnostic and CW examples screen are spent.
@@ -1039,6 +1039,7 @@ Candidate-screen execution through the slot-56 authentication stop adds 85 estim
 Resumption through slot73 adds 25 estimated active minutes: retry registration, model waits, sequential whole-artifact/trace assessment and evidence audit. All 73 initial charges plus one retry are retained; 73 valid outcomes and the original invalid attempt remain visible. At that checkpoint forty-two subjects and ten reviews remained; no retry capacity remained.
 Collection through slot93 adds another 25 estimated active minutes, including model waits, direct inspection/replay, native timing checks, hook-suite verification and audit. Ninety-three initial subject charges plus the one retry are retained; 22 subjects and ten reviews remain.
 Subject closure through slot115 adds 25 estimated active minutes, including all remaining waits, inspection/replay, scoring and complete evidence audit. All115 subjects and one retry are spent; ten reviews remain.
+Packet assembly/freeze and five completed Codex-output reviews add 30 estimated active minutes, including model waits, full read/first-pass audits, the exact multi-chunk audit correction and separate reconciliation. Five Opus-output reviews remain.
 
 | Work | Estimated active minutes |
 | --- | ---: |
@@ -1186,7 +1187,8 @@ Subject closure through slot115 adds 25 estimated active minutes, including all 
 | SSR retry resumption and collection through slot73 | 25 |
 | SSR third-round collection through slot93 | 25 |
 | SSR final subject collection, replay, score and retention audit | 25 |
-| **Total** | **4,330** |
+| SSR review packet assembly/freeze and first five complete reviews/audits | 30 |
+| **Total** | **4,360** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.

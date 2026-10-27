@@ -1,0 +1,1605 @@
+{
+  "packet_id": "codex-semantic-pressure",
+  "run_id": "20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0",
+  "first_pass_event": 196,
+  "prior_first_access_event": 197,
+  "post_prior_event": 206,
+  "required_complete_files": 77,
+  "complete_delivery_before_first_pass": [
+    {
+      "path": "EVALUATION-INDEX.json",
+      "sha256": "be93608f3a706f636bdf73775e2cb04e31bb8b28c1800438690d6f99287c28f1",
+      "complete_delivery": [
+        {
+          "call_event": 10,
+          "response_event": 11,
+          "call_id": "toolu_01V4hCU76R3rtKhW8U5fvgpJ",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "policy.txt",
+      "sha256": "5d057d11f678ae3fa63c48957446aded13ccc5dcb8babab2856d0232d49e08bb",
+      "complete_delivery": [
+        {
+          "call_event": 15,
+          "response_event": 16,
+          "call_id": "toolu_019cjbRDEKa2k9pYtPbMe5VW",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "INTERPRETATION.md",
+      "sha256": "5c817354ca47e8bda3dc94c572237e08deb4307067ba4155f52ded6d4002ff1f",
+      "complete_delivery": [
+        {
+          "call_event": 17,
+          "response_event": 18,
+          "call_id": "toolu_01PcEk47eWaXfMzi5umf6xb5",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "criteria/pressure-repair-expected.json",
+      "sha256": "1eccde02cbd1523e4d99a90359fae1d45b494c13a3d4691df83b0b0ab9a011fa",
+      "complete_delivery": [
+        {
+          "call_event": 29,
+          "response_event": 30,
+          "call_id": "toolu_014YePr8iH6fPGPAQG7aBKV2",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "criteria/pressure-repair-inherited.md",
+      "sha256": "3891be235b0f254637363e5f867ad707d0c1152024b447f78d4097301c10079d",
+      "complete_delivery": [
+        {
+          "call_event": 27,
+          "response_event": 28,
+          "call_id": "toolu_01JZypzRLSJjbhfGRxQSBgV7",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "criteria/pressure-repair.md",
+      "sha256": "d99963d24b466a28d1cacb83a678c62904d27bb14c601a305580edc3f5be8357",
+      "complete_delivery": [
+        {
+          "call_event": 25,
+          "response_event": 26,
+          "call_id": "toolu_01GGBJgcKTFmzwMFFStRgbBz",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "criteria/semantic-delivery-expected.json",
+      "sha256": "1eccde02cbd1523e4d99a90359fae1d45b494c13a3d4691df83b0b0ab9a011fa",
+      "complete_delivery": [
+        {
+          "call_event": 23,
+          "response_event": 24,
+          "call_id": "toolu_011ZGasqy6kq5CULNSmFGYvf",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "criteria/semantic-delivery-inherited.md",
+      "sha256": "bae6463893e23dba7238e0de74d0accb1ced5d4e22ad04cb7f17bfcebc557253",
+      "complete_delivery": [
+        {
+          "call_event": 21,
+          "response_event": 22,
+          "call_id": "toolu_01NUDVb4oQzrw8qR32eQo5Sj",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "criteria/semantic-delivery.md",
+      "sha256": "0b09481924c64ca82ec9919079204f9b70b853c88bbe87bdec44c1c42b230fb8",
+      "complete_delivery": [
+        {
+          "call_event": 19,
+          "response_event": 20,
+          "call_id": "toolu_015AZ5QUn5sGi3jUf5HyzLQm",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T133837444Z-ssr-fresh-baseline-codex-pressure-repair-6467a052-3123-4706-9938-82a12b6a0cc8-8_okcgbk.json",
+      "sha256": "7419910af5ad8f91f45038dc8d0685864aa9b5cbddc90c660533d2012b57dd85",
+      "complete_delivery": [
+        {
+          "call_event": 85,
+          "response_event": 86,
+          "call_id": "toolu_01RYnCYAtMmQjWvHR1jKa4t7",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T143412498Z-ssr-fresh-baseline-codex-pressure-repair-9e9e6183-27a3-42e7-8985-782d677d97dd-tsskre8q.json",
+      "sha256": "3d7674414170f4f77e6947d4ef56c404c5c7bf0f21c72c5d7ef7df3549721bfe",
+      "complete_delivery": [
+        {
+          "call_event": 87,
+          "response_event": 88,
+          "call_id": "toolu_01DmsJ4GAZcPtB5SeFFV2eNE",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T145759014Z-ssr-fresh-baseline-codex-pressure-repair-257cd5f9-61d7-4a47-90dc-d60334c40686-gp86ilqn.json",
+      "sha256": "18cb21ed6c7f42e2a35f1c975313356060a67e3812f3bca0b7885f34aca53fec",
+      "complete_delivery": [
+        {
+          "call_event": 89,
+          "response_event": 90,
+          "call_id": "toolu_01QoAPy1zfzcHADWaYSq4hN7",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T152652005Z-ssr-fresh-baseline-codex-pressure-repair-88adacf2-1128-4b8a-bb92-ec7756839f0b-tecko1da.json",
+      "sha256": "67c72d578a394c60f94ce9df88b84cf4dbf161b658fb791f5cdbfdaf4d5e06d5",
+      "complete_delivery": [
+        {
+          "call_event": 91,
+          "response_event": 92,
+          "call_id": "toolu_01BTtsgJEyrEPdy5we34JpXN",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T155641100Z-ssr-fresh-baseline-codex-pressure-repair-adfd498a-0d27-4549-9410-3914f16f5b02-opye7i2r.json",
+      "sha256": "ab559f571066cce2ba49b2f3e03c5bed2700ca332fd527668236f171bf33a844",
+      "complete_delivery": [
+        {
+          "call_event": 93,
+          "response_event": 94,
+          "call_id": "toolu_013ZDGYk3CUeLMxWavUrQfG4",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T203535129Z-ssr-screen-codex-pressure-repair-candidate-495506e2-1500-48bd-923d-bd77cfcb1ec5-81sdvfbc.json",
+      "sha256": "9eaadaa9bb41dda8cddae9964fad85879121dad53c6a8a90d9a8914b1128914e",
+      "complete_delivery": [
+        {
+          "call_event": 95,
+          "response_event": 97,
+          "call_id": "toolu_01K4dPeMaMR2oCm9UtNW84An",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T212348582Z-ssr-screen-codex-pressure-repair-candidate-55174ebf-a2aa-4caa-9381-6fa237cdae89-07v7m1d5.json",
+      "sha256": "6a1c9e00f8a9b7fb181588e45f6f2130a5ceb699b4f1d0ef6353a45c45c5cc92",
+      "complete_delivery": [
+        {
+          "call_event": 98,
+          "response_event": 99,
+          "call_id": "toolu_01L6SjRHCMA5DsMabRv45MGE",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T230121957Z-ssr-screen-codex-pressure-repair-candidate-1ab1db76-14ec-4ba5-8879-f33be857a7f2-ftqftko0.json",
+      "sha256": "8e7198fea238b24d5a4ced1d494764eac6e13bbde978fcb32536ede8f0e7ecb0",
+      "complete_delivery": [
+        {
+          "call_event": 100,
+          "response_event": 101,
+          "call_id": "toolu_019cSoqwvx7As1sfDHPc66Cb",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T203714982Z-ssr-screen-codex-pressure-repair-finalist-07a4c9db-5210-4e9f-9be0-5df4145124cf-tr6gwbql.json",
+      "sha256": "c074ac5ce7a8400ee2e5ce0e7b9225b1614beda9eab701dc0f6a690070f4fa76",
+      "complete_delivery": [
+        {
+          "call_event": 102,
+          "response_event": 103,
+          "call_id": "toolu_016fJZrkgvVWoKwEu9L22EJX",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T212231168Z-ssr-screen-codex-pressure-repair-finalist-97ef6cd4-7956-4c00-a625-020bcdaf5ac3-91n2b_2j.json",
+      "sha256": "9575fa1581ca717e732a30b12fb9306dd5bfa0b68fb564efcfc1f7bc428092bf",
+      "complete_delivery": [
+        {
+          "call_event": 104,
+          "response_event": 105,
+          "call_id": "toolu_01PbyQqs5DwnBMNXpE9ocyrF",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T230247137Z-ssr-screen-codex-pressure-repair-finalist-b4af3766-7149-460c-8320-e039878615ce-zlehyfdo.json",
+      "sha256": "cab68a37e36794bf752aa0e043e95b4c1cf319b122fc7cdf8d30f61d146fcee5",
+      "complete_delivery": [
+        {
+          "call_event": 106,
+          "response_event": 107,
+          "call_id": "toolu_01PZDWvNZyAvXUDewzjV2iWw",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T133436927Z-ssr-fresh-baseline-codex-semantic-delivery-a705672d-b862-4541-af12-d3d88b5d2742-f3puqmj4.json",
+      "sha256": "4c81e8be027d56712862a8fe7f26d1ef0618fd5ae39f4eae8fa58cf39d88b16a",
+      "complete_delivery": [
+        {
+          "call_event": 108,
+          "response_event": 109,
+          "call_id": "toolu_01D3GSbQojcZTPzrCVPjLBxv",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T143111482Z-ssr-fresh-baseline-codex-semantic-delivery-5980d576-4a6c-47ea-b04b-399ddcf459be-mmghqytm.json",
+      "sha256": "a9deeb600e72e9517e1e144a057b14952548e6b54816bc2714442a15e46fe4c6",
+      "complete_delivery": [
+        {
+          "call_event": 113,
+          "response_event": 114,
+          "call_id": "toolu_01LNHjLbEhBnPPvUeTcQU8WP",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T145614690Z-ssr-fresh-baseline-codex-semantic-delivery-cbec7a28-8fdd-46a7-ad5f-e572c40d8bfb-x3551ydz.json",
+      "sha256": "53987652d14e7e5ddda337726e68c5a3659f33ae218c2139d9fb458ac032c5ce",
+      "complete_delivery": [
+        {
+          "call_event": 115,
+          "response_event": 116,
+          "call_id": "toolu_01LDJ7JEEzSeByrVC4cm2y6t",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T152435135Z-ssr-fresh-baseline-codex-semantic-delivery-ad65b54c-58b4-45dd-82eb-564814ede4a6-ev4tkama.json",
+      "sha256": "7bce81b6c4b6ca2159404302f865bd134933c34bae7db84da377a8f57ec85f0c",
+      "complete_delivery": [
+        {
+          "call_event": 117,
+          "response_event": 118,
+          "call_id": "toolu_01HWbxH3L3FbvCru1PCicK87",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T155347173Z-ssr-fresh-baseline-codex-semantic-delivery-184d95f2-da8b-4178-9baa-4e31afca4d9e-2nu79qkx.json",
+      "sha256": "b6ec6b007a85557416169ac270672f7fb617c870fd34f347b152e95e7874bcc1",
+      "complete_delivery": [
+        {
+          "call_event": 119,
+          "response_event": 120,
+          "call_id": "toolu_01PygVj5aDZ2jJZuA9jJD9i1",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T211116900Z-ssr-screen-codex-semantic-delivery-candidate-77e9eae3-566f-47b0-977a-3b2916692842-ifqovc4m.json",
+      "sha256": "a77c0e6f2d4225beb0f408e498c4fceaba52882842e9f6e3045dd5b95fd13855",
+      "complete_delivery": [
+        {
+          "call_event": 121,
+          "response_event": 122,
+          "call_id": "toolu_01RL8kPWXMpbuY3uds45vY9g",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T225336383Z-ssr-screen-codex-semantic-delivery-candidate-d4674a19-2c36-4175-9335-8faec79d7dc0-tgl7dz4t.json",
+      "sha256": "d0028fef604fcd0c7e8b09ec1fcdc20b95e41e920149788bd2882ff4eae87214",
+      "complete_delivery": [
+        {
+          "call_event": 123,
+          "response_event": 124,
+          "call_id": "toolu_01BCBTsYq6njViA6nxzQ6n7C",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T233945689Z-ssr-screen-codex-semantic-delivery-candidate-046e1571-0550-4ef6-9383-3dca6cd69eba-cxbbo3nc.json",
+      "sha256": "f461bc0e30736104bd59914e028569e11984e12b2e09a8276714a8656fcb0811",
+      "complete_delivery": [
+        {
+          "call_event": 125,
+          "response_event": 126,
+          "call_id": "toolu_01HR6Zr8TsynKdxJb9JjvKtS",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T211248054Z-ssr-screen-codex-semantic-delivery-finalist-b3a2019a-2a34-4482-929a-5f9c6757a6f8-052cfl6_.json",
+      "sha256": "d371d52585a5faa3db8e034a66c5775f28e2b88edc8c2607f9c921ea9eb59729",
+      "complete_delivery": [
+        {
+          "call_event": 127,
+          "response_event": 128,
+          "call_id": "toolu_01EB6TwaUBebBtfPHEG1rh7D",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T225218601Z-ssr-screen-codex-semantic-delivery-finalist-a20d2777-0f44-40d7-ab61-0069946425a7-6gi2_8j7.json",
+      "sha256": "1f43dc64212e6e55198ac8833f5599a3c1611d7f91c16c31fdeea162a317e646",
+      "complete_delivery": [
+        {
+          "call_event": 129,
+          "response_event": 130,
+          "call_id": "toolu_01MtnxmS5XHJfq4VTLaM8hiP",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261026T234049700Z-ssr-screen-codex-semantic-delivery-finalist-6003bd53-d6e1-4f68-be24-31486b89c07f-cny6mxs8.json",
+      "sha256": "a9a3d982106ccc81d027e4f19d18ac8ca6626c623ac29b0802c02919898f1566",
+      "complete_delivery": [
+        {
+          "call_event": 131,
+          "response_event": 132,
+          "call_id": "toolu_01PdoHj7JJNKMt3vVmtjthDD",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/001.txt",
+      "sha256": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2",
+      "complete_delivery": [
+        {
+          "call_event": 32,
+          "response_event": 33,
+          "call_id": "toolu_01LANRNkNQeSPSmHQA4kVdVS",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/002.txt",
+      "sha256": "1a4b23b1f53af5b7aa42ac8e72f59282374435831bd35f542c23bd7dfdccb6e3",
+      "complete_delivery": [
+        {
+          "call_event": 34,
+          "response_event": 35,
+          "call_id": "toolu_01RCLMZMiDY4QHM2PaQ4kCBg",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/003.txt",
+      "sha256": "8d6d58a231c01678279d8e00ea0f03f9306c1b36a474b8cb4dd5967b657453bb",
+      "complete_delivery": [
+        {
+          "call_event": 36,
+          "response_event": 37,
+          "call_id": "toolu_01EkPLiSXMZVVU3Rzumqk9cL",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/004.txt",
+      "sha256": "7d3c3810c532bdd87af795cf543171deeaff0595e4a13f7fdee39e8dfdef18d2",
+      "complete_delivery": [
+        {
+          "call_event": 38,
+          "response_event": 39,
+          "call_id": "toolu_01JMibLov8moMq69mqAf65y8",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/005.txt",
+      "sha256": "8e8a5cb48d7d3f3ca8e7212e9c29764f6e8f6cdaaf4f4d8d0762aaeaca906f1f",
+      "complete_delivery": [
+        {
+          "call_event": 40,
+          "response_event": 41,
+          "call_id": "toolu_01LSkv9nbacLDQEW1eEEzoTF",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/006.txt",
+      "sha256": "ef7513eb13148ad5c6b215959ae917c6ef42a24050dc8df5ff64fe814dcfd376",
+      "complete_delivery": [
+        {
+          "call_event": 42,
+          "response_event": 43,
+          "call_id": "toolu_01FMCSNea56TLaSSDr6oHw4J",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/007.txt",
+      "sha256": "554df6c0a7d0bf116cc593c4fdf3384e8645ab98c7d4e38780637b75577cda52",
+      "complete_delivery": [
+        {
+          "call_event": 44,
+          "response_event": 45,
+          "call_id": "toolu_014VgSvGjYbFTuPHy4v8CDi1",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/008.txt",
+      "sha256": "3a618d709d2be580ccb53f2f660822be9f90b091af41e3ce3b7aaed31e894eb0",
+      "complete_delivery": [
+        {
+          "call_event": 46,
+          "response_event": 47,
+          "call_id": "toolu_01HFsfnYfrZWvoDSB3ZqWnsi",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/009.txt",
+      "sha256": "71160952f35e3a255d68cca629a0a66d79e3e4b4c30431786f6945a28ede54f3",
+      "complete_delivery": [
+        {
+          "call_event": 48,
+          "response_event": 49,
+          "call_id": "toolu_01WC2PLgf6eAXkHZy72o25RF",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/010.txt",
+      "sha256": "6c9685054ae4f4dd6f32a76a18401366e4206b829466367640370554bf33f683",
+      "complete_delivery": [
+        {
+          "call_event": 50,
+          "response_event": 51,
+          "call_id": "toolu_016YDEugxLALFwstdxnrdGoa",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/011.txt",
+      "sha256": "dcdfdbe795b034f87d6274200923a940603f0f96d4c728a8e773fcffbcad5e4f",
+      "complete_delivery": [
+        {
+          "call_event": 52,
+          "response_event": 53,
+          "call_id": "toolu_01AbQkoBsx6zPGkQdPFoCTSk",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/012.txt",
+      "sha256": "7e3566cc4f0d51da1302368281a8b3b0f2f4e4ea92919c1ecbc2ce68b62d38f5",
+      "complete_delivery": [
+        {
+          "call_event": 55,
+          "response_event": 56,
+          "call_id": "toolu_01PmB3786ae1ywDf1CprTw3g",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/013.txt",
+      "sha256": "c891b221c7e8e90e67a55ed09f312925c0989ba06ac426f454293b76bee5b891",
+      "complete_delivery": [
+        {
+          "call_event": 57,
+          "response_event": 58,
+          "call_id": "toolu_0195F4gkLBDf5U5mXDjba6Lc",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/014.txt",
+      "sha256": "2436b0c68662c0128de007b48b5687e22cd43a86aa465029df6d71ca0c8a9dac",
+      "complete_delivery": [
+        {
+          "call_event": 59,
+          "response_event": 60,
+          "call_id": "toolu_017kZ6DGnU41oECX6PeH2Ms4",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/015.txt",
+      "sha256": "c02b7809abac11089ac9d7f8bb3212c3b9d10e15e4b8abfb1c6531f5640a4357",
+      "complete_delivery": [
+        {
+          "call_event": 61,
+          "response_event": 62,
+          "call_id": "toolu_01Yc5zQ2VS1JetKuCLFX88qx",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/016.txt",
+      "sha256": "f2dd0ed83da1fcb53eaea0b250c77589096c7ef5edac94ddf6eb358fd0c38cce",
+      "complete_delivery": [
+        {
+          "call_event": 63,
+          "response_event": 64,
+          "call_id": "toolu_019zFRh1pZyHwXsf8tKxFuaH",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/017.txt",
+      "sha256": "691e6a2a6e64042506675bbd34eed6ff0fc997ae28820a7f1ebb89e766dc34de",
+      "complete_delivery": [
+        {
+          "call_event": 65,
+          "response_event": 66,
+          "call_id": "toolu_01UvV7sYizMECHhc4CNBicAa",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/018.txt",
+      "sha256": "8957e1a3d0a7362bd3504913fa38ac3bcbeb98a56309d15ec77735bd9604246d",
+      "complete_delivery": [
+        {
+          "call_event": 67,
+          "response_event": 68,
+          "call_id": "toolu_0121EXMzHCo2YRJprSVqzgjP",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/019.txt",
+      "sha256": "946a77884f4c5a8a451c3b0c10c3f80c96c60004b809eb44182869ef689fb80e",
+      "complete_delivery": [
+        {
+          "call_event": 69,
+          "response_event": 70,
+          "call_id": "toolu_0158c5JTLuCjczW9Z7kYffjo",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/020.txt",
+      "sha256": "5627a38e33e0da57f237f96c3981dd64527c7cfd41abf3e24360bfa16725df7d",
+      "complete_delivery": [
+        {
+          "call_event": 71,
+          "response_event": 72,
+          "call_id": "toolu_018uybZ7GKgLNZXzLU3vTHyT",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/021.txt",
+      "sha256": "4083da34e3589cb1b29c3b370827db0742c902956f00a5834cbf7df378a0187e",
+      "complete_delivery": [
+        {
+          "call_event": 73,
+          "response_event": 74,
+          "call_id": "toolu_01SNGTHdiAw16TMnNoEmvvWu",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/022.txt",
+      "sha256": "f68c833c2bb8d9ff8cee87db1d7bc0d79d5217684b1ac712ab25d43af74ab509",
+      "complete_delivery": [
+        {
+          "call_event": 75,
+          "response_event": 76,
+          "call_id": "toolu_01PcoueMFMSiSEDDsSxw5mPR",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/023.txt",
+      "sha256": "4b00a08900bde52907fb6d538ad1fc8245b76d92b2cf29d76887b3f41118dcdc",
+      "complete_delivery": [
+        {
+          "call_event": 77,
+          "response_event": 78,
+          "call_id": "toolu_01Nh6nMvPXGwnuyv6CSXiiXY",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/024.txt",
+      "sha256": "69c173a7a35335918188b5968c02d6e449649f01d5a0d16f429b63121d314a24",
+      "complete_delivery": [
+        {
+          "call_event": 79,
+          "response_event": 80,
+          "call_id": "toolu_01F8X7ZPn9usxobf2sTbzy8Y",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T133837444Z-ssr-fresh-baseline-codex-pressure-repair-6467a052-3123-4706-9938-82a12b6a0cc8-8_okcgbk.md",
+      "sha256": "d73a10ad6c3c52f494f80a530853faf44b064e8b371eaaaaf87ea0aef1d49724",
+      "complete_delivery": [
+        {
+          "call_event": 140,
+          "response_event": 141,
+          "call_id": "toolu_01K1QBEELwL9Gw3dskV4aPvC",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T143412498Z-ssr-fresh-baseline-codex-pressure-repair-9e9e6183-27a3-42e7-8985-782d677d97dd-tsskre8q.md",
+      "sha256": "d360036cb6d6c8df123ef263647b9b0e604c720f151eb21c7a2b2558cee9fb22",
+      "complete_delivery": [
+        {
+          "call_event": 142,
+          "response_event": 143,
+          "call_id": "toolu_01QYRgm6pZh9gATsdmWub5wv",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T145759014Z-ssr-fresh-baseline-codex-pressure-repair-257cd5f9-61d7-4a47-90dc-d60334c40686-gp86ilqn.md",
+      "sha256": "3bb3f2426af8c7bf93b5d41038ce947972dbd718c43331ab85cc4b3a81e316da",
+      "complete_delivery": [
+        {
+          "call_event": 144,
+          "response_event": 145,
+          "call_id": "toolu_01AVRbHievzyZ1eo1AhssRh5",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T152652005Z-ssr-fresh-baseline-codex-pressure-repair-88adacf2-1128-4b8a-bb92-ec7756839f0b-tecko1da.md",
+      "sha256": "6719e07b03e21a97a3e49ce3ab97fef14ad40929ba95509f05c8032e6b8a1966",
+      "complete_delivery": [
+        {
+          "call_event": 146,
+          "response_event": 147,
+          "call_id": "toolu_01Jya5ftEvoK4nEmpp8Z6qRr",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T155641100Z-ssr-fresh-baseline-codex-pressure-repair-adfd498a-0d27-4549-9410-3914f16f5b02-opye7i2r.md",
+      "sha256": "fb65e42bcacda812f809e061dcc46452c70bc1b0c70acaad0b1c9dcacd5cd018",
+      "complete_delivery": [
+        {
+          "call_event": 148,
+          "response_event": 149,
+          "call_id": "toolu_01Hgqhq1DBKcpN5MfRLZdxmg",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T203535129Z-ssr-screen-codex-pressure-repair-candidate-495506e2-1500-48bd-923d-bd77cfcb1ec5-81sdvfbc.md",
+      "sha256": "e6db8bedb456909054ddc21bf09820e056b76fd17aabd4eed15e9664eb416998",
+      "complete_delivery": [
+        {
+          "call_event": 150,
+          "response_event": 151,
+          "call_id": "toolu_01N5WxbEpwM8FuZb7PoPTG5U",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T212348582Z-ssr-screen-codex-pressure-repair-candidate-55174ebf-a2aa-4caa-9381-6fa237cdae89-07v7m1d5.md",
+      "sha256": "460b13661465bb5dba8bfc889ddc5c7f4d4f635b6f81c330e2ca549eebb8acc5",
+      "complete_delivery": [
+        {
+          "call_event": 152,
+          "response_event": 153,
+          "call_id": "toolu_01YWhTaAiZeyUGQM2h8Cun8L",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T230121957Z-ssr-screen-codex-pressure-repair-candidate-1ab1db76-14ec-4ba5-8879-f33be857a7f2-ftqftko0.md",
+      "sha256": "7975efbf20d82b3a33c0a0ed42ba5538b4d4601fa0146273a6c108776ac70bf8",
+      "complete_delivery": [
+        {
+          "call_event": 154,
+          "response_event": 155,
+          "call_id": "toolu_01HURwYsbLr27h6RcHfi8Uos",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T203714982Z-ssr-screen-codex-pressure-repair-finalist-07a4c9db-5210-4e9f-9be0-5df4145124cf-tr6gwbql.md",
+      "sha256": "3c7a49b57aa0fd1a2c27428d48915585c1e2c7eb6fd6459939929a72027e97e9",
+      "complete_delivery": [
+        {
+          "call_event": 156,
+          "response_event": 157,
+          "call_id": "toolu_01M29RiTirMreuN71Dvz44oK",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T212231168Z-ssr-screen-codex-pressure-repair-finalist-97ef6cd4-7956-4c00-a625-020bcdaf5ac3-91n2b_2j.md",
+      "sha256": "e4aa85f8c9353ff9ce1e8b0c419213f27f3e5740c58a6ffafdb5928540e413fb",
+      "complete_delivery": [
+        {
+          "call_event": 158,
+          "response_event": 159,
+          "call_id": "toolu_01QQyoJejdEfubuUHVXjfWxg",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T230247137Z-ssr-screen-codex-pressure-repair-finalist-b4af3766-7149-460c-8320-e039878615ce-zlehyfdo.md",
+      "sha256": "bcc5820c5089fd3923d2bb002c29acb06b61e78133b24a84c17478a82979bd12",
+      "complete_delivery": [
+        {
+          "call_event": 160,
+          "response_event": 161,
+          "call_id": "toolu_011VxnE2ZYauU6jiLLN4ZxTJ",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T133436927Z-ssr-fresh-baseline-codex-semantic-delivery-a705672d-b862-4541-af12-d3d88b5d2742-f3puqmj4.md",
+      "sha256": "f91615cb556a9336fef021fd1ddfdf53b1a0654c6f36ec4ff9682ed058dfa51c",
+      "complete_delivery": [
+        {
+          "call_event": 162,
+          "response_event": 163,
+          "call_id": "toolu_01WcfvsMsuz1Ja3SAsan8J4Q",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T143111482Z-ssr-fresh-baseline-codex-semantic-delivery-5980d576-4a6c-47ea-b04b-399ddcf459be-mmghqytm.md",
+      "sha256": "b6ad5e6d16abde3119d6d38c98c516c1c924d9f766bff0ad86ffc2794ea27fa3",
+      "complete_delivery": [
+        {
+          "call_event": 164,
+          "response_event": 165,
+          "call_id": "toolu_01TjxzBXmqXkKSLo4ckczexG",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T145614690Z-ssr-fresh-baseline-codex-semantic-delivery-cbec7a28-8fdd-46a7-ad5f-e572c40d8bfb-x3551ydz.md",
+      "sha256": "5a741d448ac2ac8acc20a360c2131c17d95e2404522a1dd7c4f0fbd67f97208c",
+      "complete_delivery": [
+        {
+          "call_event": 166,
+          "response_event": 167,
+          "call_id": "toolu_018FvQrzF9Bfyudpdbyq9VDN",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T152435135Z-ssr-fresh-baseline-codex-semantic-delivery-ad65b54c-58b4-45dd-82eb-564814ede4a6-ev4tkama.md",
+      "sha256": "c44b5faa7d126b00a0571058cae0114a44e9a045c10e64eb5b07e806c6842683",
+      "complete_delivery": [
+        {
+          "call_event": 168,
+          "response_event": 169,
+          "call_id": "toolu_015SYCq8dmC1rKLLfMxUhWQH",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T155347173Z-ssr-fresh-baseline-codex-semantic-delivery-184d95f2-da8b-4178-9baa-4e31afca4d9e-2nu79qkx.md",
+      "sha256": "f81c527a2d5a54dbeaa001a87c09858c5e2ba5fe04a46a71dd2c96ae2a10a65b",
+      "complete_delivery": [
+        {
+          "call_event": 170,
+          "response_event": 171,
+          "call_id": "toolu_01UyFawTvZk83bMWm4n7ZoZj",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T211116900Z-ssr-screen-codex-semantic-delivery-candidate-77e9eae3-566f-47b0-977a-3b2916692842-ifqovc4m.md",
+      "sha256": "ad19dab9d04cb19e4ea7ee981c5636c634ffcfa7f8b5d2e0a2db09f21caf44eb",
+      "complete_delivery": [
+        {
+          "call_event": 172,
+          "response_event": 173,
+          "call_id": "toolu_01RSG7zKQP6Agca9LCniNWyE",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T225336383Z-ssr-screen-codex-semantic-delivery-candidate-d4674a19-2c36-4175-9335-8faec79d7dc0-tgl7dz4t.md",
+      "sha256": "64505d4d13e6397cf96413421b4ac3f803b28e50de762f2fdf9244802a79f97c",
+      "complete_delivery": [
+        {
+          "call_event": 174,
+          "response_event": 175,
+          "call_id": "toolu_014aWgnMKPuPRgG5tDHqpFNL",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T233945689Z-ssr-screen-codex-semantic-delivery-candidate-046e1571-0550-4ef6-9383-3dca6cd69eba-cxbbo3nc.md",
+      "sha256": "5be66fb60ba434867bcc3e66ab42e04bbccf7df9fa11b482f0bf7914ebd8a883",
+      "complete_delivery": [
+        {
+          "call_event": 176,
+          "response_event": 177,
+          "call_id": "toolu_01FNr3BRjW2BMvQEdMe8YDVn",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T211248054Z-ssr-screen-codex-semantic-delivery-finalist-b3a2019a-2a34-4482-929a-5f9c6757a6f8-052cfl6_.md",
+      "sha256": "36d46878f5690549de8a86fe357d2e2ae678d9cc94a65b0066604309ac46cce6",
+      "complete_delivery": [
+        {
+          "call_event": 178,
+          "response_event": 179,
+          "call_id": "toolu_013BAL97Fz3DZvKZGdgTN8gM",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T225218601Z-ssr-screen-codex-semantic-delivery-finalist-a20d2777-0f44-40d7-ab61-0069946425a7-6gi2_8j7.md",
+      "sha256": "3e4d27115ea45770e2b3d00f930ced04d312f1edeee32dfa47d9d45bda26ce6f",
+      "complete_delivery": [
+        {
+          "call_event": 180,
+          "response_event": 181,
+          "call_id": "toolu_015hR8jDTkG4bacBMuKaZczE",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261026T234049700Z-ssr-screen-codex-semantic-delivery-finalist-6003bd53-d6e1-4f68-be24-31486b89c07f-cny6mxs8.md",
+      "sha256": "d3345a19a00a80dbf5c7db889afa330e661952d77d420de2e19c07eb048029d1",
+      "complete_delivery": [
+        {
+          "call_event": 182,
+          "response_event": 183,
+          "call_id": "toolu_01F9KxRVxfyw1HDx3sRcSmTW",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    }
+  ],
+  "full_inventory_verified": true,
+  "protected_inputs_verified": 78,
+  "all_calls": [
+    {
+      "event": 3,
+      "name": "Glob",
+      "input": {
+        "pattern": "**/EVALUATION-INDEX.json",
+        "path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace"
+      }
+    },
+    {
+      "event": 6,
+      "name": "Glob",
+      "input": {
+        "pattern": "**/EVALUATION-INDEX.json",
+        "path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/evidence"
+      }
+    },
+    {
+      "event": 8,
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*",
+        "path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture"
+      }
+    },
+    {
+      "event": 10,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/EVALUATION-INDEX.json"
+      }
+    },
+    {
+      "event": 15,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/policy.txt"
+      }
+    },
+    {
+      "event": 17,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/INTERPRETATION.md"
+      }
+    },
+    {
+      "event": 19,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/criteria/semantic-delivery.md"
+      }
+    },
+    {
+      "event": 21,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/criteria/semantic-delivery-inherited.md"
+      }
+    },
+    {
+      "event": 23,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/criteria/semantic-delivery-expected.json"
+      }
+    },
+    {
+      "event": 25,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/criteria/pressure-repair.md"
+      }
+    },
+    {
+      "event": 27,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/criteria/pressure-repair-inherited.md"
+      }
+    },
+    {
+      "event": 29,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/criteria/pressure-repair-expected.json"
+      }
+    },
+    {
+      "event": 32,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/objects/001.txt"
+      }
+    },
+    {
+      "event": 34,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/objects/002.txt"
+      }
+    },
+    {
+      "event": 36,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/objects/003.txt"
+      }
+    },
+    {
+      "event": 38,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/objects/004.txt"
+      }
+    },
+    {
+      "event": 40,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/objects/005.txt"
+      }
+    },
+    {
+      "event": 42,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/objects/006.txt"
+      }
+    },
+    {
+      "event": 44,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/objects/007.txt"
+      }
+    },
+    {
+      "event": 46,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/objects/008.txt"
+      }
+    },
+    {
+      "event": 48,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/objects/009.txt"
+      }
+    },
+    {
+      "event": 50,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/objects/010.txt"
+      }
+    },
+    {
+      "event": 52,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/objects/011.txt"
+      }
+    },
+    {
+      "event": 55,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/objects/012.txt"
+      }
+    },
+    {
+      "event": 57,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/objects/013.txt"
+      }
+    },
+    {
+      "event": 59,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/objects/014.txt"
+      }
+    },
+    {
+      "event": 61,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/objects/015.txt"
+      }
+    },
+    {
+      "event": 63,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/objects/016.txt"
+      }
+    },
+    {
+      "event": 65,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/objects/017.txt"
+      }
+    },
+    {
+      "event": 67,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/objects/018.txt"
+      }
+    },
+    {
+      "event": 69,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/objects/019.txt"
+      }
+    },
+    {
+      "event": 71,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/objects/020.txt"
+      }
+    },
+    {
+      "event": 73,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/objects/021.txt"
+      }
+    },
+    {
+      "event": 75,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/objects/022.txt"
+      }
+    },
+    {
+      "event": 77,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/objects/023.txt"
+      }
+    },
+    {
+      "event": 79,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/objects/024.txt"
+      }
+    },
+    {
+      "event": 85,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/facts/20261026T133837444Z-ssr-fresh-baseline-codex-pressure-repair-6467a052-3123-4706-9938-82a12b6a0cc8-8_okcgbk.json"
+      }
+    },
+    {
+      "event": 87,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/facts/20261026T143412498Z-ssr-fresh-baseline-codex-pressure-repair-9e9e6183-27a3-42e7-8985-782d677d97dd-tsskre8q.json"
+      }
+    },
+    {
+      "event": 89,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/facts/20261026T145759014Z-ssr-fresh-baseline-codex-pressure-repair-257cd5f9-61d7-4a47-90dc-d60334c40686-gp86ilqn.json"
+      }
+    },
+    {
+      "event": 91,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/facts/20261026T152652005Z-ssr-fresh-baseline-codex-pressure-repair-88adacf2-1128-4b8a-bb92-ec7756839f0b-tecko1da.json"
+      }
+    },
+    {
+      "event": 93,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/facts/20261026T155641100Z-ssr-fresh-baseline-codex-pressure-repair-adfd498a-0d27-4549-9410-3914f16f5b02-opye7i2r.json"
+      }
+    },
+    {
+      "event": 95,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/facts/20261026T203535129Z-ssr-screen-codex-pressure-repair-candidate-495506e2-1500-48bd-923d-bd77cfcb1ec5-81sdvfbc.json"
+      }
+    },
+    {
+      "event": 98,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/facts/20261026T212348582Z-ssr-screen-codex-pressure-repair-candidate-55174ebf-a2aa-4caa-9381-6fa237cdae89-07v7m1d5.json"
+      }
+    },
+    {
+      "event": 100,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/facts/20261026T230121957Z-ssr-screen-codex-pressure-repair-candidate-1ab1db76-14ec-4ba5-8879-f33be857a7f2-ftqftko0.json"
+      }
+    },
+    {
+      "event": 102,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/facts/20261026T203714982Z-ssr-screen-codex-pressure-repair-finalist-07a4c9db-5210-4e9f-9be0-5df4145124cf-tr6gwbql.json"
+      }
+    },
+    {
+      "event": 104,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/facts/20261026T212231168Z-ssr-screen-codex-pressure-repair-finalist-97ef6cd4-7956-4c00-a625-020bcdaf5ac3-91n2b_2j.json"
+      }
+    },
+    {
+      "event": 106,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/facts/20261026T230247137Z-ssr-screen-codex-pressure-repair-finalist-b4af3766-7149-460c-8320-e039878615ce-zlehyfdo.json"
+      }
+    },
+    {
+      "event": 108,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/facts/20261026T133436927Z-ssr-fresh-baseline-codex-semantic-delivery-a705672d-b862-4541-af12-d3d88b5d2742-f3puqmj4.json"
+      }
+    },
+    {
+      "event": 113,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/facts/20261026T143111482Z-ssr-fresh-baseline-codex-semantic-delivery-5980d576-4a6c-47ea-b04b-399ddcf459be-mmghqytm.json"
+      }
+    },
+    {
+      "event": 115,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/facts/20261026T145614690Z-ssr-fresh-baseline-codex-semantic-delivery-cbec7a28-8fdd-46a7-ad5f-e572c40d8bfb-x3551ydz.json"
+      }
+    },
+    {
+      "event": 117,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/facts/20261026T152435135Z-ssr-fresh-baseline-codex-semantic-delivery-ad65b54c-58b4-45dd-82eb-564814ede4a6-ev4tkama.json"
+      }
+    },
+    {
+      "event": 119,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/facts/20261026T155347173Z-ssr-fresh-baseline-codex-semantic-delivery-184d95f2-da8b-4178-9baa-4e31afca4d9e-2nu79qkx.json"
+      }
+    },
+    {
+      "event": 121,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/facts/20261026T211116900Z-ssr-screen-codex-semantic-delivery-candidate-77e9eae3-566f-47b0-977a-3b2916692842-ifqovc4m.json"
+      }
+    },
+    {
+      "event": 123,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/facts/20261026T225336383Z-ssr-screen-codex-semantic-delivery-candidate-d4674a19-2c36-4175-9335-8faec79d7dc0-tgl7dz4t.json"
+      }
+    },
+    {
+      "event": 125,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/facts/20261026T233945689Z-ssr-screen-codex-semantic-delivery-candidate-046e1571-0550-4ef6-9383-3dca6cd69eba-cxbbo3nc.json"
+      }
+    },
+    {
+      "event": 127,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/facts/20261026T211248054Z-ssr-screen-codex-semantic-delivery-finalist-b3a2019a-2a34-4482-929a-5f9c6757a6f8-052cfl6_.json"
+      }
+    },
+    {
+      "event": 129,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/facts/20261026T225218601Z-ssr-screen-codex-semantic-delivery-finalist-a20d2777-0f44-40d7-ab61-0069946425a7-6gi2_8j7.json"
+      }
+    },
+    {
+      "event": 131,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/facts/20261026T234049700Z-ssr-screen-codex-semantic-delivery-finalist-6003bd53-d6e1-4f68-be24-31486b89c07f-cny6mxs8.json"
+      }
+    },
+    {
+      "event": 140,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/outputs/20261026T133837444Z-ssr-fresh-baseline-codex-pressure-repair-6467a052-3123-4706-9938-82a12b6a0cc8-8_okcgbk.md"
+      }
+    },
+    {
+      "event": 142,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/outputs/20261026T143412498Z-ssr-fresh-baseline-codex-pressure-repair-9e9e6183-27a3-42e7-8985-782d677d97dd-tsskre8q.md"
+      }
+    },
+    {
+      "event": 144,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/outputs/20261026T145759014Z-ssr-fresh-baseline-codex-pressure-repair-257cd5f9-61d7-4a47-90dc-d60334c40686-gp86ilqn.md"
+      }
+    },
+    {
+      "event": 146,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/outputs/20261026T152652005Z-ssr-fresh-baseline-codex-pressure-repair-88adacf2-1128-4b8a-bb92-ec7756839f0b-tecko1da.md"
+      }
+    },
+    {
+      "event": 148,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/outputs/20261026T155641100Z-ssr-fresh-baseline-codex-pressure-repair-adfd498a-0d27-4549-9410-3914f16f5b02-opye7i2r.md"
+      }
+    },
+    {
+      "event": 150,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/outputs/20261026T203535129Z-ssr-screen-codex-pressure-repair-candidate-495506e2-1500-48bd-923d-bd77cfcb1ec5-81sdvfbc.md"
+      }
+    },
+    {
+      "event": 152,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/outputs/20261026T212348582Z-ssr-screen-codex-pressure-repair-candidate-55174ebf-a2aa-4caa-9381-6fa237cdae89-07v7m1d5.md"
+      }
+    },
+    {
+      "event": 154,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/outputs/20261026T230121957Z-ssr-screen-codex-pressure-repair-candidate-1ab1db76-14ec-4ba5-8879-f33be857a7f2-ftqftko0.md"
+      }
+    },
+    {
+      "event": 156,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/outputs/20261026T203714982Z-ssr-screen-codex-pressure-repair-finalist-07a4c9db-5210-4e9f-9be0-5df4145124cf-tr6gwbql.md"
+      }
+    },
+    {
+      "event": 158,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/outputs/20261026T212231168Z-ssr-screen-codex-pressure-repair-finalist-97ef6cd4-7956-4c00-a625-020bcdaf5ac3-91n2b_2j.md"
+      }
+    },
+    {
+      "event": 160,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/outputs/20261026T230247137Z-ssr-screen-codex-pressure-repair-finalist-b4af3766-7149-460c-8320-e039878615ce-zlehyfdo.md"
+      }
+    },
+    {
+      "event": 162,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/outputs/20261026T133436927Z-ssr-fresh-baseline-codex-semantic-delivery-a705672d-b862-4541-af12-d3d88b5d2742-f3puqmj4.md"
+      }
+    },
+    {
+      "event": 164,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/outputs/20261026T143111482Z-ssr-fresh-baseline-codex-semantic-delivery-5980d576-4a6c-47ea-b04b-399ddcf459be-mmghqytm.md"
+      }
+    },
+    {
+      "event": 166,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/outputs/20261026T145614690Z-ssr-fresh-baseline-codex-semantic-delivery-cbec7a28-8fdd-46a7-ad5f-e572c40d8bfb-x3551ydz.md"
+      }
+    },
+    {
+      "event": 168,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/outputs/20261026T152435135Z-ssr-fresh-baseline-codex-semantic-delivery-ad65b54c-58b4-45dd-82eb-564814ede4a6-ev4tkama.md"
+      }
+    },
+    {
+      "event": 170,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/outputs/20261026T155347173Z-ssr-fresh-baseline-codex-semantic-delivery-184d95f2-da8b-4178-9baa-4e31afca4d9e-2nu79qkx.md"
+      }
+    },
+    {
+      "event": 172,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/outputs/20261026T211116900Z-ssr-screen-codex-semantic-delivery-candidate-77e9eae3-566f-47b0-977a-3b2916692842-ifqovc4m.md"
+      }
+    },
+    {
+      "event": 174,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/outputs/20261026T225336383Z-ssr-screen-codex-semantic-delivery-candidate-d4674a19-2c36-4175-9335-8faec79d7dc0-tgl7dz4t.md"
+      }
+    },
+    {
+      "event": 176,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/outputs/20261026T233945689Z-ssr-screen-codex-semantic-delivery-candidate-046e1571-0550-4ef6-9383-3dca6cd69eba-cxbbo3nc.md"
+      }
+    },
+    {
+      "event": 178,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/outputs/20261026T211248054Z-ssr-screen-codex-semantic-delivery-finalist-b3a2019a-2a34-4482-929a-5f9c6757a6f8-052cfl6_.md"
+      }
+    },
+    {
+      "event": 180,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/outputs/20261026T225218601Z-ssr-screen-codex-semantic-delivery-finalist-a20d2777-0f44-40d7-ab61-0069946425a7-6gi2_8j7.md"
+      }
+    },
+    {
+      "event": 182,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/outputs/20261026T234049700Z-ssr-screen-codex-semantic-delivery-finalist-6003bd53-d6e1-4f68-be24-31486b89c07f-cny6mxs8.md"
+      }
+    },
+    {
+      "event": 197,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261026T235119083Z-ssr-candidate-screen-codex-semantic-pressure-review-564cab71-af27-435b-8653-3f22ff76cd9e-etwo3jo0/workspace/fixture/prior-assessment.md"
+      }
+    }
+  ],
+  "semantic_audit": "Active assessor read the complete independent first pass and post-prior comparison, checked all22 full run IDs and66 factors against packet mappings and fixed cards, and reconciled six case/version cell totals (5/3/3 each case). All functional judgments agree. No consequential passing-artifact regression is established.",
+  "first_pass_sha256": "99f1dff948cde7e2e4c8e63dd0a4dd81ecba795664aecde4adfd34b3448599ab",
+  "post_prior_sha256": "a33cc34615e7afaf5b04a6d6817037ba74cf8bdf6a3c9fba2e14358b2903ced0",
+  "post_prior_status": "separate reviewer comparison retained",
+  "audit_controller": {
+    "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/controllers/ssr-screen-review-audit-v3.py",
+    "sha256": "3069438e7a00500289b24d3b4edf96c8b140ac4daa8a7b3db8bcd4dda4037ce4"
+  },
+  "limits": [
+    "Visible labels; prior physically present but timing audited.",
+    "Opus reviewer differs from active Codex assessor; Opus subjects share reviewer family.",
+    "Exposed development cases, no causal contribution or reliability claim."
+  ],
+  "precision_notes": [
+    "Generic index packaging mentions PNG/runtime dependencies absent in this semantic packet. Actual mappings and required reads are complete; no image or dependency is missing from these cases. Preserve frozen text and disclose the irrelevant boilerplate.",
+    "Scope uses display labels comprehensive/compact while records use candidate/finalist; correspondence is declared in preparation and review, with no ambiguous outcome assignment.",
+    "Review packet Git facts contain commit subjects/state/diffs rather than full commit-body procedural evidence; P3 remains active trace assessment.",
+    "Three original/early pressure outcomes lack disposable probes; full unchanged implementation objects and retained tests/trace support active judgments. Reviewer independently inspected code and did not infer behavior from absent probes.",
+    "Prior slot-number cross-references do not supply the review packet slot mapping; full final objects were independently inspected and IDs retain provenance."
+  ]
+}

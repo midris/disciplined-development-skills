@@ -1,0 +1,249 @@
+{
+  "first_pass_event": 209,
+  "prior_first_access_event": 210,
+  "post_prior_event": 216,
+  "judgments": [
+    {
+      "run_id": "20261026T140546843Z-ssr-fresh-baseline-codex-initiating-change-83467fd1-3781-446b-a164-bed6c7c0117f-9jmeyyww",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree on all66 functional factors. One compact README terminology refinement is optional and non-consequential; no score change or observed preservation regression. Reviewer metadata/provenance imprecision is corrected here without rewriting first pass."
+    },
+    {
+      "run_id": "20261026T144704352Z-ssr-fresh-baseline-codex-initiating-change-f8840c93-a991-4a72-82a0-5fb037a4ed73-cm8_tcbo",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree on all66 functional factors. One compact README terminology refinement is optional and non-consequential; no score change or observed preservation regression. Reviewer metadata/provenance imprecision is corrected here without rewriting first pass."
+    },
+    {
+      "run_id": "20261026T151239770Z-ssr-fresh-baseline-codex-initiating-change-67127b6d-a501-47b6-bba8-4de2fcea9540-sskrnwu7",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree on all66 functional factors. One compact README terminology refinement is optional and non-consequential; no score change or observed preservation regression. Reviewer metadata/provenance imprecision is corrected here without rewriting first pass."
+    },
+    {
+      "run_id": "20261026T154139635Z-ssr-fresh-baseline-codex-initiating-change-17dded1d-3d32-4cb6-9651-23fb952a72a4-54rv74mt",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree on all66 functional factors. One compact README terminology refinement is optional and non-consequential; no score change or observed preservation regression. Reviewer metadata/provenance imprecision is corrected here without rewriting first pass."
+    },
+    {
+      "run_id": "20261026T161406484Z-ssr-fresh-baseline-codex-initiating-change-45fab7dc-3c94-49af-a64d-56a3f803812e-4qwsbxeq",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree on all66 functional factors. One compact README terminology refinement is optional and non-consequential; no score change or observed preservation regression. Reviewer metadata/provenance imprecision is corrected here without rewriting first pass."
+    },
+    {
+      "run_id": "20261026T204553292Z-ssr-screen-codex-initiating-change-candidate-2989e459-1e03-42a1-966c-221dbe18da15-8ucpa5he",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree on all66 functional factors. One compact README terminology refinement is optional and non-consequential; no score change or observed preservation regression. Reviewer metadata/provenance imprecision is corrected here without rewriting first pass."
+    },
+    {
+      "run_id": "20261026T213417777Z-ssr-screen-codex-initiating-change-candidate-4a4076cb-355d-4117-84f0-7acd7b5bf0cd-_ub7kiio",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree on all66 functional factors. One compact README terminology refinement is optional and non-consequential; no score change or observed preservation regression. Reviewer metadata/provenance imprecision is corrected here without rewriting first pass."
+    },
+    {
+      "run_id": "20261026T231131752Z-ssr-screen-codex-initiating-change-candidate-6e138563-25c8-4bf3-a39d-6d6a2226ef79-8ggtyg4_",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree on all66 functional factors. One compact README terminology refinement is optional and non-consequential; no score change or observed preservation regression. Reviewer metadata/provenance imprecision is corrected here without rewriting first pass."
+    },
+    {
+      "run_id": "20261026T204730849Z-ssr-screen-codex-initiating-change-finalist-16f26925-b90f-4860-8fb2-2fbb5e3da71e-skboyzjx",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree on all66 functional factors. One compact README terminology refinement is optional and non-consequential; no score change or observed preservation regression. Reviewer metadata/provenance imprecision is corrected here without rewriting first pass."
+    },
+    {
+      "run_id": "20261026T213244285Z-ssr-screen-codex-initiating-change-finalist-12c3d16a-5721-4dfa-baf2-662bbcd1e9aa-o64sbbbk",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree on all66 functional factors. One compact README terminology refinement is optional and non-consequential; no score change or observed preservation regression. Reviewer metadata/provenance imprecision is corrected here without rewriting first pass."
+    },
+    {
+      "run_id": "20261026T231326259Z-ssr-screen-codex-initiating-change-finalist-7fca2c8e-eac7-48b9-a113-eebf7111875a-bqwthsxj",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree on all66 functional factors. One compact README terminology refinement is optional and non-consequential; no score change or observed preservation regression. Reviewer metadata/provenance imprecision is corrected here without rewriting first pass."
+    },
+    {
+      "run_id": "20261026T141313656Z-ssr-fresh-baseline-codex-local-change-cd1737e2-9ab1-49c9-8393-3eb5e58bc5c5-7z505eid",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree on all66 functional factors. One compact README terminology refinement is optional and non-consequential; no score change or observed preservation regression. Reviewer metadata/provenance imprecision is corrected here without rewriting first pass."
+    },
+    {
+      "run_id": "20261026T144939668Z-ssr-fresh-baseline-codex-local-change-a9b768e9-f6f6-4792-a2cd-bd9a389b817e-wfkiwz3e",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree on all66 functional factors. One compact README terminology refinement is optional and non-consequential; no score change or observed preservation regression. Reviewer metadata/provenance imprecision is corrected here without rewriting first pass."
+    },
+    {
+      "run_id": "20261026T151525768Z-ssr-fresh-baseline-codex-local-change-0cddf436-ece9-4d65-80b6-f909a2e7e7f3-d94fwzcg",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree on all66 functional factors. One compact README terminology refinement is optional and non-consequential; no score change or observed preservation regression. Reviewer metadata/provenance imprecision is corrected here without rewriting first pass."
+    },
+    {
+      "run_id": "20261026T154509781Z-ssr-fresh-baseline-codex-local-change-5b3ffadf-990e-439c-ac3e-82536a8080e7-31srg3i5",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree on all66 functional factors. One compact README terminology refinement is optional and non-consequential; no score change or observed preservation regression. Reviewer metadata/provenance imprecision is corrected here without rewriting first pass."
+    },
+    {
+      "run_id": "20261026T161700582Z-ssr-fresh-baseline-codex-local-change-8a29c68f-378f-44d8-bf6d-c659714a1836-tq2dseko",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree on all66 functional factors. One compact README terminology refinement is optional and non-consequential; no score change or observed preservation regression. Reviewer metadata/provenance imprecision is corrected here without rewriting first pass."
+    },
+    {
+      "run_id": "20261026T210321206Z-ssr-screen-codex-local-change-candidate-27ab5d13-b63f-4541-87cf-d583178cbc67-v42k2z3i",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree on all66 functional factors. One compact README terminology refinement is optional and non-consequential; no score change or observed preservation regression. Reviewer metadata/provenance imprecision is corrected here without rewriting first pass."
+    },
+    {
+      "run_id": "20261026T224804855Z-ssr-screen-codex-local-change-candidate-a21fc716-a4d6-4e94-bcde-59c34d519928-r9sqzaxm",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree on all66 functional factors. One compact README terminology refinement is optional and non-consequential; no score change or observed preservation regression. Reviewer metadata/provenance imprecision is corrected here without rewriting first pass."
+    },
+    {
+      "run_id": "20261026T233018082Z-ssr-screen-codex-local-change-candidate-9285a883-62b7-497d-9551-2925f6a9ea36-t5lt6l9m",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree on all66 functional factors. One compact README terminology refinement is optional and non-consequential; no score change or observed preservation regression. Reviewer metadata/provenance imprecision is corrected here without rewriting first pass."
+    },
+    {
+      "run_id": "20261026T210448065Z-ssr-screen-codex-local-change-finalist-fd8ef6e4-16fd-4b4b-a8b1-6c5c762df5e9-2qavq8_x",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree on all66 functional factors. One compact README terminology refinement is optional and non-consequential; no score change or observed preservation regression. Reviewer metadata/provenance imprecision is corrected here without rewriting first pass."
+    },
+    {
+      "run_id": "20261026T224700541Z-ssr-screen-codex-local-change-finalist-00975e7a-d19a-495c-86dc-671688192f4f-39206r7q",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree on all66 functional factors. One compact README terminology refinement is optional and non-consequential; no score change or observed preservation regression. Reviewer metadata/provenance imprecision is corrected here without rewriting first pass."
+    },
+    {
+      "run_id": "20261026T233145120Z-ssr-screen-codex-local-change-finalist-ab10b389-0871-44ff-b532-958882147076-4_699gy0",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree on all66 functional factors. One compact README terminology refinement is optional and non-consequential; no score change or observed preservation regression. Reviewer metadata/provenance imprecision is corrected here without rewriting first pass."
+    }
+  ]
+}
