@@ -1,0 +1,128 @@
+{
+  "first_pass_event": 219,
+  "prior_first_access_event": 220,
+  "post_prior_event": 228,
+  "judgments": [
+    {
+      "run_id": "20261026T135122580Z-ssr-fresh-baseline-claude-discovery-shiv-57a33052-c40a-4da6-86bb-f7ef26471f1c-2sr8cacs",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree with all33 independent functional factors. Identical artifacts establish no consequential version-quality difference; reporting integrity observations and inherited P3 uncertainty stay visible and separate."
+    },
+    {
+      "run_id": "20261026T143736299Z-ssr-fresh-baseline-claude-discovery-shiv-4c9a1ff7-d139-47cf-a149-3e3610e8846e-2_jd8aly",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree with all33 independent functional factors. Identical artifacts establish no consequential version-quality difference; reporting integrity observations and inherited P3 uncertainty stay visible and separate."
+    },
+    {
+      "run_id": "20261026T150542611Z-ssr-fresh-baseline-claude-discovery-shiv-12060293-68fc-4aad-b179-1167dd86712b-d9tpcdl7",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree with all33 independent functional factors. Identical artifacts establish no consequential version-quality difference; reporting integrity observations and inherited P3 uncertainty stay visible and separate."
+    },
+    {
+      "run_id": "20261026T153052393Z-ssr-fresh-baseline-claude-discovery-shiv-154d57c7-7497-4c7f-a3e2-bfd98dbf9e86-6ym5l74b",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree with all33 independent functional factors. Identical artifacts establish no consequential version-quality difference; reporting integrity observations and inherited P3 uncertainty stay visible and separate."
+    },
+    {
+      "run_id": "20261026T160403275Z-ssr-fresh-baseline-claude-discovery-shiv-68f079bc-6b6e-474e-a153-b43c5b2f6d4c-_5a6h6x8",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree with all33 independent functional factors. Identical artifacts establish no consequential version-quality difference; reporting integrity observations and inherited P3 uncertainty stay visible and separate."
+    },
+    {
+      "run_id": "20261026T204127212Z-ssr-screen-claude-discovery-shiv-candidate-8f4c85e4-164b-42ef-9a08-60fe7bc95d5d-zk8fmhqf",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree with all33 independent functional factors. Identical artifacts establish no consequential version-quality difference; reporting integrity observations and inherited P3 uncertainty stay visible and separate."
+    },
+    {
+      "run_id": "20261026T212914632Z-ssr-screen-claude-discovery-shiv-candidate-ed7600a9-51ba-4d83-98b3-1cee8edb44ba-pj3sz9sy",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree with all33 independent functional factors. Identical artifacts establish no consequential version-quality difference; reporting integrity observations and inherited P3 uncertainty stay visible and separate."
+    },
+    {
+      "run_id": "20261026T230655225Z-ssr-screen-claude-discovery-shiv-candidate-3472ee4d-b123-4717-ba13-586473c13fb9-v8cl04u0",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree with all33 independent functional factors. Identical artifacts establish no consequential version-quality difference; reporting integrity observations and inherited P3 uncertainty stay visible and separate."
+    },
+    {
+      "run_id": "20261026T204016551Z-ssr-screen-claude-discovery-shiv-finalist-93228af4-e87b-4c35-8754-23a27b0efbda-ewo2bg3z",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree with all33 independent functional factors. Identical artifacts establish no consequential version-quality difference; reporting integrity observations and inherited P3 uncertainty stay visible and separate."
+    },
+    {
+      "run_id": "20261026T213023342Z-ssr-screen-claude-discovery-shiv-finalist-d6dc90bc-c6d2-403c-b562-5fffbe10856f-mmflvt1a",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree with all33 independent functional factors. Identical artifacts establish no consequential version-quality difference; reporting integrity observations and inherited P3 uncertainty stay visible and separate."
+    },
+    {
+      "run_id": "20261026T230547583Z-ssr-screen-claude-discovery-shiv-finalist-b32f67ae-4de1-4656-b360-7c2ae06b40e3-bgmgjotl",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Agree with all33 independent functional factors. Identical artifacts establish no consequential version-quality difference; reporting integrity observations and inherited P3 uncertainty stay visible and separate."
+    }
+  ]
+}

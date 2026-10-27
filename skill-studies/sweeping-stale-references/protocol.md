@@ -2,8 +2,8 @@
 
 Format version: `1`
 Study ID: `sweeping-stale-references`
-Status: fresh original baseline complete under the CW testing model; candidate screens and skill adoption remain pending.
-Current action: complete the ten approved candidate-screen-01 comparison reviews after full subject collection and audit; see the [progress checkpoint](runs/candidate-screen-01/progress.md). All115 subject slots and the one approved slot56 retry are spent; 115 valid outcomes and the invalid OAuth parent remain retained. Skill edits, further retries, top-ups and adoption remain unallocated. The [staged design](../../plans/specs/2026-10-26-ssr-staged-baseline-comparison.md#candidate-screen-candidate-screen-01) owns comparison intent; [CW accounting](../concise-writing/protocol.md#storage-and-accounting) owns combined spending.
+Status: fresh original baseline and candidate-screen-01 complete under the CW testing model; skill adoption remains an owner decision.
+Current action: owner decision on the [completed candidate screen](runs/candidate-screen-01/candidate-screen-01-assessment.md), which recommends the unchanged compact version under the size tie-breaker while retaining its native-selection miss, reporting defects and inherited uncertainty. All 115 subject slots, one approved slot56 retry and ten reviews are spent and audited. No skill edit, further retry, top-up or adoption is allocated. The [staged design](../../plans/specs/2026-10-26-ssr-staged-baseline-comparison.md#candidate-screen-candidate-screen-01) owns comparison intent; [CW accounting](../concise-writing/protocol.md#storage-and-accounting) owns combined spending.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](runs/core-baseline-01/core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -265,7 +265,7 @@ Pre-baseline development is closed at two pairs. Do not reopen it for a new face
 
 ### Proposal: candidate-screen-01
 
-Status: owner-approved allocation; source/manifests freeze and collection readiness precede dispatch.
+Status: complete; subjects, approved retry and ten reviews retained and audited. See the [comparison assessment](runs/candidate-screen-01/candidate-screen-01-assessment.md).
 Owner authority, 2026-10-26: “approved, please continue with the tests”, approving the prepared 115-subject/ten-review allocation and its fixed early-stop rules.
 Proposed scope: all eleven cases on current Codex/Opus for both unchanged rewrites, initially three observations per cell, retaining five completed Opus semantic observations per version. Original remains the fixed 110-observation baseline.
 New calls: 63 comprehensive subjects and 52 compact subjects, plus ten Opus-medium complete-output comparison reviews. Reuse 21 matching candidate observations without charging again; all 131 retained original/candidate inventories and scored identities verified offline.
@@ -279,13 +279,13 @@ Proposed raw storage: /Users/simon/work/personal/skill-study-private/sweeping-st
 
 ### Batch: candidate-screen-codex-01
 
-Status: owner-approved; freeze and collection readiness complete; collection in progress.
+Status: complete; all scheduled subjects retained/scored and all five provider output reviews audited.
 Authority: 2026-10-26 “approved, please continue with the tests”; the candidate-screen-01 allocation and fixed stop rules above govern.
 Scope: 66 new subjects in the following provider-local order, interleaved by the approved global schedule.
 Inclusion: descriptive-only; Include all valid-setup executions regardless of outcome. Preserve stopped, excluded and unattempted slots. No automatic retry or replacement.
 Selected manifests: [discovery-shiv](runs/candidate-screen-01/preparation/manifests/codex-discovery-shiv-manifest.json), [initiating-change](runs/candidate-screen-01/preparation/manifests/codex-initiating-change-manifest.json), [invocation-change](runs/candidate-screen-01/preparation/manifests/codex-invocation-change-manifest.json), [invocation-review](runs/candidate-screen-01/preparation/manifests/codex-invocation-review-manifest.json), [invocation-unrelated](runs/candidate-screen-01/preparation/manifests/codex-invocation-unrelated-manifest.json), [invocation-verification](runs/candidate-screen-01/preparation/manifests/codex-invocation-verification-manifest.json), [large-sweep-account](runs/candidate-screen-01/preparation/manifests/codex-large-sweep-account-manifest.json), [local-change](runs/candidate-screen-01/preparation/manifests/codex-local-change-manifest.json), [moved-guide](runs/candidate-screen-01/preparation/manifests/codex-moved-guide-manifest.json), [pressure-repair](runs/candidate-screen-01/preparation/manifests/codex-pressure-repair-manifest.json), [semantic-delivery](runs/candidate-screen-01/preparation/manifests/codex-semantic-delivery-manifest.json).
 Attempt index: [candidate-screen-codex-01-run-index.json](runs/candidate-screen-01/candidate-screen-codex-01-run-index.json).
-Assessment: pending collection and direct assessment; no effectiveness claim.
+Assessment: [completed provider assessment](runs/candidate-screen-01/candidate-screen-codex-01-assessment.md), with full per-case/condition criteria and evidence; see the combined assessment for comparative interpretation.
 
 | Order | Case | Condition | Repetition | CONFIG |
 | ---: | --- | --- | ---: | --- |
@@ -358,13 +358,13 @@ Assessment: pending collection and direct assessment; no effectiveness claim.
 
 ### Batch: candidate-screen-claude-01
 
-Status: owner-approved; freeze and collection readiness complete; collection in progress.
+Status: complete; all scheduled subjects retained/scored and all five provider output reviews audited.
 Authority: 2026-10-26 “approved, please continue with the tests”; the candidate-screen-01 allocation and fixed stop rules above govern.
 Scope: 49 new subjects in the following provider-local order, interleaved by the approved global schedule.
 Inclusion: descriptive-only; Include all valid-setup executions regardless of outcome. Preserve stopped, excluded and unattempted slots. No automatic retry or replacement.
 Selected manifests: [discovery-shiv](runs/candidate-screen-01/preparation/manifests/claude-discovery-shiv-manifest.json), [initiating-change](runs/candidate-screen-01/preparation/manifests/claude-initiating-change-manifest.json), [invocation-change](runs/candidate-screen-01/preparation/manifests/claude-invocation-change-manifest.json), [invocation-review](runs/candidate-screen-01/preparation/manifests/claude-invocation-review-manifest.json), [invocation-unrelated](runs/candidate-screen-01/preparation/manifests/claude-invocation-unrelated-manifest.json), [invocation-verification](runs/candidate-screen-01/preparation/manifests/claude-invocation-verification-manifest.json), [large-sweep-account](runs/candidate-screen-01/preparation/manifests/claude-large-sweep-account-manifest.json), [local-change](runs/candidate-screen-01/preparation/manifests/claude-local-change-manifest.json), [moved-guide](runs/candidate-screen-01/preparation/manifests/claude-moved-guide-manifest.json), [pressure-repair](runs/candidate-screen-01/preparation/manifests/claude-pressure-repair-manifest.json).
 Attempt index: [candidate-screen-claude-01-run-index.json](runs/candidate-screen-01/candidate-screen-claude-01-run-index.json).
-Assessment: pending collection and direct assessment; no effectiveness claim.
+Assessment: [completed provider assessment](runs/candidate-screen-01/candidate-screen-claude-01-assessment.md), with full per-case/condition criteria and evidence; see the combined assessment for comparative interpretation.
 
 | Order | Case | Condition | Repetition | CONFIG |
 | ---: | --- | --- | ---: | --- |
@@ -1050,7 +1050,7 @@ Current SSR-linked mechanical accounting includes the fixed 136-call historical 
 The current validation adds its [subject index](runs/compact-regression-01/compact-regression-01-run-index.json) and [evaluator ledger](runs/compact-regression-01/evaluation/evaluator-run-index.json).
 The fresh original baseline adds [Codex subjects](runs/fresh-baseline-01/fresh-baseline-codex-01-run-index.json), [Opus subjects](runs/fresh-baseline-01/fresh-baseline-opus-01-run-index.json) and [eight review slots](runs/fresh-baseline-01/evaluation/evaluator-run-index.json); the five reused semantic runs are not charged again.
 For this subset, the historical spent subtotal plus the newly authorized scope gives ceilings of 382 subject, 20 evaluator, 0 authoring and 1 retry invocations; this is an accounting projection, not a new allocation or pool transfer.
-Dispatched calls are **382 subject, 15 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **0 / 5 / 0 / 0** for this subset.
+Dispatched calls are **382 subject, 20 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **0 / 0 / 0 / 0** for this subset.
 The CW protocol remains authoritative for all current combined spending and outer ceilings; no historical unspent pool is revived.
 Sequential readiness used identical externally frozen scores; the final index pins the canonical repository results at their committed revision.
 
@@ -1076,7 +1076,8 @@ Subsequent authoring decision, 2026-10-23: the owner requested three compact rew
 
 | Evidence | Interpretation |
 |---|---|
-| [Fresh original baseline](runs/fresh-baseline-01/fresh-baseline-01-assessment.md) | All eleven cases have five original observations on each current provider: 105 new and five matching reused. Eighty repairs and all 240 reviewed functional factors meet; native loading 10/10 Codex versus 5/10 Opus, non-use 20/20, reporting defects and three Shiv unknowns separate. Candidate screens remain unallocated. |
+| [Candidate screen](runs/candidate-screen-01/candidate-screen-01-assessment.md) | 246 valid comparison observations; 180 complete repairs and all 540 reviewed functional factors met. Compact is preferred under the size tie-breaker; its one native miss, reporting defects and Shiv uncertainty remain. All approved calls are spent; adoption is pending. |
+| [Fresh original baseline](runs/fresh-baseline-01/fresh-baseline-01-assessment.md) | All eleven cases have five original observations on each current provider: 105 new and five matching reused. Eighty repairs and all 240 reviewed functional factors meet; native loading 10/10 Codex versus 5/10 Opus, non-use 20/20, reporting defects and three Shiv unknowns separate. The completed candidate screen above supplies the subsequent comparison. |
 | [Compact closing validation](runs/compact-regression-01/compact-regression-01-assessment.md) | Ten correct committed repairs, timely native loading 4/4 and appropriate non-use 1/1; audited review agrees on all thirty factors. Reporting defects remain non-blocking. Recommends compact adoption; owner decision pending. |
 | [Claude smoke](runs/claude-smoke-01/claude-smoke-01-assessment.md) | Original only: explicit-load Shiv repair succeeds; native reviewer-triggered load is missed and repair incomplete. Runtime/capture viability and model behavior remain separate. |
 | [Sonnet comparison](runs/claude-comparison-01/claude-comparison-01-assessment.md) | Ordinary functional outcomes 10/10 per version; pressure original 1/2 versus rewrite 2/2; positive loads 2/4 versus 3/4; positive native task outcomes 3/4 each. Non-use sanity passes for both. |

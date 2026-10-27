@@ -1,0 +1,249 @@
+{
+  "first_pass_event": 227,
+  "prior_first_access_event": 228,
+  "post_prior_event": 238,
+  "judgments": [
+    {
+      "run_id": "20261026T140954711Z-ssr-fresh-baseline-claude-initiating-change-76018b57-f195-4dbf-b4b7-fbdc4d84b06a-stxp0q_m",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; no artifact-quality regression. See reconciliation.md for command-reporting correction and evidence limits."
+    },
+    {
+      "run_id": "20261026T144604004Z-ssr-fresh-baseline-claude-initiating-change-57d57b6e-3c98-438e-8315-e688adf36a65-ht9yzxgt",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; no artifact-quality regression. See reconciliation.md for command-reporting correction and evidence limits."
+    },
+    {
+      "run_id": "20261026T151431129Z-ssr-fresh-baseline-claude-initiating-change-3c7e4f2c-8af5-4423-910b-db05a116f204-d4zzzylp",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; no artifact-quality regression. See reconciliation.md for command-reporting correction and evidence limits."
+    },
+    {
+      "run_id": "20261026T154039670Z-ssr-fresh-baseline-claude-initiating-change-12316756-3c3c-4aa3-9ead-36e703708698-g32nx_jz",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; no artifact-quality regression. See reconciliation.md for command-reporting correction and evidence limits."
+    },
+    {
+      "run_id": "20261026T161553232Z-ssr-fresh-baseline-claude-initiating-change-56f75d7a-28d0-44e7-9e1b-3d0090855e8b-o3h6qn0l",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; no artifact-quality regression. See reconciliation.md for command-reporting correction and evidence limits."
+    },
+    {
+      "run_id": "20261026T204912529Z-ssr-screen-claude-initiating-change-candidate-34e2fc0c-9a7b-48b1-858c-d93bc3992d27-1qe38e6c",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; no artifact-quality regression. See reconciliation.md for command-reporting correction and evidence limits."
+    },
+    {
+      "run_id": "20261026T213142331Z-ssr-screen-claude-initiating-change-candidate-00605c6c-30c1-4074-ad3e-e292787e8dd5-mrxysoj8",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; no artifact-quality regression. See reconciliation.md for command-reporting correction and evidence limits."
+    },
+    {
+      "run_id": "20261026T231517596Z-ssr-screen-claude-initiating-change-candidate-c6fe5499-39ed-4aea-a913-417fc995433a-e63yxwj2",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; no artifact-quality regression. See reconciliation.md for command-reporting correction and evidence limits."
+    },
+    {
+      "run_id": "20261024T060228842Z-ssr-compact-regression-initiating-change-8497abc5-1121-4628-af3f-03eb3a38bb0e-5waqy2no",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; no artifact-quality regression. See reconciliation.md for command-reporting correction and evidence limits."
+    },
+    {
+      "run_id": "20261024T061519400Z-ssr-compact-regression-initiating-change-16730605-9728-478a-a16e-3546bc7231ca-cj1pgbzp",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; no artifact-quality regression. See reconciliation.md for command-reporting correction and evidence limits."
+    },
+    {
+      "run_id": "20261026T231609284Z-ssr-screen-claude-initiating-change-finalist-371543a2-824e-4c0e-a649-78d25ab21605-wviw51du",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; no artifact-quality regression. See reconciliation.md for command-reporting correction and evidence limits."
+    },
+    {
+      "run_id": "20261026T141544649Z-ssr-fresh-baseline-claude-local-change-1446339f-f220-4b14-8081-7ef1898edc80-_axsjchk",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; no artifact-quality regression. See reconciliation.md for command-reporting correction and evidence limits."
+    },
+    {
+      "run_id": "20261026T144838218Z-ssr-fresh-baseline-claude-local-change-75fe23e2-ab3c-4f3c-8a08-c8a822fa6c91-k7phrp5n",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; no artifact-quality regression. See reconciliation.md for command-reporting correction and evidence limits."
+    },
+    {
+      "run_id": "20261026T151757646Z-ssr-fresh-baseline-claude-local-change-4c599697-2687-401b-93eb-3e0fbc6a975a-79v3yqvp",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; no artifact-quality regression. See reconciliation.md for command-reporting correction and evidence limits."
+    },
+    {
+      "run_id": "20261026T154411925Z-ssr-fresh-baseline-claude-local-change-4e61e909-5fe9-4f58-95a7-336646bc7e04-_d0w7c_0",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; no artifact-quality regression. See reconciliation.md for command-reporting correction and evidence limits."
+    },
+    {
+      "run_id": "20261026T161848074Z-ssr-fresh-baseline-claude-local-change-98477fce-360b-4ca2-849d-103f6e71019b-k68ok8r7",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; no artifact-quality regression. See reconciliation.md for command-reporting correction and evidence limits."
+    },
+    {
+      "run_id": "20261026T210628191Z-ssr-screen-claude-local-change-candidate-5d44db93-01ba-4630-9ffb-d83153b580a3-_fsezqo8",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; no artifact-quality regression. See reconciliation.md for command-reporting correction and evidence limits."
+    },
+    {
+      "run_id": "20261026T224621059Z-ssr-screen-claude-local-change-candidate-fbf93655-3e89-47ab-8bd7-421f6c34290a-o8wy699v",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; no artifact-quality regression. See reconciliation.md for command-reporting correction and evidence limits."
+    },
+    {
+      "run_id": "20261026T233303342Z-ssr-screen-claude-local-change-candidate-f7e159fc-1bc4-43a4-bc87-d792b09a9c1e-gyjk58b_",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; no artifact-quality regression. See reconciliation.md for command-reporting correction and evidence limits."
+    },
+    {
+      "run_id": "20261024T061345945Z-ssr-compact-regression-local-change-842fbb60-cf1b-4deb-acd6-a70e7e8f48f0-o3r593d9",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; no artifact-quality regression. See reconciliation.md for command-reporting correction and evidence limits."
+    },
+    {
+      "run_id": "20261024T061843823Z-ssr-compact-regression-local-change-28981bfb-f81d-4946-8626-9d3d49a747f1-7_ha8zsf",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; no artifact-quality regression. See reconciliation.md for command-reporting correction and evidence limits."
+    },
+    {
+      "run_id": "20261026T233408810Z-ssr-screen-claude-local-change-finalist-6dba9e38-d61d-4e51-879b-25044b4ed354-q14fwko7",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; no artifact-quality regression. See reconciliation.md for command-reporting correction and evidence limits."
+    }
+  ]
+}

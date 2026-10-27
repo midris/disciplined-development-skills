@@ -1,0 +1,121 @@
+{
+  "new_reviews": 10,
+  "complete_independent_first_passes": 10,
+  "outputs": 180,
+  "functional_factors": 540,
+  "judgments": {
+    "F1:met": 180,
+    "F2:met": 180,
+    "F3:met": 180,
+    "overall:met": 180
+  },
+  "required_complete_reads": {
+    "codex-semantic-pressure": 77,
+    "codex-shiv": 83,
+    "codex-moved": 42,
+    "codex-initiating-local": 79,
+    "codex-native-positive": 87,
+    "claude-semantic-pressure": 85,
+    "claude-shiv": 83,
+    "claude-moved": 42,
+    "claude-initiating-local": 78,
+    "claude-native-positive": 87
+  },
+  "actual_prior_timing": {
+    "codex-semantic-pressure": {
+      "first_pass": 196,
+      "prior_access": 197,
+      "post_prior": 206
+    },
+    "codex-shiv": {
+      "first_pass": 255,
+      "prior_access": null,
+      "post_prior": null
+    },
+    "codex-moved": {
+      "first_pass": 115,
+      "prior_access": null,
+      "post_prior": null
+    },
+    "codex-initiating-local": {
+      "first_pass": 209,
+      "prior_access": 210,
+      "post_prior": 216
+    },
+    "codex-native-positive": {
+      "first_pass": 223,
+      "prior_access": null,
+      "post_prior": null
+    },
+    "claude-semantic-pressure": {
+      "first_pass": 233,
+      "prior_access": null,
+      "post_prior": null
+    },
+    "claude-shiv": {
+      "first_pass": 219,
+      "prior_access": 220,
+      "post_prior": 228
+    },
+    "claude-moved": {
+      "first_pass": 124,
+      "prior_access": null,
+      "post_prior": null
+    },
+    "claude-initiating-local": {
+      "first_pass": 227,
+      "prior_access": 228,
+      "post_prior": 238
+    },
+    "claude-native-positive": {
+      "first_pass": 211,
+      "prior_access": 212,
+      "post_prior": 219
+    }
+  },
+  "review_runner_seconds": 2570.929,
+  "capture_model_tools_protected_inputs_and_frozen_identities_verified": true,
+  "actual_audit_controllers_verified": {
+    "codex-semantic-pressure": {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/controllers/ssr-screen-review-audit-v3.py",
+      "sha256": "3069438e7a00500289b24d3b4edf96c8b140ac4daa8a7b3db8bcd4dda4037ce4"
+    },
+    "codex-shiv": {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/controllers/ssr-screen-review-audit-v4.py",
+      "sha256": "e14e222bdba2ae99bddeab8100ba802548f0ad2cd767108ff038828c45e1c645"
+    },
+    "codex-moved": {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/controllers/ssr-screen-review-audit-v4.py",
+      "sha256": "e14e222bdba2ae99bddeab8100ba802548f0ad2cd767108ff038828c45e1c645"
+    },
+    "codex-initiating-local": {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/controllers/ssr-screen-review-audit-v4.py",
+      "sha256": "e14e222bdba2ae99bddeab8100ba802548f0ad2cd767108ff038828c45e1c645"
+    },
+    "codex-native-positive": {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/controllers/ssr-screen-review-audit-v4.py",
+      "sha256": "e14e222bdba2ae99bddeab8100ba802548f0ad2cd767108ff038828c45e1c645"
+    },
+    "claude-semantic-pressure": {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/controllers/ssr-screen-review-audit-v4.py",
+      "sha256": "e14e222bdba2ae99bddeab8100ba802548f0ad2cd767108ff038828c45e1c645"
+    },
+    "claude-shiv": {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/controllers/ssr-screen-review-audit-v4.py",
+      "sha256": "e14e222bdba2ae99bddeab8100ba802548f0ad2cd767108ff038828c45e1c645"
+    },
+    "claude-moved": {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/controllers/ssr-screen-review-audit-v4.py",
+      "sha256": "e14e222bdba2ae99bddeab8100ba802548f0ad2cd767108ff038828c45e1c645"
+    },
+    "claude-initiating-local": {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/controllers/ssr-screen-review-audit-v4.py",
+      "sha256": "e14e222bdba2ae99bddeab8100ba802548f0ad2cd767108ff038828c45e1c645"
+    },
+    "claude-native-positive": {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/controllers/ssr-screen-review-audit-v4.py",
+      "sha256": "e14e222bdba2ae99bddeab8100ba802548f0ad2cd767108ff038828c45e1c645"
+    }
+  },
+  "actual_tools_only_read_and_glob": true
+}

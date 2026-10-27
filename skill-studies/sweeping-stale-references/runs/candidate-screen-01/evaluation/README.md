@@ -1,6 +1,6 @@
 # Candidate-screen output reviews
 
-Status: all five Codex packets complete and audited (88 outputs,264 functional factors); five Opus packets remain. The ledger records actual calls and audit state.
+Status: all ten packets complete and audited (180 outputs, 540 functional factors), with all factors met and no post-prior score changes. The [final verification](final-verification.json) checks retained captures, complete delivery, frozen inputs, runtime/tool identities and prior-access timing; the [comparison assessment](../candidate-screen-01-assessment.md) records interpretation and limits.
 The [packet plan](packet-plan.json) covers all180 repair outputs and540 functional factors: original, comprehensive and compact under visible labels.
 The66 accounting/non-use observations remain active trace judgments outside these packets.
 
@@ -31,3 +31,20 @@ The frozen index has generic PNG/runtime wording even in packets that contain ne
 The stored conditions candidate/finalist correspond to display labels comprehensive/compact. Git facts expose committed state and diffs; full procedural commit-body and trace judgments remain outside functional review.
 
 The Shiv index is delivered across contiguous native Read responses rather than one response. The post-capture v4 audit checks exact source-line coverage across chunks before first pass; omitted chunks and altered-line controls fail. Frozen inputs and the original v3 audit identity remain unchanged, and each actual audit records its controller path/hash.
+
+## Completed reconciliations
+
+- [codex-semantic-pressure](codex-semantic-pressure/reconciliation.md)
+- [codex-shiv](codex-shiv/reconciliation.md)
+- [codex-moved](codex-moved/reconciliation.md)
+- [codex-initiating-local](codex-initiating-local/reconciliation.md)
+- [codex-native-positive](codex-native-positive/reconciliation.md)
+- [claude-semantic-pressure](claude-semantic-pressure/reconciliation.md)
+- [claude-shiv](claude-shiv/reconciliation.md)
+- [claude-moved](claude-moved/reconciliation.md)
+- [claude-initiating-local](claude-initiating-local/reconciliation.md)
+- [claude-native-positive](claude-native-positive/reconciliation.md)
+
+No consequential artifact-quality regression was identified. Minor wording and reporting observations, reviewer metadata mistakes and the initiating-change discovery-command distinction are preserved in the separate reconciliations. First passes remain unchanged. When a reviewer stopped before prior access, the active comparison is recorded separately and no continuation call was made.
+
+The verbatim `claude-initiating-local/first-pass.md` retains two whitespace-only lines (26 and 103) exactly as captured and hashed. The default Git whitespace check flags these; authored-document checking excludes only that immutable transcript file.

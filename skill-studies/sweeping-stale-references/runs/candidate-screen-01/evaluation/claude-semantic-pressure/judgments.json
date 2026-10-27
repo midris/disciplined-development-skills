@@ -1,0 +1,293 @@
+{
+  "first_pass_event": 233,
+  "prior_first_access_event": null,
+  "post_prior_event": null,
+  "judgments": [
+    {
+      "run_id": "20261026T134047500Z-ssr-fresh-baseline-claude-pressure-repair-55614d69-4b94-4d9d-b31e-01f1af6dc872-way5p3cv",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all78 independent functional factors. Minor wording variants preserve full meaning; no consequential quality difference or score change."
+    },
+    {
+      "run_id": "20261026T143252395Z-ssr-fresh-baseline-claude-pressure-repair-cc578997-b8de-4662-8a88-483f96ba1cea-bbokxzpi",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all78 independent functional factors. Minor wording variants preserve full meaning; no consequential quality difference or score change."
+    },
+    {
+      "run_id": "20261026T145923944Z-ssr-fresh-baseline-claude-pressure-repair-dd0528fe-9c2e-453b-9d51-364a0cc86908-xqzjqcbb",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all78 independent functional factors. Minor wording variants preserve full meaning; no consequential quality difference or score change."
+    },
+    {
+      "run_id": "20261026T152558462Z-ssr-fresh-baseline-claude-pressure-repair-84e9e455-5b05-4bc1-9196-e6701b29d180-jjt0x2z7",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all78 independent functional factors. Minor wording variants preserve full meaning; no consequential quality difference or score change."
+    },
+    {
+      "run_id": "20261026T155839032Z-ssr-fresh-baseline-claude-pressure-repair-0d785870-e06c-4285-8816-f7592b2e0dbb-5xd49rt8",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all78 independent functional factors. Minor wording variants preserve full meaning; no consequential quality difference or score change."
+    },
+    {
+      "run_id": "20261026T203834439Z-ssr-screen-claude-pressure-repair-candidate-b25cc964-4894-455b-8a69-17f2cc1f518c-zgichz60",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all78 independent functional factors. Minor wording variants preserve full meaning; no consequential quality difference or score change."
+    },
+    {
+      "run_id": "20261026T212133720Z-ssr-screen-claude-pressure-repair-candidate-ba572795-f4b7-4d9f-b92f-8779daa274d0-v_g_196l",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all78 independent functional factors. Minor wording variants preserve full meaning; no consequential quality difference or score change."
+    },
+    {
+      "run_id": "20261026T230421746Z-ssr-screen-claude-pressure-repair-candidate-04df1611-951c-41a4-a78d-9bdc78be5386-41w5xyac",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all78 independent functional factors. Minor wording variants preserve full meaning; no consequential quality difference or score change."
+    },
+    {
+      "run_id": "20261026T203932682Z-ssr-screen-claude-pressure-repair-finalist-3806138f-0e02-4b43-b756-720f8fda56d8-pffe9jkq",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all78 independent functional factors. Minor wording variants preserve full meaning; no consequential quality difference or score change."
+    },
+    {
+      "run_id": "20261026T212042705Z-ssr-screen-claude-pressure-repair-finalist-014c7db8-138b-4085-91a5-cc6cf20ee79b-6rss9vkb",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all78 independent functional factors. Minor wording variants preserve full meaning; no consequential quality difference or score change."
+    },
+    {
+      "run_id": "20261026T230506030Z-ssr-screen-claude-pressure-repair-finalist-5deb384a-26e2-458e-b6fb-6000390d0c87-t_zxx0vw",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all78 independent functional factors. Minor wording variants preserve full meaning; no consequential quality difference or score change."
+    },
+    {
+      "run_id": "20261023T211804448Z-ssr-compact-semantic-original-43eb72dc-bed5-4eff-90a3-ed9c363ce4ce-7g4e9s1p",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all78 independent functional factors. Minor wording variants preserve full meaning; no consequential quality difference or score change."
+    },
+    {
+      "run_id": "20261023T212809348Z-ssr-compact-semantic-original-e02f2ea8-520d-401d-b326-bd458cc17518-pg2payc3",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all78 independent functional factors. Minor wording variants preserve full meaning; no consequential quality difference or score change."
+    },
+    {
+      "run_id": "20261023T212947093Z-ssr-compact-semantic-original-4c89a89d-1efc-44bf-9832-cf8104dcebcd-n0sj6bjf",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all78 independent functional factors. Minor wording variants preserve full meaning; no consequential quality difference or score change."
+    },
+    {
+      "run_id": "20261023T213130992Z-ssr-compact-semantic-original-1fdec10e-64dc-4841-913c-967bc381947b-qjytmvqi",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all78 independent functional factors. Minor wording variants preserve full meaning; no consequential quality difference or score change."
+    },
+    {
+      "run_id": "20261023T213505114Z-ssr-compact-semantic-original-3102bdf3-bd48-442f-8c61-1660d1ca81a6-mgqevtlv",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all78 independent functional factors. Minor wording variants preserve full meaning; no consequential quality difference or score change."
+    },
+    {
+      "run_id": "20261023T212410571Z-ssr-compact-semantic-candidate-b27fa214-9b32-41ae-8717-d64f3ee0e1d4-b_x8sezp",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all78 independent functional factors. Minor wording variants preserve full meaning; no consequential quality difference or score change."
+    },
+    {
+      "run_id": "20261023T212607360Z-ssr-compact-semantic-candidate-240ae7cd-4213-40bb-9b01-5c95714b3029-479zhvuo",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all78 independent functional factors. Minor wording variants preserve full meaning; no consequential quality difference or score change."
+    },
+    {
+      "run_id": "20261023T213033879Z-ssr-compact-semantic-candidate-7608f8bc-7450-4b24-a1bb-2284e4011e24-0ieyn2fu",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all78 independent functional factors. Minor wording variants preserve full meaning; no consequential quality difference or score change."
+    },
+    {
+      "run_id": "20261023T213317806Z-ssr-compact-semantic-candidate-0e19c517-ab57-4c9f-a293-8bc999713bb4-468la7hg",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all78 independent functional factors. Minor wording variants preserve full meaning; no consequential quality difference or score change."
+    },
+    {
+      "run_id": "20261023T213412662Z-ssr-compact-semantic-candidate-8cf481d8-0405-463b-bc13-d24877855103-lp4o2r6z",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all78 independent functional factors. Minor wording variants preserve full meaning; no consequential quality difference or score change."
+    },
+    {
+      "run_id": "20261023T212516549Z-ssr-compact-semantic-finalist-24f91879-a992-4b12-9026-38a9ebf2143a-sajnmbw3",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all78 independent functional factors. Minor wording variants preserve full meaning; no consequential quality difference or score change."
+    },
+    {
+      "run_id": "20261023T212705559Z-ssr-compact-semantic-finalist-a9d86334-3445-4590-b3e4-1b132f6df8c7-5nu6_q9_",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all78 independent functional factors. Minor wording variants preserve full meaning; no consequential quality difference or score change."
+    },
+    {
+      "run_id": "20261023T212907539Z-ssr-compact-semantic-finalist-c1c662e0-fc86-4656-aaa0-7746f9eab771-idib5g4o",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all78 independent functional factors. Minor wording variants preserve full meaning; no consequential quality difference or score change."
+    },
+    {
+      "run_id": "20261023T213214880Z-ssr-compact-semantic-finalist-52160d4f-1d58-46f5-9b79-deb59490fc80-h_68zmgl",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all78 independent functional factors. Minor wording variants preserve full meaning; no consequential quality difference or score change."
+    },
+    {
+      "run_id": "20261023T213555811Z-ssr-compact-semantic-finalist-5486e457-4782-4591-bb1f-7e90eaa33585-7xawoy6q",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all78 independent functional factors. Minor wording variants preserve full meaning; no consequential quality difference or score change."
+    }
+  ]
+}

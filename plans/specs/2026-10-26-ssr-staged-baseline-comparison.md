@@ -1,6 +1,6 @@
 # SSR: original baseline and staged candidate comparison
 
-Status: original baseline complete; candidate-screen subjects complete and audited, including the one approved slot56 retry; ten comparison reviews remain.
+Status: original baseline and candidate screen complete, including the one approved slot56 retry and ten audited comparison reviews; owner decision on adoption or further scope remains.
 The [framework](2026-09-11-model-driven-skill-testing-framework.md#cw-testing-model) governs the method; the [active plan](../2026-09-11-model-driven-skill-testing.md) owns progress and the [SSR protocol](../../skill-studies/sweeping-stale-references/protocol.md) owns dispatch authority.
 This replaces the [55-subject completion proposal](2026-10-24-ssr-cw-aligned-validation.md); its draft configuration set does not implement this design.
 The owner approved the 115-subject/ten-review screen on 2026-10-26; freeze and readiness precede dispatch. One slot56 retry is separately authorized; no skill edit, further retry or adoption is authorized.
@@ -34,7 +34,7 @@ Older heterogeneous runs remain contextual evidence rather than additional repet
 
 ## Candidate screen: candidate-screen-01
 
-Status: all115 subjects and the one approved retry are retained/scored; ten approved reviews remain. See the [progress checkpoint](../../skill-studies/sweeping-stale-references/runs/candidate-screen-01/progress.md).
+Status: all 115 subjects and the one approved retry are retained/scored; all ten reviews are audited. The [comparison assessment](../../skill-studies/sweeping-stale-references/runs/candidate-screen-01/candidate-screen-01-assessment.md) recommends the unchanged compact version while retaining native-selection and reporting limits. No further calls or adoption follow automatically.
 The owner selected this concrete allocation after preparation review: “approved, please continue with the tests”.
 The [preparation package](../../skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/README.md) contains 44 matched configurations, eleven prospective cards, the exact schedule and verified reuse.
 

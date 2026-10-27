@@ -117,6 +117,121 @@
         "sha256": "6bd270c6ae38fe86ebe8793a8adda53ba37f345578f732f2756c39144aab2323",
         "version": null
       }
+    },
+    {
+      "packet_id": "claude-semantic-pressure",
+      "run_id": "20261027T001922100Z-ssr-candidate-screen-claude-semantic-pressure-review-aeb3c90e-46c2-4593-b48c-8858851993ef-_8wyd_lr",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "d4189123395c2053ac1a281eaa0d17686fe9ac0f",
+      "configuration_sha256": "8733f7ddf7c6e2a412da5606d6a0506d848a78a03a6bd7927ab4e25352217613",
+      "bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/reviews/20261027T001922100Z-ssr-candidate-screen-claude-semantic-pressure-review-aeb3c90e-46c2-4593-b48c-8858851993ef-_8wyd_lr",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/reviews/20261027T001922100Z-ssr-candidate-screen-claude-semantic-pressure-review-aeb3c90e-46c2-4593-b48c-8858851993ef-_8wyd_lr.inventory.json",
+        "sha256": "575a6adfa71c313934c58b9849805f467eea6e16fdfe5ded89344751d5d01220",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 305.167,
+      "audit_status": "complete",
+      "audit": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/evaluation/claude-semantic-pressure/audit.json",
+        "sha256": "6fabfec1420056a88744e6286c3e1c73e09f84ca8e37d1599c5c3674b0363079",
+        "version": null
+      }
+    },
+    {
+      "packet_id": "claude-shiv",
+      "run_id": "20261027T002610972Z-ssr-candidate-screen-claude-shiv-review-717586cd-d38b-48b8-88e2-d1bfc56f5f23-6oru0f_f",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "d4189123395c2053ac1a281eaa0d17686fe9ac0f",
+      "configuration_sha256": "72225b323d0208660bba8fde87598e77f6e49e670c38c7fc74f81178f1c185c2",
+      "bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/reviews/20261027T002610972Z-ssr-candidate-screen-claude-shiv-review-717586cd-d38b-48b8-88e2-d1bfc56f5f23-6oru0f_f",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/reviews/20261027T002610972Z-ssr-candidate-screen-claude-shiv-review-717586cd-d38b-48b8-88e2-d1bfc56f5f23-6oru0f_f.inventory.json",
+        "sha256": "581c07aefc2e7b7ea39830d2be046422b3dc41f19374ebcfcf2973b7a9021a32",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 299.022,
+      "audit_status": "complete",
+      "audit": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/evaluation/claude-shiv/audit.json",
+        "sha256": "706a5dd60e590ef600d73a3fc5f7a45d9a7bb42e15e32cdda17812503e409b12",
+        "version": null
+      }
+    },
+    {
+      "packet_id": "claude-moved",
+      "run_id": "20261027T003239213Z-ssr-candidate-screen-claude-moved-review-c4a5a775-41c7-48e8-8b1b-3603d9702926-36ayanl1",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "d4189123395c2053ac1a281eaa0d17686fe9ac0f",
+      "configuration_sha256": "c5230adde25e8fc647ed03ad303090a41949b8cdf3399d14e3fd6400967f5792",
+      "bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/reviews/20261027T003239213Z-ssr-candidate-screen-claude-moved-review-c4a5a775-41c7-48e8-8b1b-3603d9702926-36ayanl1",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/reviews/20261027T003239213Z-ssr-candidate-screen-claude-moved-review-c4a5a775-41c7-48e8-8b1b-3603d9702926-36ayanl1.inventory.json",
+        "sha256": "06046f5673557cc7c9582d573f0f301081dc53cfb82ea7dcfc323289d082336a",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 145.765,
+      "audit_status": "complete",
+      "audit": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/evaluation/claude-moved/audit.json",
+        "sha256": "cd978a84baeccf09158d712b01d614fc85776385d509f826fc97a23960d50d70",
+        "version": null
+      }
+    },
+    {
+      "packet_id": "claude-initiating-local",
+      "run_id": "20261027T003604013Z-ssr-candidate-screen-claude-initiating-local-review-0d3d7c9c-e471-46c3-9e52-fdd1796f641c-kpa89wlm",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "d4189123395c2053ac1a281eaa0d17686fe9ac0f",
+      "configuration_sha256": "5529958196f589d02bc56679e377de0304d1451e63253658d75aa939ae67c3fe",
+      "bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/reviews/20261027T003604013Z-ssr-candidate-screen-claude-initiating-local-review-0d3d7c9c-e471-46c3-9e52-fdd1796f641c-kpa89wlm",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/reviews/20261027T003604013Z-ssr-candidate-screen-claude-initiating-local-review-0d3d7c9c-e471-46c3-9e52-fdd1796f641c-kpa89wlm.inventory.json",
+        "sha256": "2b739ac7f50b66e9bd6a560fe90e13edc9e1e7426455f7fa54825078679b5bf4",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 284.788,
+      "audit_status": "complete",
+      "audit": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/evaluation/claude-initiating-local/audit.json",
+        "sha256": "8a6c24fafbf87b8a01d3be19a7c5313c494c75a4a234ec5968a1c39921754968",
+        "version": null
+      }
+    },
+    {
+      "packet_id": "claude-native-positive",
+      "run_id": "20261027T004621188Z-ssr-candidate-screen-claude-native-positive-review-494dd017-631b-49f9-be40-99d48b868950-0x7muf7r",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "d4189123395c2053ac1a281eaa0d17686fe9ac0f",
+      "configuration_sha256": "c0b735a7ef6139ad82c0112673e1bb8a1a07e6f86b97a166aa6c62fc3b7c4d8d",
+      "bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/reviews/20261027T004621188Z-ssr-candidate-screen-claude-native-positive-review-494dd017-631b-49f9-be40-99d48b868950-0x7muf7r",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/candidate-screen-01/reviews/20261027T004621188Z-ssr-candidate-screen-claude-native-positive-review-494dd017-631b-49f9-be40-99d48b868950-0x7muf7r.inventory.json",
+        "sha256": "f71e6327ccebd0001ebf1d1f774f38568736f5e0b21d531d68a98139b06b08da",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 314.303,
+      "audit_status": "complete",
+      "audit": {
+        "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/evaluation/claude-native-positive/audit.json",
+        "sha256": "efe63e18c6db232dc2f83b00ff4cc3413086544d5a6c3bc79f275bde154c7e2e",
+        "version": null
+      }
     }
   ]
 }

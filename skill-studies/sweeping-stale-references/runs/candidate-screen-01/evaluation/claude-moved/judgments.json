@@ -1,0 +1,128 @@
+{
+  "first_pass_event": 124,
+  "prior_first_access_event": null,
+  "post_prior_event": null,
+  "judgments": [
+    {
+      "run_id": "20261026T135650028Z-ssr-fresh-baseline-claude-moved-guide-da811995-0ecf-4bdf-89a8-f997b6f9cd40-o89dadrq",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all33 functional factors with no score changes. Identical artifacts do not separate versions; reported search/link-check differences remain procedural observations."
+    },
+    {
+      "run_id": "20261026T144052901Z-ssr-fresh-baseline-claude-moved-guide-87640d7a-aa26-4bfb-a16d-8dd22bd36898-a87ygsrv",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all33 functional factors with no score changes. Identical artifacts do not separate versions; reported search/link-check differences remain procedural observations."
+    },
+    {
+      "run_id": "20261026T150908932Z-ssr-fresh-baseline-claude-moved-guide-091246d0-6355-4742-8d11-60c79a334d60-xqh45qhl",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all33 functional factors with no score changes. Identical artifacts do not separate versions; reported search/link-check differences remain procedural observations."
+    },
+    {
+      "run_id": "20261026T153330184Z-ssr-fresh-baseline-claude-moved-guide-45aa004a-7e30-4fe8-b3a1-08d265a7f9fd-rx7pg01j",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all33 functional factors with no score changes. Identical artifacts do not separate versions; reported search/link-check differences remain procedural observations."
+    },
+    {
+      "run_id": "20261026T160936719Z-ssr-fresh-baseline-claude-moved-guide-6f8fe2b0-7064-417d-9011-c12f818448ea-glsel8dw",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all33 functional factors with no score changes. Identical artifacts do not separate versions; reported search/link-check differences remain procedural observations."
+    },
+    {
+      "run_id": "20261026T210717432Z-ssr-screen-claude-moved-guide-candidate-453057f2-80f6-4223-8725-a22b765a393c-2y10g1ex",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all33 functional factors with no score changes. Identical artifacts do not separate versions; reported search/link-check differences remain procedural observations."
+    },
+    {
+      "run_id": "20261026T225142332Z-ssr-screen-claude-moved-guide-candidate-0de99024-fcdf-4dc7-85f0-f12cf4096b96-fcx9kq13",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all33 functional factors with no score changes. Identical artifacts do not separate versions; reported search/link-check differences remain procedural observations."
+    },
+    {
+      "run_id": "20261026T233550330Z-ssr-screen-claude-moved-guide-candidate-93d8ad88-d374-4eca-8b95-39ab02562f74-1pol0unm",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all33 functional factors with no score changes. Identical artifacts do not separate versions; reported search/link-check differences remain procedural observations."
+    },
+    {
+      "run_id": "20261024T060738969Z-ssr-compact-regression-moved-guide-3a8241d0-eb67-4a24-8f49-1f1b24b72db7-9shudgzv",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all33 functional factors with no score changes. Identical artifacts do not separate versions; reported search/link-check differences remain procedural observations."
+    },
+    {
+      "run_id": "20261024T061703945Z-ssr-compact-regression-moved-guide-42f97295-92c5-41e5-bf7b-2c644ab42d1c-0scb5n1v",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all33 functional factors with no score changes. Identical artifacts do not separate versions; reported search/link-check differences remain procedural observations."
+    },
+    {
+      "run_id": "20261026T233505666Z-ssr-screen-claude-moved-guide-finalist-5ff74720-3628-48e5-85d6-55081529871d-p79mfhnw",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "Agree on all33 functional factors with no score changes. Identical artifacts do not separate versions; reported search/link-check differences remain procedural observations."
+    }
+  ]
+}

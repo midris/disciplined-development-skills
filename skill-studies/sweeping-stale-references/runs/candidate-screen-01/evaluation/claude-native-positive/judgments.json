@@ -1,0 +1,249 @@
+{
+  "first_pass_event": 211,
+  "prior_first_access_event": 212,
+  "post_prior_event": 219,
+  "judgments": [
+    {
+      "run_id": "20261026T134445582Z-ssr-fresh-baseline-claude-invocation-change-e3f1a72f-82cc-4867-8897-dbf8efaec7e6-93hxbuqm",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; minor wording/reporting differences only. Compact slot93 native miss remains separate. See reconciliation.md."
+    },
+    {
+      "run_id": "20261026T143536368Z-ssr-fresh-baseline-claude-invocation-change-e473bf8e-b768-4aac-b6bb-572b21cc3b64-xdx7kvdb",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; minor wording/reporting differences only. Compact slot93 native miss remains separate. See reconciliation.md."
+    },
+    {
+      "run_id": "20261026T150258329Z-ssr-fresh-baseline-claude-invocation-change-8613798d-37dc-47f8-8e9f-7e69da84f23e-7mkn53gb",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; minor wording/reporting differences only. Compact slot93 native miss remains separate. See reconciliation.md."
+    },
+    {
+      "run_id": "20261026T152833925Z-ssr-fresh-baseline-claude-invocation-change-e19ab63b-b264-473a-ac4e-6e82e6de8d7e-g_2crf12",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; minor wording/reporting differences only. Compact slot93 native miss remains separate. See reconciliation.md."
+    },
+    {
+      "run_id": "20261026T160116860Z-ssr-fresh-baseline-claude-invocation-change-83c21cc6-9114-4418-833c-d400fbd63fd6-xpgg4yv8",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; minor wording/reporting differences only. Compact slot93 native miss remains separate. See reconciliation.md."
+    },
+    {
+      "run_id": "20261026T205034929Z-ssr-screen-claude-invocation-change-candidate-b140d0ad-0e99-4779-916a-26908d2f3290-z6th093r",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; minor wording/reporting differences only. Compact slot93 native miss remains separate. See reconciliation.md."
+    },
+    {
+      "run_id": "20261026T213830368Z-ssr-screen-claude-invocation-change-candidate-7c0958df-0f34-4212-83a6-f1e6d3a1c238-3wgzui1t",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; minor wording/reporting differences only. Compact slot93 native miss remains separate. See reconciliation.md."
+    },
+    {
+      "run_id": "20261026T231747955Z-ssr-screen-claude-invocation-change-candidate-786634e8-0c28-480b-8847-b60db7d16bea-kx2kaqcy",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; minor wording/reporting differences only. Compact slot93 native miss remains separate. See reconciliation.md."
+    },
+    {
+      "run_id": "20261024T060550211Z-ssr-compact-regression-invocation-change-1159453b-4002-4c8a-b340-4ddb44c568df-w47ho2r3",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; minor wording/reporting differences only. Compact slot93 native miss remains separate. See reconciliation.md."
+    },
+    {
+      "run_id": "20261024T061754141Z-ssr-compact-regression-invocation-change-c51dc79a-efa5-409d-a953-4c406e11c8ef-u6hucd_f",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; minor wording/reporting differences only. Compact slot93 native miss remains separate. See reconciliation.md."
+    },
+    {
+      "run_id": "20261026T231657692Z-ssr-screen-claude-invocation-change-finalist-3ddfd1aa-aa12-4f34-b292-34a82be22261-wb155xhy",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; minor wording/reporting differences only. Compact slot93 native miss remains separate. See reconciliation.md."
+    },
+    {
+      "run_id": "20261026T140228824Z-ssr-fresh-baseline-claude-invocation-review-c9e3a12b-a340-417f-9c08-22c7d8d8e990-hgazg1xu",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; minor wording/reporting differences only. Compact slot93 native miss remains separate. See reconciliation.md."
+    },
+    {
+      "run_id": "20261026T144347185Z-ssr-fresh-baseline-claude-invocation-review-cd1c28b3-07e3-47e1-b47b-7269200637b0-obf2u_8o",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; minor wording/reporting differences only. Compact slot93 native miss remains separate. See reconciliation.md."
+    },
+    {
+      "run_id": "20261026T151152899Z-ssr-fresh-baseline-claude-invocation-review-1c771284-cce6-4c17-9a76-75631a628fa9-0ugswiob",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; minor wording/reporting differences only. Compact slot93 native miss remains separate. See reconciliation.md."
+    },
+    {
+      "run_id": "20261026T153612696Z-ssr-fresh-baseline-claude-invocation-review-2081e659-8d60-4324-afc0-f5ebfa0c4d22-vacmr7m9",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; minor wording/reporting differences only. Compact slot93 native miss remains separate. See reconciliation.md."
+    },
+    {
+      "run_id": "20261026T161324956Z-ssr-fresh-baseline-claude-invocation-review-d05e7008-9768-48af-a8e1-420149ccdfe2-pk1a3eir",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; minor wording/reporting differences only. Compact slot93 native miss remains separate. See reconciliation.md."
+    },
+    {
+      "run_id": "20261026T205727900Z-ssr-screen-claude-invocation-review-candidate-1803ca88-51e6-4ef0-939d-6539fc559110-ql_hzd2k",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; minor wording/reporting differences only. Compact slot93 native miss remains separate. See reconciliation.md."
+    },
+    {
+      "run_id": "20261026T213924504Z-ssr-screen-claude-invocation-review-candidate-0273b3fb-6924-4d11-8f64-3c7a3acd32e4-4sewuxoa",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; minor wording/reporting differences only. Compact slot93 native miss remains separate. See reconciliation.md."
+    },
+    {
+      "run_id": "20261026T232312225Z-ssr-screen-claude-invocation-review-candidate-9319cd97-2d2a-44aa-bf52-f38c8d0d92a2-tqm1esfv",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; minor wording/reporting differences only. Compact slot93 native miss remains separate. See reconciliation.md."
+    },
+    {
+      "run_id": "20261024T060904689Z-ssr-compact-regression-invocation-review-2943fb8b-a983-430c-b3be-0e4d6ac38547-pq7u071m",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; minor wording/reporting differences only. Compact slot93 native miss remains separate. See reconciliation.md."
+    },
+    {
+      "run_id": "20261024T061612874Z-ssr-compact-regression-invocation-review-3e1c6c38-11ca-4662-b139-99cfda44ec50-5_jh10a3",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; minor wording/reporting differences only. Compact slot93 native miss remains separate. See reconciliation.md."
+    },
+    {
+      "run_id": "20261026T232359892Z-ssr-screen-claude-invocation-review-finalist-4bc2e115-f8b4-47b0-a81a-076666060bf5-dyarb683",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All functional factors agree; minor wording/reporting differences only. Compact slot93 native miss remains separate. See reconciliation.md."
+    }
+  ]
+}
