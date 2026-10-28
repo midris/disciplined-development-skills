@@ -201,9 +201,17 @@ _PR_EDGE_CHARS = set(" \t\r\"'`()")
 _VERB_WINDOW = 200
 
 
+def _splits_unreliably(tok: str) -> bool:
+    """True when a whitespace token may be part of a longer shell word: it
+    opens a substitution or leaves a quote unbalanced (`"$(cat`)."""
+    return "$(" in tok or "`" in tok or tok.count('"') % 2 or tok.count("'") % 2
+
+
 def _pr_verb(piece: str, start: int) -> str | None:
-    """The first non-flag token after *start*, quotes stripped: `""` when the
-    command ends first, `None` when the window ends first (verb unknown)."""
+    """The leading word of the first non-flag token after *start*: `""` when
+    the command ends first; `None` when the verb is unknown — the window
+    ends first, or a skipped flag or value may span more tokens
+    (`-R "$(cat .repo)"`)."""
     window = piece[start:start + _VERB_WINDOW]
     tokens = window.split()
     cut = start + _VERB_WINDOW < len(piece)
@@ -214,12 +222,13 @@ def _pr_verb(piece: str, start: int) -> str | None:
         t = tok.strip("\"'`()")
         if not t:
             continue
-        if skip_value:
-            skip_value = False
-        elif t.startswith("-"):
-            skip_value = t in GH_GLOBAL_FLAGS_WITH_VALUE
-        else:
-            return t
+        if skip_value or t.startswith("-"):
+            if _splits_unreliably(tok):
+                return None
+            skip_value = not skip_value and t in GH_GLOBAL_FLAGS_WITH_VALUE
+            continue
+        # Leading word only, so `create>"$OUT"` or `create,` reads as create.
+        return re.match(r"\w*", t).group()
     return None if cut else ""
 
 
@@ -242,8 +251,9 @@ def looks_like_gh_pr_create(command: str) -> bool:
     didn't model and backtracked on long input; this scan errs toward True.
     Accepted misses: a `;`/`&`/`|`/newline between `gh` and the verb, even
     one that isn't a command separator (`$(which gh 2>&1) pr create`), and a
-    verb produced by a substitution (`gh pr $(echo create)`). A verb beyond
-    the window counts as `create`.
+    verb produced by a substitution (`gh pr $(echo create)`). An unknown
+    verb counts as `create`: one beyond the window, or one after a flag or
+    value that may span tokens (`gh pr -R "$(cat .repo)" view`).
 
     Deliberately over-broad: a mention of the whole command — unquoted
     (`echo gh pr create`) or quoted (a commit message, a grep pattern) —

@@ -112,6 +112,8 @@ def test_looks_like_gh_pr_create_ignores_other_verbs_after_pr():
         'git -C "$REPO" commit -m "pr gate: create an ERROR row on block"',
         'echo "$USER opened pr 12 with new tests"',
         "git push origin $BR:pr/new-api",
+        'gh pr -R "o/r" view 5',
+        'gh pr --repo "$REPO" list --search create',
         'gh pr view 12 && echo "created"',
         "gh pr view 12\necho created",
         'gh pr list --search "create"',
@@ -158,6 +160,11 @@ def test_looks_like_gh_pr_create_catches_wrapped_invocations():
         "gh pr -R acme-co/web create --fill",
         "gh pr --repo ghe.acme.co/org/app create --fill",
         "gh pr -R o/list create",
+        'gh pr -R "$(cat .repo)" create --fill',
+        'gh pr --repo "$(gh repo view --json nameWithOwner -q .nameWithOwner)" create',
+        'cd "$WT" && gh pr -R "$(git config --get dd.repo)" new --fill',
+        'cd "$WT" && gh pr create>"$OUT"',
+        "timeout 60 gh pr new>url.txt",
         # Verb past the scan window can't be ruled out: block.
         "gh pr " + "--x " * 100 + "create",
     ):
