@@ -119,6 +119,8 @@ def test_looks_like_gh_pr_create_ignores_other_verbs_after_pr():
         'git commit -m "docs: mention gh pr --web"',
         'gh issue create --title "Support gh pr -R"',
         'gh issue create --title "Support gh pr --repo"',
+        'git commit -m "docs: `gh pr view` example"',
+        "cat > notes.md <<'EOF'\nRun `gh pr checks` to see CI.\nEOF",
         'gh pr view 12 && echo "created"',
         "gh pr view 12\necho created",
         'gh pr list --search "create"',
@@ -177,6 +179,9 @@ def test_looks_like_gh_pr_create_catches_wrapped_invocations():
         "gh pr `echo create`",
         "gh pr --repo=\"$(cat .repo)\" create",
         'gh pr -R"o/$(cat .r)" create',
+        "gh pr -R `cat .r` create",
+        "gh pr $'create'",
+        "gh pr 2>/dev/null create",
         # Verb past the scan window can't be ruled out: block.
         "gh pr " + "--x " * 100 + "create",
     ):

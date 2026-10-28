@@ -208,12 +208,13 @@ def _unbalanced_quote(tok: str) -> bool:
 def _pr_verb(piece: str, start: int) -> str | None:
     """The verb after a `pr` token ending at *start*: `""` when the command
     ends first, `None` when it can't be known. Each token shape has one role:
-    - a substitution (`$(`, backtick) may produce the verb or span tokens:
-      unknown;
-    - the `-R/--repo` value (or `--repo=…`) is skipped, unless an unbalanced
-      quote means it spans tokens (`-R "$(cat .repo)"`): unknown;
-    - any other flag, or an expansion that may hold flags (`$FLAGS`, `"$@"`):
-      skipped;
+    - a substitution (`$(`, an opening backtick) or ANSI-C/locale quoting
+      (`$'…'`, `$"…"`) may produce the verb or span tokens: unknown;
+    - the `-R/--repo` value (separate, or attached as `-R…` / `--repo=…`) is
+      skipped, unless an unbalanced quote means it spans tokens
+      (`-R "$(cat .repo)"`): unknown;
+    - any other flag, an expansion that may hold flags (`$FLAGS`, `"$@"`),
+      or an attached redirect (`2>/dev/null`): skipped;
     - anything else is the verb: its leading word, so `create>"$OUT"` reads
       as create and `#42:` as `""`.
     A verb past the window is unknown too."""
@@ -227,8 +228,12 @@ def _pr_verb(piece: str, start: int) -> str | None:
         t = tok.strip("\"'`()")
         if not t:
             continue
-        if "$(" in tok or "`" in tok:
+        # A backtick only opens a substitution at the token's start; a closing
+        # one ends a Markdown code span in prose (`gh pr view`).
+        if "$(" in tok or tok.lstrip("\"'(").startswith(("`", "$'", '$"')):
             return None
+        if re.match(r"\d*[<>]", t):
+            continue  # attached redirect (`2>/dev/null`)
         if repo_value:
             if _unbalanced_quote(tok):
                 return None
@@ -266,8 +271,9 @@ def looks_like_gh_pr_create(command: str) -> bool:
     know (a substitution, a `-R` value spanning tokens, past the window)
     counts as `create`. Accepted misses: a `;`/`&`/`|`/newline between `gh`
     and the verb, even one that isn't a command separator
-    (`$(which gh 2>&1) pr create`), and a verb held only in a variable
-    (`gh pr $VERB`), which is skipped like a flag.
+    (`$(which gh 2>&1) pr create`); a verb held only in a variable
+    (`gh pr $VERB`), which is skipped like a flag; and a spaced redirect
+    before the verb (`gh pr > out create`).
 
     Deliberately over-broad: a mention of the whole command — unquoted
     (`echo gh pr create`) or quoted (a commit message, a grep pattern) —
