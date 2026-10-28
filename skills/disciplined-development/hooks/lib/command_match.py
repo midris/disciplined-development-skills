@@ -323,23 +323,54 @@ def _skip_gh_flags(seg: list[str], j: int) -> int:
     return j
 
 
+_DIR_CHANGERS = {"cd", "pushd", "popd"}
+_GROUPING = {"(", ")", "{", "}"}
+
+
+def _resolve_cwd(prior: list[list[str]]) -> str | None:
+    """The cwd a command runs in after the *prior* segments, or None when a
+    directory change there isn't modelled.
+
+    Only a leading `cd <explicit path>` is: an absolute path resets the cwd,
+    a relative one joins it (the process cwd before any `cd`), as the shell
+    does. Everything else returns None so the gate fails closed rather than
+    reviewing the wrong tree: `pushd`/`popd`; a `cd` with grouping in play
+    (`(cd x && …)`, `{ cd x; }` — subshell scoping); a `cd` that isn't its
+    segment's first word (`then cd x`); `cd` with no path, an option, `-`
+    or `~`; an unexpandable target (`$`/backtick), unless a later absolute
+    `cd` resets it.
+    """
+    tokens = {t for seg in prior for t in seg}
+    if not _DIR_CHANGERS & tokens:
+        return str(Path.cwd())
+    if {"pushd", "popd"} & tokens or _GROUPING & tokens:
+        return None
+    cwd: str | None = str(Path.cwd())
+    for seg in prior:
+        if "cd" not in seg:
+            continue
+        if seg[0] != "cd" or len(seg) < 2 or seg[1].startswith(("-", "~")):
+            return None
+        path = seg[1]
+        if "$" in path or "`" in path:
+            cwd = None
+        elif os.path.isabs(path):
+            cwd = path
+        elif cwd is not None:
+            cwd = str(Path(cwd) / path)
+    return cwd
+
+
 def find_gh_pr_create(command: str) -> str | None:
     """Locate a `gh pr create` (or `gh pr new`) invocation and return its resolved cwd.
 
-    `cwd` is extracted from chained `cd <path>` segments (a relative path
-    joins the cwd so far, starting from the process cwd); with no `cd`,
-    `cwd` is the process working directory (`os.getcwd()`).
-
     Return shape:
       * `None`  — not a `gh pr create|new` command, **or** matched but the
-                  effective `cd` target is unexpandable (`$`/backtick) so
-                  cwd can't be resolved (caller uses `looks_like_gh_pr_create`
-                  to distinguish the two `None` cases and fail closed).
-      * `str`   — the resolved cwd (the process cwd when there is no `cd`,
-                  or the resolved `cd` target).
-
-    The unresolvable-cwd guard returns `None` (not the process cwd) so the
-    pre-PR gate fails loud rather than reviewing the wrong tree.
+                  cwd can't be resolved (`_resolve_cwd` lists the cases;
+                  the caller uses `looks_like_gh_pr_create` to distinguish
+                  the two `None` cases and fail closed).
+      * `str`   — the resolved cwd (the process cwd when nothing before the
+                  `gh` changes directory).
     """
     if not command:
         return None
@@ -360,7 +391,10 @@ def find_gh_pr_create(command: str) -> str | None:
                         if inner:
                             result = find_gh_pr_create(seg[j + 1])
                             if result is not None:
-                                return result
+                                # The inner cwd assumed the process cwd;
+                                # an outer directory change breaks that.
+                                prior = {t for s in segs[:seg_idx] for t in s}
+                                return None if _DIR_CHANGERS & prior else result
                     break
                 if not t.startswith("-"):
                     break
@@ -378,37 +412,10 @@ def find_gh_pr_create(command: str) -> str | None:
         if j >= len(seg) or seg[j] not in PR_CREATE_SUBCOMMANDS:
             continue
 
-        # Chained `cd` resolution, as the shell does it: walk every
-        # preceding segment; an absolute `cd` resets the cwd, a relative
-        # one joins the cwd so far (the process cwd before any `cd`).
-        cwd: str | None = None
-        cwd_unresolvable = False
-        for prev_seg in segs[:seg_idx]:
-            if len(prev_seg) >= 2 and prev_seg[0] == "cd":
-                path = prev_seg[1]
-                if "$" in path or "`" in path:
-                    # Unexpandable target (shell var / substitution). Mark the
-                    # cwd unresolvable; a later absolute `cd` clears it.
-                    cwd_unresolvable = True
-                    cwd = None
-                elif os.path.isabs(path):
-                    cwd = path
-                    cwd_unresolvable = False
-                elif not cwd_unresolvable:
-                    # Relative to an unresolvable base stays unresolvable.
-                    cwd = str(Path(cwd or Path.cwd()) / path)
-
-        if cwd_unresolvable:
-            # Matched `gh pr create`, but the effective cwd can't be resolved.
-            # Return None so the pre-PR gate fails LOUD rather than failing
-            # open or reviewing the wrong tree. The caller uses
-            # `looks_like_gh_pr_create` to distinguish this None from the
-            # "not a PR" None.
-            return None
-        if cwd is None:
-            cwd = str(Path.cwd())
-
-        return cwd
+        # Matched. A None cwd (unresolvable) makes the pre-PR gate fail LOUD
+        # rather than failing open or reviewing the wrong tree; the caller
+        # uses `looks_like_gh_pr_create` to tell it from the "not a PR" None.
+        return _resolve_cwd(segs[:seg_idx])
 
     return None
 
