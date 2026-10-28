@@ -108,6 +108,8 @@ def test_looks_like_gh_pr_create_ignores_other_pr_subcommands():
         'gh pr list --search "create"',
         "gh pr list --search create",
         "gh pr comment 5 --body new",
+        "gh pr ls --search create",
+        "gh pr view 1 --json title | grep -c new",
     ):
         assert looks_like_gh_pr_create(cmd) is False, cmd
 
@@ -133,6 +135,13 @@ def test_looks_like_gh_pr_create_catches_wrapped_invocations():
         '"$(command -v gh)" pr create --fill',
         "GH=gh; $GH pr create --fill",
         "gh \\\n  pr create --fill",
+        "gh pr \\\r\n  create --fill",
+        'cd $X && gh "pr" create',
+        'env A=1 gh pr "create"',
+        '"$GH" pr create --fill',
+        "${GH:-gh} pr create --fill",
+        '"${GH:-gh}" pr create',
+        "gh -R o/r pr --repo o/r create",
     ):
         assert looks_like_gh_pr_create(cmd) is True, cmd
 
@@ -149,14 +158,21 @@ def test_looks_like_gh_pr_create_catches_pr_after_quote_shifting_heredocs():
 
 
 def test_looks_like_gh_pr_create_linear_on_large_input():
-    # Runs on every Bash call; a backtracking pattern stalled for seconds on
-    # a few KB of gh / pr prose.
+    # Runs on every Bash call; backtracking patterns stalled for seconds on a
+    # few KB of gh / pr prose or of long flag runs.
     para = "Run gh to list each pr; the pr view shows state. Use gh for the pr diff.\n"
-    cmd = "cat > notes.md <<'EOF'\nIt's a log.\n" + para * 2000 + "EOF"
-    start = time.monotonic()
-    assert looks_like_gh_pr_create(cmd) is False
-    assert looks_like_gh_pr_create("gh pr view\n" * 5000) is False
-    assert time.monotonic() - start < 1.0
+    for cmd in (
+        "cat > notes.md <<'EOF'\nIt's a log.\n" + para * 2000 + "EOF",
+        "gh pr view\n" * 5000,
+        "gh " + "-a pr " * 10000,
+        "-a gh -a pr " * 5000,
+        "-a $X -a pr " * 5000,
+        "docker run " + "-e $X " * 10000,
+        "gh pr view " * 10000 + "create",
+    ):
+        start = time.monotonic()
+        assert looks_like_gh_pr_create(cmd) is False
+        assert time.monotonic() - start < 0.5, cmd[:40]
 
 
 # ---- find_gh_pr_create ------------------------------------------------------

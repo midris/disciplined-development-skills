@@ -189,45 +189,39 @@ def is_git_commit(command: str) -> bool:
 # `gh pr new` is gh's alias for `gh pr create`.
 PR_CREATE_SUBCOMMANDS = {"create", "new"}
 
-# Raw-text `gh [flags] pr [flags] create|new`. The gh word may close a
-# substitution or quote (`$(which gh) pr create`) or be a `$VAR` holding it.
-# Each flag may take one non-flag value (`-R org/repo`). Linear: every
-# repetition starts with whitespace plus a fixed character, so a failed
-# attempt can't re-split earlier input.
-_GH_WORD = r"(?:(?<![\w-])gh[)\"'`]*|\$\{?[A-Za-z_]\w*\}?)"
-_GH_FLAGS = r"(?:\s+-\S+(?:\s+[^\s-]\S*)?)*"
-_PR_CREATE_RE = re.compile(
-    _GH_WORD + _GH_FLAGS + r"\s+pr" + _GH_FLAGS
-    + r"\s+(?:" + "|".join(sorted(PR_CREATE_SUBCOMMANDS)) + r")(?![\w-])"
-)
-
-
-def _skip_gh_flags(seg: list[str], j: int) -> int:
-    """Index of the first non-flag word at or after *j*, skipping gh flags
-    (and the value of `-R` / `--repo`)."""
-    while j < len(seg):
-        t = seg[j]
-        if t in GH_GLOBAL_FLAGS_WITH_VALUE:
-            j += 2  # `--repo org/repo` / `-R org/repo`
-        elif t.startswith("-") and len(t) > 1:
-            # `--repo=org/repo`, `-Rorg/repo`, `--paginate`, etc.
-            j += 1
-        else:
-            break
-    return j
+# Every other `gh pr` subcommand and alias (gh 2.103). One of these between
+# `pr` and `create|new` means the PR verb is something else
+# (`gh pr list --search create`). A name missing here only costs a false
+# positive.
+_OTHER_PR_SUBCOMMANDS = {
+    "checkout", "co", "checks", "close", "comment", "diff", "edit", "list",
+    "ls", "lock", "merge", "ready", "reopen", "revert", "review", "status",
+    "unlock", "update", "view",
+}
+_CONTINUATION_RE = re.compile(r"\\\r?\n")
+_COMMAND_SEPARATOR_RE = re.compile(r"[;&|\n]")
+# A word, or the head of a `$VAR` / `${VAR…}` reference (it may hold `gh`).
+_WORD_RE = re.compile(r"\$\{?[A-Za-z_]|\w+")
 
 
 def looks_like_gh_pr_create(command: str) -> bool:
-    """Loose detector: True when the raw text contains `gh`, `pr`, `create`
-    (or `new`) as whole words with only flags between.
+    """Loose detector: True when one command in the raw text has the words
+    `gh` (or a `$VAR`), then `pr`, then `create` or `new`.
 
-    Matches raw text rather than shell tokens on purpose: shlex misreads
-    heredoc bodies and quoted substitutions, so a token-level matcher can hide
-    a real `gh pr create` inside one token and fail open. Raw text catches
-    every wrapper (`env`, `timeout`, `sh -ec '…'`, `"$(cd x && gh pr create)"`,
-    `$(which gh) pr create`) with no shell model. Whole words and the
-    flags-only gap drop the old substring false positives ("through the
-    printer … created", `gh pr view 12 && echo created`).
+    Built by subtraction from a plain `gh … pr … create` substring search,
+    which catches every wrapper (`env`, `timeout`, `sh -ec '…'`,
+    `"$(cd x && gh pr create)"`, `$(which gh) pr create`) with no shell model.
+    It drops only:
+    - matches inside other words ("through the printer … created");
+    - words split across `;`, `&`, `|` or newline
+      (`gh pr view 12 && echo created`);
+    - another `gh pr` subcommand between `pr` and `create|new`
+      (`gh pr list --search create`).
+    A grammar of what a PR command looks like (shell tokens, a flag-aware
+    regex) failed open on forms it didn't model and backtracked on long
+    input. This single word scan is linear and errs toward True. Accepted
+    misses: a command separator or subcommand name inside a flag value
+    between `gh` and `create` (`gh pr -R o/list create`).
 
     Deliberately over-broad: a mention of the whole command — unquoted
     (`echo gh pr create`) or quoted (a commit message, a grep pattern) —
@@ -240,8 +234,21 @@ def looks_like_gh_pr_create(command: str) -> bool:
     `None` is ambiguous (not a PR *or* matched but cwd unresolvable); this
     function distinguishes "clearly not a PR" from "looks like one, block it".
     """
-    # Join backslash-newline continuations so `gh \<newline> pr create` matches.
-    return _PR_CREATE_RE.search(command.replace("\\\n", " ")) is not None
+    text = _CONTINUATION_RE.sub(" ", command)
+    for piece in _COMMAND_SEPARATOR_RE.split(text):
+        seen_gh = after_pr = False
+        for m in _WORD_RE.finditer(piece):
+            w = m.group()
+            if after_pr:
+                if w in PR_CREATE_SUBCOMMANDS:
+                    return True
+                if w in _OTHER_PR_SUBCOMMANDS:
+                    after_pr = False
+            if w == "pr" and seen_gh:
+                after_pr = True
+            elif w == "gh" or w.startswith("$"):
+                seen_gh = True
+    return False
 
 
 def find_gh_pr_create(command: str) -> str | None:
@@ -292,7 +299,16 @@ def find_gh_pr_create(command: str) -> str | None:
 
         # Skip gh global flags between `gh` and the subcommand. Mirrors
         # the GIT_GLOBAL_FLAGS_WITH_VALUE handling in is_git_commit.
-        j = _skip_gh_flags(seg, i + 1)
+        j = i + 1
+        while j < len(seg):
+            t = seg[j]
+            if t in GH_GLOBAL_FLAGS_WITH_VALUE:
+                j += 2  # `--repo org/repo` / `-R org/repo`
+            elif t.startswith("-") and len(t) > 1:
+                # `--repo=org/repo`, `-Rorg/repo`, `--paginate`, etc.
+                j += 1
+            else:
+                break
 
         if j >= len(seg) or seg[j] != "pr":
             continue
