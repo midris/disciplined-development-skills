@@ -110,6 +110,9 @@ def test_looks_like_gh_pr_create_ignores_other_pr_subcommands():
         "gh pr comment 5 --body new",
         "gh pr ls --search create",
         "gh pr view 1 --json title | grep -c new",
+        'gh pr comment 5 --body "see pr 7, new tests"',
+        'gh pr merge 5 --subject "Merge pr #5: new matcher"',
+        'gh pr edit 5 --body "this pr adds new flags"',
     ):
         assert looks_like_gh_pr_create(cmd) is False, cmd
 
@@ -142,6 +145,7 @@ def test_looks_like_gh_pr_create_catches_wrapped_invocations():
         "${GH:-gh} pr create --fill",
         '"${GH:-gh}" pr create',
         "gh -R o/r pr --repo o/r create",
+        "gh pr view $(gh pr create --fill)",
     ):
         assert looks_like_gh_pr_create(cmd) is True, cmd
 

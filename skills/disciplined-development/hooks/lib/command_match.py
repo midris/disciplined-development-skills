@@ -216,12 +216,16 @@ def looks_like_gh_pr_create(command: str) -> bool:
     - words split across `;`, `&`, `|` or newline
       (`gh pr view 12 && echo created`);
     - another `gh pr` subcommand between `pr` and `create|new`
-      (`gh pr list --search create`).
+      (`gh pr list --search create`); that gh then needs to recur before
+      another `pr` counts.
     A grammar of what a PR command looks like (shell tokens, a flag-aware
     regex) failed open on forms it didn't model and backtracked on long
     input. This single word scan is linear and errs toward True. Accepted
-    misses: a command separator or subcommand name inside a flag value
-    between `gh` and `create` (`gh pr -R o/list create`).
+    misses: a `;`/`&`/`|`/newline anywhere between `gh` and `create`, even
+    one that isn't a command separator (`$(which gh 2>&1) pr create`), and a
+    subcommand name inside a flag value (`gh pr -R o/list create`). Accepted
+    false positives beyond whole-command mentions: a `$VAR` followed by the
+    words `pr` and `new` (`echo "$USER opened pr 12 with new tests"`).
 
     Deliberately over-broad: a mention of the whole command — unquoted
     (`echo gh pr create`) or quoted (a commit message, a grep pattern) —
@@ -243,7 +247,9 @@ def looks_like_gh_pr_create(command: str) -> bool:
                 if w in PR_CREATE_SUBCOMMANDS:
                     return True
                 if w in _OTHER_PR_SUBCOMMANDS:
-                    after_pr = False
+                    # This gh's verb is decided; a later `pr … new` in its
+                    # body text needs a fresh `gh` to count.
+                    seen_gh = after_pr = False
             if w == "pr" and seen_gh:
                 after_pr = True
             elif w == "gh" or w.startswith("$"):
