@@ -153,6 +153,8 @@ def test_looks_like_gh_pr_create_catches_wrapped_invocations():
         'URL="$(cd /repo && gh pr create --fill)"',
         'URL="$(timeout 60 gh pr create --fill)"',
         "$(which gh) pr create --fill",
+        "$(which gh 2>&1) pr create --fill",
+        "$(command -v gh &>/dev/null && echo gh) pr create",
         '"$(command -v gh)" pr create --fill',
         "GH=gh; $GH pr create --fill",
         "gh \\\n  pr create --fill",
@@ -264,9 +266,14 @@ def test_find_gh_pr_create_unmodelled_directory_change_is_unresolvable():
         "cd -P /x && gh pr create",
         "cd ~/x && gh pr create",
         "cd /a && bash -c 'cd rel && gh pr create'",
+        # Only `&&` / `;` / newline guarantee the `cd` ran in this shell.
+        "true || cd /other && gh pr create",
+        "cd /other & gh pr create",
+        "cd /other | gh pr create",
     ):
         assert find_gh_pr_create(cmd) is None, cmd
         assert looks_like_gh_pr_create(cmd) is True, cmd
+    assert find_gh_pr_create("cd /a; cd b\ngh pr create") == "/a/b"
     # A `<shell> -c` string with no outer directory change still resolves.
     assert find_gh_pr_create("bash -c 'cd /x && gh pr create'") == "/x"
 

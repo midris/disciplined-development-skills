@@ -190,7 +190,8 @@ def is_git_commit(command: str) -> bool:
 PR_CREATE_SUBCOMMANDS = {"create", "new"}
 
 _CONTINUATION_RE = re.compile(r"\\\r?\n")
-_COMMAND_SEPARATOR_RE = re.compile(r"[;&|\n]")
+# `&` in a redirect (`2>&1`, `&>file`) doesn't separate commands.
+_COMMAND_SEPARATOR_RE = re.compile(r"[;|\n]|(?<![<>])&(?!>)")
 # A word, or the head of a `$VAR` / `${VAR…}` reference (it may hold `gh`).
 _WORD_RE = re.compile(r"\$\{?[A-Za-z_]|\w+")
 # Characters that may sit next to a standalone `pr` token: whitespace,
@@ -258,8 +259,9 @@ def looks_like_gh_pr_create(command: str) -> bool:
     Scans raw text rather than parsing shell, so every wrapper is caught
     (`env`, `timeout`, `sh -ec '…'`, `"$(cd x && gh pr create)"`,
     `$(which gh) pr create`). Only two steps model gh: commands split on
-    `;`, `&`, `|` or newline (`gh pr view 12 && echo created` doesn't
-    match), and the token after `pr`, skipping flags and `-R/--repo`'s value,
+    `;`, `&` (not a redirect's, as in `2>&1`), `|` or newline
+    (`gh pr view 12 && echo created` doesn't match), and the token after
+    `pr`, skipping flags and `-R/--repo`'s value,
     decides the verb (`gh pr list --search create`, or "pr #42: new" in a
     `gh issue create` title, doesn't match). After any other verb, a later
     `pr` needs a fresh `gh`. Whole words only, so "through the printer …
@@ -270,8 +272,8 @@ def looks_like_gh_pr_create(command: str) -> bool:
     `_pr_verb` gives each token shape after `pr` one role; a verb it can't
     know (a substitution, a `-R` value spanning tokens, past the window)
     counts as `create`. Accepted misses: a `;`/`&`/`|`/newline between `gh`
-    and the verb, even one that isn't a command separator
-    (`$(which gh 2>&1) pr create`); a verb held only in a variable
+    and the verb that isn't a top-level separator
+    (`$(which gh | head -1) pr create`); a verb held only in a variable
     (`gh pr $VERB`), which is skipped like a flag; and a spaced redirect
     before the verb (`gh pr > out create`).
 
@@ -327,23 +329,27 @@ _DIR_CHANGERS = {"cd", "pushd", "popd"}
 _GROUPING = {"(", ")", "{", "}"}
 
 
-def _resolve_cwd(prior: list[list[str]]) -> str | None:
-    """The cwd a command runs in after the *prior* segments, or None when a
-    directory change there isn't modelled.
+def _resolve_cwd(prior: list[list[str]], seps: set[str]) -> str | None:
+    """The cwd a command runs in after the *prior* segments, joined by the
+    separators *seps*, or None when a directory change there isn't modelled.
 
-    Only a leading `cd <explicit path>` is: an absolute path resets the cwd,
-    a relative one joins it (the process cwd before any `cd`), as the shell
-    does. Everything else returns None so the gate fails closed rather than
-    reviewing the wrong tree: `pushd`/`popd`; a `cd` with grouping in play
-    (`(cd x && …)`, `{ cd x; }` — subshell scoping); a `cd` that isn't its
-    segment's first word (`then cd x`); `cd` with no path, an option, `-`
-    or `~`; an unexpandable target (`$`/backtick), unless a later absolute
-    `cd` resets it.
+    Only a leading `cd <explicit path>` chained by `&&` / `;` / newline is:
+    an absolute path resets the cwd, a relative one joins it (the process cwd
+    before any `cd`), as the shell does. Everything else returns None so the
+    gate fails closed rather than reviewing the wrong tree: `pushd`/`popd`;
+    a `cd` that may not run or not persist (`||`, `&`, `|`, or grouping —
+    `(cd x && …)`, `{ cd x; }`); a `cd` that isn't its segment's first word
+    (`then cd x`); `cd` with no path, an option, `-` or `~`; an unexpandable
+    target (`$`/backtick), unless a later absolute `cd` resets it.
     """
     tokens = {t for seg in prior for t in seg}
     if not _DIR_CHANGERS & tokens:
         return str(Path.cwd())
-    if {"pushd", "popd"} & tokens or _GROUPING & tokens:
+    if (
+        {"pushd", "popd"} & tokens
+        or _GROUPING & tokens
+        or seps - {"&&", ";"}
+    ):
         return None
     cwd: str | None = str(Path.cwd())
     for seg in prior:
@@ -359,6 +365,21 @@ def _resolve_cwd(prior: list[list[str]]) -> str | None:
         elif cwd is not None:
             cwd = str(Path(cwd) / path)
     return cwd
+
+
+def _separators_before(tokens: list[str], prior: list[list[str]]) -> set[str]:
+    """The separator tokens that come before the segment following *prior*
+    (built from *tokens* by `split_segments`)."""
+    words = sum(len(seg) for seg in prior)
+    seps: set[str] = set()
+    for t in tokens:
+        if t in SEPARATORS:
+            seps.add(t)
+        elif words == 0:
+            break
+        else:
+            words -= 1
+    return seps
 
 
 def find_gh_pr_create(command: str) -> str | None:
@@ -415,7 +436,7 @@ def find_gh_pr_create(command: str) -> str | None:
         # Matched. A None cwd (unresolvable) makes the pre-PR gate fail LOUD
         # rather than failing open or reviewing the wrong tree; the caller
         # uses `looks_like_gh_pr_create` to tell it from the "not a PR" None.
-        return _resolve_cwd(segs[:seg_idx])
+        return _resolve_cwd(segs[:seg_idx], _separators_before(tokens, segs[:seg_idx]))
 
     return None
 
