@@ -189,21 +189,16 @@ def is_git_commit(command: str) -> bool:
 # `gh pr new` is gh's alias for `gh pr create`.
 PR_CREATE_SUBCOMMANDS = {"create", "new"}
 
-# Whole-word `gh … pr … create|new`, for commands tokenize() can't parse.
-_LOOSE_PR_CREATE_RE = re.compile(
-    r"(?<![\w-])gh(?![\w-]).*?(?<![\w-])pr(?![\w-]).*?"
-    r"(?<![\w-])(?:create|new)(?![\w-])",
-    re.DOTALL,
-)
-
-# A `$(…)` / backtick substitution inside a quoted token that opens with
-# `[VAR=x …] gh [flags] pr [flags] create|new` — e.g. `URL="$(gh pr create)"`.
-# Anchored at the opener so a heredoc body (`"$(cat <<'EOF' … gh pr create …")`)
-# doesn't match.
-_FLAGS = r"(?:\s+-\S+(?:\s+[^\s-]\S*)?)*"
-_SUBST_PR_CREATE_RE = re.compile(
-    r"(?:\$\(|`)\s*(?:[A-Za-z_]\w*=\S*\s+)*(?:\S*/)?gh" + _FLAGS
-    + r"\s+pr" + _FLAGS + r"\s+(?:create|new)(?![\w-])"
+# Raw-text `gh [flags] pr [flags] create|new`. The gh word may close a
+# substitution or quote (`$(which gh) pr create`) or be a `$VAR` holding it.
+# Each flag may take one non-flag value (`-R org/repo`). Linear: every
+# repetition starts with whitespace plus a fixed character, so a failed
+# attempt can't re-split earlier input.
+_GH_WORD = r"(?:(?<![\w-])gh[)\"'`]*|\$\{?[A-Za-z_]\w*\}?)"
+_GH_FLAGS = r"(?:\s+-\S+(?:\s+[^\s-]\S*)?)*"
+_PR_CREATE_RE = re.compile(
+    _GH_WORD + _GH_FLAGS + r"\s+pr" + _GH_FLAGS
+    + r"\s+(?:" + "|".join(sorted(PR_CREATE_SUBCOMMANDS)) + r")(?![\w-])"
 )
 
 
@@ -222,59 +217,31 @@ def _skip_gh_flags(seg: list[str], j: int) -> int:
     return j
 
 
-def _seg_mentions_pr_create(seg: list[str]) -> bool:
-    """True when a `gh` word anywhere in the segment is followed by `pr` then
-    `create|new` (flags allowed between), or a `<shell> -c` string or quoted
-    substitution within the segment does the same."""
-    words = [t.strip("`") for t in seg]
-    for j, w in enumerate(words):
-        if _SUBST_PR_CREATE_RE.search(seg[j]):
-            return True
-        if w in SHELLS and j + 2 < len(words) and words[j + 1] in ("-c", "-lc", "-cl"):
-            if looks_like_gh_pr_create(seg[j + 2]):
-                return True
-        if os.path.basename(w) != "gh":
-            continue
-        k = _skip_gh_flags(words, j + 1)
-        if k < len(words) and words[k] == "pr":
-            k = _skip_gh_flags(words, k + 1)
-            if k < len(words) and words[k] in PR_CREATE_SUBCOMMANDS:
-                return True
-    return False
-
-
 def looks_like_gh_pr_create(command: str) -> bool:
-    """Loose detector: True when a `gh` word anywhere in a command segment is
-    followed by `pr` then `create` (or `new`), with only flags between.
+    """Loose detector: True when the raw text contains `gh`, `pr`, `create`
+    (or `new`) as whole words with only flags between.
 
-    Catches forms `find_gh_pr_create` doesn't resolve: wrappers (`env`,
-    `timeout`), flags between `pr` and `create`, substitutions (including a
-    quoted `"$(gh pr create)"`), `<shell> -c` strings and unexpandable `cd`
-    targets. Quoted multi-word text is a single
-    token, so a commit message or grep pattern naming `gh pr create` doesn't
-    match; neither does `gh pr list --search create`. When `tokenize()` fails
-    (e.g. an unmatched quote), falls back to a whole-word `gh … pr …
-    create|new` regex over the raw text.
+    Matches raw text rather than shell tokens on purpose: shlex misreads
+    heredoc bodies and quoted substitutions, so a token-level matcher can hide
+    a real `gh pr create` inside one token and fail open. Raw text catches
+    every wrapper (`env`, `timeout`, `sh -ec '…'`, `"$(cd x && gh pr create)"`,
+    `$(which gh) pr create`) with no shell model. Whole words and the
+    flags-only gap drop the old substring false positives ("through the
+    printer … created", `gh pr view 12 && echo created`).
 
-    Deliberately over-broad: an unquoted mention (`echo gh pr create`) returns
-    True. This is **accepted, documented behavior** — a false positive is a
-    human-overridable block (the model can rewrite or the operator can set
-    DD_SKIP_PR_REVIEW=1); a false negative is a fail-open hole at the only hard
-    gate in the hook stack. Bias toward True. Accepted miss: a quoted string
-    run by anything other than `<shell> -c` (`eval "gh pr create"`,
-    `ssh host 'gh pr create'`) — agents don't open PRs that way, and
-    recognising every such wrapper is unbounded parsing.
+    Deliberately over-broad: a mention of the whole command — unquoted
+    (`echo gh pr create`) or quoted (a commit message, a grep pattern) —
+    returns True. This is **accepted, documented behavior** — a false
+    positive is a human-overridable block (the model can rewrite or the
+    operator can set DD_SKIP_PR_REVIEW=1); a false negative is a fail-open
+    hole at the only hard gate in the hook stack. Bias toward True.
 
     Use this as the fail-closed net when `find_gh_pr_create` returns `None`:
     `None` is ambiguous (not a PR *or* matched but cwd unresolvable); this
     function distinguishes "clearly not a PR" from "looks like one, block it".
     """
-    if not command:
-        return False
-    tokens = tokenize(command)
-    if tokens is None:
-        return _LOOSE_PR_CREATE_RE.search(command) is not None
-    return any(_seg_mentions_pr_create(seg) for seg in split_segments(tokens))
+    # Join backslash-newline continuations so `gh \<newline> pr create` matches.
+    return _PR_CREATE_RE.search(command.replace("\\\n", " ")) is not None
 
 
 def find_gh_pr_create(command: str) -> str | None:

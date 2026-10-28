@@ -135,11 +135,13 @@ def main() -> int:
                 _log_unparseable(repo)
                 logger.emit("block", reason="unresolvable_cwd")
                 print(
-                    "[pre-pr] BLOCKED: couldn't resolve the target directory for a "
-                    "`gh pr create` (e.g. a `cd` to an unexpandable path or a "
-                    "hard-to-parse command). Re-run with an explicit or absolute "
-                    "path, or set DD_SKIP_PR_REVIEW=1 in the launching shell "
-                    "to bypass.",
+                    "[pre-pr] BLOCKED: this looks like `gh pr create`, but its "
+                    "target directory couldn't be resolved (e.g. a `cd` to an "
+                    "unexpandable path, a wrapper, or a hard-to-parse command). "
+                    "Re-run it as a plain `[cd <absolute-path> && ]gh pr create "
+                    "…`. If the command only mentions `gh pr create` (a commit "
+                    "message, a grep pattern), reword the mention. Or set "
+                    "DD_SKIP_PR_REVIEW=1 in the launching shell to bypass.",
                     file=sys.stderr,
                 )
                 return 2

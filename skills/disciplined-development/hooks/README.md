@@ -100,9 +100,10 @@ python3 external_review.py [--cwd <path>]
 
 `pre_pr_review.py` is the hook wrapper: it detects `gh pr create` (or its
 alias `gh pr new`), resolves the cwd, and delegates `external_review.py --cwd <cwd>`.
-Detection works on shell words, so a quoted mention (a commit message, a grep
-pattern) doesn't trigger the gate; the matcher docstrings in
-`lib/command_match.py` list the accepted edges. Any non-zero result
+Detection needs `gh`, `pr`, `create|new` as whole words with only flags
+between, so "through the printer … created" or `gh pr view` doesn't trigger
+the gate; any mention of the whole command does, quoted or not (fail-closed).
+The matcher docstrings in `lib/command_match.py` list the accepted edges. Any non-zero result
 from the delegate maps to exit 2 (Claude Code blocks PreToolUse only on exit 2).
 Delegate stdout+stderr are re-emitted so findings reach the model.
 `DD_SKIP_PR_REVIEW=1` is the human bypass when the cause is an outage they accept.

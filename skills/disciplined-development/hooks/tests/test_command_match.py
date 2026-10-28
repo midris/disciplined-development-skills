@@ -1,6 +1,7 @@
 """Tests for hooks.lib.command_match — the slim gh/git matchers (A5)."""
 
 import os
+import time
 
 from hooks.lib.command_match import (
     commit_landed,
@@ -69,11 +70,12 @@ def test_looks_like_gh_pr_create_non_pr_false():
 
 
 def test_looks_like_gh_pr_create_over_broad_mention_accepted():
-    # `echo gh pr create` returns True — accepted, documented over-broad behavior.
-    # The function is a loose net for the pre-PR gate's fail-closed path; a
-    # false positive is a human-overridable block, a false negative is a
-    # fail-open hole.
+    # A mention of the whole command returns True, quoted or not — accepted,
+    # documented over-broad behavior. The function is a loose net for the
+    # pre-PR gate's fail-closed path; a false positive is a human-overridable
+    # block, a false negative is a fail-open hole.
     assert looks_like_gh_pr_create("echo gh pr create") is True
+    assert looks_like_gh_pr_create('git commit -m "fix gh pr create"') is True
 
 
 def test_looks_like_gh_pr_create_hard_to_parse_compound():
@@ -99,19 +101,15 @@ def test_looks_like_gh_pr_create_ignores_partial_words():
     ) is False
 
 
-def test_looks_like_gh_pr_create_ignores_quoted_mentions():
+def test_looks_like_gh_pr_create_ignores_other_pr_subcommands():
     for cmd in (
-        'git commit -m "fix: tighten gh pr create detection"',
-        'grep -rn "gh pr create" skills/',
+        'gh pr view 12 && echo "created"',
+        "gh pr view 12\necho created",
         'gh pr list --search "create"',
-        "git commit -m \"$(cat <<'EOF'\nfix: gh pr create matcher\n\ngh pr create now ignores quotes\nEOF\n)\"",
+        "gh pr list --search create",
+        "gh pr comment 5 --body new",
     ):
         assert looks_like_gh_pr_create(cmd) is False, cmd
-
-
-def test_looks_like_gh_pr_create_ignores_words_in_separate_commands():
-    assert looks_like_gh_pr_create('gh pr view 12 && echo "created"') is False
-    assert looks_like_gh_pr_create("gh pr view 12\necho created") is False
 
 
 def test_looks_like_gh_pr_create_catches_wrapped_invocations():
@@ -119,15 +117,46 @@ def test_looks_like_gh_pr_create_catches_wrapped_invocations():
         "env GH_TOKEN=x gh pr create",
         "timeout 60 gh pr create",
         "gh pr -R o/r create",
+        "gh --repo o/r pr new --fill",
         "/usr/local/bin/gh pr create",
         "echo `gh pr create`",
         "echo $(gh pr create)",
         'bash -c "cd $X && gh pr create"',
+        "sh -ec 'gh pr create --fill'",
+        "bash -euo pipefail -c 'gh pr create --fill'",
+        "/opt/homebrew/bin/bash -c 'gh pr create --fill'",
         "cd $X && gh pr new",
         'URL="$(gh -R o/r pr create --fill)"',
-        'echo "Created: $(gh pr create --fill)"',
+        'URL="$(cd /repo && gh pr create --fill)"',
+        'URL="$(timeout 60 gh pr create --fill)"',
+        "$(which gh) pr create --fill",
+        '"$(command -v gh)" pr create --fill',
+        "GH=gh; $GH pr create --fill",
+        "gh \\\n  pr create --fill",
     ):
         assert looks_like_gh_pr_create(cmd) is True, cmd
+
+
+def test_looks_like_gh_pr_create_catches_pr_after_quote_shifting_heredocs():
+    # Each heredoc body has an odd quote count; shlex (unlike bash) counts
+    # them, so the PR call would land inside one token if we tokenized.
+    cmd = (
+        "git commit -m \"$(cat <<'EOF'\nSupport 27\" displays\nEOF\n)\" && "
+        'git push -u origin HEAD && gh pr create --title "Fix" '
+        "--body \"$(cat <<'EOF'\nAdds 27\" support\nEOF\n)\""
+    )
+    assert looks_like_gh_pr_create(cmd) is True
+
+
+def test_looks_like_gh_pr_create_linear_on_large_input():
+    # Runs on every Bash call; a backtracking pattern stalled for seconds on
+    # a few KB of gh / pr prose.
+    para = "Run gh to list each pr; the pr view shows state. Use gh for the pr diff.\n"
+    cmd = "cat > notes.md <<'EOF'\nIt's a log.\n" + para * 2000 + "EOF"
+    start = time.monotonic()
+    assert looks_like_gh_pr_create(cmd) is False
+    assert looks_like_gh_pr_create("gh pr view\n" * 5000) is False
+    assert time.monotonic() - start < 1.0
 
 
 # ---- find_gh_pr_create ------------------------------------------------------
