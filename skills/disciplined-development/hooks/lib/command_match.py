@@ -308,12 +308,27 @@ def looks_like_gh_pr_create(command: str) -> bool:
     return False
 
 
+def _skip_gh_flags(seg: list[str], j: int) -> int:
+    """Index of the first non-flag token at or after *j*, skipping gh flags
+    and the value of `-R` / `--repo`."""
+    while j < len(seg):
+        t = seg[j]
+        if t in GH_GLOBAL_FLAGS_WITH_VALUE:
+            j += 2  # `--repo org/repo` / `-R org/repo`
+        elif t.startswith("-") and len(t) > 1:
+            # `--repo=org/repo`, `-Rorg/repo`, `--paginate`, etc.
+            j += 1
+        else:
+            break
+    return j
+
+
 def find_gh_pr_create(command: str) -> str | None:
     """Locate a `gh pr create` (or `gh pr new`) invocation and return its resolved cwd.
 
-    `cwd` is extracted from chained `cd <path>` segments (relative paths
-    resolved against the process cwd); with no `cd`, `cwd` is the process
-    working directory (`os.getcwd()`).
+    `cwd` is extracted from chained `cd <path>` segments (a relative path
+    joins the cwd so far, starting from the process cwd); with no `cd`,
+    `cwd` is the process working directory (`os.getcwd()`).
 
     Return shape:
       * `None`  — not a `gh pr create|new` command, **or** matched but the
@@ -354,33 +369,18 @@ def find_gh_pr_create(command: str) -> str | None:
         if i >= len(seg) or seg[i] != "gh":
             continue
 
-        # Skip gh global flags between `gh` and the subcommand. Mirrors
-        # the GIT_GLOBAL_FLAGS_WITH_VALUE handling in is_git_commit.
-        j = i + 1
-        while j < len(seg):
-            t = seg[j]
-            if t in GH_GLOBAL_FLAGS_WITH_VALUE:
-                j += 2  # `--repo org/repo` / `-R org/repo`
-            elif t.startswith("-") and len(t) > 1:
-                # `--repo=org/repo`, `-Rorg/repo`, `--paginate`, etc.
-                j += 1
-            else:
-                break
-
+        # Skip gh flags between `gh` and `pr` (global) and between `pr` and
+        # the verb (`-R/--repo` is a `gh pr`-level flag).
+        j = _skip_gh_flags(seg, i + 1)
         if j >= len(seg) or seg[j] != "pr":
             continue
-        j += 1
+        j = _skip_gh_flags(seg, j + 1)
         if j >= len(seg) or seg[j] not in PR_CREATE_SUBCOMMANDS:
             continue
 
-        # Chained `cd` resolution: walks every preceding segment, so the
-        # LAST `cd` in the chain wins (each iteration overwrites `cwd`).
-        # A relative `cd` is anchored to the process cwd, not to a prior
-        # `cd` — so `cd /a && cd b && gh pr create` resolves to
-        # `<process_cwd>/b`, not `/a/b`. The single-`cd` form (`cd /repo
-        # && gh pr create`) is the only one we see in practice from the
-        # `gh pr create` helper; chained or relative-after-absolute
-        # forms are an accepted edge with this last-cd-wins contract.
+        # Chained `cd` resolution, as the shell does it: walk every
+        # preceding segment; an absolute `cd` resets the cwd, a relative
+        # one joins the cwd so far (the process cwd before any `cd`).
         cwd: str | None = None
         cwd_unresolvable = False
         for prev_seg in segs[:seg_idx]:
@@ -388,16 +388,15 @@ def find_gh_pr_create(command: str) -> str | None:
                 path = prev_seg[1]
                 if "$" in path or "`" in path:
                     # Unexpandable target (shell var / substitution). Mark the
-                    # cwd unresolvable; a LATER resolvable `cd` clears it
-                    # (last-cd-wins), matching the resolvable branches below.
+                    # cwd unresolvable; a later absolute `cd` clears it.
                     cwd_unresolvable = True
                     cwd = None
                 elif os.path.isabs(path):
                     cwd = path
                     cwd_unresolvable = False
-                else:
-                    cwd = str(Path.cwd() / path)
-                    cwd_unresolvable = False
+                elif not cwd_unresolvable:
+                    # Relative to an unresolvable base stays unresolvable.
+                    cwd = str(Path(cwd or Path.cwd()) / path)
 
         if cwd_unresolvable:
             # Matched `gh pr create`, but the effective cwd can't be resolved.

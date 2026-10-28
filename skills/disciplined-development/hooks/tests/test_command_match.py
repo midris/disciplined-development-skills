@@ -234,21 +234,24 @@ def test_find_gh_pr_create_chained_cd():
     assert cwd == "/other"
 
 
-def test_find_gh_pr_create_chained_cd_last_wins():
-    """Multiple chained `cd`s: the LAST one wins, and a relative `cd` is
-    anchored to the process cwd (not to the prior absolute `cd`).
+def test_find_gh_pr_create_chained_cd_composes_like_the_shell():
+    """Chained `cd`s resolve the way the shell does: an absolute `cd` resets,
+    a relative one is joined to the cwd so far. `pre_pr_review.py` forwards
+    this cwd to `external_review.py`, so a wrong join reviews the wrong tree."""
+    assert find_gh_pr_create("cd /a && cd /b && gh pr create") == "/b"
+    assert find_gh_pr_create("cd /a && cd subdir && gh pr create") == "/a/subdir"
+    assert find_gh_pr_create("cd sub && gh pr create") == os.path.join(
+        os.getcwd(), "sub"
+    )
+    # Relative to an unknown base stays unknown; an absolute `cd` recovers.
+    assert find_gh_pr_create("cd $X && cd sub && gh pr create") is None
+    assert find_gh_pr_create("cd $X && cd /b && gh pr create") == "/b"
 
-    This pins the accepted-edge contract (see the production comment in
-    command_match.py): the resolver does not compose relative `cd`s. A
-    future fix that correctly resolves `cd subdir` against the prior
-    absolute `cd` must update this test in lockstep. E2's gh-wrapper
-    forwards this cwd to `external_review.py` via `pre_pr_review.py`."""
-    # Last `cd` is absolute → it wins outright.
-    cwd = find_gh_pr_create("cd /a && cd /b && gh pr create")
-    assert cwd == "/b"
-    # Last `cd` is relative → anchored to process cwd, NOT to `/a`.
-    cwd = find_gh_pr_create("cd /a && cd subdir && gh pr create")
-    assert cwd == os.path.join(os.getcwd(), "subdir")
+
+def test_find_gh_pr_create_skips_flags_between_pr_and_verb():
+    # `-R/--repo` is a `gh pr`-level flag (`gh pr create --help`).
+    assert find_gh_pr_create("cd /r && gh pr -R o/r create --fill") == "/r"
+    assert find_gh_pr_create("cd /r && gh pr --repo=o/r new") == "/r"
 
 
 def test_find_gh_pr_create_global_flag_skipped():
