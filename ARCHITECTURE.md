@@ -42,7 +42,7 @@ flowchart TB
         LIB["lib/<br/>state · logging · severity · runner · …"]
         TOOLS --> LIB
     end
-    HARD ==>|"gh pr create → gate"| TOOLS
+    HARD ==>|"gh pr create/new → gate"| TOOLS
     AR -.->|"log each round"| TOOLS
     SOFT -.->|"read state"| LIB
     HARD -.->|"read state"| LIB
@@ -233,7 +233,7 @@ sequenceDiagram
     participant C as codex
     participant L as log + state
     M->>H: Bash "gh pr create …"
-    H->>H: detect gh pr create (cwd only)
+    H->>H: detect gh pr create/new (cwd only)
     alt PR-shaped but unparseable
         H->>L: log ERROR (unparseable)
         H-->>M: BLOCK — override via DD_SKIP_PR_REVIEW

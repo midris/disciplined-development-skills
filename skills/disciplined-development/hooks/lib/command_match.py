@@ -189,43 +189,61 @@ def is_git_commit(command: str) -> bool:
 # `gh pr new` is gh's alias for `gh pr create`.
 PR_CREATE_SUBCOMMANDS = {"create", "new"}
 
-# Every other `gh pr` subcommand and alias (gh 2.103). One of these between
-# `pr` and `create|new` means the PR verb is something else
-# (`gh pr list --search create`). A name missing here only costs a false
-# positive.
-_OTHER_PR_SUBCOMMANDS = {
-    "checkout", "co", "checks", "close", "comment", "diff", "edit", "list",
-    "ls", "lock", "merge", "ready", "reopen", "revert", "review", "status",
-    "unlock", "update", "view",
-}
 _CONTINUATION_RE = re.compile(r"\\\r?\n")
 _COMMAND_SEPARATOR_RE = re.compile(r"[;&|\n]")
 # A word, or the head of a `$VAR` / `${VAR…}` reference (it may hold `gh`).
 _WORD_RE = re.compile(r"\$\{?[A-Za-z_]|\w+")
+# Characters that may sit next to a standalone `pr` token: whitespace,
+# quotes and substitution brackets (`gh "pr" create`, `$(gh pr create)`).
+_PR_EDGE_CHARS = set(" \t\r\"'`()")
+# How far past `pr` to look for its verb. gh's only `pr`-level flag is
+# `-R/--repo <value>`, so the verb sits within a few dozen characters.
+_VERB_WINDOW = 200
+
+
+def _pr_verb(piece: str, start: int) -> str | None:
+    """The first non-flag token after *start*, quotes stripped: `""` when the
+    command ends first, `None` when the window ends first (verb unknown)."""
+    window = piece[start:start + _VERB_WINDOW]
+    tokens = window.split()
+    cut = start + _VERB_WINDOW < len(piece)
+    if cut:
+        tokens = tokens[:-1]  # may be cut mid-token
+    skip_value = False
+    for tok in tokens:
+        t = tok.strip("\"'`()")
+        if not t:
+            continue
+        if skip_value:
+            skip_value = False
+        elif t.startswith("-"):
+            skip_value = t in GH_GLOBAL_FLAGS_WITH_VALUE
+        else:
+            return t
+    return None if cut else ""
 
 
 def looks_like_gh_pr_create(command: str) -> bool:
-    """Loose detector: True when one command in the raw text has the words
-    `gh` (or a `$VAR`), then `pr`, then `create` or `new`.
+    """Loose detector: True when one command in the raw text has the word
+    `gh` (or a `$VAR`), then a `pr` token whose first non-flag token is
+    `create` or `new`.
 
-    Built by subtraction from a plain `gh … pr … create` substring search,
-    which catches every wrapper (`env`, `timeout`, `sh -ec '…'`,
-    `"$(cd x && gh pr create)"`, `$(which gh) pr create`) with no shell model.
-    It drops only:
-    - matches inside other words ("through the printer … created");
-    - words split across `;`, `&`, `|` or newline
-      (`gh pr view 12 && echo created`);
-    - another `gh pr` subcommand between `pr` and `create|new`
-      (`gh pr list --search create`); that gh then needs to recur before
-      another `pr` counts.
-    A grammar of what a PR command looks like (shell tokens, a flag-aware
-    regex) failed open on forms it didn't model and backtracked on long
-    input. This single word scan is linear and errs toward True. Accepted
-    misses: a `;`/`&`/`|`/newline anywhere between `gh` and `create`, even
+    Scans raw text rather than parsing shell, so every wrapper is caught
+    (`env`, `timeout`, `sh -ec '…'`, `"$(cd x && gh pr create)"`,
+    `$(which gh) pr create`). Only two steps model gh: commands split on
+    `;`, `&`, `|` or newline (`gh pr view 12 && echo created` doesn't
+    match), and the token after `pr`, skipping flags and `-R/--repo`'s value,
+    decides the verb (`gh pr list --search create`, or "pr #42: new" in a
+    `gh issue create` title, doesn't match). After any other verb, a later
+    `pr` needs a fresh `gh`. Whole words only, so "through the printer …
+    created" doesn't match. Linear: one pass plus a fixed window per `pr`.
+
+    Shell tokenizing and a flag-aware regex both failed open on forms they
+    didn't model and backtracked on long input; this scan errs toward True.
+    Accepted misses: a `;`/`&`/`|`/newline between `gh` and the verb, even
     one that isn't a command separator (`$(which gh 2>&1) pr create`), and a
-    subcommand name inside a flag value (`gh pr -R o/list create`). Accepted
-    false positives beyond whole-command mentions: a `$VAR` followed by the
-    words `pr` and `new` (`echo "$USER opened pr 12 with new tests"`).
+    verb produced by a substitution (`gh pr $(echo create)`). A verb beyond
+    the window counts as `create`.
 
     Deliberately over-broad: a mention of the whole command — unquoted
     (`echo gh pr create`) or quoted (a commit message, a grep pattern) —
@@ -240,32 +258,35 @@ def looks_like_gh_pr_create(command: str) -> bool:
     """
     text = _CONTINUATION_RE.sub(" ", command)
     for piece in _COMMAND_SEPARATOR_RE.split(text):
-        seen_gh = after_pr = False
+        seen_gh = False
         for m in _WORD_RE.finditer(piece):
             w = m.group()
-            if after_pr:
-                if w in PR_CREATE_SUBCOMMANDS:
-                    return True
-                if w in _OTHER_PR_SUBCOMMANDS:
-                    # This gh's verb is decided; a later `pr … new` in its
-                    # body text needs a fresh `gh` to count.
-                    seen_gh = after_pr = False
-            if w == "pr" and seen_gh:
-                after_pr = True
-            elif w == "gh" or w.startswith("$"):
+            if w == "gh" or w.startswith("$"):
                 seen_gh = True
+            elif (
+                w == "pr"
+                and seen_gh
+                and (m.start() == 0 or piece[m.start() - 1] in _PR_EDGE_CHARS)
+                and (m.end() == len(piece) or piece[m.end()] in _PR_EDGE_CHARS)
+            ):
+                verb = _pr_verb(piece, m.end())
+                if verb is None or verb in PR_CREATE_SUBCOMMANDS:
+                    return True
+                # This gh's verb is something else; a `pr` in its
+                # arguments needs a fresh `gh` to count.
+                seen_gh = False
     return False
 
 
 def find_gh_pr_create(command: str) -> str | None:
-    """Locate a `gh pr create` invocation and return its resolved cwd.
+    """Locate a `gh pr create` (or `gh pr new`) invocation and return its resolved cwd.
 
     `cwd` is extracted from chained `cd <path>` segments (relative paths
     resolved against the process cwd); with no `cd`, `cwd` is the process
     working directory (`os.getcwd()`).
 
     Return shape:
-      * `None`  — not a `gh pr create` command, **or** matched but the
+      * `None`  — not a `gh pr create|new` command, **or** matched but the
                   effective `cd` target is unexpandable (`$`/backtick) so
                   cwd can't be resolved (caller uses `looks_like_gh_pr_create`
                   to distinguish the two `None` cases and fail closed).

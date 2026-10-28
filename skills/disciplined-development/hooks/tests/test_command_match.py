@@ -101,8 +101,17 @@ def test_looks_like_gh_pr_create_ignores_partial_words():
     ) is False
 
 
-def test_looks_like_gh_pr_create_ignores_other_pr_subcommands():
+def test_looks_like_gh_pr_create_ignores_other_verbs_after_pr():
     for cmd in (
+        "gh pr",
+        "gh pr --help",
+        'gh issue create --title "Follow-up from pr #42: new edge case"',
+        'gh release create v1.2 --notes "Merged pr #3 with new matcher"',
+        'gh api repos/o/r/issues -f title="pr gate: new alias"',
+        'gh issue comment 5 --body "the pr adds new tests"',
+        'git -C "$REPO" commit -m "pr gate: create an ERROR row on block"',
+        'echo "$USER opened pr 12 with new tests"',
+        "git push origin $BR:pr/new-api",
         'gh pr view 12 && echo "created"',
         "gh pr view 12\necho created",
         'gh pr list --search "create"',
@@ -146,6 +155,11 @@ def test_looks_like_gh_pr_create_catches_wrapped_invocations():
         '"${GH:-gh}" pr create',
         "gh -R o/r pr --repo o/r create",
         "gh pr view $(gh pr create --fill)",
+        "gh pr -R acme-co/web create --fill",
+        "gh pr --repo ghe.acme.co/org/app create --fill",
+        "gh pr -R o/list create",
+        # Verb past the scan window can't be ruled out: block.
+        "gh pr " + "--x " * 100 + "create",
     ):
         assert looks_like_gh_pr_create(cmd) is True, cmd
 
@@ -173,6 +187,8 @@ def test_looks_like_gh_pr_create_linear_on_large_input():
         "-a $X -a pr " * 5000,
         "docker run " + "-e $X " * 10000,
         "gh pr view " * 10000 + "create",
+        "gh " + "-pr" * 100000,
+        "$a pr view " * 50000,
     ):
         start = time.monotonic()
         assert looks_like_gh_pr_create(cmd) is False

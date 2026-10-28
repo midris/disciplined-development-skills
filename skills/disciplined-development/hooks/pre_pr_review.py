@@ -14,7 +14,7 @@ Paths:
 - PR-shaped + unparseable cwd (e.g. ``cd $VAR && gh pr create``) → log one
   ``reviews.jsonl`` ERROR row (decision=ERROR, reason=unparseable) then block
   (exit 2); the model is told to rewrite the command or set the bypass.
-- Not a ``gh pr create`` command → exit 0 (all other Bash through).
+- Not a ``gh pr create`` / ``gh pr new`` command → exit 0 (all other Bash through).
 - ``DD_SKIP_PR_REVIEW=1`` in the launching shell → exit 0 (bypass for automated
   workflows that review separately).
 """
