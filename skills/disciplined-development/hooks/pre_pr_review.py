@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """pre_pr_review.py — PreToolUse Bash gate: the only hard block.
 
-Detects ``gh pr create``, resolves the target cwd, and delegates to
-``external_review.py`` (whole-repo, verdict-driven, fail-closed).  No base
-resolution and no ``DD_HARD_BLOCK``; the verdict is entirely the external gate's
-responsibility.
+Detects ``gh pr create`` (or its alias ``gh pr new``), resolves the target
+cwd, and delegates to ``external_review.py`` (whole-repo, verdict-driven,
+fail-closed).  No base resolution and no ``DD_HARD_BLOCK``; the verdict is
+entirely the external gate's responsibility.
 
 Paths:
 - PR-shaped + parseable cwd → delegate to ``external_review.py --cwd <cwd>``;

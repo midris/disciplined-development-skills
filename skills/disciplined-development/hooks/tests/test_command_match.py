@@ -88,6 +88,48 @@ def test_looks_like_gh_pr_create_hard_to_parse_compound():
     assert looks_like_gh_pr_create(cmd) is True  # loose net catches it
 
 
+def test_looks_like_gh_pr_create_ignores_partial_words():
+    # "through" / "printer" / "created" contain gh / pr / create.
+    assert looks_like_gh_pr_create(
+        'git commit -m "Route the check through the printer so it is created once"'
+    ) is False
+    # Same words in a command tokenize() can't parse (unmatched quote).
+    assert looks_like_gh_pr_create(
+        "git commit -m 'it's through the printer, created'"
+    ) is False
+
+
+def test_looks_like_gh_pr_create_ignores_quoted_mentions():
+    for cmd in (
+        'git commit -m "fix: tighten gh pr create detection"',
+        'grep -rn "gh pr create" skills/',
+        'gh pr list --search "create"',
+        "git commit -m \"$(cat <<'EOF'\nfix: gh pr create matcher\n\ngh pr create now ignores quotes\nEOF\n)\"",
+    ):
+        assert looks_like_gh_pr_create(cmd) is False, cmd
+
+
+def test_looks_like_gh_pr_create_ignores_words_in_separate_commands():
+    assert looks_like_gh_pr_create('gh pr view 12 && echo "created"') is False
+    assert looks_like_gh_pr_create("gh pr view 12\necho created") is False
+
+
+def test_looks_like_gh_pr_create_catches_wrapped_invocations():
+    for cmd in (
+        "env GH_TOKEN=x gh pr create",
+        "timeout 60 gh pr create",
+        "gh pr -R o/r create",
+        "/usr/local/bin/gh pr create",
+        "echo `gh pr create`",
+        "echo $(gh pr create)",
+        'bash -c "cd $X && gh pr create"',
+        "cd $X && gh pr new",
+        'URL="$(gh -R o/r pr create --fill)"',
+        'echo "Created: $(gh pr create --fill)"',
+    ):
+        assert looks_like_gh_pr_create(cmd) is True, cmd
+
+
 # ---- find_gh_pr_create ------------------------------------------------------
 
 
@@ -123,6 +165,10 @@ def test_find_gh_pr_create_chained_cd_last_wins():
 def test_find_gh_pr_create_global_flag_skipped():
     result = find_gh_pr_create("gh --repo o/r pr create")
     assert result is not None
+
+
+def test_find_gh_pr_create_matches_new_alias():
+    assert find_gh_pr_create("cd /other && gh pr new --title x") == "/other"
 
 
 def test_find_gh_pr_create_non_gh_none():

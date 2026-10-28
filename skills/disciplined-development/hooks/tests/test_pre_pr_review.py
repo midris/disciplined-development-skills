@@ -142,6 +142,23 @@ def test_non_pr_command_allows_no_row(tmp_path):
     assert _rows(log_dir) == []
 
 
+def test_quoted_pr_mention_allows_no_row(tmp_path):
+    """A command that only mentions ``gh pr create`` inside quotes is not a
+    PR attempt: exit 0, shim not invoked, no review row."""
+    repo = _init_repo(tmp_path)
+    shim = _make_shim(tmp_path)
+    log_dir = tmp_path / "logs"
+    log_dir.mkdir()
+
+    proc, argv = _run(
+        repo, shim, 'git commit -m "fix gh pr create detection"', log_dir=log_dir
+    )
+
+    assert proc.returncode == 0, proc.stderr
+    assert argv is None
+    assert _rows(log_dir) == []
+
+
 def test_unparseable_pr_shaped_blocks_and_logs_error_row(tmp_path):
     """``cd $REPO && gh pr create`` looks like PR but can't be parsed.
 
