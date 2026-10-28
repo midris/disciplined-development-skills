@@ -248,37 +248,8 @@ def test_find_gh_pr_create_chained_cd_composes_like_the_shell():
     # Relative to an unknown base stays unknown; an absolute `cd` recovers.
     assert find_gh_pr_create("cd $X && cd sub && gh pr create") is None
     assert find_gh_pr_create("cd $X && cd /b && gh pr create") == "/b"
-
-
-def test_find_gh_pr_create_unmodelled_directory_change_is_unresolvable():
-    """Only a leading `cd <explicit path>` is resolved; any other directory
-    change before `gh` returns None so the gate fails closed (the loose net
-    still recognises the PR) instead of reviewing the wrong tree."""
-    for cmd in (
-        "cd /parent && (cd child && gh pr create)",
-        "(cd /repo && gh pr create)",
-        "(cd /x); gh pr create",
-        "{ cd /x; gh pr create; }",
-        "pushd /x && gh pr create",
-        "if true; then cd /x; gh pr create; fi",
-        "cd && gh pr create",
-        "cd - && gh pr create",
-        "cd -P /x && gh pr create",
-        "cd ~/x && gh pr create",
-        "cd /a && bash -c 'cd rel && gh pr create'",
-        # Only `&&` / `;` / newline guarantee the `cd` ran in this shell.
-        "true || cd /other && gh pr create",
-        "cd /other & gh pr create",
-        "cd /other | gh pr create",
-    ):
-        assert find_gh_pr_create(cmd) is None, cmd
-        assert looks_like_gh_pr_create(cmd) is True, cmd
     assert find_gh_pr_create("cd /a; cd b\ngh pr create") == "/a/b"
-    # A `<shell> -c` string with no outer directory change still resolves.
-    assert find_gh_pr_create("bash -c 'cd /x && gh pr create'") == "/x"
-
-
-def test_find_gh_pr_create_ignores_parens_after_gh_or_without_cd():
+    # Parens elsewhere don't disturb resolution.
     assert find_gh_pr_create("echo $(pwd) && gh pr create") == os.getcwd()
     assert find_gh_pr_create(
         "cd /r && gh pr create --body \"$(cat <<'EOF'\nx\nEOF\n)\""

@@ -29,7 +29,7 @@ the commit ceiling, and the pre-PR gate is an advisory nudge.
 | `discipline_nudge.py` | PreToolUse | `*` (all) | Count tool-calls since the last re-ground; at the threshold emit a "re-read CLAUDE.md + the plan, re-check the skills" nudge (naming the resolved active-plan path) and reset; run throttled cleanup. | `DD_SKIP_DISCIPLINE_NUDGE` |
 | `edit_block.py` | PreToolUse | `Edit\|Write` | **Hard block.** Deny when stored `edits.count` ≥ 60 (i.e. the 61st edit). Reads only; never increments. | `DD_SKIP_EDIT_BLOCK` |
 | `commit_block.py` | PreToolUse | `Bash` (`is_git_commit`) | **Hard block.** Deny a `git commit` (incl. `--amend`) when commits-since-last-deep-review ≥ 5 — allows 5, denies the 6th. | `DD_SKIP_COMMIT_BLOCK` |
-| `pre_pr_review.py` | PreToolUse | `Bash` (`gh pr create` / `gh pr new`) | **Hard gate.** Detect → resolve cwd → delegate to `external_review.py --cwd`. Any non-zero result maps to exit 2. No base resolution; no `DD_HARD_BLOCK`. A PR-shaped command whose cwd it can't resolve (unexpandable `cd`, a `cd` in a subshell or group, `pushd`, wrapper, mention) logs an ERROR row and blocks rather than letting an unreviewed PR through. | `DD_SKIP_PR_REVIEW` |
+| `pre_pr_review.py` | PreToolUse | `Bash` (`gh pr create` / `gh pr new`) | **Hard gate.** Detect → resolve cwd → delegate to `external_review.py --cwd`. Any non-zero result maps to exit 2. No base resolution; no `DD_HARD_BLOCK`. A PR-shaped command whose cwd it can't resolve (unparseable chained `cd`, wrapper, mention) logs an ERROR row and blocks rather than letting an unreviewed PR through. | `DD_SKIP_PR_REVIEW` |
 | `edit_counter.py` | PostToolUse | `Edit\|Write` | Increment `edits.count`; emit a nudge on each edit once the stored count reaches 30, continuing until a clean review resets the counter via `dd-log`. Advisory only — PostToolUse runs after the edit. | `DD_SKIP_EDIT_COUNTER` |
 | `review_nudge.py` | PostToolUse | `Bash` | On a landed commit: always emit a Gate-3 **verify** reminder; also a nudge when `edits.count` ≥ 30; also a nudge when commits-since-last-deep-review ≥ 3. | `DD_SKIP_REVIEW_NUDGE` |
 | `session_reground.py` | SessionStart | — | On every session (re)start, emit a source-specific preamble + shared re-ground instructions. Fires on all sources (startup/resume/clear/compact); unknown source fires with a generic preamble. | `DD_SKIP_SESSION_REGROUND` |
@@ -101,7 +101,8 @@ python3 external_review.py [--cwd <path>]
 `pre_pr_review.py` is the hook wrapper: it detects `gh pr create` (or its
 alias `gh pr new`), resolves the cwd, and delegates `external_review.py --cwd <cwd>`.
 A command it can't resolve still blocks when one command in it has `gh` (or a
-`$VAR`), then a `pr` token whose first non-flag token is `create` or `new`.
+`$VAR`), then a `pr` token whose first non-flag token is `create` or `new`,
+or can't be known (a substitution such as `gh pr -R "$(cat .repo)" …`).
 So "through the printer … created", `gh pr view 12 && echo created` and
 "pr #42: new" in a `gh issue create` title don't trigger the gate; any mention
 of the whole command does, quoted or not (fail-closed).
