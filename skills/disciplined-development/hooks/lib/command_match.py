@@ -201,33 +201,46 @@ _PR_EDGE_CHARS = set(" \t\r\"'`()")
 _VERB_WINDOW = 200
 
 
-def _splits_unreliably(tok: str) -> bool:
-    """True when a whitespace token may be part of a longer shell word: it
-    opens a substitution or leaves a quote unbalanced (`"$(cat`)."""
-    return "$(" in tok or "`" in tok or tok.count('"') % 2 or tok.count("'") % 2
+def _unbalanced_quote(tok: str) -> bool:
+    return bool(tok.count('"') % 2 or tok.count("'") % 2)
 
 
 def _pr_verb(piece: str, start: int) -> str | None:
-    """The leading word of the first non-flag token after *start*: `""` when
-    the command ends first; `None` when the verb is unknown — the window
-    ends first, or a skipped flag or value may span more tokens
-    (`-R "$(cat .repo)"`)."""
+    """The verb after a `pr` token ending at *start*: `""` when the command
+    ends first, `None` when it can't be known. Each token shape has one role:
+    - a substitution (`$(`, backtick) may produce the verb or span tokens:
+      unknown;
+    - the `-R/--repo` value (or `--repo=…`) is skipped, unless an unbalanced
+      quote means it spans tokens (`-R "$(cat .repo)"`): unknown;
+    - any other flag, or an expansion that may hold flags (`$FLAGS`, `"$@"`):
+      skipped;
+    - anything else is the verb: its leading word, so `create>"$OUT"` reads
+      as create and `#42:` as `""`.
+    A verb past the window is unknown too."""
     window = piece[start:start + _VERB_WINDOW]
     tokens = window.split()
     cut = start + _VERB_WINDOW < len(piece)
     if cut:
         tokens = tokens[:-1]  # may be cut mid-token
-    skip_value = False
+    repo_value = False
     for tok in tokens:
         t = tok.strip("\"'`()")
         if not t:
             continue
-        if skip_value or t.startswith("-"):
-            if _splits_unreliably(tok):
+        if "$(" in tok or "`" in tok:
+            return None
+        if repo_value:
+            if _unbalanced_quote(tok):
                 return None
-            skip_value = not skip_value and t in GH_GLOBAL_FLAGS_WITH_VALUE
+            repo_value = False
             continue
-        # Leading word only, so `create>"$OUT"` or `create,` reads as create.
+        if t in GH_GLOBAL_FLAGS_WITH_VALUE:
+            repo_value = True
+            continue
+        if t.startswith(("-R", "--repo=")) and _unbalanced_quote(tok):
+            return None  # attached value spans tokens
+        if t.startswith(("-", "$")):
+            continue
         return re.match(r"\w*", t).group()
     return None if cut else ""
 
@@ -249,11 +262,12 @@ def looks_like_gh_pr_create(command: str) -> bool:
 
     Shell tokenizing and a flag-aware regex both failed open on forms they
     didn't model and backtracked on long input; this scan errs toward True.
-    Accepted misses: a `;`/`&`/`|`/newline between `gh` and the verb, even
-    one that isn't a command separator (`$(which gh 2>&1) pr create`), and a
-    verb produced by a substitution (`gh pr $(echo create)`). An unknown
-    verb counts as `create`: one beyond the window, or one after a flag or
-    value that may span tokens (`gh pr -R "$(cat .repo)" view`).
+    `_pr_verb` gives each token shape after `pr` one role; a verb it can't
+    know (a substitution, a `-R` value spanning tokens, past the window)
+    counts as `create`. Accepted misses: a `;`/`&`/`|`/newline between `gh`
+    and the verb, even one that isn't a command separator
+    (`$(which gh 2>&1) pr create`), and a verb held only in a variable
+    (`gh pr $VERB`), which is skipped like a flag.
 
     Deliberately over-broad: a mention of the whole command — unquoted
     (`echo gh pr create`) or quoted (a commit message, a grep pattern) —
