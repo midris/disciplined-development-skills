@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """pre_pr_review.py — PreToolUse Bash gate: the only hard block.
 
-Detects ``gh pr create``, resolves the target cwd, and delegates to
-``external_review.py`` (whole-repo, verdict-driven, fail-closed).  No base
-resolution and no ``DD_HARD_BLOCK``; the verdict is entirely the external gate's
-responsibility.
+Detects ``gh pr create`` (or its alias ``gh pr new``), resolves the target
+cwd, and delegates to ``external_review.py`` (whole-repo, verdict-driven,
+fail-closed).  No base resolution and no ``DD_HARD_BLOCK``; the verdict is
+entirely the external gate's responsibility.
 
 Paths:
 - PR-shaped + parseable cwd → delegate to ``external_review.py --cwd <cwd>``;
@@ -14,7 +14,7 @@ Paths:
 - PR-shaped + unparseable cwd (e.g. ``cd $VAR && gh pr create``) → log one
   ``reviews.jsonl`` ERROR row (decision=ERROR, reason=unparseable) then block
   (exit 2); the model is told to rewrite the command or set the bypass.
-- Not a ``gh pr create`` command → exit 0 (all other Bash through).
+- Not a ``gh pr create`` / ``gh pr new`` command → exit 0 (all other Bash through).
 - ``DD_SKIP_PR_REVIEW=1`` in the launching shell → exit 0 (bypass for automated
   workflows that review separately).
 """
@@ -135,11 +135,13 @@ def main() -> int:
                 _log_unparseable(repo)
                 logger.emit("block", reason="unresolvable_cwd")
                 print(
-                    "[pre-pr] BLOCKED: couldn't resolve the target directory for a "
-                    "`gh pr create` (e.g. a `cd` to an unexpandable path or a "
-                    "hard-to-parse command). Re-run with an explicit or absolute "
-                    "path, or set DD_SKIP_PR_REVIEW=1 in the launching shell "
-                    "to bypass.",
+                    "[pre-pr] BLOCKED: this looks like `gh pr create`, but its "
+                    "target directory couldn't be resolved (e.g. a `cd` to an "
+                    "unexpandable path, a wrapper, or a hard-to-parse command). "
+                    "Re-run it as a plain `[cd <absolute-path> && ]gh pr create "
+                    "…`. If the command only mentions `gh pr create` (a commit "
+                    "message, a grep pattern), reword the mention. Or set "
+                    "DD_SKIP_PR_REVIEW=1 in the launching shell to bypass.",
                     file=sys.stderr,
                 )
                 return 2

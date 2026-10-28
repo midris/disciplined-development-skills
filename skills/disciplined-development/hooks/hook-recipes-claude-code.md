@@ -89,13 +89,15 @@ or set `DD_SKIP_COMMIT_BLOCK=1` for the remediation cycle.
 
 **Class:** hard gate (T3, the only PR gate). **Bypass:** `DD_SKIP_PR_REVIEW=1`.
 
-Detect `gh pr create` (via `command_match.find_gh_pr_create`) and extract the
-chained-`cd` target cwd, then delegate to `external_review.py --cwd <cwd>`.
+Detect `gh pr create` or its alias `gh pr new` (via
+`command_match.find_gh_pr_create`) and extract the chained-`cd` target cwd,
+then delegate to `external_review.py --cwd <cwd>`.
 No base resolution, no `DD_HARD_BLOCK`, no severity scanning — verdict is
 entirely the external gate's responsibility. Any non-zero exit from the
 delegate maps to exit 2 (Claude Code blocks PreToolUse only on exit 2);
 delegate stdout+stderr are re-emitted so findings reach the model. An
-unexpandable chained `cd` (`cd $X && gh pr create`) fails **loud** (block)
+unexpandable chained `cd` (`cd $X && gh pr create`), or any other form only
+`command_match.looks_like_gh_pr_create` recognizes, fails **loud** (block)
 rather than letting an unreviewed PR through.
 
 ---

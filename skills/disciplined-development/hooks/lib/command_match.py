@@ -186,39 +186,155 @@ def is_git_commit(command: str) -> bool:
 # ---- find-gh-pr-create ------------------------------------------------------
 
 
-def looks_like_gh_pr_create(command: str) -> bool:
-    """Loose detector: True when `gh`, `pr`, `create` appear in that order
-    anywhere in *command*, even when strict tokenizing fails (e.g. a heredoc
-    body that makes `tokenize()` return `None`).
+# `gh pr new` is gh's alias for `gh pr create`.
+PR_CREATE_SUBCOMMANDS = {"create", "new"}
 
-    Deliberately over-broad: a command that merely *mentions* these tokens
-    (e.g. `echo gh pr create`) returns True. This is **accepted, documented
-    behavior** — a false positive is a human-overridable block (the model can
-    rewrite or the operator can set DD_SKIP_PR_REVIEW=1); a false negative is a
-    fail-open hole at the only hard gate in the hook stack. Bias toward True.
+_CONTINUATION_RE = re.compile(r"\\\r?\n")
+# `&` in a redirect (`2>&1`, `&>file`) doesn't separate commands.
+_COMMAND_SEPARATOR_RE = re.compile(r"[;|\n]|(?<![<>])&(?!>)")
+# A word, or the head of a `$VAR` / `${VAR…}` reference (it may hold `gh`).
+_WORD_RE = re.compile(r"\$\{?[A-Za-z_]|\w+")
+# Characters that may sit next to a standalone `pr` token: whitespace,
+# quotes and substitution brackets (`gh "pr" create`, `$(gh pr create)`).
+_PR_EDGE_CHARS = set(" \t\r\"'`()")
+# How far past `pr` to look for its verb. gh's only `pr`-level flag is
+# `-R/--repo <value>`, so the verb sits within a few dozen characters.
+_VERB_WINDOW = 200
+
+
+def _unbalanced_quote(tok: str) -> bool:
+    return bool(tok.count('"') % 2 or tok.count("'") % 2)
+
+
+def _pr_verb(piece: str, start: int) -> str | None:
+    """The verb after a `pr` token ending at *start*: `""` when the command
+    ends first, `None` when it can't be known. Each token shape has one role:
+    - a substitution (`$(`, an opening backtick) or ANSI-C/locale quoting
+      (`$'…'`, `$"…"`) may produce the verb or span tokens: unknown;
+    - the `-R/--repo` value (separate, or attached as `-R…` / `--repo=…`) is
+      skipped, unless an unbalanced quote means it spans tokens
+      (`-R "$(cat .repo)"`): unknown;
+    - any other flag, an expansion that may hold flags (`$FLAGS`, `"$@"`),
+      or an attached redirect (`2>/dev/null`): skipped;
+    - anything else is the verb: its leading word, so `create>"$OUT"` reads
+      as create and `#42:` as `""`.
+    A verb past the window is unknown too."""
+    window = piece[start:start + _VERB_WINDOW]
+    tokens = window.split()
+    cut = start + _VERB_WINDOW < len(piece)
+    if cut:
+        tokens = tokens[:-1]  # may be cut mid-token
+    repo_value = False
+    for tok in tokens:
+        t = tok.strip("\"'`()")
+        if not t:
+            continue
+        # A backtick only opens a substitution at the token's start; a closing
+        # one ends a Markdown code span in prose (`gh pr view`).
+        if "$(" in tok or tok.lstrip("\"'(").startswith(("`", "$'", '$"')):
+            return None
+        if re.match(r"\d*[<>]", t):
+            continue  # attached redirect (`2>/dev/null`)
+        if repo_value:
+            if _unbalanced_quote(tok):
+                return None
+            repo_value = False
+            continue
+        if t in GH_GLOBAL_FLAGS_WITH_VALUE:
+            repo_value = True
+            continue
+        if t.startswith(("-R", "--repo=")) and _unbalanced_quote(tok):
+            return None  # attached value spans tokens
+        if t.startswith(("-", "$")):
+            continue
+        return re.match(r"\w*", t).group()
+    return None if cut else ""
+
+
+def looks_like_gh_pr_create(command: str) -> bool:
+    """Loose detector: True when one command in the raw text has the word
+    `gh` (or a `$VAR`), then a `pr` token whose first non-flag token is
+    `create` or `new`.
+
+    Scans raw text rather than parsing shell, so every wrapper is caught
+    (`env`, `timeout`, `sh -ec '…'`, `"$(cd x && gh pr create)"`,
+    `$(which gh) pr create`). Only two steps model gh: commands split on
+    `;`, `&` (not a redirect's, as in `2>&1`), `|` or newline
+    (`gh pr view 12 && echo created` doesn't match), and the token after
+    `pr`, skipping flags and `-R/--repo`'s value,
+    decides the verb (`gh pr list --search create`, or "pr #42: new" in a
+    `gh issue create` title, doesn't match). After any other verb, a later
+    `pr` needs a fresh `gh`. Whole words only, so "through the printer …
+    created" doesn't match. Linear: one pass plus a fixed window per `pr`.
+
+    Shell tokenizing and a flag-aware regex both failed open on forms they
+    didn't model and backtracked on long input; this scan errs toward True.
+    `_pr_verb` gives each token shape after `pr` one role; a verb it can't
+    know (a substitution, a `-R` value spanning tokens, past the window)
+    counts as `create`. Accepted misses: a `;`/`&`/`|`/newline between `gh`
+    and the verb that isn't a top-level separator
+    (`$(which gh | head -1) pr create`); a verb held only in a variable,
+    which is skipped like a flag (`gh pr $VERB`, or a wrapper function
+    `f() { gh pr "$@"; }; f create`); and a spaced redirect before the verb
+    (`gh pr > out create`).
+
+    Deliberately over-broad: a mention of the whole command — unquoted
+    (`echo gh pr create`) or quoted (a commit message, a grep pattern) —
+    returns True. This is **accepted, documented behavior** — a false
+    positive is a human-overridable block (the model can rewrite or the
+    operator can set DD_SKIP_PR_REVIEW=1); a false negative is a fail-open
+    hole at the only hard gate in the hook stack. Bias toward True.
 
     Use this as the fail-closed net when `find_gh_pr_create` returns `None`:
     `None` is ambiguous (not a PR *or* matched but cwd unresolvable); this
     function distinguishes "clearly not a PR" from "looks like one, block it".
     """
-    pos = 0
-    for token in ("gh", "pr", "create"):
-        idx = command.find(token, pos)
-        if idx == -1:
-            return False
-        pos = idx + len(token)
-    return True
+    text = _CONTINUATION_RE.sub(" ", command)
+    for piece in _COMMAND_SEPARATOR_RE.split(text):
+        seen_gh = False
+        for m in _WORD_RE.finditer(piece):
+            w = m.group()
+            if w == "gh" or w.startswith("$"):
+                seen_gh = True
+            elif (
+                w == "pr"
+                and seen_gh
+                and (m.start() == 0 or piece[m.start() - 1] in _PR_EDGE_CHARS)
+                and (m.end() == len(piece) or piece[m.end()] in _PR_EDGE_CHARS)
+            ):
+                verb = _pr_verb(piece, m.end())
+                if verb is None or verb in PR_CREATE_SUBCOMMANDS:
+                    return True
+                # This gh's verb is something else; a `pr` in its
+                # arguments needs a fresh `gh` to count.
+                seen_gh = False
+    return False
+
+
+def _skip_gh_flags(seg: list[str], j: int) -> int:
+    """Index of the first non-flag token at or after *j*, skipping gh flags
+    and the value of `-R` / `--repo`."""
+    while j < len(seg):
+        t = seg[j]
+        if t in GH_GLOBAL_FLAGS_WITH_VALUE:
+            j += 2  # `--repo org/repo` / `-R org/repo`
+        elif t.startswith("-") and len(t) > 1:
+            # `--repo=org/repo`, `-Rorg/repo`, `--paginate`, etc.
+            j += 1
+        else:
+            break
+    return j
 
 
 def find_gh_pr_create(command: str) -> str | None:
-    """Locate a `gh pr create` invocation and return its resolved cwd.
+    """Locate a `gh pr create` (or `gh pr new`) invocation and return its resolved cwd.
 
-    `cwd` is extracted from chained `cd <path>` segments (relative paths
-    resolved against the process cwd); with no `cd`, `cwd` is the process
-    working directory (`os.getcwd()`).
+    `cwd` is extracted from chained `cd <path>` segments (a relative path
+    joins the cwd so far, starting from the process cwd); with no `cd`,
+    `cwd` is the process working directory (`os.getcwd()`).
 
     Return shape:
-      * `None`  — not a `gh pr create` command, **or** matched but the
+      * `None`  — not a `gh pr create|new` command, **or** matched but the
                   effective `cd` target is unexpandable (`$`/backtick) so
                   cwd can't be resolved (caller uses `looks_like_gh_pr_create`
                   to distinguish the two `None` cases and fail closed).
@@ -256,33 +372,18 @@ def find_gh_pr_create(command: str) -> str | None:
         if i >= len(seg) or seg[i] != "gh":
             continue
 
-        # Skip gh global flags between `gh` and the subcommand. Mirrors
-        # the GIT_GLOBAL_FLAGS_WITH_VALUE handling in is_git_commit.
-        j = i + 1
-        while j < len(seg):
-            t = seg[j]
-            if t in GH_GLOBAL_FLAGS_WITH_VALUE:
-                j += 2  # `--repo org/repo` / `-R org/repo`
-            elif t.startswith("-") and len(t) > 1:
-                # `--repo=org/repo`, `-Rorg/repo`, `--paginate`, etc.
-                j += 1
-            else:
-                break
-
+        # Skip gh flags between `gh` and `pr` (global) and between `pr` and
+        # the verb (`-R/--repo` is a `gh pr`-level flag).
+        j = _skip_gh_flags(seg, i + 1)
         if j >= len(seg) or seg[j] != "pr":
             continue
-        j += 1
-        if j >= len(seg) or seg[j] != "create":
+        j = _skip_gh_flags(seg, j + 1)
+        if j >= len(seg) or seg[j] not in PR_CREATE_SUBCOMMANDS:
             continue
 
-        # Chained `cd` resolution: walks every preceding segment, so the
-        # LAST `cd` in the chain wins (each iteration overwrites `cwd`).
-        # A relative `cd` is anchored to the process cwd, not to a prior
-        # `cd` — so `cd /a && cd b && gh pr create` resolves to
-        # `<process_cwd>/b`, not `/a/b`. The single-`cd` form (`cd /repo
-        # && gh pr create`) is the only one we see in practice from the
-        # `gh pr create` helper; chained or relative-after-absolute
-        # forms are an accepted edge with this last-cd-wins contract.
+        # Chained `cd` resolution, as the shell does it: walk every
+        # preceding segment; an absolute `cd` resets the cwd, a relative
+        # one joins the cwd so far (the process cwd before any `cd`).
         cwd: str | None = None
         cwd_unresolvable = False
         for prev_seg in segs[:seg_idx]:
@@ -290,16 +391,15 @@ def find_gh_pr_create(command: str) -> str | None:
                 path = prev_seg[1]
                 if "$" in path or "`" in path:
                     # Unexpandable target (shell var / substitution). Mark the
-                    # cwd unresolvable; a LATER resolvable `cd` clears it
-                    # (last-cd-wins), matching the resolvable branches below.
+                    # cwd unresolvable; a later absolute `cd` clears it.
                     cwd_unresolvable = True
                     cwd = None
                 elif os.path.isabs(path):
                     cwd = path
                     cwd_unresolvable = False
-                else:
-                    cwd = str(Path.cwd() / path)
-                    cwd_unresolvable = False
+                elif not cwd_unresolvable:
+                    # Relative to an unresolvable base stays unresolvable.
+                    cwd = str(Path(cwd or Path.cwd()) / path)
 
         if cwd_unresolvable:
             # Matched `gh pr create`, but the effective cwd can't be resolved.
