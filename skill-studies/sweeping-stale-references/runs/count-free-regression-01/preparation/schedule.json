@@ -1,0 +1,665 @@
+{
+  "batch_id": "count-free-regression-01",
+  "slots": [
+    {
+      "slot": 1,
+      "stage": "focused",
+      "provider_order": 1,
+      "provider": "codex",
+      "case_id": "pressure-repair",
+      "condition": "finalist",
+      "repetition": 1,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-pressure-repair.json"
+    },
+    {
+      "slot": 2,
+      "stage": "focused",
+      "provider_order": 1,
+      "provider": "claude",
+      "case_id": "pressure-repair",
+      "condition": "finalist",
+      "repetition": 1,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-pressure-repair.json"
+    },
+    {
+      "slot": 3,
+      "stage": "focused",
+      "provider_order": 2,
+      "provider": "codex",
+      "case_id": "discovery-shiv",
+      "condition": "finalist",
+      "repetition": 1,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-discovery-shiv.json"
+    },
+    {
+      "slot": 4,
+      "stage": "focused",
+      "provider_order": 2,
+      "provider": "claude",
+      "case_id": "discovery-shiv",
+      "condition": "finalist",
+      "repetition": 1,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-discovery-shiv.json"
+    },
+    {
+      "slot": 5,
+      "stage": "focused",
+      "provider_order": 3,
+      "provider": "codex",
+      "case_id": "local-change",
+      "condition": "finalist",
+      "repetition": 1,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-local-change.json"
+    },
+    {
+      "slot": 6,
+      "stage": "focused",
+      "provider_order": 3,
+      "provider": "claude",
+      "case_id": "local-change",
+      "condition": "finalist",
+      "repetition": 1,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-local-change.json"
+    },
+    {
+      "slot": 7,
+      "stage": "focused",
+      "provider_order": 4,
+      "provider": "codex",
+      "case_id": "large-sweep-account",
+      "condition": "finalist",
+      "repetition": 1,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-large-sweep-account.json"
+    },
+    {
+      "slot": 8,
+      "stage": "focused",
+      "provider_order": 4,
+      "provider": "claude",
+      "case_id": "large-sweep-account",
+      "condition": "finalist",
+      "repetition": 1,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-large-sweep-account.json"
+    },
+    {
+      "slot": 9,
+      "stage": "focused",
+      "provider_order": 5,
+      "provider": "claude",
+      "case_id": "pressure-repair",
+      "condition": "finalist",
+      "repetition": 2,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-pressure-repair.json"
+    },
+    {
+      "slot": 10,
+      "stage": "focused",
+      "provider_order": 5,
+      "provider": "codex",
+      "case_id": "pressure-repair",
+      "condition": "finalist",
+      "repetition": 2,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-pressure-repair.json"
+    },
+    {
+      "slot": 11,
+      "stage": "focused",
+      "provider_order": 6,
+      "provider": "claude",
+      "case_id": "discovery-shiv",
+      "condition": "finalist",
+      "repetition": 2,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-discovery-shiv.json"
+    },
+    {
+      "slot": 12,
+      "stage": "focused",
+      "provider_order": 6,
+      "provider": "codex",
+      "case_id": "discovery-shiv",
+      "condition": "finalist",
+      "repetition": 2,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-discovery-shiv.json"
+    },
+    {
+      "slot": 13,
+      "stage": "focused",
+      "provider_order": 7,
+      "provider": "claude",
+      "case_id": "local-change",
+      "condition": "finalist",
+      "repetition": 2,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-local-change.json"
+    },
+    {
+      "slot": 14,
+      "stage": "focused",
+      "provider_order": 7,
+      "provider": "codex",
+      "case_id": "local-change",
+      "condition": "finalist",
+      "repetition": 2,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-local-change.json"
+    },
+    {
+      "slot": 15,
+      "stage": "focused",
+      "provider_order": 8,
+      "provider": "claude",
+      "case_id": "large-sweep-account",
+      "condition": "finalist",
+      "repetition": 2,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-large-sweep-account.json"
+    },
+    {
+      "slot": 16,
+      "stage": "focused",
+      "provider_order": 8,
+      "provider": "codex",
+      "case_id": "large-sweep-account",
+      "condition": "finalist",
+      "repetition": 2,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-large-sweep-account.json"
+    },
+    {
+      "slot": 17,
+      "stage": "focused",
+      "provider_order": 9,
+      "provider": "codex",
+      "case_id": "pressure-repair",
+      "condition": "finalist",
+      "repetition": 3,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-pressure-repair.json"
+    },
+    {
+      "slot": 18,
+      "stage": "focused",
+      "provider_order": 9,
+      "provider": "claude",
+      "case_id": "pressure-repair",
+      "condition": "finalist",
+      "repetition": 3,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-pressure-repair.json"
+    },
+    {
+      "slot": 19,
+      "stage": "focused",
+      "provider_order": 10,
+      "provider": "codex",
+      "case_id": "discovery-shiv",
+      "condition": "finalist",
+      "repetition": 3,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-discovery-shiv.json"
+    },
+    {
+      "slot": 20,
+      "stage": "focused",
+      "provider_order": 10,
+      "provider": "claude",
+      "case_id": "discovery-shiv",
+      "condition": "finalist",
+      "repetition": 3,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-discovery-shiv.json"
+    },
+    {
+      "slot": 21,
+      "stage": "focused",
+      "provider_order": 11,
+      "provider": "codex",
+      "case_id": "local-change",
+      "condition": "finalist",
+      "repetition": 3,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-local-change.json"
+    },
+    {
+      "slot": 22,
+      "stage": "focused",
+      "provider_order": 11,
+      "provider": "claude",
+      "case_id": "local-change",
+      "condition": "finalist",
+      "repetition": 3,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-local-change.json"
+    },
+    {
+      "slot": 23,
+      "stage": "focused",
+      "provider_order": 12,
+      "provider": "codex",
+      "case_id": "large-sweep-account",
+      "condition": "finalist",
+      "repetition": 3,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-large-sweep-account.json"
+    },
+    {
+      "slot": 24,
+      "stage": "focused",
+      "provider_order": 12,
+      "provider": "claude",
+      "case_id": "large-sweep-account",
+      "condition": "finalist",
+      "repetition": 3,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-large-sweep-account.json"
+    },
+    {
+      "slot": 25,
+      "stage": "remaining",
+      "provider_order": 13,
+      "provider": "codex",
+      "case_id": "initiating-change",
+      "condition": "finalist",
+      "repetition": 1,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-initiating-change.json"
+    },
+    {
+      "slot": 26,
+      "stage": "remaining",
+      "provider_order": 13,
+      "provider": "claude",
+      "case_id": "initiating-change",
+      "condition": "finalist",
+      "repetition": 1,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-initiating-change.json"
+    },
+    {
+      "slot": 27,
+      "stage": "remaining",
+      "provider_order": 14,
+      "provider": "codex",
+      "case_id": "moved-guide",
+      "condition": "finalist",
+      "repetition": 1,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-moved-guide.json"
+    },
+    {
+      "slot": 28,
+      "stage": "remaining",
+      "provider_order": 14,
+      "provider": "claude",
+      "case_id": "moved-guide",
+      "condition": "finalist",
+      "repetition": 1,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-moved-guide.json"
+    },
+    {
+      "slot": 29,
+      "stage": "remaining",
+      "provider_order": 15,
+      "provider": "codex",
+      "case_id": "semantic-delivery",
+      "condition": "finalist",
+      "repetition": 1,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-semantic-delivery.json"
+    },
+    {
+      "slot": 30,
+      "stage": "remaining",
+      "provider_order": 15,
+      "provider": "claude",
+      "case_id": "semantic-delivery",
+      "condition": "finalist",
+      "repetition": 1,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-semantic-delivery.json"
+    },
+    {
+      "slot": 31,
+      "stage": "remaining",
+      "provider_order": 16,
+      "provider": "codex",
+      "case_id": "invocation-change",
+      "condition": "finalist",
+      "repetition": 1,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-invocation-change.json"
+    },
+    {
+      "slot": 32,
+      "stage": "remaining",
+      "provider_order": 16,
+      "provider": "claude",
+      "case_id": "invocation-change",
+      "condition": "finalist",
+      "repetition": 1,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-invocation-change.json"
+    },
+    {
+      "slot": 33,
+      "stage": "remaining",
+      "provider_order": 17,
+      "provider": "codex",
+      "case_id": "invocation-review",
+      "condition": "finalist",
+      "repetition": 1,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-invocation-review.json"
+    },
+    {
+      "slot": 34,
+      "stage": "remaining",
+      "provider_order": 17,
+      "provider": "claude",
+      "case_id": "invocation-review",
+      "condition": "finalist",
+      "repetition": 1,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-invocation-review.json"
+    },
+    {
+      "slot": 35,
+      "stage": "remaining",
+      "provider_order": 18,
+      "provider": "codex",
+      "case_id": "invocation-verification",
+      "condition": "finalist",
+      "repetition": 1,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-invocation-verification.json"
+    },
+    {
+      "slot": 36,
+      "stage": "remaining",
+      "provider_order": 18,
+      "provider": "claude",
+      "case_id": "invocation-verification",
+      "condition": "finalist",
+      "repetition": 1,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-invocation-verification.json"
+    },
+    {
+      "slot": 37,
+      "stage": "remaining",
+      "provider_order": 19,
+      "provider": "codex",
+      "case_id": "invocation-unrelated",
+      "condition": "finalist",
+      "repetition": 1,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-invocation-unrelated.json"
+    },
+    {
+      "slot": 38,
+      "stage": "remaining",
+      "provider_order": 19,
+      "provider": "claude",
+      "case_id": "invocation-unrelated",
+      "condition": "finalist",
+      "repetition": 1,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-invocation-unrelated.json"
+    },
+    {
+      "slot": 39,
+      "stage": "remaining",
+      "provider_order": 20,
+      "provider": "claude",
+      "case_id": "initiating-change",
+      "condition": "finalist",
+      "repetition": 2,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-initiating-change.json"
+    },
+    {
+      "slot": 40,
+      "stage": "remaining",
+      "provider_order": 20,
+      "provider": "codex",
+      "case_id": "initiating-change",
+      "condition": "finalist",
+      "repetition": 2,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-initiating-change.json"
+    },
+    {
+      "slot": 41,
+      "stage": "remaining",
+      "provider_order": 21,
+      "provider": "claude",
+      "case_id": "moved-guide",
+      "condition": "finalist",
+      "repetition": 2,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-moved-guide.json"
+    },
+    {
+      "slot": 42,
+      "stage": "remaining",
+      "provider_order": 21,
+      "provider": "codex",
+      "case_id": "moved-guide",
+      "condition": "finalist",
+      "repetition": 2,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-moved-guide.json"
+    },
+    {
+      "slot": 43,
+      "stage": "remaining",
+      "provider_order": 22,
+      "provider": "claude",
+      "case_id": "semantic-delivery",
+      "condition": "finalist",
+      "repetition": 2,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-semantic-delivery.json"
+    },
+    {
+      "slot": 44,
+      "stage": "remaining",
+      "provider_order": 22,
+      "provider": "codex",
+      "case_id": "semantic-delivery",
+      "condition": "finalist",
+      "repetition": 2,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-semantic-delivery.json"
+    },
+    {
+      "slot": 45,
+      "stage": "remaining",
+      "provider_order": 23,
+      "provider": "claude",
+      "case_id": "invocation-change",
+      "condition": "finalist",
+      "repetition": 2,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-invocation-change.json"
+    },
+    {
+      "slot": 46,
+      "stage": "remaining",
+      "provider_order": 23,
+      "provider": "codex",
+      "case_id": "invocation-change",
+      "condition": "finalist",
+      "repetition": 2,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-invocation-change.json"
+    },
+    {
+      "slot": 47,
+      "stage": "remaining",
+      "provider_order": 24,
+      "provider": "claude",
+      "case_id": "invocation-review",
+      "condition": "finalist",
+      "repetition": 2,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-invocation-review.json"
+    },
+    {
+      "slot": 48,
+      "stage": "remaining",
+      "provider_order": 24,
+      "provider": "codex",
+      "case_id": "invocation-review",
+      "condition": "finalist",
+      "repetition": 2,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-invocation-review.json"
+    },
+    {
+      "slot": 49,
+      "stage": "remaining",
+      "provider_order": 25,
+      "provider": "claude",
+      "case_id": "invocation-verification",
+      "condition": "finalist",
+      "repetition": 2,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-invocation-verification.json"
+    },
+    {
+      "slot": 50,
+      "stage": "remaining",
+      "provider_order": 25,
+      "provider": "codex",
+      "case_id": "invocation-verification",
+      "condition": "finalist",
+      "repetition": 2,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-invocation-verification.json"
+    },
+    {
+      "slot": 51,
+      "stage": "remaining",
+      "provider_order": 26,
+      "provider": "claude",
+      "case_id": "invocation-unrelated",
+      "condition": "finalist",
+      "repetition": 2,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-invocation-unrelated.json"
+    },
+    {
+      "slot": 52,
+      "stage": "remaining",
+      "provider_order": 26,
+      "provider": "codex",
+      "case_id": "invocation-unrelated",
+      "condition": "finalist",
+      "repetition": 2,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-invocation-unrelated.json"
+    },
+    {
+      "slot": 53,
+      "stage": "remaining",
+      "provider_order": 27,
+      "provider": "codex",
+      "case_id": "initiating-change",
+      "condition": "finalist",
+      "repetition": 3,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-initiating-change.json"
+    },
+    {
+      "slot": 54,
+      "stage": "remaining",
+      "provider_order": 27,
+      "provider": "claude",
+      "case_id": "initiating-change",
+      "condition": "finalist",
+      "repetition": 3,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-initiating-change.json"
+    },
+    {
+      "slot": 55,
+      "stage": "remaining",
+      "provider_order": 28,
+      "provider": "codex",
+      "case_id": "moved-guide",
+      "condition": "finalist",
+      "repetition": 3,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-moved-guide.json"
+    },
+    {
+      "slot": 56,
+      "stage": "remaining",
+      "provider_order": 28,
+      "provider": "claude",
+      "case_id": "moved-guide",
+      "condition": "finalist",
+      "repetition": 3,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-moved-guide.json"
+    },
+    {
+      "slot": 57,
+      "stage": "remaining",
+      "provider_order": 29,
+      "provider": "codex",
+      "case_id": "semantic-delivery",
+      "condition": "finalist",
+      "repetition": 3,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-semantic-delivery.json"
+    },
+    {
+      "slot": 58,
+      "stage": "remaining",
+      "provider_order": 29,
+      "provider": "claude",
+      "case_id": "semantic-delivery",
+      "condition": "finalist",
+      "repetition": 3,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-semantic-delivery.json"
+    },
+    {
+      "slot": 59,
+      "stage": "remaining",
+      "provider_order": 30,
+      "provider": "codex",
+      "case_id": "invocation-change",
+      "condition": "finalist",
+      "repetition": 3,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-invocation-change.json"
+    },
+    {
+      "slot": 60,
+      "stage": "remaining",
+      "provider_order": 30,
+      "provider": "claude",
+      "case_id": "invocation-change",
+      "condition": "finalist",
+      "repetition": 3,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-invocation-change.json"
+    },
+    {
+      "slot": 61,
+      "stage": "remaining",
+      "provider_order": 31,
+      "provider": "codex",
+      "case_id": "invocation-review",
+      "condition": "finalist",
+      "repetition": 3,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-invocation-review.json"
+    },
+    {
+      "slot": 62,
+      "stage": "remaining",
+      "provider_order": 31,
+      "provider": "claude",
+      "case_id": "invocation-review",
+      "condition": "finalist",
+      "repetition": 3,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-invocation-review.json"
+    },
+    {
+      "slot": 63,
+      "stage": "remaining",
+      "provider_order": 32,
+      "provider": "codex",
+      "case_id": "invocation-verification",
+      "condition": "finalist",
+      "repetition": 3,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-invocation-verification.json"
+    },
+    {
+      "slot": 64,
+      "stage": "remaining",
+      "provider_order": 32,
+      "provider": "claude",
+      "case_id": "invocation-verification",
+      "condition": "finalist",
+      "repetition": 3,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-invocation-verification.json"
+    },
+    {
+      "slot": 65,
+      "stage": "remaining",
+      "provider_order": 33,
+      "provider": "codex",
+      "case_id": "invocation-unrelated",
+      "condition": "finalist",
+      "repetition": 3,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-invocation-unrelated.json"
+    },
+    {
+      "slot": 66,
+      "stage": "remaining",
+      "provider_order": 33,
+      "provider": "claude",
+      "case_id": "invocation-unrelated",
+      "condition": "finalist",
+      "repetition": 3,
+      "configuration": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-invocation-unrelated.json"
+    }
+  ]
+}

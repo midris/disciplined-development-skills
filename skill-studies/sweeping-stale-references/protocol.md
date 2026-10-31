@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `sweeping-stale-references`
 Status: candidate-screen-01 complete; compact adopted on 2026-10-31, followed by the owner-approved removal of exact reference counts.
-Current action: count reporting is simplified in the shipped skill. Keep paths, precise locations, changes and preservation reasons; complete repair remains the priority. Claude discovery is a possible next experiment, with no new model calls allocated. See [reporting simplification](#reporting-simplification-2026-10-31).
+Current action: execute the owner-approved count-free-regression-01 in two stages after current-runtime qualification and frozen readiness: 24 focused subjects/four reviews, then 42 remaining subjects/six reviews only after a passing checkpoint. See [design](../../plans/specs/2026-10-31-ssr-count-free-regression.md). The owner also removed the redundant optional-count sentence; no retries or further wording changes are allocated.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](runs/core-baseline-01/core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -23,13 +23,13 @@ That adoption added no model calls or rollout to other projects; the later count
 ## Reporting simplification: 2026-10-31
 
 The owner directed: “Let's remove the count requirement. Keep the paths, what changed, and why anything was left alone.”
-The shipped skill removes counting/deduplication instructions and `(N matches)` from its account template, and explicitly makes exact reference counts unnecessary.
+The shipped skill removes counting/deduplication instructions and `(N matches)` from its account template, without requiring exact reference counts.
 It still requires every mutable-tree match to be accounted for by path/outcome with precise locations, old → new changes, and explanations for preserved matches.
 Search, triage, complete repair, rationale preservation, post-edit verification, grouping and the single-file negative-form boundary remain unchanged; the description is unchanged.
 Correct work takes priority over numerical accounting: retained examples show an incorrect total despite correct subtotals, and a correct repair with a semantic-block counting mismatch.
 Historical snapshots, criterion cards, scores and review captures remain fixed under their original contracts; do not reinterpret old P3 failures as passes.
 This is an owner-approved reporting-policy change after adoption, not the exact body used in the completed model comparison.
-Static diff/identity checks and the repository hook suite verify this edit; no new model observations establish its behavioral effect, and no model calls are allocated.
+Static diff/identity checks and the repository hook suite verified the edit. The owner subsequently requested the staged regression below; the final body omits the redundant optional-count sentence. No behavioral outcome is claimed before collection.
 
 ## Sources and intended use
 
@@ -288,6 +288,112 @@ SSR collection used config schema 0.2 and result schema 0.4; retained bundles ke
 Control contribution claims require evidence that omitted guidance was not loaded. Record limits on observed isolation rather than claiming exhaustive host-wide exclusion.
 
 Pre-baseline development is closed at two pairs. Do not reopen it for a new facet; a named readiness defect requires a separately authorized diagnostic exception.
+
+### Validation: count-free-regression-01
+
+Status: owner-approved focused-first regression; source freeze, runtime qualification and readiness precede dispatch.
+Authority: the owner requested full regression beginning with a focused pass, proceeding to full only if focused passes. The [design](../../plans/specs/2026-10-31-ssr-count-free-regression.md) fixes 24+42 subjects and 4+6 reviews, without repeating the focused runs.
+Condition `finalist` in this new batch means only the frozen count-free compact body, SHA-256 `a6881afef4cd83144d99c2913af02c8b4178998659128a88173f84bd8f084cda`.
+All eleven scenarios run three times per provider. Stage 1 is pressure-repair, discovery-shiv, local-change and large-sweep-account. Stage 2 requires all focused subjects and reviews audited, all F1–F3 met, useful path/change/preservation reports and no unresolved consequential-quality/runtime/evidence fault.
+Pure reporting defects and native misses remain separate; exact counts are not an acceptance requirement. Any reporting defect making essential repair/preservation status untrustworthy requires owner direction at the checkpoint.
+Runtime: current qualified Codex/Claude CLI, gpt-5.6-sol low and claude-opus-5-5 low subjects, 900 seconds, workspace-write; Opus medium reviewers use qualified read-only Read/Glob/Grep and disabled skills. Runtime drift from the previous screen is a separate stratum, not a wording-only causal comparison.
+Prospective SSR-count-free-1 and new cards modify only P3 count obligations; historical policy/cards/results remain unchanged. Full project/trace active assessment precedes each next dispatch.
+Ten bounded complete-output reviews cover all 48 repairs and 144 functional factors: focused Shiv and pressure/local per provider; then remaining semantic/initiating, native positives and moved-guide per provider. Full first-pass delivery and prior-access timing are audited; no extra review or continuation is implicit.
+Budget: 66 subjects/ten evaluators; combined ceilings 954/78/4/4. Stage 2 capacity is conditional, not transferable. No new retry, replacement, authoring or description edit.
+Effort forecast: 180–260 active minutes for both stages, including qualification/preparation, waits, retention/scoring, review/audit and closure; 90–140 for focused checkpoint. Time is a guideline, with actual effort retained in CW accounting.
+Raw storage: `/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/`; use existing verified whole-bundle retention and accepted single-host recovery boundary.
+
+### Batch: count-free-codex-01
+
+Status: approved conditional scope; freeze and readiness precede dispatch.
+Authority: count-free-regression-01 above and its fixed stage gate.
+Scope: 33 subjects; provider-local orders 1–12 are focused and 13–33 are conditional remaining cases.
+Inclusion: descriptive-only; Include all valid-setup executions regardless of outcome. Preserve stopped, excluded and unattempted slots. No automatic retry or replacement. No retries are allocated.
+Selected manifests: [pressure-repair](runs/count-free-regression-01/preparation/manifests/codex-pressure-repair-manifest.json), [discovery-shiv](runs/count-free-regression-01/preparation/manifests/codex-discovery-shiv-manifest.json), [local-change](runs/count-free-regression-01/preparation/manifests/codex-local-change-manifest.json), [large-sweep-account](runs/count-free-regression-01/preparation/manifests/codex-large-sweep-account-manifest.json), [initiating-change](runs/count-free-regression-01/preparation/manifests/codex-initiating-change-manifest.json), [moved-guide](runs/count-free-regression-01/preparation/manifests/codex-moved-guide-manifest.json), [semantic-delivery](runs/count-free-regression-01/preparation/manifests/codex-semantic-delivery-manifest.json), [invocation-change](runs/count-free-regression-01/preparation/manifests/codex-invocation-change-manifest.json), [invocation-review](runs/count-free-regression-01/preparation/manifests/codex-invocation-review-manifest.json), [invocation-verification](runs/count-free-regression-01/preparation/manifests/codex-invocation-verification-manifest.json), [invocation-unrelated](runs/count-free-regression-01/preparation/manifests/codex-invocation-unrelated-manifest.json).
+Attempt index: [count-free-codex-01-run-index.json](runs/count-free-regression-01/count-free-codex-01-run-index.json).
+Assessment: pending collection and direct assessment.
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | pressure-repair | finalist | 1 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-pressure-repair.json` |
+| 2 | discovery-shiv | finalist | 1 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-discovery-shiv.json` |
+| 3 | local-change | finalist | 1 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-local-change.json` |
+| 4 | large-sweep-account | finalist | 1 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-large-sweep-account.json` |
+| 5 | pressure-repair | finalist | 2 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-pressure-repair.json` |
+| 6 | discovery-shiv | finalist | 2 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-discovery-shiv.json` |
+| 7 | local-change | finalist | 2 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-local-change.json` |
+| 8 | large-sweep-account | finalist | 2 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-large-sweep-account.json` |
+| 9 | pressure-repair | finalist | 3 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-pressure-repair.json` |
+| 10 | discovery-shiv | finalist | 3 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-discovery-shiv.json` |
+| 11 | local-change | finalist | 3 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-local-change.json` |
+| 12 | large-sweep-account | finalist | 3 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-large-sweep-account.json` |
+| 13 | initiating-change | finalist | 1 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-initiating-change.json` |
+| 14 | moved-guide | finalist | 1 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-moved-guide.json` |
+| 15 | semantic-delivery | finalist | 1 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-semantic-delivery.json` |
+| 16 | invocation-change | finalist | 1 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-invocation-change.json` |
+| 17 | invocation-review | finalist | 1 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-invocation-review.json` |
+| 18 | invocation-verification | finalist | 1 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-invocation-verification.json` |
+| 19 | invocation-unrelated | finalist | 1 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-invocation-unrelated.json` |
+| 20 | initiating-change | finalist | 2 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-initiating-change.json` |
+| 21 | moved-guide | finalist | 2 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-moved-guide.json` |
+| 22 | semantic-delivery | finalist | 2 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-semantic-delivery.json` |
+| 23 | invocation-change | finalist | 2 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-invocation-change.json` |
+| 24 | invocation-review | finalist | 2 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-invocation-review.json` |
+| 25 | invocation-verification | finalist | 2 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-invocation-verification.json` |
+| 26 | invocation-unrelated | finalist | 2 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-invocation-unrelated.json` |
+| 27 | initiating-change | finalist | 3 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-initiating-change.json` |
+| 28 | moved-guide | finalist | 3 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-moved-guide.json` |
+| 29 | semantic-delivery | finalist | 3 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-semantic-delivery.json` |
+| 30 | invocation-change | finalist | 3 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-invocation-change.json` |
+| 31 | invocation-review | finalist | 3 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-invocation-review.json` |
+| 32 | invocation-verification | finalist | 3 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-invocation-verification.json` |
+| 33 | invocation-unrelated | finalist | 3 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/codex-invocation-unrelated.json` |
+
+### Batch: count-free-claude-01
+
+Status: approved conditional scope; freeze and readiness precede dispatch.
+Authority: count-free-regression-01 above and its fixed stage gate.
+Scope: 33 subjects; provider-local orders 1–12 are focused and 13–33 are conditional remaining cases.
+Inclusion: descriptive-only; Include all valid-setup executions regardless of outcome. Preserve stopped, excluded and unattempted slots. No automatic retry or replacement. No retries are allocated.
+Selected manifests: [pressure-repair](runs/count-free-regression-01/preparation/manifests/claude-pressure-repair-manifest.json), [discovery-shiv](runs/count-free-regression-01/preparation/manifests/claude-discovery-shiv-manifest.json), [local-change](runs/count-free-regression-01/preparation/manifests/claude-local-change-manifest.json), [large-sweep-account](runs/count-free-regression-01/preparation/manifests/claude-large-sweep-account-manifest.json), [initiating-change](runs/count-free-regression-01/preparation/manifests/claude-initiating-change-manifest.json), [moved-guide](runs/count-free-regression-01/preparation/manifests/claude-moved-guide-manifest.json), [semantic-delivery](runs/count-free-regression-01/preparation/manifests/claude-semantic-delivery-manifest.json), [invocation-change](runs/count-free-regression-01/preparation/manifests/claude-invocation-change-manifest.json), [invocation-review](runs/count-free-regression-01/preparation/manifests/claude-invocation-review-manifest.json), [invocation-verification](runs/count-free-regression-01/preparation/manifests/claude-invocation-verification-manifest.json), [invocation-unrelated](runs/count-free-regression-01/preparation/manifests/claude-invocation-unrelated-manifest.json).
+Attempt index: [count-free-claude-01-run-index.json](runs/count-free-regression-01/count-free-claude-01-run-index.json).
+Assessment: pending collection and direct assessment.
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | pressure-repair | finalist | 1 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-pressure-repair.json` |
+| 2 | discovery-shiv | finalist | 1 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-discovery-shiv.json` |
+| 3 | local-change | finalist | 1 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-local-change.json` |
+| 4 | large-sweep-account | finalist | 1 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-large-sweep-account.json` |
+| 5 | pressure-repair | finalist | 2 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-pressure-repair.json` |
+| 6 | discovery-shiv | finalist | 2 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-discovery-shiv.json` |
+| 7 | local-change | finalist | 2 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-local-change.json` |
+| 8 | large-sweep-account | finalist | 2 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-large-sweep-account.json` |
+| 9 | pressure-repair | finalist | 3 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-pressure-repair.json` |
+| 10 | discovery-shiv | finalist | 3 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-discovery-shiv.json` |
+| 11 | local-change | finalist | 3 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-local-change.json` |
+| 12 | large-sweep-account | finalist | 3 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-large-sweep-account.json` |
+| 13 | initiating-change | finalist | 1 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-initiating-change.json` |
+| 14 | moved-guide | finalist | 1 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-moved-guide.json` |
+| 15 | semantic-delivery | finalist | 1 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-semantic-delivery.json` |
+| 16 | invocation-change | finalist | 1 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-invocation-change.json` |
+| 17 | invocation-review | finalist | 1 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-invocation-review.json` |
+| 18 | invocation-verification | finalist | 1 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-invocation-verification.json` |
+| 19 | invocation-unrelated | finalist | 1 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-invocation-unrelated.json` |
+| 20 | initiating-change | finalist | 2 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-initiating-change.json` |
+| 21 | moved-guide | finalist | 2 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-moved-guide.json` |
+| 22 | semantic-delivery | finalist | 2 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-semantic-delivery.json` |
+| 23 | invocation-change | finalist | 2 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-invocation-change.json` |
+| 24 | invocation-review | finalist | 2 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-invocation-review.json` |
+| 25 | invocation-verification | finalist | 2 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-invocation-verification.json` |
+| 26 | invocation-unrelated | finalist | 2 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-invocation-unrelated.json` |
+| 27 | initiating-change | finalist | 3 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-initiating-change.json` |
+| 28 | moved-guide | finalist | 3 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-moved-guide.json` |
+| 29 | semantic-delivery | finalist | 3 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-semantic-delivery.json` |
+| 30 | invocation-change | finalist | 3 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-invocation-change.json` |
+| 31 | invocation-review | finalist | 3 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-invocation-review.json` |
+| 32 | invocation-verification | finalist | 3 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-invocation-verification.json` |
+| 33 | invocation-unrelated | finalist | 3 | `skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-invocation-unrelated.json` |
 
 ### Proposal: candidate-screen-01
 

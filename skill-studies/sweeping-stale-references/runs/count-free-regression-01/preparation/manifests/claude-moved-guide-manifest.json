@@ -1,0 +1,62 @@
+{
+  "format_version": "1",
+  "manifest_id": "ssr-count-free-claude-moved-guide",
+  "study_id": "sweeping-stale-references",
+  "case_id": "moved-guide",
+  "status": "draft",
+  "created_at": "2026-10-31",
+  "source_revision": null,
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "a4038836187dcf16649e8f3ab91d2f5c120e319ce949e932a5627519ea9c2266",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/sweeping-stale-references/protocol.md",
+      "sha256": "890dcb11d47fee962a6afe7514937000c3618eeb29e047aa3ed73165ff6bd368",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "f54cb58884f9dbffd39f37746234487d6113e1f01ad3b1d355fe269310895321",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result-v2.schema.json",
+      "sha256": "81902ed03e807804404c0d6ba7a0092a1c311c9eef45ee88c89708ce50d7c2c2",
+      "version": "2"
+    },
+    "policy": {
+      "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/policy.txt",
+      "sha256": "cc030c28bcfc36c20b700f00d2307b2933ee7d884a0d0a87d14ed8b0da2b92f5",
+      "version": "SSR-count-free-1"
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/criteria/moved-guide.md",
+        "sha256": "816080815772ca4e617b7c912998ee9de20e7f3f195ffb107c26661950900537",
+        "version": "count-free-4"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "finalist",
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/configs/claude-moved-guide.json",
+        "sha256": "f84419ba25e06805881df6eb40f588e13315f8c9f77a2097d9a37f1acda21f53",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/skill/SKILL.md"
+    }
+  ],
+  "subject_sources": [],
+  "controller_only": [
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/interpretation.md",
+      "sha256": null,
+      "version": null
+    }
+  ]
+}

@@ -41,7 +41,6 @@ Before committing all updates together, repeat relevant old/new searches and ins
 Put `References swept:` after narrative and before `Verification:`.
 Account for every mutable-tree match by path and outcome, with precise locations.
 Group only by the same path and outcome.
-Exact reference counts are not required.
 For updates, give the audited old → new encoding or faithful language-specific form.
 
 ```text
