@@ -3,9 +3,9 @@
   "manifest_id": "ssr-count-free-codex-moved-guide",
   "study_id": "sweeping-stale-references",
   "case_id": "moved-guide",
-  "status": "draft",
+  "status": "frozen",
   "created_at": "2026-10-31",
-  "source_revision": null,
+  "source_revision": "793fe322ce2564a23fae09d152b6833b1201b466",
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
@@ -14,7 +14,7 @@
     },
     "protocol": {
       "path": "skill-studies/sweeping-stale-references/protocol.md",
-      "sha256": "890dcb11d47fee962a6afe7514937000c3618eeb29e047aa3ed73165ff6bd368",
+      "sha256": "a5c0ef9573de9a62498788b62d07745fc508909d6812f0b9a36f3adfa89a0683",
       "version": "1"
     },
     "format_contract": {
@@ -35,7 +35,7 @@
     "criteria": [
       {
         "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/criteria/moved-guide.md",
-        "sha256": "816080815772ca4e617b7c912998ee9de20e7f3f195ffb107c26661950900537",
+        "sha256": "d0bd56a5dd0248987ed6da9f106f3df6996b3737ff8b1c32ede9f6467ab57b7c",
         "version": "count-free-4"
       }
     ]
@@ -51,11 +51,72 @@
       "target_skill": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/skill/SKILL.md"
     }
   ],
-  "subject_sources": [],
+  "subject_sources": [
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/pilot-02/fixture/.gitignore",
+      "sha256": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/pilot-02/fixture/README.md",
+      "sha256": "098f558258086dd934d009abf9d0a56f49a7e2618f3cd21050553037c0e86075",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/pilot-02/fixture/docs/index.md",
+      "sha256": "4449bfe65c1cc6a59bc692a8077377a6e56b0f378870be229000a70a943bb609",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/pilot-02/fixture/docs/reference/setup.md",
+      "sha256": "c7a759fbfc829c024b57d3a79f63fa6a4718e173dfb5a7e2b943f4e44f47a5b9",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/pilot-02/fixture/docs/tutorials/quickstart.md",
+      "sha256": "b856f45737cb568d58ee7ebbec0b12123c4be3fac93c6994c64508ca86763365",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/pilot-02/fixture/plans/completed/docs-layout.md",
+      "sha256": "64f544d394b479f0e7a30c6bdd56e52aaf7352509c0f8b08d4148994eb628932",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/pilot-02/fixture/scripts/export-guide.sh",
+      "sha256": "06fdfdc2080354658cfa73fbe443799dafcb9afc2bdd41f152bff8d3fe72f82f",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/pilot-02/fixture/vendor/widget/README.md",
+      "sha256": "7e28eb12cddc29de9f3ef2ba7b3f759bbb92af864f573f4c8556b441344799b0",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/pilot-02/fixture/vendor/widget/setup.md",
+      "sha256": "9ea5c2f793cd0128db290b87d35b46f8a9fe6f7d32f6a44bfea32530e49ac2ab",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/pilot-02/task.md",
+      "sha256": "4b72fb7e8ff4beebcbf95282e502b7427a9622c21693fd48e397b044a603f11b",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/prompts/codex-moved-guide.md",
+      "sha256": "6695cbb23cfd7d8656a122b2e9ea4ba35fdea581f7a15780e146d84a0732b588",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/skill/SKILL.md",
+      "sha256": "a6881afef4cd83144d99c2913af02c8b4178998659128a88173f84bd8f084cda",
+      "version": null
+    }
+  ],
   "controller_only": [
     {
       "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/interpretation.md",
-      "sha256": null,
+      "sha256": "5c55da3c507bac3b4ee9f3b9d2c695136f6ce852093466de665c428ba84b847f",
       "version": null
     }
   ]

@@ -1750,3 +1750,5 @@ Baseline review: the [policy-4 resolution and self-review](../../reviews/2026-09
 Final screen accounting: [Codex index](runs/final-comparison-01/screen-01/codex-final-comments-screen-01-run-index.json), [Claude index](runs/final-comparison-01/screen-01/claude-final-comments-screen-01-run-index.json).
 
 The owner-approved [count-free SSR regression](../../plans/specs/2026-10-31-ssr-count-free-regression.md) allocates 24 focused subjects/four reviews followed, only on a passing checkpoint, by 42 remaining subjects/six reviews. Combined ceilings are 954 subjects/78 evaluators; no retry or authoring allocation is added. New attempts are charged as dispatched, including failures.
+
+Count-free SSR accounting includes [Codex subjects](../sweeping-stale-references/runs/count-free-regression-01/count-free-codex-01-run-index.json) and [Claude subjects](../sweeping-stale-references/runs/count-free-regression-01/count-free-claude-01-run-index.json); the focused-stage gate controls remaining dispatch.

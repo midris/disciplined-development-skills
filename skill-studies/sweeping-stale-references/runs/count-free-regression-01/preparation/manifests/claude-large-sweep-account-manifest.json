@@ -3,9 +3,9 @@
   "manifest_id": "ssr-count-free-claude-large-sweep-account",
   "study_id": "sweeping-stale-references",
   "case_id": "large-sweep-account",
-  "status": "draft",
+  "status": "frozen",
   "created_at": "2026-10-31",
-  "source_revision": null,
+  "source_revision": "793fe322ce2564a23fae09d152b6833b1201b466",
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
@@ -14,7 +14,7 @@
     },
     "protocol": {
       "path": "skill-studies/sweeping-stale-references/protocol.md",
-      "sha256": "890dcb11d47fee962a6afe7514937000c3618eeb29e047aa3ed73165ff6bd368",
+      "sha256": "a5c0ef9573de9a62498788b62d07745fc508909d6812f0b9a36f3adfa89a0683",
       "version": "1"
     },
     "format_contract": {
@@ -35,7 +35,7 @@
     "criteria": [
       {
         "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/criteria/large-sweep-account.md",
-        "sha256": "5737af3204d1ebd86c7d9e53421f65bb07a3b8c8f236d4ab67232dd697d5e44b",
+        "sha256": "c72786bb0bae46a1b259f348ccfc27f3ccfa636140f694edeb8e3605bff8c9ef",
         "version": "count-free-3"
       }
     ]
@@ -51,11 +51,32 @@
       "target_skill": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/skill/SKILL.md"
     }
   ],
-  "subject_sources": [],
+  "subject_sources": [
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/large-sweep-account/fixture/inventory.md",
+      "sha256": "b566e44540f768e6138a42b4651f43ba64937464b248f3db2f7073a10cae6df1",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/large-sweep-account/task.md",
+      "sha256": "525d39ced36acfd15d3656dd59701c5e4d5d75918ed1f2a657593e290f614170",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/prompts/claude-large-sweep-account.md",
+      "sha256": "396f19a60a9028e162a073ea1bb7672d071a90bafe7dffd6ac7e15b51960d0e5",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/skill/SKILL.md",
+      "sha256": "a6881afef4cd83144d99c2913af02c8b4178998659128a88173f84bd8f084cda",
+      "version": null
+    }
+  ],
   "controller_only": [
     {
       "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/interpretation.md",
-      "sha256": null,
+      "sha256": "5c55da3c507bac3b4ee9f3b9d2c695136f6ce852093466de665c428ba84b847f",
       "version": null
     }
   ]
