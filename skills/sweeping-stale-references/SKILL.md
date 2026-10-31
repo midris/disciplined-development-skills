@@ -39,16 +39,17 @@ Before committing all updates together, repeat relevant old/new searches and ins
 ## Commit account
 
 Put `References swept:` after narrative and before `Verification:`.
-Account for every mutable-tree match, counting each reference once across repeated searches.
-Group only by the same path and outcome, with precise locations and counts.
+Account for every mutable-tree match by path and outcome, with precise locations.
+Group only by the same path and outcome.
+Exact reference counts are not required.
 For updates, give the audited old → new encoding or faithful language-specific form.
 
 ```text
 References swept:
-- path:LINES — update `old` → `new` (N matches)
-- path:LINES — already current: <intended state> (N matches)
-- path:LINES — false positive: <reason> (N matches)
-- path:LINES — intentionally stale: <reason> (N matches)
+- path:LINES — update `old` → `new`
+- path:LINES — already current: <intended state>
+- path:LINES — false positive: <reason>
+- path:LINES — intentionally stale: <reason>
 
 Verification:
 - <check actually performed and observed result>

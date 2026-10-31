@@ -2,23 +2,34 @@
 
 Format version: `1`
 Study ID: `sweeping-stale-references`
-Status: candidate-screen-01 complete; the owner adopted the unchanged compact skill on 2026-10-31.
-Current action: owner consideration of retained count-error examples before selecting any reporting or discovery follow-up. Correct repair and preservation take priority over reporting precision. Counting remains in the adopted skill; removing it and improving Claude discovery are possible follow-ups, not selected edits or model runs. See [adoption](#compact-adoption-2026-10-31) and the [completed comparison](runs/candidate-screen-01/candidate-screen-01-assessment.md).
+Status: candidate-screen-01 complete; compact adopted on 2026-10-31, followed by the owner-approved removal of exact reference counts.
+Current action: count reporting is simplified in the shipped skill. Keep paths, precise locations, changes and preservation reasons; complete repair remains the priority. Claude discovery is a possible next experiment, with no new model calls allocated. See [reporting simplification](#reporting-simplification-2026-10-31).
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](runs/core-baseline-01/core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
 ## Compact adoption: 2026-10-31
 
 The owner approved adoption: “let's go ahead and adopt compact”, accepting reporting limitations provided the work is done properly.
-The shipped [skill](../../skills/sweeping-stale-references/SKILL.md) is an exact copy of the tested [compact finalist](drafts/compact-rewrite/finalist/SKILL.md): SHA-256 `f1f297f213855f9b53835dd084b2be6d3d9134cadab47babea08cbdaad9a205e`, 814 words and 5,355 bytes.
-The description is unchanged; the body retains its counting and path/outcome accounting requirements.
+At adoption commit `1da4754`, the shipped [skill](../../skills/sweeping-stale-references/SKILL.md) was an exact copy of the tested [compact finalist](drafts/compact-rewrite/finalist/SKILL.md): SHA-256 `f1f297f213855f9b53835dd084b2be6d3d9134cadab47babea08cbdaad9a205e`, 814 words and 5,355 bytes.
+That tested body retained counting and path/outcome accounting requirements; the subsequent simplification below removes only the exact-count requirement.
 The completed screen supports repair/preservation and consequential artifact quality, with the compact native-loading miss and procedural defects retained in its assessment.
-The owner is considering removing counts; that is not yet a wording change, rescoring decision or further testing allocation.
+The owner subsequently approved count removal, as recorded below; the adoption evidence and its original judgments remain unchanged.
 This promotion changes the single-file reporting boundary from the original: any outside-file match now requires a positive inventory, including preserved or unrelated matches.
 It also explicitly distinguishes already-current references and requires old/new searching, rationale preservation and post-edit verification.
 Original/comprehensive snapshots, all frozen inputs and historical judgments remain unchanged.
 Adoption updates the repository's shipped source; it does not reinstall copies in other projects or alter installed personal skills.
-No new model call, discovery experiment, rollout to other projects or count-removal edit is included.
+That adoption added no model calls or rollout to other projects; the later count-removal decision is recorded below.
+
+## Reporting simplification: 2026-10-31
+
+The owner directed: “Let's remove the count requirement. Keep the paths, what changed, and why anything was left alone.”
+The shipped skill removes counting/deduplication instructions and `(N matches)` from its account template, and explicitly makes exact reference counts unnecessary.
+It still requires every mutable-tree match to be accounted for by path/outcome with precise locations, old → new changes, and explanations for preserved matches.
+Search, triage, complete repair, rationale preservation, post-edit verification, grouping and the single-file negative-form boundary remain unchanged; the description is unchanged.
+Correct work takes priority over numerical accounting: retained examples show an incorrect total despite correct subtotals, and a correct repair with a semantic-block counting mismatch.
+Historical snapshots, criterion cards, scores and review captures remain fixed under their original contracts; do not reinterpret old P3 failures as passes.
+This is an owner-approved reporting-policy change after adoption, not the exact body used in the completed model comparison.
+Static diff/identity checks and the repository hook suite verify this edit; no new model observations establish its behavioral effect, and no model calls are allocated.
 
 ## Sources and intended use
 
@@ -42,6 +53,8 @@ The task must supply a settled desired outcome and sufficient project context, r
 
 
 ## Behavioral contract and consumers
+
+The obligations below describe the original study contract retained for historical scoring. The shipped reporting contract is now modified by [reporting simplification](#reporting-simplification-2026-10-31); its exact-count requirement no longer applies to new work.
 
 Owner clarification, 2026-09-12: the intended outcome includes preventing documentation drift when project structure or code facts change.
 When a file moves, find references to its old path and reconcile affected links, commands and other current consumers to the new location, resolving relative paths from each consumer.
