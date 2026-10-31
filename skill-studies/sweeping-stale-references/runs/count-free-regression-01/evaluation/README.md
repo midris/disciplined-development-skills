@@ -14,4 +14,19 @@ The controller retains the complete capture and verifies protected bytes, exact 
 The delivery audit checks complete reads and prior-access timing; active review then evaluates every functional factor and quality finding before marking the ledger audit complete.
 The focused gate requires all four audited reviews and active reconciliation before any remaining-stage dispatch.
 
-Preparation audit: all 24 focused subjects are retained and assessed; all 18 repair outputs are assigned exactly once. Complete packet identities and configured read-only controls passed mechanical validation before dispatch. A nested Codex tool-output projection gap was resolved by inspecting the retained complete provider sessions; no raw capture was missing. Current controller copies and score evidence pointers retain that distinction.
+All ten reviews are complete. Independent first passes agree on all 144 functional factors across 48 unique repair outputs; no post-prior factor changed. Six reviewers read priors after their independent pass; four stopped beforehand and were compared by the active assessor without another call. See [final verification](../final-verification.json) for exact coverage and [assessment](../count-free-regression-01-assessment.md) for conclusions and limits.
+
+The [retention incident](../retention-incident-01.json) records restoration of Git index stat caches changed during focused packet assembly; project/output/review input bytes were unaffected. The remaining packet builder disables index refresh and all 66 bundle inventories remained exact after packet construction. Codex nested tool outputs were inspected in full provider sessions where the stdout projection omitted them.
+
+## Completed reconciliations
+
+- [codex-shiv](codex-shiv/reconciliation.md)
+- [codex-pressure-local](codex-pressure-local/reconciliation.md)
+- [claude-shiv](claude-shiv/reconciliation.md)
+- [claude-pressure-local](claude-pressure-local/reconciliation.md)
+- [codex-semantic-initiating](codex-semantic-initiating/reconciliation.md)
+- [codex-native-positives](codex-native-positives/reconciliation.md)
+- [codex-moved](codex-moved/reconciliation.md)
+- [claude-semantic-initiating](claude-semantic-initiating/reconciliation.md)
+- [claude-native-positives](claude-native-positives/reconciliation.md)
+- [claude-moved](claude-moved/reconciliation.md)

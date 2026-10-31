@@ -1,0 +1,73 @@
+{
+  "first_pass_event": 134,
+  "prior_first_access_event": null,
+  "post_prior_event": null,
+  "judgments": [
+    {
+      "run_id": "20261031T113715839Z-ssr-count-free-claude-invocation-change-9d518b56-d641-4635-833d-47f586dc7808-7us5rvqn",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "All eighteen functional factors agree. Complete useful repairs survive missed native selection; D1 remains separately recorded. No consequential quality disagreement."
+    },
+    {
+      "run_id": "20261031T113842998Z-ssr-count-free-claude-invocation-review-c9dea6b7-28a3-408d-a2c9-0f4282048245-7blieivv",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "All eighteen functional factors agree. Complete useful repairs survive missed native selection; D1 remains separately recorded. No consequential quality disagreement."
+    },
+    {
+      "run_id": "20261031T114655830Z-ssr-count-free-claude-invocation-change-74b1fd77-f097-4e69-9569-e62c962772bf-m_p7fuwh",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "All eighteen functional factors agree. Complete useful repairs survive missed native selection; D1 remains separately recorded. No consequential quality disagreement."
+    },
+    {
+      "run_id": "20261031T114839183Z-ssr-count-free-claude-invocation-review-5c82f072-f91f-485f-b6ee-8dfc857b14f8-25cwrlt0",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "All eighteen functional factors agree. Complete useful repairs survive missed native selection; D1 remains separately recorded. No consequential quality disagreement."
+    },
+    {
+      "run_id": "20261031T120137970Z-ssr-count-free-claude-invocation-change-51ede39f-bbb1-4d90-b5fb-43c0dcff1276-lv7k7lj3",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "All eighteen functional factors agree. Complete useful repairs survive missed native selection; D1 remains separately recorded. No consequential quality disagreement."
+    },
+    {
+      "run_id": "20261031T120336629Z-ssr-count-free-claude-invocation-review-fd514768-bf19-4b10-8a2f-c58d576151c9-2010ts_p",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "All eighteen functional factors agree. Complete useful repairs survive missed native selection; D1 remains separately recorded. No consequential quality disagreement."
+    }
+  ]
+}

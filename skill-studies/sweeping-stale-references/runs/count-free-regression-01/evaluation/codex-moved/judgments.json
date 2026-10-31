@@ -1,0 +1,40 @@
+{
+  "first_pass_event": 86,
+  "prior_first_access_event": 87,
+  "post_prior_event": 94,
+  "judgments": [
+    {
+      "run_id": "20261031T113258321Z-ssr-count-free-codex-moved-guide-a8795779-7aea-4d64-a58f-91b687f54105-egwrylq7",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All nine factors agree. Identical complete projects and full export replay establish useful preserved repair; reporting concerns stay separately classified and prompt-origin uncertainty is resolved."
+    },
+    {
+      "run_id": "20261031T114417130Z-ssr-count-free-codex-moved-guide-89f533e5-b661-4275-a65f-52def915298f-kbxmbdwl",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All nine factors agree. Identical complete projects and full export replay establish useful preserved repair; reporting concerns stay separately classified and prompt-origin uncertainty is resolved."
+    },
+    {
+      "run_id": "20261031T115634295Z-ssr-count-free-codex-moved-guide-f416e6dd-c5bd-416c-80e8-be0faae6d32b-sxzrwx7_",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All nine factors agree. Identical complete projects and full export replay establish useful preserved repair; reporting concerns stay separately classified and prompt-origin uncertainty is resolved."
+    }
+  ]
+}

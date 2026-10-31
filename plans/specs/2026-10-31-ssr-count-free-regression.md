@@ -1,6 +1,6 @@
 # SSR count-free compact regression
 
-Status: owner approved focused regression followed conditionally by full regression. Preparation and current-runtime qualification precede dispatch.
+Status: complete; the focused checkpoint passed and the full approved regression completed. See the [assessment](../../skill-studies/sweeping-stale-references/runs/count-free-regression-01/count-free-regression-01-assessment.md).
 The [protocol](../../skill-studies/sweeping-stale-references/protocol.md#reporting-simplification-2026-10-31) owns the changed reporting contract; the [active plan](../2026-09-11-model-driven-skill-testing.md) owns progress.
 
 ## Question and fixed inputs
@@ -57,6 +57,6 @@ If qualification cannot establish the required boundary, stop and report the con
 - [x] Owner selected focused-first execution and conditional full completion, with 66 subjects/ten reviews total and no duplicate focused collection.
 - [x] Prepare new configuration/card/schedule identities; qualify current runtimes and authentication, freeze authority and pass readiness. Inputs are pinned at `793fe322ce2564a23fae09d152b6833b1201b466`; manifests and dispatch authority at `911ee2ae51219dac4747e4809fec1dfbac19cfa7`. Eleven qualification checks passed; both providers have completed valid production subjects.
 - [x] Complete focused checkpoint: all 24 subjects and four audited reviews retained; 18/18 repairs and 54/54 independent functional factors met. Reporting defects remain separate; [gate](../../skill-studies/sweeping-stale-references/runs/count-free-regression-01/focused-gate.json) opens the approved remaining stage.
-- [x] Run all 66 subjects sequentially, preserving and assessing each before the next dispatch. All 48 repairs meet F1–F3; remaining complete-output review is pending. All retained inventories and actual provider models were verified after packet construction.
-- [ ] Freeze complete review packets, audit each review and reconcile findings before the next review.
-- [ ] Publish the regression assessment, limitations and actual accounting; preserve the unrelated CW fixture edit.
+- [x] Run all 66 subjects sequentially, preserving and assessing each before the next dispatch. All 48 repairs meet F1–F3; all complete-output reviews agree. All retained inventories and actual provider models were verified after packet construction.
+- [x] Freeze complete review packets, audit all ten reviews and reconcile findings before each next review; all 144 independent factors agree.
+- [x] Publish the regression assessment, limitations and actual accounting; preserve the unrelated CW fixture edit unchanged and unstaged.

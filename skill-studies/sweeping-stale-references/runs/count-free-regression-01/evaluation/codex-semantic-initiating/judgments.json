@@ -1,0 +1,73 @@
+{
+  "first_pass_event": 150,
+  "prior_first_access_event": null,
+  "post_prior_event": null,
+  "judgments": [
+    {
+      "run_id": "20261031T112544875Z-ssr-count-free-codex-initiating-change-31f4fd2e-2011-4f2b-a072-81199c7314d0-1szr7app",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "All eighteen independent functional factors agree. More explicit retry prose improves local clarity without changing complete-document meaning; optional terminology changes in rename rep2 are within fixed preservation scope."
+    },
+    {
+      "run_id": "20261031T113445113Z-ssr-count-free-codex-semantic-delivery-6fc4c1a5-49f6-402f-9a8e-46182978cebf-iq74igei",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "All eighteen independent functional factors agree. More explicit retry prose improves local clarity without changing complete-document meaning; optional terminology changes in rename rep2 are within fixed preservation scope."
+    },
+    {
+      "run_id": "20261031T114212243Z-ssr-count-free-codex-initiating-change-774d6911-76ae-4ccf-b076-3e9695eee9ae-q7ujxhbf",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "All eighteen independent functional factors agree. More explicit retry prose improves local clarity without changing complete-document meaning; optional terminology changes in rename rep2 are within fixed preservation scope."
+    },
+    {
+      "run_id": "20261031T114606162Z-ssr-count-free-codex-semantic-delivery-8dbcd886-c83e-46ff-9717-baeddcee96cf-pxl4vx8l",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "All eighteen independent functional factors agree. More explicit retry prose improves local clarity without changing complete-document meaning; optional terminology changes in rename rep2 are within fixed preservation scope."
+    },
+    {
+      "run_id": "20261031T115412126Z-ssr-count-free-codex-initiating-change-d8d86931-be7e-4de2-835e-d57b42d0b3a5-qqt4mhps",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "All eighteen independent functional factors agree. More explicit retry prose improves local clarity without changing complete-document meaning; optional terminology changes in rename rep2 are within fixed preservation scope."
+    },
+    {
+      "run_id": "20261031T115833382Z-ssr-count-free-codex-semantic-delivery-d3fb32e5-3720-42da-a513-3c1634932920-njdlgley",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "All eighteen independent functional factors agree. More explicit retry prose improves local clarity without changing complete-document meaning; optional terminology changes in rename rep2 are within fixed preservation scope."
+    }
+  ]
+}

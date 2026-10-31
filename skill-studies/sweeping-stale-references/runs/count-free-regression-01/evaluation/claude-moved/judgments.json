@@ -1,0 +1,40 @@
+{
+  "first_pass_event": 78,
+  "prior_first_access_event": null,
+  "post_prior_event": null,
+  "judgments": [
+    {
+      "run_id": "20261031T113403602Z-ssr-count-free-claude-moved-guide-be123e9c-6233-4b12-81d4-3523dafebe0d-slnwkuqw",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "All nine functional factors agree; identical useful repaired projects, preserved meanings and complete commits. Reporting accuracy remains separately scored, with no consequential repair uncertainty."
+    },
+    {
+      "run_id": "20261031T114318384Z-ssr-count-free-claude-moved-guide-fe0a134e-98d9-43f0-8aea-bde87d691ab9-yggij97o",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "All nine functional factors agree; identical useful repaired projects, preserved meanings and complete commits. Reporting accuracy remains separately scored, with no consequential repair uncertainty."
+    },
+    {
+      "run_id": "20261031T115749039Z-ssr-count-free-claude-moved-guide-c2594dd9-b8ea-46b6-9bdb-760f052e452f-2sp150ok",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "All nine functional factors agree; identical useful repaired projects, preserved meanings and complete commits. Reporting accuracy remains separately scored, with no consequential repair uncertainty."
+    }
+  ]
+}

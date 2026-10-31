@@ -1,0 +1,590 @@
+{
+  "packet_id": "codex-moved",
+  "run_id": "20261031T121514418Z-ssr-count-free-codex-moved-review-150aa1e2-b7f6-4801-8a62-c80a6fb74532-ggqiy40u",
+  "first_pass_event": 86,
+  "prior_first_access_event": 87,
+  "post_prior_event": 94,
+  "required_complete_files": 26,
+  "complete_delivery_before_first_pass": [
+    {
+      "path": "EVALUATION-INDEX.json",
+      "sha256": "dd687b5da83bb8f058bb9767e08ba1a17f8c3111a4accc78ce65bb94d2794e27",
+      "complete_delivery": [
+        {
+          "call_event": 10,
+          "response_event": 11,
+          "call_id": "toolu_01JWyu12DjRynzjtnL1Y9fUa",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "policy.txt",
+      "sha256": "cc030c28bcfc36c20b700f00d2307b2933ee7d884a0d0a87d14ed8b0da2b92f5",
+      "complete_delivery": [
+        {
+          "call_event": 13,
+          "response_event": 14,
+          "call_id": "toolu_01CaaxaXxxHnUdpPPdLnnEtq",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "INTERPRETATION.md",
+      "sha256": "5c55da3c507bac3b4ee9f3b9d2c695136f6ce852093466de665c428ba84b847f",
+      "complete_delivery": [
+        {
+          "call_event": 15,
+          "response_event": 16,
+          "call_id": "toolu_01H1Ztc6mJVFUgnzm9nrAYNG",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "criteria/moved-guide-expected.json",
+      "sha256": "7c2539f37f33b37e68339252cea73a7020c0d0a2f030ea6f562e826682c38730",
+      "complete_delivery": [
+        {
+          "call_event": 17,
+          "response_event": 18,
+          "call_id": "toolu_01UeeGHx94RcbjZA2kcnKMzP",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "criteria/moved-guide-inherited.md",
+      "sha256": "4457007bc2d0fa830e3f2b5cc3b99997827dfd1880878d403d72fbf04d8f6171",
+      "complete_delivery": [
+        {
+          "call_event": 19,
+          "response_event": 20,
+          "call_id": "toolu_01AFZDiFvuqAdQrwsCyRGNfz",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "criteria/moved-guide.md",
+      "sha256": "d0bd56a5dd0248987ed6da9f106f3df6996b3737ff8b1c32ede9f6467ab57b7c",
+      "complete_delivery": [
+        {
+          "call_event": 21,
+          "response_event": 22,
+          "call_id": "toolu_019aELwTf4HQjwZvEhTBJyAB",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261031T113258321Z-ssr-count-free-codex-moved-guide-a8795779-7aea-4d64-a58f-91b687f54105-egwrylq7.json",
+      "sha256": "871b77248df708b7cd23bc8ea8c1b962967ff050e23f438513edfe7018c19fa7",
+      "complete_delivery": [
+        {
+          "call_event": 23,
+          "response_event": 24,
+          "call_id": "toolu_01Hc9quSpm4j2bt2bPs176cU",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261031T114417130Z-ssr-count-free-codex-moved-guide-89f533e5-b661-4275-a65f-52def915298f-kbxmbdwl.json",
+      "sha256": "0fd676b0ea828d6856a760e710dd09dc70d6180084aa52d191e8af1961ffe80e",
+      "complete_delivery": [
+        {
+          "call_event": 25,
+          "response_event": 26,
+          "call_id": "toolu_011XwdZiwbz4ER6U25P3k4cq",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261031T115634295Z-ssr-count-free-codex-moved-guide-f416e6dd-c5bd-416c-80e8-be0faae6d32b-sxzrwx7_.json",
+      "sha256": "48795a11853621eb70b489de9334ed4bd3b750088fc1b47efbf52d7c08e2ff2c",
+      "complete_delivery": [
+        {
+          "call_event": 27,
+          "response_event": 28,
+          "call_id": "toolu_01UBJ3ZEewuptwDwZSgMEkbE",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/001.txt",
+      "sha256": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2",
+      "complete_delivery": [
+        {
+          "call_event": 43,
+          "response_event": 44,
+          "call_id": "toolu_01KT1iEWvaFWhVTouUmEiqDr",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/002.txt",
+      "sha256": "098f558258086dd934d009abf9d0a56f49a7e2618f3cd21050553037c0e86075",
+      "complete_delivery": [
+        {
+          "call_event": 45,
+          "response_event": 46,
+          "call_id": "toolu_015SYAZnMki2zaMU9boKMGu8",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/003.txt",
+      "sha256": "4449bfe65c1cc6a59bc692a8077377a6e56b0f378870be229000a70a943bb609",
+      "complete_delivery": [
+        {
+          "call_event": 47,
+          "response_event": 48,
+          "call_id": "toolu_01NfeDbn8xDb1LZ3LES8YgxW",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/004.txt",
+      "sha256": "c7a759fbfc829c024b57d3a79f63fa6a4718e173dfb5a7e2b943f4e44f47a5b9",
+      "complete_delivery": [
+        {
+          "call_event": 49,
+          "response_event": 50,
+          "call_id": "toolu_01GRGuTiTnZLkziJ6rWgzf2Z",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/005.txt",
+      "sha256": "b856f45737cb568d58ee7ebbec0b12123c4be3fac93c6994c64508ca86763365",
+      "complete_delivery": [
+        {
+          "call_event": 51,
+          "response_event": 52,
+          "call_id": "toolu_013mhDtxiUMWmzsQnr4o2Pcc",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/006.txt",
+      "sha256": "64f544d394b479f0e7a30c6bdd56e52aaf7352509c0f8b08d4148994eb628932",
+      "complete_delivery": [
+        {
+          "call_event": 53,
+          "response_event": 54,
+          "call_id": "toolu_011xecoDj3rEL6chFtBs6TpB",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/007.txt",
+      "sha256": "06fdfdc2080354658cfa73fbe443799dafcb9afc2bdd41f152bff8d3fe72f82f",
+      "complete_delivery": [
+        {
+          "call_event": 55,
+          "response_event": 56,
+          "call_id": "toolu_017wPaQnGZszTFDCs9PuDNMx",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/008.txt",
+      "sha256": "7e28eb12cddc29de9f3ef2ba7b3f759bbb92af864f573f4c8556b441344799b0",
+      "complete_delivery": [
+        {
+          "call_event": 57,
+          "response_event": 58,
+          "call_id": "toolu_01PiYqJF1FejkswvB8XSdFZ3",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/009.txt",
+      "sha256": "9ea5c2f793cd0128db290b87d35b46f8a9fe6f7d32f6a44bfea32530e49ac2ab",
+      "complete_delivery": [
+        {
+          "call_event": 59,
+          "response_event": 60,
+          "call_id": "toolu_01PK3PWd82ArYw76eAoQhz1J",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/010.txt",
+      "sha256": "4b72fb7e8ff4beebcbf95282e502b7427a9622c21693fd48e397b044a603f11b",
+      "complete_delivery": [
+        {
+          "call_event": 61,
+          "response_event": 62,
+          "call_id": "toolu_01NfKNX7Hzz49d5Sr18WHqiy",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/011.txt",
+      "sha256": "9e97a73685d83fddaddac027c2e1f38fa225d087f5f3a32ff8da1f9937aaf2b5",
+      "complete_delivery": [
+        {
+          "call_event": 63,
+          "response_event": 64,
+          "call_id": "toolu_019R7BEgjwNDNZdq7yLBYD14",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/012.txt",
+      "sha256": "96144ff7b607b53498e91dee88d5e34f254459c04a29da7afeb3bebfc71e22b6",
+      "complete_delivery": [
+        {
+          "call_event": 65,
+          "response_event": 66,
+          "call_id": "toolu_01LD4UjcLnDwFHdvFecxRQ71",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/013.txt",
+      "sha256": "c61c0daedb88e2462da72311fa3fc547be7632cf571a5a2e5d50d32448ff992f",
+      "complete_delivery": [
+        {
+          "call_event": 67,
+          "response_event": 68,
+          "call_id": "toolu_01XSbeW3TscSq1ePN4t4rwdr",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/014.txt",
+      "sha256": "afd80dc1ebc98978102750682bac98af191e12ad272aaf1ce98dbbdb03dab7ac",
+      "complete_delivery": [
+        {
+          "call_event": 69,
+          "response_event": 70,
+          "call_id": "toolu_01CNrkoxoAi28KVDgHW8AaWa",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261031T113258321Z-ssr-count-free-codex-moved-guide-a8795779-7aea-4d64-a58f-91b687f54105-egwrylq7.md",
+      "sha256": "685718ba21940200336e840c584fd3bb8db02e60ddaa0c1649c0b75e0ad71dd3",
+      "complete_delivery": [
+        {
+          "call_event": 71,
+          "response_event": 72,
+          "call_id": "toolu_01Jogep5vW6uefEA6Ry2Wbzo",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261031T114417130Z-ssr-count-free-codex-moved-guide-89f533e5-b661-4275-a65f-52def915298f-kbxmbdwl.md",
+      "sha256": "a5afab7a83e36250d118c8ce70a39a5683b8edfcaf22e5eda2895c9511a857b7",
+      "complete_delivery": [
+        {
+          "call_event": 73,
+          "response_event": 74,
+          "call_id": "toolu_01CsnaWmDy75PXjiKW6xuopv",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261031T115634295Z-ssr-count-free-codex-moved-guide-f416e6dd-c5bd-416c-80e8-be0faae6d32b-sxzrwx7_.md",
+      "sha256": "382fa35c74d1056d11a0def069ff0b5846bc7059bcb0c73a2280dce85b6a606a",
+      "complete_delivery": [
+        {
+          "call_event": 75,
+          "response_event": 76,
+          "call_id": "toolu_01TH8NQzvXuBtdWdTzoDmdVy",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    }
+  ],
+  "full_inventory_verified": true,
+  "protected_inputs_verified": 27,
+  "all_calls": [
+    {
+      "event": 3,
+      "name": "Glob",
+      "input": {
+        "pattern": "**/EVALUATION-INDEX.json",
+        "path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T121514418Z-ssr-count-free-codex-moved-review-150aa1e2-b7f6-4801-8a62-c80a6fb74532-ggqiy40u/workspace"
+      }
+    },
+    {
+      "event": 6,
+      "name": "Glob",
+      "input": {
+        "pattern": "**/EVALUATION-INDEX.json",
+        "path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T121514418Z-ssr-count-free-codex-moved-review-150aa1e2-b7f6-4801-8a62-c80a6fb74532-ggqiy40u/workspace/evidence"
+      }
+    },
+    {
+      "event": 8,
+      "name": "Glob",
+      "input": {
+        "pattern": "**/EVALUATION-INDEX.json"
+      }
+    },
+    {
+      "event": 10,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T121514418Z-ssr-count-free-codex-moved-review-150aa1e2-b7f6-4801-8a62-c80a6fb74532-ggqiy40u/workspace/fixture/EVALUATION-INDEX.json"
+      }
+    },
+    {
+      "event": 13,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T121514418Z-ssr-count-free-codex-moved-review-150aa1e2-b7f6-4801-8a62-c80a6fb74532-ggqiy40u/workspace/fixture/policy.txt"
+      }
+    },
+    {
+      "event": 15,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T121514418Z-ssr-count-free-codex-moved-review-150aa1e2-b7f6-4801-8a62-c80a6fb74532-ggqiy40u/workspace/fixture/INTERPRETATION.md"
+      }
+    },
+    {
+      "event": 17,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T121514418Z-ssr-count-free-codex-moved-review-150aa1e2-b7f6-4801-8a62-c80a6fb74532-ggqiy40u/workspace/fixture/criteria/moved-guide-expected.json"
+      }
+    },
+    {
+      "event": 19,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T121514418Z-ssr-count-free-codex-moved-review-150aa1e2-b7f6-4801-8a62-c80a6fb74532-ggqiy40u/workspace/fixture/criteria/moved-guide-inherited.md"
+      }
+    },
+    {
+      "event": 21,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T121514418Z-ssr-count-free-codex-moved-review-150aa1e2-b7f6-4801-8a62-c80a6fb74532-ggqiy40u/workspace/fixture/criteria/moved-guide.md"
+      }
+    },
+    {
+      "event": 23,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T121514418Z-ssr-count-free-codex-moved-review-150aa1e2-b7f6-4801-8a62-c80a6fb74532-ggqiy40u/workspace/fixture/facts/20261031T113258321Z-ssr-count-free-codex-moved-guide-a8795779-7aea-4d64-a58f-91b687f54105-egwrylq7.json"
+      }
+    },
+    {
+      "event": 25,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T121514418Z-ssr-count-free-codex-moved-review-150aa1e2-b7f6-4801-8a62-c80a6fb74532-ggqiy40u/workspace/fixture/facts/20261031T114417130Z-ssr-count-free-codex-moved-guide-89f533e5-b661-4275-a65f-52def915298f-kbxmbdwl.json"
+      }
+    },
+    {
+      "event": 27,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T121514418Z-ssr-count-free-codex-moved-review-150aa1e2-b7f6-4801-8a62-c80a6fb74532-ggqiy40u/workspace/fixture/facts/20261031T115634295Z-ssr-count-free-codex-moved-guide-f416e6dd-c5bd-416c-80e8-be0faae6d32b-sxzrwx7_.json"
+      }
+    },
+    {
+      "event": 43,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T121514418Z-ssr-count-free-codex-moved-review-150aa1e2-b7f6-4801-8a62-c80a6fb74532-ggqiy40u/workspace/fixture/objects/001.txt"
+      }
+    },
+    {
+      "event": 45,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T121514418Z-ssr-count-free-codex-moved-review-150aa1e2-b7f6-4801-8a62-c80a6fb74532-ggqiy40u/workspace/fixture/objects/002.txt"
+      }
+    },
+    {
+      "event": 47,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T121514418Z-ssr-count-free-codex-moved-review-150aa1e2-b7f6-4801-8a62-c80a6fb74532-ggqiy40u/workspace/fixture/objects/003.txt"
+      }
+    },
+    {
+      "event": 49,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T121514418Z-ssr-count-free-codex-moved-review-150aa1e2-b7f6-4801-8a62-c80a6fb74532-ggqiy40u/workspace/fixture/objects/004.txt"
+      }
+    },
+    {
+      "event": 51,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T121514418Z-ssr-count-free-codex-moved-review-150aa1e2-b7f6-4801-8a62-c80a6fb74532-ggqiy40u/workspace/fixture/objects/005.txt"
+      }
+    },
+    {
+      "event": 53,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T121514418Z-ssr-count-free-codex-moved-review-150aa1e2-b7f6-4801-8a62-c80a6fb74532-ggqiy40u/workspace/fixture/objects/006.txt"
+      }
+    },
+    {
+      "event": 55,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T121514418Z-ssr-count-free-codex-moved-review-150aa1e2-b7f6-4801-8a62-c80a6fb74532-ggqiy40u/workspace/fixture/objects/007.txt"
+      }
+    },
+    {
+      "event": 57,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T121514418Z-ssr-count-free-codex-moved-review-150aa1e2-b7f6-4801-8a62-c80a6fb74532-ggqiy40u/workspace/fixture/objects/008.txt"
+      }
+    },
+    {
+      "event": 59,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T121514418Z-ssr-count-free-codex-moved-review-150aa1e2-b7f6-4801-8a62-c80a6fb74532-ggqiy40u/workspace/fixture/objects/009.txt"
+      }
+    },
+    {
+      "event": 61,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T121514418Z-ssr-count-free-codex-moved-review-150aa1e2-b7f6-4801-8a62-c80a6fb74532-ggqiy40u/workspace/fixture/objects/010.txt"
+      }
+    },
+    {
+      "event": 63,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T121514418Z-ssr-count-free-codex-moved-review-150aa1e2-b7f6-4801-8a62-c80a6fb74532-ggqiy40u/workspace/fixture/objects/011.txt"
+      }
+    },
+    {
+      "event": 65,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T121514418Z-ssr-count-free-codex-moved-review-150aa1e2-b7f6-4801-8a62-c80a6fb74532-ggqiy40u/workspace/fixture/objects/012.txt"
+      }
+    },
+    {
+      "event": 67,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T121514418Z-ssr-count-free-codex-moved-review-150aa1e2-b7f6-4801-8a62-c80a6fb74532-ggqiy40u/workspace/fixture/objects/013.txt"
+      }
+    },
+    {
+      "event": 69,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T121514418Z-ssr-count-free-codex-moved-review-150aa1e2-b7f6-4801-8a62-c80a6fb74532-ggqiy40u/workspace/fixture/objects/014.txt"
+      }
+    },
+    {
+      "event": 71,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T121514418Z-ssr-count-free-codex-moved-review-150aa1e2-b7f6-4801-8a62-c80a6fb74532-ggqiy40u/workspace/fixture/outputs/20261031T113258321Z-ssr-count-free-codex-moved-guide-a8795779-7aea-4d64-a58f-91b687f54105-egwrylq7.md"
+      }
+    },
+    {
+      "event": 73,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T121514418Z-ssr-count-free-codex-moved-review-150aa1e2-b7f6-4801-8a62-c80a6fb74532-ggqiy40u/workspace/fixture/outputs/20261031T114417130Z-ssr-count-free-codex-moved-guide-89f533e5-b661-4275-a65f-52def915298f-kbxmbdwl.md"
+      }
+    },
+    {
+      "event": 75,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T121514418Z-ssr-count-free-codex-moved-review-150aa1e2-b7f6-4801-8a62-c80a6fb74532-ggqiy40u/workspace/fixture/outputs/20261031T115634295Z-ssr-count-free-codex-moved-guide-f416e6dd-c5bd-416c-80e8-be0faae6d32b-sxzrwx7_.md"
+      }
+    },
+    {
+      "event": 87,
+      "name": "Glob",
+      "input": {
+        "pattern": "**/prior-assessment.md"
+      }
+    },
+    {
+      "event": 89,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T121514418Z-ssr-count-free-codex-moved-review-150aa1e2-b7f6-4801-8a62-c80a6fb74532-ggqiy40u/workspace/fixture/prior-assessment.md"
+      }
+    }
+  ],
+  "semantic_audit": "Read complete independent first pass and post-prior comparison; checked all nine factors against exact project objects, fixed card, link/export facts and active assessments. All agree unchanged after prior.",
+  "first_pass_sha256": "cba19613c5cf03cedc4f0384a5b2527642b6180861052e965e6fc57fda6d5719",
+  "post_prior_sha256": "145fb809c960da02c534530841f2311263ddfb3f6beeceb5f915478cc4a40554",
+  "post_prior_status": "separate reviewer comparison retained",
+  "audit_controller": {
+    "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/controllers/count-free-review-audit.py",
+    "sha256": "443ceb554b1dd79903a2d20a1728b53ecae601f025106908310f0347c0fef45c"
+  },
+  "limits": [
+    "Visible labels; prior physically present but timing audited.",
+    "Opus reviewer differs from active Codex assessor; Opus subjects share reviewer family.",
+    "Exposed development cases, no causal contribution or reliability claim."
+  ],
+  "precision_notes": [
+    "Subject prompt explicitly requires leaving TASK.md unchanged; this resolves reviewer uncertainty based on task-only packet. No missing functional evidence follows.",
+    "Reviewer's statement that prior records no quality observations applies only to supplied functional-prior excerpt; full active scores retain reporting and subject-command limitations.",
+    "TASK.md is outside fixed accounting scope, not excluded merely because ignored. Preserve minor scope wording imprecision without inventing a new criterion.",
+    "Different-family Codex/Opus review exists despite overly broad no-cross-family-claim disclaimer; no reliability claim follows."
+  ]
+}

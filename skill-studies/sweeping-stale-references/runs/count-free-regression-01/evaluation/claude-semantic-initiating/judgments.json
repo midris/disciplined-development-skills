@@ -1,0 +1,73 @@
+{
+  "first_pass_event": 128,
+  "prior_first_access_event": 129,
+  "post_prior_event": 135,
+  "judgments": [
+    {
+      "run_id": "20261031T113210863Z-ssr-count-free-claude-initiating-change-8dc00fc4-3819-4f7e-b205-92e89a664c35-_f4vm3t0",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All eighteen functional factors agree. Reporting limitations are retained in the separate P3 results; no consequential artifact-quality regression."
+    },
+    {
+      "run_id": "20261031T113543556Z-ssr-count-free-claude-semantic-delivery-408042d7-3a23-46a8-ac4b-e451c344f2f6-bdzzauuq",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All eighteen functional factors agree. Reporting limitations are retained in the separate P3 results; no consequential artifact-quality regression."
+    },
+    {
+      "run_id": "20261031T114120059Z-ssr-count-free-claude-initiating-change-2f0bbbec-bdb7-4f13-a8d6-b989b8069a94-l12ytucm",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All eighteen functional factors agree. Reporting limitations are retained in the separate P3 results; no consequential artifact-quality regression."
+    },
+    {
+      "run_id": "20261031T114522939Z-ssr-count-free-claude-semantic-delivery-ca2455c6-68f5-46f7-b23f-5af8106dfc04-mn21z2er",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All eighteen functional factors agree. Reporting limitations are retained in the separate P3 results; no consequential artifact-quality regression."
+    },
+    {
+      "run_id": "20261031T115534761Z-ssr-count-free-claude-initiating-change-b6966fe7-18b3-48da-b990-1b86035c2dbc-lp2bd68h",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All eighteen functional factors agree. Reporting limitations are retained in the separate P3 results; no consequential artifact-quality regression."
+    },
+    {
+      "run_id": "20261031T115931685Z-ssr-count-free-claude-semantic-delivery-91f5aa91-dd01-4eda-8c1f-5bdde2813a04-ftsir6ox",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All eighteen functional factors agree. Reporting limitations are retained in the separate P3 results; no consequential artifact-quality regression."
+    }
+  ]
+}

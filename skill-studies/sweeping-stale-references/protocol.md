@@ -2,8 +2,8 @@
 
 Format version: `1`
 Study ID: `sweeping-stale-references`
-Status: candidate-screen-01 complete; compact adopted on 2026-10-31, followed by the owner-approved removal of exact reference counts.
-Current action: execute the 42 remaining subjects/six reviews in count-free-regression-01. The [focused checkpoint](runs/count-free-regression-01/focused-gate.json) passed after 24 subjects/four audited reviews: all 18 repairs and 54 independent functional factors met, with reporting limitations retained separately. See [design](../../plans/specs/2026-10-31-ssr-count-free-regression.md). The owner also removed the redundant optional-count sentence; no retries or further wording changes are allocated.
+Status: count-free-regression-01 complete; compact adoption and owner-approved count removal validated within the declared regression scope.
+Current action: retain count-free compact. The [full assessment](runs/count-free-regression-01/count-free-regression-01-assessment.md) closes 66 subjects and ten audited reviews after the passing focused gate. All 48 repairs pass; reporting limits and three Claude native-loading misses remain separate. Claude discovery is a possible follow-up, with no additional calls or wording edits selected.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](runs/core-baseline-01/core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -29,7 +29,7 @@ Search, triage, complete repair, rationale preservation, post-edit verification,
 Correct work takes priority over numerical accounting: retained examples show an incorrect total despite correct subtotals, and a correct repair with a semantic-block counting mismatch.
 Historical snapshots, criterion cards, scores and review captures remain fixed under their original contracts; do not reinterpret old P3 failures as passes.
 This is an owner-approved reporting-policy change after adoption, not the exact body used in the completed model comparison.
-Static diff/identity checks and the repository hook suite verified the edit. The owner subsequently requested the staged regression below; the final body omits the redundant optional-count sentence. No behavioral outcome is claimed before collection.
+Static diff/identity checks and the repository hook suite verified the edit. The owner subsequently requested the staged regression below; the final body omits the redundant optional-count sentence. The completed regression outcome and limits are recorded in the full assessment linked above.
 
 ## Sources and intended use
 
@@ -291,7 +291,7 @@ Pre-baseline development is closed at two pairs. Do not reopen it for a new face
 
 ### Validation: count-free-regression-01
 
-Status: owner-approved focused-first regression; source freeze, runtime qualification and readiness precede dispatch.
+Status: complete; [full assessment](runs/count-free-regression-01/count-free-regression-01-assessment.md) and [final verification](runs/count-free-regression-01/final-verification.json) retain all outcomes, reviews and evidence checks.
 Authority: the owner requested full regression beginning with a focused pass, proceeding to full only if focused passes. The [design](../../plans/specs/2026-10-31-ssr-count-free-regression.md) fixes 24+42 subjects and 4+6 reviews, without repeating the focused runs.
 Condition `finalist` in this new batch means only the frozen count-free compact body, SHA-256 `a6881afef4cd83144d99c2913af02c8b4178998659128a88173f84bd8f084cda`.
 All eleven scenarios run three times per provider. Stage 1 is pressure-repair, discovery-shiv, local-change and large-sweep-account. Stage 2 requires all focused subjects and reviews audited, all F1–F3 met, useful path/change/preservation reports and no unresolved consequential-quality/runtime/evidence fault.
@@ -305,7 +305,7 @@ Raw storage: `/Users/simon/work/personal/skill-study-private/sweeping-stale-refe
 
 ### Batch: count-free-codex-01
 
-Status: approved conditional scope; freeze and readiness precede dispatch.
+Status: complete; all 33 subjects retained and assessed. See the [provider assessment](runs/count-free-regression-01/count-free-codex-01-assessment.md).
 Authority: count-free-regression-01 above and its fixed stage gate.
 Scope: 33 subjects; provider-local orders 1–12 are focused and 13–33 are conditional remaining cases.
 Inclusion: descriptive-only; Include all valid-setup executions regardless of outcome. Preserve stopped, excluded and unattempted slots. No automatic retry or replacement. No retries are allocated.
@@ -351,7 +351,7 @@ Assessment: pending collection and direct assessment.
 
 ### Batch: count-free-claude-01
 
-Status: approved conditional scope; freeze and readiness precede dispatch.
+Status: complete; all 33 subjects retained and assessed. See the [provider assessment](runs/count-free-regression-01/count-free-claude-01-assessment.md).
 Authority: count-free-regression-01 above and its fixed stage gate.
 Scope: 33 subjects; provider-local orders 1–12 are focused and 13–33 are conditional remaining cases.
 Inclusion: descriptive-only; Include all valid-setup executions regardless of outcome. Preserve stopped, excluded and unattempted slots. No automatic retry or replacement. No retries are allocated.
@@ -1184,7 +1184,7 @@ The fresh original baseline adds [Codex subjects](runs/fresh-baseline-01/fresh-b
 The completed candidate screen includes its [ten-review evaluator ledger](runs/candidate-screen-01/evaluation/evaluator-run-index.json).
 The count-free regression adds the two subject indexes linked in its batch scopes above.
 For this subset, the historical spent subtotal plus the newly authorized scope gives ceilings of 448 subject, 30 evaluator, 0 authoring and 1 retry invocations; this is an accounting projection, not a new allocation or pool transfer.
-Dispatched calls are **448 subject, 24 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **0 / 6 / 0 / 0** for this subset.
+Dispatched calls are **448 subject, 30 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **0 / 0 / 0 / 0** for this subset.
 The CW protocol remains authoritative for all current combined spending and outer ceilings; no historical unspent pool is revived.
 Sequential readiness used identical externally frozen scores; the final index pins the canonical repository results at their committed revision.
 

@@ -1,0 +1,73 @@
+{
+  "first_pass_event": 135,
+  "prior_first_access_event": 136,
+  "post_prior_event": 141,
+  "judgments": [
+    {
+      "run_id": "20261031T113624645Z-ssr-count-free-codex-invocation-change-f0feb5de-5cd6-409b-9da6-0f2b6423b0a3-20tkr3hw",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All eighteen factors agree, unchanged after prior. Native selection remains active-only; whole-document quality differences are minor and do not alter complete repair outcomes."
+    },
+    {
+      "run_id": "20261031T113753073Z-ssr-count-free-codex-invocation-review-f98f2a81-3efe-45fb-bdb8-a890aae736c8-q0sq771c",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All eighteen factors agree, unchanged after prior. Native selection remains active-only; whole-document quality differences are minor and do not alter complete repair outcomes."
+    },
+    {
+      "run_id": "20261031T114746280Z-ssr-count-free-codex-invocation-change-d7f61d4d-9e19-49de-92f2-2ddd7199c4ef-_4md2m87",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All eighteen factors agree, unchanged after prior. Native selection remains active-only; whole-document quality differences are minor and do not alter complete repair outcomes."
+    },
+    {
+      "run_id": "20261031T114916952Z-ssr-count-free-codex-invocation-review-272e0842-3bba-40b5-9a5b-daca757b2722-5epe96km",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All eighteen factors agree, unchanged after prior. Native selection remains active-only; whole-document quality differences are minor and do not alter complete repair outcomes."
+    },
+    {
+      "run_id": "20261031T120022092Z-ssr-count-free-codex-invocation-change-98e1727b-9a77-4abe-a862-277e6d8e30c4-ucpcmui4",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All eighteen factors agree, unchanged after prior. Native selection remains active-only; whole-document quality differences are minor and do not alter complete repair outcomes."
+    },
+    {
+      "run_id": "20261031T120225413Z-ssr-count-free-codex-invocation-review-d0b54bfa-0108-413b-8bfb-7e4cd9f9d488-g76hn0s5",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All eighteen factors agree, unchanged after prior. Native selection remains active-only; whole-document quality differences are minor and do not alter complete repair outcomes."
+    }
+  ]
+}
