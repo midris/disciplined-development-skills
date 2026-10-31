@@ -1,0 +1,193 @@
+{
+  "schema_version": "0.2",
+  "id": "ssr-count-free-claude-pressure-local-review",
+  "prompt": "../prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/INTERPRETATION.md",
+      "target": "INTERPRETATION.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/criteria/local-change-expected.md",
+      "target": "criteria/local-change-expected.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/criteria/local-change-inherited.md",
+      "target": "criteria/local-change-inherited.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/criteria/local-change.md",
+      "target": "criteria/local-change.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/criteria/pressure-repair-expected.json",
+      "target": "criteria/pressure-repair-expected.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/criteria/pressure-repair-inherited.md",
+      "target": "criteria/pressure-repair-inherited.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/criteria/pressure-repair.md",
+      "target": "criteria/pressure-repair.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/facts/20261031T104208953Z-ssr-count-free-claude-pressure-repair-5cd716a8-6b81-4a5d-8013-1c0033eaf06c-mycylijb.json",
+      "target": "facts/20261031T104208953Z-ssr-count-free-claude-pressure-repair-5cd716a8-6b81-4a5d-8013-1c0033eaf06c-mycylijb.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/facts/20261031T104703654Z-ssr-count-free-claude-local-change-7fa0b6dc-c0f7-4e94-9272-61d8731bc7df-bn4c6hzu.json",
+      "target": "facts/20261031T104703654Z-ssr-count-free-claude-local-change-7fa0b6dc-c0f7-4e94-9272-61d8731bc7df-bn4c6hzu.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/facts/20261031T104902618Z-ssr-count-free-claude-pressure-repair-ca8498e8-62c4-4dae-8a83-aa4db099fca8-5yo4802z.json",
+      "target": "facts/20261031T104902618Z-ssr-count-free-claude-pressure-repair-ca8498e8-62c4-4dae-8a83-aa4db099fca8-5yo4802z.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/facts/20261031T105713013Z-ssr-count-free-claude-local-change-0c0dd775-1ec6-4d3d-a8f6-85a8717a821f-b9jm5h0h.json",
+      "target": "facts/20261031T105713013Z-ssr-count-free-claude-local-change-0c0dd775-1ec6-4d3d-a8f6-85a8717a821f-b9jm5h0h.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/facts/20261031T110131616Z-ssr-count-free-claude-pressure-repair-7d41a92c-fa99-4802-8f9b-1d0802afd69c-ckbbfhga.json",
+      "target": "facts/20261031T110131616Z-ssr-count-free-claude-pressure-repair-7d41a92c-fa99-4802-8f9b-1d0802afd69c-ckbbfhga.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/facts/20261031T110610008Z-ssr-count-free-claude-local-change-afbb9a12-63e2-4d06-a572-5b3fb0dbd4a6-nx91tjk3.json",
+      "target": "facts/20261031T110610008Z-ssr-count-free-claude-local-change-afbb9a12-63e2-4d06-a572-5b3fb0dbd4a6-nx91tjk3.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/objects/001.txt",
+      "target": "objects/001.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/objects/002.txt",
+      "target": "objects/002.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/objects/003.txt",
+      "target": "objects/003.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/objects/004.txt",
+      "target": "objects/004.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/objects/005.txt",
+      "target": "objects/005.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/objects/006.txt",
+      "target": "objects/006.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/objects/007.txt",
+      "target": "objects/007.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/objects/008.txt",
+      "target": "objects/008.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/objects/009.txt",
+      "target": "objects/009.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/objects/010.txt",
+      "target": "objects/010.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/objects/011.txt",
+      "target": "objects/011.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/objects/012.txt",
+      "target": "objects/012.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/objects/013.txt",
+      "target": "objects/013.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/objects/014.txt",
+      "target": "objects/014.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/objects/015.txt",
+      "target": "objects/015.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/objects/016.txt",
+      "target": "objects/016.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/objects/017.txt",
+      "target": "objects/017.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/objects/018.txt",
+      "target": "objects/018.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/objects/019.txt",
+      "target": "objects/019.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/objects/020.txt",
+      "target": "objects/020.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/objects/021.txt",
+      "target": "objects/021.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/objects/022.txt",
+      "target": "objects/022.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/objects/023.txt",
+      "target": "objects/023.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/outputs/20261031T104208953Z-ssr-count-free-claude-pressure-repair-5cd716a8-6b81-4a5d-8013-1c0033eaf06c-mycylijb.md",
+      "target": "outputs/20261031T104208953Z-ssr-count-free-claude-pressure-repair-5cd716a8-6b81-4a5d-8013-1c0033eaf06c-mycylijb.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/outputs/20261031T104703654Z-ssr-count-free-claude-local-change-7fa0b6dc-c0f7-4e94-9272-61d8731bc7df-bn4c6hzu.md",
+      "target": "outputs/20261031T104703654Z-ssr-count-free-claude-local-change-7fa0b6dc-c0f7-4e94-9272-61d8731bc7df-bn4c6hzu.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/outputs/20261031T104902618Z-ssr-count-free-claude-pressure-repair-ca8498e8-62c4-4dae-8a83-aa4db099fca8-5yo4802z.md",
+      "target": "outputs/20261031T104902618Z-ssr-count-free-claude-pressure-repair-ca8498e8-62c4-4dae-8a83-aa4db099fca8-5yo4802z.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/outputs/20261031T105713013Z-ssr-count-free-claude-local-change-0c0dd775-1ec6-4d3d-a8f6-85a8717a821f-b9jm5h0h.md",
+      "target": "outputs/20261031T105713013Z-ssr-count-free-claude-local-change-0c0dd775-1ec6-4d3d-a8f6-85a8717a821f-b9jm5h0h.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/outputs/20261031T110131616Z-ssr-count-free-claude-pressure-repair-7d41a92c-fa99-4802-8f9b-1d0802afd69c-ckbbfhga.md",
+      "target": "outputs/20261031T110131616Z-ssr-count-free-claude-pressure-repair-7d41a92c-fa99-4802-8f9b-1d0802afd69c-ckbbfhga.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/outputs/20261031T110610008Z-ssr-count-free-claude-local-change-afbb9a12-63e2-4d06-a572-5b3fb0dbd4a6-nx91tjk3.md",
+      "target": "outputs/20261031T110610008Z-ssr-count-free-claude-local-change-afbb9a12-63e2-4d06-a572-5b3fb0dbd4a6-nx91tjk3.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/policy.txt",
+      "target": "policy.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-pressure-local/prior-assessment.md",
+      "target": "prior-assessment.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}

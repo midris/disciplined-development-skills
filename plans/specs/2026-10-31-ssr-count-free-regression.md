@@ -55,7 +55,7 @@ If qualification cannot establish the required boundary, stop and report the con
 
 - [x] Show the exact shipped skill diff; verify its new identity and detect runtime drift.
 - [x] Owner selected focused-first execution and conditional full completion, with 66 subjects/ten reviews total and no duplicate focused collection.
-- [ ] Prepare new configuration/card/schedule identities; qualify current runtimes and authentication, freeze authority and pass readiness.
+- [x] Prepare new configuration/card/schedule identities; qualify current runtimes and authentication, freeze authority and pass readiness. Inputs are pinned at `793fe322ce2564a23fae09d152b6833b1201b466`; manifests and dispatch authority at `911ee2ae51219dac4747e4809fec1dfbac19cfa7`. Eleven qualification checks passed; both providers have completed valid production subjects.
 - [ ] Run subjects sequentially, preserving and assessing every stopped attempt before the next dispatch.
 - [ ] Freeze complete review packets, audit each review and reconcile findings before the next review.
 - [ ] Publish the regression assessment, limitations and actual accounting; preserve the unrelated CW fixture edit.

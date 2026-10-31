@@ -1,0 +1,467 @@
+{
+  "status": "Approved conditional four focused / six remaining reviews; freeze packets after subject assessment.",
+  "packets": [
+    {
+      "id": "codex-shiv",
+      "stage": "focused",
+      "provider": "codex",
+      "case_ids": [
+        "discovery-shiv"
+      ],
+      "output_count": 3,
+      "functional_factors": 9,
+      "observations": [
+        {
+          "order": 3,
+          "provider": "codex",
+          "case_id": "discovery-shiv",
+          "condition": "finalist",
+          "repetition": 1
+        },
+        {
+          "order": 12,
+          "provider": "codex",
+          "case_id": "discovery-shiv",
+          "condition": "finalist",
+          "repetition": 2
+        },
+        {
+          "order": 19,
+          "provider": "codex",
+          "case_id": "discovery-shiv",
+          "condition": "finalist",
+          "repetition": 3
+        }
+      ]
+    },
+    {
+      "id": "codex-pressure-local",
+      "stage": "focused",
+      "provider": "codex",
+      "case_ids": [
+        "pressure-repair",
+        "local-change"
+      ],
+      "output_count": 6,
+      "functional_factors": 18,
+      "observations": [
+        {
+          "order": 1,
+          "provider": "codex",
+          "case_id": "pressure-repair",
+          "condition": "finalist",
+          "repetition": 1
+        },
+        {
+          "order": 5,
+          "provider": "codex",
+          "case_id": "local-change",
+          "condition": "finalist",
+          "repetition": 1
+        },
+        {
+          "order": 10,
+          "provider": "codex",
+          "case_id": "pressure-repair",
+          "condition": "finalist",
+          "repetition": 2
+        },
+        {
+          "order": 14,
+          "provider": "codex",
+          "case_id": "local-change",
+          "condition": "finalist",
+          "repetition": 2
+        },
+        {
+          "order": 17,
+          "provider": "codex",
+          "case_id": "pressure-repair",
+          "condition": "finalist",
+          "repetition": 3
+        },
+        {
+          "order": 21,
+          "provider": "codex",
+          "case_id": "local-change",
+          "condition": "finalist",
+          "repetition": 3
+        }
+      ]
+    },
+    {
+      "id": "claude-shiv",
+      "stage": "focused",
+      "provider": "claude",
+      "case_ids": [
+        "discovery-shiv"
+      ],
+      "output_count": 3,
+      "functional_factors": 9,
+      "observations": [
+        {
+          "order": 4,
+          "provider": "claude",
+          "case_id": "discovery-shiv",
+          "condition": "finalist",
+          "repetition": 1
+        },
+        {
+          "order": 11,
+          "provider": "claude",
+          "case_id": "discovery-shiv",
+          "condition": "finalist",
+          "repetition": 2
+        },
+        {
+          "order": 20,
+          "provider": "claude",
+          "case_id": "discovery-shiv",
+          "condition": "finalist",
+          "repetition": 3
+        }
+      ]
+    },
+    {
+      "id": "claude-pressure-local",
+      "stage": "focused",
+      "provider": "claude",
+      "case_ids": [
+        "pressure-repair",
+        "local-change"
+      ],
+      "output_count": 6,
+      "functional_factors": 18,
+      "observations": [
+        {
+          "order": 2,
+          "provider": "claude",
+          "case_id": "pressure-repair",
+          "condition": "finalist",
+          "repetition": 1
+        },
+        {
+          "order": 6,
+          "provider": "claude",
+          "case_id": "local-change",
+          "condition": "finalist",
+          "repetition": 1
+        },
+        {
+          "order": 9,
+          "provider": "claude",
+          "case_id": "pressure-repair",
+          "condition": "finalist",
+          "repetition": 2
+        },
+        {
+          "order": 13,
+          "provider": "claude",
+          "case_id": "local-change",
+          "condition": "finalist",
+          "repetition": 2
+        },
+        {
+          "order": 18,
+          "provider": "claude",
+          "case_id": "pressure-repair",
+          "condition": "finalist",
+          "repetition": 3
+        },
+        {
+          "order": 22,
+          "provider": "claude",
+          "case_id": "local-change",
+          "condition": "finalist",
+          "repetition": 3
+        }
+      ]
+    },
+    {
+      "id": "codex-semantic-initiating",
+      "stage": "remaining",
+      "provider": "codex",
+      "case_ids": [
+        "semantic-delivery",
+        "initiating-change"
+      ],
+      "output_count": 6,
+      "functional_factors": 18,
+      "observations": [
+        {
+          "order": 25,
+          "provider": "codex",
+          "case_id": "initiating-change",
+          "condition": "finalist",
+          "repetition": 1
+        },
+        {
+          "order": 29,
+          "provider": "codex",
+          "case_id": "semantic-delivery",
+          "condition": "finalist",
+          "repetition": 1
+        },
+        {
+          "order": 40,
+          "provider": "codex",
+          "case_id": "initiating-change",
+          "condition": "finalist",
+          "repetition": 2
+        },
+        {
+          "order": 44,
+          "provider": "codex",
+          "case_id": "semantic-delivery",
+          "condition": "finalist",
+          "repetition": 2
+        },
+        {
+          "order": 53,
+          "provider": "codex",
+          "case_id": "initiating-change",
+          "condition": "finalist",
+          "repetition": 3
+        },
+        {
+          "order": 57,
+          "provider": "codex",
+          "case_id": "semantic-delivery",
+          "condition": "finalist",
+          "repetition": 3
+        }
+      ]
+    },
+    {
+      "id": "codex-native-positives",
+      "stage": "remaining",
+      "provider": "codex",
+      "case_ids": [
+        "invocation-change",
+        "invocation-review"
+      ],
+      "output_count": 6,
+      "functional_factors": 18,
+      "observations": [
+        {
+          "order": 31,
+          "provider": "codex",
+          "case_id": "invocation-change",
+          "condition": "finalist",
+          "repetition": 1
+        },
+        {
+          "order": 33,
+          "provider": "codex",
+          "case_id": "invocation-review",
+          "condition": "finalist",
+          "repetition": 1
+        },
+        {
+          "order": 46,
+          "provider": "codex",
+          "case_id": "invocation-change",
+          "condition": "finalist",
+          "repetition": 2
+        },
+        {
+          "order": 48,
+          "provider": "codex",
+          "case_id": "invocation-review",
+          "condition": "finalist",
+          "repetition": 2
+        },
+        {
+          "order": 59,
+          "provider": "codex",
+          "case_id": "invocation-change",
+          "condition": "finalist",
+          "repetition": 3
+        },
+        {
+          "order": 61,
+          "provider": "codex",
+          "case_id": "invocation-review",
+          "condition": "finalist",
+          "repetition": 3
+        }
+      ]
+    },
+    {
+      "id": "codex-moved",
+      "stage": "remaining",
+      "provider": "codex",
+      "case_ids": [
+        "moved-guide"
+      ],
+      "output_count": 3,
+      "functional_factors": 9,
+      "observations": [
+        {
+          "order": 27,
+          "provider": "codex",
+          "case_id": "moved-guide",
+          "condition": "finalist",
+          "repetition": 1
+        },
+        {
+          "order": 42,
+          "provider": "codex",
+          "case_id": "moved-guide",
+          "condition": "finalist",
+          "repetition": 2
+        },
+        {
+          "order": 55,
+          "provider": "codex",
+          "case_id": "moved-guide",
+          "condition": "finalist",
+          "repetition": 3
+        }
+      ]
+    },
+    {
+      "id": "claude-semantic-initiating",
+      "stage": "remaining",
+      "provider": "claude",
+      "case_ids": [
+        "semantic-delivery",
+        "initiating-change"
+      ],
+      "output_count": 6,
+      "functional_factors": 18,
+      "observations": [
+        {
+          "order": 26,
+          "provider": "claude",
+          "case_id": "initiating-change",
+          "condition": "finalist",
+          "repetition": 1
+        },
+        {
+          "order": 30,
+          "provider": "claude",
+          "case_id": "semantic-delivery",
+          "condition": "finalist",
+          "repetition": 1
+        },
+        {
+          "order": 39,
+          "provider": "claude",
+          "case_id": "initiating-change",
+          "condition": "finalist",
+          "repetition": 2
+        },
+        {
+          "order": 43,
+          "provider": "claude",
+          "case_id": "semantic-delivery",
+          "condition": "finalist",
+          "repetition": 2
+        },
+        {
+          "order": 54,
+          "provider": "claude",
+          "case_id": "initiating-change",
+          "condition": "finalist",
+          "repetition": 3
+        },
+        {
+          "order": 58,
+          "provider": "claude",
+          "case_id": "semantic-delivery",
+          "condition": "finalist",
+          "repetition": 3
+        }
+      ]
+    },
+    {
+      "id": "claude-native-positives",
+      "stage": "remaining",
+      "provider": "claude",
+      "case_ids": [
+        "invocation-change",
+        "invocation-review"
+      ],
+      "output_count": 6,
+      "functional_factors": 18,
+      "observations": [
+        {
+          "order": 32,
+          "provider": "claude",
+          "case_id": "invocation-change",
+          "condition": "finalist",
+          "repetition": 1
+        },
+        {
+          "order": 34,
+          "provider": "claude",
+          "case_id": "invocation-review",
+          "condition": "finalist",
+          "repetition": 1
+        },
+        {
+          "order": 45,
+          "provider": "claude",
+          "case_id": "invocation-change",
+          "condition": "finalist",
+          "repetition": 2
+        },
+        {
+          "order": 47,
+          "provider": "claude",
+          "case_id": "invocation-review",
+          "condition": "finalist",
+          "repetition": 2
+        },
+        {
+          "order": 60,
+          "provider": "claude",
+          "case_id": "invocation-change",
+          "condition": "finalist",
+          "repetition": 3
+        },
+        {
+          "order": 62,
+          "provider": "claude",
+          "case_id": "invocation-review",
+          "condition": "finalist",
+          "repetition": 3
+        }
+      ]
+    },
+    {
+      "id": "claude-moved",
+      "stage": "remaining",
+      "provider": "claude",
+      "case_ids": [
+        "moved-guide"
+      ],
+      "output_count": 3,
+      "functional_factors": 9,
+      "observations": [
+        {
+          "order": 28,
+          "provider": "claude",
+          "case_id": "moved-guide",
+          "condition": "finalist",
+          "repetition": 1
+        },
+        {
+          "order": 41,
+          "provider": "claude",
+          "case_id": "moved-guide",
+          "condition": "finalist",
+          "repetition": 2
+        },
+        {
+          "order": 56,
+          "provider": "claude",
+          "case_id": "moved-guide",
+          "condition": "finalist",
+          "repetition": 3
+        }
+      ]
+    }
+  ]
+}

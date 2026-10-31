@@ -1184,7 +1184,7 @@ The fresh original baseline adds [Codex subjects](runs/fresh-baseline-01/fresh-b
 The completed candidate screen includes its [ten-review evaluator ledger](runs/candidate-screen-01/evaluation/evaluator-run-index.json).
 The count-free regression adds the two subject indexes linked in its batch scopes above.
 For this subset, the historical spent subtotal plus the newly authorized scope gives ceilings of 448 subject, 30 evaluator, 0 authoring and 1 retry invocations; this is an accounting projection, not a new allocation or pool transfer.
-Dispatched calls are **382 subject, 20 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **66 / 10 / 0 / 0** for this subset.
+Dispatched calls are **406 subject, 20 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **42 / 10 / 0 / 0** for this subset.
 The CW protocol remains authoritative for all current combined spending and outer ceilings; no historical unspent pool is revived.
 Sequential readiness used identical externally frozen scores; the final index pins the canonical repository results at their committed revision.
 
@@ -1256,3 +1256,5 @@ All thirty subject calls used Sol-low. Small exposed cases, shared assessor cont
 For current state and next action, return to the protocol opening; for combined spending, use the linked CW accounting record.
 
 The measured unrelated invocation case is D1-only sanity evidence, with functional outcome `not measured`; it does not establish near-boundary over-trigger resistance.
+
+The approved count-free SSR reviews are charged in their [evaluator ledger](runs/count-free-regression-01/evaluation/evaluator-run-index.json).

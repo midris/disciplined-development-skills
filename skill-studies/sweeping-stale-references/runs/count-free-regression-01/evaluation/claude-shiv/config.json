@@ -1,0 +1,285 @@
+{
+  "schema_version": "0.2",
+  "id": "ssr-count-free-claude-shiv-review",
+  "prompt": "../prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/INTERPRETATION.md",
+      "target": "INTERPRETATION.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/criteria/discovery-shiv-expected.json",
+      "target": "criteria/discovery-shiv-expected.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/criteria/discovery-shiv-inherited.md",
+      "target": "criteria/discovery-shiv-inherited.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/criteria/discovery-shiv.md",
+      "target": "criteria/discovery-shiv.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/facts/20261031T104443664Z-ssr-count-free-claude-discovery-shiv-5a369dec-28d4-41a2-aa3c-8b83dcab3a03-gz558yc2.json",
+      "target": "facts/20261031T104443664Z-ssr-count-free-claude-discovery-shiv-5a369dec-28d4-41a2-aa3c-8b83dcab3a03-gz558yc2.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/facts/20261031T105113846Z-ssr-count-free-claude-discovery-shiv-92f8d818-ba1e-4910-bfb1-5ad51dcde60b-4hsqaz7s.json",
+      "target": "facts/20261031T105113846Z-ssr-count-free-claude-discovery-shiv-92f8d818-ba1e-4910-bfb1-5ad51dcde60b-4hsqaz7s.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/facts/20261031T110359106Z-ssr-count-free-claude-discovery-shiv-dc059441-ebae-4186-93f4-cb2afb7a3f14-97xhlz5o.json",
+      "target": "facts/20261031T110359106Z-ssr-count-free-claude-discovery-shiv-dc059441-ebae-4186-93f4-cb2afb7a3f14-97xhlz5o.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/001.txt",
+      "target": "objects/001.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/002.txt",
+      "target": "objects/002.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/003.txt",
+      "target": "objects/003.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/004.txt",
+      "target": "objects/004.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/005.txt",
+      "target": "objects/005.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/006.txt",
+      "target": "objects/006.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/007.txt",
+      "target": "objects/007.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/008.txt",
+      "target": "objects/008.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/009.txt",
+      "target": "objects/009.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/010.txt",
+      "target": "objects/010.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/011.txt",
+      "target": "objects/011.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/012.txt",
+      "target": "objects/012.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/013.txt",
+      "target": "objects/013.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/014.txt",
+      "target": "objects/014.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/015.txt",
+      "target": "objects/015.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/016.txt",
+      "target": "objects/016.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/017.txt",
+      "target": "objects/017.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/018.txt",
+      "target": "objects/018.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/019.txt",
+      "target": "objects/019.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/020.txt",
+      "target": "objects/020.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/021.txt",
+      "target": "objects/021.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/022.png",
+      "target": "objects/022.png"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/023.txt",
+      "target": "objects/023.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/024.txt",
+      "target": "objects/024.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/025.txt",
+      "target": "objects/025.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/026.txt",
+      "target": "objects/026.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/027.txt",
+      "target": "objects/027.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/028.txt",
+      "target": "objects/028.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/029.txt",
+      "target": "objects/029.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/030.txt",
+      "target": "objects/030.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/031.txt",
+      "target": "objects/031.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/032.txt",
+      "target": "objects/032.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/033.txt",
+      "target": "objects/033.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/034.txt",
+      "target": "objects/034.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/035.txt",
+      "target": "objects/035.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/036.txt",
+      "target": "objects/036.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/037.txt",
+      "target": "objects/037.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/038.txt",
+      "target": "objects/038.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/039.txt",
+      "target": "objects/039.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/040.txt",
+      "target": "objects/040.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/041.txt",
+      "target": "objects/041.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/042.txt",
+      "target": "objects/042.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/043.txt",
+      "target": "objects/043.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/044.txt",
+      "target": "objects/044.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/045.txt",
+      "target": "objects/045.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/046.txt",
+      "target": "objects/046.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/047.txt",
+      "target": "objects/047.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/048.txt",
+      "target": "objects/048.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/049.txt",
+      "target": "objects/049.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/050.txt",
+      "target": "objects/050.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/051.txt",
+      "target": "objects/051.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/052.txt",
+      "target": "objects/052.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/053.txt",
+      "target": "objects/053.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/054.txt",
+      "target": "objects/054.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/objects/055.txt",
+      "target": "objects/055.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/outputs/20261031T104443664Z-ssr-count-free-claude-discovery-shiv-5a369dec-28d4-41a2-aa3c-8b83dcab3a03-gz558yc2.md",
+      "target": "outputs/20261031T104443664Z-ssr-count-free-claude-discovery-shiv-5a369dec-28d4-41a2-aa3c-8b83dcab3a03-gz558yc2.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/outputs/20261031T105113846Z-ssr-count-free-claude-discovery-shiv-92f8d818-ba1e-4910-bfb1-5ad51dcde60b-4hsqaz7s.md",
+      "target": "outputs/20261031T105113846Z-ssr-count-free-claude-discovery-shiv-92f8d818-ba1e-4910-bfb1-5ad51dcde60b-4hsqaz7s.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/outputs/20261031T110359106Z-ssr-count-free-claude-discovery-shiv-dc059441-ebae-4186-93f4-cb2afb7a3f14-97xhlz5o.md",
+      "target": "outputs/20261031T110359106Z-ssr-count-free-claude-discovery-shiv-dc059441-ebae-4186-93f4-cb2afb7a3f14-97xhlz5o.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/policy.txt",
+      "target": "policy.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-shiv/prior-assessment.md",
+      "target": "prior-assessment.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}

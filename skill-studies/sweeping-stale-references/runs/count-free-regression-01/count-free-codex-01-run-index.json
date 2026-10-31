@@ -3,5 +3,582 @@
   "index_id": "count-free-codex-01-attempts",
   "study_id": "sweeping-stale-references",
   "batch_id": "count-free-codex-01",
-  "attempts": []
+  "attempts": [
+    {
+      "attempt_id": "count-free-codex-01-pressure-repair-finalist-1-1",
+      "case_id": "pressure-repair",
+      "condition": "finalist",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/manifests/codex-pressure-repair-manifest.json",
+        "sha256": "6570096cf9575ae5766ede17011e2bb7017fc24a44222179e11f80195aecc9a1",
+        "version": "1",
+        "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "d7f1f3c815bfb6a01a7b36bebe330bae0b045a97687c685107ce30754ea7fe51",
+          "version": "1",
+          "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+        },
+        "selector": "Batch: count-free-codex-01; order 1"
+      },
+      "run_id": "20261031T104043584Z-ssr-count-free-codex-pressure-repair-91389215-4455-438a-bb89-45c4956504d2-vxzl_5zx",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed regression; active-session assessment, independent review pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T104043584Z-ssr-count-free-codex-pressure-repair-91389215-4455-438a-bb89-45c4956504d2-vxzl_5zx",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T104043584Z-ssr-count-free-codex-pressure-repair-91389215-4455-438a-bb89-45c4956504d2-vxzl_5zx.inventory.json",
+          "sha256": "9e02ad4f647bd1285dbdca11668ff68af5817b324703dfbfef5b990a8447be69",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "count-free-codex-01-pressure-repair-finalist-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T104043584Z-ssr-count-free-codex-pressure-repair-91389215-4455-438a-bb89-45c4956504d2-vxzl_5zx.json",
+          "sha256": "523655e3a314f3ac321b35271eb8dfe0d2945bb568b9e62e5ce3be0f62defd63",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "count-free-codex-01-discovery-shiv-finalist-1-1",
+      "case_id": "discovery-shiv",
+      "condition": "finalist",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/manifests/codex-discovery-shiv-manifest.json",
+        "sha256": "19564ae40e0aa830260eab6538e68ceb271cf8e2abe56e166c35b9c98a7d0fc6",
+        "version": "1",
+        "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "d7f1f3c815bfb6a01a7b36bebe330bae0b045a97687c685107ce30754ea7fe51",
+          "version": "1",
+          "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+        },
+        "selector": "Batch: count-free-codex-01; order 2"
+      },
+      "run_id": "20261031T104306410Z-ssr-count-free-codex-discovery-shiv-cc717fd4-6e4e-4dff-a482-9b92d1437e2b-e6fkardo",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed regression; active-session assessment, independent review pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T104306410Z-ssr-count-free-codex-discovery-shiv-cc717fd4-6e4e-4dff-a482-9b92d1437e2b-e6fkardo",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T104306410Z-ssr-count-free-codex-discovery-shiv-cc717fd4-6e4e-4dff-a482-9b92d1437e2b-e6fkardo.inventory.json",
+          "sha256": "cf0cb641a94d6e82ff2909f636ec1c47cc72176843996c54ab77ea0c583bf9f7",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "count-free-codex-01-discovery-shiv-finalist-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T104306410Z-ssr-count-free-codex-discovery-shiv-cc717fd4-6e4e-4dff-a482-9b92d1437e2b-e6fkardo.json",
+          "sha256": "3593329482f383ab267b64198200ec3368d16c659a25ed34f2c58ab31ec1ef59",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "count-free-codex-01-local-change-finalist-1-1",
+      "case_id": "local-change",
+      "condition": "finalist",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/manifests/codex-local-change-manifest.json",
+        "sha256": "2aa404ee748e8522fa57a4dbc4bdc73615294f5e78073d6f720b85be5460e46a",
+        "version": "1",
+        "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "d7f1f3c815bfb6a01a7b36bebe330bae0b045a97687c685107ce30754ea7fe51",
+          "version": "1",
+          "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+        },
+        "selector": "Batch: count-free-codex-01; order 3"
+      },
+      "run_id": "20261031T104559123Z-ssr-count-free-codex-local-change-640338fe-d3d6-4415-9e15-5af5482fad1b-b41zg5ib",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed regression; active-session assessment, independent review pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T104559123Z-ssr-count-free-codex-local-change-640338fe-d3d6-4415-9e15-5af5482fad1b-b41zg5ib",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T104559123Z-ssr-count-free-codex-local-change-640338fe-d3d6-4415-9e15-5af5482fad1b-b41zg5ib.inventory.json",
+          "sha256": "d29449ab054a69d22461cb75afb526bf6abbc49d7d9c7a530b3c79a0a7befd77",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "count-free-codex-01-local-change-finalist-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T104559123Z-ssr-count-free-codex-local-change-640338fe-d3d6-4415-9e15-5af5482fad1b-b41zg5ib.json",
+          "sha256": "6f33ae1b1d7117c8c1a0c1c46e1cb820972e1157daa12ad43b76c3a003d04100",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "count-free-codex-01-large-sweep-account-finalist-1-1",
+      "case_id": "large-sweep-account",
+      "condition": "finalist",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/manifests/codex-large-sweep-account-manifest.json",
+        "sha256": "4ad2f3c647864daabf6c2d0c72574c52072ddbae2591daa2ac975cc6cd3abfd5",
+        "version": "1",
+        "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "d7f1f3c815bfb6a01a7b36bebe330bae0b045a97687c685107ce30754ea7fe51",
+          "version": "1",
+          "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+        },
+        "selector": "Batch: count-free-codex-01; order 4"
+      },
+      "run_id": "20261031T104742463Z-ssr-count-free-codex-large-sweep-account-358bb97d-8f61-4a6e-84f4-e5e37a201eb0-z1fvr0qi",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed regression; active-session assessment, independent review pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T104742463Z-ssr-count-free-codex-large-sweep-account-358bb97d-8f61-4a6e-84f4-e5e37a201eb0-z1fvr0qi",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T104742463Z-ssr-count-free-codex-large-sweep-account-358bb97d-8f61-4a6e-84f4-e5e37a201eb0-z1fvr0qi.inventory.json",
+          "sha256": "2ade82bba264d2191c237c05e41f30654ae46fe0543745712e4e23a433aa1488",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "count-free-codex-01-large-sweep-account-finalist-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T104742463Z-ssr-count-free-codex-large-sweep-account-358bb97d-8f61-4a6e-84f4-e5e37a201eb0-z1fvr0qi.json",
+          "sha256": "7ba2851c1c561f1a2386d3aaf1bcc5eadd6239c1a08db3839310a05035c2ba6a",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "count-free-codex-01-pressure-repair-finalist-2-1",
+      "case_id": "pressure-repair",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/manifests/codex-pressure-repair-manifest.json",
+        "sha256": "6570096cf9575ae5766ede17011e2bb7017fc24a44222179e11f80195aecc9a1",
+        "version": "1",
+        "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "d7f1f3c815bfb6a01a7b36bebe330bae0b045a97687c685107ce30754ea7fe51",
+          "version": "1",
+          "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+        },
+        "selector": "Batch: count-free-codex-01; order 5"
+      },
+      "run_id": "20261031T105009093Z-ssr-count-free-codex-pressure-repair-5fa90e2a-95ba-4f56-8a74-f133e7cfba9d-ixr0_fa5",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed regression; active-session assessment, independent review pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T105009093Z-ssr-count-free-codex-pressure-repair-5fa90e2a-95ba-4f56-8a74-f133e7cfba9d-ixr0_fa5",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T105009093Z-ssr-count-free-codex-pressure-repair-5fa90e2a-95ba-4f56-8a74-f133e7cfba9d-ixr0_fa5.inventory.json",
+          "sha256": "4943149dfcc4a87f12533d98d6c41aa853d7aee6d83b81c83ddd71e9c4df9a1a",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "count-free-codex-01-pressure-repair-finalist-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T105009093Z-ssr-count-free-codex-pressure-repair-5fa90e2a-95ba-4f56-8a74-f133e7cfba9d-ixr0_fa5.json",
+          "sha256": "e339803157dea657992f2f391d1916a32cae6bec3b26077f5fde390b7a418ead",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "count-free-codex-01-discovery-shiv-finalist-2-1",
+      "case_id": "discovery-shiv",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/manifests/codex-discovery-shiv-manifest.json",
+        "sha256": "19564ae40e0aa830260eab6538e68ceb271cf8e2abe56e166c35b9c98a7d0fc6",
+        "version": "1",
+        "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "d7f1f3c815bfb6a01a7b36bebe330bae0b045a97687c685107ce30754ea7fe51",
+          "version": "1",
+          "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+        },
+        "selector": "Batch: count-free-codex-01; order 6"
+      },
+      "run_id": "20261031T105251378Z-ssr-count-free-codex-discovery-shiv-c2fdfad1-0e0e-4cb8-8cc6-438c0506969e-0sak5_do",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed regression; active-session assessment, independent review pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T105251378Z-ssr-count-free-codex-discovery-shiv-c2fdfad1-0e0e-4cb8-8cc6-438c0506969e-0sak5_do",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T105251378Z-ssr-count-free-codex-discovery-shiv-c2fdfad1-0e0e-4cb8-8cc6-438c0506969e-0sak5_do.inventory.json",
+          "sha256": "c384bb4da4144ee2deaf3dd576fb290d341c83a2865ebb311b953687140592a6",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "count-free-codex-01-discovery-shiv-finalist-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T105251378Z-ssr-count-free-codex-discovery-shiv-c2fdfad1-0e0e-4cb8-8cc6-438c0506969e-0sak5_do.json",
+          "sha256": "4a6b22a82373fba232cc3e8351c2b190f9e2c5f26e15dadf9468d3e158f744eb",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "count-free-codex-01-local-change-finalist-2-1",
+      "case_id": "local-change",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/manifests/codex-local-change-manifest.json",
+        "sha256": "2aa404ee748e8522fa57a4dbc4bdc73615294f5e78073d6f720b85be5460e46a",
+        "version": "1",
+        "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "d7f1f3c815bfb6a01a7b36bebe330bae0b045a97687c685107ce30754ea7fe51",
+          "version": "1",
+          "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+        },
+        "selector": "Batch: count-free-codex-01; order 7"
+      },
+      "run_id": "20261031T105802072Z-ssr-count-free-codex-local-change-fee2ad3b-3417-4ff4-8be6-716cdf499e18-9axp_2up",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed regression; active-session assessment, independent review pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T105802072Z-ssr-count-free-codex-local-change-fee2ad3b-3417-4ff4-8be6-716cdf499e18-9axp_2up",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T105802072Z-ssr-count-free-codex-local-change-fee2ad3b-3417-4ff4-8be6-716cdf499e18-9axp_2up.inventory.json",
+          "sha256": "efec30792de05c70e39d730ef8a46c15dbed1bd2fd258f10c74c833d6a2a3486",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "count-free-codex-01-local-change-finalist-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T105802072Z-ssr-count-free-codex-local-change-fee2ad3b-3417-4ff4-8be6-716cdf499e18-9axp_2up.json",
+          "sha256": "dffea325d76b40105714789d0730a7ac6f923740b003059de7cddeeaf5e330b3",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "count-free-codex-01-large-sweep-account-finalist-2-1",
+      "case_id": "large-sweep-account",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/manifests/codex-large-sweep-account-manifest.json",
+        "sha256": "4ad2f3c647864daabf6c2d0c72574c52072ddbae2591daa2ac975cc6cd3abfd5",
+        "version": "1",
+        "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "d7f1f3c815bfb6a01a7b36bebe330bae0b045a97687c685107ce30754ea7fe51",
+          "version": "1",
+          "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+        },
+        "selector": "Batch: count-free-codex-01; order 8"
+      },
+      "run_id": "20261031T105942129Z-ssr-count-free-codex-large-sweep-account-00d73799-0508-4bfb-aaa9-e6c568c3020f-pqjs_teo",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed regression; active-session assessment, independent review pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T105942129Z-ssr-count-free-codex-large-sweep-account-00d73799-0508-4bfb-aaa9-e6c568c3020f-pqjs_teo",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T105942129Z-ssr-count-free-codex-large-sweep-account-00d73799-0508-4bfb-aaa9-e6c568c3020f-pqjs_teo.inventory.json",
+          "sha256": "f605a398c74d8a3e0f80d55ee8a19dd08df5881b8368972d45587b471890a625",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "count-free-codex-01-large-sweep-account-finalist-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T105942129Z-ssr-count-free-codex-large-sweep-account-00d73799-0508-4bfb-aaa9-e6c568c3020f-pqjs_teo.json",
+          "sha256": "2816b4b48ea0c12d4f59eae6c598df8facc99b86f18b0747160488a597729612",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "count-free-codex-01-pressure-repair-finalist-3-1",
+      "case_id": "pressure-repair",
+      "condition": "finalist",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/manifests/codex-pressure-repair-manifest.json",
+        "sha256": "6570096cf9575ae5766ede17011e2bb7017fc24a44222179e11f80195aecc9a1",
+        "version": "1",
+        "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "d7f1f3c815bfb6a01a7b36bebe330bae0b045a97687c685107ce30754ea7fe51",
+          "version": "1",
+          "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+        },
+        "selector": "Batch: count-free-codex-01; order 9"
+      },
+      "run_id": "20261031T110025448Z-ssr-count-free-codex-pressure-repair-48df2117-1338-4dc9-aac3-05ebb68b827a-4drxd6s2",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed regression; active-session assessment, independent review pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T110025448Z-ssr-count-free-codex-pressure-repair-48df2117-1338-4dc9-aac3-05ebb68b827a-4drxd6s2",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T110025448Z-ssr-count-free-codex-pressure-repair-48df2117-1338-4dc9-aac3-05ebb68b827a-4drxd6s2.inventory.json",
+          "sha256": "2e820c48f785e9a0c7071bb93ca31c3a2cdb1d8d314474618f1c79766b1a6f5d",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "count-free-codex-01-pressure-repair-finalist-3",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T110025448Z-ssr-count-free-codex-pressure-repair-48df2117-1338-4dc9-aac3-05ebb68b827a-4drxd6s2.json",
+          "sha256": "c317e30d3caf6716247a2ee8c2b4f27b5c0f0c60c28d9d2ad60f1f935689bd16",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "count-free-codex-01-discovery-shiv-finalist-3-1",
+      "case_id": "discovery-shiv",
+      "condition": "finalist",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/manifests/codex-discovery-shiv-manifest.json",
+        "sha256": "19564ae40e0aa830260eab6538e68ceb271cf8e2abe56e166c35b9c98a7d0fc6",
+        "version": "1",
+        "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "d7f1f3c815bfb6a01a7b36bebe330bae0b045a97687c685107ce30754ea7fe51",
+          "version": "1",
+          "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+        },
+        "selector": "Batch: count-free-codex-01; order 10"
+      },
+      "run_id": "20261031T110220442Z-ssr-count-free-codex-discovery-shiv-5f67dfae-97bb-4724-8320-ccfe296a3a89-wb1iesq1",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed regression; active-session assessment, independent review pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T110220442Z-ssr-count-free-codex-discovery-shiv-5f67dfae-97bb-4724-8320-ccfe296a3a89-wb1iesq1",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T110220442Z-ssr-count-free-codex-discovery-shiv-5f67dfae-97bb-4724-8320-ccfe296a3a89-wb1iesq1.inventory.json",
+          "sha256": "3dd143f6ce9677b170189266f3bd57fce6167dcc89ee799124944e5b29068d06",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "count-free-codex-01-discovery-shiv-finalist-3",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T110220442Z-ssr-count-free-codex-discovery-shiv-5f67dfae-97bb-4724-8320-ccfe296a3a89-wb1iesq1.json",
+          "sha256": "4595153cec5ffc36641858e30d8cbe320d11c2af43e5e05d7725cea252756b0f",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "count-free-codex-01-local-change-finalist-3-1",
+      "case_id": "local-change",
+      "condition": "finalist",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/manifests/codex-local-change-manifest.json",
+        "sha256": "2aa404ee748e8522fa57a4dbc4bdc73615294f5e78073d6f720b85be5460e46a",
+        "version": "1",
+        "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "d7f1f3c815bfb6a01a7b36bebe330bae0b045a97687c685107ce30754ea7fe51",
+          "version": "1",
+          "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+        },
+        "selector": "Batch: count-free-codex-01; order 11"
+      },
+      "run_id": "20261031T110516111Z-ssr-count-free-codex-local-change-47dba9af-4da2-46e3-8dd6-72996e292bc1-ha9_2psw",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed regression; active-session assessment, independent review pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T110516111Z-ssr-count-free-codex-local-change-47dba9af-4da2-46e3-8dd6-72996e292bc1-ha9_2psw",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T110516111Z-ssr-count-free-codex-local-change-47dba9af-4da2-46e3-8dd6-72996e292bc1-ha9_2psw.inventory.json",
+          "sha256": "b715ba33e242434b4302086896d66283efd61059bfab52ea47fa853c5de723c8",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "count-free-codex-01-local-change-finalist-3",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T110516111Z-ssr-count-free-codex-local-change-47dba9af-4da2-46e3-8dd6-72996e292bc1-ha9_2psw.json",
+          "sha256": "e2141edff6bae20859067c214cdc93fc08b5e8e6667fc6c483cfe96f244a5143",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "count-free-codex-01-large-sweep-account-finalist-3-1",
+      "case_id": "large-sweep-account",
+      "condition": "finalist",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/manifests/codex-large-sweep-account-manifest.json",
+        "sha256": "4ad2f3c647864daabf6c2d0c72574c52072ddbae2591daa2ac975cc6cd3abfd5",
+        "version": "1",
+        "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "d7f1f3c815bfb6a01a7b36bebe330bae0b045a97687c685107ce30754ea7fe51",
+          "version": "1",
+          "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+        },
+        "selector": "Batch: count-free-codex-01; order 12"
+      },
+      "run_id": "20261031T110649771Z-ssr-count-free-codex-large-sweep-account-02c7abf7-b297-45f9-bceb-a405ea24d3db-_y0b0bg5",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed regression; active-session assessment, independent review pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T110649771Z-ssr-count-free-codex-large-sweep-account-02c7abf7-b297-45f9-bceb-a405ea24d3db-_y0b0bg5",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T110649771Z-ssr-count-free-codex-large-sweep-account-02c7abf7-b297-45f9-bceb-a405ea24d3db-_y0b0bg5.inventory.json",
+          "sha256": "67f455154f30b20ffd0a812476b4c0b6fa1971397244bbe33d39e056909fb938",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "count-free-codex-01-large-sweep-account-finalist-3",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T110649771Z-ssr-count-free-codex-large-sweep-account-02c7abf7-b297-45f9-bceb-a405ea24d3db-_y0b0bg5.json",
+          "sha256": "ba40dd0b7855c716d06bcafeafb5f1e96dbafdca06388bbbe92554cf7d5dbf96",
+          "version": "2"
+        }
+      }
+    }
+  ]
 }
