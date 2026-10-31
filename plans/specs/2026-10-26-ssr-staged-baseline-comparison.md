@@ -1,9 +1,9 @@
 # SSR: original baseline and staged candidate comparison
 
-Status: original baseline and candidate screen complete, including the one approved slot56 retry and ten audited comparison reviews; owner decision on adoption or further scope remains.
+Status: original baseline and candidate screen complete, including the one approved slot56 retry and ten audited comparison reviews; the owner adopted unchanged compact on 2026-10-31; further scope remains unallocated.
 The [framework](2026-09-11-model-driven-skill-testing-framework.md#cw-testing-model) governs the method; the [active plan](../2026-09-11-model-driven-skill-testing.md) owns progress and the [SSR protocol](../../skill-studies/sweeping-stale-references/protocol.md) owns dispatch authority.
 This replaces the [55-subject completion proposal](2026-10-24-ssr-cw-aligned-validation.md); its draft configuration set does not implement this design.
-The owner approved the 115-subject/ten-review screen on 2026-10-26; freeze and readiness precede dispatch. One slot56 retry is separately authorized; no skill edit, further retry or adoption is authorized.
+The owner approved the 115-subject/ten-review screen on 2026-10-26; freeze and readiness precede dispatch. One slot56 retry was separately authorized and spent. Subsequent [owner adoption](../../skill-studies/sweeping-stale-references/protocol.md#compact-adoption-2026-10-31) promotes the unchanged compact artifact; no further retry or new wording is authorized.
 
 ## Settled comparison
 

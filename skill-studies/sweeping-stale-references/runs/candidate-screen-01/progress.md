@@ -21,7 +21,7 @@ Native D1: 42 met and one not met across twenty positive and twenty-three negati
 Slot93 (Claude compact, native reviewer-triggered repair) completed the correct repair without selecting/loading SSR; retain it without replacement or selected-body success claims.
 Valid P3 judgments: 45 met, twenty not met and seven insufficient evidence.
 Reporting defects and inherited Shiv category uncertainty remain separate from functional outcomes.
-The completed reviews support an observed functional and consequential artifact-quality tie; the assessment recommends unchanged compact under the owner’s size tie-breaker. Adoption remains an owner decision.
+The completed reviews support an observed functional and consequential artifact-quality tie; the assessment recommends unchanged compact under the owner’s size tie-breaker. The owner subsequently adopted the unchanged compact version on 2026-10-31; see the [decision](../../protocol.md#compact-adoption-2026-10-31).
 The [scoring clarification](scoring-clarifications.md) corrects slot98’s P2 explanation without changing its judgment.
 
 The [subject audit](subject-verification.json) verifies all retained captures/inventories, score schemas, private/canonical score equality, evidence hashes, exact initial schedule coverage and the linked retry charge.

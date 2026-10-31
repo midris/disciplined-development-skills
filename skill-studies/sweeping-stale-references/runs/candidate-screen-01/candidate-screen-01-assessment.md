@@ -3,7 +3,7 @@
 Format version: `2`
 Assessment ID: ssr-candidate-screen-01
 Study / batch: sweeping-stale-references / candidate-screen-01
-Status: complete; owner adoption decision pending
+Status: complete; historical recommendation below accepted by the owner on 2026-10-31; see [adoption](../../protocol.md#compact-adoption-2026-10-31).
 Scope and acceptance rules: [protocol](../../protocol.md) at Git `eb1761bb7014034a174877d548898417ac4d2030` and [staged design](../../../../plans/specs/2026-10-26-ssr-staged-baseline-comparison.md), SSR-assessment-3 and unchanged case-specific outcome/procedure units.
 Immutable invocation authority: `eb1761bb7014034a174877d548898417ac4d2030`; separately approved retry authority: `67f3602`; complete subjects/review freeze: `af280687d418d5ecdd9f9f7d190e4d3b0ae52ef4`.
 Assessor: active Codex preparer/assessor with version/history awareness; not blind or independent.

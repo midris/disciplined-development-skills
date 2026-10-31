@@ -2,10 +2,23 @@
 
 Format version: `1`
 Study ID: `sweeping-stale-references`
-Status: fresh original baseline and candidate-screen-01 complete under the CW testing model; skill adoption remains an owner decision.
-Current action: owner decision on the [completed candidate screen](runs/candidate-screen-01/candidate-screen-01-assessment.md), which recommends the unchanged compact version under the size tie-breaker while retaining its native-selection miss, reporting defects and inherited uncertainty. All 115 subject slots, one approved slot56 retry and ten reviews are spent and audited. No skill edit, further retry, top-up or adoption is allocated. The [staged design](../../plans/specs/2026-10-26-ssr-staged-baseline-comparison.md#candidate-screen-candidate-screen-01) owns comparison intent; [CW accounting](../concise-writing/protocol.md#storage-and-accounting) owns combined spending.
+Status: candidate-screen-01 complete; the owner adopted the unchanged compact skill on 2026-10-31.
+Current action: owner consideration of retained count-error examples before selecting any reporting or discovery follow-up. Correct repair and preservation take priority over reporting precision. Counting remains in the adopted skill; removing it and improving Claude discovery are possible follow-ups, not selected edits or model runs. See [adoption](#compact-adoption-2026-10-31) and the [completed comparison](runs/candidate-screen-01/candidate-screen-01-assessment.md).
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](runs/core-baseline-01/core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
+
+## Compact adoption: 2026-10-31
+
+The owner approved adoption: “let's go ahead and adopt compact”, accepting reporting limitations provided the work is done properly.
+The shipped [skill](../../skills/sweeping-stale-references/SKILL.md) is an exact copy of the tested [compact finalist](drafts/compact-rewrite/finalist/SKILL.md): SHA-256 `f1f297f213855f9b53835dd084b2be6d3d9134cadab47babea08cbdaad9a205e`, 814 words and 5,355 bytes.
+The description is unchanged; the body retains its counting and path/outcome accounting requirements.
+The completed screen supports repair/preservation and consequential artifact quality, with the compact native-loading miss and procedural defects retained in its assessment.
+The owner is considering removing counts; that is not yet a wording change, rescoring decision or further testing allocation.
+This promotion changes the single-file reporting boundary from the original: any outside-file match now requires a positive inventory, including preserved or unrelated matches.
+It also explicitly distinguishes already-current references and requires old/new searching, rationale preservation and post-edit verification.
+Original/comprehensive snapshots, all frozen inputs and historical judgments remain unchanged.
+Adoption updates the repository's shipped source; it does not reinstall copies in other projects or alter installed personal skills.
+No new model call, discovery experiment, rollout to other projects or count-removal edit is included.
 
 ## Sources and intended use
 
@@ -1076,7 +1089,7 @@ Subsequent authoring decision, 2026-10-23: the owner requested three compact rew
 
 | Evidence | Interpretation |
 |---|---|
-| [Candidate screen](runs/candidate-screen-01/candidate-screen-01-assessment.md) | 246 valid comparison observations; 180 complete repairs and all 540 reviewed functional factors met. Compact is preferred under the size tie-breaker; its one native miss, reporting defects and Shiv uncertainty remain. All approved calls are spent; adoption is pending. |
+| [Candidate screen](runs/candidate-screen-01/candidate-screen-01-assessment.md) | 246 valid comparison observations; 180 complete repairs and all 540 reviewed functional factors met. Compact is preferred under the size tie-breaker; its one native miss, reporting defects and Shiv uncertainty remain. All approved calls are spent; the owner adopted unchanged compact on 2026-10-31. |
 | [Fresh original baseline](runs/fresh-baseline-01/fresh-baseline-01-assessment.md) | All eleven cases have five original observations on each current provider: 105 new and five matching reused. Eighty repairs and all 240 reviewed functional factors meet; native loading 10/10 Codex versus 5/10 Opus, non-use 20/20, reporting defects and three Shiv unknowns separate. The completed candidate screen above supplies the subsequent comparison. |
 | [Compact closing validation](runs/compact-regression-01/compact-regression-01-assessment.md) | Ten correct committed repairs, timely native loading 4/4 and appropriate non-use 1/1; audited review agrees on all thirty factors. Reporting defects remain non-blocking. Recommends compact adoption; owner decision pending. |
 | [Claude smoke](runs/claude-smoke-01/claude-smoke-01-assessment.md) | Original only: explicit-load Shiv repair succeeds; native reviewer-triggered load is missed and repair incomplete. Runtime/capture viability and model behavior remain separate. |
