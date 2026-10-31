@@ -32,7 +32,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T104043584Z-ssr-count-free-codex-pressure-repair-91389215-4455-438a-bb89-45c4956504d2-vxzl_5zx",
@@ -46,9 +46,10 @@
       "result": {
         "result_id": "count-free-codex-01-pressure-repair-finalist-1",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T104043584Z-ssr-count-free-codex-pressure-repair-91389215-4455-438a-bb89-45c4956504d2-vxzl_5zx.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T104043584Z-ssr-count-free-codex-pressure-repair-91389215-4455-438a-bb89-45c4956504d2-vxzl_5zx.json",
           "sha256": "523655e3a314f3ac321b35271eb8dfe0d2945bb568b9e62e5ce3be0f62defd63",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -80,7 +81,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T104306410Z-ssr-count-free-codex-discovery-shiv-cc717fd4-6e4e-4dff-a482-9b92d1437e2b-e6fkardo",
@@ -94,9 +95,10 @@
       "result": {
         "result_id": "count-free-codex-01-discovery-shiv-finalist-1",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T104306410Z-ssr-count-free-codex-discovery-shiv-cc717fd4-6e4e-4dff-a482-9b92d1437e2b-e6fkardo.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T104306410Z-ssr-count-free-codex-discovery-shiv-cc717fd4-6e4e-4dff-a482-9b92d1437e2b-e6fkardo.json",
           "sha256": "3593329482f383ab267b64198200ec3368d16c659a25ed34f2c58ab31ec1ef59",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -128,7 +130,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T104559123Z-ssr-count-free-codex-local-change-640338fe-d3d6-4415-9e15-5af5482fad1b-b41zg5ib",
@@ -142,9 +144,10 @@
       "result": {
         "result_id": "count-free-codex-01-local-change-finalist-1",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T104559123Z-ssr-count-free-codex-local-change-640338fe-d3d6-4415-9e15-5af5482fad1b-b41zg5ib.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T104559123Z-ssr-count-free-codex-local-change-640338fe-d3d6-4415-9e15-5af5482fad1b-b41zg5ib.json",
           "sha256": "6f33ae1b1d7117c8c1a0c1c46e1cb820972e1157daa12ad43b76c3a003d04100",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -176,7 +179,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T104742463Z-ssr-count-free-codex-large-sweep-account-358bb97d-8f61-4a6e-84f4-e5e37a201eb0-z1fvr0qi",
@@ -190,9 +193,10 @@
       "result": {
         "result_id": "count-free-codex-01-large-sweep-account-finalist-1",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T104742463Z-ssr-count-free-codex-large-sweep-account-358bb97d-8f61-4a6e-84f4-e5e37a201eb0-z1fvr0qi.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T104742463Z-ssr-count-free-codex-large-sweep-account-358bb97d-8f61-4a6e-84f4-e5e37a201eb0-z1fvr0qi.json",
           "sha256": "7ba2851c1c561f1a2386d3aaf1bcc5eadd6239c1a08db3839310a05035c2ba6a",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -224,7 +228,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T105009093Z-ssr-count-free-codex-pressure-repair-5fa90e2a-95ba-4f56-8a74-f133e7cfba9d-ixr0_fa5",
@@ -238,9 +242,10 @@
       "result": {
         "result_id": "count-free-codex-01-pressure-repair-finalist-2",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T105009093Z-ssr-count-free-codex-pressure-repair-5fa90e2a-95ba-4f56-8a74-f133e7cfba9d-ixr0_fa5.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T105009093Z-ssr-count-free-codex-pressure-repair-5fa90e2a-95ba-4f56-8a74-f133e7cfba9d-ixr0_fa5.json",
           "sha256": "e339803157dea657992f2f391d1916a32cae6bec3b26077f5fde390b7a418ead",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -272,7 +277,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T105251378Z-ssr-count-free-codex-discovery-shiv-c2fdfad1-0e0e-4cb8-8cc6-438c0506969e-0sak5_do",
@@ -286,9 +291,10 @@
       "result": {
         "result_id": "count-free-codex-01-discovery-shiv-finalist-2",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T105251378Z-ssr-count-free-codex-discovery-shiv-c2fdfad1-0e0e-4cb8-8cc6-438c0506969e-0sak5_do.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T105251378Z-ssr-count-free-codex-discovery-shiv-c2fdfad1-0e0e-4cb8-8cc6-438c0506969e-0sak5_do.json",
           "sha256": "4a6b22a82373fba232cc3e8351c2b190f9e2c5f26e15dadf9468d3e158f744eb",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -320,7 +326,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T105802072Z-ssr-count-free-codex-local-change-fee2ad3b-3417-4ff4-8be6-716cdf499e18-9axp_2up",
@@ -334,9 +340,10 @@
       "result": {
         "result_id": "count-free-codex-01-local-change-finalist-2",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T105802072Z-ssr-count-free-codex-local-change-fee2ad3b-3417-4ff4-8be6-716cdf499e18-9axp_2up.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T105802072Z-ssr-count-free-codex-local-change-fee2ad3b-3417-4ff4-8be6-716cdf499e18-9axp_2up.json",
           "sha256": "dffea325d76b40105714789d0730a7ac6f923740b003059de7cddeeaf5e330b3",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -368,7 +375,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T105942129Z-ssr-count-free-codex-large-sweep-account-00d73799-0508-4bfb-aaa9-e6c568c3020f-pqjs_teo",
@@ -382,9 +389,10 @@
       "result": {
         "result_id": "count-free-codex-01-large-sweep-account-finalist-2",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T105942129Z-ssr-count-free-codex-large-sweep-account-00d73799-0508-4bfb-aaa9-e6c568c3020f-pqjs_teo.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T105942129Z-ssr-count-free-codex-large-sweep-account-00d73799-0508-4bfb-aaa9-e6c568c3020f-pqjs_teo.json",
           "sha256": "2816b4b48ea0c12d4f59eae6c598df8facc99b86f18b0747160488a597729612",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -416,7 +424,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T110025448Z-ssr-count-free-codex-pressure-repair-48df2117-1338-4dc9-aac3-05ebb68b827a-4drxd6s2",
@@ -430,9 +438,10 @@
       "result": {
         "result_id": "count-free-codex-01-pressure-repair-finalist-3",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T110025448Z-ssr-count-free-codex-pressure-repair-48df2117-1338-4dc9-aac3-05ebb68b827a-4drxd6s2.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T110025448Z-ssr-count-free-codex-pressure-repair-48df2117-1338-4dc9-aac3-05ebb68b827a-4drxd6s2.json",
           "sha256": "c317e30d3caf6716247a2ee8c2b4f27b5c0f0c60c28d9d2ad60f1f935689bd16",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -464,7 +473,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T110220442Z-ssr-count-free-codex-discovery-shiv-5f67dfae-97bb-4724-8320-ccfe296a3a89-wb1iesq1",
@@ -478,9 +487,10 @@
       "result": {
         "result_id": "count-free-codex-01-discovery-shiv-finalist-3",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T110220442Z-ssr-count-free-codex-discovery-shiv-5f67dfae-97bb-4724-8320-ccfe296a3a89-wb1iesq1.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T110220442Z-ssr-count-free-codex-discovery-shiv-5f67dfae-97bb-4724-8320-ccfe296a3a89-wb1iesq1.json",
           "sha256": "4595153cec5ffc36641858e30d8cbe320d11c2af43e5e05d7725cea252756b0f",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -512,7 +522,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T110516111Z-ssr-count-free-codex-local-change-47dba9af-4da2-46e3-8dd6-72996e292bc1-ha9_2psw",
@@ -526,9 +536,10 @@
       "result": {
         "result_id": "count-free-codex-01-local-change-finalist-3",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T110516111Z-ssr-count-free-codex-local-change-47dba9af-4da2-46e3-8dd6-72996e292bc1-ha9_2psw.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T110516111Z-ssr-count-free-codex-local-change-47dba9af-4da2-46e3-8dd6-72996e292bc1-ha9_2psw.json",
           "sha256": "e2141edff6bae20859067c214cdc93fc08b5e8e6667fc6c483cfe96f244a5143",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -560,7 +571,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T110649771Z-ssr-count-free-codex-large-sweep-account-02c7abf7-b297-45f9-bceb-a405ea24d3db-_y0b0bg5",
@@ -574,9 +585,10 @@
       "result": {
         "result_id": "count-free-codex-01-large-sweep-account-finalist-3",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T110649771Z-ssr-count-free-codex-large-sweep-account-02c7abf7-b297-45f9-bceb-a405ea24d3db-_y0b0bg5.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T110649771Z-ssr-count-free-codex-large-sweep-account-02c7abf7-b297-45f9-bceb-a405ea24d3db-_y0b0bg5.json",
           "sha256": "ba40dd0b7855c716d06bcafeafb5f1e96dbafdca06388bbbe92554cf7d5dbf96",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -608,7 +620,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T112544875Z-ssr-count-free-codex-initiating-change-31f4fd2e-2011-4f2b-a072-81199c7314d0-1szr7app",
@@ -622,9 +634,10 @@
       "result": {
         "result_id": "count-free-codex-01-initiating-change-finalist-1",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T112544875Z-ssr-count-free-codex-initiating-change-31f4fd2e-2011-4f2b-a072-81199c7314d0-1szr7app.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T112544875Z-ssr-count-free-codex-initiating-change-31f4fd2e-2011-4f2b-a072-81199c7314d0-1szr7app.json",
           "sha256": "3a068f438e43f120654a52c75c9ccdcb5bd8b377b0180e951abc76b2c75d054d",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -656,7 +669,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T113258321Z-ssr-count-free-codex-moved-guide-a8795779-7aea-4d64-a58f-91b687f54105-egwrylq7",
@@ -670,9 +683,10 @@
       "result": {
         "result_id": "count-free-codex-01-moved-guide-finalist-1",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T113258321Z-ssr-count-free-codex-moved-guide-a8795779-7aea-4d64-a58f-91b687f54105-egwrylq7.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T113258321Z-ssr-count-free-codex-moved-guide-a8795779-7aea-4d64-a58f-91b687f54105-egwrylq7.json",
           "sha256": "f1ef5681882b41a0a9e132b22b676f2ee00564f445602a4f9ef5ae6b1592c7c1",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -704,7 +718,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T113445113Z-ssr-count-free-codex-semantic-delivery-6fc4c1a5-49f6-402f-9a8e-46182978cebf-iq74igei",
@@ -718,9 +732,10 @@
       "result": {
         "result_id": "count-free-codex-01-semantic-delivery-finalist-1",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T113445113Z-ssr-count-free-codex-semantic-delivery-6fc4c1a5-49f6-402f-9a8e-46182978cebf-iq74igei.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T113445113Z-ssr-count-free-codex-semantic-delivery-6fc4c1a5-49f6-402f-9a8e-46182978cebf-iq74igei.json",
           "sha256": "dc180ee4081f98d6e7c6e17d36a903d888b234364e154a2a04be7d4256af2916",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -752,7 +767,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T113624645Z-ssr-count-free-codex-invocation-change-f0feb5de-5cd6-409b-9da6-0f2b6423b0a3-20tkr3hw",
@@ -766,9 +781,10 @@
       "result": {
         "result_id": "count-free-codex-01-invocation-change-finalist-1",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T113624645Z-ssr-count-free-codex-invocation-change-f0feb5de-5cd6-409b-9da6-0f2b6423b0a3-20tkr3hw.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T113624645Z-ssr-count-free-codex-invocation-change-f0feb5de-5cd6-409b-9da6-0f2b6423b0a3-20tkr3hw.json",
           "sha256": "f66a385cbd126d517fd914ab95929b1d9fa61fbb6dd17eebf62951e69095696c",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -800,7 +816,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T113753073Z-ssr-count-free-codex-invocation-review-f98f2a81-3efe-45fb-bdb8-a890aae736c8-q0sq771c",
@@ -814,9 +830,10 @@
       "result": {
         "result_id": "count-free-codex-01-invocation-review-finalist-1",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T113753073Z-ssr-count-free-codex-invocation-review-f98f2a81-3efe-45fb-bdb8-a890aae736c8-q0sq771c.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T113753073Z-ssr-count-free-codex-invocation-review-f98f2a81-3efe-45fb-bdb8-a890aae736c8-q0sq771c.json",
           "sha256": "b7975fca2b905116e9d00358c9caa5508796196bd3576f7c9c08096a6615913c",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -848,7 +865,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T113935121Z-ssr-count-free-codex-invocation-verification-c9c60b64-0faa-4677-a41c-b87908d585a9-qwz9jmu7",
@@ -862,9 +879,10 @@
       "result": {
         "result_id": "count-free-codex-01-invocation-verification-finalist-1",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T113935121Z-ssr-count-free-codex-invocation-verification-c9c60b64-0faa-4677-a41c-b87908d585a9-qwz9jmu7.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T113935121Z-ssr-count-free-codex-invocation-verification-c9c60b64-0faa-4677-a41c-b87908d585a9-qwz9jmu7.json",
           "sha256": "d4d6738ee0691d4dc45ab8f47196e9ce045779b5deab8fa4e8a7acfe1cb22e6b",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -896,7 +914,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114030984Z-ssr-count-free-codex-invocation-unrelated-9632aae8-48d6-4989-9033-8324f1a423f0-5b8wlvqu",
@@ -910,9 +928,10 @@
       "result": {
         "result_id": "count-free-codex-01-invocation-unrelated-finalist-1",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T114030984Z-ssr-count-free-codex-invocation-unrelated-9632aae8-48d6-4989-9033-8324f1a423f0-5b8wlvqu.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T114030984Z-ssr-count-free-codex-invocation-unrelated-9632aae8-48d6-4989-9033-8324f1a423f0-5b8wlvqu.json",
           "sha256": "e055f076e81f7c7bd361b3e37f4e65eabfbf0e7cd0a13651ef05201010a58ed6",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -944,7 +963,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114212243Z-ssr-count-free-codex-initiating-change-774d6911-76ae-4ccf-b076-3e9695eee9ae-q7ujxhbf",
@@ -958,9 +977,10 @@
       "result": {
         "result_id": "count-free-codex-01-initiating-change-finalist-2",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T114212243Z-ssr-count-free-codex-initiating-change-774d6911-76ae-4ccf-b076-3e9695eee9ae-q7ujxhbf.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T114212243Z-ssr-count-free-codex-initiating-change-774d6911-76ae-4ccf-b076-3e9695eee9ae-q7ujxhbf.json",
           "sha256": "8267d42bea956b40137a5cf437d80487f0ee7a062e176a8ca1f0645874b7462c",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -992,7 +1012,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114417130Z-ssr-count-free-codex-moved-guide-89f533e5-b661-4275-a65f-52def915298f-kbxmbdwl",
@@ -1006,9 +1026,10 @@
       "result": {
         "result_id": "count-free-codex-01-moved-guide-finalist-2",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T114417130Z-ssr-count-free-codex-moved-guide-89f533e5-b661-4275-a65f-52def915298f-kbxmbdwl.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T114417130Z-ssr-count-free-codex-moved-guide-89f533e5-b661-4275-a65f-52def915298f-kbxmbdwl.json",
           "sha256": "c59b3b5d92b71153f2966d93d85052e82f410a48a8481ca9f50432ea632ea755",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -1040,7 +1061,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114606162Z-ssr-count-free-codex-semantic-delivery-8dbcd886-c83e-46ff-9717-baeddcee96cf-pxl4vx8l",
@@ -1054,9 +1075,10 @@
       "result": {
         "result_id": "count-free-codex-01-semantic-delivery-finalist-2",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T114606162Z-ssr-count-free-codex-semantic-delivery-8dbcd886-c83e-46ff-9717-baeddcee96cf-pxl4vx8l.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T114606162Z-ssr-count-free-codex-semantic-delivery-8dbcd886-c83e-46ff-9717-baeddcee96cf-pxl4vx8l.json",
           "sha256": "70ae4b011927843ea8a7156890ba10f41b2c91173a4af199b0ab2b66e7d4a916",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -1088,7 +1110,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114746280Z-ssr-count-free-codex-invocation-change-d7f61d4d-9e19-49de-92f2-2ddd7199c4ef-_4md2m87",
@@ -1102,9 +1124,10 @@
       "result": {
         "result_id": "count-free-codex-01-invocation-change-finalist-2",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T114746280Z-ssr-count-free-codex-invocation-change-d7f61d4d-9e19-49de-92f2-2ddd7199c4ef-_4md2m87.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T114746280Z-ssr-count-free-codex-invocation-change-d7f61d4d-9e19-49de-92f2-2ddd7199c4ef-_4md2m87.json",
           "sha256": "98972a0d1e682bdf956e8fccd3006620b9b859301088b761c56c5900a263cc7d",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -1136,7 +1159,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114916952Z-ssr-count-free-codex-invocation-review-272e0842-3bba-40b5-9a5b-daca757b2722-5epe96km",
@@ -1150,9 +1173,10 @@
       "result": {
         "result_id": "count-free-codex-01-invocation-review-finalist-2",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T114916952Z-ssr-count-free-codex-invocation-review-272e0842-3bba-40b5-9a5b-daca757b2722-5epe96km.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T114916952Z-ssr-count-free-codex-invocation-review-272e0842-3bba-40b5-9a5b-daca757b2722-5epe96km.json",
           "sha256": "31b3d59735dffed2239e430d4fc4f6c58521d3b9304b2572b2b5aceb03a6140a",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -1184,7 +1208,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T115257746Z-ssr-count-free-codex-invocation-verification-cb5aaf75-e880-466a-b04f-d449f0e701f0-_vtmtiss",
@@ -1198,9 +1222,10 @@
       "result": {
         "result_id": "count-free-codex-01-invocation-verification-finalist-2",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T115257746Z-ssr-count-free-codex-invocation-verification-cb5aaf75-e880-466a-b04f-d449f0e701f0-_vtmtiss.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T115257746Z-ssr-count-free-codex-invocation-verification-cb5aaf75-e880-466a-b04f-d449f0e701f0-_vtmtiss.json",
           "sha256": "daff994c2a46d5192906c7e1cbfda82f33cb11ea6acf0ab8dcba6bb3c6d5e440",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -1232,7 +1257,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T115350275Z-ssr-count-free-codex-invocation-unrelated-7175a1c9-6e0f-4bd7-9562-5abd6e6f5998-zipv_fqy",
@@ -1246,9 +1271,10 @@
       "result": {
         "result_id": "count-free-codex-01-invocation-unrelated-finalist-2",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T115350275Z-ssr-count-free-codex-invocation-unrelated-7175a1c9-6e0f-4bd7-9562-5abd6e6f5998-zipv_fqy.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T115350275Z-ssr-count-free-codex-invocation-unrelated-7175a1c9-6e0f-4bd7-9562-5abd6e6f5998-zipv_fqy.json",
           "sha256": "dc59afbe25853396b6efc727192760d709324b524884462ef3c9b4c8c044077a",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -1280,7 +1306,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T115412126Z-ssr-count-free-codex-initiating-change-d8d86931-be7e-4de2-835e-d57b42d0b3a5-qqt4mhps",
@@ -1294,9 +1320,10 @@
       "result": {
         "result_id": "count-free-codex-01-initiating-change-finalist-3",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T115412126Z-ssr-count-free-codex-initiating-change-d8d86931-be7e-4de2-835e-d57b42d0b3a5-qqt4mhps.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T115412126Z-ssr-count-free-codex-initiating-change-d8d86931-be7e-4de2-835e-d57b42d0b3a5-qqt4mhps.json",
           "sha256": "6fcd63353718ccce5a2dc91545877f4fb7b29e56ce4a9c7729c194eb26d92729",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -1328,7 +1355,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T115634295Z-ssr-count-free-codex-moved-guide-f416e6dd-c5bd-416c-80e8-be0faae6d32b-sxzrwx7_",
@@ -1342,9 +1369,10 @@
       "result": {
         "result_id": "count-free-codex-01-moved-guide-finalist-3",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T115634295Z-ssr-count-free-codex-moved-guide-f416e6dd-c5bd-416c-80e8-be0faae6d32b-sxzrwx7_.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T115634295Z-ssr-count-free-codex-moved-guide-f416e6dd-c5bd-416c-80e8-be0faae6d32b-sxzrwx7_.json",
           "sha256": "ff6559048cf76501ee9c931a9983f5a6dafeda3e09d385f12752bb21e1d67c44",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -1376,7 +1404,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T115833382Z-ssr-count-free-codex-semantic-delivery-d3fb32e5-3720-42da-a513-3c1634932920-njdlgley",
@@ -1390,9 +1418,10 @@
       "result": {
         "result_id": "count-free-codex-01-semantic-delivery-finalist-3",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T115833382Z-ssr-count-free-codex-semantic-delivery-d3fb32e5-3720-42da-a513-3c1634932920-njdlgley.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T115833382Z-ssr-count-free-codex-semantic-delivery-d3fb32e5-3720-42da-a513-3c1634932920-njdlgley.json",
           "sha256": "2f70c11170943f692159eb256a13c4b6c7dbe72dc8d3f9af7d9e8d04ce611a6f",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -1424,7 +1453,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T120022092Z-ssr-count-free-codex-invocation-change-98e1727b-9a77-4abe-a862-277e6d8e30c4-ucpcmui4",
@@ -1438,9 +1467,10 @@
       "result": {
         "result_id": "count-free-codex-01-invocation-change-finalist-3",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T120022092Z-ssr-count-free-codex-invocation-change-98e1727b-9a77-4abe-a862-277e6d8e30c4-ucpcmui4.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T120022092Z-ssr-count-free-codex-invocation-change-98e1727b-9a77-4abe-a862-277e6d8e30c4-ucpcmui4.json",
           "sha256": "33765cd077dded4ba80db4fb44cf1feaa54c3c9e7da3a099163cbe7f7805af08",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -1472,7 +1502,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T120225413Z-ssr-count-free-codex-invocation-review-d0b54bfa-0108-413b-8bfb-7e4cd9f9d488-g76hn0s5",
@@ -1486,9 +1516,10 @@
       "result": {
         "result_id": "count-free-codex-01-invocation-review-finalist-3",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T120225413Z-ssr-count-free-codex-invocation-review-d0b54bfa-0108-413b-8bfb-7e4cd9f9d488-g76hn0s5.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T120225413Z-ssr-count-free-codex-invocation-review-d0b54bfa-0108-413b-8bfb-7e4cd9f9d488-g76hn0s5.json",
           "sha256": "68a14b1c409946dc7092f71062af8359d0f4194121332d18e5ef1a6765af1bdc",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -1520,7 +1551,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T120420101Z-ssr-count-free-codex-invocation-verification-6f2f9ff4-55ef-47ed-aa03-0bbfa77539fc-fk6363zq",
@@ -1534,9 +1565,10 @@
       "result": {
         "result_id": "count-free-codex-01-invocation-verification-finalist-3",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T120420101Z-ssr-count-free-codex-invocation-verification-6f2f9ff4-55ef-47ed-aa03-0bbfa77539fc-fk6363zq.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T120420101Z-ssr-count-free-codex-invocation-verification-6f2f9ff4-55ef-47ed-aa03-0bbfa77539fc-fk6363zq.json",
           "sha256": "21925c2461dcbb708a0b0d32b5ca87f984797e70ac19adde89833c1532cd5984",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     },
@@ -1568,7 +1600,7 @@
         "charge": 1
       },
       "limitations": [
-        "Exposed regression; active-session assessment, independent review pending."
+        "Exposed regression; complete active-session assessment and audited complete-output review for every repair. Native selection and reporting remain separately scored."
       ],
       "bundle": {
         "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T120538978Z-ssr-count-free-codex-invocation-unrelated-de7cd2bc-167d-4f5d-8540-79860506162c-lyr2vzz5",
@@ -1582,9 +1614,10 @@
       "result": {
         "result_id": "count-free-codex-01-invocation-unrelated-finalist-3",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T120538978Z-ssr-count-free-codex-invocation-unrelated-de7cd2bc-167d-4f5d-8540-79860506162c-lyr2vzz5.json",
+          "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/results/20261031T120538978Z-ssr-count-free-codex-invocation-unrelated-de7cd2bc-167d-4f5d-8540-79860506162c-lyr2vzz5.json",
           "sha256": "fff202a012fb5fb2376e3677e3ce56247d02013e84808519fc87341fb2a522f9",
-          "version": "2"
+          "version": "2",
+          "git_revision": "237742ed8f99b082e347fec3ed97e59a1e76c53d"
         }
       }
     }
