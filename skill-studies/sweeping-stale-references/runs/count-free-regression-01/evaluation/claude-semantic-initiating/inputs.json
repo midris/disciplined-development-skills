@@ -1,0 +1,297 @@
+{
+  "packet_id": "claude-semantic-initiating",
+  "output_count": 6,
+  "functional_factors": 18,
+  "subject_indexes": [
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/count-free-regression-01/count-free-codex-01-run-index.json",
+      "sha256": "dd51b7cf5648756318b91fd9c66abb547e866e7e3aa0c3ae4c3af9827101c3bb"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/count-free-regression-01/count-free-claude-01-run-index.json",
+      "sha256": "a5a1361aef7860f0ec6e59f4a0845fcf94c0c404cb6ea0ce2cdc696b773045f9"
+    }
+  ],
+  "subject_assessments": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T113210863Z-ssr-count-free-claude-initiating-change-8dc00fc4-3819-4f7e-b205-92e89a664c35-_f4vm3t0.json",
+      "sha256": "4f640e14b4e3243c5f7bc57afbf6247d9e564972a3a92b885735f34fce5c8c2c"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T113543556Z-ssr-count-free-claude-semantic-delivery-408042d7-3a23-46a8-ac4b-e451c344f2f6-bdzzauuq.json",
+      "sha256": "7dabae7139020392895badb2a93fcf3a93d72363658e9d93f61be8532d712f10"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T114120059Z-ssr-count-free-claude-initiating-change-2f0bbbec-bdb7-4f13-a8d6-b989b8069a94-l12ytucm.json",
+      "sha256": "a80c73cade44ada09f40c0615baf526445ab1a73b453ceb554012efbe2561c31"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T114522939Z-ssr-count-free-claude-semantic-delivery-ca2455c6-68f5-46f7-b23f-5af8106dfc04-mn21z2er.json",
+      "sha256": "6aedd9184cb030d44c01cc5d30e21fe26327e7b60a1f08c14bc29c46c9ce848a"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T115534761Z-ssr-count-free-claude-initiating-change-b6966fe7-18b3-48da-b990-1b86035c2dbc-lp2bd68h.json",
+      "sha256": "77d919443fa02aa7b6aa77a4b6867bd857eeded22c2f42ab1ebb408bc8d1dffa"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T115931685Z-ssr-count-free-claude-semantic-delivery-91f5aa91-dd01-4eda-8c1f-5bdde2813a04-ftsir6ox.json",
+      "sha256": "cfe691a0d682b6206b7b2d4b57aae61fe7b2180873c8aaf68936de31eb281a7d"
+    }
+  ],
+  "configuration": {
+    "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/count-free-regression-01/evaluation/claude-semantic-initiating/config.json",
+    "sha256": "e463e564f408c7a858c42a376456a2330112e1009806fc85f868476903af7023"
+  },
+  "prompt": {
+    "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/count-free-regression-01/evaluation/prompt.md",
+    "sha256": "6e5dd9cf0a64d845a0dbc32a1e80aa47cc22aadb03aedabdc8786c06e62dbecb"
+  },
+  "input_files": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/EVALUATION-INDEX.json",
+      "sha256": "2592cc764026fb6e3070db390269f901704b2a9fe5cfef30ef0f05ced6b16506"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/INTERPRETATION.md",
+      "sha256": "5c55da3c507bac3b4ee9f3b9d2c695136f6ce852093466de665c428ba84b847f"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/criteria/initiating-change-expected.md",
+      "sha256": "be770c6e7a05bd72e9704a4ed3e385efe72be0f1cc89e7b96c584fa0e6d64331"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/criteria/initiating-change-inherited.md",
+      "sha256": "992f7981668d99b2f652a06e31bca50a31c24dad13f3ef20c8d94bb6fcc4d508"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/criteria/initiating-change.md",
+      "sha256": "3fd9c9efe90dad392de5034bc303e28bd48de5cc6916c128eb1bfb25e102ebba"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/criteria/semantic-delivery-expected.json",
+      "sha256": "1eccde02cbd1523e4d99a90359fae1d45b494c13a3d4691df83b0b0ab9a011fa"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/criteria/semantic-delivery-inherited.md",
+      "sha256": "bae6463893e23dba7238e0de74d0accb1ced5d4e22ad04cb7f17bfcebc557253"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/criteria/semantic-delivery.md",
+      "sha256": "babee06c70bbaff5b38f14779ed3b85347a1ff10edd58371060247a1dded4d21"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/facts/20261031T113210863Z-ssr-count-free-claude-initiating-change-8dc00fc4-3819-4f7e-b205-92e89a664c35-_f4vm3t0.json",
+      "sha256": "0394617d080ba5c9b1d10518f043493a7e8ae10f38346a4a3782f379cbebe389"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/facts/20261031T113543556Z-ssr-count-free-claude-semantic-delivery-408042d7-3a23-46a8-ac4b-e451c344f2f6-bdzzauuq.json",
+      "sha256": "9a6e7314983b275650b22e88ae95ae7671c0b946e84d8293c54eb7e42cd9e134"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/facts/20261031T114120059Z-ssr-count-free-claude-initiating-change-2f0bbbec-bdb7-4f13-a8d6-b989b8069a94-l12ytucm.json",
+      "sha256": "3187b3c1a32fd9ef0554696fecb549b6a92e865dbba710823fd0f478c2eb1fd3"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/facts/20261031T114522939Z-ssr-count-free-claude-semantic-delivery-ca2455c6-68f5-46f7-b23f-5af8106dfc04-mn21z2er.json",
+      "sha256": "0f451a831dc41d4694d104afa78f4f5891dbfc3ac0236796a255baf35be72df6"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/facts/20261031T115534761Z-ssr-count-free-claude-initiating-change-b6966fe7-18b3-48da-b990-1b86035c2dbc-lp2bd68h.json",
+      "sha256": "871a2cb63b696a544a41e0f0652d0d768acba343045d64423fb574ecedd72a45"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/facts/20261031T115931685Z-ssr-count-free-claude-semantic-delivery-91f5aa91-dd01-4eda-8c1f-5bdde2813a04-ftsir6ox.json",
+      "sha256": "e5cb2eb8288b9b8d8f36b211b46d784cc1736396eead6cbbd6b19f2de2cbf198"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/001.txt",
+      "sha256": "b9dd267653838ba8fedb6a23b6173254b930948d36492c5c5fdac0219e733f8b"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/002.txt",
+      "sha256": "1a4b23b1f53af5b7aa42ac8e72f59282374435831bd35f542c23bd7dfdccb6e3"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/003.txt",
+      "sha256": "8d6d58a231c01678279d8e00ea0f03f9306c1b36a474b8cb4dd5967b657453bb"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/004.txt",
+      "sha256": "7d3c3810c532bdd87af795cf543171deeaff0595e4a13f7fdee39e8dfdef18d2"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/005.txt",
+      "sha256": "8e8a5cb48d7d3f3ca8e7212e9c29764f6e8f6cdaaf4f4d8d0762aaeaca906f1f"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/006.txt",
+      "sha256": "ef7513eb13148ad5c6b215959ae917c6ef42a24050dc8df5ff64fe814dcfd376"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/007.txt",
+      "sha256": "554df6c0a7d0bf116cc593c4fdf3384e8645ab98c7d4e38780637b75577cda52"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/008.txt",
+      "sha256": "3a618d709d2be580ccb53f2f660822be9f90b091af41e3ce3b7aaed31e894eb0"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/009.txt",
+      "sha256": "71160952f35e3a255d68cca629a0a66d79e3e4b4c30431786f6945a28ede54f3"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/010.txt",
+      "sha256": "6c9685054ae4f4dd6f32a76a18401366e4206b829466367640370554bf33f683"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/011.txt",
+      "sha256": "25b48a27d48b2bb74e9953545e5d264de141bbc35fed11a9895033aaec4a3837"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/012.txt",
+      "sha256": "e1973f3af6490a611eb92059576e03d7bcfb726298d220f83e57369af6410c78"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/013.txt",
+      "sha256": "a2354de6353bc947ef4914633f37ac7c5d19833734f505358d77483558fca264"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/014.txt",
+      "sha256": "39173e527c02bb8051ec44867f13777a70bd956a47a94a9a041eea2b12da9828"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/015.txt",
+      "sha256": "6d5fe8c33e0fef06a6734d4aca5d40f29e26ca6c1f7b64b4fb93708e7e2efa76"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/016.txt",
+      "sha256": "815923fcce071b2f077fc76b972d193e8ee88611b9f1418f64cd9d9f36a4f331"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/017.txt",
+      "sha256": "26b396a47f08e7312600c59e759c570e3e8e9888207e238e4755b8018cfae248"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/018.txt",
+      "sha256": "d092547b68039f16d231e5b11297c277f21cf91623b5db2cd1301730f35ea10b"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/019.txt",
+      "sha256": "45940528ad7f26ca62ed012f4b9d5c7c3f99a4e761f418b033e2267810d83197"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/020.txt",
+      "sha256": "33fbf6018f8b275d3c286f93903484ed67bbe83d291d698a88f7316bfe85ff24"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/021.txt",
+      "sha256": "93df2d8204ae7fa57b01cdfc7693cc5cd37b69c52a6048b07bc73d085329fb1c"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/022.txt",
+      "sha256": "c87e4afce8521b85dc30d2e44a1f35ca94accc8848f4680c1c7a2c83fa05fb4d"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/023.txt",
+      "sha256": "1c17cca63c9b3e7d0804f983643786ea75f17b64a099a5b75bd6001c9a518bd2"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/024.txt",
+      "sha256": "471188ec72adac025536dc04f7af871423b3678a08a99a69e5a74da613f47d48"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/025.txt",
+      "sha256": "363849394f492cbe47a867fdd6ba7456d6ec109a85d4c2dd262cdafa876ddf12"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/026.txt",
+      "sha256": "120ca715b67d11813785079a8e6a2b219439e413353f5cf5bd3d503eede8e456"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/027.txt",
+      "sha256": "4dd7c1d5643c51a6f72d130b6d10fabc5279d1d5ba83be285556cbd6463f84d4"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/028.txt",
+      "sha256": "2896d61c69e201158909095f39eb70bbc8cd717b77985cc0080762a989d02be0"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/029.txt",
+      "sha256": "c891b221c7e8e90e67a55ed09f312925c0989ba06ac426f454293b76bee5b891"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/030.txt",
+      "sha256": "2436b0c68662c0128de007b48b5687e22cd43a86aa465029df6d71ca0c8a9dac"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/031.txt",
+      "sha256": "664362730e64b7495b808273b1c44ad7675a92c023663d0819d6df538442d87b"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/objects/032.txt",
+      "sha256": "58e6a1d6b80e92db110ad973f1d7340834531cdd78bfea5f3c984afb6ab73ac0"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/outputs/20261031T113210863Z-ssr-count-free-claude-initiating-change-8dc00fc4-3819-4f7e-b205-92e89a664c35-_f4vm3t0.md",
+      "sha256": "f6499e9d54f1784c10c3c471b13c431a4b4c267a0fd9bbee809dcd9de183434e"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/outputs/20261031T113543556Z-ssr-count-free-claude-semantic-delivery-408042d7-3a23-46a8-ac4b-e451c344f2f6-bdzzauuq.md",
+      "sha256": "8edf9868a44df6ac5bf835ed54258bf8b6cd010d336df330a515c0f5b0a6353e"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/outputs/20261031T114120059Z-ssr-count-free-claude-initiating-change-2f0bbbec-bdb7-4f13-a8d6-b989b8069a94-l12ytucm.md",
+      "sha256": "cc1367e9d30f2fa76d6d5d4d4e973f00809d4d78a12cce85e503d09be21e3c6a"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/outputs/20261031T114522939Z-ssr-count-free-claude-semantic-delivery-ca2455c6-68f5-46f7-b23f-5af8106dfc04-mn21z2er.md",
+      "sha256": "f5e44ea10b9452fb4166a78e773c715bb7bac633ef9186c289a2f813d109a9bb"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/outputs/20261031T115534761Z-ssr-count-free-claude-initiating-change-b6966fe7-18b3-48da-b990-1b86035c2dbc-lp2bd68h.md",
+      "sha256": "424ee0772bfcef2041f8454b2f7a48f45492593aae687932e8c55d80f02c6258"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/outputs/20261031T115931685Z-ssr-count-free-claude-semantic-delivery-91f5aa91-dd01-4eda-8c1f-5bdde2813a04-ftsir6ox.md",
+      "sha256": "ebc2655c6788ce718230d1de73967acd526572f485aa9cdcdf8302eee141b81e"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/policy.txt",
+      "sha256": "cc030c28bcfc36c20b700f00d2307b2933ee7d884a0d0a87d14ed8b0da2b92f5"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-semantic-initiating/prior-assessment.md",
+      "sha256": "ee9b04ce64e7a3f4e8d56f9387d1cacb9f1ff0fcac9c64ee78dcc54964d7979b"
+    }
+  ],
+  "controller": {
+    "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/controllers/count-free-reviews.py",
+    "sha256": "35cab7796b371a3466933419df94d9fbfbaa40d6a08dd9e3872e76d4e902a75e"
+  },
+  "controller_support": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/controllers/count-free-packets-remaining.py",
+      "sha256": "59a3d55cf7fef2bbe8d14f0ba4f539351cffce00ba7c5a5a8622bd715fe7f22e"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/controllers/count-free-review-audit.py",
+      "sha256": "443ceb554b1dd79903a2d20a1728b53ecae601f025106908310f0347c0fef45c"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/controllers/count-free-review-finish.py",
+      "sha256": "935622fb44a2ac05f84009e6a22550920ca5edd846cabee437bc1137ec843e09"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/runtime_setup.py",
+      "sha256": "91c8a2a5fccaa22affc662fe8824a2502be8e373e363520f21033a25838afdb2"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/body_delivery.py",
+      "sha256": "8e084894e036286c8b7735df6a6a1d160eef4e74d609626f1bdfd1667ba1c87a"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/runtime-identities.json",
+      "sha256": "4db768c06888842ccb3d62dbffdbe289b24512308d137d6b2a91d4c7d3c5cc0c"
+    }
+  ]
+}

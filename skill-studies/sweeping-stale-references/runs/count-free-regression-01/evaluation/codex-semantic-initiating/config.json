@@ -1,0 +1,241 @@
+{
+  "schema_version": "0.2",
+  "id": "ssr-count-free-codex-semantic-initiating-review",
+  "prompt": "../prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/INTERPRETATION.md",
+      "target": "INTERPRETATION.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/criteria/initiating-change-expected.md",
+      "target": "criteria/initiating-change-expected.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/criteria/initiating-change-inherited.md",
+      "target": "criteria/initiating-change-inherited.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/criteria/initiating-change.md",
+      "target": "criteria/initiating-change.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/criteria/semantic-delivery-expected.json",
+      "target": "criteria/semantic-delivery-expected.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/criteria/semantic-delivery-inherited.md",
+      "target": "criteria/semantic-delivery-inherited.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/criteria/semantic-delivery.md",
+      "target": "criteria/semantic-delivery.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/facts/20261031T112544875Z-ssr-count-free-codex-initiating-change-31f4fd2e-2011-4f2b-a072-81199c7314d0-1szr7app.json",
+      "target": "facts/20261031T112544875Z-ssr-count-free-codex-initiating-change-31f4fd2e-2011-4f2b-a072-81199c7314d0-1szr7app.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/facts/20261031T113445113Z-ssr-count-free-codex-semantic-delivery-6fc4c1a5-49f6-402f-9a8e-46182978cebf-iq74igei.json",
+      "target": "facts/20261031T113445113Z-ssr-count-free-codex-semantic-delivery-6fc4c1a5-49f6-402f-9a8e-46182978cebf-iq74igei.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/facts/20261031T114212243Z-ssr-count-free-codex-initiating-change-774d6911-76ae-4ccf-b076-3e9695eee9ae-q7ujxhbf.json",
+      "target": "facts/20261031T114212243Z-ssr-count-free-codex-initiating-change-774d6911-76ae-4ccf-b076-3e9695eee9ae-q7ujxhbf.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/facts/20261031T114606162Z-ssr-count-free-codex-semantic-delivery-8dbcd886-c83e-46ff-9717-baeddcee96cf-pxl4vx8l.json",
+      "target": "facts/20261031T114606162Z-ssr-count-free-codex-semantic-delivery-8dbcd886-c83e-46ff-9717-baeddcee96cf-pxl4vx8l.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/facts/20261031T115412126Z-ssr-count-free-codex-initiating-change-d8d86931-be7e-4de2-835e-d57b42d0b3a5-qqt4mhps.json",
+      "target": "facts/20261031T115412126Z-ssr-count-free-codex-initiating-change-d8d86931-be7e-4de2-835e-d57b42d0b3a5-qqt4mhps.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/facts/20261031T115833382Z-ssr-count-free-codex-semantic-delivery-d3fb32e5-3720-42da-a513-3c1634932920-njdlgley.json",
+      "target": "facts/20261031T115833382Z-ssr-count-free-codex-semantic-delivery-d3fb32e5-3720-42da-a513-3c1634932920-njdlgley.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/001.txt",
+      "target": "objects/001.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/002.txt",
+      "target": "objects/002.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/003.txt",
+      "target": "objects/003.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/004.txt",
+      "target": "objects/004.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/005.txt",
+      "target": "objects/005.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/006.txt",
+      "target": "objects/006.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/007.txt",
+      "target": "objects/007.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/008.txt",
+      "target": "objects/008.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/009.txt",
+      "target": "objects/009.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/010.txt",
+      "target": "objects/010.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/011.txt",
+      "target": "objects/011.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/012.txt",
+      "target": "objects/012.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/013.txt",
+      "target": "objects/013.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/014.txt",
+      "target": "objects/014.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/015.txt",
+      "target": "objects/015.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/016.txt",
+      "target": "objects/016.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/017.txt",
+      "target": "objects/017.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/018.txt",
+      "target": "objects/018.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/019.txt",
+      "target": "objects/019.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/020.txt",
+      "target": "objects/020.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/021.txt",
+      "target": "objects/021.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/022.txt",
+      "target": "objects/022.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/023.txt",
+      "target": "objects/023.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/024.txt",
+      "target": "objects/024.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/025.txt",
+      "target": "objects/025.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/026.txt",
+      "target": "objects/026.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/027.txt",
+      "target": "objects/027.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/028.txt",
+      "target": "objects/028.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/029.txt",
+      "target": "objects/029.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/030.txt",
+      "target": "objects/030.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/031.txt",
+      "target": "objects/031.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/032.txt",
+      "target": "objects/032.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/033.txt",
+      "target": "objects/033.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/034.txt",
+      "target": "objects/034.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/objects/035.txt",
+      "target": "objects/035.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/outputs/20261031T112544875Z-ssr-count-free-codex-initiating-change-31f4fd2e-2011-4f2b-a072-81199c7314d0-1szr7app.md",
+      "target": "outputs/20261031T112544875Z-ssr-count-free-codex-initiating-change-31f4fd2e-2011-4f2b-a072-81199c7314d0-1szr7app.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/outputs/20261031T113445113Z-ssr-count-free-codex-semantic-delivery-6fc4c1a5-49f6-402f-9a8e-46182978cebf-iq74igei.md",
+      "target": "outputs/20261031T113445113Z-ssr-count-free-codex-semantic-delivery-6fc4c1a5-49f6-402f-9a8e-46182978cebf-iq74igei.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/outputs/20261031T114212243Z-ssr-count-free-codex-initiating-change-774d6911-76ae-4ccf-b076-3e9695eee9ae-q7ujxhbf.md",
+      "target": "outputs/20261031T114212243Z-ssr-count-free-codex-initiating-change-774d6911-76ae-4ccf-b076-3e9695eee9ae-q7ujxhbf.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/outputs/20261031T114606162Z-ssr-count-free-codex-semantic-delivery-8dbcd886-c83e-46ff-9717-baeddcee96cf-pxl4vx8l.md",
+      "target": "outputs/20261031T114606162Z-ssr-count-free-codex-semantic-delivery-8dbcd886-c83e-46ff-9717-baeddcee96cf-pxl4vx8l.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/outputs/20261031T115412126Z-ssr-count-free-codex-initiating-change-d8d86931-be7e-4de2-835e-d57b42d0b3a5-qqt4mhps.md",
+      "target": "outputs/20261031T115412126Z-ssr-count-free-codex-initiating-change-d8d86931-be7e-4de2-835e-d57b42d0b3a5-qqt4mhps.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/outputs/20261031T115833382Z-ssr-count-free-codex-semantic-delivery-d3fb32e5-3720-42da-a513-3c1634932920-njdlgley.md",
+      "target": "outputs/20261031T115833382Z-ssr-count-free-codex-semantic-delivery-d3fb32e5-3720-42da-a513-3c1634932920-njdlgley.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/policy.txt",
+      "target": "policy.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-semantic-initiating/prior-assessment.md",
+      "target": "prior-assessment.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}

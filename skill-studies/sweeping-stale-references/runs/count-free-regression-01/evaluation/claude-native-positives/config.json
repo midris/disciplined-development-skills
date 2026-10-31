@@ -1,0 +1,229 @@
+{
+  "schema_version": "0.2",
+  "id": "ssr-count-free-claude-native-positives-review",
+  "prompt": "../prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/INTERPRETATION.md",
+      "target": "INTERPRETATION.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/criteria/invocation-change-expected.md",
+      "target": "criteria/invocation-change-expected.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/criteria/invocation-change-inherited.md",
+      "target": "criteria/invocation-change-inherited.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/criteria/invocation-change.md",
+      "target": "criteria/invocation-change.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/criteria/invocation-review-expected.json",
+      "target": "criteria/invocation-review-expected.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/criteria/invocation-review-inherited.md",
+      "target": "criteria/invocation-review-inherited.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/criteria/invocation-review.md",
+      "target": "criteria/invocation-review.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/facts/20261031T113715839Z-ssr-count-free-claude-invocation-change-9d518b56-d641-4635-833d-47f586dc7808-7us5rvqn.json",
+      "target": "facts/20261031T113715839Z-ssr-count-free-claude-invocation-change-9d518b56-d641-4635-833d-47f586dc7808-7us5rvqn.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/facts/20261031T113842998Z-ssr-count-free-claude-invocation-review-c9dea6b7-28a3-408d-a2c9-0f4282048245-7blieivv.json",
+      "target": "facts/20261031T113842998Z-ssr-count-free-claude-invocation-review-c9dea6b7-28a3-408d-a2c9-0f4282048245-7blieivv.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/facts/20261031T114655830Z-ssr-count-free-claude-invocation-change-74b1fd77-f097-4e69-9569-e62c962772bf-m_p7fuwh.json",
+      "target": "facts/20261031T114655830Z-ssr-count-free-claude-invocation-change-74b1fd77-f097-4e69-9569-e62c962772bf-m_p7fuwh.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/facts/20261031T114839183Z-ssr-count-free-claude-invocation-review-5c82f072-f91f-485f-b6ee-8dfc857b14f8-25cwrlt0.json",
+      "target": "facts/20261031T114839183Z-ssr-count-free-claude-invocation-review-5c82f072-f91f-485f-b6ee-8dfc857b14f8-25cwrlt0.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/facts/20261031T120137970Z-ssr-count-free-claude-invocation-change-51ede39f-bbb1-4d90-b5fb-43c0dcff1276-lv7k7lj3.json",
+      "target": "facts/20261031T120137970Z-ssr-count-free-claude-invocation-change-51ede39f-bbb1-4d90-b5fb-43c0dcff1276-lv7k7lj3.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/facts/20261031T120336629Z-ssr-count-free-claude-invocation-review-fd514768-bf19-4b10-8a2f-c58d576151c9-2010ts_p.json",
+      "target": "facts/20261031T120336629Z-ssr-count-free-claude-invocation-review-fd514768-bf19-4b10-8a2f-c58d576151c9-2010ts_p.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/001.txt",
+      "target": "objects/001.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/002.txt",
+      "target": "objects/002.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/003.txt",
+      "target": "objects/003.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/004.txt",
+      "target": "objects/004.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/005.txt",
+      "target": "objects/005.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/006.txt",
+      "target": "objects/006.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/007.txt",
+      "target": "objects/007.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/008.txt",
+      "target": "objects/008.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/009.txt",
+      "target": "objects/009.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/010.txt",
+      "target": "objects/010.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/011.txt",
+      "target": "objects/011.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/012.txt",
+      "target": "objects/012.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/013.txt",
+      "target": "objects/013.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/014.txt",
+      "target": "objects/014.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/015.txt",
+      "target": "objects/015.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/016.txt",
+      "target": "objects/016.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/017.txt",
+      "target": "objects/017.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/018.txt",
+      "target": "objects/018.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/019.txt",
+      "target": "objects/019.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/020.txt",
+      "target": "objects/020.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/021.txt",
+      "target": "objects/021.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/022.txt",
+      "target": "objects/022.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/023.txt",
+      "target": "objects/023.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/024.txt",
+      "target": "objects/024.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/025.txt",
+      "target": "objects/025.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/026.txt",
+      "target": "objects/026.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/027.txt",
+      "target": "objects/027.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/028.txt",
+      "target": "objects/028.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/029.txt",
+      "target": "objects/029.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/030.txt",
+      "target": "objects/030.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/031.txt",
+      "target": "objects/031.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/objects/032.txt",
+      "target": "objects/032.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/outputs/20261031T113715839Z-ssr-count-free-claude-invocation-change-9d518b56-d641-4635-833d-47f586dc7808-7us5rvqn.md",
+      "target": "outputs/20261031T113715839Z-ssr-count-free-claude-invocation-change-9d518b56-d641-4635-833d-47f586dc7808-7us5rvqn.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/outputs/20261031T113842998Z-ssr-count-free-claude-invocation-review-c9dea6b7-28a3-408d-a2c9-0f4282048245-7blieivv.md",
+      "target": "outputs/20261031T113842998Z-ssr-count-free-claude-invocation-review-c9dea6b7-28a3-408d-a2c9-0f4282048245-7blieivv.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/outputs/20261031T114655830Z-ssr-count-free-claude-invocation-change-74b1fd77-f097-4e69-9569-e62c962772bf-m_p7fuwh.md",
+      "target": "outputs/20261031T114655830Z-ssr-count-free-claude-invocation-change-74b1fd77-f097-4e69-9569-e62c962772bf-m_p7fuwh.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/outputs/20261031T114839183Z-ssr-count-free-claude-invocation-review-5c82f072-f91f-485f-b6ee-8dfc857b14f8-25cwrlt0.md",
+      "target": "outputs/20261031T114839183Z-ssr-count-free-claude-invocation-review-5c82f072-f91f-485f-b6ee-8dfc857b14f8-25cwrlt0.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/outputs/20261031T120137970Z-ssr-count-free-claude-invocation-change-51ede39f-bbb1-4d90-b5fb-43c0dcff1276-lv7k7lj3.md",
+      "target": "outputs/20261031T120137970Z-ssr-count-free-claude-invocation-change-51ede39f-bbb1-4d90-b5fb-43c0dcff1276-lv7k7lj3.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/outputs/20261031T120336629Z-ssr-count-free-claude-invocation-review-fd514768-bf19-4b10-8a2f-c58d576151c9-2010ts_p.md",
+      "target": "outputs/20261031T120336629Z-ssr-count-free-claude-invocation-review-fd514768-bf19-4b10-8a2f-c58d576151c9-2010ts_p.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/policy.txt",
+      "target": "policy.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/claude-native-positives/prior-assessment.md",
+      "target": "prior-assessment.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}

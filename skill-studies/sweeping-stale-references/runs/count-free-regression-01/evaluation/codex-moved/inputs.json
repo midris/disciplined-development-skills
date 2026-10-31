@@ -1,0 +1,177 @@
+{
+  "packet_id": "codex-moved",
+  "output_count": 3,
+  "functional_factors": 9,
+  "subject_indexes": [
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/count-free-regression-01/count-free-codex-01-run-index.json",
+      "sha256": "dd51b7cf5648756318b91fd9c66abb547e866e7e3aa0c3ae4c3af9827101c3bb"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/count-free-regression-01/count-free-claude-01-run-index.json",
+      "sha256": "a5a1361aef7860f0ec6e59f4a0845fcf94c0c404cb6ea0ce2cdc696b773045f9"
+    }
+  ],
+  "subject_assessments": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T113258321Z-ssr-count-free-codex-moved-guide-a8795779-7aea-4d64-a58f-91b687f54105-egwrylq7.json",
+      "sha256": "f1ef5681882b41a0a9e132b22b676f2ee00564f445602a4f9ef5ae6b1592c7c1"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T114417130Z-ssr-count-free-codex-moved-guide-89f533e5-b661-4275-a65f-52def915298f-kbxmbdwl.json",
+      "sha256": "c59b3b5d92b71153f2966d93d85052e82f410a48a8481ca9f50432ea632ea755"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/scores/20261031T115634295Z-ssr-count-free-codex-moved-guide-f416e6dd-c5bd-416c-80e8-be0faae6d32b-sxzrwx7_.json",
+      "sha256": "ff6559048cf76501ee9c931a9983f5a6dafeda3e09d385f12752bb21e1d67c44"
+    }
+  ],
+  "configuration": {
+    "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/count-free-regression-01/evaluation/codex-moved/config.json",
+    "sha256": "8152a85ce6b343a35b046340653f85e9f6b2a0ed6261081652e38eb7c06b75b3"
+  },
+  "prompt": {
+    "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/count-free-regression-01/evaluation/prompt.md",
+    "sha256": "6e5dd9cf0a64d845a0dbc32a1e80aa47cc22aadb03aedabdc8786c06e62dbecb"
+  },
+  "input_files": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-moved/EVALUATION-INDEX.json",
+      "sha256": "dd687b5da83bb8f058bb9767e08ba1a17f8c3111a4accc78ce65bb94d2794e27"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-moved/INTERPRETATION.md",
+      "sha256": "5c55da3c507bac3b4ee9f3b9d2c695136f6ce852093466de665c428ba84b847f"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-moved/criteria/moved-guide-expected.json",
+      "sha256": "7c2539f37f33b37e68339252cea73a7020c0d0a2f030ea6f562e826682c38730"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-moved/criteria/moved-guide-inherited.md",
+      "sha256": "4457007bc2d0fa830e3f2b5cc3b99997827dfd1880878d403d72fbf04d8f6171"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-moved/criteria/moved-guide.md",
+      "sha256": "d0bd56a5dd0248987ed6da9f106f3df6996b3737ff8b1c32ede9f6467ab57b7c"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-moved/facts/20261031T113258321Z-ssr-count-free-codex-moved-guide-a8795779-7aea-4d64-a58f-91b687f54105-egwrylq7.json",
+      "sha256": "871b77248df708b7cd23bc8ea8c1b962967ff050e23f438513edfe7018c19fa7"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-moved/facts/20261031T114417130Z-ssr-count-free-codex-moved-guide-89f533e5-b661-4275-a65f-52def915298f-kbxmbdwl.json",
+      "sha256": "0fd676b0ea828d6856a760e710dd09dc70d6180084aa52d191e8af1961ffe80e"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-moved/facts/20261031T115634295Z-ssr-count-free-codex-moved-guide-f416e6dd-c5bd-416c-80e8-be0faae6d32b-sxzrwx7_.json",
+      "sha256": "48795a11853621eb70b489de9334ed4bd3b750088fc1b47efbf52d7c08e2ff2c"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-moved/objects/001.txt",
+      "sha256": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-moved/objects/002.txt",
+      "sha256": "098f558258086dd934d009abf9d0a56f49a7e2618f3cd21050553037c0e86075"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-moved/objects/003.txt",
+      "sha256": "4449bfe65c1cc6a59bc692a8077377a6e56b0f378870be229000a70a943bb609"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-moved/objects/004.txt",
+      "sha256": "c7a759fbfc829c024b57d3a79f63fa6a4718e173dfb5a7e2b943f4e44f47a5b9"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-moved/objects/005.txt",
+      "sha256": "b856f45737cb568d58ee7ebbec0b12123c4be3fac93c6994c64508ca86763365"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-moved/objects/006.txt",
+      "sha256": "64f544d394b479f0e7a30c6bdd56e52aaf7352509c0f8b08d4148994eb628932"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-moved/objects/007.txt",
+      "sha256": "06fdfdc2080354658cfa73fbe443799dafcb9afc2bdd41f152bff8d3fe72f82f"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-moved/objects/008.txt",
+      "sha256": "7e28eb12cddc29de9f3ef2ba7b3f759bbb92af864f573f4c8556b441344799b0"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-moved/objects/009.txt",
+      "sha256": "9ea5c2f793cd0128db290b87d35b46f8a9fe6f7d32f6a44bfea32530e49ac2ab"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-moved/objects/010.txt",
+      "sha256": "4b72fb7e8ff4beebcbf95282e502b7427a9622c21693fd48e397b044a603f11b"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-moved/objects/011.txt",
+      "sha256": "9e97a73685d83fddaddac027c2e1f38fa225d087f5f3a32ff8da1f9937aaf2b5"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-moved/objects/012.txt",
+      "sha256": "96144ff7b607b53498e91dee88d5e34f254459c04a29da7afeb3bebfc71e22b6"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-moved/objects/013.txt",
+      "sha256": "c61c0daedb88e2462da72311fa3fc547be7632cf571a5a2e5d50d32448ff992f"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-moved/objects/014.txt",
+      "sha256": "afd80dc1ebc98978102750682bac98af191e12ad272aaf1ce98dbbdb03dab7ac"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-moved/outputs/20261031T113258321Z-ssr-count-free-codex-moved-guide-a8795779-7aea-4d64-a58f-91b687f54105-egwrylq7.md",
+      "sha256": "685718ba21940200336e840c584fd3bb8db02e60ddaa0c1649c0b75e0ad71dd3"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-moved/outputs/20261031T114417130Z-ssr-count-free-codex-moved-guide-89f533e5-b661-4275-a65f-52def915298f-kbxmbdwl.md",
+      "sha256": "a5afab7a83e36250d118c8ce70a39a5683b8edfcaf22e5eda2895c9511a857b7"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-moved/outputs/20261031T115634295Z-ssr-count-free-codex-moved-guide-f416e6dd-c5bd-416c-80e8-be0faae6d32b-sxzrwx7_.md",
+      "sha256": "382fa35c74d1056d11a0def069ff0b5846bc7059bcb0c73a2280dce85b6a606a"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-moved/policy.txt",
+      "sha256": "cc030c28bcfc36c20b700f00d2307b2933ee7d884a0d0a87d14ed8b0da2b92f5"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/review-inputs/codex-moved/prior-assessment.md",
+      "sha256": "6b3e3fa0b2c02e41850b6074fbe08a46446c82feaaefe5d57d78ad33439e88e1"
+    }
+  ],
+  "controller": {
+    "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/controllers/count-free-reviews.py",
+    "sha256": "35cab7796b371a3466933419df94d9fbfbaa40d6a08dd9e3872e76d4e902a75e"
+  },
+  "controller_support": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/controllers/count-free-packets-remaining.py",
+      "sha256": "59a3d55cf7fef2bbe8d14f0ba4f539351cffce00ba7c5a5a8622bd715fe7f22e"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/controllers/count-free-review-audit.py",
+      "sha256": "443ceb554b1dd79903a2d20a1728b53ecae601f025106908310f0347c0fef45c"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/controllers/count-free-review-finish.py",
+      "sha256": "935622fb44a2ac05f84009e6a22550920ca5edd846cabee437bc1137ec843e09"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/runtime_setup.py",
+      "sha256": "91c8a2a5fccaa22affc662fe8824a2502be8e373e363520f21033a25838afdb2"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/body_delivery.py",
+      "sha256": "8e084894e036286c8b7735df6a6a1d160eef4e74d609626f1bdfd1667ba1c87a"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/runtime-identities.json",
+      "sha256": "4db768c06888842ccb3d62dbffdbe289b24512308d137d6b2a91d4c7d3c5cc0c"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status": "resolved",
+  "discovered_at_slot": 25,
+  "cause": "Focused review packet construction used git diff HEAD; Git refreshed retained index stat caches despite --no-optional-locks.",
+  "scope": "All 24 original bundles inspected; only workspace/fixture/.git/index differed in 18 repairs. Logical stage entries unchanged; original source inventories intact. No project, output, trace, commit or review-input changes.",
+  "recovery": {
+    "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/retention-incident-01/recovery.json",
+    "sha256": "4bb83167066c0efd26b312d4118ed119d9adf234d1a89986a5a1fa9c615cc170"
+  },
+  "resolution": "Altered indexes preserved privately; exact original indexes restored and all full inventories verified. Remaining packet builder disables diff.autoRefreshIndex, validated on disposable original copy. Slot25 retained from existing successful capture, without retry.",
+  "gate_effect": "Focused functional and review conclusions unchanged. Evidence fault resolved before slot26; conditional authorization remains applicable."
+}

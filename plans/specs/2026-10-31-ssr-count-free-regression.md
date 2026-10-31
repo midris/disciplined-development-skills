@@ -57,6 +57,6 @@ If qualification cannot establish the required boundary, stop and report the con
 - [x] Owner selected focused-first execution and conditional full completion, with 66 subjects/ten reviews total and no duplicate focused collection.
 - [x] Prepare new configuration/card/schedule identities; qualify current runtimes and authentication, freeze authority and pass readiness. Inputs are pinned at `793fe322ce2564a23fae09d152b6833b1201b466`; manifests and dispatch authority at `911ee2ae51219dac4747e4809fec1dfbac19cfa7`. Eleven qualification checks passed; both providers have completed valid production subjects.
 - [x] Complete focused checkpoint: all 24 subjects and four audited reviews retained; 18/18 repairs and 54/54 independent functional factors met. Reporting defects remain separate; [gate](../../skill-studies/sweeping-stale-references/runs/count-free-regression-01/focused-gate.json) opens the approved remaining stage.
-- [ ] Run subjects sequentially, preserving and assessing every stopped attempt before the next dispatch.
+- [x] Run all 66 subjects sequentially, preserving and assessing each before the next dispatch. All 48 repairs meet F1–F3; remaining complete-output review is pending. All retained inventories and actual provider models were verified after packet construction.
 - [ ] Freeze complete review packets, audit each review and reconcile findings before the next review.
 - [ ] Publish the regression assessment, limitations and actual accounting; preserve the unrelated CW fixture edit.
