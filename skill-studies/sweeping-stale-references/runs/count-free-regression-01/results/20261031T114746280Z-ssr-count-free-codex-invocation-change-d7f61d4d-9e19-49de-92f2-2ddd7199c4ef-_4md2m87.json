@@ -1,0 +1,138 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "count-free-codex-01-invocation-change-finalist-2",
+  "assessed_at": "2026-10-31T11:48:38.623228+00:00",
+  "run_id": "20261031T114746280Z-ssr-count-free-codex-invocation-change-d7f61d4d-9e19-49de-92f2-2ddd7199c4ef-_4md2m87",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/manifests/codex-invocation-change-manifest.json",
+    "sha256": "a66dd19bc0a79f34825e97a631a218c2c106b8e25e592f0a4f4f99a119433c05",
+    "version": "1",
+    "git_revision": "aa29a164aef89316ab4840066ac7d355a25ecf28"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114746280Z-ssr-count-free-codex-invocation-change-d7f61d4d-9e19-49de-92f2-2ddd7199c4ef-_4md2m87.inventory.json",
+        "sha256": "33fa92c1a206303cabc09061de03be05658bf7ea594bc5845c9ae62a994fea5b",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114746280Z-ssr-count-free-codex-invocation-change-d7f61d4d-9e19-49de-92f2-2ddd7199c4ef-_4md2m87/stdout.txt",
+        "sha256": "76809f68ee6f2987eca2257ee737a30fef1198ffd6f8108b5172c26892dd6dbc",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114746280Z-ssr-count-free-codex-invocation-change-d7f61d4d-9e19-49de-92f2-2ddd7199c4ef-_4md2m87/runner.log",
+        "sha256": "2ed8cdb8c7d1fa61be33e686c97a55212455a5b8146fb96a5217784f14da1c01",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114746280Z-ssr-count-free-codex-invocation-change-d7f61d4d-9e19-49de-92f2-2ddd7199c4ef-_4md2m87/result.json",
+        "sha256": "bf696e5acd20f97a1c091abb5fea90c25ae3083f9a8605a5b25696dcf769c38d",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    },
+    {
+      "id": "provider-session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114746280Z-ssr-count-free-codex-invocation-change-d7f61d4d-9e19-49de-92f2-2ddd7199c4ef-_4md2m87/provider-session.jsonl",
+        "sha256": "49b0d7c49dec102c8e1b693df969635d14d151821209ff9432e6cddaf73202b2",
+        "version": null
+      },
+      "selector": "Complete provider session including nested tools omitted by stdout projection."
+    },
+    {
+      "id": "replay",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/replays/slot-46.json",
+        "sha256": "c12b7ceddae1e9683645e3cfc3e59dcb0e9b309758641cf8d7897eefc3c0bf83",
+        "version": null
+      },
+      "selector": "Deterministic observations from disposable final-project copy, not semantic verdicts."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Qualified Codex native availability, complete body before edits, exact baseline and full capture/cleanup.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All six current service consumers use session_ttl_minutes/session TTL. Complete project inspection, three passing tests and example execution from both directories confirm behavior.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "30-minute default, seconds conversion, rejection of nonpositive duration, partner constraint and refresh trade-off preserved; archive/vendor and task remain unchanged.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Complete six-file repair committed in d5ffe15; clean worktree.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Selected SSR without task-level invocation request and received full frozen body before first reconciliation edit.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Complete preserved native repair and timely full body loading; tests and script from two locations observed. Commit groups several required paths together, a descriptive reporting limitation outside this native card.",
+  "observations": [],
+  "uncertainty": [
+    "Exposed regression; independent complete-output review pending."
+  ]
+}

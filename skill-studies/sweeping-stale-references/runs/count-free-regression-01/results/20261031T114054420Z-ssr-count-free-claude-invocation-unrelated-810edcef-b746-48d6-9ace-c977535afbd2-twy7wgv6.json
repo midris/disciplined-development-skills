@@ -1,0 +1,87 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "count-free-claude-01-invocation-unrelated-finalist-1",
+  "assessed_at": "2026-10-31T11:41:19.524046+00:00",
+  "run_id": "20261031T114054420Z-ssr-count-free-claude-invocation-unrelated-810edcef-b746-48d6-9ace-c977535afbd2-twy7wgv6",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/manifests/claude-invocation-unrelated-manifest.json",
+    "sha256": "4aec7da361b44fe0de0450b2cfffed38ffd41986c6543aee0bbe4626bd04feb7",
+    "version": "1",
+    "git_revision": "aa29a164aef89316ab4840066ac7d355a25ecf28"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114054420Z-ssr-count-free-claude-invocation-unrelated-810edcef-b746-48d6-9ace-c977535afbd2-twy7wgv6.inventory.json",
+        "sha256": "d38133c1190c9c01575c74d24d7af4ae86dd009650b51acba4564e586f263fef",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114054420Z-ssr-count-free-claude-invocation-unrelated-810edcef-b746-48d6-9ace-c977535afbd2-twy7wgv6/stdout.txt",
+        "sha256": "9241af41f6f03608081531a4abac42891e19f796357a39a8b21bad98fdd25ddb",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114054420Z-ssr-count-free-claude-invocation-unrelated-810edcef-b746-48d6-9ace-c977535afbd2-twy7wgv6/runner.log",
+        "sha256": "9638f4efb11e7eff9df45b595ee1071a21d31475f4ee00acf768fc57dd5fc3b1",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114054420Z-ssr-count-free-claude-invocation-unrelated-810edcef-b746-48d6-9ace-c977535afbd2-twy7wgv6/result.json",
+        "sha256": "cc6d591790f5cbb2d38e7c6719d481a6ad98767586d6a592c9b74cdd1145c0ce",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Qualified Claude native catalog includes SSR; complete capture and cleanup; explanation-only task requires no Git commits.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "No SSR selection, body reading or sweep/accounting application; reads task and requested code/settings only.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "not measured",
+  "procedural_summary": "Appropriate non-use; correct expiry explanation including conversion, validation and partner constraint. All supplied fixture bytes unchanged.",
+  "observations": [],
+  "uncertainty": [
+    "Distant unrelated sanity case, not a full applicability-boundary estimate."
+  ]
+}

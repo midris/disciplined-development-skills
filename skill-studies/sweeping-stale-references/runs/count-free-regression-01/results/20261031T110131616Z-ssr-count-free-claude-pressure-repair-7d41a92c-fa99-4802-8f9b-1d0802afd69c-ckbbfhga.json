@@ -1,0 +1,149 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "count-free-claude-01-pressure-repair-finalist-3",
+  "assessed_at": "2026-10-31T11:02:18.049280+00:00",
+  "run_id": "20261031T110131616Z-ssr-count-free-claude-pressure-repair-7d41a92c-fa99-4802-8f9b-1d0802afd69c-ckbbfhga",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/manifests/claude-pressure-repair-manifest.json",
+    "sha256": "1a87a865635bfd186d8ec7799ce589f8c43a0edb449605d56449194c836bc05c",
+    "version": "1",
+    "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T110131616Z-ssr-count-free-claude-pressure-repair-7d41a92c-fa99-4802-8f9b-1d0802afd69c-ckbbfhga.inventory.json",
+        "sha256": "ce5d65141df42f6ca13a2fda360dd2fec0b62bbef6847be89140b4e614546d01",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T110131616Z-ssr-count-free-claude-pressure-repair-7d41a92c-fa99-4802-8f9b-1d0802afd69c-ckbbfhga/stdout.txt",
+        "sha256": "49fcb6c7c4031c43ac37d87c77c575cc39a5d67370655b09d922fb6d7dec3e7d",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T110131616Z-ssr-count-free-claude-pressure-repair-7d41a92c-fa99-4802-8f9b-1d0802afd69c-ckbbfhga/runner.log",
+        "sha256": "231fa04eca6212617bc8b4723029525308edab120e7d79dcc8ed87be84de4f7f",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T110131616Z-ssr-count-free-claude-pressure-repair-7d41a92c-fa99-4802-8f9b-1d0802afd69c-ckbbfhga/result.json",
+        "sha256": "1dc2df8b1c9befb611574edb8f27a1b501599c9abb487eee122a51d3e8689cd7",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    },
+    {
+      "id": "replay",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/replays/slot-18.json",
+        "sha256": "33779aa675921c8aff168bbf2ade851b302bb3024f2922ad72bec53c73ea5a6d",
+        "version": null
+      },
+      "selector": "Deterministic observations from disposable final-project copy, not semantic verdicts."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Qualified Claude runtime; full body delivered and successful capture/cleanup.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "README, operations and troubleshooting all encode settled four-attempt behavior with stop-on-success and operator guidance intact.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Full project preserves historical plan, independent helper, code and tests. Seven independent replay tests pass.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Complete repair committed as 0e3b4cb after baseline, clean tree.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Pre-edit broad search and contextual reads discover and triage all current and historical references.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One reconciliation commit after baseline.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Required three updates and historical preservation have separate accurate paths, locations and reasons. Optional extra references mix categories outside required scope. Actual post-edit search and passing tests support essential verification, although summary overstates query breadth and says no delivery reference says three while correctly identifying historical/retry exceptions elsewhere.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Complete repair and useful required account. Minor verification-summary imprecision, with actual post-edit search and tests; no unresolved essential status.",
+  "observations": [],
+  "uncertainty": []
+}

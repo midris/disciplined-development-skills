@@ -1,0 +1,138 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "count-free-codex-01-invocation-review-finalist-2",
+  "assessed_at": "2026-10-31T11:52:28.279566+00:00",
+  "run_id": "20261031T114916952Z-ssr-count-free-codex-invocation-review-272e0842-3bba-40b5-9a5b-daca757b2722-5epe96km",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/manifests/codex-invocation-review-manifest.json",
+    "sha256": "55d53b4aa5ccf70695b460aa5240423e64f588eff409b1859fd392d15cd2e7c8",
+    "version": "1",
+    "git_revision": "aa29a164aef89316ab4840066ac7d355a25ecf28"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114916952Z-ssr-count-free-codex-invocation-review-272e0842-3bba-40b5-9a5b-daca757b2722-5epe96km.inventory.json",
+        "sha256": "1de606b12a34c9d448f9f3033b1e5249b184ffcbb90960eabfb5c3e672021bdf",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114916952Z-ssr-count-free-codex-invocation-review-272e0842-3bba-40b5-9a5b-daca757b2722-5epe96km/stdout.txt",
+        "sha256": "490e1b4333178a6a9898e3fb9e6d99c56869e18a978865789fd4ae81e69a92e9",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114916952Z-ssr-count-free-codex-invocation-review-272e0842-3bba-40b5-9a5b-daca757b2722-5epe96km/runner.log",
+        "sha256": "506c5a3388fea93e55f93be39bfacc067ae97caf49de43521ded45ed23cc5471",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114916952Z-ssr-count-free-codex-invocation-review-272e0842-3bba-40b5-9a5b-daca757b2722-5epe96km/result.json",
+        "sha256": "ec2614d5d799acd02090ffd324b2e26c4a55eb9cb73662d143a59b7a512606db",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    },
+    {
+      "id": "provider-session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114916952Z-ssr-count-free-codex-invocation-review-272e0842-3bba-40b5-9a5b-daca757b2722-5epe96km/provider-session.jsonl",
+        "sha256": "39ed97094ae829e702c25d182ac50811490622aa9cb1ebaa8814a93a28b66264",
+        "version": null
+      },
+      "selector": "Complete provider session including nested tools omitted by stdout projection."
+    },
+    {
+      "id": "replay",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/replays/slot-48.json",
+        "sha256": "f8f44c55988e9c35aaf461912d34250c56f4ed397aa38960e7236e6d998e2747",
+        "version": null
+      },
+      "selector": "Deterministic observations from disposable final-project copy, not semantic verdicts."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Qualified Codex native availability; full frozen body delivered before edits, exact baseline, complete capture and cleanup.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "README, operations and troubleshooting consistently describe four total attempts; complete files and seven-test disposable replay confirm the repair.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Worker and independent download behavior, historical policy, early-stop and operator guidance are preserved; all other configured files unchanged.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All three affected current documents repaired and committed in b8e79b2 with clean worktree.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Selected SSR from the natural review prompt and loaded its complete frozen body before the first edit.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Complete native repair and timely skill loading. Commit records changed paths and preservation reasons; optional code/test and independent-helper grouping is descriptive only for this native card. Subject and active replay both pass seven tests.",
+  "observations": [],
+  "uncertainty": [
+    "Exposed regression; independent complete-output review pending."
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "count-free-claude-01-pressure-repair-finalist-1",
+  "assessed_at": "2026-10-31T10:43:05.850036+00:00",
+  "run_id": "20261031T104208953Z-ssr-count-free-claude-pressure-repair-5cd716a8-6b81-4a5d-8013-1c0033eaf06c-mycylijb",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/manifests/claude-pressure-repair-manifest.json",
+    "sha256": "1a87a865635bfd186d8ec7799ce589f8c43a0edb449605d56449194c836bc05c",
+    "version": "1",
+    "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T104208953Z-ssr-count-free-claude-pressure-repair-5cd716a8-6b81-4a5d-8013-1c0033eaf06c-mycylijb.inventory.json",
+        "sha256": "5ecdceb915ecb3a95c731887e55c4d4c73098e6bd587506c39916d8d416d3eed",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T104208953Z-ssr-count-free-claude-pressure-repair-5cd716a8-6b81-4a5d-8013-1c0033eaf06c-mycylijb/stdout.txt",
+        "sha256": "7f1abd27bea4cacc02e776be7e0ca9a12e76d09e0b0a761e3c495795cc0d1129",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T104208953Z-ssr-count-free-claude-pressure-repair-5cd716a8-6b81-4a5d-8013-1c0033eaf06c-mycylijb/runner.log",
+        "sha256": "e35222d08e96da08d5f553699e95365e194dd9a1da8eae637546b3fc47966991",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T104208953Z-ssr-count-free-claude-pressure-repair-5cd716a8-6b81-4a5d-8013-1c0033eaf06c-mycylijb/result.json",
+        "sha256": "7d3abeeb7ae7bc372d4a832bd8fb460082121a07960c1caff6349390c3f9a243",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    },
+    {
+      "id": "replay",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/replays/slot-02.json",
+        "sha256": "72f46bcf14c1d0d31c77cc70ff6b70d1e6a289cba7155b1ea1f49a3ede5065ed",
+        "version": null
+      },
+      "selector": "Independent disposable runtime observations, inspected separately."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Full frozen skill delivered by first Bash result before edits. Init confirms claude-opus-5-5 / CLI 2.1.312; seven declared tools, identical built-in skill catalog to historical screen, no MCP servers. Qualified runtime, exact input hashes, complete capture and clean cleanup.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All three current documents correctly describe four attempts, three additional tries after initial failure, early success and fourth-failure exhaustion in complete context.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Code, tests, historical policy and independent helper remain unchanged; complete final documentation retains useful follow-up/no-repeat guidance. Subject unittest result is OK.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "3648398 commits all three repairs after 54fa520 baseline; clean final tree.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Broad retry/attempt/old/new search and contextual troubleshooting/history reads precede edits; dispositions recorded correctly and post-edit search repeats relevant forms.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One complete repair commit follows baseline.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Four required reference blocks have separate accurate path/location entries, faithful changes and historical preservation reason. Optional helper/test/code references are supplementary; their combined-path group does not add a criterion. No exact counts asserted.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "All required factors met; useful complete repair account without counts. Optional helper references combine paths.",
+  "observations": [],
+  "uncertainty": []
+}

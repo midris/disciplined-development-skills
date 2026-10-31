@@ -1,0 +1,85 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "count-free-claude-01-large-sweep-account-finalist-1",
+  "assessed_at": "2026-10-31T10:49:02.144751+00:00",
+  "run_id": "20261031T104825688Z-ssr-count-free-claude-large-sweep-account-dcc3483c-9984-4cbb-926a-19409eb1b0b1-agb4n_s_",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/manifests/claude-large-sweep-account-manifest.json",
+    "sha256": "a486d90c6ac4df40a95718e293fa8dbf7aa713346cec7973c1946c81a8da226f",
+    "version": "1",
+    "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T104825688Z-ssr-count-free-claude-large-sweep-account-dcc3483c-9984-4cbb-926a-19409eb1b0b1-agb4n_s_.inventory.json",
+        "sha256": "9bf4b8e05707f81a91248c6efdee753335e31a8cd12f96dbe43f534631de6eaa",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T104825688Z-ssr-count-free-claude-large-sweep-account-dcc3483c-9984-4cbb-926a-19409eb1b0b1-agb4n_s_/stdout.txt",
+        "sha256": "d89bf4a3e201b972ae3db6ff1e4bf252e3e1a89cd14a27adde8e3ea7cbd7d5a1",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T104825688Z-ssr-count-free-claude-large-sweep-account-dcc3483c-9984-4cbb-926a-19409eb1b0b1-agb4n_s_/runner.log",
+        "sha256": "09c098ba3027366ed2c35fd3052cb49ce1cb8055e9ffcd5d4f4a92b8881ffcd1",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T104825688Z-ssr-count-free-claude-large-sweep-account-dcc3483c-9984-4cbb-926a-19409eb1b0b1-agb4n_s_/result.json",
+        "sha256": "54a0a4271604ef2e263435fa281b47d508bd46f807360c9bfcfe3a1b84d6daed",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Full frozen body delivered before report work despite a separator-command error; subsequent task/inventory reads complete. Expected Opus/CLI/catalog/tools, retained capture and clean cleanup. Supplied inputs unchanged.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "REPORT.md covers all eleven path/outcome groups separately, with accurate locations, six old-to-new changes and explicit historical/HTTP preservation reasons. It omits counts while retaining full scope. Verification correctly says no command/test transcript or performed repair/check is established; updates are attributed to supplied inventory.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "not measured",
+  "procedural_summary": "Complete useful count-free reporting-only account; no functional criteria measured.",
+  "observations": [],
+  "uncertainty": []
+}

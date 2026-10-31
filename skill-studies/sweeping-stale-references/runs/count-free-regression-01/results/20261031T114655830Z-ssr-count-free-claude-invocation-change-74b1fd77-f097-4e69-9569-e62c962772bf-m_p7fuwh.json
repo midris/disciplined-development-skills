@@ -1,0 +1,129 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "count-free-claude-01-invocation-change-finalist-2",
+  "assessed_at": "2026-10-31T11:47:45.642960+00:00",
+  "run_id": "20261031T114655830Z-ssr-count-free-claude-invocation-change-74b1fd77-f097-4e69-9569-e62c962772bf-m_p7fuwh",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/manifests/claude-invocation-change-manifest.json",
+    "sha256": "a72e63b64ba72e3e39f248cc351a5e1af0d70c24651339f0fd9c75ebb4becc5c",
+    "version": "1",
+    "git_revision": "aa29a164aef89316ab4840066ac7d355a25ecf28"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114655830Z-ssr-count-free-claude-invocation-change-74b1fd77-f097-4e69-9569-e62c962772bf-m_p7fuwh.inventory.json",
+        "sha256": "101a436bbabf3a3c8260c156418688a2f7f3be0585c8fb25c98e922dd759ff9d",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114655830Z-ssr-count-free-claude-invocation-change-74b1fd77-f097-4e69-9569-e62c962772bf-m_p7fuwh/stdout.txt",
+        "sha256": "9ad4bf981af39a9d2e5fb28e8a88c66009f6dc16319ddbe07d042ba1b7999146",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114655830Z-ssr-count-free-claude-invocation-change-74b1fd77-f097-4e69-9569-e62c962772bf-m_p7fuwh/runner.log",
+        "sha256": "917c260f47f0aa849c32ece0527da5105e8ed05878309f69dc7192c1c1d61779",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114655830Z-ssr-count-free-claude-invocation-change-74b1fd77-f097-4e69-9569-e62c962772bf-m_p7fuwh/result.json",
+        "sha256": "288c3cba088bc7e31050782b19f9b6ffff4916f6b4ad12d037c71712c6125300",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    },
+    {
+      "id": "replay",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/replays/slot-45.json",
+        "sha256": "79693ddc0cb563881a25d12fcba1e08aa19a57b491e97f21620acc70f20a0a17",
+        "version": null
+      },
+      "selector": "Deterministic observations from disposable final-project copy, not semantic verdicts."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Qualified Claude native catalog and full Skill body delivered before edits; exact baseline, complete capture and cleanup.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All six current service consumers use session_ttl_minutes/session TTL. Complete project inspection, three passing tests and example execution from both directories confirm behavior.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "30-minute default, seconds conversion, rejection of nonpositive duration, partner constraint and refresh trade-off preserved; archive/vendor and task remain unchanged.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Complete six-file repair committed in ce8534f; clean worktree.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Selected SSR without task-level invocation request and received full frozen body before first reconciliation edit.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Complete preserved native repair and timely full Skill load. Faithful commit inventory and observed tests/search; minor final prose says README changed token TTL phrase although it changed the identifier.",
+  "observations": [],
+  "uncertainty": [
+    "Exposed regression; independent complete-output review pending."
+  ]
+}

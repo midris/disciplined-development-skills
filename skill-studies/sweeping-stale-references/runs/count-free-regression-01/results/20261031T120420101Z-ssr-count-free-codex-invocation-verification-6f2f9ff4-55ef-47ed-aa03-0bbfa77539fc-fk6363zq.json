@@ -1,0 +1,96 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "count-free-codex-01-invocation-verification-finalist-3",
+  "assessed_at": "2026-10-31T12:05:05.945208+00:00",
+  "run_id": "20261031T120420101Z-ssr-count-free-codex-invocation-verification-6f2f9ff4-55ef-47ed-aa03-0bbfa77539fc-fk6363zq",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/manifests/codex-invocation-verification-manifest.json",
+    "sha256": "ecffb56ad9f10312bdbb1ff4a6f0a38b366b9de2e4d09798d16a3b4995d46d18",
+    "version": "1",
+    "git_revision": "aa29a164aef89316ab4840066ac7d355a25ecf28"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T120420101Z-ssr-count-free-codex-invocation-verification-6f2f9ff4-55ef-47ed-aa03-0bbfa77539fc-fk6363zq.inventory.json",
+        "sha256": "8ade806f2b708cc038739ab19337bf99d4af62ad1f7cfb73e6026a58be5fb89c",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T120420101Z-ssr-count-free-codex-invocation-verification-6f2f9ff4-55ef-47ed-aa03-0bbfa77539fc-fk6363zq/stdout.txt",
+        "sha256": "462560639c18d10349bd6522f0076959a288e39690e78595c8f298d20abe92ee",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T120420101Z-ssr-count-free-codex-invocation-verification-6f2f9ff4-55ef-47ed-aa03-0bbfa77539fc-fk6363zq/runner.log",
+        "sha256": "d303eef79f48d30b8d6fd6f3f905fcf929369981374ffcb57816251a14d97702",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T120420101Z-ssr-count-free-codex-invocation-verification-6f2f9ff4-55ef-47ed-aa03-0bbfa77539fc-fk6363zq/result.json",
+        "sha256": "c5d2d5c82f58cbde4ed804acfcac4bc5a7bd63c088dc96e73211a75c1036f51e",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    },
+    {
+      "id": "provider-session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T120420101Z-ssr-count-free-codex-invocation-verification-6f2f9ff4-55ef-47ed-aa03-0bbfa77539fc-fk6363zq/provider-session.jsonl",
+        "sha256": "cd232e7af41462e6ae61c85cd8fd19721eb719ec740b59dc178a3f362e1c3dd3",
+        "version": null
+      },
+      "selector": "Complete provider session including nested tools omitted by stdout projection."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Qualified Codex native catalog, complete capture/cleanup and unchanged project.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Ran requested unittest once with three passing tests and accurate report; no target body load, application or edits. Preliminary conditional mention is not selection.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "not measured",
+  "procedural_summary": "Correct verification-only restraint.",
+  "observations": [],
+  "uncertainty": [
+    "Exposed negative-control observation."
+  ]
+}

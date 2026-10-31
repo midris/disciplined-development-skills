@@ -1,0 +1,151 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "count-free-claude-01-moved-guide-finalist-1",
+  "assessed_at": "2026-10-31T11:34:44.582709+00:00",
+  "run_id": "20261031T113403602Z-ssr-count-free-claude-moved-guide-be123e9c-6233-4b12-81d4-3523dafebe0d-slnwkuqw",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/manifests/claude-moved-guide-manifest.json",
+    "sha256": "6108cd01873cf1f201cf10b3436aa6fda42d61209791213a1a5a5ccbb6ba6d16",
+    "version": "1",
+    "git_revision": "aa29a164aef89316ab4840066ac7d355a25ecf28"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T113403602Z-ssr-count-free-claude-moved-guide-be123e9c-6233-4b12-81d4-3523dafebe0d-slnwkuqw.inventory.json",
+        "sha256": "a90d84f5a8dda0fb324abb04f100d36e216745f9f83a5ebcb59390db7c02a3af",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T113403602Z-ssr-count-free-claude-moved-guide-be123e9c-6233-4b12-81d4-3523dafebe0d-slnwkuqw/stdout.txt",
+        "sha256": "cc1275b9ec80f755e277521a686eab9a45fe7fe840d106087fad158f9d698a8c",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T113403602Z-ssr-count-free-claude-moved-guide-be123e9c-6233-4b12-81d4-3523dafebe0d-slnwkuqw/runner.log",
+        "sha256": "570eb5b94e65a6941507fbd3e6e8295ce04196e44701b37982c09e24ff7475be",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T113403602Z-ssr-count-free-claude-moved-guide-be123e9c-6233-4b12-81d4-3523dafebe0d-slnwkuqw/result.json",
+        "sha256": "3c51c63de321038fac06b2b2b8dbab80715de2b7587d7125e8a73d7d595caee8",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    },
+    {
+      "id": "replay",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/replays/slot-28.json",
+        "sha256": "85001f96ad8bf92e29549528378f6f4a5c246633dca5906e1ac8c5b4172b0d2b",
+        "version": null
+      },
+      "selector": "Deterministic observations from disposable final-project copy, not semantic verdicts."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Qualified Claude runtime; complete frozen body before repair, neutral baseline and complete capture/cleanup.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All three Markdown links resolve to the moved service guide; export script emits exact guide content from root and outside in disposable replay.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Guide, historical plan and independent vendor files preserved; vendor link resolves to its own guide and old service path absent.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All four consumer repairs committed in 891403d; worktree clean.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Pre-edit setup search covers current/historical/independent references; snippets establish appropriate triage.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One complete repair commit follows baseline.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "Account claims a repeated post-edit grep, but complete trace contains only the pre-edit grep. Essential repair and preservation information remains inspectable. The combined vendor entry is outside the inherited required accounting scope and is not an additional defect.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Complete preserved repair; unsupported post-edit search claim is a non-blocking reporting defect. Subject observed only first exported line; active replay verified entire guide from both directories.",
+  "observations": [],
+  "uncertainty": [
+    "Exposed regression; independent complete-output review pending."
+  ]
+}

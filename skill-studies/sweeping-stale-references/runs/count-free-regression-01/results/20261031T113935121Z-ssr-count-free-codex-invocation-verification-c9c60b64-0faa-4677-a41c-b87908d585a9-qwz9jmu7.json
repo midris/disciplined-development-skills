@@ -1,0 +1,96 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "count-free-codex-01-invocation-verification-finalist-1",
+  "assessed_at": "2026-10-31T11:40:06.448085+00:00",
+  "run_id": "20261031T113935121Z-ssr-count-free-codex-invocation-verification-c9c60b64-0faa-4677-a41c-b87908d585a9-qwz9jmu7",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/manifests/codex-invocation-verification-manifest.json",
+    "sha256": "ecffb56ad9f10312bdbb1ff4a6f0a38b366b9de2e4d09798d16a3b4995d46d18",
+    "version": "1",
+    "git_revision": "aa29a164aef89316ab4840066ac7d355a25ecf28"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T113935121Z-ssr-count-free-codex-invocation-verification-c9c60b64-0faa-4677-a41c-b87908d585a9-qwz9jmu7.inventory.json",
+        "sha256": "7e1d725223c1d61422813b32e9ae6becf4fd4d90d2f5394c8889b398588179a4",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T113935121Z-ssr-count-free-codex-invocation-verification-c9c60b64-0faa-4677-a41c-b87908d585a9-qwz9jmu7/stdout.txt",
+        "sha256": "54e8fa9009efabe1786e9ac96ebd0c024c05d9723cd8a1c712e7f33ddfef7698",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T113935121Z-ssr-count-free-codex-invocation-verification-c9c60b64-0faa-4677-a41c-b87908d585a9-qwz9jmu7/runner.log",
+        "sha256": "cfd1f9d9468a80cd21703f3e6f749ef1be55eb9c87ddb66107e290d5db3007f7",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T113935121Z-ssr-count-free-codex-invocation-verification-c9c60b64-0faa-4677-a41c-b87908d585a9-qwz9jmu7/result.json",
+        "sha256": "f3ae34bb7d6d653cea5d0f3099cf2e4ea788dfff062d5d6b1c20bc4623b1fac9",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    },
+    {
+      "id": "provider-session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T113935121Z-ssr-count-free-codex-invocation-verification-c9c60b64-0faa-4677-a41c-b87908d585a9-qwz9jmu7/provider-session.jsonl",
+        "sha256": "a1b3dbecc1d1835b4cf3716b542928cc4bfb6d5b0b8d2c8d4461de7f1b87cca4",
+        "version": null
+      },
+      "selector": "Complete provider session including nested tools omitted by stdout projection."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Qualified native Codex availability and complete capture/cleanup. Test-only fixture requires no baseline commit; absence of Git history is expected.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "No target body read, invocation or sweep procedure. Conditional initial commentary was not selection; after reading task, executed exactly the requested one test run.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "not measured",
+  "procedural_summary": "Appropriate non-use on verification-only task; three tests passed once and no edits observed. No functional SSR denominator.",
+  "observations": [],
+  "uncertainty": [
+    "Exposed procedural boundary observation, not population reliability."
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "count-free-claude-01-discovery-shiv-finalist-3",
+  "assessed_at": "2026-10-31T11:05:13.469774+00:00",
+  "run_id": "20261031T110359106Z-ssr-count-free-claude-discovery-shiv-dc059441-ebae-4186-93f4-cb2afb7a3f14-97xhlz5o",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/manifests/claude-discovery-shiv-manifest.json",
+    "sha256": "0f765f63c6a1227c77fe6de1b701033925592befad188ab7df0d90cb89726e91",
+    "version": "1",
+    "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T110359106Z-ssr-count-free-claude-discovery-shiv-dc059441-ebae-4186-93f4-cb2afb7a3f14-97xhlz5o.inventory.json",
+        "sha256": "199ed803ac06e8226b68345792707d2a985d2a5b8b04cac554217413015c0675",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T110359106Z-ssr-count-free-claude-discovery-shiv-dc059441-ebae-4186-93f4-cb2afb7a3f14-97xhlz5o/stdout.txt",
+        "sha256": "8d9d1fd010cf075fb0a00e6993dcc43d25d9d68c3d7a986375708bac83bca29f",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T110359106Z-ssr-count-free-claude-discovery-shiv-dc059441-ebae-4186-93f4-cb2afb7a3f14-97xhlz5o/runner.log",
+        "sha256": "595598a277dc60cc0b68f87e909b915ca01d75a6c44ff02dd29f3fa48aea04d9",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T110359106Z-ssr-count-free-claude-discovery-shiv-dc059441-ebae-4186-93f4-cb2afb7a3f14-97xhlz5o/result.json",
+        "sha256": "3c854e5ca3983ea398039c23000cecee971aeecfc60e5f6b5810ad9fdc17ef07",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    },
+    {
+      "id": "replay",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/replays/slot-20.json",
+        "sha256": "dcb375ba7ec765817e1308196f8aafa84f9d3a906c4b6e50ff807ab894a82494",
+        "version": null
+      },
+      "selector": "Deterministic observations from disposable final-project copy, not semantic verdicts."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Qualified Claude runtime, full body and complete capture/cleanup. Sandbox default-cache execution failure resolved using documented local SHIV_ROOT before commit.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All four current consumers repaired; independent replay builds and runs all archives including CI and outside-root script.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Full project identical to previously inspected slot4; canonical option, alias, retired-option rejection, history and independent inventory preserved. Checker gitignore difference is unchanged provider-specific input adaptation.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Complete four-file repair committed as 881d668 after baseline; clean tree.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Broad pre-edit old/new search and contextual reads establish correct update and preservation scope.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One complete repair commit after baseline.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "insufficient evidence",
+      "reason": "Required paths, locations, changes and reasons separately accounted, with truthful performed-check limits. Only unresolved required issue is whether negative assertions may be labeled intentionally stale under inherited category boundary; retain uncertainty rather than invent stricter rule. Optional variable-name cross-path grouping outside fixed scope.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Complete useful repair/account; inherited negative-assertion category ambiguity only.",
+  "observations": [],
+  "uncertainty": [
+    "P3 classification of tests asserting rejection/absence of old option remains inherited ambiguity; actual preservation and status are clear."
+  ]
+}

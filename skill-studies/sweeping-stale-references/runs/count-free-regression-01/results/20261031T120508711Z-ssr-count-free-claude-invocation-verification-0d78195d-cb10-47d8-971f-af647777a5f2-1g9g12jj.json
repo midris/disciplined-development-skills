@@ -1,0 +1,87 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "count-free-claude-01-invocation-verification-finalist-3",
+  "assessed_at": "2026-10-31T12:05:36.799911+00:00",
+  "run_id": "20261031T120508711Z-ssr-count-free-claude-invocation-verification-0d78195d-cb10-47d8-971f-af647777a5f2-1g9g12jj",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/manifests/claude-invocation-verification-manifest.json",
+    "sha256": "8888d6dd95f77b8d2b41f358bf80c707b82c1a220b27965c8db84ab33e36c2d1",
+    "version": "1",
+    "git_revision": "aa29a164aef89316ab4840066ac7d355a25ecf28"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T120508711Z-ssr-count-free-claude-invocation-verification-0d78195d-cb10-47d8-971f-af647777a5f2-1g9g12jj.inventory.json",
+        "sha256": "ad401216785ae0bfbc50e98049bba2573cf583d5aaa21bb10d2fdabe87f03566",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T120508711Z-ssr-count-free-claude-invocation-verification-0d78195d-cb10-47d8-971f-af647777a5f2-1g9g12jj/stdout.txt",
+        "sha256": "bbaf882c35a09b05ae08e933f3f05185c437e0e22463107d5917590b958d8407",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T120508711Z-ssr-count-free-claude-invocation-verification-0d78195d-cb10-47d8-971f-af647777a5f2-1g9g12jj/runner.log",
+        "sha256": "ac307f8cd5bf8ccc5b233a69d83f4883d77bd0741c172b43b826f9eee7fe646d",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T120508711Z-ssr-count-free-claude-invocation-verification-0d78195d-cb10-47d8-971f-af647777a5f2-1g9g12jj/result.json",
+        "sha256": "2e18fc26280ab81f769416db319051be72f54144955f5083144185f1ca43cbc3",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Qualified Claude catalog, full capture/cleanup and unchanged fixture.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Executed requested unittest once (output piped through tail; all three tests and OK visible), no SSR load/application or edits, and reported test success without claiming completed sweep.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "not measured",
+  "procedural_summary": "Correct verification-only restraint. Final caveat is awkwardly absolute about what passing tests imply, but makes no repair or sweep claim and does not affect D1.",
+  "observations": [],
+  "uncertainty": [
+    "Exposed negative-control observation."
+  ]
+}

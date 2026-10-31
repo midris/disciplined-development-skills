@@ -1,0 +1,160 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "count-free-codex-01-semantic-delivery-finalist-2",
+  "assessed_at": "2026-10-31T11:46:55.268293+00:00",
+  "run_id": "20261031T114606162Z-ssr-count-free-codex-semantic-delivery-8dbcd886-c83e-46ff-9717-baeddcee96cf-pxl4vx8l",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/manifests/codex-semantic-delivery-manifest.json",
+    "sha256": "1b751b9ddaba2a46656127492a7b5e81bde0cb78a563faa5ddc6154b5ac9aa36",
+    "version": "1",
+    "git_revision": "aa29a164aef89316ab4840066ac7d355a25ecf28"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114606162Z-ssr-count-free-codex-semantic-delivery-8dbcd886-c83e-46ff-9717-baeddcee96cf-pxl4vx8l.inventory.json",
+        "sha256": "c14659c86b3ce181888ca1974c8c3b65392b05a886a831b68c569cf140bd357d",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114606162Z-ssr-count-free-codex-semantic-delivery-8dbcd886-c83e-46ff-9717-baeddcee96cf-pxl4vx8l/stdout.txt",
+        "sha256": "254ea14109c46f4b916be523f0980026047e53b3347c2b16b831f4acd5e042d5",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114606162Z-ssr-count-free-codex-semantic-delivery-8dbcd886-c83e-46ff-9717-baeddcee96cf-pxl4vx8l/runner.log",
+        "sha256": "88149bc1ff2d88899ed097d12dda1e8a128cea707c171dbf343e1a4744f288ac",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114606162Z-ssr-count-free-codex-semantic-delivery-8dbcd886-c83e-46ff-9717-baeddcee96cf-pxl4vx8l/result.json",
+        "sha256": "919ee7f1c9a006573de2cccd3abddf5275ecb59a39fcfae47aa74d0975f9eb22",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    },
+    {
+      "id": "provider-session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114606162Z-ssr-count-free-codex-semantic-delivery-8dbcd886-c83e-46ff-9717-baeddcee96cf-pxl4vx8l/provider-session.jsonl",
+        "sha256": "174a57e5b56ded01eba1575e25e31a408d2d3d558c9501922c5313fed5be3f55",
+        "version": null
+      },
+      "selector": "Complete provider session including nested tools omitted by stdout projection."
+    },
+    {
+      "id": "replay",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/replays/slot-44.json",
+        "sha256": "252f826515a2d5fe9c60682e1aa2678468f6478e665d980524f72ef250ebc537",
+        "version": null
+      },
+      "selector": "Deterministic observations from disposable final-project copy, not semantic verdicts."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Qualified Codex runtime; full frozen body before repair, exact baseline and complete capture/cleanup.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Overview, operations and troubleshooting consistently describe four total sends, three retries, fourth-failure exhaustion and immediate success stopping; useful handling guidance retained.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Worker, independent three-attempt helper, tests and historical policy unchanged; all seven runtime observations pass.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Complete three-document repair committed in 1ad4c9d; clean tracked worktree.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Semantic search and full contextual reads precede repair; current/historical/independent meanings correctly triaged.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One complete reconciliation commit.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "All four required reference blocks separately accounted with useful locations, faithful updates and historical explanation; observed verification supports claims. Optional helper/code/test references grouped across paths are outside fixed required scope.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Complete preserved repair, all fixed criteria met. Optional cross-path helper grouping outside required scope. Commentary overstates remaining three references, since correct three-additional-tries text also remains; final documents/account give correct policy.",
+  "observations": [],
+  "uncertainty": [
+    "Exposed regression; independent complete-output review pending."
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "count-free-codex-01-discovery-shiv-finalist-3",
+  "assessed_at": "2026-10-31T11:03:56.306974+00:00",
+  "run_id": "20261031T110220442Z-ssr-count-free-codex-discovery-shiv-5f67dfae-97bb-4724-8320-ccfe296a3a89-wb1iesq1",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/manifests/codex-discovery-shiv-manifest.json",
+    "sha256": "19564ae40e0aa830260eab6538e68ceb271cf8e2abe56e166c35b9c98a7d0fc6",
+    "version": "1",
+    "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T110220442Z-ssr-count-free-codex-discovery-shiv-5f67dfae-97bb-4724-8320-ccfe296a3a89-wb1iesq1.inventory.json",
+        "sha256": "3dd143f6ce9677b170189266f3bd57fce6167dcc89ee799124944e5b29068d06",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T110220442Z-ssr-count-free-codex-discovery-shiv-5f67dfae-97bb-4724-8320-ccfe296a3a89-wb1iesq1/stdout.txt",
+        "sha256": "a37b42581ee8b46fde42febf35ffd9c9bc817f609562e0a7a91efbb7559e96e5",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T110220442Z-ssr-count-free-codex-discovery-shiv-5f67dfae-97bb-4724-8320-ccfe296a3a89-wb1iesq1/runner.log",
+        "sha256": "a277f6742704fcbdcd9ef91884b2ae0286345dc5c32e28ba8ea9612e7b144610",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T110220442Z-ssr-count-free-codex-discovery-shiv-5f67dfae-97bb-4724-8320-ccfe296a3a89-wb1iesq1/result.json",
+        "sha256": "0bbf312646ab303889ad8806e02f8bf23618dcf6c68f3912a9b4eb6b09bfddc9",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    },
+    {
+      "id": "replay",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/replays/slot-19.json",
+        "sha256": "0d20a15df7207d7e007e04f0893da0563c9d0f6caf35f89ff1f1fb3ad6fcba35",
+        "version": null
+      },
+      "selector": "Deterministic observations from disposable final-project copy, not semantic verdicts."
+    },
+    {
+      "id": "provider-session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T110220442Z-ssr-count-free-codex-discovery-shiv-5f67dfae-97bb-4724-8320-ccfe296a3a89-wb1iesq1/provider-session.jsonl",
+        "sha256": "4bc4a76460aed182b5cf7d11dc509782fda971cc7e31cedcab48365a7ca2a324",
+        "version": null
+      },
+      "selector": "Full provider session; nested outputs omitted by stdout projection inspected separately."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Qualified Codex runtime, full body and capture retained. Nested baseline command is present in provider-session.jsonl although absent from item-completed stdout projection; inspected it and confirmed baseline. Sandbox checksum failure recovered with Git hashes.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Four live consumers repaired; independent replay verifies all four archives, external-directory script, canonical CLI and alias.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Complete configured project byte-identical to inspected slot3; history, negative tests and independent inventory preserved; replay confirms retired flag rejected without artifact.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Baseline then complete repair a0c4a04, clean tree.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Broad pre-edit old/new-form search and contextual reads establish correct repair/preservation scope.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One complete repair commit; message-only amend keeps reconciliation together.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "All required paths and meanings are present but docs/local-development.md and tools/inventory.py are grouped across required paths. Literal newline issue was corrected before final output; remaining grouping does not obscure repair status.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Complete repair; required preservation paths grouped across files. Negative-assertion category ambiguity retained separately.",
+  "observations": [],
+  "uncertainty": [
+    "Negative assertion classification alone remains unresolved under inherited boundary."
+  ]
+}

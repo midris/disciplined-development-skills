@@ -1,0 +1,94 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "count-free-codex-01-large-sweep-account-finalist-2",
+  "assessed_at": "2026-10-31T11:00:20.495776+00:00",
+  "run_id": "20261031T105942129Z-ssr-count-free-codex-large-sweep-account-00d73799-0508-4bfb-aaa9-e6c568c3020f-pqjs_teo",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/manifests/codex-large-sweep-account-manifest.json",
+    "sha256": "4ad2f3c647864daabf6c2d0c72574c52072ddbae2591daa2ac975cc6cd3abfd5",
+    "version": "1",
+    "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T105942129Z-ssr-count-free-codex-large-sweep-account-00d73799-0508-4bfb-aaa9-e6c568c3020f-pqjs_teo.inventory.json",
+        "sha256": "f605a398c74d8a3e0f80d55ee8a19dd08df5881b8368972d45587b471890a625",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T105942129Z-ssr-count-free-codex-large-sweep-account-00d73799-0508-4bfb-aaa9-e6c568c3020f-pqjs_teo/stdout.txt",
+        "sha256": "02ed11259477801f10a389220815e79140adbada8671d3452c0297708beeaed1",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T105942129Z-ssr-count-free-codex-large-sweep-account-00d73799-0508-4bfb-aaa9-e6c568c3020f-pqjs_teo/runner.log",
+        "sha256": "d70978ac313808d4c98be67008cd001717f9c7853b646b6b9df3322c43324a1e",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T105942129Z-ssr-count-free-codex-large-sweep-account-00d73799-0508-4bfb-aaa9-e6c568c3020f-pqjs_teo/result.json",
+        "sha256": "11b79ca1b271423b5622ad761c405fa17652d43c40302f1a65ad1d4412cc23f5",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    },
+    {
+      "id": "provider-session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T105942129Z-ssr-count-free-codex-large-sweep-account-00d73799-0508-4bfb-aaa9-e6c568c3020f-pqjs_teo/provider-session.jsonl",
+        "sha256": "a1a3685b20e38d4973a48dc1ac136253b22d388086a44ce576132d9e8e9eda79",
+        "version": null
+      },
+      "selector": "Full provider session; nested outputs omitted by stdout projection inspected separately."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Qualified Codex runtime; complete frozen body and inventory delivered, successful output capture and cleanup.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "All eleven path/outcome groups, locations, faithful old-to-new changes and preservation reasons retained. Verification correctly disclaims independent checks. Supplied inventory and task unchanged. Optional counts are accurate but not required.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "not measured",
+  "procedural_summary": "Useful complete report with truthful verification boundary.",
+  "observations": [],
+  "uncertainty": []
+}

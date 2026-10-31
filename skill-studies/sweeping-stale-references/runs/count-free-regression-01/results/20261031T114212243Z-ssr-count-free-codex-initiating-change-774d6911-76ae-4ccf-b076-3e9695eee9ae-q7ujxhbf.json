@@ -1,0 +1,160 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "count-free-codex-01-initiating-change-finalist-2",
+  "assessed_at": "2026-10-31T11:43:17.851590+00:00",
+  "run_id": "20261031T114212243Z-ssr-count-free-codex-initiating-change-774d6911-76ae-4ccf-b076-3e9695eee9ae-q7ujxhbf",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/manifests/codex-initiating-change-manifest.json",
+    "sha256": "ce605af46cad309c7b72c7951b254bc990b3ffe0c9541ab35c8bf8cc290ba0ca",
+    "version": "1",
+    "git_revision": "aa29a164aef89316ab4840066ac7d355a25ecf28"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114212243Z-ssr-count-free-codex-initiating-change-774d6911-76ae-4ccf-b076-3e9695eee9ae-q7ujxhbf.inventory.json",
+        "sha256": "54cff552648be357a0918f64425472ee7d8fe69c71dc85f1b4a63ae4fb7abe3c",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114212243Z-ssr-count-free-codex-initiating-change-774d6911-76ae-4ccf-b076-3e9695eee9ae-q7ujxhbf/stdout.txt",
+        "sha256": "1832c50efa74ff4cb7317fcfdb4f213a9419e64f9cbefa01e50b2c69db9be785",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114212243Z-ssr-count-free-codex-initiating-change-774d6911-76ae-4ccf-b076-3e9695eee9ae-q7ujxhbf/runner.log",
+        "sha256": "5f1176a7c13a7c0a6ab79dbe2f283f475f00b4d63ac08ac30e14f1cdf546ffba",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114212243Z-ssr-count-free-codex-initiating-change-774d6911-76ae-4ccf-b076-3e9695eee9ae-q7ujxhbf/result.json",
+        "sha256": "34e984a2ede3886f9e0a65d9d6b4544b0057b406b4d9bcc6d1e289a9bb8b5ae8",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    },
+    {
+      "id": "provider-session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T114212243Z-ssr-count-free-codex-initiating-change-774d6911-76ae-4ccf-b076-3e9695eee9ae-q7ujxhbf/provider-session.jsonl",
+        "sha256": "6581c6b3fe7f61c9e6558929834209aff4a5153f26059656bf304b119d9dde1c",
+        "version": null
+      },
+      "selector": "Complete provider session including nested tools omitted by stdout projection."
+    },
+    {
+      "id": "replay",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/replays/slot-40.json",
+        "sha256": "b66f11492d9387fe2c36b07e45f3ee2316fdb975c43f02e078b204798d8f3adf",
+        "version": null
+      },
+      "selector": "Deterministic observations from disposable final-project copy, not semantic verdicts."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Qualified Codex runtime, full frozen body before edits, exact neutral baseline and complete capture/cleanup.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All six current service consumers use session_ttl_minutes/session TTL. Complete project inspection, three passing tests and example execution from both directories confirm behavior.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Default, units, nonpositive ValueError rejection, conversion, partner constraint/trade-off and archive/vendor meanings preserved. Error text and test name now say session TTL; equivalent diagnostic meaning within allowed terminology rename.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Complete six-file repair committed in 217214b; clean worktree.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Old/new and semantic searches plus complete source reads preceded edits; historical and independent vendor matches correctly triaged.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Single reconciliation commit contains all task changes.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "Required paths, locations, changes and reasons are present, but vendor/partner/README.md and vendor/partner/example.json are grouped in one account entry across paths, contrary to fixed path/outcome grouping.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Complete preserved repair with additional faithful session TTL prose/diagnostic wording. Required vendor paths grouped together is a non-blocking P3 defect. Replays pass.",
+  "observations": [],
+  "uncertainty": [
+    "Exposed regression; independent complete-output review pending."
+  ]
+}

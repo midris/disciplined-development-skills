@@ -1,0 +1,151 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "count-free-claude-01-discovery-shiv-finalist-1",
+  "assessed_at": "2026-10-31T10:45:57.858277+00:00",
+  "run_id": "20261031T104443664Z-ssr-count-free-claude-discovery-shiv-5a369dec-28d4-41a2-aa3c-8b83dcab3a03-gz558yc2",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/manifests/claude-discovery-shiv-manifest.json",
+    "sha256": "0f765f63c6a1227c77fe6de1b701033925592befad188ab7df0d90cb89726e91",
+    "version": "1",
+    "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T104443664Z-ssr-count-free-claude-discovery-shiv-5a369dec-28d4-41a2-aa3c-8b83dcab3a03-gz558yc2.inventory.json",
+        "sha256": "839c12b59678fe75f941906669140a71e79d208b1dec8214fb4494f52c21576f",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T104443664Z-ssr-count-free-claude-discovery-shiv-5a369dec-28d4-41a2-aa3c-8b83dcab3a03-gz558yc2/stdout.txt",
+        "sha256": "9647db1b0fea08ff169e898fe9a47852f2ac77ec4a4567539f10edfe7e75463e",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T104443664Z-ssr-count-free-claude-discovery-shiv-5a369dec-28d4-41a2-aa3c-8b83dcab3a03-gz558yc2/runner.log",
+        "sha256": "d6f5385d781a629028f94b334834238b28f04994518ed67ffd338dbd2a7c92a6",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T104443664Z-ssr-count-free-claude-discovery-shiv-5a369dec-28d4-41a2-aa3c-8b83dcab3a03-gz558yc2/result.json",
+        "sha256": "7c8a99e78a5a9e916f06a252868cca46a8644af9553c350b7efca627cc52fc7c",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    },
+    {
+      "id": "replay",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/replays/slot-04.json",
+        "sha256": "f4e4734c586b33febf4134587abe2358dc0f93fc876282b5cea82c54b657c2de",
+        "version": null
+      },
+      "selector": "Deterministic observations from disposable final-project copy, not semantic verdicts."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Complete frozen body delivered by first tool result; expected Opus model, seven tools and built-in catalog in CLI 2.1.312 init. Complete capture and clean cleanup. Only four intended consumer inputs differ. Sandbox-rejected default cache and mktemp attempts were resolved within the run using build/cache.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All four full consumer files contain effective --destination commands with original context preserved. Disposable replay verifies archive payload, entry point and greeting for each, plus script outside project root.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All nonconsumer files unchanged, preserving independent inventory, historical meaning, CLI and alias. Replay confirms these work and retired option is rejected without artifact.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "d134dbf commits all four required repairs after baseline 4088bf1; final working tree clean.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Broad old/new/internal-variant search exposes all consumers before editing; negative tests and history inspected in context. Final account explicitly and correctly distinguishes current/historical/independent meanings. Search repeated after edits.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One complete repair commit after baseline.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "insufficient evidence",
+      "reason": "All required paths have useful separate locations, faithful changes and preservation reasons. The sole unresolved issue is labeling negative assertions intentionally stale rather than false positive; inherited Shiv category uncertainty remains. Counts are not required.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Complete preserved repair, useful truthful report. P3 retains the historical negative-assertion category uncertainty only.",
+  "observations": [],
+  "uncertainty": [
+    "Unresolved classification of deliberately retained retired-option assertions; no missing path, meaning or repair."
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "count-free-claude-01-local-change-finalist-2",
+  "assessed_at": "2026-10-31T10:57:58.294513+00:00",
+  "run_id": "20261031T105713013Z-ssr-count-free-claude-local-change-0c0dd775-1ec6-4d3d-a8f6-85a8717a821f-b9jm5h0h",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/preparation/manifests/claude-local-change-manifest.json",
+    "sha256": "521a6c28cfea7eba7003700b087aa5c996901efceade9aae8db203fec4ae900f",
+    "version": "1",
+    "git_revision": "911ee2ae51219dac4747e4809fec1dfbac19cfa7"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T105713013Z-ssr-count-free-claude-local-change-0c0dd775-1ec6-4d3d-a8f6-85a8717a821f-b9jm5h0h.inventory.json",
+        "sha256": "b80f2402f2e57085c37e742eee5f04f07fec6791ca8d0b5c96959a1916dcbea5",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T105713013Z-ssr-count-free-claude-local-change-0c0dd775-1ec6-4d3d-a8f6-85a8717a821f-b9jm5h0h/stdout.txt",
+        "sha256": "2f89d1be5c1ef0ff6b0e2ee3f0d95c98474772170206248b4b23cd57c0905ab8",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T105713013Z-ssr-count-free-claude-local-change-0c0dd775-1ec6-4d3d-a8f6-85a8717a821f-b9jm5h0h/runner.log",
+        "sha256": "581f1ca89b3fecbab5534735f5757ec2cb640cb2308984e0fe8e793630b163c4",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/subjects/20261031T105713013Z-ssr-count-free-claude-local-change-0c0dd775-1ec6-4d3d-a8f6-85a8717a821f-b9jm5h0h/result.json",
+        "sha256": "198c3f8718c9ad98dd11d5bcce5d3c2a1c2439e6ea92f83ed1d6c157e99f205f",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Qualified Claude runtime, full exact skill body delivered, successful complete capture and cleanup.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only heading changes from Member ship to Membership; full glossary remains useful.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Full project inspection preserves membership, billing, shipping, config booleans and both README links.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Baseline then cf23614 commits complete correction with clean tree.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Broad membership search and link inspection precede edit; preservation scope justified.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One reconciliation commit after neutral baseline.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "Useful required paths and separate correct dispositions are present, but commit claims grep shows no remaining typo although recorded grep preceded edit and showed that typo. Unsupported performed-verification claim; actual final correction is independently inspectable and complete.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Complete repair and useful path/preservation account; unsupported post-edit search claim is reporting-only.",
+  "observations": [],
+  "uncertainty": []
+}
