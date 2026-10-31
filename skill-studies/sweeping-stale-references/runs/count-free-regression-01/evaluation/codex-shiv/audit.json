@@ -1,0 +1,1403 @@
+{
+  "packet_id": "codex-shiv",
+  "run_id": "20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb",
+  "first_pass_event": 194,
+  "prior_first_access_event": 195,
+  "post_prior_event": 200,
+  "required_complete_files": 67,
+  "complete_delivery_before_first_pass": [
+    {
+      "path": "EVALUATION-INDEX.json",
+      "sha256": "4fa6f84ec459283cd7509867ff66509b44dd7a6b62646ea22c4b3102442dfe85",
+      "complete_delivery": [
+        {
+          "call_event": 11,
+          "response_event": 12,
+          "call_id": "toolu_01DBVdyuphHhJfJKecCELHF8",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "policy.txt",
+      "sha256": "cc030c28bcfc36c20b700f00d2307b2933ee7d884a0d0a87d14ed8b0da2b92f5",
+      "complete_delivery": [
+        {
+          "call_event": 14,
+          "response_event": 15,
+          "call_id": "toolu_012iGkXgwoD73kC2NTHwoVPt",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "INTERPRETATION.md",
+      "sha256": "5c55da3c507bac3b4ee9f3b9d2c695136f6ce852093466de665c428ba84b847f",
+      "complete_delivery": [
+        {
+          "call_event": 16,
+          "response_event": 17,
+          "call_id": "toolu_01EszZJkysJfpYLwimjMyHYa",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "criteria/discovery-shiv-expected.json",
+      "sha256": "e8fd0949749b5ca69aefec2a5268038ed5d9749771d9c0f3c32e3f1918aa6a52",
+      "complete_delivery": [
+        {
+          "call_event": 22,
+          "response_event": 23,
+          "call_id": "toolu_011LZxk2FVVdJ3uJCH16uf8e",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "criteria/discovery-shiv-inherited.md",
+      "sha256": "cb1d6e5b5003dae298f5127430bd1f9166b5ca168228bbd2fa569c84d4e6f8be",
+      "complete_delivery": [
+        {
+          "call_event": 20,
+          "response_event": 21,
+          "call_id": "toolu_014uDcrCrqyBTLQqFRr9xYf1",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "criteria/discovery-shiv.md",
+      "sha256": "d9d69e80a5bb488a28a4bd33c250ea47122897259d65ff2b6e9df53e0e486b7c",
+      "complete_delivery": [
+        {
+          "call_event": 18,
+          "response_event": 19,
+          "call_id": "toolu_01McJ1EinZMvxGFwqbM61YVY",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261031T104306410Z-ssr-count-free-codex-discovery-shiv-cc717fd4-6e4e-4dff-a482-9b92d1437e2b-e6fkardo.json",
+      "sha256": "b256ebecfc7b8f7d9f34caad1a7339c6777102f4a2d8e1b151db06da1b4162d7",
+      "complete_delivery": [
+        {
+          "call_event": 29,
+          "response_event": 30,
+          "call_id": "toolu_01BDMe3D6kEetBTfxGcj4Kv6",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261031T105251378Z-ssr-count-free-codex-discovery-shiv-c2fdfad1-0e0e-4cb8-8cc6-438c0506969e-0sak5_do.json",
+      "sha256": "acbba3e7355fefad57d6d476987d6ddaabe09bbe3b06e9ee83d5adeef4c4b376",
+      "complete_delivery": [
+        {
+          "call_event": 31,
+          "response_event": 32,
+          "call_id": "toolu_013MHeQ55Lko2E7ukRTVrZea",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261031T110220442Z-ssr-count-free-codex-discovery-shiv-5f67dfae-97bb-4724-8320-ccfe296a3a89-wb1iesq1.json",
+      "sha256": "8089db6dbbd620a60a2185eb1a9a2313396db3e77f3e3016fbff47c17bd0dfcf",
+      "complete_delivery": [
+        {
+          "call_event": 33,
+          "response_event": 34,
+          "call_id": "toolu_01XGmsYne74Q79xfHF4rFyta",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/001.txt",
+      "sha256": "abcd9b2a168675c0c8b2003ba99ad5758a6d81ade19824a79f50a7d984df4fe4",
+      "complete_delivery": [
+        {
+          "call_event": 53,
+          "response_event": 54,
+          "call_id": "toolu_01ARRDU1q2DhvAHVv5rnPBsg",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/002.txt",
+      "sha256": "c9134958aaae897e137be339ae1ecbd9afa888d3fac44e66a40d36e12e0313e5",
+      "complete_delivery": [
+        {
+          "call_event": 55,
+          "response_event": 56,
+          "call_id": "toolu_01QmpWfgwvQDupAcZMuGBDaL",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/003.txt",
+      "sha256": "e9542eec883f95fb0a64d2a9deca8bbcde5af2bf7a7ec0bd855a10f391471585",
+      "complete_delivery": [
+        {
+          "call_event": 57,
+          "response_event": 58,
+          "call_id": "toolu_01MVjMQxSBoDUScodtoEjm8r",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/004.txt",
+      "sha256": "b007b647aa6c66dde072127135990a0d4a1eebda8e3253f5289cebdc524e33ac",
+      "complete_delivery": [
+        {
+          "call_event": 59,
+          "response_event": 60,
+          "call_id": "toolu_017moHoz8w6M2hRZ4Dna3Vye",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/005.txt",
+      "sha256": "d0758cdef5279083fdde0329e9e404ea59feae22297f7cf90073cbf4b348c086",
+      "complete_delivery": [
+        {
+          "call_event": 61,
+          "response_event": 62,
+          "call_id": "toolu_01M2DgyuPHHfm5rwhzPcvbm8",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/006.txt",
+      "sha256": "ade0fc62f14848627283169c38316c38def3a314ba76f31df66fb7fe0922dc99",
+      "complete_delivery": [
+        {
+          "call_event": 63,
+          "response_event": 64,
+          "call_id": "toolu_01WezSXZxBKFQWWu8TK71Yp1",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/007.txt",
+      "sha256": "c95531f69859851f909ab781c4554425e9106c4ab719975a1f60c6a7fb0e52ec",
+      "complete_delivery": [
+        {
+          "call_event": 65,
+          "response_event": 66,
+          "call_id": "toolu_01HezaBfYFr8uuX1Mk31YM2G",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/008.txt",
+      "sha256": "1dee80dc979d272a6fdac6aaa4d3c336646a41eb96d6add448640837e4f8ade3",
+      "complete_delivery": [
+        {
+          "call_event": 67,
+          "response_event": 68,
+          "call_id": "toolu_013386xxd8GBM5hbsZZhRogg",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/009.txt",
+      "sha256": "d4291847bbf81e16e02ace396847a02010e99d69fae69d82f4ba6e45bca43d35",
+      "complete_delivery": [
+        {
+          "call_event": 69,
+          "response_event": 70,
+          "call_id": "toolu_014y1H5M5Ahox8ALFaNdHq7N",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/010.txt",
+      "sha256": "d2c3e86ea8071cdd66ffc84ce69556634c9c1bad1cf92b489e69893f94c1d1b8",
+      "complete_delivery": [
+        {
+          "call_event": 71,
+          "response_event": 72,
+          "call_id": "toolu_01NtYekFE5vS8JZkiFvJkcNQ",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/011.txt",
+      "sha256": "86ac526d9ace11f8b57f687405a624f444883daca264fdd0233bde3c9495478f",
+      "complete_delivery": [
+        {
+          "call_event": 73,
+          "response_event": 74,
+          "call_id": "toolu_01KerDcybXQS3Mwm2bi8PTuu",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/012.txt",
+      "sha256": "036167d0f5966793b803ff046f766a1791c73055c22e01a06f5b53524aeed14d",
+      "complete_delivery": [
+        {
+          "call_event": 75,
+          "response_event": 76,
+          "call_id": "toolu_0185ZrF7pDNr88aWnRSyX82F",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/013.txt",
+      "sha256": "02e63e0d50cab6430a20b606f8e3cf5e0462eca27d479c709220d345c691a727",
+      "complete_delivery": [
+        {
+          "call_event": 77,
+          "response_event": 78,
+          "call_id": "toolu_01F4VUXX16afvWGJxUekSPhU",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/014.txt",
+      "sha256": "b0898d831aa506a256e5341307224623697840f60dbae6d1726323f9634acc47",
+      "complete_delivery": [
+        {
+          "call_event": 79,
+          "response_event": 80,
+          "call_id": "toolu_01NH5uca7v6LCFjY8yytjhie",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/015.txt",
+      "sha256": "799dfd7e4953a0f433bd7db601bcdf6722bf80bebe655bf221f34ada3d130acc",
+      "complete_delivery": [
+        {
+          "call_event": 81,
+          "response_event": 82,
+          "call_id": "toolu_01SQibDL4HxteUTnJzcQEXcT",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/016.txt",
+      "sha256": "180cd8de06e37447361817e4a8f8b63f88b3284052bd3343f9658990fc8ba2dd",
+      "complete_delivery": [
+        {
+          "call_event": 83,
+          "response_event": 84,
+          "call_id": "toolu_011AthJh2n4hFkjTX7hhaXx5",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/017.txt",
+      "sha256": "266f3d9ee1931a24220fc3dcefd528ee8ec50db06e4a9b756e2ccc5b65cb0416",
+      "complete_delivery": [
+        {
+          "call_event": 85,
+          "response_event": 86,
+          "call_id": "toolu_013KvK9TEt9mE4w2iHHoQN32",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/018.txt",
+      "sha256": "601d3a6474aeea208ebf93942693218d194b68523d5a073da9ee3abc6d0dc246",
+      "complete_delivery": [
+        {
+          "call_event": 87,
+          "response_event": 88,
+          "call_id": "toolu_01FoqnExnZYvxtfmqUaY8XF4",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/019.txt",
+      "sha256": "855a1fe24ac49a15bf3f0ea91b53275d3cdb9e840a0c467551b4a31e223c4597",
+      "complete_delivery": [
+        {
+          "call_event": 89,
+          "response_event": 90,
+          "call_id": "toolu_01UwWT8weVuauE1BokEKFmL8",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/020.txt",
+      "sha256": "246ffce391aac05c672f3147e1700e0873a7bf9803edfca9f117b5ac481428a0",
+      "complete_delivery": [
+        {
+          "call_event": 91,
+          "response_event": 92,
+          "call_id": "toolu_011PVn5AbGSFf5dmvAsCRu1T",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/021.txt",
+      "sha256": "3528bce06a8a9e5688db6ae66fb855d6ff3801719febdae807cf5382dba4bbab",
+      "complete_delivery": [
+        {
+          "call_event": 93,
+          "response_event": 94,
+          "call_id": "toolu_01ErxR4efNnTgbco6g7bDWL7",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/022.png",
+      "sha256": "88c1586d81e59d542ce713ea86af61056a19017e327ef56beccdc0cda5f3bd42",
+      "complete_delivery": [
+        {
+          "call_event": 95,
+          "response_event": 96,
+          "call_id": "toolu_01MEGiGaVBHCkdNJTxDyuAiE",
+          "exact_image_bytes_delivered": true
+        }
+      ]
+    },
+    {
+      "path": "objects/023.txt",
+      "sha256": "af994ae6dd72855f580e9d00e47ea090a2dd1ed59aab9717031b5ab8b0d1f360",
+      "complete_delivery": [
+        {
+          "call_event": 97,
+          "response_event": 98,
+          "call_id": "toolu_013UPcaiw3pE2xnQgiXxPkhQ",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/024.txt",
+      "sha256": "6010392d5ea945fe222a7bb92198add78080c8d0d6e729e568a94fe2f5578246",
+      "complete_delivery": [
+        {
+          "call_event": 99,
+          "response_event": 100,
+          "call_id": "toolu_01GjPgCbSvzZsFpHHQ1XuSYY",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/025.txt",
+      "sha256": "06de07a65a140ccad8c53ba50b67904b888783708e5af66b46b74e17408b8f2d",
+      "complete_delivery": [
+        {
+          "call_event": 101,
+          "response_event": 102,
+          "call_id": "toolu_011HWrmaSDD3krYNe2Crg2JF",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/026.txt",
+      "sha256": "5f71229de526a25004a276666d8329d66f4b65b3a9a2993aac8ab67d18f59ea6",
+      "complete_delivery": [
+        {
+          "call_event": 103,
+          "response_event": 104,
+          "call_id": "toolu_01QdD857VHkC2pTDV9B46pfv",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/027.txt",
+      "sha256": "b580391f6327b070c168dd948a316367ff92e5e6f6a20066404c1de761723aac",
+      "complete_delivery": [
+        {
+          "call_event": 105,
+          "response_event": 106,
+          "call_id": "toolu_01SRMnxAPP68dfaUcDJDVxRZ",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/028.txt",
+      "sha256": "2c6550c83b1689f7400a8eeacedc1bf115961ddb3513bb90f99a83f12023cb0e",
+      "complete_delivery": [
+        {
+          "call_event": 107,
+          "response_event": 108,
+          "call_id": "toolu_01E9An3dbokSwNSp6tw1LwYV",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/029.txt",
+      "sha256": "2aad2a71f8de656e583665b9e7f3e9cf66e4d4b0092a29bcfa1f6670fc740ed8",
+      "complete_delivery": [
+        {
+          "call_event": 109,
+          "response_event": 110,
+          "call_id": "toolu_011NquBQbyqeBbLxUJHUTyod",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/030.txt",
+      "sha256": "6e6044c53889f81523b4e7f78e3d38cf24f6784748491e89b323b8400d507a05",
+      "complete_delivery": [
+        {
+          "call_event": 111,
+          "response_event": 112,
+          "call_id": "toolu_01FjxoXyMfMJr7EpwD1ghncE",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/031.txt",
+      "sha256": "b72de8da60c7f373cf13a76583897e0a5e51a69a75b629fd00d5ca55bc64bb9d",
+      "complete_delivery": [
+        {
+          "call_event": 113,
+          "response_event": 114,
+          "call_id": "toolu_01BXXaNhRY1nEe2FFQFfZLRC",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/032.txt",
+      "sha256": "1bcaf5d4e0afd7ab50066901316b10d1746bf1ae003b3b62ed2d8fdda5444e02",
+      "complete_delivery": [
+        {
+          "call_event": 115,
+          "response_event": 116,
+          "call_id": "toolu_01EgTJ6nXFniyBS5RWFu1Zoh",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/033.txt",
+      "sha256": "e497fdc4b9b4093e05e4ffcbe8ff9a3e6a5f3912b7f33a9c3aaa3926dad623be",
+      "complete_delivery": [
+        {
+          "call_event": 117,
+          "response_event": 118,
+          "call_id": "toolu_01WGqykTboRBTBJQsxWgFjCv",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/034.txt",
+      "sha256": "71304522859c6769f398ee445a18f664aec47ee1ca5108ccea4af885f11157ff",
+      "complete_delivery": [
+        {
+          "call_event": 119,
+          "response_event": 120,
+          "call_id": "toolu_015HvST5969QDBSAhE8hsUis",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/035.txt",
+      "sha256": "9684ca65ec3e47fd9e5bef97430f5fa0549ef979fd28e6b5a3883d40838a570e",
+      "complete_delivery": [
+        {
+          "call_event": 121,
+          "response_event": 122,
+          "call_id": "toolu_018fCL38yQrYTgh4oV5ASwWV",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/036.txt",
+      "sha256": "d1515db4f3e9dceae06b8a6584c271ceaf535783cd05cc4c2b0f8bf024987723",
+      "complete_delivery": [
+        {
+          "call_event": 123,
+          "response_event": 124,
+          "call_id": "toolu_01WqkYo8yCLcagFXzAyZdBWJ",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/037.txt",
+      "sha256": "46c6e4dd95e855d9359993bbbc8993789ec557a4e4605c3e7ac0cd2b2cbb07bd",
+      "complete_delivery": [
+        {
+          "call_event": 125,
+          "response_event": 126,
+          "call_id": "toolu_01MwLiosJzqtLUVd4qETmK8U",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/038.txt",
+      "sha256": "859bfefefa2d40b28fa26a132cf03ad7278c092e8ba6f6e4c476d116b929f70b",
+      "complete_delivery": [
+        {
+          "call_event": 127,
+          "response_event": 128,
+          "call_id": "toolu_01Q7FMS3zteQ58LTyzLuWStq",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/039.txt",
+      "sha256": "1e8d5b8a6839487a4211229f69b76a5f901515dcad7f111a4bdd5b30d9e96020",
+      "complete_delivery": [
+        {
+          "call_event": 129,
+          "response_event": 130,
+          "call_id": "toolu_01KUe3AYvfJm8LLAhBXk7ni5",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/040.txt",
+      "sha256": "e0f99a6f14e11b85ef604445e24e11d7193a3f0a8fed3d1964880088017f9b1a",
+      "complete_delivery": [
+        {
+          "call_event": 131,
+          "response_event": 132,
+          "call_id": "toolu_015rBMLBuMjNuUDdmVHbQ9qQ",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/041.txt",
+      "sha256": "2e27bfca1ad8526d1524d8d47a8f605f887879d44a54699cfeae88377899eabe",
+      "complete_delivery": [
+        {
+          "call_event": 133,
+          "response_event": 134,
+          "call_id": "toolu_01FSGHypv7rZteNHRi35BFnd",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/042.txt",
+      "sha256": "1b533f6813c2c1aeddd863013a71bbd3565503327d3966b425402886fb24925c",
+      "complete_delivery": [
+        {
+          "call_event": 135,
+          "response_event": 136,
+          "call_id": "toolu_01J7skfN3ydbsyVA3cFBKkmq",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/043.txt",
+      "sha256": "68bf6ec5e406cf89e9ac086e5bee51c8cdcee9c1415df1a78c08cfcf04bf1da7",
+      "complete_delivery": [
+        {
+          "call_event": 138,
+          "response_event": 139,
+          "call_id": "toolu_013HRt2JP8tRE979WYWLqTDR",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/044.txt",
+      "sha256": "da9bd4d61625a748e73a0ad6be795f0dd6381e90fc3f255d0023aaf9444f5fb8",
+      "complete_delivery": [
+        {
+          "call_event": 140,
+          "response_event": 141,
+          "call_id": "toolu_018mjHGjquJAMhgioxvmSLcF",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/045.txt",
+      "sha256": "fc774be230dec2b86a7417534b63819e94abee106cc9a8a3197ec52e589086d4",
+      "complete_delivery": [
+        {
+          "call_event": 142,
+          "response_event": 143,
+          "call_id": "toolu_01JtvyLLgEF38BR533TrzueU",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/046.txt",
+      "sha256": "ce08b0360dfb8ba3b181a5926b06708743ef06bca612e8405a856b9df74da98d",
+      "complete_delivery": [
+        {
+          "call_event": 144,
+          "response_event": 145,
+          "call_id": "toolu_016qMXkTXdkezfgbWMEQycF9",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/047.txt",
+      "sha256": "50ed9a0297dd4b12f307088b9af07edc3f2118679983e4c4c6793b253532b2fe",
+      "complete_delivery": [
+        {
+          "call_event": 146,
+          "response_event": 147,
+          "call_id": "toolu_016DWdZn9gBoU9amfTPWLHuH",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/048.txt",
+      "sha256": "ffe5679bd0e57cb6f9374ef532289c7f25da591718e663f5f5d1bbf75648cb05",
+      "complete_delivery": [
+        {
+          "call_event": 148,
+          "response_event": 149,
+          "call_id": "toolu_01A7WfgnEzhssYWE3XNnD9pT",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/049.txt",
+      "sha256": "dbf1c57b62c2d9f4798b35f21a3848c3d0395b93314aabc2f0a279e969131517",
+      "complete_delivery": [
+        {
+          "call_event": 150,
+          "response_event": 151,
+          "call_id": "toolu_015p2qyxx57iQSorgXuQBtmQ",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/050.txt",
+      "sha256": "a439ff52735d0cfaad3b189c09e4093111754cf8c1f55eb260c1bee01d955caa",
+      "complete_delivery": [
+        {
+          "call_event": 152,
+          "response_event": 153,
+          "call_id": "toolu_01GJZ3pYFTn2VgwoAyy291Wb",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/051.txt",
+      "sha256": "3bde5fcae36c79fd49315fc569d73a7573d4c438583ccc6f3df0b8cdca788feb",
+      "complete_delivery": [
+        {
+          "call_event": 24,
+          "response_event": 25,
+          "call_id": "toolu_013WdXUaUyq7UC3vp3XM5Cad",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/052.txt",
+      "sha256": "d4e247a8617adf393455d9f174db420cc866826523093f77894b99c1ed94a638",
+      "complete_delivery": [
+        {
+          "call_event": 157,
+          "response_event": 158,
+          "call_id": "toolu_01ESQcRbX5kwyC6cZDheC5Fe",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/053.txt",
+      "sha256": "8c6f9c10785d0b41358215c0493d54aa11fa8923d0d54e9cb6ef1f4570d454be",
+      "complete_delivery": [
+        {
+          "call_event": 159,
+          "response_event": 160,
+          "call_id": "toolu_01Uwm8GUQCLtotLRnRhc7VK4",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/054.txt",
+      "sha256": "893b638e80397fc2115e6f62c5dc1b10116a050610c4945f3a4e5c12ff2dbc86",
+      "complete_delivery": [
+        {
+          "call_event": 161,
+          "response_event": 162,
+          "call_id": "toolu_012cSPvCottVifLhRAZpdGJL",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/055.txt",
+      "sha256": "dc10cc741f0a8717e6d1bf4c6744ea103ea934e4d1462796671fcca15387580d",
+      "complete_delivery": [
+        {
+          "call_event": 163,
+          "response_event": 164,
+          "call_id": "toolu_01D9PJCWxneqcTRnvo1BE6Y5",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261031T104306410Z-ssr-count-free-codex-discovery-shiv-cc717fd4-6e4e-4dff-a482-9b92d1437e2b-e6fkardo.md",
+      "sha256": "43450d0a202c095f730ff1aebf52203658b991721ba693a7b3ccc0c5952961ba",
+      "complete_delivery": [
+        {
+          "call_event": 165,
+          "response_event": 166,
+          "call_id": "toolu_0138HM6uWEy56ss1fHJRwSGF",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261031T105251378Z-ssr-count-free-codex-discovery-shiv-c2fdfad1-0e0e-4cb8-8cc6-438c0506969e-0sak5_do.md",
+      "sha256": "f1171071be4dec68d4cd4741624bc521deeae76760cc152dc092244d17ff5256",
+      "complete_delivery": [
+        {
+          "call_event": 167,
+          "response_event": 168,
+          "call_id": "toolu_0128tuLEkHRgNdQXVYZkheNZ",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261031T110220442Z-ssr-count-free-codex-discovery-shiv-5f67dfae-97bb-4724-8320-ccfe296a3a89-wb1iesq1.md",
+      "sha256": "380b772e1d7f34a09500005322ebbb100ba203a1a6326de40aedc191654c55d3",
+      "complete_delivery": [
+        {
+          "call_event": 169,
+          "response_event": 170,
+          "call_id": "toolu_0159JfyfD4EXCvaZT2Nt2Qnr",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    }
+  ],
+  "full_inventory_verified": true,
+  "protected_inputs_verified": 68,
+  "all_calls": [
+    {
+      "event": 3,
+      "name": "Glob",
+      "input": {
+        "pattern": "**/EVALUATION-INDEX.json",
+        "path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace"
+      }
+    },
+    {
+      "event": 6,
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*",
+        "path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/evidence"
+      }
+    },
+    {
+      "event": 8,
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*",
+        "path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture"
+      }
+    },
+    {
+      "event": 11,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/EVALUATION-INDEX.json"
+      }
+    },
+    {
+      "event": 14,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/policy.txt"
+      }
+    },
+    {
+      "event": 16,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/INTERPRETATION.md"
+      }
+    },
+    {
+      "event": 18,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/criteria/discovery-shiv.md"
+      }
+    },
+    {
+      "event": 20,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/criteria/discovery-shiv-inherited.md"
+      }
+    },
+    {
+      "event": 22,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/criteria/discovery-shiv-expected.json"
+      }
+    },
+    {
+      "event": 24,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/051.txt"
+      }
+    },
+    {
+      "event": 29,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/facts/20261031T104306410Z-ssr-count-free-codex-discovery-shiv-cc717fd4-6e4e-4dff-a482-9b92d1437e2b-e6fkardo.json"
+      }
+    },
+    {
+      "event": 31,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/facts/20261031T105251378Z-ssr-count-free-codex-discovery-shiv-c2fdfad1-0e0e-4cb8-8cc6-438c0506969e-0sak5_do.json"
+      }
+    },
+    {
+      "event": 33,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/facts/20261031T110220442Z-ssr-count-free-codex-discovery-shiv-5f67dfae-97bb-4724-8320-ccfe296a3a89-wb1iesq1.json"
+      }
+    },
+    {
+      "event": 53,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/001.txt"
+      }
+    },
+    {
+      "event": 55,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/002.txt"
+      }
+    },
+    {
+      "event": 57,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/003.txt"
+      }
+    },
+    {
+      "event": 59,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/004.txt"
+      }
+    },
+    {
+      "event": 61,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/005.txt"
+      }
+    },
+    {
+      "event": 63,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/006.txt"
+      }
+    },
+    {
+      "event": 65,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/007.txt"
+      }
+    },
+    {
+      "event": 67,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/008.txt"
+      }
+    },
+    {
+      "event": 69,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/009.txt"
+      }
+    },
+    {
+      "event": 71,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/010.txt"
+      }
+    },
+    {
+      "event": 73,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/011.txt"
+      }
+    },
+    {
+      "event": 75,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/012.txt"
+      }
+    },
+    {
+      "event": 77,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/013.txt"
+      }
+    },
+    {
+      "event": 79,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/014.txt"
+      }
+    },
+    {
+      "event": 81,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/015.txt"
+      }
+    },
+    {
+      "event": 83,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/016.txt"
+      }
+    },
+    {
+      "event": 85,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/017.txt"
+      }
+    },
+    {
+      "event": 87,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/018.txt"
+      }
+    },
+    {
+      "event": 89,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/019.txt"
+      }
+    },
+    {
+      "event": 91,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/020.txt"
+      }
+    },
+    {
+      "event": 93,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/021.txt"
+      }
+    },
+    {
+      "event": 95,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/022.png"
+      }
+    },
+    {
+      "event": 97,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/023.txt"
+      }
+    },
+    {
+      "event": 99,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/024.txt"
+      }
+    },
+    {
+      "event": 101,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/025.txt"
+      }
+    },
+    {
+      "event": 103,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/026.txt"
+      }
+    },
+    {
+      "event": 105,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/027.txt"
+      }
+    },
+    {
+      "event": 107,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/028.txt"
+      }
+    },
+    {
+      "event": 109,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/029.txt"
+      }
+    },
+    {
+      "event": 111,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/030.txt"
+      }
+    },
+    {
+      "event": 113,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/031.txt"
+      }
+    },
+    {
+      "event": 115,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/032.txt"
+      }
+    },
+    {
+      "event": 117,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/033.txt"
+      }
+    },
+    {
+      "event": 119,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/034.txt"
+      }
+    },
+    {
+      "event": 121,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/035.txt"
+      }
+    },
+    {
+      "event": 123,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/036.txt"
+      }
+    },
+    {
+      "event": 125,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/037.txt"
+      }
+    },
+    {
+      "event": 127,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/038.txt"
+      }
+    },
+    {
+      "event": 129,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/039.txt"
+      }
+    },
+    {
+      "event": 131,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/040.txt"
+      }
+    },
+    {
+      "event": 133,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/041.txt"
+      }
+    },
+    {
+      "event": 135,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/042.txt"
+      }
+    },
+    {
+      "event": 138,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/043.txt"
+      }
+    },
+    {
+      "event": 140,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/044.txt"
+      }
+    },
+    {
+      "event": 142,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/045.txt"
+      }
+    },
+    {
+      "event": 144,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/046.txt"
+      }
+    },
+    {
+      "event": 146,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/047.txt"
+      }
+    },
+    {
+      "event": 148,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/048.txt"
+      }
+    },
+    {
+      "event": 150,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/049.txt"
+      }
+    },
+    {
+      "event": 152,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/050.txt"
+      }
+    },
+    {
+      "event": 157,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/052.txt"
+      }
+    },
+    {
+      "event": 159,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/053.txt"
+      }
+    },
+    {
+      "event": 161,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/054.txt"
+      }
+    },
+    {
+      "event": 163,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/objects/055.txt"
+      }
+    },
+    {
+      "event": 165,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/outputs/20261031T104306410Z-ssr-count-free-codex-discovery-shiv-cc717fd4-6e4e-4dff-a482-9b92d1437e2b-e6fkardo.md"
+      }
+    },
+    {
+      "event": 167,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/outputs/20261031T105251378Z-ssr-count-free-codex-discovery-shiv-c2fdfad1-0e0e-4cb8-8cc6-438c0506969e-0sak5_do.md"
+      }
+    },
+    {
+      "event": 169,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/outputs/20261031T110220442Z-ssr-count-free-codex-discovery-shiv-5f67dfae-97bb-4724-8320-ccfe296a3a89-wb1iesq1.md"
+      }
+    },
+    {
+      "event": 195,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb/workspace/fixture/prior-assessment.md"
+      }
+    }
+  ],
+  "semantic_audit": "Active assessor read complete first-pass and post-prior outputs and checked all nine factors against complete projects, four-consumer replays and retained Git. All factors agree, with no consequential repair/preservation regression.",
+  "first_pass_sha256": "e04f4f1a88fcb57f559915146d45013bc92b63c4c81c079971563a19cc05124f",
+  "post_prior_sha256": "43dfd9ec542f087605a10998411084bf9db7bb3017fb8036e3de2a1edd07c96b",
+  "post_prior_status": "separate reviewer comparison retained",
+  "audit_controller": {
+    "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/controllers/count-free-review-audit.py",
+    "sha256": "443ceb554b1dd79903a2d20a1728b53ecae601f025106908310f0347c0fef45c"
+  },
+  "limits": [
+    "Visible labels; prior physically present but timing audited.",
+    "Opus reviewer differs from active Codex assessor; Opus subjects share reviewer family.",
+    "Exposed development cases, no causal contribution or reliability claim."
+  ],
+  "precision_notes": [
+    "Reviewer baseline limitation resolved by direct Git baseline-blob comparison to every supplied tracked project file for all three runs.",
+    "Byte identity to an already fully source-compared project reuses inspection, rather than substituting model agreement for preservation evidence. Direct source/final comparison in reviewer packet independently agrees.",
+    "Reviewer calls review not cross-family validation; reviewer family differs from Codex subjects here, but labels and exposed scenarios still preclude blinding/general reliability claims.",
+    "F3 rests on committed complete changes and clean tree; executable behavior supports F1 separately."
+  ]
+}

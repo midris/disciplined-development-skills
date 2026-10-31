@@ -1,0 +1,37 @@
+{
+  "stage": "focused",
+  "passed": true,
+  "subjects": 24,
+  "complete_repairs": 18,
+  "reporting_only": 6,
+  "reviews": 4,
+  "independent_functional_factors_met": 54,
+  "subject_indexes": [
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/count-free-codex-01-run-index.json",
+      "sha256": "82766e7f1bda97d1deb5f147b27b5ae99031d9141dc01968ed4ac05d4610e877"
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/count-free-claude-01-run-index.json",
+      "sha256": "ce204d8a55f262954fc4da6b9893bd0a06b880b3e0ea512cf523d8c7c2224806"
+    }
+  ],
+  "evaluator_ledger": {
+    "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/evaluation/evaluator-run-index.json",
+    "sha256": "faf39e853168a7267f0640b57c6c65d2ea3162194ceab066d65ac9a5b371e1ec"
+  },
+  "decision": "Proceed with the approved 42 remaining subjects and six reviews; carry focused results forward. No retries or wording changes.",
+  "rationale": "All eighteen repairs meet F1-F3 in active assessment and independent complete-output review. All six report diagnostics retain required paths/changes/preservation reasons. No unresolved consequential-quality, runtime or capture fault remains.",
+  "reporting_limits": [
+    "Five P3 defects: four required cross-path/mixed-outcome grouping accounts (one also literal newline escapes) and one unsupported post-edit search claim.",
+    "Two P3 unknowns preserve the inherited negative-assertion category ambiguity.",
+    "One Shiv commit claimed successful execution before obtaining it later in the same run; final response followed successful verification.",
+    "Minor verification-summary imprecision is recorded separately. Complete artifacts, traces and disposable replays resolve essential repair/preservation status; these issues do not make it untrustworthy."
+  ],
+  "review_limits": [
+    "Complete read-only independent first pass for every packet; three then read prior, one stopped before prior and was compared by active assessor.",
+    "Visible labels and exposed scenarios; Opus reviewer shares family with Claude subjects.",
+    "Generic PNG/Click packaging prose in non-Shiv packets is inapplicable; actual exhaustive mappings/read lists are complete.",
+    "Current runtime stratum differs from historical screen; no causal attribution or reliability guarantee."
+  ]
+}

@@ -1,4 +1,97 @@
 {
   "evaluator_ledger_version": "1",
-  "runs": []
+  "runs": [
+    {
+      "packet_id": "codex-shiv",
+      "run_id": "20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "955cf4eab42c893746e539672af61ce68196cc2b",
+      "configuration_sha256": "9d7db90ba3fbfa6fe1084a1285295e2a3f0ba645f5f9398be476bfe608f7f15d",
+      "bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/reviews/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/reviews/20261031T110926726Z-ssr-count-free-codex-shiv-review-58880e9e-8a4c-4ac0-92f8-3f568e74fba2-u28itjnb.inventory.json",
+        "sha256": "685d2e71ce476f58bb1dd5bf2e68a81f22fbce72b34f9acc0cb37b7c42adf61d",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 235.425,
+      "audit_status": "complete",
+      "audit": {
+        "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/evaluation/codex-shiv/audit.json",
+        "sha256": "da3622237e0a8f1807ba729b6f3eb20ecbb9d0319baee10fbb23231a79faa544",
+        "version": null
+      }
+    },
+    {
+      "packet_id": "codex-pressure-local",
+      "run_id": "20261031T111358804Z-ssr-count-free-codex-pressure-local-review-c5ff104f-98c6-4178-9c64-a9da5174a5f7-ns6f91lx",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "955cf4eab42c893746e539672af61ce68196cc2b",
+      "configuration_sha256": "986ff4ef06df6a3d6ae09c7b2a346219873d89128c937e60da672d8f31817b18",
+      "bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/reviews/20261031T111358804Z-ssr-count-free-codex-pressure-local-review-c5ff104f-98c6-4178-9c64-a9da5174a5f7-ns6f91lx",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/reviews/20261031T111358804Z-ssr-count-free-codex-pressure-local-review-c5ff104f-98c6-4178-9c64-a9da5174a5f7-ns6f91lx.inventory.json",
+        "sha256": "7fc8400dba5642076c2248b4dcdf1ebea63a002495a49b892c81b6e0f20bfa8a",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 147.793,
+      "audit_status": "complete",
+      "audit": {
+        "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/evaluation/codex-pressure-local/audit.json",
+        "sha256": "ac6a5a161e655113e6089d8cd84796f44ea82258d4c64bd34106e93e2344e929",
+        "version": null
+      }
+    },
+    {
+      "packet_id": "claude-shiv",
+      "run_id": "20261031T111715574Z-ssr-count-free-claude-shiv-review-fb5688fc-f39c-4940-a5a9-b1b141924bbb-um_8f19y",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "955cf4eab42c893746e539672af61ce68196cc2b",
+      "configuration_sha256": "78b3169c1b53d8b1dc20948bd4eeffbc96f9eed9bd27875e4dab75fd834d45ad",
+      "bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/reviews/20261031T111715574Z-ssr-count-free-claude-shiv-review-fb5688fc-f39c-4940-a5a9-b1b141924bbb-um_8f19y",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/reviews/20261031T111715574Z-ssr-count-free-claude-shiv-review-fb5688fc-f39c-4940-a5a9-b1b141924bbb-um_8f19y.inventory.json",
+        "sha256": "3cabcd31b33d13dcb81c1f788bdb3dc39b88e43b5ff56c3f2220e4c334907ed8",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 234.716,
+      "audit_status": "complete",
+      "audit": {
+        "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/evaluation/claude-shiv/audit.json",
+        "sha256": "26b123b0f270dcf06e872568f9cd33fe15492499084b2370db51df3339b7e9b5",
+        "version": null
+      }
+    },
+    {
+      "packet_id": "claude-pressure-local",
+      "run_id": "20261031T112143032Z-ssr-count-free-claude-pressure-local-review-8e10f4b0-5c33-4bed-8251-77105601f0da-40fuc9l8",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "955cf4eab42c893746e539672af61ce68196cc2b",
+      "configuration_sha256": "856b6dc4304af41aeda5521fb65fd4a01fdcb79fc1be11a26af67dcd6e3eca6e",
+      "bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/reviews/20261031T112143032Z-ssr-count-free-claude-pressure-local-review-8e10f4b0-5c33-4bed-8251-77105601f0da-40fuc9l8",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/count-free-regression-01/reviews/20261031T112143032Z-ssr-count-free-claude-pressure-local-review-8e10f4b0-5c33-4bed-8251-77105601f0da-40fuc9l8.inventory.json",
+        "sha256": "f8e9b5acdbc6e782cdf93f1332f5fe3af717b7bb137404279e6f4d1f9faa98dc",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 160.424,
+      "audit_status": "complete",
+      "audit": {
+        "path": "skill-studies/sweeping-stale-references/runs/count-free-regression-01/evaluation/claude-pressure-local/audit.json",
+        "sha256": "f24c881abd118ded8e67ef876a4f2884d8ba949369d2d283477fec53321d0d77",
+        "version": null
+      }
+    }
+  ]
 }

@@ -1,0 +1,73 @@
+{
+  "first_pass_event": 120,
+  "prior_first_access_event": null,
+  "post_prior_event": null,
+  "judgments": [
+    {
+      "run_id": "20261031T104043584Z-ssr-count-free-codex-pressure-repair-91389215-4455-438a-bb89-45c4956504d2-vxzl_5zx",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "All eighteen factors agree. Complete repair and preserved operational guidance are unchanged; differences in explicit up-to phrasing and chat brevity are non-consequential."
+    },
+    {
+      "run_id": "20261031T104559123Z-ssr-count-free-codex-local-change-640338fe-d3d6-4415-9e15-5af5482fad1b-b41zg5ib",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "All eighteen factors agree. Complete repair and preserved operational guidance are unchanged; differences in explicit up-to phrasing and chat brevity are non-consequential."
+    },
+    {
+      "run_id": "20261031T105009093Z-ssr-count-free-codex-pressure-repair-5fa90e2a-95ba-4f56-8a74-f133e7cfba9d-ixr0_fa5",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "All eighteen factors agree. Complete repair and preserved operational guidance are unchanged; differences in explicit up-to phrasing and chat brevity are non-consequential."
+    },
+    {
+      "run_id": "20261031T105802072Z-ssr-count-free-codex-local-change-fee2ad3b-3417-4ff4-8be6-716cdf499e18-9axp_2up",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "All eighteen factors agree. Complete repair and preserved operational guidance are unchanged; differences in explicit up-to phrasing and chat brevity are non-consequential."
+    },
+    {
+      "run_id": "20261031T110025448Z-ssr-count-free-codex-pressure-repair-48df2117-1338-4dc9-aac3-05ebb68b827a-4drxd6s2",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "All eighteen factors agree. Complete repair and preserved operational guidance are unchanged; differences in explicit up-to phrasing and chat brevity are non-consequential."
+    },
+    {
+      "run_id": "20261031T110516111Z-ssr-count-free-codex-local-change-47dba9af-4da2-46e3-8dd6-72996e292bc1-ha9_2psw",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "All eighteen factors agree. Complete repair and preserved operational guidance are unchanged; differences in explicit up-to phrasing and chat brevity are non-consequential."
+    }
+  ]
+}

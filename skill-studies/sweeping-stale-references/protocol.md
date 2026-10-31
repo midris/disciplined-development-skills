@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `sweeping-stale-references`
 Status: candidate-screen-01 complete; compact adopted on 2026-10-31, followed by the owner-approved removal of exact reference counts.
-Current action: execute the owner-approved count-free-regression-01 in two stages after current-runtime qualification and frozen readiness: 24 focused subjects/four reviews, then 42 remaining subjects/six reviews only after a passing checkpoint. See [design](../../plans/specs/2026-10-31-ssr-count-free-regression.md). The owner also removed the redundant optional-count sentence; no retries or further wording changes are allocated.
+Current action: execute the 42 remaining subjects/six reviews in count-free-regression-01. The [focused checkpoint](runs/count-free-regression-01/focused-gate.json) passed after 24 subjects/four audited reviews: all 18 repairs and 54 independent functional factors met, with reporting limitations retained separately. See [design](../../plans/specs/2026-10-31-ssr-count-free-regression.md). The owner also removed the redundant optional-count sentence; no retries or further wording changes are allocated.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](runs/core-baseline-01/core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -1184,7 +1184,7 @@ The fresh original baseline adds [Codex subjects](runs/fresh-baseline-01/fresh-b
 The completed candidate screen includes its [ten-review evaluator ledger](runs/candidate-screen-01/evaluation/evaluator-run-index.json).
 The count-free regression adds the two subject indexes linked in its batch scopes above.
 For this subset, the historical spent subtotal plus the newly authorized scope gives ceilings of 448 subject, 30 evaluator, 0 authoring and 1 retry invocations; this is an accounting projection, not a new allocation or pool transfer.
-Dispatched calls are **406 subject, 20 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **42 / 10 / 0 / 0** for this subset.
+Dispatched calls are **406 subject, 24 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **42 / 6 / 0 / 0** for this subset.
 The CW protocol remains authoritative for all current combined spending and outer ceilings; no historical unspent pool is revived.
 Sequential readiness used identical externally frozen scores; the final index pins the canonical repository results at their committed revision.
 
