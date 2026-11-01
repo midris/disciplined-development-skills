@@ -1,0 +1,804 @@
+{
+  "slots": [
+    {
+      "slot": 1,
+      "stage": "focused",
+      "provider": "claude",
+      "case_id": "invocation-review",
+      "condition": "current",
+      "repetition": 1,
+      "provider_order": 1,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-review-current.json"
+    },
+    {
+      "slot": 2,
+      "stage": "focused",
+      "provider": "claude",
+      "case_id": "invocation-review",
+      "condition": "candidate",
+      "repetition": 1,
+      "provider_order": 2,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-review-candidate.json"
+    },
+    {
+      "slot": 3,
+      "stage": "focused",
+      "provider": "codex",
+      "case_id": "invocation-review",
+      "condition": "current",
+      "repetition": 1,
+      "provider_order": 1,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-review-current.json"
+    },
+    {
+      "slot": 4,
+      "stage": "focused",
+      "provider": "codex",
+      "case_id": "invocation-review",
+      "condition": "candidate",
+      "repetition": 1,
+      "provider_order": 2,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-review-candidate.json"
+    },
+    {
+      "slot": 5,
+      "stage": "focused",
+      "provider": "claude",
+      "case_id": "invocation-change",
+      "condition": "current",
+      "repetition": 1,
+      "provider_order": 3,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-change-current.json"
+    },
+    {
+      "slot": 6,
+      "stage": "focused",
+      "provider": "claude",
+      "case_id": "invocation-change",
+      "condition": "candidate",
+      "repetition": 1,
+      "provider_order": 4,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-change-candidate.json"
+    },
+    {
+      "slot": 7,
+      "stage": "focused",
+      "provider": "codex",
+      "case_id": "invocation-change",
+      "condition": "current",
+      "repetition": 1,
+      "provider_order": 3,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-change-current.json"
+    },
+    {
+      "slot": 8,
+      "stage": "focused",
+      "provider": "codex",
+      "case_id": "invocation-change",
+      "condition": "candidate",
+      "repetition": 1,
+      "provider_order": 4,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-change-candidate.json"
+    },
+    {
+      "slot": 9,
+      "stage": "focused",
+      "provider": "claude",
+      "case_id": "invocation-verification",
+      "condition": "current",
+      "repetition": 1,
+      "provider_order": 5,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-verification-current.json"
+    },
+    {
+      "slot": 10,
+      "stage": "focused",
+      "provider": "claude",
+      "case_id": "invocation-verification",
+      "condition": "candidate",
+      "repetition": 1,
+      "provider_order": 6,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-verification-candidate.json"
+    },
+    {
+      "slot": 11,
+      "stage": "focused",
+      "provider": "codex",
+      "case_id": "invocation-verification",
+      "condition": "current",
+      "repetition": 1,
+      "provider_order": 5,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-verification-current.json"
+    },
+    {
+      "slot": 12,
+      "stage": "focused",
+      "provider": "codex",
+      "case_id": "invocation-verification",
+      "condition": "candidate",
+      "repetition": 1,
+      "provider_order": 6,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-verification-candidate.json"
+    },
+    {
+      "slot": 13,
+      "stage": "focused",
+      "provider": "codex",
+      "case_id": "invocation-review",
+      "condition": "candidate",
+      "repetition": 2,
+      "provider_order": 7,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-review-candidate.json"
+    },
+    {
+      "slot": 14,
+      "stage": "focused",
+      "provider": "codex",
+      "case_id": "invocation-review",
+      "condition": "current",
+      "repetition": 2,
+      "provider_order": 8,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-review-current.json"
+    },
+    {
+      "slot": 15,
+      "stage": "focused",
+      "provider": "claude",
+      "case_id": "invocation-review",
+      "condition": "candidate",
+      "repetition": 2,
+      "provider_order": 7,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-review-candidate.json"
+    },
+    {
+      "slot": 16,
+      "stage": "focused",
+      "provider": "claude",
+      "case_id": "invocation-review",
+      "condition": "current",
+      "repetition": 2,
+      "provider_order": 8,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-review-current.json"
+    },
+    {
+      "slot": 17,
+      "stage": "focused",
+      "provider": "codex",
+      "case_id": "invocation-change",
+      "condition": "candidate",
+      "repetition": 2,
+      "provider_order": 9,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-change-candidate.json"
+    },
+    {
+      "slot": 18,
+      "stage": "focused",
+      "provider": "codex",
+      "case_id": "invocation-change",
+      "condition": "current",
+      "repetition": 2,
+      "provider_order": 10,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-change-current.json"
+    },
+    {
+      "slot": 19,
+      "stage": "focused",
+      "provider": "claude",
+      "case_id": "invocation-change",
+      "condition": "candidate",
+      "repetition": 2,
+      "provider_order": 9,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-change-candidate.json"
+    },
+    {
+      "slot": 20,
+      "stage": "focused",
+      "provider": "claude",
+      "case_id": "invocation-change",
+      "condition": "current",
+      "repetition": 2,
+      "provider_order": 10,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-change-current.json"
+    },
+    {
+      "slot": 21,
+      "stage": "focused",
+      "provider": "codex",
+      "case_id": "invocation-verification",
+      "condition": "candidate",
+      "repetition": 2,
+      "provider_order": 11,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-verification-candidate.json"
+    },
+    {
+      "slot": 22,
+      "stage": "focused",
+      "provider": "codex",
+      "case_id": "invocation-verification",
+      "condition": "current",
+      "repetition": 2,
+      "provider_order": 12,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-verification-current.json"
+    },
+    {
+      "slot": 23,
+      "stage": "focused",
+      "provider": "claude",
+      "case_id": "invocation-verification",
+      "condition": "candidate",
+      "repetition": 2,
+      "provider_order": 11,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-verification-candidate.json"
+    },
+    {
+      "slot": 24,
+      "stage": "focused",
+      "provider": "claude",
+      "case_id": "invocation-verification",
+      "condition": "current",
+      "repetition": 2,
+      "provider_order": 12,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-verification-current.json"
+    },
+    {
+      "slot": 25,
+      "stage": "remaining",
+      "provider": "claude",
+      "case_id": "invocation-review",
+      "condition": "current",
+      "repetition": 3,
+      "provider_order": 13,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-review-current.json"
+    },
+    {
+      "slot": 26,
+      "stage": "remaining",
+      "provider": "claude",
+      "case_id": "invocation-review",
+      "condition": "candidate",
+      "repetition": 3,
+      "provider_order": 14,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-review-candidate.json"
+    },
+    {
+      "slot": 27,
+      "stage": "remaining",
+      "provider": "codex",
+      "case_id": "invocation-review",
+      "condition": "current",
+      "repetition": 3,
+      "provider_order": 13,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-review-current.json"
+    },
+    {
+      "slot": 28,
+      "stage": "remaining",
+      "provider": "codex",
+      "case_id": "invocation-review",
+      "condition": "candidate",
+      "repetition": 3,
+      "provider_order": 14,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-review-candidate.json"
+    },
+    {
+      "slot": 29,
+      "stage": "remaining",
+      "provider": "claude",
+      "case_id": "invocation-change",
+      "condition": "current",
+      "repetition": 3,
+      "provider_order": 15,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-change-current.json"
+    },
+    {
+      "slot": 30,
+      "stage": "remaining",
+      "provider": "claude",
+      "case_id": "invocation-change",
+      "condition": "candidate",
+      "repetition": 3,
+      "provider_order": 16,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-change-candidate.json"
+    },
+    {
+      "slot": 31,
+      "stage": "remaining",
+      "provider": "codex",
+      "case_id": "invocation-change",
+      "condition": "current",
+      "repetition": 3,
+      "provider_order": 15,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-change-current.json"
+    },
+    {
+      "slot": 32,
+      "stage": "remaining",
+      "provider": "codex",
+      "case_id": "invocation-change",
+      "condition": "candidate",
+      "repetition": 3,
+      "provider_order": 16,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-change-candidate.json"
+    },
+    {
+      "slot": 33,
+      "stage": "remaining",
+      "provider": "claude",
+      "case_id": "invocation-verification",
+      "condition": "current",
+      "repetition": 3,
+      "provider_order": 17,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-verification-current.json"
+    },
+    {
+      "slot": 34,
+      "stage": "remaining",
+      "provider": "claude",
+      "case_id": "invocation-verification",
+      "condition": "candidate",
+      "repetition": 3,
+      "provider_order": 18,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-verification-candidate.json"
+    },
+    {
+      "slot": 35,
+      "stage": "remaining",
+      "provider": "codex",
+      "case_id": "invocation-verification",
+      "condition": "current",
+      "repetition": 3,
+      "provider_order": 17,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-verification-current.json"
+    },
+    {
+      "slot": 36,
+      "stage": "remaining",
+      "provider": "codex",
+      "case_id": "invocation-verification",
+      "condition": "candidate",
+      "repetition": 3,
+      "provider_order": 18,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-verification-candidate.json"
+    },
+    {
+      "slot": 37,
+      "stage": "remaining",
+      "provider": "codex",
+      "case_id": "invocation-review",
+      "condition": "candidate",
+      "repetition": 4,
+      "provider_order": 19,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-review-candidate.json"
+    },
+    {
+      "slot": 38,
+      "stage": "remaining",
+      "provider": "codex",
+      "case_id": "invocation-review",
+      "condition": "current",
+      "repetition": 4,
+      "provider_order": 20,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-review-current.json"
+    },
+    {
+      "slot": 39,
+      "stage": "remaining",
+      "provider": "claude",
+      "case_id": "invocation-review",
+      "condition": "candidate",
+      "repetition": 4,
+      "provider_order": 19,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-review-candidate.json"
+    },
+    {
+      "slot": 40,
+      "stage": "remaining",
+      "provider": "claude",
+      "case_id": "invocation-review",
+      "condition": "current",
+      "repetition": 4,
+      "provider_order": 20,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-review-current.json"
+    },
+    {
+      "slot": 41,
+      "stage": "remaining",
+      "provider": "codex",
+      "case_id": "invocation-change",
+      "condition": "candidate",
+      "repetition": 4,
+      "provider_order": 21,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-change-candidate.json"
+    },
+    {
+      "slot": 42,
+      "stage": "remaining",
+      "provider": "codex",
+      "case_id": "invocation-change",
+      "condition": "current",
+      "repetition": 4,
+      "provider_order": 22,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-change-current.json"
+    },
+    {
+      "slot": 43,
+      "stage": "remaining",
+      "provider": "claude",
+      "case_id": "invocation-change",
+      "condition": "candidate",
+      "repetition": 4,
+      "provider_order": 21,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-change-candidate.json"
+    },
+    {
+      "slot": 44,
+      "stage": "remaining",
+      "provider": "claude",
+      "case_id": "invocation-change",
+      "condition": "current",
+      "repetition": 4,
+      "provider_order": 22,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-change-current.json"
+    },
+    {
+      "slot": 45,
+      "stage": "remaining",
+      "provider": "codex",
+      "case_id": "invocation-verification",
+      "condition": "candidate",
+      "repetition": 4,
+      "provider_order": 23,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-verification-candidate.json"
+    },
+    {
+      "slot": 46,
+      "stage": "remaining",
+      "provider": "codex",
+      "case_id": "invocation-verification",
+      "condition": "current",
+      "repetition": 4,
+      "provider_order": 24,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-verification-current.json"
+    },
+    {
+      "slot": 47,
+      "stage": "remaining",
+      "provider": "claude",
+      "case_id": "invocation-verification",
+      "condition": "candidate",
+      "repetition": 4,
+      "provider_order": 23,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-verification-candidate.json"
+    },
+    {
+      "slot": 48,
+      "stage": "remaining",
+      "provider": "claude",
+      "case_id": "invocation-verification",
+      "condition": "current",
+      "repetition": 4,
+      "provider_order": 24,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-verification-current.json"
+    },
+    {
+      "slot": 49,
+      "stage": "remaining",
+      "provider": "claude",
+      "case_id": "invocation-review",
+      "condition": "current",
+      "repetition": 5,
+      "provider_order": 25,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-review-current.json"
+    },
+    {
+      "slot": 50,
+      "stage": "remaining",
+      "provider": "claude",
+      "case_id": "invocation-review",
+      "condition": "candidate",
+      "repetition": 5,
+      "provider_order": 26,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-review-candidate.json"
+    },
+    {
+      "slot": 51,
+      "stage": "remaining",
+      "provider": "codex",
+      "case_id": "invocation-review",
+      "condition": "current",
+      "repetition": 5,
+      "provider_order": 25,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-review-current.json"
+    },
+    {
+      "slot": 52,
+      "stage": "remaining",
+      "provider": "codex",
+      "case_id": "invocation-review",
+      "condition": "candidate",
+      "repetition": 5,
+      "provider_order": 26,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-review-candidate.json"
+    },
+    {
+      "slot": 53,
+      "stage": "remaining",
+      "provider": "claude",
+      "case_id": "invocation-change",
+      "condition": "current",
+      "repetition": 5,
+      "provider_order": 27,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-change-current.json"
+    },
+    {
+      "slot": 54,
+      "stage": "remaining",
+      "provider": "claude",
+      "case_id": "invocation-change",
+      "condition": "candidate",
+      "repetition": 5,
+      "provider_order": 28,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-change-candidate.json"
+    },
+    {
+      "slot": 55,
+      "stage": "remaining",
+      "provider": "codex",
+      "case_id": "invocation-change",
+      "condition": "current",
+      "repetition": 5,
+      "provider_order": 27,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-change-current.json"
+    },
+    {
+      "slot": 56,
+      "stage": "remaining",
+      "provider": "codex",
+      "case_id": "invocation-change",
+      "condition": "candidate",
+      "repetition": 5,
+      "provider_order": 28,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-change-candidate.json"
+    },
+    {
+      "slot": 57,
+      "stage": "remaining",
+      "provider": "claude",
+      "case_id": "invocation-verification",
+      "condition": "current",
+      "repetition": 5,
+      "provider_order": 29,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-verification-current.json"
+    },
+    {
+      "slot": 58,
+      "stage": "remaining",
+      "provider": "claude",
+      "case_id": "invocation-verification",
+      "condition": "candidate",
+      "repetition": 5,
+      "provider_order": 30,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-verification-candidate.json"
+    },
+    {
+      "slot": 59,
+      "stage": "remaining",
+      "provider": "codex",
+      "case_id": "invocation-verification",
+      "condition": "current",
+      "repetition": 5,
+      "provider_order": 29,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-verification-current.json"
+    },
+    {
+      "slot": 60,
+      "stage": "remaining",
+      "provider": "codex",
+      "case_id": "invocation-verification",
+      "condition": "candidate",
+      "repetition": 5,
+      "provider_order": 30,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-verification-candidate.json"
+    },
+    {
+      "slot": 61,
+      "stage": "remaining",
+      "provider": "claude",
+      "case_id": "invocation-unrelated",
+      "condition": "current",
+      "repetition": 1,
+      "provider_order": 31,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-unrelated-current.json"
+    },
+    {
+      "slot": 62,
+      "stage": "remaining",
+      "provider": "claude",
+      "case_id": "invocation-unrelated",
+      "condition": "candidate",
+      "repetition": 1,
+      "provider_order": 32,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-unrelated-candidate.json"
+    },
+    {
+      "slot": 63,
+      "stage": "remaining",
+      "provider": "codex",
+      "case_id": "invocation-unrelated",
+      "condition": "current",
+      "repetition": 1,
+      "provider_order": 31,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-unrelated-current.json"
+    },
+    {
+      "slot": 64,
+      "stage": "remaining",
+      "provider": "codex",
+      "case_id": "invocation-unrelated",
+      "condition": "candidate",
+      "repetition": 1,
+      "provider_order": 32,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-unrelated-candidate.json"
+    },
+    {
+      "slot": 65,
+      "stage": "remaining",
+      "provider": "codex",
+      "case_id": "invocation-unrelated",
+      "condition": "candidate",
+      "repetition": 2,
+      "provider_order": 33,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-unrelated-candidate.json"
+    },
+    {
+      "slot": 66,
+      "stage": "remaining",
+      "provider": "codex",
+      "case_id": "invocation-unrelated",
+      "condition": "current",
+      "repetition": 2,
+      "provider_order": 34,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-unrelated-current.json"
+    },
+    {
+      "slot": 67,
+      "stage": "remaining",
+      "provider": "claude",
+      "case_id": "invocation-unrelated",
+      "condition": "candidate",
+      "repetition": 2,
+      "provider_order": 33,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-unrelated-candidate.json"
+    },
+    {
+      "slot": 68,
+      "stage": "remaining",
+      "provider": "claude",
+      "case_id": "invocation-unrelated",
+      "condition": "current",
+      "repetition": 2,
+      "provider_order": 34,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-unrelated-current.json"
+    },
+    {
+      "slot": 69,
+      "stage": "remaining",
+      "provider": "claude",
+      "case_id": "invocation-unrelated",
+      "condition": "current",
+      "repetition": 3,
+      "provider_order": 35,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-unrelated-current.json"
+    },
+    {
+      "slot": 70,
+      "stage": "remaining",
+      "provider": "claude",
+      "case_id": "invocation-unrelated",
+      "condition": "candidate",
+      "repetition": 3,
+      "provider_order": 36,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-unrelated-candidate.json"
+    },
+    {
+      "slot": 71,
+      "stage": "remaining",
+      "provider": "codex",
+      "case_id": "invocation-unrelated",
+      "condition": "current",
+      "repetition": 3,
+      "provider_order": 35,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-unrelated-current.json"
+    },
+    {
+      "slot": 72,
+      "stage": "remaining",
+      "provider": "codex",
+      "case_id": "invocation-unrelated",
+      "condition": "candidate",
+      "repetition": 3,
+      "provider_order": 36,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-unrelated-candidate.json"
+    },
+    {
+      "slot": 73,
+      "stage": "remaining",
+      "provider": "codex",
+      "case_id": "invocation-unrelated",
+      "condition": "candidate",
+      "repetition": 4,
+      "provider_order": 37,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-unrelated-candidate.json"
+    },
+    {
+      "slot": 74,
+      "stage": "remaining",
+      "provider": "codex",
+      "case_id": "invocation-unrelated",
+      "condition": "current",
+      "repetition": 4,
+      "provider_order": 38,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-unrelated-current.json"
+    },
+    {
+      "slot": 75,
+      "stage": "remaining",
+      "provider": "claude",
+      "case_id": "invocation-unrelated",
+      "condition": "candidate",
+      "repetition": 4,
+      "provider_order": 37,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-unrelated-candidate.json"
+    },
+    {
+      "slot": 76,
+      "stage": "remaining",
+      "provider": "claude",
+      "case_id": "invocation-unrelated",
+      "condition": "current",
+      "repetition": 4,
+      "provider_order": 38,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-unrelated-current.json"
+    },
+    {
+      "slot": 77,
+      "stage": "remaining",
+      "provider": "claude",
+      "case_id": "invocation-unrelated",
+      "condition": "current",
+      "repetition": 5,
+      "provider_order": 39,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-unrelated-current.json"
+    },
+    {
+      "slot": 78,
+      "stage": "remaining",
+      "provider": "claude",
+      "case_id": "invocation-unrelated",
+      "condition": "candidate",
+      "repetition": 5,
+      "provider_order": 40,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-unrelated-candidate.json"
+    },
+    {
+      "slot": 79,
+      "stage": "remaining",
+      "provider": "codex",
+      "case_id": "invocation-unrelated",
+      "condition": "current",
+      "repetition": 5,
+      "provider_order": 39,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-unrelated-current.json"
+    },
+    {
+      "slot": 80,
+      "stage": "remaining",
+      "provider": "codex",
+      "case_id": "invocation-unrelated",
+      "condition": "candidate",
+      "repetition": 5,
+      "provider_order": 40,
+      "configuration": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-unrelated-candidate.json"
+    }
+  ]
+}

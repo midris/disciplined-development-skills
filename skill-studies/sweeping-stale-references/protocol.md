@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `sweeping-stale-references`
 Status: count-free-regression-01 complete; compact adoption and owner-approved count removal validated within the declared regression scope.
-Current action: retain count-free compact. The [full assessment](runs/count-free-regression-01/count-free-regression-01-assessment.md) closes 66 subjects and ten audited reviews after the passing focused gate. All 48 repairs pass; reporting limits and three Claude native-loading misses remain separate. Claude discovery is a possible follow-up, with no additional calls or wording edits selected.
+Current action: test the owner-selected description under [description-discovery-01](#validation-description-discovery-01); retain count-free compact in production. The [full assessment](runs/count-free-regression-01/count-free-regression-01-assessment.md) closes 66 subjects and ten audited reviews after the passing focused gate. All 48 repairs pass; reporting limits and three Claude native-loading misses remain separate. The new description comparison has its own staged authority below.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](runs/core-baseline-01/core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -288,6 +288,118 @@ SSR collection used config schema 0.2 and result schema 0.4; retained bundles ke
 Control contribution claims require evidence that omitted guidance was not loaded. Record limits on observed isolation rather than claiming exhaustive host-wide exclusion.
 
 Pre-baseline development is closed at two pairs. Do not reopen it for a new facet; a named readiness defect requires a separately authorized diagnostic exception.
+
+### Validation: description-discovery-01
+
+Status: owner-approved staged description comparison; source freeze and readiness precede collection.
+Authority: the owner selected the concise description and requested a smaller Codex/Claude test, early pullback on issues, then full testing only after a clean first stage.
+The [design](../../plans/specs/2026-10-31-ssr-description-discovery.md) fixes 24 focused + 56 conditional subjects and four + four reviews, gates, exact contrast and limitations.
+Raw storage: `/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01`.
+Condition `current` is the unchanged adopted description; `candidate` is the selected draft. Both use the exact count-free compact body. No shipped change or additional wording variant is selected.
+
+### Batch: discovery-claude-01
+
+Status: approved conditional scope; readiness precedes dispatch.
+Scope: 40 subjects; provider orders 1–12 focused, remainder conditional.
+Inclusion: Include all valid-setup executions regardless of outcome. No automatic retry or replacement. Preserve unattempted slots after early stop.
+Selected manifests: [invocation-review](runs/description-discovery-01/preparation/manifests/claude-invocation-review-manifest.json), [invocation-change](runs/description-discovery-01/preparation/manifests/claude-invocation-change-manifest.json), [invocation-verification](runs/description-discovery-01/preparation/manifests/claude-invocation-verification-manifest.json), [invocation-unrelated](runs/description-discovery-01/preparation/manifests/claude-invocation-unrelated-manifest.json).
+Attempt index: [discovery-claude-01-run-index.json](runs/description-discovery-01/discovery-claude-01-run-index.json).
+Assessment: pending.
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | invocation-review | current | 1 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-review-current.json` |
+| 2 | invocation-review | candidate | 1 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-review-candidate.json` |
+| 3 | invocation-change | current | 1 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-change-current.json` |
+| 4 | invocation-change | candidate | 1 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-change-candidate.json` |
+| 5 | invocation-verification | current | 1 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-verification-current.json` |
+| 6 | invocation-verification | candidate | 1 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-verification-candidate.json` |
+| 7 | invocation-review | candidate | 2 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-review-candidate.json` |
+| 8 | invocation-review | current | 2 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-review-current.json` |
+| 9 | invocation-change | candidate | 2 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-change-candidate.json` |
+| 10 | invocation-change | current | 2 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-change-current.json` |
+| 11 | invocation-verification | candidate | 2 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-verification-candidate.json` |
+| 12 | invocation-verification | current | 2 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-verification-current.json` |
+| 13 | invocation-review | current | 3 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-review-current.json` |
+| 14 | invocation-review | candidate | 3 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-review-candidate.json` |
+| 15 | invocation-change | current | 3 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-change-current.json` |
+| 16 | invocation-change | candidate | 3 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-change-candidate.json` |
+| 17 | invocation-verification | current | 3 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-verification-current.json` |
+| 18 | invocation-verification | candidate | 3 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-verification-candidate.json` |
+| 19 | invocation-review | candidate | 4 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-review-candidate.json` |
+| 20 | invocation-review | current | 4 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-review-current.json` |
+| 21 | invocation-change | candidate | 4 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-change-candidate.json` |
+| 22 | invocation-change | current | 4 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-change-current.json` |
+| 23 | invocation-verification | candidate | 4 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-verification-candidate.json` |
+| 24 | invocation-verification | current | 4 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-verification-current.json` |
+| 25 | invocation-review | current | 5 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-review-current.json` |
+| 26 | invocation-review | candidate | 5 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-review-candidate.json` |
+| 27 | invocation-change | current | 5 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-change-current.json` |
+| 28 | invocation-change | candidate | 5 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-change-candidate.json` |
+| 29 | invocation-verification | current | 5 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-verification-current.json` |
+| 30 | invocation-verification | candidate | 5 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-verification-candidate.json` |
+| 31 | invocation-unrelated | current | 1 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-unrelated-current.json` |
+| 32 | invocation-unrelated | candidate | 1 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-unrelated-candidate.json` |
+| 33 | invocation-unrelated | candidate | 2 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-unrelated-candidate.json` |
+| 34 | invocation-unrelated | current | 2 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-unrelated-current.json` |
+| 35 | invocation-unrelated | current | 3 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-unrelated-current.json` |
+| 36 | invocation-unrelated | candidate | 3 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-unrelated-candidate.json` |
+| 37 | invocation-unrelated | candidate | 4 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-unrelated-candidate.json` |
+| 38 | invocation-unrelated | current | 4 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-unrelated-current.json` |
+| 39 | invocation-unrelated | current | 5 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-unrelated-current.json` |
+| 40 | invocation-unrelated | candidate | 5 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-unrelated-candidate.json` |
+
+### Batch: discovery-codex-01
+
+Status: approved conditional scope; readiness precedes dispatch.
+Scope: 40 subjects; provider orders 1–12 focused, remainder conditional.
+Inclusion: Include all valid-setup executions regardless of outcome. No automatic retry or replacement. Preserve unattempted slots after early stop.
+Selected manifests: [invocation-review](runs/description-discovery-01/preparation/manifests/codex-invocation-review-manifest.json), [invocation-change](runs/description-discovery-01/preparation/manifests/codex-invocation-change-manifest.json), [invocation-verification](runs/description-discovery-01/preparation/manifests/codex-invocation-verification-manifest.json), [invocation-unrelated](runs/description-discovery-01/preparation/manifests/codex-invocation-unrelated-manifest.json).
+Attempt index: [discovery-codex-01-run-index.json](runs/description-discovery-01/discovery-codex-01-run-index.json).
+Assessment: pending.
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | invocation-review | current | 1 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-review-current.json` |
+| 2 | invocation-review | candidate | 1 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-review-candidate.json` |
+| 3 | invocation-change | current | 1 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-change-current.json` |
+| 4 | invocation-change | candidate | 1 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-change-candidate.json` |
+| 5 | invocation-verification | current | 1 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-verification-current.json` |
+| 6 | invocation-verification | candidate | 1 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-verification-candidate.json` |
+| 7 | invocation-review | candidate | 2 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-review-candidate.json` |
+| 8 | invocation-review | current | 2 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-review-current.json` |
+| 9 | invocation-change | candidate | 2 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-change-candidate.json` |
+| 10 | invocation-change | current | 2 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-change-current.json` |
+| 11 | invocation-verification | candidate | 2 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-verification-candidate.json` |
+| 12 | invocation-verification | current | 2 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-verification-current.json` |
+| 13 | invocation-review | current | 3 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-review-current.json` |
+| 14 | invocation-review | candidate | 3 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-review-candidate.json` |
+| 15 | invocation-change | current | 3 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-change-current.json` |
+| 16 | invocation-change | candidate | 3 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-change-candidate.json` |
+| 17 | invocation-verification | current | 3 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-verification-current.json` |
+| 18 | invocation-verification | candidate | 3 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-verification-candidate.json` |
+| 19 | invocation-review | candidate | 4 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-review-candidate.json` |
+| 20 | invocation-review | current | 4 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-review-current.json` |
+| 21 | invocation-change | candidate | 4 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-change-candidate.json` |
+| 22 | invocation-change | current | 4 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-change-current.json` |
+| 23 | invocation-verification | candidate | 4 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-verification-candidate.json` |
+| 24 | invocation-verification | current | 4 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-verification-current.json` |
+| 25 | invocation-review | current | 5 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-review-current.json` |
+| 26 | invocation-review | candidate | 5 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-review-candidate.json` |
+| 27 | invocation-change | current | 5 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-change-current.json` |
+| 28 | invocation-change | candidate | 5 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-change-candidate.json` |
+| 29 | invocation-verification | current | 5 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-verification-current.json` |
+| 30 | invocation-verification | candidate | 5 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-verification-candidate.json` |
+| 31 | invocation-unrelated | current | 1 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-unrelated-current.json` |
+| 32 | invocation-unrelated | candidate | 1 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-unrelated-candidate.json` |
+| 33 | invocation-unrelated | candidate | 2 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-unrelated-candidate.json` |
+| 34 | invocation-unrelated | current | 2 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-unrelated-current.json` |
+| 35 | invocation-unrelated | current | 3 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-unrelated-current.json` |
+| 36 | invocation-unrelated | candidate | 3 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-unrelated-candidate.json` |
+| 37 | invocation-unrelated | candidate | 4 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-unrelated-candidate.json` |
+| 38 | invocation-unrelated | current | 4 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-unrelated-current.json` |
+| 39 | invocation-unrelated | current | 5 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-unrelated-current.json` |
+| 40 | invocation-unrelated | candidate | 5 | `skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-unrelated-candidate.json` |
 
 ### Validation: count-free-regression-01
 
@@ -1183,8 +1295,8 @@ The current validation adds its [subject index](runs/compact-regression-01/compa
 The fresh original baseline adds [Codex subjects](runs/fresh-baseline-01/fresh-baseline-codex-01-run-index.json), [Opus subjects](runs/fresh-baseline-01/fresh-baseline-opus-01-run-index.json) and [eight review slots](runs/fresh-baseline-01/evaluation/evaluator-run-index.json); the five reused semantic runs are not charged again.
 The completed candidate screen includes its [ten-review evaluator ledger](runs/candidate-screen-01/evaluation/evaluator-run-index.json).
 The count-free regression adds the two subject indexes linked in its batch scopes above.
-For this subset, the historical spent subtotal plus the newly authorized scope gives ceilings of 448 subject, 30 evaluator, 0 authoring and 1 retry invocations; this is an accounting projection, not a new allocation or pool transfer.
-Dispatched calls are **448 subject, 30 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **0 / 0 / 0 / 0** for this subset.
+For this subset, the historical spent subtotal plus the newly authorized scope gives ceilings of 528 subject, 38 evaluator, 0 authoring and 1 retry invocations; this is an accounting projection, not a new allocation or pool transfer.
+Dispatched calls are **448 subject, 30 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **80 / 8 / 0 / 0** for this subset.
 The CW protocol remains authoritative for all current combined spending and outer ceilings; no historical unspent pool is revived.
 Sequential readiness used identical externally frozen scores; the final index pins the canonical repository results at their committed revision.
 
