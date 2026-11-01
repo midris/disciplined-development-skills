@@ -1,0 +1,10 @@
+{
+  "stage": "focused",
+  "stopped_after_slot": 13,
+  "run_id": "20261101T000923053Z-ssr-discovery-codex-invocation-review-candidate-26466ac9-4518-4910-9ce5-7872bd85b58d-e1lq2cf6",
+  "reason": "Candidate Codex reviewer repetition 2 leaves current troubleshooting third-failure exhaustion claim stale and incorrectly classifies it already current; F1 and F3 not met. D1 met.",
+  "full_stage_allowed": false,
+  "unattempted_subjects": 67,
+  "reviews_dispatched": 0,
+  "remaining_allocation": "Unrun scope cancelled pending revised proposal; no automatic replacement or rewrite."
+}

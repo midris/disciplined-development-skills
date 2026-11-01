@@ -1,0 +1,180 @@
+{
+  "subjects": 13,
+  "reviews": 0,
+  "retries": 0,
+  "unattempted_subjects": 67,
+  "duration_seconds": 255.672,
+  "counts": {
+    "codex": {
+      "current": {
+        "positive_loaded": 2,
+        "positive_total": 2,
+        "nonuse_met": 1,
+        "nonuse_total": 1,
+        "repair_met": 2,
+        "repair_total": 2
+      },
+      "candidate": {
+        "positive_loaded": 3,
+        "positive_total": 3,
+        "nonuse_met": 1,
+        "nonuse_total": 1,
+        "repair_met": 2,
+        "repair_total": 3
+      }
+    },
+    "claude": {
+      "current": {
+        "positive_loaded": 1,
+        "positive_total": 2,
+        "nonuse_met": 1,
+        "nonuse_total": 1,
+        "repair_met": 2,
+        "repair_total": 2
+      },
+      "candidate": {
+        "positive_loaded": 2,
+        "positive_total": 2,
+        "nonuse_met": 1,
+        "nonuse_total": 1,
+        "repair_met": 2,
+        "repair_total": 2
+      }
+    }
+  },
+  "rows": [
+    {
+      "run_id": "20261101T000304885Z-ssr-discovery-codex-invocation-review-current-5257fe33-3785-484a-994d-f3b7bab13bdc-qvsyyup5",
+      "provider": "codex",
+      "condition": "current",
+      "case": "invocation-review",
+      "repetition": 1,
+      "functional_result": "met",
+      "D1": "met",
+      "duration_seconds": 31.175
+    },
+    {
+      "run_id": "20261101T000400914Z-ssr-discovery-codex-invocation-review-candidate-35d6c079-4974-4836-a566-7fbea4588db7-ujiphqcb",
+      "provider": "codex",
+      "condition": "candidate",
+      "case": "invocation-review",
+      "repetition": 1,
+      "functional_result": "met",
+      "D1": "met",
+      "duration_seconds": 28.017
+    },
+    {
+      "run_id": "20261101T000614264Z-ssr-discovery-codex-invocation-change-current-596e2746-7369-4583-9f3d-2680a59c7f60-4b0fis10",
+      "provider": "codex",
+      "condition": "current",
+      "case": "invocation-change",
+      "repetition": 1,
+      "functional_result": "met",
+      "D1": "met",
+      "duration_seconds": 29.452
+    },
+    {
+      "run_id": "20261101T000701827Z-ssr-discovery-codex-invocation-change-candidate-c1b333d0-1128-4d9a-a498-60d9bba1e4e3-tjgo5n9i",
+      "provider": "codex",
+      "condition": "candidate",
+      "case": "invocation-change",
+      "repetition": 1,
+      "functional_result": "met",
+      "D1": "met",
+      "duration_seconds": 33.207
+    },
+    {
+      "run_id": "20261101T000840261Z-ssr-discovery-codex-invocation-verification-current-a143383b-5976-4eea-96e6-6bee57eec744-iytvr13j",
+      "provider": "codex",
+      "condition": "current",
+      "case": "invocation-verification",
+      "repetition": 1,
+      "functional_result": "not measured",
+      "D1": "met",
+      "duration_seconds": 8.158
+    },
+    {
+      "run_id": "20261101T000901693Z-ssr-discovery-codex-invocation-verification-candidate-99d1af6e-118e-4109-84a3-f876b3d998c1-3c3okxg1",
+      "provider": "codex",
+      "condition": "candidate",
+      "case": "invocation-verification",
+      "repetition": 1,
+      "functional_result": "not measured",
+      "D1": "met",
+      "duration_seconds": 8.678
+    },
+    {
+      "run_id": "20261101T000923053Z-ssr-discovery-codex-invocation-review-candidate-26466ac9-4518-4910-9ce5-7872bd85b58d-e1lq2cf6",
+      "provider": "codex",
+      "condition": "candidate",
+      "case": "invocation-review",
+      "repetition": 2,
+      "functional_result": "not met",
+      "D1": "met",
+      "duration_seconds": 29.254
+    },
+    {
+      "run_id": "20261101T000125149Z-ssr-discovery-claude-invocation-review-current-e8278bc6-d716-410c-8bf1-650ce083b6cf-nzxvs45x",
+      "provider": "claude",
+      "condition": "current",
+      "case": "invocation-review",
+      "repetition": 1,
+      "functional_result": "met",
+      "D1": "not met",
+      "duration_seconds": 15.289
+    },
+    {
+      "run_id": "20261101T000219730Z-ssr-discovery-claude-invocation-review-candidate-3bc0adf1-c294-4083-979c-4165d1158246-q8bo7p9i",
+      "provider": "claude",
+      "condition": "candidate",
+      "case": "invocation-review",
+      "repetition": 1,
+      "functional_result": "met",
+      "D1": "met",
+      "duration_seconds": 18.07
+    },
+    {
+      "run_id": "20261101T000446040Z-ssr-discovery-claude-invocation-change-current-c939a8ca-db3f-46fc-9133-9772a5b9f73d-khrcczjq",
+      "provider": "claude",
+      "condition": "current",
+      "case": "invocation-change",
+      "repetition": 1,
+      "functional_result": "met",
+      "D1": "met",
+      "duration_seconds": 20.382
+    },
+    {
+      "run_id": "20261101T000527960Z-ssr-discovery-claude-invocation-change-candidate-31437719-3aa9-4fe9-b366-a20010a6fcdf-s45p82hg",
+      "provider": "claude",
+      "condition": "candidate",
+      "case": "invocation-change",
+      "repetition": 1,
+      "functional_result": "met",
+      "D1": "met",
+      "duration_seconds": 21.575
+    },
+    {
+      "run_id": "20261101T000756280Z-ssr-discovery-claude-invocation-verification-current-6a507c90-71a8-4990-b635-d7572170656d-pqc3pee2",
+      "provider": "claude",
+      "condition": "current",
+      "case": "invocation-verification",
+      "repetition": 1,
+      "functional_result": "not measured",
+      "D1": "met",
+      "duration_seconds": 5.754
+    },
+    {
+      "run_id": "20261101T000820463Z-ssr-discovery-claude-invocation-verification-candidate-68baa39d-3f27-4502-b83c-7128bab973fb-9bifslg3",
+      "provider": "claude",
+      "condition": "candidate",
+      "case": "invocation-verification",
+      "repetition": 1,
+      "functional_result": "not measured",
+      "D1": "met",
+      "duration_seconds": 6.661
+    }
+  ],
+  "evidence_checks": "All 13 complete inventories and actual runtime/models verified. All nine repair baselines exactly match configured tracked blobs; all configured final files compared. Disposable replay checks pass, including failing-doc run: tests do not score prose.",
+  "hook_suite": "263 passed, 3 environment skips, 22.11 seconds",
+  "shipped_skill_unchanged": "a6881afef4cd83144d99c2913af02c8b4178998659128a88173f84bd8f084cda"
+}

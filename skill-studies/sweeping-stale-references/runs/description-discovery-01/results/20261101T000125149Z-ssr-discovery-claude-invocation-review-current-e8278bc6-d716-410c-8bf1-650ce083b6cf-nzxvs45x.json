@@ -1,0 +1,129 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "discovery-claude-01-invocation-review-current-1",
+  "assessed_at": "2026-11-01T00:02:18.979751+00:00",
+  "run_id": "20261101T000125149Z-ssr-discovery-claude-invocation-review-current-e8278bc6-d716-410c-8bf1-650ce083b6cf-nzxvs45x",
+  "condition": "current",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/manifests/claude-invocation-review-manifest.json",
+    "sha256": "feb06e92f731e21691809baee2d3a83cbdde3d2bc7f9a392a9781d3f42a96558",
+    "version": "1",
+    "git_revision": "52b8920c838987bcc22f550a50ac8c6c97f1d161"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed description comparison, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000125149Z-ssr-discovery-claude-invocation-review-current-e8278bc6-d716-410c-8bf1-650ce083b6cf-nzxvs45x.inventory.json",
+        "sha256": "e85eedde790710b32d513adcf5b5494b2d473960390be8abb6909601383ae0c1",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000125149Z-ssr-discovery-claude-invocation-review-current-e8278bc6-d716-410c-8bf1-650ce083b6cf-nzxvs45x/stdout.txt",
+        "sha256": "eeeea191102e50dac62179fca548561aebb41ba532350e34ace7284e10b29eff",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000125149Z-ssr-discovery-claude-invocation-review-current-e8278bc6-d716-410c-8bf1-650ce083b6cf-nzxvs45x/runner.log",
+        "sha256": "7d70f33f85d8d0308db4ecabe4fb940fc07c8790984cacc625711ce3cc8a92a2",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000125149Z-ssr-discovery-claude-invocation-review-current-e8278bc6-d716-410c-8bf1-650ce083b6cf-nzxvs45x/result.json",
+        "sha256": "076cceebb2d73120174e3b7ae8f97b770d5b4a3bc439c4e61151e464a352734d",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    },
+    {
+      "id": "replay",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/replays/slot-01.json",
+        "sha256": "cbc30743336a1d14f2188353c79ba68aad7761845c906166fe21f512303a4072",
+        "version": null
+      },
+      "selector": "Deterministic observations from disposable final-project copy, not semantic verdicts."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Qualified unchanged runtime; native init lists SSR and seven tools; complete trace/project retained; configured baseline blobs exact.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "README now states four total attempts/three retries; operations three additional tries; troubleshooting fourth failure; immediate success and useful guidance preserved.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only three required documentation sentences changed; worker/helper code, history, unrelated docs, TASK and ignore file preserved. Disposable seven-test replay passes.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Complete three-document repair committed as e43e658 after exact baseline; working tree clean.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "Native SSR available, but no Skill invocation or targeted body read occurs before or after editing. Claude says 'A reviewer flagged one stale reference; sweep for others' and performs the repair directly.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Current-description baseline missed loading despite recognizing the sweep trigger. Complete useful repair; no commit reference inventory, no post-edit search, final claims bounded. Current-arm positive miss does not stop the comparison.",
+  "observations": [],
+  "uncertainty": [
+    "One exposed observation; no cause or reliability claim."
+  ]
+}

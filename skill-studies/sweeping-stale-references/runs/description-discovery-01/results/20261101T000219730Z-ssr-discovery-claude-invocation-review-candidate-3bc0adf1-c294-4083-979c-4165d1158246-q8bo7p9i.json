@@ -1,0 +1,129 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "discovery-claude-01-invocation-review-candidate-1",
+  "assessed_at": "2026-11-01T00:03:04.160558+00:00",
+  "run_id": "20261101T000219730Z-ssr-discovery-claude-invocation-review-candidate-3bc0adf1-c294-4083-979c-4165d1158246-q8bo7p9i",
+  "condition": "candidate",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/manifests/claude-invocation-review-manifest.json",
+    "sha256": "feb06e92f731e21691809baee2d3a83cbdde3d2bc7f9a392a9781d3f42a96558",
+    "version": "1",
+    "git_revision": "52b8920c838987bcc22f550a50ac8c6c97f1d161"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed description comparison, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000219730Z-ssr-discovery-claude-invocation-review-candidate-3bc0adf1-c294-4083-979c-4165d1158246-q8bo7p9i.inventory.json",
+        "sha256": "cf0fb8716dfdc6ee74cf4b3ae11e81980578248f7f46122c68acb117d953c122",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000219730Z-ssr-discovery-claude-invocation-review-candidate-3bc0adf1-c294-4083-979c-4165d1158246-q8bo7p9i/stdout.txt",
+        "sha256": "7365d586967511dba51353e38fec92f85a66be91ebe5ed7eaf8cc79dd45b5f9c",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000219730Z-ssr-discovery-claude-invocation-review-candidate-3bc0adf1-c294-4083-979c-4165d1158246-q8bo7p9i/runner.log",
+        "sha256": "4d2573fd49adbd56dcb4a4b4fe34b671b71efc2261297c5ff3f8b9895d794977",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000219730Z-ssr-discovery-claude-invocation-review-candidate-3bc0adf1-c294-4083-979c-4165d1158246-q8bo7p9i/result.json",
+        "sha256": "341fe32af6bec4cca7d815e1cbab76a2710fe30993fa13d6e47b84a35000f09f",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    },
+    {
+      "id": "replay",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/replays/slot-02.json",
+        "sha256": "d963f46899070cc907c5ce9730da47ecacaff090cae8242acbfdd49ffa555ae3",
+        "version": null
+      },
+      "selector": "Deterministic observations from disposable final-project copy, not semantic verdicts."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Qualified unchanged runtime/native catalog and seven tools; complete body delivered by Skill before searches or edits; baseline exact, full inventory exact.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All three current docs correctly state four total attempts, three further tries after initial failure and fourth-failure exhaustion; immediate success and useful guidance remain.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only three required sentences changed; all other configured files including TASK byte-identical. Worker/helper/history and operational meaning preserved; seven-test replay passes.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Complete repair committed as cd830d2 after exact baseline; clean working tree.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Skill invocation follows task inspection and delivers complete body before first repair edit.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Candidate correctly selected on first reviewer case. Complete repair, but commit/final falsely claim a post-edit three/two/third search: trace has none, and three legitimately remains in current retry prose. Some optional inventory entries group multiple paths. Reporting defects do not obscure repair; record separately under fixed nonblocking rule.",
+  "observations": [],
+  "uncertainty": [
+    "One exposed observation; neither robust improvement nor reliability established."
+  ]
+}

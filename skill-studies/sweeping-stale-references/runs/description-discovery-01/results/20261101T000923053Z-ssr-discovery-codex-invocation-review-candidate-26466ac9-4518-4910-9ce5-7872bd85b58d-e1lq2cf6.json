@@ -1,0 +1,138 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "discovery-codex-01-invocation-review-candidate-2",
+  "assessed_at": "2026-11-01T00:10:32.935674+00:00",
+  "run_id": "20261101T000923053Z-ssr-discovery-codex-invocation-review-candidate-26466ac9-4518-4910-9ce5-7872bd85b58d-e1lq2cf6",
+  "condition": "candidate",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/manifests/codex-invocation-review-manifest.json",
+    "sha256": "e3f3f248cd26fdba57038591b98d9e21dec64296a867e4983dae63209fe31ec6",
+    "version": "1",
+    "git_revision": "52b8920c838987bcc22f550a50ac8c6c97f1d161"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed description comparison, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000923053Z-ssr-discovery-codex-invocation-review-candidate-26466ac9-4518-4910-9ce5-7872bd85b58d-e1lq2cf6.inventory.json",
+        "sha256": "7222cf5b763db19836105099f12d386af1f494d2c68f01a27043d8e6c3fb0cd5",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000923053Z-ssr-discovery-codex-invocation-review-candidate-26466ac9-4518-4910-9ce5-7872bd85b58d-e1lq2cf6/stdout.txt",
+        "sha256": "6a50b515a09727cdff1ce981c1dc5e9b77bfed5d651b4805ad79105436b765e1",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000923053Z-ssr-discovery-codex-invocation-review-candidate-26466ac9-4518-4910-9ce5-7872bd85b58d-e1lq2cf6/runner.log",
+        "sha256": "8e65f8260cc9f9315254c139bcaf4c1196e377794e55688e81528457a0c6073f",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000923053Z-ssr-discovery-codex-invocation-review-candidate-26466ac9-4518-4910-9ce5-7872bd85b58d-e1lq2cf6/result.json",
+        "sha256": "0706ca5ae54a841931f59e1427eb0b04e50bb04d049de704f59df183c744d375",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    },
+    {
+      "id": "provider-session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000923053Z-ssr-discovery-codex-invocation-review-candidate-26466ac9-4518-4910-9ce5-7872bd85b58d-e1lq2cf6/provider-session.jsonl",
+        "sha256": "aba74282e108eb798118b0ef5dee3c4fb2a6b331e3359de82beefaff874c4102",
+        "version": null
+      },
+      "selector": "Complete provider session including nested tools omitted by stdout projection."
+    },
+    {
+      "id": "replay",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/replays/slot-13.json",
+        "sha256": "ebc15e5ecc00a5d3ad02e5c9ccce3e155dc422cd9678356360dadf45fc239194",
+        "version": null
+      },
+      "selector": "Deterministic observations from disposable final-project copy, not semantic verdicts."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Qualified native candidate body completely delivered before repair; source baseline exact, all capture present including nested tool outputs. Sandbox-denied parent search and Perl checksum recovered without changing required inputs.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "not met",
+      "reason": "README and operations corrected, but docs/troubleshooting.md:3 still says the third consecutive failed send exhausts automatic attempts. Settled policy requires fourth failure. No replacement explanation resolves the contradiction.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only README and operations changed; worker/helper behavior, history and unrelated meanings preserved. Seven behavior tests pass; source fixtures and protected TASK/ignore exact.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "not met",
+      "reason": "Commit a89315b contains only README/operations repair; the required troubleshooting correction is absent from committed and working trees. This is the same incomplete-repair cause as F1, not a second independent failed execution.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Complete candidate body read before first repair edit; missed application is not a loading failure.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "not met",
+  "procedural_summary": "Early-stop trigger: candidate Codex reviewer repetition 2 loaded SSR but did not inspect the full troubleshooting claim. Initial grep matched heading/adjacent lines but not the line containing 'third consecutive failed send'; later search also omitted that form. Commit incorrectly labels docs/troubleshooting.md:3-8 already current based on success/follow-up wording. Seven code tests pass despite stale prose. Stop all remaining subjects/reviews; full-stage gate not opened.",
+  "observations": [],
+  "uncertainty": [
+    "One observed incomplete repair establishes failure under the fixed gate, not that the description caused it or is worse than current wording."
+  ]
+}
