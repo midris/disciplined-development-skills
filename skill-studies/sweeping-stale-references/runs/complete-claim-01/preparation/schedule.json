@@ -1,0 +1,84 @@
+{
+  "slots": [
+    {
+      "slot": 1,
+      "stage": "focused",
+      "provider": "codex",
+      "case_id": "invocation-review",
+      "condition": "current",
+      "repetition": 1,
+      "provider_order": 1,
+      "configuration": "skill-studies/sweeping-stale-references/runs/complete-claim-01/preparation/configs/codex-invocation-review-current.json"
+    },
+    {
+      "slot": 2,
+      "stage": "focused",
+      "provider": "codex",
+      "case_id": "invocation-review",
+      "condition": "candidate",
+      "repetition": 1,
+      "provider_order": 2,
+      "configuration": "skill-studies/sweeping-stale-references/runs/complete-claim-01/preparation/configs/codex-invocation-review-candidate.json"
+    },
+    {
+      "slot": 3,
+      "stage": "focused",
+      "provider": "claude",
+      "case_id": "invocation-review",
+      "condition": "current",
+      "repetition": 1,
+      "provider_order": 1,
+      "configuration": "skill-studies/sweeping-stale-references/runs/complete-claim-01/preparation/configs/claude-invocation-review-current.json"
+    },
+    {
+      "slot": 4,
+      "stage": "focused",
+      "provider": "claude",
+      "case_id": "invocation-review",
+      "condition": "candidate",
+      "repetition": 1,
+      "provider_order": 2,
+      "configuration": "skill-studies/sweeping-stale-references/runs/complete-claim-01/preparation/configs/claude-invocation-review-candidate.json"
+    },
+    {
+      "slot": 5,
+      "stage": "focused",
+      "provider": "claude",
+      "case_id": "invocation-review",
+      "condition": "candidate",
+      "repetition": 2,
+      "provider_order": 3,
+      "configuration": "skill-studies/sweeping-stale-references/runs/complete-claim-01/preparation/configs/claude-invocation-review-candidate.json"
+    },
+    {
+      "slot": 6,
+      "stage": "focused",
+      "provider": "claude",
+      "case_id": "invocation-review",
+      "condition": "current",
+      "repetition": 2,
+      "provider_order": 4,
+      "configuration": "skill-studies/sweeping-stale-references/runs/complete-claim-01/preparation/configs/claude-invocation-review-current.json"
+    },
+    {
+      "slot": 7,
+      "stage": "focused",
+      "provider": "codex",
+      "case_id": "invocation-review",
+      "condition": "candidate",
+      "repetition": 2,
+      "provider_order": 3,
+      "configuration": "skill-studies/sweeping-stale-references/runs/complete-claim-01/preparation/configs/codex-invocation-review-candidate.json"
+    },
+    {
+      "slot": 8,
+      "stage": "focused",
+      "provider": "codex",
+      "case_id": "invocation-review",
+      "condition": "current",
+      "repetition": 2,
+      "provider_order": 4,
+      "configuration": "skill-studies/sweeping-stale-references/runs/complete-claim-01/preparation/configs/codex-invocation-review-current.json"
+    }
+  ]
+}

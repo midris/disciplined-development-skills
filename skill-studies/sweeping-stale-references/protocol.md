@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `sweeping-stale-references`
 Status: count-free-regression-01 complete; compact adoption and owner-approved count removal validated within the declared regression scope.
-Current action: retain the shipped count-free compact description. The [description screen](runs/description-discovery-01/description-discovery-01-assessment.md) stopped after 13 subjects: candidate loading succeeded, but a Codex repair left stale troubleshooting text. Full testing and all reviews remain unrun; further changes require a revised proposal.
+Current action: test the complete-claim paragraph under [complete-claim-01](#validation-complete-claim-01); retain the shipped skill. The [description screen](runs/description-discovery-01/description-discovery-01-assessment.md) stopped after 13 subjects: candidate loading succeeded, but a Codex repair left stale troubleshooting text. Full testing and all reviews remain unrun; further changes require a revised proposal.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](runs/core-baseline-01/core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -288,6 +288,45 @@ SSR collection used config schema 0.2 and result schema 0.4; retained bundles ke
 Control contribution claims require evidence that omitted guidance was not loaded. Record limits on observed isolation rather than claiming exhaustive host-wide exclusion.
 
 Pre-baseline development is closed at two pairs. Do not reopen it for a new facet; a named readiness defect requires a separately authorized diagnostic exception.
+
+### Validation: complete-claim-01
+
+Status: owner-approved focused test of the exact complete-claim paragraph.
+Authority: “ok, let's try it out” following the reviewed paragraph diff and loaded-failure investigation.
+The [design](../../plans/specs/2026-10-31-ssr-complete-claim.md) selects eight subjects/two conditional output reviews within existing ceilings; no other cancelled scope resumes.
+Raw storage: `/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-01`.
+
+### Batch: claim-codex-01
+
+Status: authorized focused screen; readiness precedes dispatch.
+Scope: four subjects, two repetitions per body on invocation-review.
+Inclusion: all valid executions; no retries/replacements; preserve unattempted slots on early stop.
+Selected manifests: [invocation-review](runs/complete-claim-01/preparation/manifests/codex-invocation-review-manifest.json).
+Attempt index: [claim-codex-01-run-index.json](runs/complete-claim-01/claim-codex-01-run-index.json).
+Assessment: pending.
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | invocation-review | current | 1 | `skill-studies/sweeping-stale-references/runs/complete-claim-01/preparation/configs/codex-invocation-review-current.json` |
+| 2 | invocation-review | candidate | 1 | `skill-studies/sweeping-stale-references/runs/complete-claim-01/preparation/configs/codex-invocation-review-candidate.json` |
+| 3 | invocation-review | candidate | 2 | `skill-studies/sweeping-stale-references/runs/complete-claim-01/preparation/configs/codex-invocation-review-candidate.json` |
+| 4 | invocation-review | current | 2 | `skill-studies/sweeping-stale-references/runs/complete-claim-01/preparation/configs/codex-invocation-review-current.json` |
+
+### Batch: claim-claude-01
+
+Status: authorized focused screen; readiness precedes dispatch.
+Scope: four subjects, two repetitions per body on invocation-review.
+Inclusion: all valid executions; no retries/replacements; preserve unattempted slots on early stop.
+Selected manifests: [invocation-review](runs/complete-claim-01/preparation/manifests/claude-invocation-review-manifest.json).
+Attempt index: [claim-claude-01-run-index.json](runs/complete-claim-01/claim-claude-01-run-index.json).
+Assessment: pending.
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | invocation-review | current | 1 | `skill-studies/sweeping-stale-references/runs/complete-claim-01/preparation/configs/claude-invocation-review-current.json` |
+| 2 | invocation-review | candidate | 1 | `skill-studies/sweeping-stale-references/runs/complete-claim-01/preparation/configs/claude-invocation-review-candidate.json` |
+| 3 | invocation-review | candidate | 2 | `skill-studies/sweeping-stale-references/runs/complete-claim-01/preparation/configs/claude-invocation-review-candidate.json` |
+| 4 | invocation-review | current | 2 | `skill-studies/sweeping-stale-references/runs/complete-claim-01/preparation/configs/claude-invocation-review-current.json` |
 
 ### Validation: description-discovery-01
 
