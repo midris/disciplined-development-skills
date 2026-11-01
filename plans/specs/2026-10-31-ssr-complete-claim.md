@@ -1,6 +1,6 @@
 # SSR complete-claim inspection screen
 
-Status: owner approved trying the exact proposed paragraph; freeze and readiness precede collection.
+Status: focused screen complete; eight repairs and both output reviews pass, with no observed condition advantage. See the [assessment](../../skill-studies/sweeping-stale-references/runs/complete-claim-01/complete-claim-01-assessment.md).
 
 ## Question and fixed change
 
@@ -25,7 +25,7 @@ Forecast 30–60 active minutes including preparation, sequential waits, inspect
 
 ## Execution
 
-- [ ] Freeze exact inputs and manifests; check both provider readiness and runtime identity.
-- [ ] Run and assess each of eight subjects before the next; stop under the fixed rules.
-- [ ] If subjects complete, obtain and audit two complete-output reviews.
-- [ ] Report results and limits, reconcile spending and propose the next scope; keep production unchanged.
+- [x] Freeze exact inputs and manifests; both provider collection-readiness checks pass. Source `c05b5f0`, dispatch authority `89124ef`; runtime hashes match qualified executables.
+- [x] Run and assess all eight subjects sequentially; F1–F3 and D1 met in every run, no early stop or retry.
+- [x] Audit both complete-output reviews: 24/24 functional factors agree before prior access; reporting and narrative caveats retained.
+- [x] Report results and limits, reconcile spending and recommend broader application/native-selection regression of the exact combination; no full allocation or adoption selected.

@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `sweeping-stale-references`
 Status: count-free-regression-01 complete; compact adoption and owner-approved count removal validated within the declared regression scope.
-Current action: test the complete-claim paragraph under [complete-claim-01](#validation-complete-claim-01); retain the shipped skill. The [description screen](runs/description-discovery-01/description-discovery-01-assessment.md) stopped after 13 subjects: candidate loading succeeded, but a Codex repair left stale troubleshooting text. Full testing and all reviews remain unrun; further changes require a revised proposal.
+Current action: retain the shipped skill and consider broader regression of the [complete-claim candidate](runs/complete-claim-01/complete-claim-01-assessment.md); its eight-subject screen and two output reviews pass without a demonstrated condition advantage. The [description screen](runs/description-discovery-01/description-discovery-01-assessment.md) stopped after 13 subjects: candidate loading succeeded, but a Codex repair left stale troubleshooting text. Full testing and all reviews remain unrun; further changes require a revised proposal.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](runs/core-baseline-01/core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -291,19 +291,19 @@ Pre-baseline development is closed at two pairs. Do not reopen it for a new face
 
 ### Validation: complete-claim-01
 
-Status: owner-approved focused test of the exact complete-claim paragraph.
+Status: complete; all eight repairs and both reviews pass. No superiority, full-regression or adoption claim.
 Authority: “ok, let's try it out” following the reviewed paragraph diff and loaded-failure investigation.
 The [design](../../plans/specs/2026-10-31-ssr-complete-claim.md) selects eight subjects/two conditional output reviews within existing ceilings; no other cancelled scope resumes.
 Raw storage: `/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-01`.
 
 ### Batch: claim-codex-01
 
-Status: authorized focused screen; readiness precedes dispatch.
+Status: complete; four valid subjects retained and assessed, no retries.
 Scope: four subjects, two repetitions per body on invocation-review.
 Inclusion: Include all valid-setup executions regardless of outcome. No automatic retry or replacement. Preserve unattempted slots after early stop.
 Selected manifests: [invocation-review](runs/complete-claim-01/preparation/manifests/codex-invocation-review-manifest.json).
 Attempt index: [claim-codex-01-run-index.json](runs/complete-claim-01/claim-codex-01-run-index.json).
-Assessment: pending.
+Assessment: [complete assessment](runs/complete-claim-01/claim-codex-01-assessment.md).
 
 | Order | Case | Condition | Repetition | CONFIG |
 | ---: | --- | --- | ---: | --- |
@@ -314,12 +314,12 @@ Assessment: pending.
 
 ### Batch: claim-claude-01
 
-Status: authorized focused screen; readiness precedes dispatch.
+Status: complete; four valid subjects retained and assessed, no retries.
 Scope: four subjects, two repetitions per body on invocation-review.
 Inclusion: Include all valid-setup executions regardless of outcome. No automatic retry or replacement. Preserve unattempted slots after early stop.
 Selected manifests: [invocation-review](runs/complete-claim-01/preparation/manifests/claude-invocation-review-manifest.json).
 Attempt index: [claim-claude-01-run-index.json](runs/complete-claim-01/claim-claude-01-run-index.json).
-Assessment: pending.
+Assessment: [complete assessment](runs/complete-claim-01/claim-claude-01-assessment.md).
 
 | Order | Case | Condition | Repetition | CONFIG |
 | ---: | --- | --- | ---: | --- |
@@ -1335,7 +1335,7 @@ The fresh original baseline adds [Codex subjects](runs/fresh-baseline-01/fresh-b
 The completed candidate screen includes its [ten-review evaluator ledger](runs/candidate-screen-01/evaluation/evaluator-run-index.json).
 The count-free regression adds the two subject indexes linked in its batch scopes above.
 For this subset, the historical spent subtotal plus the newly authorized scope gives ceilings of 528 subject, 38 evaluator, 0 authoring and 1 retry invocations; this is an accounting projection, not a new allocation or pool transfer.
-Dispatched calls are **461 subject, 30 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **67 / 8 / 0 / 0** for this subset. The description-discovery early stop cancels this unrun allocation pending a revised proposal; capacity alone grants no dispatch authority.
+Dispatched calls are **469 subject, 32 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **59 / 6 / 0 / 0** for this subset. The description-discovery scope remains cancelled; the separately authorized complete-claim eight/two screen is now spent. Remaining capacity alone grants no dispatch authority.
 The CW protocol remains authoritative for all current combined spending and outer ceilings; no historical unspent pool is revived.
 Sequential readiness used identical externally frozen scores; the final index pins the canonical repository results at their committed revision.
 
@@ -1409,3 +1409,5 @@ For current state and next action, return to the protocol opening; for combined 
 The measured unrelated invocation case is D1-only sanity evidence, with functional outcome `not measured`; it does not establish near-boundary over-trigger resistance.
 
 The approved count-free SSR reviews are charged in their [evaluator ledger](runs/count-free-regression-01/evaluation/evaluator-run-index.json).
+
+The complete-claim focused output reviews are charged in their [evaluator ledger](runs/complete-claim-01/evaluation/evaluator-run-index.json).
