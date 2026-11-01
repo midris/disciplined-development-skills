@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `sweeping-stale-references`
 Status: count-free-regression-01 complete; compact adoption and owner-approved count removal validated within the declared regression scope.
-Current action: test the owner-selected description under [description-discovery-01](#validation-description-discovery-01); retain count-free compact in production. The [full assessment](runs/count-free-regression-01/count-free-regression-01-assessment.md) closes 66 subjects and ten audited reviews after the passing focused gate. All 48 repairs pass; reporting limits and three Claude native-loading misses remain separate. The new description comparison has its own staged authority below.
+Current action: retain the shipped count-free compact description. The [description screen](runs/description-discovery-01/description-discovery-01-assessment.md) stopped after 13 subjects: candidate loading succeeded, but a Codex repair left stale troubleshooting text. Full testing and all reviews remain unrun; further changes require a revised proposal.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](runs/core-baseline-01/core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -291,7 +291,7 @@ Pre-baseline development is closed at two pairs. Do not reopen it for a new face
 
 ### Validation: description-discovery-01
 
-Status: owner-approved staged description comparison; source freeze and readiness precede collection.
+Status: stopped at slot 13 on incomplete candidate repair; [assessment](runs/description-discovery-01/description-discovery-01-assessment.md). Unrun scope cancelled pending revised proposal.
 Authority: the owner selected the concise description and requested a smaller Codex/Claude test, early pullback on issues, then full testing only after a clean first stage.
 The [design](../../plans/specs/2026-10-31-ssr-description-discovery.md) fixes 24 focused + 56 conditional subjects and four + four reviews, gates, exact contrast and limitations.
 Raw storage: `/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01`.
@@ -299,12 +299,12 @@ Condition `current` is the unchanged adopted description; `candidate` is the sel
 
 ### Batch: discovery-claude-01
 
-Status: approved conditional scope; readiness precedes dispatch.
+Status: early stopped; all attempted outputs retained/scored; unattempted slots remain visible.
 Scope: 40 subjects; provider orders 1–12 focused, remainder conditional.
 Inclusion: Include all valid-setup executions regardless of outcome. No automatic retry or replacement. Preserve unattempted slots after early stop.
 Selected manifests: [invocation-review](runs/description-discovery-01/preparation/manifests/claude-invocation-review-manifest.json), [invocation-change](runs/description-discovery-01/preparation/manifests/claude-invocation-change-manifest.json), [invocation-verification](runs/description-discovery-01/preparation/manifests/claude-invocation-verification-manifest.json), [invocation-unrelated](runs/description-discovery-01/preparation/manifests/claude-invocation-unrelated-manifest.json).
 Attempt index: [discovery-claude-01-run-index.json](runs/description-discovery-01/discovery-claude-01-run-index.json).
-Assessment: pending.
+Assessment: [early-stop assessment](runs/description-discovery-01/discovery-claude-01-assessment.md).
 
 | Order | Case | Condition | Repetition | CONFIG |
 | ---: | --- | --- | ---: | --- |
@@ -351,12 +351,12 @@ Assessment: pending.
 
 ### Batch: discovery-codex-01
 
-Status: approved conditional scope; readiness precedes dispatch.
+Status: early stopped; all attempted outputs retained/scored; unattempted slots remain visible.
 Scope: 40 subjects; provider orders 1–12 focused, remainder conditional.
 Inclusion: Include all valid-setup executions regardless of outcome. No automatic retry or replacement. Preserve unattempted slots after early stop.
 Selected manifests: [invocation-review](runs/description-discovery-01/preparation/manifests/codex-invocation-review-manifest.json), [invocation-change](runs/description-discovery-01/preparation/manifests/codex-invocation-change-manifest.json), [invocation-verification](runs/description-discovery-01/preparation/manifests/codex-invocation-verification-manifest.json), [invocation-unrelated](runs/description-discovery-01/preparation/manifests/codex-invocation-unrelated-manifest.json).
 Attempt index: [discovery-codex-01-run-index.json](runs/description-discovery-01/discovery-codex-01-run-index.json).
-Assessment: pending.
+Assessment: [early-stop assessment](runs/description-discovery-01/discovery-codex-01-assessment.md).
 
 | Order | Case | Condition | Repetition | CONFIG |
 | ---: | --- | --- | ---: | --- |
@@ -1296,7 +1296,7 @@ The fresh original baseline adds [Codex subjects](runs/fresh-baseline-01/fresh-b
 The completed candidate screen includes its [ten-review evaluator ledger](runs/candidate-screen-01/evaluation/evaluator-run-index.json).
 The count-free regression adds the two subject indexes linked in its batch scopes above.
 For this subset, the historical spent subtotal plus the newly authorized scope gives ceilings of 528 subject, 38 evaluator, 0 authoring and 1 retry invocations; this is an accounting projection, not a new allocation or pool transfer.
-Dispatched calls are **448 subject, 30 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **80 / 8 / 0 / 0** for this subset.
+Dispatched calls are **461 subject, 30 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **67 / 8 / 0 / 0** for this subset. The description-discovery early stop cancels this unrun allocation pending a revised proposal; capacity alone grants no dispatch authority.
 The CW protocol remains authoritative for all current combined spending and outer ceilings; no historical unspent pool is revived.
 Sequential readiness used identical externally frozen scores; the final index pins the canonical repository results at their committed revision.
 

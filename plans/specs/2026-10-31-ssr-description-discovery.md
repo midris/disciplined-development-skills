@@ -1,6 +1,6 @@
 # SSR description discovery comparison
 
-Status: owner approved a smaller two-provider test, early pullback on problems and conditional full testing. Preparation precedes dispatch.
+Status: stopped at focused slot 13 after a candidate Codex incomplete repair; no full stage or reviews dispatched. See the [assessment](../../skill-studies/sweeping-stale-references/runs/description-discovery-01/description-discovery-01-assessment.md).
 Goal: improve timely Claude loading while preserving Codex selection and complete repairs, comparing the shipped description with the exact owner-selected concise draft.
 The [framework](2026-09-11-model-driven-skill-testing-framework.md#cw-testing-model) and [protocol](../../skill-studies/sweeping-stale-references/protocol.md#validation-description-discovery-01) govern execution.
 
@@ -41,8 +41,8 @@ Assess both providers separately; exposed cases, small samples and hosted backen
 
 ## Execution
 
-- [ ] Freeze descriptions, cards, schedule, runtime identity and manifests; pass readiness.
-- [ ] Execute focused subjects sequentially with direct evidence assessment and early stop.
-- [ ] If focused subjects pass, audit four complete-output reviews and record gate.
-- [ ] If gate passes, finish conditional scope and four remaining reviews.
-- [ ] Publish actual results, limitations, spending and next decision; leave shipped description unchanged until adoption.
+- [x] Freeze descriptions, cards, schedule, runtime identity and manifests; both provider readiness checks pass. Subject source authority `e4d58cc`; manifests/dispatch authority `52b8920`. Qualified runtime bytes and paths match the completed regression.
+- [x] Execute sequentially with direct assessment and early stop: 13 subjects retained/scored; slot 13 meets D1 but fails F1/F3 because troubleshooting still says third-failure exhaustion.
+- [ ] Not activated: focused gate failed; four reviews unrun.
+- [ ] Cancelled pending revised proposal: remaining subjects and four further reviews; no automatic replacement.
+- [x] Publish early-stop assessment, canonical scores, limitations and actual spending; leave shipped description unchanged.
