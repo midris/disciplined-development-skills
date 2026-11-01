@@ -300,7 +300,7 @@ Raw storage: `/Users/simon/work/personal/skill-study-private/sweeping-stale-refe
 
 Status: authorized focused screen; readiness precedes dispatch.
 Scope: four subjects, two repetitions per body on invocation-review.
-Inclusion: all valid executions; no retries/replacements; preserve unattempted slots on early stop.
+Inclusion: Include all valid-setup executions regardless of outcome. No automatic retry or replacement. Preserve unattempted slots after early stop.
 Selected manifests: [invocation-review](runs/complete-claim-01/preparation/manifests/codex-invocation-review-manifest.json).
 Attempt index: [claim-codex-01-run-index.json](runs/complete-claim-01/claim-codex-01-run-index.json).
 Assessment: pending.
@@ -316,7 +316,7 @@ Assessment: pending.
 
 Status: authorized focused screen; readiness precedes dispatch.
 Scope: four subjects, two repetitions per body on invocation-review.
-Inclusion: all valid executions; no retries/replacements; preserve unattempted slots on early stop.
+Inclusion: Include all valid-setup executions regardless of outcome. No automatic retry or replacement. Preserve unattempted slots after early stop.
 Selected manifests: [invocation-review](runs/complete-claim-01/preparation/manifests/claude-invocation-review-manifest.json).
 Attempt index: [claim-claude-01-run-index.json](runs/complete-claim-01/claim-claude-01-run-index.json).
 Assessment: pending.
