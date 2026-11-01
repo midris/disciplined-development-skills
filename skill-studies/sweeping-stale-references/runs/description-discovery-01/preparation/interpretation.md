@@ -1,8 +1,9 @@
-# Prospective count-free regression interpretation
+# Description discovery interpretation
 
-The owner approved 24 focused subjects/four reviews, then 42 remaining subjects/six reviews conditional on the focused checkpoint. All 66 slots are unique; focused observations carry forward.
-The shipped body drops exact reference counts and the redundant optional-count sentence; name/description are unchanged. Freeze this exact body before collection.
-Use the count-free P3 cards and policy modifier, never the historical exact-count criterion. Preserve functional, preservation, commit, search and native-selection boundaries.
-A full functional pass plus useful path/change/preservation accounts and no unresolved consequential-quality/evidence/runtime fault opens the second stage; reporting-only defects and native misses remain separate. A reporting defect that makes essential repair/preservation status untrustworthy must be presented at the checkpoint rather than silently called useful.
-No new causal claim follows from historical comparison: local tools changed and hosted models have no immutable revision. No retries, substitutions or authoring calls are allocated.
-Full original source/final projects and meaningful preserved material are required for review; no snippet-only replacement. Read-only Opus medium reviewers use complete independent first passes before prior access; active reconciliation remains separate.
+The approved staged design fixes 24 focused subjects/four reviews, then 56 conditional subjects/four reviews; observations carry forward once.
+Current and candidate share the unchanged count-free compact body, name and ordinary skill availability. Only descriptions differ; prompts and project fixtures are unchanged.
+Use frozen F1–F3 and D1 with both conditions applicable. Exact reference counts remain unnecessary. Score native selection separately from task success.
+Candidate missed, late, partial or inappropriate loading stops dispatch immediately; current positive misses are baseline observations. Either arm's consequential repair/preservation failure or unresolved evidence/runtime fault stops dispatch. Reporting-only defects remain nonblocking unless they obscure essential repair status.
+A clean focused stage requires all candidate D1 and repair F1–F3 met plus four audited complete-output reviews. No description may be changed mid-batch; no automatic retries or replacements.
+Inspect original and final projects and complete traces. Independent read-only Opus-medium reviewers receive complete projects before their first judgments, with priors afterward and active reconciliation separate. A rejected description needs no further output-review calls before reporting the observed discovery failure.
+The full scope is four native cases, five repetitions per condition/provider, not an eleven-case body regression. Preserve small-sample, exposed-case, hosted-backend and full-catalog/composition limits; no adoption follows automatically.

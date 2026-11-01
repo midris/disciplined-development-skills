@@ -5,7 +5,7 @@
 Format version: `1`
 Study ID: `sweeping-stale-references`
 Case ID: `invocation-unrelated`
-Definition version: `count-free-4`
+Definition version: `description-1`
 Status: approved conditional description-discovery-01 scope; dispatch requires frozen readiness.
 Purpose: assess the count-free compact body for repair/preservation regression and useful reporting in the declared current runtime stratum.
 Exposure: reconstructed development evidence, not held-out or blind.
