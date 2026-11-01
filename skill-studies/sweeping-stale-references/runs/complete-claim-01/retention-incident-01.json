@@ -1,0 +1,98 @@
+{
+  "cause": "Reused scratch packet builder ran git diff HEAD with default diff.autoRefreshIndex; --no-optional-locks alone did not prevent index stat-cache refresh. Reproduced on disposable copy.",
+  "scope": "Eight retained Git indexes only; no project, commit, output, trace or review-input byte changes. Original full captures intact.",
+  "resolution": "Refreshed indexes preserved privately; exact original index bytes restored; all complete inventories match. Future Git inspection disables diff.autoRefreshIndex.",
+  "unsafe_reproduced": true,
+  "safe_flags_verified": true,
+  "rows": [
+    {
+      "run_id": "20261101T011955725Z-ssr-claim-claude-invocation-review-current-131e178a-a1af-44b6-9450-9b301115ca7a-4koj7b7u",
+      "changed_paths": [
+        "workspace/fixture/.git/index"
+      ],
+      "logical_stage_entries_unchanged": true,
+      "source_inventory_exact": true,
+      "original_index_sha256": "9cda8c9bc30a14e4f1f795d673c94fa1ed3d6c3ad91d6a0963b36997a3d21cb0",
+      "refreshed_index_sha256": "a622ed82494979c9709e1962bff410e5f006d2f09028a65262aef1486d1cf8d2"
+    },
+    {
+      "run_id": "20261101T012035899Z-ssr-claim-claude-invocation-review-candidate-729e2c34-de27-4ddb-8533-09c3d88516de-v_bg_edn",
+      "changed_paths": [
+        "workspace/fixture/.git/index"
+      ],
+      "logical_stage_entries_unchanged": true,
+      "source_inventory_exact": true,
+      "original_index_sha256": "aee1dfbd80a2207598c937a7d724b208f61883089178a24ced5123b30d083613",
+      "refreshed_index_sha256": "9a98b6eaf6e351f89dd0ce5fd56b1721e5a3c26fa867aab6bcdc89d1c9332e26"
+    },
+    {
+      "run_id": "20261101T012119266Z-ssr-claim-claude-invocation-review-candidate-6ae32f53-75a2-4fce-ba5f-8f83e11ff31c-yf09u4wv",
+      "changed_paths": [
+        "workspace/fixture/.git/index"
+      ],
+      "logical_stage_entries_unchanged": true,
+      "source_inventory_exact": true,
+      "original_index_sha256": "947e773479eca214076d31f52e4a963e35b3e45d8daccf01911ac65ec084b625",
+      "refreshed_index_sha256": "a17c5440df050554b8131449e668e059429df6e3d432846ed0bff2955c12b08c"
+    },
+    {
+      "run_id": "20261101T012205406Z-ssr-claim-claude-invocation-review-current-ad51ace4-c681-4684-b5a1-edd8e6fd4a95-l_xq6rz1",
+      "changed_paths": [
+        "workspace/fixture/.git/index"
+      ],
+      "logical_stage_entries_unchanged": true,
+      "source_inventory_exact": true,
+      "original_index_sha256": "bf239d66eeceec325e8faf4c3619c5dcda33d856bc3b947939a7ea62893820d7",
+      "refreshed_index_sha256": "b1b39f040c90ea8143409c43d0fec8b3615cbcfa583cd1153866e2677c355d0d"
+    },
+    {
+      "run_id": "20261101T011811762Z-ssr-claim-codex-invocation-review-current-1f699f48-1abb-46cb-a359-31ba16902938-5i0m38v6",
+      "changed_paths": [
+        "workspace/fixture/.git/index"
+      ],
+      "logical_stage_entries_unchanged": true,
+      "source_inventory_exact": true,
+      "original_index_sha256": "b20df040f44be021324058e4843e3a18b6caeb8defc5ae318d8d8116d5674e49",
+      "refreshed_index_sha256": "8b2ec3e186c3dd4befb75e0286c277bd00d28f7ba0d30a7adcba6c203fdd1141"
+    },
+    {
+      "run_id": "20261101T011907031Z-ssr-claim-codex-invocation-review-candidate-d567aa17-dbf5-4a6c-88ec-ceb38c4887b5-a02kgvgz",
+      "changed_paths": [
+        "workspace/fixture/.git/index"
+      ],
+      "logical_stage_entries_unchanged": true,
+      "source_inventory_exact": true,
+      "original_index_sha256": "7c0a3b9d1a3c5903b5cc72b8dcb1c71b9e735039f5ca90a98e22f5e46ff6a9a6",
+      "refreshed_index_sha256": "63350973bbc7452522f4c084676832a6f8c73fbfffbd35c73f23837d20ef3649"
+    },
+    {
+      "run_id": "20261101T012244680Z-ssr-claim-codex-invocation-review-candidate-6dbb1a63-1b27-46c4-8523-61e80ef10cf8-hlwzcaze",
+      "changed_paths": [
+        "workspace/fixture/.git/index"
+      ],
+      "logical_stage_entries_unchanged": true,
+      "source_inventory_exact": true,
+      "original_index_sha256": "717302ca8393ee1046d90d055ee430f8f087e709f12d54a827be198dcd243e55",
+      "refreshed_index_sha256": "8efa751fec33472f06b322d68b0dee5f12f70000d7eb4d14d2ac176bef7a1ad0"
+    },
+    {
+      "run_id": "20261101T012337490Z-ssr-claim-codex-invocation-review-current-21cf95da-857b-4247-a4f3-42798319304d-024hnwyt",
+      "changed_paths": [
+        "workspace/fixture/.git/index"
+      ],
+      "logical_stage_entries_unchanged": true,
+      "source_inventory_exact": true,
+      "original_index_sha256": "70b4fdeea09895ff7b9d074d9c24c096b2e1bf377d342ee051f7d56795adc8a7",
+      "refreshed_index_sha256": "3fb6df7f79a37927e903b838e431562324135de6525a40c61288392a54637e11"
+    }
+  ],
+  "model_retries": 0,
+  "recovery_controller": {
+    "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-01/controllers/claim-recover.py",
+    "sha256": "35fc8167f98cc7039eaefd54b0f170402f8157e5afbcfee57806072843df3714"
+  },
+  "fixed_builder": {
+    "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-01/controllers/claim-packets-fixed.py",
+    "sha256": "5d7370faceb49e470eb3e80bc1673ce5e4b86ca7ba355f44b40e4316e3a6cd49"
+  }
+}

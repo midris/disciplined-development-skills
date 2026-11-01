@@ -1,0 +1,51 @@
+{
+  "first_pass_event": 86,
+  "prior_first_access_event": 87,
+  "post_prior_event": 92,
+  "judgments": [
+    {
+      "run_id": "20261101T011811762Z-ssr-claim-codex-invocation-review-current-1f699f48-1abb-46cb-a359-31ba16902938-5i0m38v6",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All F1\u2013F3 met, with no functional disagreement. Preserve reviewer quality observations and correct its diff-provenance caveat using the frozen builder and direct retained Git evidence. D1 and reporting defects remain active trace assessments."
+    },
+    {
+      "run_id": "20261101T011907031Z-ssr-claim-codex-invocation-review-candidate-d567aa17-dbf5-4a6c-88ec-ceb38c4887b5-a02kgvgz",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All F1\u2013F3 met, with no functional disagreement. Preserve reviewer quality observations and correct its diff-provenance caveat using the frozen builder and direct retained Git evidence. D1 and reporting defects remain active trace assessments."
+    },
+    {
+      "run_id": "20261101T012244680Z-ssr-claim-codex-invocation-review-candidate-6dbb1a63-1b27-46c4-8523-61e80ef10cf8-hlwzcaze",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All F1\u2013F3 met, with no functional disagreement. Preserve reviewer quality observations and correct its diff-provenance caveat using the frozen builder and direct retained Git evidence. D1 and reporting defects remain active trace assessments."
+    },
+    {
+      "run_id": "20261101T012337490Z-ssr-claim-codex-invocation-review-current-21cf95da-857b-4247-a4f3-42798319304d-024hnwyt",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All F1\u2013F3 met, with no functional disagreement. Preserve reviewer quality observations and correct its diff-provenance caveat using the frozen builder and direct retained Git evidence. D1 and reporting defects remain active trace assessments."
+    }
+  ]
+}

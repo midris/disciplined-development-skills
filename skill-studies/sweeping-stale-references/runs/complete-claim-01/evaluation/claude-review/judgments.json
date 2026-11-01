@@ -1,0 +1,51 @@
+{
+  "first_pass_event": 90,
+  "prior_first_access_event": 91,
+  "post_prior_event": 96,
+  "judgments": [
+    {
+      "run_id": "20261101T011955725Z-ssr-claim-claude-invocation-review-current-131e178a-a1af-44b6-9450-9b301115ca7a-4koj7b7u",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All F1\u2013F3 met with no functional disagreement. Final documents preserve useful meanings and committed completeness. Reporting caveats remain separate: traces establish the candidate repetition-2 claimed post-edit search did not occur. No causal superiority or adoption inference."
+    },
+    {
+      "run_id": "20261101T012035899Z-ssr-claim-claude-invocation-review-candidate-729e2c34-de27-4ddb-8533-09c3d88516de-v_bg_edn",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All F1\u2013F3 met with no functional disagreement. Final documents preserve useful meanings and committed completeness. Reporting caveats remain separate: traces establish the candidate repetition-2 claimed post-edit search did not occur. No causal superiority or adoption inference."
+    },
+    {
+      "run_id": "20261101T012119266Z-ssr-claim-claude-invocation-review-candidate-6ae32f53-75a2-4fce-ba5f-8f83e11ff31c-yf09u4wv",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All F1\u2013F3 met with no functional disagreement. Final documents preserve useful meanings and committed completeness. Reporting caveats remain separate: traces establish the candidate repetition-2 claimed post-edit search did not occur. No causal superiority or adoption inference."
+    },
+    {
+      "run_id": "20261101T012205406Z-ssr-claim-claude-invocation-review-current-ad51ace4-c681-4684-b5a1-edd8e6fd4a95-l_xq6rz1",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All F1\u2013F3 met with no functional disagreement. Final documents preserve useful meanings and committed completeness. Reporting caveats remain separate: traces establish the candidate repetition-2 claimed post-edit search did not occur. No causal superiority or adoption inference."
+    }
+  ]
+}

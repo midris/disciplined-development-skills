@@ -1,4 +1,51 @@
 {
   "evaluator_ledger_version": "1",
-  "runs": []
+  "runs": [
+    {
+      "packet_id": "codex-review",
+      "run_id": "20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "2ff8ae131e4421f23eb5e42b5aa0cc0a20254bc5",
+      "configuration_sha256": "25a1c8284e0f89bc51a95beaf04f5c61718c3465290eba65e7d6affece121bb9",
+      "bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-01/reviews/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-01/reviews/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e.inventory.json",
+        "sha256": "eb366e5c7b2c67854d7c77d4fdbb9d3fcc4abc65d05a7a7b1966b9c7a3aff5b5",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 121.85,
+      "audit_status": "complete",
+      "audit": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-01/evaluation/codex-review/audit.json",
+        "sha256": "232496e0c99c0e75797827ad5580d0274256092e64e1c4f7543b23245448cb3c",
+        "version": null
+      }
+    },
+    {
+      "packet_id": "claude-review",
+      "run_id": "20261101T012732925Z-ssr-claim-claude-review-review-b5723dad-f436-4cc8-b03c-71631ebff9eb-6d6dvedt",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "2ff8ae131e4421f23eb5e42b5aa0cc0a20254bc5",
+      "configuration_sha256": "d4b934d58d1023555d50375c5bce8138ff4627a99e1f5f505904a1e255f13aae",
+      "bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-01/reviews/20261101T012732925Z-ssr-claim-claude-review-review-b5723dad-f436-4cc8-b03c-71631ebff9eb-6d6dvedt",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-01/reviews/20261101T012732925Z-ssr-claim-claude-review-review-b5723dad-f436-4cc8-b03c-71631ebff9eb-6d6dvedt.inventory.json",
+        "sha256": "58972ebc06edac73102a3c6015e8fc148ade9b7e03e5d5325f2b2bf682b5a0f9",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 129.805,
+      "audit_status": "complete",
+      "audit": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-01/evaluation/claude-review/audit.json",
+        "sha256": "c0df5f5527bd98b171e2b7fff4f26be19466fa11ae66fa5fced5db4678066ae8",
+        "version": null
+      }
+    }
+  ]
 }

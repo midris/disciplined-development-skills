@@ -1,0 +1,654 @@
+{
+  "packet_id": "codex-review",
+  "run_id": "20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e",
+  "first_pass_event": 86,
+  "prior_first_access_event": 87,
+  "post_prior_event": 92,
+  "required_complete_files": 30,
+  "complete_delivery_before_first_pass": [
+    {
+      "path": "EVALUATION-INDEX.json",
+      "sha256": "f460f1bee13422b5b5868136cf38c6fd17cce0d1ac6bb330f904c2e4fa7d9e0c",
+      "complete_delivery": [
+        {
+          "call_event": 8,
+          "response_event": 9,
+          "call_id": "toolu_01Th1rPLRSPK6z3gStSxDkRn",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "policy.txt",
+      "sha256": "cc030c28bcfc36c20b700f00d2307b2933ee7d884a0d0a87d14ed8b0da2b92f5",
+      "complete_delivery": [
+        {
+          "call_event": 11,
+          "response_event": 12,
+          "call_id": "toolu_01DE8u2zkMJicmrmqFYABLGP",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "INTERPRETATION.md",
+      "sha256": "33ae243d73255fdfe32ab008c19ee8c2fc2e9f809108be23913264e19158bb66",
+      "complete_delivery": [
+        {
+          "call_event": 13,
+          "response_event": 14,
+          "call_id": "toolu_019ffMma3mbFpKyMmJDBD9rD",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "criteria/invocation-review-expected.json",
+      "sha256": "1eccde02cbd1523e4d99a90359fae1d45b494c13a3d4691df83b0b0ab9a011fa",
+      "complete_delivery": [
+        {
+          "call_event": 15,
+          "response_event": 16,
+          "call_id": "toolu_01HqK3cFMD2M7Kos2uyfuyXn",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "criteria/invocation-review-inherited.md",
+      "sha256": "b897054d0ec6a5aacac614bc2d88145731791d18c10df60929fe9d27087c0ed8",
+      "complete_delivery": [
+        {
+          "call_event": 17,
+          "response_event": 18,
+          "call_id": "toolu_01HYCSQvFWEqos5ZVT3T6tBi",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "criteria/invocation-review.md",
+      "sha256": "cd8c11c84a1b584ffa00f749050d1a9b1f6eebfdbac06819c971212f58c33bc4",
+      "complete_delivery": [
+        {
+          "call_event": 19,
+          "response_event": 20,
+          "call_id": "toolu_017GkmfmHsPQfUndXJiPtyGu",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261101T011811762Z-ssr-claim-codex-invocation-review-current-1f699f48-1abb-46cb-a359-31ba16902938-5i0m38v6.json",
+      "sha256": "ba1c79d8e2456434a3e83b5eaccf5add4340cb139691ee64509318e96e07ea32",
+      "complete_delivery": [
+        {
+          "call_event": 22,
+          "response_event": 23,
+          "call_id": "toolu_01DH3Uv65LV5E4PnhxmqJ9L8",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261101T011907031Z-ssr-claim-codex-invocation-review-candidate-d567aa17-dbf5-4a6c-88ec-ceb38c4887b5-a02kgvgz.json",
+      "sha256": "0ec015e54e21cc377f202e9d04c8306f538b9530be98185076e9aa3ed1fa3084",
+      "complete_delivery": [
+        {
+          "call_event": 24,
+          "response_event": 25,
+          "call_id": "toolu_012wzpZXB8msuo2KqLtWKube",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261101T012244680Z-ssr-claim-codex-invocation-review-candidate-6dbb1a63-1b27-46c4-8523-61e80ef10cf8-hlwzcaze.json",
+      "sha256": "1cfa23e5914a943d13fd8d4da23c0e13dedbff8c92a0359a71d40e01574f297a",
+      "complete_delivery": [
+        {
+          "call_event": 26,
+          "response_event": 27,
+          "call_id": "toolu_011tuVMh4GghdayfXXErjeir",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261101T012337490Z-ssr-claim-codex-invocation-review-current-21cf95da-857b-4247-a4f3-42798319304d-024hnwyt.json",
+      "sha256": "ed80cc32b1d279c889ca33eb97be57fd7b7bd0008f01aa6614a4a9f2cb25a68b",
+      "complete_delivery": [
+        {
+          "call_event": 28,
+          "response_event": 29,
+          "call_id": "toolu_01QTgH48hmLoQXWG8EZrWzMF",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/001.txt",
+      "sha256": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2",
+      "complete_delivery": [
+        {
+          "call_event": 33,
+          "response_event": 34,
+          "call_id": "toolu_016DGsWnb8VVUtH9kzL7hgHJ",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/002.txt",
+      "sha256": "1a4b23b1f53af5b7aa42ac8e72f59282374435831bd35f542c23bd7dfdccb6e3",
+      "complete_delivery": [
+        {
+          "call_event": 35,
+          "response_event": 36,
+          "call_id": "toolu_01GB4YJm6t6axxocs5q358S9",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/003.txt",
+      "sha256": "8d6d58a231c01678279d8e00ea0f03f9306c1b36a474b8cb4dd5967b657453bb",
+      "complete_delivery": [
+        {
+          "call_event": 37,
+          "response_event": 38,
+          "call_id": "toolu_01T85G4FG6X4SLsQ3Uc5C2K1",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/004.txt",
+      "sha256": "7d3c3810c532bdd87af795cf543171deeaff0595e4a13f7fdee39e8dfdef18d2",
+      "complete_delivery": [
+        {
+          "call_event": 39,
+          "response_event": 40,
+          "call_id": "toolu_01791XUGMTVZAvQKQBieDSue",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/005.txt",
+      "sha256": "8e8a5cb48d7d3f3ca8e7212e9c29764f6e8f6cdaaf4f4d8d0762aaeaca906f1f",
+      "complete_delivery": [
+        {
+          "call_event": 41,
+          "response_event": 42,
+          "call_id": "toolu_01PG4nme9Cejz7yZUCyYVaHP",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/006.txt",
+      "sha256": "ef7513eb13148ad5c6b215959ae917c6ef42a24050dc8df5ff64fe814dcfd376",
+      "complete_delivery": [
+        {
+          "call_event": 43,
+          "response_event": 44,
+          "call_id": "toolu_012kbCmEPXVDcQyXUTYEfC1V",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/007.txt",
+      "sha256": "554df6c0a7d0bf116cc593c4fdf3384e8645ab98c7d4e38780637b75577cda52",
+      "complete_delivery": [
+        {
+          "call_event": 45,
+          "response_event": 46,
+          "call_id": "toolu_01UMV3b4SGfUvCkzPkBBsbFN",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/008.txt",
+      "sha256": "3a618d709d2be580ccb53f2f660822be9f90b091af41e3ce3b7aaed31e894eb0",
+      "complete_delivery": [
+        {
+          "call_event": 47,
+          "response_event": 48,
+          "call_id": "toolu_01AeN1rLmE5FJvdm7HYJLY1R",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/009.txt",
+      "sha256": "71160952f35e3a255d68cca629a0a66d79e3e4b4c30431786f6945a28ede54f3",
+      "complete_delivery": [
+        {
+          "call_event": 49,
+          "response_event": 50,
+          "call_id": "toolu_01LVrSpxCJDCwvViMrMyGDjc",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/010.txt",
+      "sha256": "6c9685054ae4f4dd6f32a76a18401366e4206b829466367640370554bf33f683",
+      "complete_delivery": [
+        {
+          "call_event": 51,
+          "response_event": 52,
+          "call_id": "toolu_01U1MercvpQG4cdPirrosdX9",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/011.txt",
+      "sha256": "c02b7809abac11089ac9d7f8bb3212c3b9d10e15e4b8abfb1c6531f5640a4357",
+      "complete_delivery": [
+        {
+          "call_event": 54,
+          "response_event": 55,
+          "call_id": "toolu_01HgxKKWpRQPkXaXVsaA5Fv1",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/012.txt",
+      "sha256": "c891b221c7e8e90e67a55ed09f312925c0989ba06ac426f454293b76bee5b891",
+      "complete_delivery": [
+        {
+          "call_event": 56,
+          "response_event": 57,
+          "call_id": "toolu_01J4dfk8284jRds6QUjXgxMw",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/013.txt",
+      "sha256": "2436b0c68662c0128de007b48b5687e22cd43a86aa465029df6d71ca0c8a9dac",
+      "complete_delivery": [
+        {
+          "call_event": 58,
+          "response_event": 59,
+          "call_id": "toolu_015WxTrf3aFXr1E3bodBntbB",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/014.txt",
+      "sha256": "f2dd0ed83da1fcb53eaea0b250c77589096c7ef5edac94ddf6eb358fd0c38cce",
+      "complete_delivery": [
+        {
+          "call_event": 60,
+          "response_event": 61,
+          "call_id": "toolu_014jyA9hkcAakXQ15LDhT16a",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/015.txt",
+      "sha256": "5627a38e33e0da57f237f96c3981dd64527c7cfd41abf3e24360bfa16725df7d",
+      "complete_delivery": [
+        {
+          "call_event": 62,
+          "response_event": 63,
+          "call_id": "toolu_01LHdvvVR1Usj42KxSLbu3sk",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/016.txt",
+      "sha256": "946a77884f4c5a8a451c3b0c10c3f80c96c60004b809eb44182869ef689fb80e",
+      "complete_delivery": [
+        {
+          "call_event": 64,
+          "response_event": 65,
+          "call_id": "toolu_01Rp249kj5vuocSPWLQ4YhyL",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261101T011811762Z-ssr-claim-codex-invocation-review-current-1f699f48-1abb-46cb-a359-31ba16902938-5i0m38v6.md",
+      "sha256": "9e8263cfec61d472fb0dbffda12795da558bad637f9799eafc19abf10c11b5d4",
+      "complete_delivery": [
+        {
+          "call_event": 66,
+          "response_event": 67,
+          "call_id": "toolu_0141QXEywa1Y21qH9fV77p3o",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261101T011907031Z-ssr-claim-codex-invocation-review-candidate-d567aa17-dbf5-4a6c-88ec-ceb38c4887b5-a02kgvgz.md",
+      "sha256": "1000fb00a8c370554105717e873cdc498632b70208b2251c7027d5621a6ed239",
+      "complete_delivery": [
+        {
+          "call_event": 68,
+          "response_event": 69,
+          "call_id": "toolu_016ysmgtdWhnG29ZrZRBpbRP",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261101T012244680Z-ssr-claim-codex-invocation-review-candidate-6dbb1a63-1b27-46c4-8523-61e80ef10cf8-hlwzcaze.md",
+      "sha256": "d1f8eb5f99e9de5bef2a9be4ec748c86774a0679355aca09f596be771c24252c",
+      "complete_delivery": [
+        {
+          "call_event": 70,
+          "response_event": 71,
+          "call_id": "toolu_01KFMLTmjuPDkXPda2ZSJPiu",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261101T012337490Z-ssr-claim-codex-invocation-review-current-21cf95da-857b-4247-a4f3-42798319304d-024hnwyt.md",
+      "sha256": "63eb96eb7f963cf2df5068ef3b317dfc9ec566f2e6d50b887bb9137ff44d87ed",
+      "complete_delivery": [
+        {
+          "call_event": 72,
+          "response_event": 73,
+          "call_id": "toolu_015r1tBLpgpeCLeQ3xBUDN8B",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    }
+  ],
+  "full_inventory_verified": true,
+  "protected_inputs_verified": 31,
+  "all_calls": [
+    {
+      "event": 3,
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*",
+        "path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/evidence"
+      }
+    },
+    {
+      "event": 5,
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*"
+      }
+    },
+    {
+      "event": 8,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/fixture/EVALUATION-INDEX.json"
+      }
+    },
+    {
+      "event": 11,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/fixture/policy.txt"
+      }
+    },
+    {
+      "event": 13,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/fixture/INTERPRETATION.md"
+      }
+    },
+    {
+      "event": 15,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/fixture/criteria/invocation-review-expected.json"
+      }
+    },
+    {
+      "event": 17,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/fixture/criteria/invocation-review-inherited.md"
+      }
+    },
+    {
+      "event": 19,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/fixture/criteria/invocation-review.md"
+      }
+    },
+    {
+      "event": 22,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/fixture/facts/20261101T011811762Z-ssr-claim-codex-invocation-review-current-1f699f48-1abb-46cb-a359-31ba16902938-5i0m38v6.json"
+      }
+    },
+    {
+      "event": 24,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/fixture/facts/20261101T011907031Z-ssr-claim-codex-invocation-review-candidate-d567aa17-dbf5-4a6c-88ec-ceb38c4887b5-a02kgvgz.json"
+      }
+    },
+    {
+      "event": 26,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/fixture/facts/20261101T012244680Z-ssr-claim-codex-invocation-review-candidate-6dbb1a63-1b27-46c4-8523-61e80ef10cf8-hlwzcaze.json"
+      }
+    },
+    {
+      "event": 28,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/fixture/facts/20261101T012337490Z-ssr-claim-codex-invocation-review-current-21cf95da-857b-4247-a4f3-42798319304d-024hnwyt.json"
+      }
+    },
+    {
+      "event": 33,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/fixture/objects/001.txt"
+      }
+    },
+    {
+      "event": 35,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/fixture/objects/002.txt"
+      }
+    },
+    {
+      "event": 37,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/fixture/objects/003.txt"
+      }
+    },
+    {
+      "event": 39,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/fixture/objects/004.txt"
+      }
+    },
+    {
+      "event": 41,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/fixture/objects/005.txt"
+      }
+    },
+    {
+      "event": 43,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/fixture/objects/006.txt"
+      }
+    },
+    {
+      "event": 45,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/fixture/objects/007.txt"
+      }
+    },
+    {
+      "event": 47,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/fixture/objects/008.txt"
+      }
+    },
+    {
+      "event": 49,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/fixture/objects/009.txt"
+      }
+    },
+    {
+      "event": 51,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/fixture/objects/010.txt"
+      }
+    },
+    {
+      "event": 54,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/fixture/objects/011.txt"
+      }
+    },
+    {
+      "event": 56,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/fixture/objects/012.txt"
+      }
+    },
+    {
+      "event": 58,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/fixture/objects/013.txt"
+      }
+    },
+    {
+      "event": 60,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/fixture/objects/014.txt"
+      }
+    },
+    {
+      "event": 62,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/fixture/objects/015.txt"
+      }
+    },
+    {
+      "event": 64,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/fixture/objects/016.txt"
+      }
+    },
+    {
+      "event": 66,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/fixture/outputs/20261101T011811762Z-ssr-claim-codex-invocation-review-current-1f699f48-1abb-46cb-a359-31ba16902938-5i0m38v6.md"
+      }
+    },
+    {
+      "event": 68,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/fixture/outputs/20261101T011907031Z-ssr-claim-codex-invocation-review-candidate-d567aa17-dbf5-4a6c-88ec-ceb38c4887b5-a02kgvgz.md"
+      }
+    },
+    {
+      "event": 70,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/fixture/outputs/20261101T012244680Z-ssr-claim-codex-invocation-review-candidate-6dbb1a63-1b27-46c4-8523-61e80ef10cf8-hlwzcaze.md"
+      }
+    },
+    {
+      "event": 72,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/fixture/outputs/20261101T012337490Z-ssr-claim-codex-invocation-review-current-21cf95da-857b-4247-a4f3-42798319304d-024hnwyt.md"
+      }
+    },
+    {
+      "event": 87,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261101T012457195Z-ssr-claim-codex-review-review-54cb4452-0c90-4325-9935-1a7948fb49cd-2hbf8l6e/workspace/fixture/prior-assessment.md"
+      }
+    }
+  ],
+  "semantic_audit": "Active assessor checked all 12 first-pass factors against complete original/final files, retained commit history, HEAD~1-to-HEAD diff and replay evidence. All functional judgments agree; no post-prior changes. Quality comparison accurately distinguishes the shorter candidate README from the three fuller formulations without establishing a condition advantage.",
+  "first_pass_sha256": "e9c5239f134cfb0e3620d25c5725abfcfea3cf57121fe0e05916e1e3484ba38d",
+  "post_prior_sha256": "3dec6598d06e6a009e589c5b60b4427c2841bed8e356377360cd7d5a697c1eb7",
+  "post_prior_status": "separate reviewer comparison retained",
+  "audit_controller": {
+    "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-01/controllers/claim-review-audit.py",
+    "sha256": "c567e62528c6dfe055a3035e8abf7c84c3bdd08d0af572fb41eff26d27fa044d"
+  },
+  "limits": [
+    "Visible labels; prior physically present but timing audited.",
+    "Opus reviewer differs from active Codex assessor; Opus subjects share reviewer family.",
+    "Exposed development cases, no causal contribution or reliability claim."
+  ],
+  "precision_notes": [
+    "Reviewer calls complete_project_diff supplied-to-final and says no per-commit diff was supplied. The frozen packet builder generated git diff HEAD~1 HEAD; active exact baseline verification independently confirms all repairs belong to the second commit. This narrative caveat is unnecessary; F3 judgment remains met.",
+    "Packet packaging retains irrelevant Click/PNG boilerplate, correctly noticed by reviewer; no such source objects exist and no evidence is missing.",
+    "Review context mentions Opus-subject same-family limits generically; this packet contains only Codex subjects. Reviewer is Opus and active assessor/subjects are Codex."
+  ]
+}

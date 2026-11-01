@@ -1,0 +1,51 @@
+{
+  "scope": "Active-session diagnostic observations, not additional scored criteria.",
+  "rows": [
+    {
+      "slot": 1,
+      "complete_troubleshooting_before_classification": true,
+      "mechanism": "Full sed read after search; initial search also matched notification."
+    },
+    {
+      "slot": 2,
+      "complete_troubleshooting_before_classification": true,
+      "mechanism": "rg -C 4 delivered full claim despite absent third/exhaust terms."
+    },
+    {
+      "slot": 3,
+      "complete_troubleshooting_before_classification": true,
+      "mechanism": "Initial grep omitted first sentence line; subsequent cat supplied full file."
+    },
+    {
+      "slot": 4,
+      "complete_troubleshooting_before_classification": true,
+      "mechanism": "Initial grep omitted first sentence line; subsequent cat supplied full file."
+    },
+    {
+      "slot": 5,
+      "complete_troubleshooting_before_classification": true,
+      "mechanism": "cat delivered full troubleshooting after initial grep omitted first sentence line.",
+      "quality_note": "Post-edit search claimed in commit/final but absent from complete trace; full repair independently verified."
+    },
+    {
+      "slot": 6,
+      "complete_troubleshooting_before_classification": true,
+      "mechanism": "Full cat read before repair.",
+      "quality_note": "Post-edit search performed, but its summary overlooks legitimate current three-retry matches."
+    },
+    {
+      "slot": 7,
+      "complete_troubleshooting_before_classification": true,
+      "mechanism": "Full sed read after initial grep omitted first sentence line."
+    },
+    {
+      "slot": 8,
+      "complete_troubleshooting_before_classification": true,
+      "mechanism": "rg -C 3 plus full sed read."
+    }
+  ],
+  "limits": [
+    "These observations address the missed troubleshooting claim, not compliance with complete-block reading for every code/test reference.",
+    "Candidate Claude slot 4 classified unchanged code/test references from search snippets without a full code-file read; repaired documentation remains complete."
+  ]
+}

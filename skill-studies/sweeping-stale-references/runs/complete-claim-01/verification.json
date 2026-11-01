@@ -1,0 +1,84 @@
+{
+  "subjects": 8,
+  "reviews": 2,
+  "retries": 0,
+  "subject_seconds": 193.194,
+  "review_seconds": 251.655,
+  "rows": [
+    {
+      "run_id": "20261101T011811762Z-ssr-claim-codex-invocation-review-current-1f699f48-1abb-46cb-a359-31ba16902938-5i0m38v6",
+      "provider": "codex",
+      "condition": "current",
+      "repetition": 1,
+      "functional_result": "met",
+      "D1": "met",
+      "duration_seconds": 27.441
+    },
+    {
+      "run_id": "20261101T011907031Z-ssr-claim-codex-invocation-review-candidate-d567aa17-dbf5-4a6c-88ec-ceb38c4887b5-a02kgvgz",
+      "provider": "codex",
+      "condition": "candidate",
+      "repetition": 1,
+      "functional_result": "met",
+      "D1": "met",
+      "duration_seconds": 28.448
+    },
+    {
+      "run_id": "20261101T012244680Z-ssr-claim-codex-invocation-review-candidate-6dbb1a63-1b27-46c4-8523-61e80ef10cf8-hlwzcaze",
+      "provider": "codex",
+      "condition": "candidate",
+      "repetition": 2,
+      "functional_result": "met",
+      "D1": "met",
+      "duration_seconds": 28.329
+    },
+    {
+      "run_id": "20261101T012337490Z-ssr-claim-codex-invocation-review-current-21cf95da-857b-4247-a4f3-42798319304d-024hnwyt",
+      "provider": "codex",
+      "condition": "current",
+      "repetition": 2,
+      "functional_result": "met",
+      "D1": "met",
+      "duration_seconds": 24.859
+    },
+    {
+      "run_id": "20261101T011955725Z-ssr-claim-claude-invocation-review-current-131e178a-a1af-44b6-9450-9b301115ca7a-4koj7b7u",
+      "provider": "claude",
+      "condition": "current",
+      "repetition": 1,
+      "functional_result": "met",
+      "D1": "met",
+      "duration_seconds": 21.769
+    },
+    {
+      "run_id": "20261101T012035899Z-ssr-claim-claude-invocation-review-candidate-729e2c34-de27-4ddb-8533-09c3d88516de-v_bg_edn",
+      "provider": "claude",
+      "condition": "candidate",
+      "repetition": 1,
+      "functional_result": "met",
+      "D1": "met",
+      "duration_seconds": 23.509
+    },
+    {
+      "run_id": "20261101T012119266Z-ssr-claim-claude-invocation-review-candidate-6ae32f53-75a2-4fce-ba5f-8f83e11ff31c-yf09u4wv",
+      "provider": "claude",
+      "condition": "candidate",
+      "repetition": 2,
+      "functional_result": "met",
+      "D1": "met",
+      "duration_seconds": 19.186
+    },
+    {
+      "run_id": "20261101T012205406Z-ssr-claim-claude-invocation-review-current-ad51ace4-c681-4684-b5a1-edd8e6fd4a95-l_xq6rz1",
+      "provider": "claude",
+      "condition": "current",
+      "repetition": 2,
+      "functional_result": "met",
+      "D1": "met",
+      "duration_seconds": 19.653
+    }
+  ],
+  "hook_suite": "263 passed, 3 skipped in 21.66s using runner virtualenv Python; system Python lacks pytest.",
+  "evidence_checks": "All eight exact baseline/project comparisons and disposable runtime replays verified. All eight inventories exact after recorded Git index-cache restoration; actual runtime identities verified.",
+  "shipped_skill_sha256": "a6881afef4cd83144d99c2913af02c8b4178998659128a88173f84bd8f084cda"
+}

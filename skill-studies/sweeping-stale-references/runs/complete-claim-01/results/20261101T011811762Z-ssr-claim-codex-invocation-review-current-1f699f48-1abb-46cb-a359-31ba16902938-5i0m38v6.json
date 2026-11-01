@@ -1,0 +1,136 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claim-codex-01-invocation-review-current-1",
+  "assessed_at": "2026-11-01T01:19:00.749873+00:00",
+  "run_id": "20261101T011811762Z-ssr-claim-codex-invocation-review-current-1f699f48-1abb-46cb-a359-31ba16902938-5i0m38v6",
+  "condition": "current",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/complete-claim-01/preparation/manifests/codex-invocation-review-manifest.json",
+    "sha256": "9ba8fde4f0c98621f51d63f943f375e9eb8a341ec9d39e697454c6d3442a81e9",
+    "version": "1",
+    "git_revision": "89124ef4082df0f03a4b5905bd8e3e6fb477a4f8"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed complete-claim comparison, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-01/subjects/20261101T011811762Z-ssr-claim-codex-invocation-review-current-1f699f48-1abb-46cb-a359-31ba16902938-5i0m38v6.inventory.json",
+        "sha256": "102d27adf97d11df81718d22bb2ce20e483fba00598b7f56f82798b0ca137a56",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-01/subjects/20261101T011811762Z-ssr-claim-codex-invocation-review-current-1f699f48-1abb-46cb-a359-31ba16902938-5i0m38v6/stdout.txt",
+        "sha256": "5cd9bdd1fbbd8b1d44f337d891c410776e1f1b6bb3c0473d0885d33dd0c58827",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-01/subjects/20261101T011811762Z-ssr-claim-codex-invocation-review-current-1f699f48-1abb-46cb-a359-31ba16902938-5i0m38v6/runner.log",
+        "sha256": "7d4b6bb95181852e870a36298587454c109fdd271746e5fa797394c40c158095",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-01/subjects/20261101T011811762Z-ssr-claim-codex-invocation-review-current-1f699f48-1abb-46cb-a359-31ba16902938-5i0m38v6/result.json",
+        "sha256": "c1d90ddf3f1de70d4761184fce17597721d7f7bb12eaaff43150dd53303dd6bc",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    },
+    {
+      "id": "provider-session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-01/subjects/20261101T011811762Z-ssr-claim-codex-invocation-review-current-1f699f48-1abb-46cb-a359-31ba16902938-5i0m38v6/provider-session.jsonl",
+        "sha256": "3a04699a297ec706ca756aac9b135b656fde959a37b7a2c8d4bd4db83438d222",
+        "version": null
+      },
+      "selector": "Complete provider session including nested tools omitted by stdout projection."
+    },
+    {
+      "id": "replay",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-01/replays/slot-01.json",
+        "sha256": "d371f8b9dc917e210c5fa22afbfdf2cbbef7ef71f4033e5206ee348450d8c151",
+        "version": null
+      },
+      "selector": "Deterministic observations from disposable final-project copy, not semantic verdicts."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Qualified native skill fully loaded before repair; source baseline verified and complete capture retained. Parent-directory search denial recovered by repository-local inspection.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "README states four attempts/up to three retries, operations three additional tries and troubleshooting fourth failure exhaustion; stopping on success and operator guidance retained.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only the three current-policy docs changed; worker, helper, history, task and ignore remain exact. Seven disposable tests pass.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Commit 1861bfe contains all three repairs; final working tree clean.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Complete current body delivered by sed before editing; troubleshooting read in full before classification.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Complete repair with full claim inspection. Commit groups some different paths together; reporting-only deviation, no repair consequence. No additional body effect can be inferred from this successful baseline.",
+  "observations": [],
+  "uncertainty": []
+}
