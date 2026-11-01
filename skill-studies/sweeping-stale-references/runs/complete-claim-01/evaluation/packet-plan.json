@@ -1,0 +1,84 @@
+{
+  "packets": [
+    {
+      "id": "codex-review",
+      "stage": "focused",
+      "provider": "codex",
+      "case_ids": [
+        "invocation-review"
+      ],
+      "output_count": 4,
+      "functional_factors": 12,
+      "observations": [
+        {
+          "order": 1,
+          "provider": "codex",
+          "case_id": "invocation-review",
+          "condition": "current",
+          "repetition": 1
+        },
+        {
+          "order": 2,
+          "provider": "codex",
+          "case_id": "invocation-review",
+          "condition": "candidate",
+          "repetition": 1
+        },
+        {
+          "order": 7,
+          "provider": "codex",
+          "case_id": "invocation-review",
+          "condition": "candidate",
+          "repetition": 2
+        },
+        {
+          "order": 8,
+          "provider": "codex",
+          "case_id": "invocation-review",
+          "condition": "current",
+          "repetition": 2
+        }
+      ]
+    },
+    {
+      "id": "claude-review",
+      "stage": "focused",
+      "provider": "claude",
+      "case_ids": [
+        "invocation-review"
+      ],
+      "output_count": 4,
+      "functional_factors": 12,
+      "observations": [
+        {
+          "order": 3,
+          "provider": "claude",
+          "case_id": "invocation-review",
+          "condition": "current",
+          "repetition": 1
+        },
+        {
+          "order": 4,
+          "provider": "claude",
+          "case_id": "invocation-review",
+          "condition": "candidate",
+          "repetition": 1
+        },
+        {
+          "order": 5,
+          "provider": "claude",
+          "case_id": "invocation-review",
+          "condition": "candidate",
+          "repetition": 2
+        },
+        {
+          "order": 6,
+          "provider": "claude",
+          "case_id": "invocation-review",
+          "condition": "current",
+          "repetition": 2
+        }
+      ]
+    }
+  ]
+}
