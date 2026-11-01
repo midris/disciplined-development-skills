@@ -3,5 +3,349 @@
   "index_id": "discovery-codex-01-attempts",
   "study_id": "sweeping-stale-references",
   "batch_id": "discovery-codex-01",
-  "attempts": []
+  "attempts": [
+    {
+      "attempt_id": "discovery-codex-01-invocation-review-current-1-1",
+      "case_id": "invocation-review",
+      "condition": "current",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/manifests/codex-invocation-review-manifest.json",
+        "sha256": "e3f3f248cd26fdba57038591b98d9e21dec64296a867e4983dae63209fe31ec6",
+        "version": "1",
+        "git_revision": "52b8920c838987bcc22f550a50ac8c6c97f1d161"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "2b8bd1e85b23bddce4a06777a3f8c2dc68985055a23d5cd7a72f44dece82f908",
+          "version": "1",
+          "git_revision": "52b8920c838987bcc22f550a50ac8c6c97f1d161"
+        },
+        "selector": "Batch: discovery-codex-01; order 1"
+      },
+      "run_id": "20261101T000304885Z-ssr-discovery-codex-invocation-review-current-5257fe33-3785-484a-994d-f3b7bab13bdc-qvsyyup5",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed staged discovery comparison; active-session assessment. Early stop at slot 13; no independent output review or adoption claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000304885Z-ssr-discovery-codex-invocation-review-current-5257fe33-3785-484a-994d-f3b7bab13bdc-qvsyyup5",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000304885Z-ssr-discovery-codex-invocation-review-current-5257fe33-3785-484a-994d-f3b7bab13bdc-qvsyyup5.inventory.json",
+          "sha256": "ba15936e88dec6a891a17bc96b83cc7be2ba3b1a713252a942f4030ff55a644f",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "discovery-codex-01-invocation-review-current-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/results/20261101T000304885Z-ssr-discovery-codex-invocation-review-current-5257fe33-3785-484a-994d-f3b7bab13bdc-qvsyyup5.json",
+          "sha256": "1cb7110d8f171581f704f9ac57c28ff8babc365e83ef8e44ecfc55093da67c92",
+          "version": "2",
+          "git_revision": "32118548055955c52035cef64f290e2216af991a"
+        }
+      }
+    },
+    {
+      "attempt_id": "discovery-codex-01-invocation-review-candidate-1-1",
+      "case_id": "invocation-review",
+      "condition": "candidate",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/manifests/codex-invocation-review-manifest.json",
+        "sha256": "e3f3f248cd26fdba57038591b98d9e21dec64296a867e4983dae63209fe31ec6",
+        "version": "1",
+        "git_revision": "52b8920c838987bcc22f550a50ac8c6c97f1d161"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "2b8bd1e85b23bddce4a06777a3f8c2dc68985055a23d5cd7a72f44dece82f908",
+          "version": "1",
+          "git_revision": "52b8920c838987bcc22f550a50ac8c6c97f1d161"
+        },
+        "selector": "Batch: discovery-codex-01; order 2"
+      },
+      "run_id": "20261101T000400914Z-ssr-discovery-codex-invocation-review-candidate-35d6c079-4974-4836-a566-7fbea4588db7-ujiphqcb",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed staged discovery comparison; active-session assessment. Early stop at slot 13; no independent output review or adoption claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000400914Z-ssr-discovery-codex-invocation-review-candidate-35d6c079-4974-4836-a566-7fbea4588db7-ujiphqcb",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000400914Z-ssr-discovery-codex-invocation-review-candidate-35d6c079-4974-4836-a566-7fbea4588db7-ujiphqcb.inventory.json",
+          "sha256": "762d70b5e5b9104e27258c6b55fc1018e314c3da10211d1aface3926b30fdc35",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "discovery-codex-01-invocation-review-candidate-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/results/20261101T000400914Z-ssr-discovery-codex-invocation-review-candidate-35d6c079-4974-4836-a566-7fbea4588db7-ujiphqcb.json",
+          "sha256": "b58448b9a84f9b96326fb2ae03c0873e54e69d2b496019f5ae78f8a570ab5515",
+          "version": "2",
+          "git_revision": "32118548055955c52035cef64f290e2216af991a"
+        }
+      }
+    },
+    {
+      "attempt_id": "discovery-codex-01-invocation-change-current-1-1",
+      "case_id": "invocation-change",
+      "condition": "current",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/manifests/codex-invocation-change-manifest.json",
+        "sha256": "69eb52ae110242749369ffb31890014663d5b3fbb069a557e384fd21222a5fd6",
+        "version": "1",
+        "git_revision": "52b8920c838987bcc22f550a50ac8c6c97f1d161"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "2b8bd1e85b23bddce4a06777a3f8c2dc68985055a23d5cd7a72f44dece82f908",
+          "version": "1",
+          "git_revision": "52b8920c838987bcc22f550a50ac8c6c97f1d161"
+        },
+        "selector": "Batch: discovery-codex-01; order 3"
+      },
+      "run_id": "20261101T000614264Z-ssr-discovery-codex-invocation-change-current-596e2746-7369-4583-9f3d-2680a59c7f60-4b0fis10",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed staged discovery comparison; active-session assessment. Early stop at slot 13; no independent output review or adoption claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000614264Z-ssr-discovery-codex-invocation-change-current-596e2746-7369-4583-9f3d-2680a59c7f60-4b0fis10",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000614264Z-ssr-discovery-codex-invocation-change-current-596e2746-7369-4583-9f3d-2680a59c7f60-4b0fis10.inventory.json",
+          "sha256": "59344d5fda9975b09ea646a3108b54c0ade7a6564c82dcb4cb314a126dc534c6",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "discovery-codex-01-invocation-change-current-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/results/20261101T000614264Z-ssr-discovery-codex-invocation-change-current-596e2746-7369-4583-9f3d-2680a59c7f60-4b0fis10.json",
+          "sha256": "a59e40eb9506e498ba0e476864a42ff3d2fc6a131250a2e8b55394be9207cc07",
+          "version": "2",
+          "git_revision": "32118548055955c52035cef64f290e2216af991a"
+        }
+      }
+    },
+    {
+      "attempt_id": "discovery-codex-01-invocation-change-candidate-1-1",
+      "case_id": "invocation-change",
+      "condition": "candidate",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/manifests/codex-invocation-change-manifest.json",
+        "sha256": "69eb52ae110242749369ffb31890014663d5b3fbb069a557e384fd21222a5fd6",
+        "version": "1",
+        "git_revision": "52b8920c838987bcc22f550a50ac8c6c97f1d161"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "2b8bd1e85b23bddce4a06777a3f8c2dc68985055a23d5cd7a72f44dece82f908",
+          "version": "1",
+          "git_revision": "52b8920c838987bcc22f550a50ac8c6c97f1d161"
+        },
+        "selector": "Batch: discovery-codex-01; order 4"
+      },
+      "run_id": "20261101T000701827Z-ssr-discovery-codex-invocation-change-candidate-c1b333d0-1128-4d9a-a498-60d9bba1e4e3-tjgo5n9i",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed staged discovery comparison; active-session assessment. Early stop at slot 13; no independent output review or adoption claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000701827Z-ssr-discovery-codex-invocation-change-candidate-c1b333d0-1128-4d9a-a498-60d9bba1e4e3-tjgo5n9i",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000701827Z-ssr-discovery-codex-invocation-change-candidate-c1b333d0-1128-4d9a-a498-60d9bba1e4e3-tjgo5n9i.inventory.json",
+          "sha256": "76633d3be0b00abd1eec984d3782d76062d9637d8615a6ed5f9aecd47121b6c5",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "discovery-codex-01-invocation-change-candidate-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/results/20261101T000701827Z-ssr-discovery-codex-invocation-change-candidate-c1b333d0-1128-4d9a-a498-60d9bba1e4e3-tjgo5n9i.json",
+          "sha256": "0aba86c9342b2373627d072ff7270260b5a720a956baa2c913e864e948491ec2",
+          "version": "2",
+          "git_revision": "32118548055955c52035cef64f290e2216af991a"
+        }
+      }
+    },
+    {
+      "attempt_id": "discovery-codex-01-invocation-verification-current-1-1",
+      "case_id": "invocation-verification",
+      "condition": "current",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/manifests/codex-invocation-verification-manifest.json",
+        "sha256": "1361a40bc29b9dc62fc1170cb88d12a699fdade2b3623b49cf3e6932f5b3ac1b",
+        "version": "1",
+        "git_revision": "52b8920c838987bcc22f550a50ac8c6c97f1d161"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "2b8bd1e85b23bddce4a06777a3f8c2dc68985055a23d5cd7a72f44dece82f908",
+          "version": "1",
+          "git_revision": "52b8920c838987bcc22f550a50ac8c6c97f1d161"
+        },
+        "selector": "Batch: discovery-codex-01; order 5"
+      },
+      "run_id": "20261101T000840261Z-ssr-discovery-codex-invocation-verification-current-a143383b-5976-4eea-96e6-6bee57eec744-iytvr13j",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed staged discovery comparison; active-session assessment. Early stop at slot 13; no independent output review or adoption claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000840261Z-ssr-discovery-codex-invocation-verification-current-a143383b-5976-4eea-96e6-6bee57eec744-iytvr13j",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000840261Z-ssr-discovery-codex-invocation-verification-current-a143383b-5976-4eea-96e6-6bee57eec744-iytvr13j.inventory.json",
+          "sha256": "f6b7467d72208680279d13f8b62a3645887960139ad6f52972610cda03391e61",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "discovery-codex-01-invocation-verification-current-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/results/20261101T000840261Z-ssr-discovery-codex-invocation-verification-current-a143383b-5976-4eea-96e6-6bee57eec744-iytvr13j.json",
+          "sha256": "6a99d6861a0548a1315caf9f738d5442f01b8fd2216c2c7c1486d7fafa4ef784",
+          "version": "2",
+          "git_revision": "32118548055955c52035cef64f290e2216af991a"
+        }
+      }
+    },
+    {
+      "attempt_id": "discovery-codex-01-invocation-verification-candidate-1-1",
+      "case_id": "invocation-verification",
+      "condition": "candidate",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/manifests/codex-invocation-verification-manifest.json",
+        "sha256": "1361a40bc29b9dc62fc1170cb88d12a699fdade2b3623b49cf3e6932f5b3ac1b",
+        "version": "1",
+        "git_revision": "52b8920c838987bcc22f550a50ac8c6c97f1d161"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "2b8bd1e85b23bddce4a06777a3f8c2dc68985055a23d5cd7a72f44dece82f908",
+          "version": "1",
+          "git_revision": "52b8920c838987bcc22f550a50ac8c6c97f1d161"
+        },
+        "selector": "Batch: discovery-codex-01; order 6"
+      },
+      "run_id": "20261101T000901693Z-ssr-discovery-codex-invocation-verification-candidate-99d1af6e-118e-4109-84a3-f876b3d998c1-3c3okxg1",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed staged discovery comparison; active-session assessment. Early stop at slot 13; no independent output review or adoption claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000901693Z-ssr-discovery-codex-invocation-verification-candidate-99d1af6e-118e-4109-84a3-f876b3d998c1-3c3okxg1",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000901693Z-ssr-discovery-codex-invocation-verification-candidate-99d1af6e-118e-4109-84a3-f876b3d998c1-3c3okxg1.inventory.json",
+          "sha256": "93163487ee9284d14941b2c57233fb413b4aa0f89b85ba7db9a74214c15eef59",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "discovery-codex-01-invocation-verification-candidate-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/results/20261101T000901693Z-ssr-discovery-codex-invocation-verification-candidate-99d1af6e-118e-4109-84a3-f876b3d998c1-3c3okxg1.json",
+          "sha256": "11f1c0cef83b0a24c77390f86613b03bbbdd95bce15852b42da968135a92642f",
+          "version": "2",
+          "git_revision": "32118548055955c52035cef64f290e2216af991a"
+        }
+      }
+    },
+    {
+      "attempt_id": "discovery-codex-01-invocation-review-candidate-2-1",
+      "case_id": "invocation-review",
+      "condition": "candidate",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/manifests/codex-invocation-review-manifest.json",
+        "sha256": "e3f3f248cd26fdba57038591b98d9e21dec64296a867e4983dae63209fe31ec6",
+        "version": "1",
+        "git_revision": "52b8920c838987bcc22f550a50ac8c6c97f1d161"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "2b8bd1e85b23bddce4a06777a3f8c2dc68985055a23d5cd7a72f44dece82f908",
+          "version": "1",
+          "git_revision": "52b8920c838987bcc22f550a50ac8c6c97f1d161"
+        },
+        "selector": "Batch: discovery-codex-01; order 7"
+      },
+      "run_id": "20261101T000923053Z-ssr-discovery-codex-invocation-review-candidate-26466ac9-4518-4910-9ce5-7872bd85b58d-e1lq2cf6",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed staged discovery comparison; active-session assessment. Early stop at slot 13; no independent output review or adoption claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000923053Z-ssr-discovery-codex-invocation-review-candidate-26466ac9-4518-4910-9ce5-7872bd85b58d-e1lq2cf6",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000923053Z-ssr-discovery-codex-invocation-review-candidate-26466ac9-4518-4910-9ce5-7872bd85b58d-e1lq2cf6.inventory.json",
+          "sha256": "7222cf5b763db19836105099f12d386af1f494d2c68f01a27043d8e6c3fb0cd5",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "discovery-codex-01-invocation-review-candidate-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/results/20261101T000923053Z-ssr-discovery-codex-invocation-review-candidate-26466ac9-4518-4910-9ce5-7872bd85b58d-e1lq2cf6.json",
+          "sha256": "57efc5af6072aa26d80bed405dbfa683f01c4dfd355e30b9879b67a29903f602",
+          "version": "2",
+          "git_revision": "32118548055955c52035cef64f290e2216af991a"
+        }
+      }
+    }
+  ]
 }

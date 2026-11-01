@@ -3,5 +3,300 @@
   "index_id": "discovery-claude-01-attempts",
   "study_id": "sweeping-stale-references",
   "batch_id": "discovery-claude-01",
-  "attempts": []
+  "attempts": [
+    {
+      "attempt_id": "discovery-claude-01-invocation-review-current-1-1",
+      "case_id": "invocation-review",
+      "condition": "current",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/manifests/claude-invocation-review-manifest.json",
+        "sha256": "feb06e92f731e21691809baee2d3a83cbdde3d2bc7f9a392a9781d3f42a96558",
+        "version": "1",
+        "git_revision": "52b8920c838987bcc22f550a50ac8c6c97f1d161"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "2b8bd1e85b23bddce4a06777a3f8c2dc68985055a23d5cd7a72f44dece82f908",
+          "version": "1",
+          "git_revision": "52b8920c838987bcc22f550a50ac8c6c97f1d161"
+        },
+        "selector": "Batch: discovery-claude-01; order 1"
+      },
+      "run_id": "20261101T000125149Z-ssr-discovery-claude-invocation-review-current-e8278bc6-d716-410c-8bf1-650ce083b6cf-nzxvs45x",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed staged discovery comparison; active-session assessment. Early stop at slot 13; no independent output review or adoption claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000125149Z-ssr-discovery-claude-invocation-review-current-e8278bc6-d716-410c-8bf1-650ce083b6cf-nzxvs45x",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000125149Z-ssr-discovery-claude-invocation-review-current-e8278bc6-d716-410c-8bf1-650ce083b6cf-nzxvs45x.inventory.json",
+          "sha256": "e85eedde790710b32d513adcf5b5494b2d473960390be8abb6909601383ae0c1",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "discovery-claude-01-invocation-review-current-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/results/20261101T000125149Z-ssr-discovery-claude-invocation-review-current-e8278bc6-d716-410c-8bf1-650ce083b6cf-nzxvs45x.json",
+          "sha256": "85ad92fafa7439818d085ca64acbe680e807cf20e85bb3a43a37bc6693d4d9a5",
+          "version": "2",
+          "git_revision": "32118548055955c52035cef64f290e2216af991a"
+        }
+      }
+    },
+    {
+      "attempt_id": "discovery-claude-01-invocation-review-candidate-1-1",
+      "case_id": "invocation-review",
+      "condition": "candidate",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/manifests/claude-invocation-review-manifest.json",
+        "sha256": "feb06e92f731e21691809baee2d3a83cbdde3d2bc7f9a392a9781d3f42a96558",
+        "version": "1",
+        "git_revision": "52b8920c838987bcc22f550a50ac8c6c97f1d161"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "2b8bd1e85b23bddce4a06777a3f8c2dc68985055a23d5cd7a72f44dece82f908",
+          "version": "1",
+          "git_revision": "52b8920c838987bcc22f550a50ac8c6c97f1d161"
+        },
+        "selector": "Batch: discovery-claude-01; order 2"
+      },
+      "run_id": "20261101T000219730Z-ssr-discovery-claude-invocation-review-candidate-3bc0adf1-c294-4083-979c-4165d1158246-q8bo7p9i",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed staged discovery comparison; active-session assessment. Early stop at slot 13; no independent output review or adoption claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000219730Z-ssr-discovery-claude-invocation-review-candidate-3bc0adf1-c294-4083-979c-4165d1158246-q8bo7p9i",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000219730Z-ssr-discovery-claude-invocation-review-candidate-3bc0adf1-c294-4083-979c-4165d1158246-q8bo7p9i.inventory.json",
+          "sha256": "cf0fb8716dfdc6ee74cf4b3ae11e81980578248f7f46122c68acb117d953c122",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "discovery-claude-01-invocation-review-candidate-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/results/20261101T000219730Z-ssr-discovery-claude-invocation-review-candidate-3bc0adf1-c294-4083-979c-4165d1158246-q8bo7p9i.json",
+          "sha256": "ae59f54f076060031b4fe13b4a14b587e46d915f4911520b246e45488022545a",
+          "version": "2",
+          "git_revision": "32118548055955c52035cef64f290e2216af991a"
+        }
+      }
+    },
+    {
+      "attempt_id": "discovery-claude-01-invocation-change-current-1-1",
+      "case_id": "invocation-change",
+      "condition": "current",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/manifests/claude-invocation-change-manifest.json",
+        "sha256": "c0d2603fdf336ba41805971fd4354b75e61b3c46ac8b80a03d4172160ef07ece",
+        "version": "1",
+        "git_revision": "52b8920c838987bcc22f550a50ac8c6c97f1d161"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "2b8bd1e85b23bddce4a06777a3f8c2dc68985055a23d5cd7a72f44dece82f908",
+          "version": "1",
+          "git_revision": "52b8920c838987bcc22f550a50ac8c6c97f1d161"
+        },
+        "selector": "Batch: discovery-claude-01; order 3"
+      },
+      "run_id": "20261101T000446040Z-ssr-discovery-claude-invocation-change-current-c939a8ca-db3f-46fc-9133-9772a5b9f73d-khrcczjq",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed staged discovery comparison; active-session assessment. Early stop at slot 13; no independent output review or adoption claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000446040Z-ssr-discovery-claude-invocation-change-current-c939a8ca-db3f-46fc-9133-9772a5b9f73d-khrcczjq",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000446040Z-ssr-discovery-claude-invocation-change-current-c939a8ca-db3f-46fc-9133-9772a5b9f73d-khrcczjq.inventory.json",
+          "sha256": "e1f4e094aed4e6756348d81cd822026284627fc1745e1d5abd613591bfaaca37",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "discovery-claude-01-invocation-change-current-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/results/20261101T000446040Z-ssr-discovery-claude-invocation-change-current-c939a8ca-db3f-46fc-9133-9772a5b9f73d-khrcczjq.json",
+          "sha256": "d1b184c042b43b3e7e7b83392a9c12d526d88c0314bd930b27d8e42d831118bf",
+          "version": "2",
+          "git_revision": "32118548055955c52035cef64f290e2216af991a"
+        }
+      }
+    },
+    {
+      "attempt_id": "discovery-claude-01-invocation-change-candidate-1-1",
+      "case_id": "invocation-change",
+      "condition": "candidate",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/manifests/claude-invocation-change-manifest.json",
+        "sha256": "c0d2603fdf336ba41805971fd4354b75e61b3c46ac8b80a03d4172160ef07ece",
+        "version": "1",
+        "git_revision": "52b8920c838987bcc22f550a50ac8c6c97f1d161"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "2b8bd1e85b23bddce4a06777a3f8c2dc68985055a23d5cd7a72f44dece82f908",
+          "version": "1",
+          "git_revision": "52b8920c838987bcc22f550a50ac8c6c97f1d161"
+        },
+        "selector": "Batch: discovery-claude-01; order 4"
+      },
+      "run_id": "20261101T000527960Z-ssr-discovery-claude-invocation-change-candidate-31437719-3aa9-4fe9-b366-a20010a6fcdf-s45p82hg",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed staged discovery comparison; active-session assessment. Early stop at slot 13; no independent output review or adoption claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000527960Z-ssr-discovery-claude-invocation-change-candidate-31437719-3aa9-4fe9-b366-a20010a6fcdf-s45p82hg",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000527960Z-ssr-discovery-claude-invocation-change-candidate-31437719-3aa9-4fe9-b366-a20010a6fcdf-s45p82hg.inventory.json",
+          "sha256": "4a8a063fb783b90590cbdcedaa4f2e10d9de55ab0e4a778b88ea0059f6318bbb",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "discovery-claude-01-invocation-change-candidate-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/results/20261101T000527960Z-ssr-discovery-claude-invocation-change-candidate-31437719-3aa9-4fe9-b366-a20010a6fcdf-s45p82hg.json",
+          "sha256": "720b6f795825e8e1405dd73f0d0ecc4d01357b5ddad8ecd5a81faaf30b6879fa",
+          "version": "2",
+          "git_revision": "32118548055955c52035cef64f290e2216af991a"
+        }
+      }
+    },
+    {
+      "attempt_id": "discovery-claude-01-invocation-verification-current-1-1",
+      "case_id": "invocation-verification",
+      "condition": "current",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/manifests/claude-invocation-verification-manifest.json",
+        "sha256": "4ad3078e4da65bd6f87cc037c71ed25b9b0fa8dfb07d5eabcdaa820ba7026b41",
+        "version": "1",
+        "git_revision": "52b8920c838987bcc22f550a50ac8c6c97f1d161"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "2b8bd1e85b23bddce4a06777a3f8c2dc68985055a23d5cd7a72f44dece82f908",
+          "version": "1",
+          "git_revision": "52b8920c838987bcc22f550a50ac8c6c97f1d161"
+        },
+        "selector": "Batch: discovery-claude-01; order 5"
+      },
+      "run_id": "20261101T000756280Z-ssr-discovery-claude-invocation-verification-current-6a507c90-71a8-4990-b635-d7572170656d-pqc3pee2",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed staged discovery comparison; active-session assessment. Early stop at slot 13; no independent output review or adoption claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000756280Z-ssr-discovery-claude-invocation-verification-current-6a507c90-71a8-4990-b635-d7572170656d-pqc3pee2",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000756280Z-ssr-discovery-claude-invocation-verification-current-6a507c90-71a8-4990-b635-d7572170656d-pqc3pee2.inventory.json",
+          "sha256": "f0cc5f3f44038c58298ae16e224498ee6d5827fa3135923c50b384743fcca51f",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "discovery-claude-01-invocation-verification-current-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/results/20261101T000756280Z-ssr-discovery-claude-invocation-verification-current-6a507c90-71a8-4990-b635-d7572170656d-pqc3pee2.json",
+          "sha256": "0d5f86b6c472b8320b5cf4017fcf01c3e853ddf4e8fd87e2d9bdec5d02dc740e",
+          "version": "2",
+          "git_revision": "32118548055955c52035cef64f290e2216af991a"
+        }
+      }
+    },
+    {
+      "attempt_id": "discovery-claude-01-invocation-verification-candidate-1-1",
+      "case_id": "invocation-verification",
+      "condition": "candidate",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/manifests/claude-invocation-verification-manifest.json",
+        "sha256": "4ad3078e4da65bd6f87cc037c71ed25b9b0fa8dfb07d5eabcdaa820ba7026b41",
+        "version": "1",
+        "git_revision": "52b8920c838987bcc22f550a50ac8c6c97f1d161"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "2b8bd1e85b23bddce4a06777a3f8c2dc68985055a23d5cd7a72f44dece82f908",
+          "version": "1",
+          "git_revision": "52b8920c838987bcc22f550a50ac8c6c97f1d161"
+        },
+        "selector": "Batch: discovery-claude-01; order 6"
+      },
+      "run_id": "20261101T000820463Z-ssr-discovery-claude-invocation-verification-candidate-68baa39d-3f27-4502-b83c-7128bab973fb-9bifslg3",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed staged discovery comparison; active-session assessment. Early stop at slot 13; no independent output review or adoption claim."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000820463Z-ssr-discovery-claude-invocation-verification-candidate-68baa39d-3f27-4502-b83c-7128bab973fb-9bifslg3",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/description-discovery-01/subjects/20261101T000820463Z-ssr-discovery-claude-invocation-verification-candidate-68baa39d-3f27-4502-b83c-7128bab973fb-9bifslg3.inventory.json",
+          "sha256": "9527215df4ac04a824eae386701268a6473b8d3a9067685520d0105ae1ca0842",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "discovery-claude-01-invocation-verification-candidate-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/results/20261101T000820463Z-ssr-discovery-claude-invocation-verification-candidate-68baa39d-3f27-4502-b83c-7128bab973fb-9bifslg3.json",
+          "sha256": "3cfef829549326e66a179e912c375d6e5d66639416956e8f21256e04fc517d84",
+          "version": "2",
+          "git_revision": "32118548055955c52035cef64f290e2216af991a"
+        }
+      }
+    }
+  ]
 }
