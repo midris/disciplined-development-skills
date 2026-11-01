@@ -1,0 +1,142 @@
+{
+  "format_version": "1",
+  "manifest_id": "ssr-discovery-codex-invocation-verification",
+  "study_id": "sweeping-stale-references",
+  "case_id": "invocation-verification",
+  "status": "frozen",
+  "created_at": "2026-10-31",
+  "source_revision": "e4d58cca72b0469d87595a6e4b9911f2b0eba81d",
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "a4038836187dcf16649e8f3ab91d2f5c120e319ce949e932a5627519ea9c2266",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/sweeping-stale-references/protocol.md",
+      "sha256": "2b8bd1e85b23bddce4a06777a3f8c2dc68985055a23d5cd7a72f44dece82f908",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "f54cb58884f9dbffd39f37746234487d6113e1f01ad3b1d355fe269310895321",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result-v2.schema.json",
+      "sha256": "81902ed03e807804404c0d6ba7a0092a1c311c9eef45ee88c89708ce50d7c2c2",
+      "version": "2"
+    },
+    "policy": {
+      "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/policy.txt",
+      "sha256": "cc030c28bcfc36c20b700f00d2307b2933ee7d884a0d0a87d14ed8b0da2b92f5",
+      "version": "SSR-count-free-1"
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/criteria/invocation-verification.md",
+        "sha256": "32226ca938bf02966774f041c1ee92c3e0de34a3153c0b4defad962b7fdbcae2",
+        "version": "description-1"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "current",
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-verification-current.json",
+        "sha256": "70ba8029fd47607f860ccfc484973b06290f388312ed191ae83cc2f78fb8e079",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/skills/current/SKILL.md"
+    },
+    {
+      "id": "candidate",
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/codex-invocation-verification-candidate.json",
+        "sha256": "144efd6ef3415f1bd523c58e073f10ae9cc5141e6a186cb0fe5e86bd03cc67e1",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/skills/candidate/SKILL.md"
+    }
+  ],
+  "subject_sources": [
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/invocation-verification/codex.gitignore",
+      "sha256": "f6b4553712a7e85344204a512f685b41ab572796d6293e7e0b5737a525e0d456",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/invocation-verification/fixture/README.md",
+      "sha256": "c87e4afce8521b85dc30d2e44a1f35ca94accc8848f4680c1c7a2c83fa05fb4d",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/invocation-verification/fixture/archive/rollout-2024.md",
+      "sha256": "a2354de6353bc947ef4914633f37ac7c5d19833734f505358d77483558fca264",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/invocation-verification/fixture/config/defaults.json",
+      "sha256": "1c17cca63c9b3e7d0804f983643786ea75f17b64a099a5b75bd6001c9a518bd2",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/invocation-verification/fixture/docs/session-policy.md",
+      "sha256": "471188ec72adac025536dc04f7af871423b3678a08a99a69e5a74da613f47d48",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/invocation-verification/fixture/scripts/show-session.py",
+      "sha256": "363849394f492cbe47a867fdd6ba7456d6ec109a85d4c2dd262cdafa876ddf12",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/invocation-verification/fixture/src/session.py",
+      "sha256": "120ca715b67d11813785079a8e6a2b219439e413353f5cf5bd3d503eede8e456",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/invocation-verification/fixture/tests/test_session.py",
+      "sha256": "4dd7c1d5643c51a6f72d130b6d10fabc5279d1d5ba83be285556cbd6463f84d4",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/invocation-verification/fixture/vendor/partner/README.md",
+      "sha256": "45940528ad7f26ca62ed012f4b9d5c7c3f99a4e761f418b033e2267810d83197",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/invocation-verification/fixture/vendor/partner/example.json",
+      "sha256": "33fbf6018f8b275d3c286f93903484ed67bbe83d291d698a88f7316bfe85ff24",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/invocation-verification/task.md",
+      "sha256": "06edb9664ded32b484440efc89201d7cbf1ea4a780020f7b5d318cae43cf4ec5",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/prompts/codex-invocation-verification.md",
+      "sha256": "0da8a80be29d169ae907c8eb90ba8660d79f8375c7c3aa706f9a6d0c91d2f8bf",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/skills/candidate/SKILL.md",
+      "sha256": "9dc83a4302ba7de3df0ace751082ee772cedca293c7aed833e1d51ca9489e4c7",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/skills/current/SKILL.md",
+      "sha256": "a6881afef4cd83144d99c2913af02c8b4178998659128a88173f84bd8f084cda",
+      "version": null
+    }
+  ],
+  "controller_only": [
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/interpretation.md",
+      "sha256": "ded74d2705e8919d395db37e2dd3806a0b56ff6ca211e7e3056324f4011d86a4",
+      "version": null
+    }
+  ]
+}

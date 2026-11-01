@@ -1,0 +1,142 @@
+{
+  "format_version": "1",
+  "manifest_id": "ssr-discovery-claude-invocation-unrelated",
+  "study_id": "sweeping-stale-references",
+  "case_id": "invocation-unrelated",
+  "status": "frozen",
+  "created_at": "2026-10-31",
+  "source_revision": "e4d58cca72b0469d87595a6e4b9911f2b0eba81d",
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "a4038836187dcf16649e8f3ab91d2f5c120e319ce949e932a5627519ea9c2266",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/sweeping-stale-references/protocol.md",
+      "sha256": "2b8bd1e85b23bddce4a06777a3f8c2dc68985055a23d5cd7a72f44dece82f908",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "f54cb58884f9dbffd39f37746234487d6113e1f01ad3b1d355fe269310895321",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result-v2.schema.json",
+      "sha256": "81902ed03e807804404c0d6ba7a0092a1c311c9eef45ee88c89708ce50d7c2c2",
+      "version": "2"
+    },
+    "policy": {
+      "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/policy.txt",
+      "sha256": "cc030c28bcfc36c20b700f00d2307b2933ee7d884a0d0a87d14ed8b0da2b92f5",
+      "version": "SSR-count-free-1"
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/criteria/invocation-unrelated.md",
+        "sha256": "1b16e060be399c23ed3add4255388316e95cebb00d1baeac7a6570ccca7b750d",
+        "version": "description-1"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "current",
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-unrelated-current.json",
+        "sha256": "a13a40a95dbe4316116ca8f2001e2c3774a5d08924de46366217ec020e9174cd",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/skills/current/SKILL.md"
+    },
+    {
+      "id": "candidate",
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/configs/claude-invocation-unrelated-candidate.json",
+        "sha256": "50425cddb05d59212a725c266fd17fc9afa0306a41258f6f06e66769cc31148e",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/skills/candidate/SKILL.md"
+    }
+  ],
+  "subject_sources": [
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/initiating-change/fixture/README.md",
+      "sha256": "e1973f3af6490a611eb92059576e03d7bcfb726298d220f83e57369af6410c78",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/initiating-change/fixture/archive/rollout-2024.md",
+      "sha256": "a2354de6353bc947ef4914633f37ac7c5d19833734f505358d77483558fca264",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/initiating-change/fixture/config/defaults.json",
+      "sha256": "39173e527c02bb8051ec44867f13777a70bd956a47a94a9a041eea2b12da9828",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/initiating-change/fixture/docs/session-policy.md",
+      "sha256": "6d5fe8c33e0fef06a6734d4aca5d40f29e26ca6c1f7b64b4fb93708e7e2efa76",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/initiating-change/fixture/scripts/show-session.py",
+      "sha256": "815923fcce071b2f077fc76b972d193e8ee88611b9f1418f64cd9d9f36a4f331",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/initiating-change/fixture/src/session.py",
+      "sha256": "26b396a47f08e7312600c59e759c570e3e8e9888207e238e4755b8018cfae248",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/initiating-change/fixture/tests/test_session.py",
+      "sha256": "d092547b68039f16d231e5b11297c277f21cf91623b5db2cd1301730f35ea10b",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/initiating-change/fixture/vendor/partner/README.md",
+      "sha256": "45940528ad7f26ca62ed012f4b9d5c7c3f99a4e761f418b033e2267810d83197",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/initiating-change/fixture/vendor/partner/example.json",
+      "sha256": "33fbf6018f8b275d3c286f93903484ed67bbe83d291d698a88f7316bfe85ff24",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/invocation-unrelated/claude-comparison.gitignore",
+      "sha256": "25b48a27d48b2bb74e9953545e5d264de141bbc35fed11a9895033aaec4a3837",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/invocation-unrelated/task.md",
+      "sha256": "5908ead635cc09109290d58d20e67678cf1102e7afd74ff25e41e4607a3c611e",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/prompts/claude-invocation-unrelated.md",
+      "sha256": "45d5cf63913783881609bbb63d214566981888dbc2eaa63a3a11d7608c4fc1ee",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/skills/candidate/SKILL.md",
+      "sha256": "9dc83a4302ba7de3df0ace751082ee772cedca293c7aed833e1d51ca9489e4c7",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/skills/current/SKILL.md",
+      "sha256": "a6881afef4cd83144d99c2913af02c8b4178998659128a88173f84bd8f084cda",
+      "version": null
+    }
+  ],
+  "controller_only": [
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/description-discovery-01/preparation/interpretation.md",
+      "sha256": "ded74d2705e8919d395db37e2dd3806a0b56ff6ca211e7e3056324f4011d86a4",
+      "version": null
+    }
+  ]
+}
