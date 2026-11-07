@@ -1,0 +1,73 @@
+{
+  "first_pass_event": 134,
+  "prior_first_access_event": 135,
+  "post_prior_event": 140,
+  "judgments": [
+    {
+      "run_id": "20261107T154907208Z-ssr-claim-full-codex-initiating-change-715a1b13-7caf-466c-9880-d0fa3578486a-yyscq2na",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All six projects met all 18 functional factors. The reviewer inspected 53 required files before event 134 and opened the prior at 135. The initiator outputs preserved both script entry points and the delivery edits corrected the fourth-failure claim, including the rewrapped file. The prior changed no verdict."
+    },
+    {
+      "run_id": "20261107T155354187Z-ssr-claim-full-codex-semantic-delivery-84948bea-e738-4e57-af7d-79404e73011a-4ap1baog",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All six projects met all 18 functional factors. The reviewer inspected 53 required files before event 134 and opened the prior at 135. The initiator outputs preserved both script entry points and the delivery edits corrected the fourth-failure claim, including the rewrapped file. The prior changed no verdict."
+    },
+    {
+      "run_id": "20261107T160336832Z-ssr-claim-full-codex-initiating-change-2126bd4e-c0de-4ea5-a6c0-2fd8c6304b7e-abab8_j3",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All six projects met all 18 functional factors. The reviewer inspected 53 required files before event 134 and opened the prior at 135. The initiator outputs preserved both script entry points and the delivery edits corrected the fourth-failure claim, including the rewrapped file. The prior changed no verdict."
+    },
+    {
+      "run_id": "20261107T160751231Z-ssr-claim-full-codex-semantic-delivery-ea45fcda-79f3-43db-af1e-3b1e24656885-eofntl6l",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All six projects met all 18 functional factors. The reviewer inspected 53 required files before event 134 and opened the prior at 135. The initiator outputs preserved both script entry points and the delivery edits corrected the fourth-failure claim, including the rewrapped file. The prior changed no verdict."
+    },
+    {
+      "run_id": "20261107T161550024Z-ssr-claim-full-codex-initiating-change-48741eba-dfa5-4163-8003-532823fc8d49-bsmftfn8",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All six projects met all 18 functional factors. The reviewer inspected 53 required files before event 134 and opened the prior at 135. The initiator outputs preserved both script entry points and the delivery edits corrected the fourth-failure claim, including the rewrapped file. The prior changed no verdict."
+    },
+    {
+      "run_id": "20261107T162019373Z-ssr-claim-full-codex-semantic-delivery-f00521c3-0baf-48ae-9a7b-8e0a98580d5a-jzx5lgui",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All six projects met all 18 functional factors. The reviewer inspected 53 required files before event 134 and opened the prior at 135. The initiator outputs preserved both script entry points and the delivery edits corrected the fourth-failure claim, including the rewrapped file. The prior changed no verdict."
+    }
+  ]
+}

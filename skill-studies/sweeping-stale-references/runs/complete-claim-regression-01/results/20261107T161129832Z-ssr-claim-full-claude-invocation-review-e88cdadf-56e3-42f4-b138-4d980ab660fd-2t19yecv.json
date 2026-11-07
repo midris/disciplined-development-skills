@@ -1,0 +1,127 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claim-full-claude-01-invocation-review-finalist-2",
+  "assessed_at": "2026-11-07T16:12:13.340036+00:00",
+  "run_id": "20261107T161129832Z-ssr-claim-full-claude-invocation-review-e88cdadf-56e3-42f4-b138-4d980ab660fd-2t19yecv",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/claude-invocation-review-manifest.json",
+    "sha256": "075ae746c37891415283985566e641cd693f9bcae9596586e8196913c2f55b56",
+    "version": "1",
+    "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T161129832Z-ssr-claim-full-claude-invocation-review-e88cdadf-56e3-42f4-b138-4d980ab660fd-2t19yecv.inventory.json",
+        "sha256": "a20b0ed74c720019c0faa3c1b692df703af491bbd868964486905d421e062ac4",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T161129832Z-ssr-claim-full-claude-invocation-review-e88cdadf-56e3-42f4-b138-4d980ab660fd-2t19yecv/stdout.txt",
+        "sha256": "d579c622f0572b81c6472b6e9d1739fb938498c938833ab751ff5b24a9085395",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T161129832Z-ssr-claim-full-claude-invocation-review-e88cdadf-56e3-42f4-b138-4d980ab660fd-2t19yecv/runner.log",
+        "sha256": "76562dfefe978f0c6b09d374df6aad9c7349345c4075532f0355b6d3a09e9041",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T161129832Z-ssr-claim-full-claude-invocation-review-e88cdadf-56e3-42f4-b138-4d980ab660fd-2t19yecv/result.json",
+        "sha256": "da7202f7987b109b277f69ecc286ef5b2c5fd9421a34a74ee789044fbb615f7a",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    },
+    {
+      "id": "replay",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/replays/slot-47.json",
+        "sha256": "c49619ec4b04ec98ea5c92183e10a85136449a95825c9c6ea664dbcf1ff3ce9b",
+        "version": null
+      },
+      "selector": "Deterministic observations from disposable final-project copy, not semantic verdicts."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Verified assigned inputs, provider and ordered capture. Setup valid for this case.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "README gives the four-attempt ceiling, operations provides three additional tries, troubleshooting gives fourth-failure exhaustion, and success still terminates delivery.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only current documentation changed. Exact fixture baseline, preserved historical/helper behavior and all seven disposable tests verify.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Final committed tree includes all three correct edits with clean status.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Claude selected Skill and received the full assigned body before baseline and repair edits.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "724871d covers all three operator-facing claims after full file inspection. Repeated search is observed.",
+  "observations": [],
+  "uncertainty": []
+}

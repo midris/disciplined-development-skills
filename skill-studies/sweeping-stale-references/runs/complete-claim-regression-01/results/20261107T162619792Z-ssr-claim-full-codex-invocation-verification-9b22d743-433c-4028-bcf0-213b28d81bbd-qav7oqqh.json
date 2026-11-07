@@ -1,0 +1,94 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claim-full-codex-01-invocation-verification-finalist-3",
+  "assessed_at": "2026-11-07T16:26:50.542585+00:00",
+  "run_id": "20261107T162619792Z-ssr-claim-full-codex-invocation-verification-9b22d743-433c-4028-bcf0-213b28d81bbd-qav7oqqh",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-invocation-verification-manifest.json",
+    "sha256": "0ce6c1ae379664da7c5bcc8df51ab99d989e307ee3b7a4efaa8a7174ad01eb10",
+    "version": "1",
+    "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T162619792Z-ssr-claim-full-codex-invocation-verification-9b22d743-433c-4028-bcf0-213b28d81bbd-qav7oqqh.inventory.json",
+        "sha256": "62260e2461b64378daa0ee10075cfd6f003c310ea552333966ccc27df2c170ea",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T162619792Z-ssr-claim-full-codex-invocation-verification-9b22d743-433c-4028-bcf0-213b28d81bbd-qav7oqqh/stdout.txt",
+        "sha256": "07715dbd13a3edf2feedd8ad750e96f5ad0b6b4991127436b34ed487ac16615d",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T162619792Z-ssr-claim-full-codex-invocation-verification-9b22d743-433c-4028-bcf0-213b28d81bbd-qav7oqqh/runner.log",
+        "sha256": "a7a614580f0e09c0cdca30817328c9204655069845bc8097d08731f6f7e62ccd",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T162619792Z-ssr-claim-full-codex-invocation-verification-9b22d743-433c-4028-bcf0-213b28d81bbd-qav7oqqh/result.json",
+        "sha256": "a0abbf3a32a2c68431bdb073cc2863cb860d9431489aa61a4c1309ce8d0b3756",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    },
+    {
+      "id": "provider-session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T162619792Z-ssr-claim-full-codex-invocation-verification-9b22d743-433c-4028-bcf0-213b28d81bbd-qav7oqqh/provider-session.jsonl",
+        "sha256": "92f67c6fadd2f2a061cab8faceff9be15c8a863ed4132c036540519ae783b08e",
+        "version": null
+      },
+      "selector": "Complete provider session including nested tools omitted by stdout projection."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Verified assigned inputs, provider and ordered capture. Setup valid for this case.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Task inspection followed by one requested unittest command, three tests OK. Complete trace shows no SSR invocation, targeted read or sweep. Project files preserved.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "not measured",
+  "procedural_summary": "Correct bounded verification with no skill use.",
+  "observations": [],
+  "uncertainty": []
+}

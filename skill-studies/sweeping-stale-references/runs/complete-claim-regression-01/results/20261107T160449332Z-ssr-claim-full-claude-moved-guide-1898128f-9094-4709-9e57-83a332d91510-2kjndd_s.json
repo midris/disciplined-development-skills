@@ -1,0 +1,149 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claim-full-claude-01-moved-guide-finalist-2",
+  "assessed_at": "2026-11-07T16:05:34.405034+00:00",
+  "run_id": "20261107T160449332Z-ssr-claim-full-claude-moved-guide-1898128f-9094-4709-9e57-83a332d91510-2kjndd_s",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/claude-moved-guide-manifest.json",
+    "sha256": "f55ed3d67f7540d47eabd5ea951181c2ee82076b69c4565541725af07015327d",
+    "version": "1",
+    "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T160449332Z-ssr-claim-full-claude-moved-guide-1898128f-9094-4709-9e57-83a332d91510-2kjndd_s.inventory.json",
+        "sha256": "abded10f83a731c42644ea8628754924f967f49bdff87ae1b2df81994220bb10",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T160449332Z-ssr-claim-full-claude-moved-guide-1898128f-9094-4709-9e57-83a332d91510-2kjndd_s/stdout.txt",
+        "sha256": "bb734e812cd1c7edc4f6a80468ae8c544b5931d7f034a74d16f210d3307e3210",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T160449332Z-ssr-claim-full-claude-moved-guide-1898128f-9094-4709-9e57-83a332d91510-2kjndd_s/runner.log",
+        "sha256": "db5bbdfabc1323a2b30010f854808e1f9859e1ae91e8b9b82576c00f84ac0408",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T160449332Z-ssr-claim-full-claude-moved-guide-1898128f-9094-4709-9e57-83a332d91510-2kjndd_s/result.json",
+        "sha256": "61d0a5ab82f0d20a30dc7a6ad8db163a2ef564dd2389374b338c83cf4211c00d",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    },
+    {
+      "id": "replay",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/replays/slot-41.json",
+        "sha256": "036d2c707dba62930d9ca4ef29d2828da6199f781f298fb5f60bedac589bceb6",
+        "version": null
+      },
+      "selector": "Deterministic observations from disposable final-project copy, not semantic verdicts."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Verified assigned inputs, provider and ordered capture. Setup valid for this case.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All three service links resolve relative to their own documents. Exporter emits exact guide content from both working directories.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Moved service guide, historic plan, independent widget guide and vendor link preserved, old path absent.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All four current consumer repairs are in the final commit and working tree is clean.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Search before edits covered relative forms and distinguished current service, historical and independent vendor references.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One reconciliation commit after baseline.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Four required consumer encodings and historical preservation are accurate and separate. Repeated grep and export heading observed. Combined optional vendor entry falls outside required scope.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "0da3aff updates all four relative consumers; complete exported bytes independently verified.",
+  "observations": [],
+  "uncertainty": []
+}

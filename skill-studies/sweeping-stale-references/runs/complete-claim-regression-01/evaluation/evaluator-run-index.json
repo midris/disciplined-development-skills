@@ -92,6 +92,144 @@
         "sha256": "da272612d021860b245a8ad4f967dd2f32c403efedccb423e535d8fbd17f0001",
         "version": null
       }
+    },
+    {
+      "packet_id": "codex-semantic-initiating",
+      "run_id": "20261107T162841420Z-ssr-claim-full-codex-semantic-initiating-review-6c503da9-e969-4f50-9c90-ea1826c38507-79svktwv",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "4fc0b9f93198d53cdbd81cb8fa0e1fadbcd738f3",
+      "configuration_sha256": "1e53023b86792423c62efb10619c502c51c46f2043010f42192729e497e9d5c9",
+      "bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/reviews/20261107T162841420Z-ssr-claim-full-codex-semantic-initiating-review-6c503da9-e969-4f50-9c90-ea1826c38507-79svktwv",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/reviews/20261107T162841420Z-ssr-claim-full-codex-semantic-initiating-review-6c503da9-e969-4f50-9c90-ea1826c38507-79svktwv.inventory.json",
+        "sha256": "774724fe4615594303dfcece1e73deffb50679aa4638a0ab928cec9934baf7e0",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 187.68,
+      "audit_status": "complete",
+      "audit": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/evaluation/codex-semantic-initiating/audit.json",
+        "sha256": "6d5400f01f695ac702c0b710a2e1190cf51094d747e2d91bb0bbcece04ad6f2a",
+        "version": null
+      }
+    },
+    {
+      "packet_id": "codex-native-positives",
+      "run_id": "20261107T163427843Z-ssr-claim-full-codex-native-positives-review-456c57f5-32a7-4fb2-b899-70c7ebf5c33f-z88qt6pu",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "4fc0b9f93198d53cdbd81cb8fa0e1fadbcd738f3",
+      "configuration_sha256": "b201e3d30309685d01b80d9cbaba1e546fe7473e8037c42a24423fd51c20da47",
+      "bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/reviews/20261107T163427843Z-ssr-claim-full-codex-native-positives-review-456c57f5-32a7-4fb2-b899-70c7ebf5c33f-z88qt6pu",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/reviews/20261107T163427843Z-ssr-claim-full-codex-native-positives-review-456c57f5-32a7-4fb2-b899-70c7ebf5c33f-z88qt6pu.inventory.json",
+        "sha256": "dd10d202e313c1dd44907e52cc8d2dc064b1d641e6d890b27aab69bdaff149cd",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 183.272,
+      "audit_status": "complete",
+      "audit": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/evaluation/codex-native-positives/audit.json",
+        "sha256": "29c99de178e39a8ce57ec20aaa58c507b8b9add0b6874fcaa279c0c784dcfd8e",
+        "version": null
+      }
+    },
+    {
+      "packet_id": "codex-moved",
+      "run_id": "20261107T163742967Z-ssr-claim-full-codex-moved-review-50af9d01-6e02-4820-b4bb-970da2f1f16d-x5gqwehd",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "4fc0b9f93198d53cdbd81cb8fa0e1fadbcd738f3",
+      "configuration_sha256": "94e1302d494dcdf1017b0c3bc4439ec1b66e6ab2d3d33d1cd0adccb4308a07f0",
+      "bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/reviews/20261107T163742967Z-ssr-claim-full-codex-moved-review-50af9d01-6e02-4820-b4bb-970da2f1f16d-x5gqwehd",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/reviews/20261107T163742967Z-ssr-claim-full-codex-moved-review-50af9d01-6e02-4820-b4bb-970da2f1f16d-x5gqwehd.inventory.json",
+        "sha256": "23ae0f4c2bdb8aa7e15fdd10ee08219360316f19192f6c7d96c26c939d7ff0f7",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 108.161,
+      "audit_status": "complete",
+      "audit": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/evaluation/codex-moved/audit.json",
+        "sha256": "1531fb74820fe220df256ae0fbb5f51879fb42ab705cf30fb40466e1ff18332d",
+        "version": null
+      }
+    },
+    {
+      "packet_id": "claude-semantic-initiating",
+      "run_id": "20261107T163941530Z-ssr-claim-full-claude-semantic-initiating-review-6ee027fc-2520-4f12-a33e-b84def1b0324-9vh_01sn",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "4fc0b9f93198d53cdbd81cb8fa0e1fadbcd738f3",
+      "configuration_sha256": "6a7c830792c9d6e76e210c428c7e0af7f93a3b3517861e19484bffeeb15baef0",
+      "bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/reviews/20261107T163941530Z-ssr-claim-full-claude-semantic-initiating-review-6ee027fc-2520-4f12-a33e-b84def1b0324-9vh_01sn",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/reviews/20261107T163941530Z-ssr-claim-full-claude-semantic-initiating-review-6ee027fc-2520-4f12-a33e-b84def1b0324-9vh_01sn.inventory.json",
+        "sha256": "80af76951c98eb9c8676df8f8cde2ff6feee25626f13cc63ec9be371b0307437",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 179.381,
+      "audit_status": "complete",
+      "audit": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/evaluation/claude-semantic-initiating/audit.json",
+        "sha256": "61018ce04980d774978c81a98401e0c96fa5f7908e96054173778c4824878426",
+        "version": null
+      }
+    },
+    {
+      "packet_id": "claude-native-positives",
+      "run_id": "20261107T164250774Z-ssr-claim-full-claude-native-positives-review-f0257244-bbc9-4e5a-a3b3-8086d70a5008-bne0pdbr",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "4fc0b9f93198d53cdbd81cb8fa0e1fadbcd738f3",
+      "configuration_sha256": "f0f8586952a2697094d56d71907a529024eea7994e62a47962799b53db2f36e7",
+      "bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/reviews/20261107T164250774Z-ssr-claim-full-claude-native-positives-review-f0257244-bbc9-4e5a-a3b3-8086d70a5008-bne0pdbr",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/reviews/20261107T164250774Z-ssr-claim-full-claude-native-positives-review-f0257244-bbc9-4e5a-a3b3-8086d70a5008-bne0pdbr.inventory.json",
+        "sha256": "acdb2fcceb0a5dea039e04c442e4b5bd98123524f8f709e368999485b1440e76",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 191.578,
+      "audit_status": "complete",
+      "audit": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/evaluation/claude-native-positives/audit.json",
+        "sha256": "6f8f91e5a42960d6d9b14a6549810f3b11312ec7f052f22920e10ad227cef1c9",
+        "version": null
+      }
+    },
+    {
+      "packet_id": "claude-moved",
+      "run_id": "20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "4fc0b9f93198d53cdbd81cb8fa0e1fadbcd738f3",
+      "configuration_sha256": "dd9d9dec3e135e071417a87f28a73736041f03a5f24f9aa5fb25caf2742b03e9",
+      "bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/reviews/20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/reviews/20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i.inventory.json",
+        "sha256": "af628d2f510d1e1c33dd25533a8477de49d14e67fb92b6fe5520a18e8d5b438d",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 100.44,
+      "audit_status": "complete",
+      "audit": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/evaluation/claude-moved/audit.json",
+        "sha256": "74c6ce0e560d86efa8f057530784b0f7908248b27aee299ca5874b2636fd0714",
+        "version": null
+      }
     }
   ]
 }

@@ -1,0 +1,572 @@
+{
+  "packet_id": "claude-moved",
+  "run_id": "20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i",
+  "first_pass_event": 74,
+  "prior_first_access_event": 75,
+  "post_prior_event": 80,
+  "required_complete_files": 26,
+  "complete_delivery_before_first_pass": [
+    {
+      "path": "EVALUATION-INDEX.json",
+      "sha256": "13657a3e5cd990cad28a4dca7cf6e0bc556feba3eb9011c4209356f4bea6af31",
+      "complete_delivery": [
+        {
+          "call_event": 8,
+          "response_event": 9,
+          "call_id": "toolu_01TS569E298cVYrHwedTHvxD",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "policy.txt",
+      "sha256": "cc030c28bcfc36c20b700f00d2307b2933ee7d884a0d0a87d14ed8b0da2b92f5",
+      "complete_delivery": [
+        {
+          "call_event": 10,
+          "response_event": 11,
+          "call_id": "toolu_01UpbLBewsnpvg4d7hpt68KU",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "INTERPRETATION.md",
+      "sha256": "08450279e8eeb3887f1f9e2c3a38bb1631ca45ac459fcd461a9ba283829e7c85",
+      "complete_delivery": [
+        {
+          "call_event": 12,
+          "response_event": 13,
+          "call_id": "toolu_01N8Yamv8KmQqC3G8G8PE8nT",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "criteria/moved-guide-expected.json",
+      "sha256": "7c2539f37f33b37e68339252cea73a7020c0d0a2f030ea6f562e826682c38730",
+      "complete_delivery": [
+        {
+          "call_event": 18,
+          "response_event": 19,
+          "call_id": "toolu_01WG3GE5nG5JuD2cZUoG6fnw",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "criteria/moved-guide-inherited.md",
+      "sha256": "4457007bc2d0fa830e3f2b5cc3b99997827dfd1880878d403d72fbf04d8f6171",
+      "complete_delivery": [
+        {
+          "call_event": 16,
+          "response_event": 17,
+          "call_id": "toolu_012CYTarQxkengNi4WUMDNCd",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "criteria/moved-guide.md",
+      "sha256": "b815632838c4045bc93c9b2392ea8ca7f656e63ee9cd2b9f0b6ad958439d4d70",
+      "complete_delivery": [
+        {
+          "call_event": 14,
+          "response_event": 15,
+          "call_id": "toolu_016NNwpetbZLDHxwW1wLVyA8",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261107T155253206Z-ssr-claim-full-claude-moved-guide-1c299d64-5ec0-47db-b28d-8833bbe618c8-df80ctky.json",
+      "sha256": "8106d27962d266a3b39a22f451044dec12e0f3bd54b064bcd115e487599c9307",
+      "complete_delivery": [
+        {
+          "call_event": 49,
+          "response_event": 50,
+          "call_id": "toolu_019qZmbeHHHpW3H4gxzX3A1o",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261107T160449332Z-ssr-claim-full-claude-moved-guide-1898128f-9094-4709-9e57-83a332d91510-2kjndd_s.json",
+      "sha256": "fc27171d19099c61b6a5d032d9c63473d3e0641b1d650772c4e9eeee2a682fe2",
+      "complete_delivery": [
+        {
+          "call_event": 51,
+          "response_event": 52,
+          "call_id": "toolu_01A5gn4FXmf82k57EMV272YD",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "facts/20261107T161934141Z-ssr-claim-full-claude-moved-guide-184e475e-8edf-48e2-8d13-2b150d12f280-wi7bsb7t.json",
+      "sha256": "fb80f7cad425c2078dcc21a3b0ceae55be066a41cee35c7b2705da3970950446",
+      "complete_delivery": [
+        {
+          "call_event": 53,
+          "response_event": 54,
+          "call_id": "toolu_01AEEBfF9DfsYoiHvXzSegvs",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/001.txt",
+      "sha256": "b9dd267653838ba8fedb6a23b6173254b930948d36492c5c5fdac0219e733f8b",
+      "complete_delivery": [
+        {
+          "call_event": 21,
+          "response_event": 22,
+          "call_id": "toolu_019HSPABMxcgqYqxL7PCjnnj",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/002.txt",
+      "sha256": "098f558258086dd934d009abf9d0a56f49a7e2618f3cd21050553037c0e86075",
+      "complete_delivery": [
+        {
+          "call_event": 23,
+          "response_event": 24,
+          "call_id": "toolu_019gSgaseZXciTiuarit4GH8",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/003.txt",
+      "sha256": "4449bfe65c1cc6a59bc692a8077377a6e56b0f378870be229000a70a943bb609",
+      "complete_delivery": [
+        {
+          "call_event": 25,
+          "response_event": 26,
+          "call_id": "toolu_01EUVYD8epodTvCnDWhRPZEd",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/004.txt",
+      "sha256": "c7a759fbfc829c024b57d3a79f63fa6a4718e173dfb5a7e2b943f4e44f47a5b9",
+      "complete_delivery": [
+        {
+          "call_event": 27,
+          "response_event": 28,
+          "call_id": "toolu_01MdgHyWmD5bL21MNJb9Kj9X",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/005.txt",
+      "sha256": "b856f45737cb568d58ee7ebbec0b12123c4be3fac93c6994c64508ca86763365",
+      "complete_delivery": [
+        {
+          "call_event": 29,
+          "response_event": 30,
+          "call_id": "toolu_01Czctn3CSjp9G8avBkbq193",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/006.txt",
+      "sha256": "64f544d394b479f0e7a30c6bdd56e52aaf7352509c0f8b08d4148994eb628932",
+      "complete_delivery": [
+        {
+          "call_event": 31,
+          "response_event": 32,
+          "call_id": "toolu_01QFmepfM59LgN1V25Kq4VHo",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/007.txt",
+      "sha256": "06fdfdc2080354658cfa73fbe443799dafcb9afc2bdd41f152bff8d3fe72f82f",
+      "complete_delivery": [
+        {
+          "call_event": 33,
+          "response_event": 34,
+          "call_id": "toolu_01ELqHfLreYjrEjtzHjZjYT4",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/008.txt",
+      "sha256": "7e28eb12cddc29de9f3ef2ba7b3f759bbb92af864f573f4c8556b441344799b0",
+      "complete_delivery": [
+        {
+          "call_event": 35,
+          "response_event": 36,
+          "call_id": "toolu_01Y3VGrYjRgcxi8FqFYfBeXE",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/009.txt",
+      "sha256": "9ea5c2f793cd0128db290b87d35b46f8a9fe6f7d32f6a44bfea32530e49ac2ab",
+      "complete_delivery": [
+        {
+          "call_event": 37,
+          "response_event": 38,
+          "call_id": "toolu_013Xicu6u5BLPHkuKdru14w9",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/010.txt",
+      "sha256": "4b72fb7e8ff4beebcbf95282e502b7427a9622c21693fd48e397b044a603f11b",
+      "complete_delivery": [
+        {
+          "call_event": 39,
+          "response_event": 40,
+          "call_id": "toolu_01NJJHEF45Zii772xQobTzfk",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/011.txt",
+      "sha256": "9e97a73685d83fddaddac027c2e1f38fa225d087f5f3a32ff8da1f9937aaf2b5",
+      "complete_delivery": [
+        {
+          "call_event": 41,
+          "response_event": 42,
+          "call_id": "toolu_01KUH4xjfdTiDk7nuGUdWmbH",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/012.txt",
+      "sha256": "96144ff7b607b53498e91dee88d5e34f254459c04a29da7afeb3bebfc71e22b6",
+      "complete_delivery": [
+        {
+          "call_event": 43,
+          "response_event": 44,
+          "call_id": "toolu_01X8kwkkuSLMZzWicE3UK8j2",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/013.txt",
+      "sha256": "c61c0daedb88e2462da72311fa3fc547be7632cf571a5a2e5d50d32448ff992f",
+      "complete_delivery": [
+        {
+          "call_event": 45,
+          "response_event": 46,
+          "call_id": "toolu_01Qi78N7kHMrwny8NDUjerZW",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "objects/014.txt",
+      "sha256": "afd80dc1ebc98978102750682bac98af191e12ad272aaf1ce98dbbdb03dab7ac",
+      "complete_delivery": [
+        {
+          "call_event": 47,
+          "response_event": 48,
+          "call_id": "toolu_013mnodLoiMSFu5mEDVvYYa7",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261107T155253206Z-ssr-claim-full-claude-moved-guide-1c299d64-5ec0-47db-b28d-8833bbe618c8-df80ctky.md",
+      "sha256": "31d2c4544ff13d80e7cc6cc291f8ef306657c0c35101ab1a146005e267d83c18",
+      "complete_delivery": [
+        {
+          "call_event": 58,
+          "response_event": 59,
+          "call_id": "toolu_01U1ZVcr9eQd4MkAkRZzXh6c",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261107T160449332Z-ssr-claim-full-claude-moved-guide-1898128f-9094-4709-9e57-83a332d91510-2kjndd_s.md",
+      "sha256": "ab9413b4896887e68d02d5cc5408989796374fd36bfba7c1dfb32530fe545c4d",
+      "complete_delivery": [
+        {
+          "call_event": 60,
+          "response_event": 61,
+          "call_id": "toolu_011CQmtChPZYZK2SZbQE4CDW",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    },
+    {
+      "path": "outputs/20261107T161934141Z-ssr-claim-full-claude-moved-guide-184e475e-8edf-48e2-8d13-2b150d12f280-wi7bsb7t.md",
+      "sha256": "010bc8f5e66012168ca4bcc2e2d7de2e4a9b2ba5291bae5927fdfb45a73c64fe",
+      "complete_delivery": [
+        {
+          "call_event": 62,
+          "response_event": 63,
+          "call_id": "toolu_01768n4boArKAWHjFvAFrfH6",
+          "native_read_binary_text_decoding": false,
+          "raw_byte_delivery_limit": null
+        }
+      ]
+    }
+  ],
+  "full_inventory_verified": true,
+  "protected_inputs_verified": 27,
+  "all_calls": [
+    {
+      "event": 3,
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*",
+        "path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i/workspace/evidence"
+      }
+    },
+    {
+      "event": 4,
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*"
+      }
+    },
+    {
+      "event": 8,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i/workspace/fixture/EVALUATION-INDEX.json"
+      }
+    },
+    {
+      "event": 10,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i/workspace/fixture/policy.txt"
+      }
+    },
+    {
+      "event": 12,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i/workspace/fixture/INTERPRETATION.md"
+      }
+    },
+    {
+      "event": 14,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i/workspace/fixture/criteria/moved-guide.md"
+      }
+    },
+    {
+      "event": 16,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i/workspace/fixture/criteria/moved-guide-inherited.md"
+      }
+    },
+    {
+      "event": 18,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i/workspace/fixture/criteria/moved-guide-expected.json"
+      }
+    },
+    {
+      "event": 21,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i/workspace/fixture/objects/001.txt"
+      }
+    },
+    {
+      "event": 23,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i/workspace/fixture/objects/002.txt"
+      }
+    },
+    {
+      "event": 25,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i/workspace/fixture/objects/003.txt"
+      }
+    },
+    {
+      "event": 27,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i/workspace/fixture/objects/004.txt"
+      }
+    },
+    {
+      "event": 29,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i/workspace/fixture/objects/005.txt"
+      }
+    },
+    {
+      "event": 31,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i/workspace/fixture/objects/006.txt"
+      }
+    },
+    {
+      "event": 33,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i/workspace/fixture/objects/007.txt"
+      }
+    },
+    {
+      "event": 35,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i/workspace/fixture/objects/008.txt"
+      }
+    },
+    {
+      "event": 37,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i/workspace/fixture/objects/009.txt"
+      }
+    },
+    {
+      "event": 39,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i/workspace/fixture/objects/010.txt"
+      }
+    },
+    {
+      "event": 41,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i/workspace/fixture/objects/011.txt"
+      }
+    },
+    {
+      "event": 43,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i/workspace/fixture/objects/012.txt"
+      }
+    },
+    {
+      "event": 45,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i/workspace/fixture/objects/013.txt"
+      }
+    },
+    {
+      "event": 47,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i/workspace/fixture/objects/014.txt"
+      }
+    },
+    {
+      "event": 49,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i/workspace/fixture/facts/20261107T155253206Z-ssr-claim-full-claude-moved-guide-1c299d64-5ec0-47db-b28d-8833bbe618c8-df80ctky.json"
+      }
+    },
+    {
+      "event": 51,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i/workspace/fixture/facts/20261107T160449332Z-ssr-claim-full-claude-moved-guide-1898128f-9094-4709-9e57-83a332d91510-2kjndd_s.json"
+      }
+    },
+    {
+      "event": 53,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i/workspace/fixture/facts/20261107T161934141Z-ssr-claim-full-claude-moved-guide-184e475e-8edf-48e2-8d13-2b150d12f280-wi7bsb7t.json"
+      }
+    },
+    {
+      "event": 58,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i/workspace/fixture/outputs/20261107T155253206Z-ssr-claim-full-claude-moved-guide-1c299d64-5ec0-47db-b28d-8833bbe618c8-df80ctky.md"
+      }
+    },
+    {
+      "event": 60,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i/workspace/fixture/outputs/20261107T160449332Z-ssr-claim-full-claude-moved-guide-1898128f-9094-4709-9e57-83a332d91510-2kjndd_s.md"
+      }
+    },
+    {
+      "event": 62,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i/workspace/fixture/outputs/20261107T161934141Z-ssr-claim-full-claude-moved-guide-184e475e-8edf-48e2-8d13-2b150d12f280-wi7bsb7t.md"
+      }
+    },
+    {
+      "event": 75,
+      "name": "Read",
+      "input": {
+        "file_path": "/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/skilltest-runs/20261107T164613897Z-ssr-claim-full-claude-moved-review-8b48b8b0-a137-4861-a16f-f9fb1c5d84ce-27ht5_3i/workspace/fixture/prior-assessment.md"
+      }
+    }
+  ],
+  "semantic_audit": "All three moved guides meet all nine factors. The reviewer read 26 required files before event 74 and accessed the prior at 75. Each four-file commit repairs all current paths, protects the existing guides and returns the entire correct guide from both working directories. The replay controller uses an absolute exporter path. All first-pass judgments agree with the prior.",
+  "first_pass_sha256": "71a7aec9664c8a09f9478620bbd2329042de22e3ef290a4a748826434a81d33c",
+  "post_prior_sha256": "998f06539286c12f2da4b1bcb72e9e7e2e19729ca3eb4eb9885afc96567fc711",
+  "post_prior_status": "separate reviewer comparison retained",
+  "audit_controller": {
+    "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/controllers/full-review-audit.py",
+    "sha256": "884d67ebbdc5b9339607b1620ba9bf281aecc15bf365d60f0934701a0bfb16cf"
+  },
+  "limits": [
+    "Visible labels; prior physically present but timing audited.",
+    "Opus reviewer differs from active Codex assessor; Opus subjects share reviewer family.",
+    "Exposed development cases, no causal contribution or reliability claim."
+  ],
+  "precision_notes": [
+    "The report for repetition 1 conflated the exact path with broader filename matches. The third commit claims a repeated post-edit search absent from its trace. The replay was performed by the assessment controller and supplied to the read-only reviewer."
+  ]
+}

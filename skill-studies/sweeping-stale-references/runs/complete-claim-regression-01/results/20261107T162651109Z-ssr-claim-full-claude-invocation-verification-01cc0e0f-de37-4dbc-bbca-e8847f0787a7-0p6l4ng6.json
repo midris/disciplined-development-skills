@@ -1,0 +1,85 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claim-full-claude-01-invocation-verification-finalist-3",
+  "assessed_at": "2026-11-07T16:27:20.170509+00:00",
+  "run_id": "20261107T162651109Z-ssr-claim-full-claude-invocation-verification-01cc0e0f-de37-4dbc-bbca-e8847f0787a7-0p6l4ng6",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/claude-invocation-verification-manifest.json",
+    "sha256": "0bc486c7a7270805af95082f5d2647e47ffcd1c71c3c651a8d17695d2e8f67ab",
+    "version": "1",
+    "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T162651109Z-ssr-claim-full-claude-invocation-verification-01cc0e0f-de37-4dbc-bbca-e8847f0787a7-0p6l4ng6.inventory.json",
+        "sha256": "34d040cf960d1577504162d58e112aac6e1cb99c5ca87a5e9d044fe18f74c975",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T162651109Z-ssr-claim-full-claude-invocation-verification-01cc0e0f-de37-4dbc-bbca-e8847f0787a7-0p6l4ng6/stdout.txt",
+        "sha256": "133d26a91a31e06ce8e9a8a0bff9547c89ac976490b71965d5ef01172b90acba",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T162651109Z-ssr-claim-full-claude-invocation-verification-01cc0e0f-de37-4dbc-bbca-e8847f0787a7-0p6l4ng6/runner.log",
+        "sha256": "cb1905e6d399d606dcc3040c33e7190dd4080953b326bedd992b8468fb7b9bc3",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T162651109Z-ssr-claim-full-claude-invocation-verification-01cc0e0f-de37-4dbc-bbca-e8847f0787a7-0p6l4ng6/result.json",
+        "sha256": "5614e9d6d3c3ae71609a956588a98918a2063c4f7872cf4bdf897d4635630958",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Verified assigned inputs, provider and ordered capture. Setup valid for this case.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "Claude ran the requested tests once, then used Grep to sweep the old setting and triaged three vendor/history matches. No native Skill load occurred, but applying the sweep exceeded a verification-only task under D1.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "not measured",
+  "procedural_summary": "Correct test result and unchanged project. Unwanted search/application after testing. Distinct from a false-positive skill load.",
+  "observations": [],
+  "uncertainty": []
+}

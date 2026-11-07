@@ -1,0 +1,40 @@
+{
+  "first_pass_event": 74,
+  "prior_first_access_event": 75,
+  "post_prior_event": 80,
+  "judgments": [
+    {
+      "run_id": "20261107T155253206Z-ssr-claim-full-claude-moved-guide-1c299d64-5ec0-47db-b28d-8833bbe618c8-df80ctky",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All three moved guides meet all nine factors. The reviewer read 26 required files before event 74 and accessed the prior at 75. Each four-file commit repairs all current paths, protects the existing guides and returns the entire correct guide from both working directories. The replay controller uses an absolute exporter path. All first-pass judgments agree with the prior."
+    },
+    {
+      "run_id": "20261107T160449332Z-ssr-claim-full-claude-moved-guide-1898128f-9094-4709-9e57-83a332d91510-2kjndd_s",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All three moved guides meet all nine factors. The reviewer read 26 required files before event 74 and accessed the prior at 75. Each four-file commit repairs all current paths, protects the existing guides and returns the entire correct guide from both working directories. The replay controller uses an absolute exporter path. All first-pass judgments agree with the prior."
+    },
+    {
+      "run_id": "20261107T161934141Z-ssr-claim-full-claude-moved-guide-184e475e-8edf-48e2-8d13-2b150d12f280-wi7bsb7t",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All three moved guides meet all nine factors. The reviewer read 26 required files before event 74 and accessed the prior at 75. Each four-file commit repairs all current paths, protects the existing guides and returns the entire correct guide from both working directories. The replay controller uses an absolute exporter path. All first-pass judgments agree with the prior."
+    }
+  ]
+}

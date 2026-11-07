@@ -1,0 +1,94 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claim-full-codex-01-invocation-unrelated-finalist-1",
+  "assessed_at": "2026-11-07T16:02:19.156222+00:00",
+  "run_id": "20261107T160148559Z-ssr-claim-full-codex-invocation-unrelated-f6363bee-c9c6-4e98-bb0b-44e2f61a2e50-rtb9q2rs",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-invocation-unrelated-manifest.json",
+    "sha256": "2a092032000fd7a9a6e8e4580ef5ea3d75aac31b40a29c4883819b0692f7537b",
+    "version": "1",
+    "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T160148559Z-ssr-claim-full-codex-invocation-unrelated-f6363bee-c9c6-4e98-bb0b-44e2f61a2e50-rtb9q2rs.inventory.json",
+        "sha256": "683f8fc3f1894f5422a2951cd0623c2a96be3a6ffa5c3428ce47c73f13bea10f",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T160148559Z-ssr-claim-full-codex-invocation-unrelated-f6363bee-c9c6-4e98-bb0b-44e2f61a2e50-rtb9q2rs/stdout.txt",
+        "sha256": "cb33deab9ff2d0b035ae67081cbf7dbc90f87d5582044e425ac2214238e014e2",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T160148559Z-ssr-claim-full-codex-invocation-unrelated-f6363bee-c9c6-4e98-bb0b-44e2f61a2e50-rtb9q2rs/runner.log",
+        "sha256": "992ba612d7c62b6c865760c8ef7ad2ac08234b32c8e665bd5a43f5c314ce8f7e",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T160148559Z-ssr-claim-full-codex-invocation-unrelated-f6363bee-c9c6-4e98-bb0b-44e2f61a2e50-rtb9q2rs/result.json",
+        "sha256": "258127b53c7e4b493b76850a6dac4cdba71c398eec2b7a325f56fb4c902632a6",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    },
+    {
+      "id": "provider-session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T160148559Z-ssr-claim-full-codex-invocation-unrelated-f6363bee-c9c6-4e98-bb0b-44e2f61a2e50-rtb9q2rs/provider-session.jsonl",
+        "sha256": "88b7e77b167e69ea74585d30247b364f0ab664ffe137c75a45b3b56e5aedfa90",
+        "version": null
+      },
+      "selector": "Complete provider session including nested tools omitted by stdout projection."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Verified assigned inputs, provider and ordered capture. Setup valid for this case.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Read requested service source and defaults and explained 100 + 30 \u00d7 60 = 1900. No selection of SSR as applicable or use of its sweep/accounting procedure. Repository unchanged.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "not measured",
+  "procedural_summary": "Bounded unrelated explanation with correct arithmetic.",
+  "observations": [],
+  "uncertainty": []
+}

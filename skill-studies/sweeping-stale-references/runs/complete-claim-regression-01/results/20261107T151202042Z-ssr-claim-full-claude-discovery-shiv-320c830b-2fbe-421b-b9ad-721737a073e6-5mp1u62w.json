@@ -1,0 +1,149 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claim-full-claude-01-discovery-shiv-finalist-1",
+  "assessed_at": "2026-11-07T15:13:01.313381+00:00",
+  "run_id": "20261107T151202042Z-ssr-claim-full-claude-discovery-shiv-320c830b-2fbe-421b-b9ad-721737a073e6-5mp1u62w",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/claude-discovery-shiv-manifest.json",
+    "sha256": "45d30f780e6138968f836cee4a1646e0331480d925c342fa55e738398abf57c1",
+    "version": "1",
+    "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151202042Z-ssr-claim-full-claude-discovery-shiv-320c830b-2fbe-421b-b9ad-721737a073e6-5mp1u62w.inventory.json",
+        "sha256": "e95335b9d515f70e838a80c5bfa0dd19d8c21c8a454a3b723014e4821b232b24",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151202042Z-ssr-claim-full-claude-discovery-shiv-320c830b-2fbe-421b-b9ad-721737a073e6-5mp1u62w/stdout.txt",
+        "sha256": "7e2a4c007303618835a42bb653fa3a55a7ef1faf6e2fb0986959b189c09dac4a",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151202042Z-ssr-claim-full-claude-discovery-shiv-320c830b-2fbe-421b-b9ad-721737a073e6-5mp1u62w/runner.log",
+        "sha256": "ee4bdf40337b982b121531fbb798a49b217bdd339cfb4638a7818e47e1c9128a",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151202042Z-ssr-claim-full-claude-discovery-shiv-320c830b-2fbe-421b-b9ad-721737a073e6-5mp1u62w/result.json",
+        "sha256": "c06cf51e588b563e8dbb2f1c43bac11b09659713e55593748b567ef8300a99cd",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    },
+    {
+      "id": "replay",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/replays/slot-04.json",
+        "sha256": "28db3161b68f4214a212c82433028fe3eb41a97ee36e4e24637fd9f3e7c20816",
+        "version": null
+      },
+      "selector": "Deterministic observations from disposable final-project copy, not semantic verdicts."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Verified assigned inputs, provider and ordered capture. Setup valid for this case.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All four consumer archives build and execute the intended greeting and the script works from outside the repository.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Canonical long option and short alias work, retired option rejected without an artifact, independent inventory tool and history preserved. Configured project comparison confirms protected files.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All four consumer fixes present in the final clean committed tree.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Search and local interface inspection preceded edits. Triage distinguishes the current consumers, independent inventory tool, retired-option assertions and historical record.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One complete repair commit after the exact supplied baseline.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "Commit 6c19ff2 groups required independent tool and documentation across paths. It explains preservation of negative assertions and all four changes.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "All executable checks pass. Claude recovered from a cache error, executed its archive with a writable cache and amended its verification statement. Replay comparison against the generic fixture flags the provider-specific .gitignore, which matches the configured Claude source.",
+  "observations": [],
+  "uncertainty": []
+}
