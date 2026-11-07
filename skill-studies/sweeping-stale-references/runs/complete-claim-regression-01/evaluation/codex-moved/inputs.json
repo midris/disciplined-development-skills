@@ -1,0 +1,177 @@
+{
+  "packet_id": "codex-moved",
+  "output_count": 3,
+  "functional_factors": 9,
+  "subject_indexes": [
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/evaluation/subject-index-snapshots/remaining/claim-full-codex-01-run-index.json",
+      "sha256": "d535fe215b5560a9b75ed6e7771a248d2b978f9682deb773dd5670ea66b6699f"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/evaluation/subject-index-snapshots/remaining/claim-full-claude-01-run-index.json",
+      "sha256": "1e7b0582cc891de10797232cc152085ef510a4d83dd8e851664005c91b1b2c83"
+    }
+  ],
+  "subject_assessments": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/scores/20261107T155116328Z-ssr-claim-full-codex-moved-guide-7fd5ccfa-3b08-4d53-a8f7-346bd32ead34-jku4lpto.json",
+      "sha256": "7bb6d36544a43ee949efb93b496debc1a776114d0c87380b18981d72f5b60c54"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/scores/20261107T160534948Z-ssr-claim-full-codex-moved-guide-0161bc9e-a91c-4b80-b7b5-08a654cd91d8-t08yz9lp.json",
+      "sha256": "0c2c5ddbf4deba891bd78f18cbc624f282c65cb50d78afe432abe15465fda641"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/scores/20261107T161803379Z-ssr-claim-full-codex-moved-guide-d1628ee0-5e7d-4686-b233-6083048343f6-r1acwadq.json",
+      "sha256": "bdcfc1b8ae16a6cca4faa0c67a0b5755c571dd1199a7b4245a0e238190b965dd"
+    }
+  ],
+  "configuration": {
+    "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/evaluation/codex-moved/config.json",
+    "sha256": "94e1302d494dcdf1017b0c3bc4439ec1b66e6ab2d3d33d1cd0adccb4308a07f0"
+  },
+  "prompt": {
+    "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/evaluation/prompt.md",
+    "sha256": "6e5dd9cf0a64d845a0dbc32a1e80aa47cc22aadb03aedabdc8786c06e62dbecb"
+  },
+  "input_files": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/codex-moved/EVALUATION-INDEX.json",
+      "sha256": "a61d643a5a36d4267ffebf9a5f9deb3aec30b151d290733f4e2e6fd12827cdd8"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/codex-moved/INTERPRETATION.md",
+      "sha256": "08450279e8eeb3887f1f9e2c3a38bb1631ca45ac459fcd461a9ba283829e7c85"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/codex-moved/criteria/moved-guide-expected.json",
+      "sha256": "7c2539f37f33b37e68339252cea73a7020c0d0a2f030ea6f562e826682c38730"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/codex-moved/criteria/moved-guide-inherited.md",
+      "sha256": "4457007bc2d0fa830e3f2b5cc3b99997827dfd1880878d403d72fbf04d8f6171"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/codex-moved/criteria/moved-guide.md",
+      "sha256": "b815632838c4045bc93c9b2392ea8ca7f656e63ee9cd2b9f0b6ad958439d4d70"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/codex-moved/facts/20261107T155116328Z-ssr-claim-full-codex-moved-guide-7fd5ccfa-3b08-4d53-a8f7-346bd32ead34-jku4lpto.json",
+      "sha256": "b317658bfac87541607466073050b958ef6d1b17dbafdbc55612b1ec671c9ea4"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/codex-moved/facts/20261107T160534948Z-ssr-claim-full-codex-moved-guide-0161bc9e-a91c-4b80-b7b5-08a654cd91d8-t08yz9lp.json",
+      "sha256": "193cf886d3e4885dafe6fd06b482d221cd9dfdd677fa10b52032018c92ddff31"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/codex-moved/facts/20261107T161803379Z-ssr-claim-full-codex-moved-guide-d1628ee0-5e7d-4686-b233-6083048343f6-r1acwadq.json",
+      "sha256": "8b45a967ee681cb880d2c16773c26cc8fa51ee6ddbbe2596d7a3373dbc922ca4"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/codex-moved/objects/001.txt",
+      "sha256": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/codex-moved/objects/002.txt",
+      "sha256": "098f558258086dd934d009abf9d0a56f49a7e2618f3cd21050553037c0e86075"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/codex-moved/objects/003.txt",
+      "sha256": "4449bfe65c1cc6a59bc692a8077377a6e56b0f378870be229000a70a943bb609"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/codex-moved/objects/004.txt",
+      "sha256": "c7a759fbfc829c024b57d3a79f63fa6a4718e173dfb5a7e2b943f4e44f47a5b9"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/codex-moved/objects/005.txt",
+      "sha256": "b856f45737cb568d58ee7ebbec0b12123c4be3fac93c6994c64508ca86763365"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/codex-moved/objects/006.txt",
+      "sha256": "64f544d394b479f0e7a30c6bdd56e52aaf7352509c0f8b08d4148994eb628932"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/codex-moved/objects/007.txt",
+      "sha256": "06fdfdc2080354658cfa73fbe443799dafcb9afc2bdd41f152bff8d3fe72f82f"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/codex-moved/objects/008.txt",
+      "sha256": "7e28eb12cddc29de9f3ef2ba7b3f759bbb92af864f573f4c8556b441344799b0"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/codex-moved/objects/009.txt",
+      "sha256": "9ea5c2f793cd0128db290b87d35b46f8a9fe6f7d32f6a44bfea32530e49ac2ab"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/codex-moved/objects/010.txt",
+      "sha256": "4b72fb7e8ff4beebcbf95282e502b7427a9622c21693fd48e397b044a603f11b"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/codex-moved/objects/011.txt",
+      "sha256": "9e97a73685d83fddaddac027c2e1f38fa225d087f5f3a32ff8da1f9937aaf2b5"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/codex-moved/objects/012.txt",
+      "sha256": "96144ff7b607b53498e91dee88d5e34f254459c04a29da7afeb3bebfc71e22b6"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/codex-moved/objects/013.txt",
+      "sha256": "c61c0daedb88e2462da72311fa3fc547be7632cf571a5a2e5d50d32448ff992f"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/codex-moved/objects/014.txt",
+      "sha256": "afd80dc1ebc98978102750682bac98af191e12ad272aaf1ce98dbbdb03dab7ac"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/codex-moved/outputs/20261107T155116328Z-ssr-claim-full-codex-moved-guide-7fd5ccfa-3b08-4d53-a8f7-346bd32ead34-jku4lpto.md",
+      "sha256": "87cf621bca8e43474ea655e2b65448ea6a6c6b4e3c2bd8441142e0a5d062a50d"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/codex-moved/outputs/20261107T160534948Z-ssr-claim-full-codex-moved-guide-0161bc9e-a91c-4b80-b7b5-08a654cd91d8-t08yz9lp.md",
+      "sha256": "e42c2d961fe51174bea45f7e174a34f1e14f6b0c6d51a63b8c2e4c18b0ce790a"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/codex-moved/outputs/20261107T161803379Z-ssr-claim-full-codex-moved-guide-d1628ee0-5e7d-4686-b233-6083048343f6-r1acwadq.md",
+      "sha256": "dd95c897542b4f09c1be0bc70a9b7b8f5a3fca3d4e9bdf2fde8b68b6a8dd1c09"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/codex-moved/policy.txt",
+      "sha256": "cc030c28bcfc36c20b700f00d2307b2933ee7d884a0d0a87d14ed8b0da2b92f5"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/codex-moved/prior-assessment.md",
+      "sha256": "9c1c4e8e742cb531b08cb2c9981536b935ded9a572945b132b2282a06a82a941"
+    }
+  ],
+  "controller": {
+    "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/controllers/full-reviews.py",
+    "sha256": "3030d89045602a735eb72627897826706a6b4c1dc28bd29c4bb86ea5c9fb9784"
+  },
+  "controller_support": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/controllers/full-packets-remaining.py",
+      "sha256": "9084b1006ef8096b3482f485bc786ba3bb7a41147e6a40c1f55379968ed02510"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/controllers/full-review-audit.py",
+      "sha256": "884d67ebbdc5b9339607b1620ba9bf281aecc15bf365d60f0934701a0bfb16cf"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/controllers/full-review-finish.py",
+      "sha256": "6b890fbe25f1d50a4d58e0872a6d9586e8cf8e6b14a6ab6304f4b7918f199d8a"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/runtime-identities.json",
+      "sha256": "b734cc299b50cc696cc7c1a3dde0c90ec446dd370bf0630ebc7ca44c11a5a867"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/runtime_setup.py",
+      "sha256": "91c8a2a5fccaa22affc662fe8824a2502be8e373e363520f21033a25838afdb2"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/body_delivery.py",
+      "sha256": "8e084894e036286c8b7735df6a6a1d160eef4e74d609626f1bdfd1667ba1c87a"
+    }
+  ]
+}

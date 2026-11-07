@@ -1,0 +1,121 @@
+{
+  "schema_version": "0.2",
+  "id": "ssr-claim-full-claude-moved-review",
+  "prompt": "../prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-moved/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-moved/INTERPRETATION.md",
+      "target": "INTERPRETATION.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-moved/criteria/moved-guide-expected.json",
+      "target": "criteria/moved-guide-expected.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-moved/criteria/moved-guide-inherited.md",
+      "target": "criteria/moved-guide-inherited.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-moved/criteria/moved-guide.md",
+      "target": "criteria/moved-guide.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-moved/facts/20261107T155253206Z-ssr-claim-full-claude-moved-guide-1c299d64-5ec0-47db-b28d-8833bbe618c8-df80ctky.json",
+      "target": "facts/20261107T155253206Z-ssr-claim-full-claude-moved-guide-1c299d64-5ec0-47db-b28d-8833bbe618c8-df80ctky.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-moved/facts/20261107T160449332Z-ssr-claim-full-claude-moved-guide-1898128f-9094-4709-9e57-83a332d91510-2kjndd_s.json",
+      "target": "facts/20261107T160449332Z-ssr-claim-full-claude-moved-guide-1898128f-9094-4709-9e57-83a332d91510-2kjndd_s.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-moved/facts/20261107T161934141Z-ssr-claim-full-claude-moved-guide-184e475e-8edf-48e2-8d13-2b150d12f280-wi7bsb7t.json",
+      "target": "facts/20261107T161934141Z-ssr-claim-full-claude-moved-guide-184e475e-8edf-48e2-8d13-2b150d12f280-wi7bsb7t.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-moved/objects/001.txt",
+      "target": "objects/001.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-moved/objects/002.txt",
+      "target": "objects/002.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-moved/objects/003.txt",
+      "target": "objects/003.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-moved/objects/004.txt",
+      "target": "objects/004.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-moved/objects/005.txt",
+      "target": "objects/005.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-moved/objects/006.txt",
+      "target": "objects/006.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-moved/objects/007.txt",
+      "target": "objects/007.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-moved/objects/008.txt",
+      "target": "objects/008.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-moved/objects/009.txt",
+      "target": "objects/009.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-moved/objects/010.txt",
+      "target": "objects/010.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-moved/objects/011.txt",
+      "target": "objects/011.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-moved/objects/012.txt",
+      "target": "objects/012.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-moved/objects/013.txt",
+      "target": "objects/013.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-moved/objects/014.txt",
+      "target": "objects/014.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-moved/outputs/20261107T155253206Z-ssr-claim-full-claude-moved-guide-1c299d64-5ec0-47db-b28d-8833bbe618c8-df80ctky.md",
+      "target": "outputs/20261107T155253206Z-ssr-claim-full-claude-moved-guide-1c299d64-5ec0-47db-b28d-8833bbe618c8-df80ctky.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-moved/outputs/20261107T160449332Z-ssr-claim-full-claude-moved-guide-1898128f-9094-4709-9e57-83a332d91510-2kjndd_s.md",
+      "target": "outputs/20261107T160449332Z-ssr-claim-full-claude-moved-guide-1898128f-9094-4709-9e57-83a332d91510-2kjndd_s.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-moved/outputs/20261107T161934141Z-ssr-claim-full-claude-moved-guide-184e475e-8edf-48e2-8d13-2b150d12f280-wi7bsb7t.md",
+      "target": "outputs/20261107T161934141Z-ssr-claim-full-claude-moved-guide-184e475e-8edf-48e2-8d13-2b150d12f280-wi7bsb7t.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-moved/policy.txt",
+      "target": "policy.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-moved/prior-assessment.md",
+      "target": "prior-assessment.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}
