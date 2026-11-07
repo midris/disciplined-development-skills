@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `sweeping-stale-references`
 Status: count-free-regression-01 complete; compact adoption and owner-approved count removal validated within the declared regression scope.
-Current action: retain the shipped skill and consider broader regression of the [complete-claim candidate](runs/complete-claim-01/complete-claim-01-assessment.md); its eight-subject screen and two output reviews pass without a demonstrated condition advantage. The [description screen](runs/description-discovery-01/description-discovery-01-assessment.md) stopped after 13 subjects: candidate loading succeeded, but a Codex repair left stale troubleshooting text. Full testing and all reviews remain unrun; further changes require a revised proposal.
+Current action: run the owner-approved [complete-claim full regression](#validation-complete-claim-regression-01).
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](runs/core-baseline-01/core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -288,6 +288,106 @@ SSR collection used config schema 0.2 and result schema 0.4; retained bundles ke
 Control contribution claims require evidence that omitted guidance was not loaded. Record limits on observed isolation rather than claiming exhaustive host-wide exclusion.
 
 Pre-baseline development is closed at two pairs. Do not reopen it for a new facet; a named readiness defect requires a separately authorized diagnostic exception.
+
+### Validation: complete-claim-regression-01
+
+Authority: owner requested full regression on both providers with the exact revised paragraph and fixed description. The [design](../../plans/specs/2026-11-07-ssr-complete-claim-regression.md) fixes 66 subjects and ten reviews.
+Status: preparation and runtime qualification.
+The frozen finalist SHA-256 is `9bdd02d316c57fd320fe25feddbe30d08af57ffc541742b40b1d08ec3e68c224`. Both subject models, tasks, evidence boundaries and criteria follow the preceding full regression. Qualify changed runtime executables before dispatch.
+Private evidence: `/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01`.
+
+### Batch: claim-full-codex-01
+
+Status: authorized for full regression following qualification and readiness.
+Authority: complete-claim-regression-01 above and its fixed stage gate.
+Scope: 33 subjects; provider-local orders 1–12 are focused and 13–33 are conditional remaining cases.
+Inclusion: descriptive-only; Include all valid-setup executions regardless of outcome. Preserve stopped, excluded and unattempted slots. No automatic retry or replacement. No retries are allocated.
+Selected manifests: [pressure-repair](runs/complete-claim-regression-01/preparation/manifests/codex-pressure-repair-manifest.json), [discovery-shiv](runs/complete-claim-regression-01/preparation/manifests/codex-discovery-shiv-manifest.json), [local-change](runs/complete-claim-regression-01/preparation/manifests/codex-local-change-manifest.json), [large-sweep-account](runs/complete-claim-regression-01/preparation/manifests/codex-large-sweep-account-manifest.json), [initiating-change](runs/complete-claim-regression-01/preparation/manifests/codex-initiating-change-manifest.json), [moved-guide](runs/complete-claim-regression-01/preparation/manifests/codex-moved-guide-manifest.json), [semantic-delivery](runs/complete-claim-regression-01/preparation/manifests/codex-semantic-delivery-manifest.json), [invocation-change](runs/complete-claim-regression-01/preparation/manifests/codex-invocation-change-manifest.json), [invocation-review](runs/complete-claim-regression-01/preparation/manifests/codex-invocation-review-manifest.json), [invocation-verification](runs/complete-claim-regression-01/preparation/manifests/codex-invocation-verification-manifest.json), [invocation-unrelated](runs/complete-claim-regression-01/preparation/manifests/codex-invocation-unrelated-manifest.json).
+Attempt index: [claim-full-codex-01-run-index.json](runs/complete-claim-regression-01/claim-full-codex-01-run-index.json).
+Assessment: pending.
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | pressure-repair | finalist | 1 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-pressure-repair.json` |
+| 2 | discovery-shiv | finalist | 1 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-discovery-shiv.json` |
+| 3 | local-change | finalist | 1 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-local-change.json` |
+| 4 | large-sweep-account | finalist | 1 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-large-sweep-account.json` |
+| 5 | pressure-repair | finalist | 2 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-pressure-repair.json` |
+| 6 | discovery-shiv | finalist | 2 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-discovery-shiv.json` |
+| 7 | local-change | finalist | 2 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-local-change.json` |
+| 8 | large-sweep-account | finalist | 2 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-large-sweep-account.json` |
+| 9 | pressure-repair | finalist | 3 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-pressure-repair.json` |
+| 10 | discovery-shiv | finalist | 3 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-discovery-shiv.json` |
+| 11 | local-change | finalist | 3 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-local-change.json` |
+| 12 | large-sweep-account | finalist | 3 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-large-sweep-account.json` |
+| 13 | initiating-change | finalist | 1 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-initiating-change.json` |
+| 14 | moved-guide | finalist | 1 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-moved-guide.json` |
+| 15 | semantic-delivery | finalist | 1 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-semantic-delivery.json` |
+| 16 | invocation-change | finalist | 1 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-invocation-change.json` |
+| 17 | invocation-review | finalist | 1 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-invocation-review.json` |
+| 18 | invocation-verification | finalist | 1 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-invocation-verification.json` |
+| 19 | invocation-unrelated | finalist | 1 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-invocation-unrelated.json` |
+| 20 | initiating-change | finalist | 2 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-initiating-change.json` |
+| 21 | moved-guide | finalist | 2 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-moved-guide.json` |
+| 22 | semantic-delivery | finalist | 2 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-semantic-delivery.json` |
+| 23 | invocation-change | finalist | 2 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-invocation-change.json` |
+| 24 | invocation-review | finalist | 2 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-invocation-review.json` |
+| 25 | invocation-verification | finalist | 2 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-invocation-verification.json` |
+| 26 | invocation-unrelated | finalist | 2 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-invocation-unrelated.json` |
+| 27 | initiating-change | finalist | 3 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-initiating-change.json` |
+| 28 | moved-guide | finalist | 3 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-moved-guide.json` |
+| 29 | semantic-delivery | finalist | 3 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-semantic-delivery.json` |
+| 30 | invocation-change | finalist | 3 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-invocation-change.json` |
+| 31 | invocation-review | finalist | 3 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-invocation-review.json` |
+| 32 | invocation-verification | finalist | 3 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-invocation-verification.json` |
+| 33 | invocation-unrelated | finalist | 3 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-invocation-unrelated.json` |
+
+### Batch: claim-full-claude-01
+
+Status: authorized for full regression following qualification and readiness.
+Authority: complete-claim-regression-01 above and its fixed stage gate.
+Scope: 33 subjects; provider-local orders 1–12 are focused and 13–33 are conditional remaining cases.
+Inclusion: descriptive-only; Include all valid-setup executions regardless of outcome. Preserve stopped, excluded and unattempted slots. No automatic retry or replacement. No retries are allocated.
+Selected manifests: [pressure-repair](runs/complete-claim-regression-01/preparation/manifests/claude-pressure-repair-manifest.json), [discovery-shiv](runs/complete-claim-regression-01/preparation/manifests/claude-discovery-shiv-manifest.json), [local-change](runs/complete-claim-regression-01/preparation/manifests/claude-local-change-manifest.json), [large-sweep-account](runs/complete-claim-regression-01/preparation/manifests/claude-large-sweep-account-manifest.json), [initiating-change](runs/complete-claim-regression-01/preparation/manifests/claude-initiating-change-manifest.json), [moved-guide](runs/complete-claim-regression-01/preparation/manifests/claude-moved-guide-manifest.json), [semantic-delivery](runs/complete-claim-regression-01/preparation/manifests/claude-semantic-delivery-manifest.json), [invocation-change](runs/complete-claim-regression-01/preparation/manifests/claude-invocation-change-manifest.json), [invocation-review](runs/complete-claim-regression-01/preparation/manifests/claude-invocation-review-manifest.json), [invocation-verification](runs/complete-claim-regression-01/preparation/manifests/claude-invocation-verification-manifest.json), [invocation-unrelated](runs/complete-claim-regression-01/preparation/manifests/claude-invocation-unrelated-manifest.json).
+Attempt index: [claim-full-claude-01-run-index.json](runs/complete-claim-regression-01/claim-full-claude-01-run-index.json).
+Assessment: pending.
+
+| Order | Case | Condition | Repetition | CONFIG |
+| ---: | --- | --- | ---: | --- |
+| 1 | pressure-repair | finalist | 1 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-pressure-repair.json` |
+| 2 | discovery-shiv | finalist | 1 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-discovery-shiv.json` |
+| 3 | local-change | finalist | 1 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-local-change.json` |
+| 4 | large-sweep-account | finalist | 1 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-large-sweep-account.json` |
+| 5 | pressure-repair | finalist | 2 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-pressure-repair.json` |
+| 6 | discovery-shiv | finalist | 2 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-discovery-shiv.json` |
+| 7 | local-change | finalist | 2 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-local-change.json` |
+| 8 | large-sweep-account | finalist | 2 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-large-sweep-account.json` |
+| 9 | pressure-repair | finalist | 3 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-pressure-repair.json` |
+| 10 | discovery-shiv | finalist | 3 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-discovery-shiv.json` |
+| 11 | local-change | finalist | 3 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-local-change.json` |
+| 12 | large-sweep-account | finalist | 3 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-large-sweep-account.json` |
+| 13 | initiating-change | finalist | 1 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-initiating-change.json` |
+| 14 | moved-guide | finalist | 1 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-moved-guide.json` |
+| 15 | semantic-delivery | finalist | 1 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-semantic-delivery.json` |
+| 16 | invocation-change | finalist | 1 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-invocation-change.json` |
+| 17 | invocation-review | finalist | 1 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-invocation-review.json` |
+| 18 | invocation-verification | finalist | 1 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-invocation-verification.json` |
+| 19 | invocation-unrelated | finalist | 1 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-invocation-unrelated.json` |
+| 20 | initiating-change | finalist | 2 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-initiating-change.json` |
+| 21 | moved-guide | finalist | 2 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-moved-guide.json` |
+| 22 | semantic-delivery | finalist | 2 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-semantic-delivery.json` |
+| 23 | invocation-change | finalist | 2 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-invocation-change.json` |
+| 24 | invocation-review | finalist | 2 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-invocation-review.json` |
+| 25 | invocation-verification | finalist | 2 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-invocation-verification.json` |
+| 26 | invocation-unrelated | finalist | 2 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-invocation-unrelated.json` |
+| 27 | initiating-change | finalist | 3 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-initiating-change.json` |
+| 28 | moved-guide | finalist | 3 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-moved-guide.json` |
+| 29 | semantic-delivery | finalist | 3 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-semantic-delivery.json` |
+| 30 | invocation-change | finalist | 3 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-invocation-change.json` |
+| 31 | invocation-review | finalist | 3 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-invocation-review.json` |
+| 32 | invocation-verification | finalist | 3 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-invocation-verification.json` |
+| 33 | invocation-unrelated | finalist | 3 | `skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-invocation-unrelated.json` |
+
 
 ### Validation: complete-claim-01
 
@@ -1334,8 +1434,8 @@ The current validation adds its [subject index](runs/compact-regression-01/compa
 The fresh original baseline adds [Codex subjects](runs/fresh-baseline-01/fresh-baseline-codex-01-run-index.json), [Opus subjects](runs/fresh-baseline-01/fresh-baseline-opus-01-run-index.json) and [eight review slots](runs/fresh-baseline-01/evaluation/evaluator-run-index.json); the five reused semantic runs are not charged again.
 The completed candidate screen includes its [ten-review evaluator ledger](runs/candidate-screen-01/evaluation/evaluator-run-index.json).
 The count-free regression adds the two subject indexes linked in its batch scopes above.
-For this subset, the historical spent subtotal plus the newly authorized scope gives ceilings of 528 subject, 38 evaluator, 0 authoring and 1 retry invocations; this is an accounting projection, not a new allocation or pool transfer.
-Dispatched calls are **469 subject, 32 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **59 / 6 / 0 / 0** for this subset. The description-discovery scope remains cancelled; the separately authorized complete-claim eight/two screen is now spent. Remaining capacity alone grants no dispatch authority.
+For this subset, the historical spent subtotal plus the newly authorized scope gives ceilings of 535 subject, 42 evaluator, 0 authoring and 1 retry invocations; this is an accounting projection, not a new allocation or pool transfer.
+Dispatched calls are **469 subject, 32 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **66 / 10 / 0 / 0** for this subset. The description-discovery scope remains cancelled; the separately authorized complete-claim eight/two screen is now spent. Remaining capacity alone grants no dispatch authority.
 The CW protocol remains authoritative for all current combined spending and outer ceilings; no historical unspent pool is revived.
 Sequential readiness used identical externally frozen scores; the final index pins the canonical repository results at their committed revision.
 

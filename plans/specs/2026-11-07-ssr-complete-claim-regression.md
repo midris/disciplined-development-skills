@@ -1,0 +1,21 @@
+# Complete-claim full regression
+
+The owner requested the full regression on Codex and Claude with the revised wording and the same description.
+Use the exact candidate file tested in complete-claim-01 for all runs.
+Run the established eleven-case suite three times on each provider, for 66 fresh subjects and ten independent output reviews covering 48 repairs.
+The remaining 18 observations assess reporting and appropriate non-use.
+The prior eight-run screen establishes the starting point. Fresh runs preserve a balanced three-repetition suite in the current runtime.
+The [schedule](../../skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/schedule.json) and [interpretation](../../skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/interpretation.md) fix the ordering, criteria and stopping rules.
+Use the previous full suite’s 24-subject/four-review checkpoint followed by 42 subjects/six reviews.
+Check actual loading and full-claim inspection against traces and verify final committed repairs directly.
+Use the qualified production provider runtimes with low subject effort, a 900-second timeout and read-only Opus-medium output review.
+Claude Code is now 2.1.316. Qualify its current executable before subject dispatch and report runtime differences in the assessment.
+The forecast is 180–260 active minutes. Combined ceilings are 1041 subjects, 90 evaluators, four authoring and four retries, based on 975/80 already spent and this new 66/10 allocation.
+SSR subset ceilings are 535 subjects, 42 evaluators, zero authoring and one retry.
+A failed subject is retained and charged according to actual invocation. The allocation includes no new retry.
+Preserve original evidence and the existing CW fixture edit.
+
+- [ ] Qualify, freeze and verify both providers' inputs.
+- [ ] Assess 24 subjects and four reviews at the checkpoint.
+- [ ] Assess 42 additional subjects and six reviews if the checkpoint passes.
+- [ ] Reconcile outcomes, spending and remaining limits.
