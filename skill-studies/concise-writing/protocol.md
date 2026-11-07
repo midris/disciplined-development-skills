@@ -1013,18 +1013,20 @@ The comment continuation uses [frozen review inputs](runs/final-comparison-01/sc
 The first handoff stage uses its [two-call evaluator ledger](runs/final-comparison-01/handoff-01/evaluation/evaluator-run-index.json).
 The handoff continuation uses its [two-call evaluator ledger](runs/final-comparison-01/handoff-02/evaluation/evaluator-run-index.json).
 The short examples screen uses its [two-call evaluator ledger](runs/final-comparison-01/examples-screen-01/evaluation/evaluator-run-index.json).
-Dispatched calls are **975 subject, 80 evaluator, 0 authoring, 4 retry**; remaining outer capacity is **66 / 10 / 4 / 0** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
+Dispatched calls are **1041 subject, 90 evaluator, 0 authoring, 4 retry**; remaining outer capacity is **0 / 0 / 4 / 0** against the [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#limits-and-information-boundaries). Both eight-call CW batches are spent. The owner authorized ten SSR expansion calls under ceiling 56; all ten are spent, including the excluded control, with no replacement or pool transfer. Comparison runner durations total 508.067 seconds; baseline durations remain 494.936 seconds, including setup and capture.
 Owner clarification after round-10 review: “the budget is just a guideline”. The 1,200-minute figure below remains the planning baseline, not a collection stop; invocation ceilings and the authorized SSR scope is unchanged. Retain elapsed effort and forecast variance to expose process cost.
 
-Current combined accounting: **4,615 active minutes booked; 3,415 minutes above the historical 1,200-minute planning guideline**.
+Current combined accounting: **4,720 active minutes booked; 3,520 minutes above the historical 1,200-minute planning guideline**.
 The owner-approved unchanged SSR compact adoption and count-example inspection on 2026-10-31 add 15 estimated active minutes, with no model calls; see [adoption](../sweeping-stale-references/protocol.md#compact-adoption-2026-10-31).
 The subsequent owner-approved exact-count removal adds five estimated active minutes for the bounded edit, reference sweep and verification, with no model calls.
 The completed [count-free SSR regression](../sweeping-stale-references/runs/count-free-regression-01/count-free-regression-01-assessment.md) adds approximately 140 estimated active minutes including preparation/qualification, sequential waits, direct assessment, retention recovery and ten review audits. Its 3,312.232 subject/reviewer runner seconds are included once. This is 40–120 minutes below the 180–260-minute forecast; effort is rounded, not a stopwatch or billed-dollar measurement. All 66 subjects/ten reviews are spent, without retries.
 The [description discovery screen](../sweeping-stale-references/runs/description-discovery-01/description-discovery-01-assessment.md) adds 25 estimated active minutes including 255.672 runner seconds once. It stopped after 13 subjects on an incomplete candidate repair; 67 subjects/eight reviews remain unspent and their allocation is cancelled pending a revised proposal. No review or retry was dispatched.
+The [complete-claim full regression](../sweeping-stale-references/runs/complete-claim-regression-01/complete-claim-regression-01-assessment.md) books 105 estimated minutes against the 180–260 minute forecast, including 4,487.073 runner seconds once. All 66 subjects and ten reviews were charged.
+
 The [complete-claim screen](../sweeping-stale-references/runs/complete-claim-01/complete-claim-01-assessment.md) books 30 estimated active minutes for the preceding trace diagnosis, frozen paragraph test, eight subjects, two audited output reviews, evidence recovery and closure; 444.849 runner seconds are included once in the estimate. Its eight/two authorization is distinct from the cancelled description scope and stays within the existing ceilings.
 These are rounded effort estimates, not stopwatch measurements or a separately timed category breakdown.
 Between-turn owner wait is excluded; runner durations are included once.
-The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 975/1041, with all approved fresh original SSR baseline calls spent; the earlier E diagnostic and CW examples screen are spent.
+The initial 104 calls and sixteen native third repetitions are spent; combined subject accounting is 1041/1041, with all approved fresh original SSR baseline calls spent; the earlier E diagnostic and CW examples screen are spent.
 The supplemental work used 40 estimated active minutes against its 40-minute forecast; model waits are included once.
 The SSR compact checkpoint used 60 estimated active minutes against 90 forecast, including 327.519 subject and 129.286 reviewer seconds once (456.805 total); categories were not separately timed. Its fifteen subject and one evaluator calls are spent, with no retry or further allocation.
 The SSR closing validation used 60 estimated active minutes against its 60-minute forecast, including 238.375 subject and 139.333 reviewer seconds once (377.708 total); categories were not separately timed. All eleven subjects and the sole evaluator are spent; no additional calls are selected.
@@ -1200,7 +1202,8 @@ The final five reviews, complete delivery/semantic audits, reporting-claim recon
 | SSR count-free staged regression, qualification, recovery, reviews and closure | 140 |
 | SSR description discovery preparation, 13 subjects, early-stop assessment and closure | 25 |
 | SSR complete-claim diagnosis, focused screen, output reviews and closure | 30 |
-| **Total** | **4,615** |
+| SSR revised complete-claim full regression and closure | 105 |
+| **Total** | **4,720** |
 
 SSR expansion is complete. The prior 55-minute remaining forecast closed at 50 estimated minutes, including the additional shell correction; all ten subject calls are spent.
 The combined batch/recovery effort is 135 estimated minutes (45 initial checkpoint, 40 isolation correction, 50 resumption), 45 above the original 90-minute allowance. Separate round-9 review effort remains in the combined ledger above.

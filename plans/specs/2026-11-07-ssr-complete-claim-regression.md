@@ -17,5 +17,5 @@ Preserve original evidence and the existing CW fixture edit.
 
 - [x] Qualify both providers and verify input parity. All 11 installed-provider checks passed. Source freeze `f43a1ed`, dispatch freeze `58aa807`.
 - [x] Checkpoint passed after 24 subjects and four audited reviews. All 18 repairs meet F1–F3 and the six inventory reports preserve the supplied groups.
-- [ ] Assess 42 additional subjects and six reviews if the checkpoint passes.
-- [ ] Reconcile outcomes, spending and remaining limits.
+- [x] Assessed the remaining 42 subjects and six reviews after the checkpoint passed.
+- [x] Reconciled [outcomes and spending](../../skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/complete-claim-regression-01-assessment.md). All 66 subjects and ten reviews are accounted for. The SSR allocation is spent.

@@ -2,8 +2,8 @@
 
 Format version: `1`
 Study ID: `sweeping-stale-references`
-Status: count-free-regression-01 complete; compact adoption and owner-approved count removal validated within the declared regression scope.
-Current action: run the owner-approved [complete-claim full regression](#validation-complete-claim-regression-01).
+Status: the full regression of the revised complete-claim wording is complete. Both providers delivered 24/24 repairs.
+Current action: the owner can decide whether to adopt the [tested candidate](runs/complete-claim-regression-01/complete-claim-regression-01-assessment.md). The regression allocation is spent.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](runs/core-baseline-01/core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
 
@@ -292,19 +292,20 @@ Pre-baseline development is closed at two pairs. Do not reopen it for a new face
 ### Validation: complete-claim-regression-01
 
 Authority: owner requested full regression on both providers with the exact revised paragraph and fixed description. The [design](../../plans/specs/2026-11-07-ssr-complete-claim-regression.md) fixes 66 subjects and ten reviews.
-Status: preparation and runtime qualification.
+Status: complete. All 66 subjects and ten reviews are reconciled. Both providers completed every repair. Native loading was 6/6 for Codex and 5/6 for Claude. [Full assessment](runs/complete-claim-regression-01/complete-claim-regression-01-assessment.md).
+The [review ledger](runs/complete-claim-regression-01/evaluation/evaluator-run-index.json) records actual reviewer dispatches.
 The frozen finalist SHA-256 is `9bdd02d316c57fd320fe25feddbe30d08af57ffc541742b40b1d08ec3e68c224`. Both subject models, tasks, evidence boundaries and criteria follow the preceding full regression. Qualify changed runtime executables before dispatch.
 Private evidence: `/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01`.
 
 ### Batch: claim-full-codex-01
 
-Status: authorized for full regression following qualification and readiness.
+Status: complete. All 33 subjects have retained assessments.
 Authority: complete-claim-regression-01 above and its fixed stage gate.
 Scope: 33 subjects; provider-local orders 1–12 are focused and 13–33 are conditional remaining cases.
 Inclusion: descriptive-only; Include all valid-setup executions regardless of outcome. Preserve stopped, excluded and unattempted slots. No automatic retry or replacement. No retries are allocated.
 Selected manifests: [pressure-repair](runs/complete-claim-regression-01/preparation/manifests/codex-pressure-repair-manifest.json), [discovery-shiv](runs/complete-claim-regression-01/preparation/manifests/codex-discovery-shiv-manifest.json), [local-change](runs/complete-claim-regression-01/preparation/manifests/codex-local-change-manifest.json), [large-sweep-account](runs/complete-claim-regression-01/preparation/manifests/codex-large-sweep-account-manifest.json), [initiating-change](runs/complete-claim-regression-01/preparation/manifests/codex-initiating-change-manifest.json), [moved-guide](runs/complete-claim-regression-01/preparation/manifests/codex-moved-guide-manifest.json), [semantic-delivery](runs/complete-claim-regression-01/preparation/manifests/codex-semantic-delivery-manifest.json), [invocation-change](runs/complete-claim-regression-01/preparation/manifests/codex-invocation-change-manifest.json), [invocation-review](runs/complete-claim-regression-01/preparation/manifests/codex-invocation-review-manifest.json), [invocation-verification](runs/complete-claim-regression-01/preparation/manifests/codex-invocation-verification-manifest.json), [invocation-unrelated](runs/complete-claim-regression-01/preparation/manifests/codex-invocation-unrelated-manifest.json).
 Attempt index: [claim-full-codex-01-run-index.json](runs/complete-claim-regression-01/claim-full-codex-01-run-index.json).
-Assessment: pending.
+Assessment: [provider assessment](runs/complete-claim-regression-01/claim-full-codex-01-assessment.md).
 
 | Order | Case | Condition | Repetition | CONFIG |
 | ---: | --- | --- | ---: | --- |
@@ -344,13 +345,13 @@ Assessment: pending.
 
 ### Batch: claim-full-claude-01
 
-Status: authorized for full regression following qualification and readiness.
+Status: complete. All 33 subjects have retained assessments.
 Authority: complete-claim-regression-01 above and its fixed stage gate.
 Scope: 33 subjects; provider-local orders 1–12 are focused and 13–33 are conditional remaining cases.
 Inclusion: descriptive-only; Include all valid-setup executions regardless of outcome. Preserve stopped, excluded and unattempted slots. No automatic retry or replacement. No retries are allocated.
 Selected manifests: [pressure-repair](runs/complete-claim-regression-01/preparation/manifests/claude-pressure-repair-manifest.json), [discovery-shiv](runs/complete-claim-regression-01/preparation/manifests/claude-discovery-shiv-manifest.json), [local-change](runs/complete-claim-regression-01/preparation/manifests/claude-local-change-manifest.json), [large-sweep-account](runs/complete-claim-regression-01/preparation/manifests/claude-large-sweep-account-manifest.json), [initiating-change](runs/complete-claim-regression-01/preparation/manifests/claude-initiating-change-manifest.json), [moved-guide](runs/complete-claim-regression-01/preparation/manifests/claude-moved-guide-manifest.json), [semantic-delivery](runs/complete-claim-regression-01/preparation/manifests/claude-semantic-delivery-manifest.json), [invocation-change](runs/complete-claim-regression-01/preparation/manifests/claude-invocation-change-manifest.json), [invocation-review](runs/complete-claim-regression-01/preparation/manifests/claude-invocation-review-manifest.json), [invocation-verification](runs/complete-claim-regression-01/preparation/manifests/claude-invocation-verification-manifest.json), [invocation-unrelated](runs/complete-claim-regression-01/preparation/manifests/claude-invocation-unrelated-manifest.json).
 Attempt index: [claim-full-claude-01-run-index.json](runs/complete-claim-regression-01/claim-full-claude-01-run-index.json).
-Assessment: pending.
+Assessment: [provider assessment](runs/complete-claim-regression-01/claim-full-claude-01-assessment.md).
 
 | Order | Case | Condition | Repetition | CONFIG |
 | ---: | --- | --- | ---: | --- |
@@ -1435,7 +1436,7 @@ The fresh original baseline adds [Codex subjects](runs/fresh-baseline-01/fresh-b
 The completed candidate screen includes its [ten-review evaluator ledger](runs/candidate-screen-01/evaluation/evaluator-run-index.json).
 The count-free regression adds the two subject indexes linked in its batch scopes above.
 For this subset, the historical spent subtotal plus the newly authorized scope gives ceilings of 535 subject, 42 evaluator, 0 authoring and 1 retry invocations; this is an accounting projection, not a new allocation or pool transfer.
-Dispatched calls are **469 subject, 32 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **66 / 10 / 0 / 0** for this subset. The description-discovery scope remains cancelled; the separately authorized complete-claim eight/two screen is now spent. Remaining capacity alone grants no dispatch authority.
+Dispatched calls are **535 subject, 42 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **0 / 0 / 0 / 0** for this subset. The focused and full complete-claim allocations are spent. The earlier description-discovery scope remains closed.
 The CW protocol remains authoritative for all current combined spending and outer ceilings; no historical unspent pool is revived.
 Sequential readiness used identical externally frozen scores; the final index pins the canonical repository results at their committed revision.
 
