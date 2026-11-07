@@ -8,7 +8,7 @@ The new indexer is in staging only.
 - No production-sized workspace or concurrent permission-change test has run.
 - The checkpoint is saved after a page is indexed, so a restart can continue from the last completed page.
 The old release saves before indexing; interruption can then skip documents.
-- Ali can run the pilot from 09:00 to 09:45; Bea can compare document counts.
+- Ali can run the pilot from 09:00 to 09:45; Bea can compare dothiscument counts.
 Both must be available.
 - The manager must approve before anyone starts.
 If either person is unavailable, choose another staffed window.
