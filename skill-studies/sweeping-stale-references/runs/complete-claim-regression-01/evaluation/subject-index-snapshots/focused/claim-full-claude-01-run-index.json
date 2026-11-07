@@ -1,0 +1,584 @@
+{
+  "format_version": "1",
+  "index_id": "claim-full-claude-01-attempts",
+  "study_id": "sweeping-stale-references",
+  "batch_id": "claim-full-claude-01",
+  "attempts": [
+    {
+      "attempt_id": "claim-full-claude-01-pressure-repair-finalist-1-1",
+      "case_id": "pressure-repair",
+      "condition": "finalist",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/claude-pressure-repair-manifest.json",
+        "sha256": "44fad14c4c8eef90d3038a8b5589d84565054644a2416db856866ea91353b0fb",
+        "version": "1",
+        "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+        },
+        "selector": "Batch: claim-full-claude-01; order 1"
+      },
+      "run_id": "20261107T150914404Z-ssr-claim-full-claude-pressure-repair-de10a8e0-188c-4510-b0b0-8b15dfe03567-qj4upkwk",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed regression; active-session assessment, independent review pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T150914404Z-ssr-claim-full-claude-pressure-repair-de10a8e0-188c-4510-b0b0-8b15dfe03567-qj4upkwk",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T150914404Z-ssr-claim-full-claude-pressure-repair-de10a8e0-188c-4510-b0b0-8b15dfe03567-qj4upkwk.inventory.json",
+          "sha256": "2fe083e3076b53ebf950b47ffbdba54f7c1d0626a1ccbb2267b4a30320eabe59",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-claude-01-pressure-repair-finalist-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/scores/20261107T150914404Z-ssr-claim-full-claude-pressure-repair-de10a8e0-188c-4510-b0b0-8b15dfe03567-qj4upkwk.json",
+          "sha256": "77b8f01bfff8ea761c9425673cb98ee99dfd4634235c643305dcafd4ab10d7d2",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-claude-01-discovery-shiv-finalist-1-1",
+      "case_id": "discovery-shiv",
+      "condition": "finalist",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/claude-discovery-shiv-manifest.json",
+        "sha256": "45d30f780e6138968f836cee4a1646e0331480d925c342fa55e738398abf57c1",
+        "version": "1",
+        "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+        },
+        "selector": "Batch: claim-full-claude-01; order 2"
+      },
+      "run_id": "20261107T151202042Z-ssr-claim-full-claude-discovery-shiv-320c830b-2fbe-421b-b9ad-721737a073e6-5mp1u62w",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed regression; active-session assessment, independent review pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151202042Z-ssr-claim-full-claude-discovery-shiv-320c830b-2fbe-421b-b9ad-721737a073e6-5mp1u62w",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151202042Z-ssr-claim-full-claude-discovery-shiv-320c830b-2fbe-421b-b9ad-721737a073e6-5mp1u62w.inventory.json",
+          "sha256": "e95335b9d515f70e838a80c5bfa0dd19d8c21c8a454a3b723014e4821b232b24",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-claude-01-discovery-shiv-finalist-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/scores/20261107T151202042Z-ssr-claim-full-claude-discovery-shiv-320c830b-2fbe-421b-b9ad-721737a073e6-5mp1u62w.json",
+          "sha256": "4dc8d9ec630ccae48a7dbbe482d2ba36d08d00bfddc94fb97ac7e87be163a0b7",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-claude-01-local-change-finalist-1-1",
+      "case_id": "local-change",
+      "condition": "finalist",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/claude-local-change-manifest.json",
+        "sha256": "e5a902dc0837d61961d1e7c00052b76ea45f46da03cc0dea2f9b864d2fb52510",
+        "version": "1",
+        "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+        },
+        "selector": "Batch: claim-full-claude-01; order 3"
+      },
+      "run_id": "20261107T151429861Z-ssr-claim-full-claude-local-change-94c54176-75bc-40c2-ab1c-f2a37ec19e2e-xpmw2g3a",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed regression; active-session assessment, independent review pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151429861Z-ssr-claim-full-claude-local-change-94c54176-75bc-40c2-ab1c-f2a37ec19e2e-xpmw2g3a",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151429861Z-ssr-claim-full-claude-local-change-94c54176-75bc-40c2-ab1c-f2a37ec19e2e-xpmw2g3a.inventory.json",
+          "sha256": "0b13364511084f31e3f24b8edfd84029f31ab406ee3de3ee5a4c9dcde651e464",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-claude-01-local-change-finalist-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/scores/20261107T151429861Z-ssr-claim-full-claude-local-change-94c54176-75bc-40c2-ab1c-f2a37ec19e2e-xpmw2g3a.json",
+          "sha256": "c0e96f23a0cb70dda0bf74d3e696696d2f78d00919c69b9f686e2f7045884729",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-claude-01-large-sweep-account-finalist-1-1",
+      "case_id": "large-sweep-account",
+      "condition": "finalist",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/claude-large-sweep-account-manifest.json",
+        "sha256": "70d4001cf71996850dfb51c707ff1f5aebd342d95bef1fee334b91419dfe9e18",
+        "version": "1",
+        "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+        },
+        "selector": "Batch: claim-full-claude-01; order 4"
+      },
+      "run_id": "20261107T151551436Z-ssr-claim-full-claude-large-sweep-account-a9abe01f-cd16-47b9-b113-e76838ed7ffb-cy0b26cp",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed regression; active-session assessment, independent review pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151551436Z-ssr-claim-full-claude-large-sweep-account-a9abe01f-cd16-47b9-b113-e76838ed7ffb-cy0b26cp",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151551436Z-ssr-claim-full-claude-large-sweep-account-a9abe01f-cd16-47b9-b113-e76838ed7ffb-cy0b26cp.inventory.json",
+          "sha256": "cfd0f0539a1f8185b5e755331dd9c26c46630f0180a775b1ec08ff292c664aa1",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-claude-01-large-sweep-account-finalist-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/scores/20261107T151551436Z-ssr-claim-full-claude-large-sweep-account-a9abe01f-cd16-47b9-b113-e76838ed7ffb-cy0b26cp.json",
+          "sha256": "a06aaf0f67ad16fd21dcb2adbe4169c61ad7a8b19890cf28830e9ae7842102eb",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-claude-01-pressure-repair-finalist-2-1",
+      "case_id": "pressure-repair",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/claude-pressure-repair-manifest.json",
+        "sha256": "44fad14c4c8eef90d3038a8b5589d84565054644a2416db856866ea91353b0fb",
+        "version": "1",
+        "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+        },
+        "selector": "Batch: claim-full-claude-01; order 5"
+      },
+      "run_id": "20261107T151643284Z-ssr-claim-full-claude-pressure-repair-365ae561-ce78-42e4-9714-c79e887eed14-w3_vpdrg",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed regression; active-session assessment, independent review pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151643284Z-ssr-claim-full-claude-pressure-repair-365ae561-ce78-42e4-9714-c79e887eed14-w3_vpdrg",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151643284Z-ssr-claim-full-claude-pressure-repair-365ae561-ce78-42e4-9714-c79e887eed14-w3_vpdrg.inventory.json",
+          "sha256": "2c49b2825192d43f3406d6d61b247e4f1b450623caf69fce9313fe0780a60015",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-claude-01-pressure-repair-finalist-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/scores/20261107T151643284Z-ssr-claim-full-claude-pressure-repair-365ae561-ce78-42e4-9714-c79e887eed14-w3_vpdrg.json",
+          "sha256": "4ed21c056f1bb1f4ef12330adca3f18436782e66c675f91070d10480a3044eba",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-claude-01-discovery-shiv-finalist-2-1",
+      "case_id": "discovery-shiv",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/claude-discovery-shiv-manifest.json",
+        "sha256": "45d30f780e6138968f836cee4a1646e0331480d925c342fa55e738398abf57c1",
+        "version": "1",
+        "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+        },
+        "selector": "Batch: claim-full-claude-01; order 6"
+      },
+      "run_id": "20261107T151907824Z-ssr-claim-full-claude-discovery-shiv-32b291b7-7267-434e-a69f-8b96db17745c-7giqnvrw",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed regression; active-session assessment, independent review pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151907824Z-ssr-claim-full-claude-discovery-shiv-32b291b7-7267-434e-a69f-8b96db17745c-7giqnvrw",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151907824Z-ssr-claim-full-claude-discovery-shiv-32b291b7-7267-434e-a69f-8b96db17745c-7giqnvrw.inventory.json",
+          "sha256": "328469215f158a41e428b4b329bc56cfee0198be736acb9539dd5f4c7dde2061",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-claude-01-discovery-shiv-finalist-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/scores/20261107T151907824Z-ssr-claim-full-claude-discovery-shiv-32b291b7-7267-434e-a69f-8b96db17745c-7giqnvrw.json",
+          "sha256": "a9b531965d329f3925d099c45f584894c07c71e0d918d41be0675bfa26a5778e",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-claude-01-local-change-finalist-2-1",
+      "case_id": "local-change",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/claude-local-change-manifest.json",
+        "sha256": "e5a902dc0837d61961d1e7c00052b76ea45f46da03cc0dea2f9b864d2fb52510",
+        "version": "1",
+        "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+        },
+        "selector": "Batch: claim-full-claude-01; order 7"
+      },
+      "run_id": "20261107T152148382Z-ssr-claim-full-claude-local-change-aad1cb4d-4d5a-4a67-8c3d-44156f88d612-1zact5mq",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed regression; active-session assessment, independent review pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T152148382Z-ssr-claim-full-claude-local-change-aad1cb4d-4d5a-4a67-8c3d-44156f88d612-1zact5mq",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T152148382Z-ssr-claim-full-claude-local-change-aad1cb4d-4d5a-4a67-8c3d-44156f88d612-1zact5mq.inventory.json",
+          "sha256": "646a86c251aca8a04f23457fc9ef14eb924779a0e4e9e2c020d46057a08ac5f9",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-claude-01-local-change-finalist-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/scores/20261107T152148382Z-ssr-claim-full-claude-local-change-aad1cb4d-4d5a-4a67-8c3d-44156f88d612-1zact5mq.json",
+          "sha256": "5977804e6a8747221aec4e9ac08d8366b9e17063374d817bd902511d97d7d002",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-claude-01-large-sweep-account-finalist-2-1",
+      "case_id": "large-sweep-account",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/claude-large-sweep-account-manifest.json",
+        "sha256": "70d4001cf71996850dfb51c707ff1f5aebd342d95bef1fee334b91419dfe9e18",
+        "version": "1",
+        "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+        },
+        "selector": "Batch: claim-full-claude-01; order 8"
+      },
+      "run_id": "20261107T152407970Z-ssr-claim-full-claude-large-sweep-account-1909d120-e5bf-4292-a135-7829f30a073c-zlhx9emu",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed regression; active-session assessment, independent review pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T152407970Z-ssr-claim-full-claude-large-sweep-account-1909d120-e5bf-4292-a135-7829f30a073c-zlhx9emu",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T152407970Z-ssr-claim-full-claude-large-sweep-account-1909d120-e5bf-4292-a135-7829f30a073c-zlhx9emu.inventory.json",
+          "sha256": "b701d3f14e5aa329975f34403d57596bf92db8a0714141a8883dc35b7c027fba",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-claude-01-large-sweep-account-finalist-2",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/scores/20261107T152407970Z-ssr-claim-full-claude-large-sweep-account-1909d120-e5bf-4292-a135-7829f30a073c-zlhx9emu.json",
+          "sha256": "812236ea6a050cf91b9d870f0dfe2e2151b26d84b8ff1e507919abcac5a9618d",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-claude-01-pressure-repair-finalist-3-1",
+      "case_id": "pressure-repair",
+      "condition": "finalist",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/claude-pressure-repair-manifest.json",
+        "sha256": "44fad14c4c8eef90d3038a8b5589d84565054644a2416db856866ea91353b0fb",
+        "version": "1",
+        "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+        },
+        "selector": "Batch: claim-full-claude-01; order 9"
+      },
+      "run_id": "20261107T152706110Z-ssr-claim-full-claude-pressure-repair-21686f5c-a5fe-4991-abe7-c31ad300c3a7-gx1vxmax",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed regression; active-session assessment, independent review pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T152706110Z-ssr-claim-full-claude-pressure-repair-21686f5c-a5fe-4991-abe7-c31ad300c3a7-gx1vxmax",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T152706110Z-ssr-claim-full-claude-pressure-repair-21686f5c-a5fe-4991-abe7-c31ad300c3a7-gx1vxmax.inventory.json",
+          "sha256": "b9e5a8758d1d187d098823e0e457339ac452884f8018474a9c708f8613966eb5",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-claude-01-pressure-repair-finalist-3",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/scores/20261107T152706110Z-ssr-claim-full-claude-pressure-repair-21686f5c-a5fe-4991-abe7-c31ad300c3a7-gx1vxmax.json",
+          "sha256": "bcfc930bee4591413753c165040272571d51201c94be1ee52e8c9d94a4730c3d",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-claude-01-discovery-shiv-finalist-3-1",
+      "case_id": "discovery-shiv",
+      "condition": "finalist",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/claude-discovery-shiv-manifest.json",
+        "sha256": "45d30f780e6138968f836cee4a1646e0331480d925c342fa55e738398abf57c1",
+        "version": "1",
+        "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+        },
+        "selector": "Batch: claim-full-claude-01; order 10"
+      },
+      "run_id": "20261107T152934525Z-ssr-claim-full-claude-discovery-shiv-6ac2dcda-7037-4fd1-ac6d-0481a50a87ce-hgqhmoco",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed regression; active-session assessment, independent review pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T152934525Z-ssr-claim-full-claude-discovery-shiv-6ac2dcda-7037-4fd1-ac6d-0481a50a87ce-hgqhmoco",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T152934525Z-ssr-claim-full-claude-discovery-shiv-6ac2dcda-7037-4fd1-ac6d-0481a50a87ce-hgqhmoco.inventory.json",
+          "sha256": "8c26cb8245416fba377301b09b870e79767a46f8d74d234a3a4be3f1e721aea9",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-claude-01-discovery-shiv-finalist-3",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/scores/20261107T152934525Z-ssr-claim-full-claude-discovery-shiv-6ac2dcda-7037-4fd1-ac6d-0481a50a87ce-hgqhmoco.json",
+          "sha256": "3a916c635073e8a864075af57e25be3ab5343d2f95cc691b3bd3b20317d9f624",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-claude-01-local-change-finalist-3-1",
+      "case_id": "local-change",
+      "condition": "finalist",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/claude-local-change-manifest.json",
+        "sha256": "e5a902dc0837d61961d1e7c00052b76ea45f46da03cc0dea2f9b864d2fb52510",
+        "version": "1",
+        "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+        },
+        "selector": "Batch: claim-full-claude-01; order 11"
+      },
+      "run_id": "20261107T153134244Z-ssr-claim-full-claude-local-change-aeb51b91-9255-4431-9f4e-f016ad599781-nmouc03y",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed regression; active-session assessment, independent review pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T153134244Z-ssr-claim-full-claude-local-change-aeb51b91-9255-4431-9f4e-f016ad599781-nmouc03y",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T153134244Z-ssr-claim-full-claude-local-change-aeb51b91-9255-4431-9f4e-f016ad599781-nmouc03y.inventory.json",
+          "sha256": "b6d51829c2a823baa35a779ae9385a5c01948f6684095421a97789447b1880c5",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-claude-01-local-change-finalist-3",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/scores/20261107T153134244Z-ssr-claim-full-claude-local-change-aeb51b91-9255-4431-9f4e-f016ad599781-nmouc03y.json",
+          "sha256": "ac8127f28543db0a13b4d427a5eec8a92781ead746e491d66585e7945dacae44",
+          "version": "2"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-claude-01-large-sweep-account-finalist-3-1",
+      "case_id": "large-sweep-account",
+      "condition": "finalist",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/claude-large-sweep-account-manifest.json",
+        "sha256": "70d4001cf71996850dfb51c707ff1f5aebd342d95bef1fee334b91419dfe9e18",
+        "version": "1",
+        "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+        },
+        "selector": "Batch: claim-full-claude-01; order 12"
+      },
+      "run_id": "20261107T153304675Z-ssr-claim-full-claude-large-sweep-account-ccce90c7-3515-4e5b-8504-5ed44c198a03-a1vqayth",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed regression; active-session assessment, independent review pending."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T153304675Z-ssr-claim-full-claude-large-sweep-account-ccce90c7-3515-4e5b-8504-5ed44c198a03-a1vqayth",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T153304675Z-ssr-claim-full-claude-large-sweep-account-ccce90c7-3515-4e5b-8504-5ed44c198a03-a1vqayth.inventory.json",
+          "sha256": "91be509a3e927905725ee22d612e3c87536cf264376876b42168e52761ed0c3d",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-claude-01-large-sweep-account-finalist-3",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/scores/20261107T153304675Z-ssr-claim-full-claude-large-sweep-account-ccce90c7-3515-4e5b-8504-5ed44c198a03-a1vqayth.json",
+          "sha256": "f7517cab372c1bd6ab9f1444b7560482a4c4545dd26634a971dcae9ba1698974",
+          "version": "2"
+        }
+      }
+    }
+  ]
+}

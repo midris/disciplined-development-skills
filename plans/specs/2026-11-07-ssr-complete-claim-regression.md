@@ -15,7 +15,7 @@ SSR subset ceilings are 535 subjects, 42 evaluators, zero authoring and one retr
 A failed subject is retained and charged according to actual invocation. The allocation includes no new retry.
 Preserve original evidence and the existing CW fixture edit.
 
-- [ ] Qualify, freeze and verify both providers' inputs.
+- [x] Qualify both providers and verify input parity. All 11 installed-provider checks passed. Source freeze `f43a1ed`, dispatch freeze `58aa807`.
 - [ ] Assess 24 subjects and four reviews at the checkpoint.
 - [ ] Assess 42 additional subjects and six reviews if the checkpoint passes.
 - [ ] Reconcile outcomes, spending and remaining limits.
