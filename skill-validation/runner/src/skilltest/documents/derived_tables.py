@@ -3,7 +3,7 @@
 import os
 import posixpath
 import subprocess
-from collections import Counter
+from collections import Counter, defaultdict
 from pathlib import Path
 from urllib.parse import quote
 
@@ -11,14 +11,13 @@ from . import Report
 from .formats import field
 from .operations import (
     definitions,
-    membership,
     publish,
     read_document,
     require,
     selected,
 )
 from .references import Context
-from .study import batch_sections, scope
+from .study import batch_sections, check_membership, scope
 from .study import index as check_index
 
 
@@ -63,9 +62,11 @@ def generate(args):
         raise ValueError("Index belongs to another study/batch")
     records = check_index(value, ip, ctx)
     require(ctx.report, complete=False)
-    membership(planned, records)
+    check_membership(planned, records, body)
     # A working protocol cannot silently redefine the scope of retained attempts.
     for a, _, _ in records:
+        if a["retry_of"] is not None:
+            continue  # Separate approval is bound above to the original slot and manifest.
         raw = ctx.read(a["authorization"]["artifact"]).decode()
         pinned = batch_sections(raw).get(args.batch)
         if pinned is None or scope(pinned, path, ctx) != planned:
@@ -94,7 +95,7 @@ def generate(args):
                 statuses["valid"],
                 statuses["invalid"],
                 statuses["insufficient evidence"],
-                n - len(group),
+                n - len({a["repetition"] for a, _, _ in group}),
             ]
         )
         assessed = [(a, r, m) for a, r, m in group if r]
@@ -146,12 +147,15 @@ def generate(args):
                     evidence,
                 ]
             )
-    by_slot = {
-        (a["case_id"], a["condition"], a["repetition"]): (a, r, m)
-        for a, r, m in records
-    }
-    for order, (case, condition, rep, _) in enumerate(planned, 1):
-        a, r, m = by_slot.get((case, condition, rep), (None, None, None))
+    by_slot = defaultdict(list)
+    for a, r, m in records:
+        by_slot[a["case_id"], a["condition"], a["repetition"]].append((a, r, m))
+    execution_rows = (
+        (order, case, condition, rep, attempt)
+        for order, (case, condition, rep, _) in enumerate(planned, 1)
+        for attempt in by_slot.get((case, condition, rep), [(None, None, None)])
+    )
+    for order, case, condition, rep, (a, r, m) in execution_rows:
         status = (
             "unattempted"
             if a is None

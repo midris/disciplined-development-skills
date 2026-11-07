@@ -1464,6 +1464,7 @@ Include all valid-setup executions regardless of outcome. No automatic retry; di
 Stop on infrastructure, contamination, capture/retention failure, identity drift or uncertain charge; valid behavioral misses alone do not stop later slots.
 Record: [index](runs/final-comparison-01/examples-screen-01/claude-final-examples-screen-01-run-index.json).
 Assessment: [complete valid Claude outputs and retained invalid setup](runs/final-comparison-01/examples-screen-01/claude-final-examples-screen-01-assessment.md).
+Approved retry: order 1, attempt 2 of `claude-final-examples-screen-01-long-handoff-original-examples-1-1`, authority SHA-256 `9c34c6e5d56d2eced711e8b1bb9bd529e3a3fd68ad7f81527ca48fc1b8bc7980`.
 
 | Order | Case | Condition | Repetition | CONFIG |
 | ---: | --- | --- | ---: | --- |
@@ -1763,3 +1764,9 @@ The owner-approved [count-free SSR regression](../../plans/specs/2026-10-31-ssr-
 Count-free SSR accounting includes [Codex subjects](../sweeping-stale-references/runs/count-free-regression-01/count-free-codex-01-run-index.json) and [Claude subjects](../sweeping-stale-references/runs/count-free-regression-01/count-free-claude-01-run-index.json); the focused-stage gate controls remaining dispatch.
 
 The approved count-free SSR reviews are charged in their [evaluator ledger](../sweeping-stale-references/runs/count-free-regression-01/evaluation/evaluator-run-index.json).
+
+Combined accounting for description-discovery-01 includes [discovery-claude-01-run-index.json](../sweeping-stale-references/runs/description-discovery-01/discovery-claude-01-run-index.json), [discovery-codex-01-run-index.json](../sweeping-stale-references/runs/description-discovery-01/discovery-codex-01-run-index.json).
+
+Combined accounting for complete-claim-01 includes [claim-claude-01-run-index.json](../sweeping-stale-references/runs/complete-claim-01/claim-claude-01-run-index.json), [claim-codex-01-run-index.json](../sweeping-stale-references/runs/complete-claim-01/claim-codex-01-run-index.json), [review ledger](../sweeping-stale-references/runs/complete-claim-01/evaluation/evaluator-run-index.json).
+
+Combined accounting for complete-claim-regression-01 includes [claim-full-claude-01-run-index.json](../sweeping-stale-references/runs/complete-claim-regression-01/claim-full-claude-01-run-index.json), [claim-full-codex-01-run-index.json](../sweeping-stale-references/runs/complete-claim-regression-01/claim-full-codex-01-run-index.json), [review ledger](../sweeping-stale-references/runs/complete-claim-regression-01/evaluation/evaluator-run-index.json).

@@ -81,6 +81,8 @@ def index(value, path, ctx):
         if slot in seen_slots:
             ctx.error(path, loc, "duplicate-id", "Repeated attempt slot")
         seen_slots.add(slot)
+        if a["attempt_id"] in prior:
+            ctx.error(path, loc, "duplicate-id", "Repeated attempt ID")
         prior[a["attempt_id"]] = a
         for key, seen in [("run_id", seen_runs)]:
             if a[key] is not None:
@@ -322,6 +324,37 @@ def scope(body, path, ctx):
     return schedule
 
 
+def check_membership(planned, records, body):
+    """Count initial attempts against the schedule and bind replacements to explicit approvals."""
+    keys = [row[:3] for row in planned]
+    initial = []
+    parents = {}
+    approvals = {line for _, line in lines_outside_fences(body) if line.startswith("Approved retry: ")}
+    for attempt, result, _ in records:
+        slot = (attempt["case_id"], attempt["condition"], attempt["repetition"])
+        if attempt["retry_of"] is None:
+            initial.append(slot)
+        else:
+            if slot not in keys:
+                raise ValueError("Retry is outside the declared schedule")
+            parent = parents.get(attempt["retry_of"])
+            digest = attempt["authorization"]["artifact"]["sha256"]
+            approval = (
+                f"Approved retry: order {keys.index(slot) + 1}, attempt {attempt['attempt_number']} "
+                f"of `{attempt['retry_of']}`, authority SHA-256 `{digest}`."
+            )
+            if approval not in approvals:
+                raise ValueError("No matching batch approval for retry")
+            approvals.remove(approval)
+            if parent is None or parent[1] is None or parent[1]["setup"]["status"] != "invalid":
+                raise ValueError("Replacement requires an assessed invalid-setup parent")
+            if any(attempt["manifest"][k] != parent[0]["manifest"][k] for k in ("path", "sha256")):
+                raise ValueError("Replacement changes the original collection manifest")
+        parents[attempt["attempt_id"]] = (attempt, result)
+    if initial != [key for key in keys if key in initial]:
+        raise ValueError("Actual attempts differ from declared order/membership")
+
+
 def assessment(raw, path, ctx, planned=None, definitions=None):
     line = field(raw, "Attempt index") or ""
     links = LINK.findall(line)
@@ -383,16 +416,15 @@ def assessment(raw, path, ctx, planned=None, definitions=None):
         )
     planned = pinned_scope
     planned_keys = [row[:3] for row in planned]
-    actual_keys = [(a["case_id"], a["condition"], a["repetition"]) for a, _, _ in records]
+    approval_scope = selected_scope
     if any(a["retry_of"] is not None for a, _, _ in records):
-        ctx.error(path, "Coverage", "retry", "This declared scope allows no retries")
-    if actual_keys != [p for p in planned_keys if p in actual_keys]:
-        ctx.error(
-            path,
-            "Coverage",
-            "scope",
-            "Actual attempts differ from declared order/membership",
-        )
+        # A later owner amendment may authorize a replacement in the same fixed schedule.
+        current_protocol = regular_bytes(ctx.root / sp).decode()
+        approval_scope = batch_sections(current_protocol).get(value["batch_id"], "")
+    try:
+        check_membership(planned, records, approval_scope)
+    except ValueError as error:
+        ctx.error(path, "Coverage", "scope", str(error))
     groups = {(c, k) for c, k, _, _ in planned}
     expected_rows = set()
     valid = []
@@ -612,7 +644,7 @@ def assessment(raw, path, ctx, planned=None, definitions=None):
                 setups["valid"],
                 setups["invalid"],
                 setups["insufficient evidence"],
-                planned_count - len(group),
+                planned_count - len({a["repetition"] for a, _ in group}),
             ]
             try:
                 if len(row) != 7 or list(map(int, row[1:])) != want:
@@ -773,6 +805,7 @@ def readiness(raw, path, ctx, stage, batch):
                         "repetition",
                         "attempt_number",
                         "retry_of",
+                        "authorization",
                         "run_id",
                         "manifest",
                         "allocation",

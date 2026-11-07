@@ -724,3 +724,36 @@ def test_retention_cleanup_version_boundary(retention_case, state, capsys):
     assert index.exists() == (state == "legacy-complete")
     if state == "legacy-failed":
         assert "cannot establish cleanup status" in capsys.readouterr().out
+
+
+def test_retry_does_not_fill_an_unattempted_slot(document_study):
+    root, write, commit, ident = document_study
+    protocol = root / "protocol.md"
+    index_path = root / "example-run-index.json"
+    index = json.loads(index_path.read_text())
+    parent, retry = index["attempts"]
+    failed = json.loads((root / "results/1.json").read_text())
+    failed["setup"]["status"] = "invalid"
+    write("results/1.json", failed)
+    write("approval.md", "One replacement for attempt-1.")
+    revision = commit()
+    parent["result"]["record"] = ident("results/1.json", revision)
+    retry.update(repetition=1, attempt_number=2, retry_of=parent["attempt_id"])
+    retry["allocation"]["pool"] = "retry"
+    authority = ident("approval.md", revision)
+    retry["authorization"]["artifact"] = authority
+    write(index_path.name, index)
+    output = root / "tables.md"
+    args = ["tables", protocol, "--batch", "example", "--index", index_path, "--output", output]
+    assert invoke(args) != 0
+    text = protocol.read_text().replace("Acceptance/inclusion:", (
+        f"Approved retry: order 1, attempt 2 of `attempt-1`, authority SHA-256 `{authority['sha256']}`.\n"
+        "Acceptance/inclusion:"
+    ))
+    protocol.write_text(text)
+    assert invoke(args) == 0
+    report = output.read_text()
+    assert "| example / original | 2 | 2 | 1 | 1 | 0 | 1 |" in report
+    assert "| 1 | example | original | 1 | invalid (excluded)" in report
+    assert "| 1 | example | original | 1 | valid" in report
+    assert "| 2 | example | original | 2 | unattempted" in report

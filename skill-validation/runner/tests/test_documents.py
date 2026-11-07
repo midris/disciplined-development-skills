@@ -1221,3 +1221,33 @@ def test_supplemental_evaluator_ledger_accounting(document_study, capsys, mutati
     else:
         assert result != 0
         assert any(d['rule'] == rule for d in report['diagnostics']), report
+
+
+@pytest.mark.parametrize("mutation", ["none", "unapproved", "wrong-parent", "wrong-digest", "extra", "valid-parent", "changed-input"])
+def test_batch_replacement_requires_specific_approval(mutation):
+    from skilltest.documents.study import check_membership
+
+    manifest = {"path": "manifest.json", "sha256": "a" * 64}
+    parent = dict(case_id="case", condition="original", repetition=1, attempt_id="initial",
+                  retry_of=None, attempt_number=1, manifest=manifest)
+    retry = dict(parent, attempt_number=2, retry_of="initial", attempt_id="replacement",
+                 authorization={"artifact": {"sha256": "b" * 64}})
+    approval = f"Approved retry: order 1, attempt 2 of `initial`, authority SHA-256 `{'b' * 64}`."
+    status = "valid" if mutation == "valid-parent" else "invalid"
+    records = [(parent, {"setup": {"status": status}}, None), (retry, None, None)]
+    if mutation == "unapproved":
+        approval = ""
+    elif mutation == "wrong-parent":
+        approval = approval.replace("initial", "other")
+    elif mutation == "wrong-digest":
+        approval = approval.replace("b" * 64, "c" * 64)
+    elif mutation == "extra":
+        records.append((dict(parent, repetition=2), None, None))
+    elif mutation == "changed-input":
+        retry["manifest"] = dict(manifest, sha256="d" * 64)
+    planned = [("case", "original", 1, "config.json")]
+    if mutation == "none":
+        check_membership(planned, records, approval)
+    else:
+        with pytest.raises(ValueError):
+            check_membership(planned, records, approval)

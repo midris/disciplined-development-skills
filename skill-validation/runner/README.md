@@ -71,7 +71,13 @@ Diagnostics provide file, field/line, rule, message and severity. `--json` retur
 Supported version-1 representations:
 
 - The canonical Markdown headings/criterion cards and JSON fields; local inline links and heading anchors. External URLs are not fetched and free prose remains subject to semantic review.
-- Scope in the existing `Order / Case / Condition / Repetition / CONFIG` table, or the existing explicit single-case, original-then-control, one-execution-each declaration. Stage checks support descriptive inclusion of all valid setups without retries; other inclusion or retry representations are reported unsupported.
+- Scope in the existing `Order / Case / Condition / Repetition / CONFIG` table, or the existing explicit single-case, original-then-control, one-execution-each declaration. Stage checks support descriptive inclusion of all valid setups. For a separately approved replacement, record one line in the selected batch using the exact form below. The order is local to the batch. The digest identifies the frozen authorization artifact in the retry index entry.
+
+  ~~~text
+  Approved retry: order N, attempt M of `PARENT_ID`, authority SHA-256 `DIGEST`.
+  ~~~
+
+  Coverage counts both attempts and charges the replacement to the retry pool. The replacement occupies its original planned slot and requires an invalid-setup parent and identical collection manifest.
 - Aggregate tables with separate met/not-met/insufficient-evidence columns, or labelled `M/N/U` columns. Runtime strata use explicit `NAME includes orders A–B` declarations and must partition valid executions. Coverage uses the existing seven-column table; an explicit no-gap statement suffices only when every planned execution has a valid result.
 - Current accounting accepts plain integers or correctly comma-grouped booked, remaining and ceiling totals in the existing paragraph, dispatched/remaining pool paragraph and `Work / Estimate / Basis` forecast table; outer ceilings may be linked from the plan. Time totals also accept `N active minutes booked; D minutes above|below the historical L-minute planning guideline`; the difference must reconcile, but the guideline does not cap the forecast. Hard-ceiling paragraphs retain their forecast limit, and call ceilings remain enforced. Only referenced attempt indexes contribute. Historical process/development-pilot indexes supply a labelled accounting-only projection, not version-1 format conformance or reassessment.
 

@@ -15,13 +15,13 @@ from .operations import (
     definitions,
     encoded,
     identity,
-    membership,
     publish,
     read_document,
     require,
     selected,
 )
 from .references import Context, regular_bytes
+from .study import check_membership
 from .study import index as check_index
 
 
@@ -138,7 +138,7 @@ def retain(args):
             raise ValueError("Index belongs to another study/batch")
         records = check_index(value, index, ctx)
         require(ctx.report, complete=False)
-        membership(planned, records)
+        check_membership(planned, records, body)
         if any(
             a["run_id"] == source.name
             or (a["case_id"], a["condition"], a["repetition"]) == (case, condition, rep)
@@ -163,7 +163,7 @@ def retain(args):
             bundle=dict(path=str(dest), inventory=None, verified=True),
             result=None,
         )
-        membership(planned, [*records, (attempt, None, manifest)])
+        check_membership(planned, [*records, (attempt, None, manifest)], body)
         with tempfile.TemporaryDirectory(dir=store, prefix=".retain-") as temp:
             stage = Path(temp) / source.name
             shutil.copytree(source, stage, symlinks=True)

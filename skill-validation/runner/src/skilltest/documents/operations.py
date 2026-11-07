@@ -101,17 +101,6 @@ def definitions(body, path, ctx, revision=None):
     return found
 
 
-def membership(planned, records):
-    keys = [r[:3] for r in planned]
-    actual = [(a["case_id"], a["condition"], a["repetition"]) for a, _, _ in records]
-    if any(a["retry_of"] is not None for a, _, _ in records) or actual != [
-        k for k in keys if k in actual
-    ]:
-        raise ValueError(
-            "Attempts differ from declared order/membership or contain retries"
-        )
-
-
 def configure(commands):
     p = commands.add_parser("retain")
     p.add_argument("protocol")

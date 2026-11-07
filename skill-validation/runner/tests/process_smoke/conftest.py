@@ -5,6 +5,7 @@ import json
 import os
 import sys
 import shutil
+import subprocess
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -35,8 +36,20 @@ class FakeProvider:
         return json.loads(path.read_text().splitlines()[-1])
 
 
+@pytest.fixture(scope="session")
+def smoke_python():
+    if sys.platform != "darwin":
+        return sys.executable
+    # Use an interpreter inside the child policy's readable toolchain trees.
+    # /usr/bin/python3 is a launcher that can emit cache warnings on stderr.
+    executable = shutil.which("python3", path="/opt/homebrew/opt/python@3/libexec/bin:/opt/homebrew/bin")
+    if executable is None:
+        executable = subprocess.check_output(["/usr/bin/xcrun", "--find", "python3"], text=True).strip()
+    return str(Path(executable).resolve())
+
+
 @pytest.fixture
-def fake_provider(tmp_path, monkeypatch, private_test_profile):
+def fake_provider(tmp_path, monkeypatch, private_test_profile, smoke_python):
     bin_dir = tmp_path / "fake-bin"
     bin_dir.mkdir()
     fake = FakeProvider(tmp_path / "provider-record.jsonl", bin_dir / "provider-settings.json")
@@ -87,7 +100,7 @@ sys.exit(settings["exit_code"])
 """
     for name in ("codex", "claude"):
         executable = bin_dir / name
-        executable.write_text(script.replace("PYTHON_EXECUTABLE", str(Path(shutil.which("python3", path="/opt/homebrew/bin:/usr/bin:/bin")).resolve()), 1))
+        executable.write_text(script.replace("PYTHON_EXECUTABLE", smoke_python, 1))
         executable.chmod(0o700)
     monkeypatch.setenv("PATH", str(bin_dir) + os.pathsep + os.environ["PATH"])
     (private_test_profile / "auth.json").write_text('{"tokens":{"access_token":"dummy-test-only"}}')
