@@ -2,10 +2,18 @@
 
 Format version: `1`
 Study ID: `sweeping-stale-references`
-Status: the full regression of the revised complete-claim wording is complete. Both providers delivered 24/24 repairs.
-Current action: the owner can decide whether to adopt the [tested candidate](runs/complete-claim-regression-01/complete-claim-regression-01-assessment.md). The regression allocation is spent.
+Status: the owner adopted the full-regression candidate on 2026-11-08.
+Current action: adoption is complete. The regression allocation is spent.
 The [plan](../../plans/2026-09-11-model-driven-skill-testing.md) owns progress; the [spec](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) owns the workflow.
 The [core baseline](runs/core-baseline-01/core-baseline-01-assessment.md) retains its two setup exclusions and runtime strata; the [comparison](runs/comprehensive-comparison-01/comprehensive-comparison-01-assessment.md) records twelve valid executions of the original and preserved candidate. Both collection scopes are spent. Storage and accounting retains the SSR closing checkpoint and links the current combined totals.
+
+## Full regression adoption
+
+On 2026-11-08 the owner adopted the tested description and the instruction to read the complete claim or code block before classifying a reference. The [shipped skill](../../skills/sweeping-stale-references/SKILL.md) matches the [frozen candidate](runs/complete-claim-regression-01/preparation/skill/SKILL.md) byte for byte (SHA-256 `9bdd02d316c57fd320fe25feddbe30d08af57ffc541742b40b1d08ec3e68c224`).
+
+Codex and Claude each completed all 24 repairs. Both read and corrected the previously missed troubleshooting claim in all nine relevant runs per provider. Codex loaded the skill on 6/6 native positive tasks and Claude on 5/6. Claude completed the repair on its missed load. [Full regression assessment](runs/complete-claim-regression-01/complete-claim-regression-01-assessment.md)
+
+The owner accepted the reporting inconsistencies given the verified repairs, and considered the extra search on a tests-only task acceptable because it made no edits. The original assessment records that search as a non-use miss. The skill continues to require paths, changes and reasons for preserving other matches.
 
 ## Compact adoption: 2026-10-31
 

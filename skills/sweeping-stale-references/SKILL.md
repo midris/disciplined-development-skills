@@ -1,6 +1,6 @@
 ---
 name: sweeping-stale-references
-description: Use when changing a load-bearing fact that appears in multiple places — renaming a symbol (rename refactor, find references, find usages), updating a documented behavior, changing a schema, amending a spec constraint, propagating a cascading change. Also when a reviewer flags ONE stale reference, before fixing it.
+description: Use when a change could leave other code or documentation out of date, including renames. Also use when fixing a stale or contradictory reference, even if a reviewer flags only one occurrence. Applies before editing, without needing to know whether other references exist.
 ---
 
 # Sweeping Stale References
@@ -14,8 +14,9 @@ Initial factual grounding belongs to `disciplined-research`; the reason for chan
 Search old and intended new forms, synonyms and language/path variants across code, docs and comments, tests and fixtures, config, scripts, CI and build files.
 Use semantically specific terms and any effective search tool; new forms expose existing uses, collisions and partial migrations.
 
-Inspect enough context to compare each match’s meaning with the settled fact.
-If a snippet cannot establish disposition, read the complete claim or code block, including quantities, conditions and outcomes.
+Use search results to locate candidate references.
+Before classifying a reference, read its complete claim or code block, including quantities, conditions and outcomes, and compare it with the settled fact.
+A matching line or heading alone is not enough.
 Triage matching headings; adjacent context that neither matches nor encodes the fact is not another reference.
 
 ## 2. Triage every match

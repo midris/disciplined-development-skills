@@ -75,4 +75,4 @@ Separate Opus-medium reviewers received complete original and final projects, de
 Native discovery, claim delivery and actual search order were judged from the subject traces in the active session.
 See [review reconciliation](evaluation/README.md) and [verification](verification.json).
 
-The study used 66 subject calls, ten evaluator calls and zero retries. The runners recorded 2,711.992 subject seconds and 1,775.081 review seconds. The estimated 105 active minutes include that time once, plus qualification, assessment and closure. The original forecast was 180–260 minutes. Production adoption remains an owner decision.
+The study used 66 subject calls, ten evaluator calls and zero retries. The runners recorded 2,711.992 subject seconds and 1,775.081 review seconds. The estimated 105 active minutes include that time once, plus qualification, assessment and closure. The original forecast was 180–260 minutes. The owner subsequently [adopted this candidate](../../protocol.md#full-regression-adoption) on 2026-11-08.
