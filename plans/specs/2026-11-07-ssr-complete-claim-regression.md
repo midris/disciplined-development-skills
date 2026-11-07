@@ -16,6 +16,6 @@ A failed subject is retained and charged according to actual invocation. The all
 Preserve original evidence and the existing CW fixture edit.
 
 - [x] Qualify both providers and verify input parity. All 11 installed-provider checks passed. Source freeze `f43a1ed`, dispatch freeze `58aa807`.
-- [ ] Assess 24 subjects and four reviews at the checkpoint.
+- [x] Checkpoint passed after 24 subjects and four audited reviews. All 18 repairs meet F1–F3 and the six inventory reports preserve the supplied groups.
 - [ ] Assess 42 additional subjects and six reviews if the checkpoint passes.
 - [ ] Reconcile outcomes, spending and remaining limits.

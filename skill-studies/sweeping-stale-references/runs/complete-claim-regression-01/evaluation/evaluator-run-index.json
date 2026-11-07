@@ -1,4 +1,97 @@
 {
   "evaluator_ledger_version": "1",
-  "runs": []
+  "runs": [
+    {
+      "packet_id": "codex-shiv",
+      "run_id": "20261107T153410565Z-ssr-claim-full-codex-shiv-review-f9184b16-0e89-45ab-86d2-284c4358df45-99vk9q32",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "459b514797baf836d5ba4a61e0a4c55f653bae16",
+      "configuration_sha256": "c22505da5f9d35c21f8aa2cfe7fc1e4f1d2944151270e1a0a1d1d38063453407",
+      "bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/reviews/20261107T153410565Z-ssr-claim-full-codex-shiv-review-f9184b16-0e89-45ab-86d2-284c4358df45-99vk9q32",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/reviews/20261107T153410565Z-ssr-claim-full-codex-shiv-review-f9184b16-0e89-45ab-86d2-284c4358df45-99vk9q32.inventory.json",
+        "sha256": "a815c8cd33b5ab47b96ec2da701a83fbaa9995996eeed60c98e12076b90bfda6",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 229.705,
+      "audit_status": "complete",
+      "audit": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/evaluation/codex-shiv/audit.json",
+        "sha256": "04657a2dedfa6fd5e555bd9b8604900384def3a823f23047611ff841752975a4",
+        "version": null
+      }
+    },
+    {
+      "packet_id": "codex-pressure-local",
+      "run_id": "20261107T153824231Z-ssr-claim-full-codex-pressure-local-review-4c15868a-e76e-4fa4-bc92-eb3284d6d487-grbgf9x4",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "459b514797baf836d5ba4a61e0a4c55f653bae16",
+      "configuration_sha256": "90b4c14d35b32d306b9dfc6887f15807a6da3222f7c8a3d449596ee8057f0a6f",
+      "bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/reviews/20261107T153824231Z-ssr-claim-full-codex-pressure-local-review-4c15868a-e76e-4fa4-bc92-eb3284d6d487-grbgf9x4",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/reviews/20261107T153824231Z-ssr-claim-full-codex-pressure-local-review-4c15868a-e76e-4fa4-bc92-eb3284d6d487-grbgf9x4.inventory.json",
+        "sha256": "09048ae16b16dcaf210381341fe09c9d76bd8a26ed658cff629c650796c4a2b7",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 161.824,
+      "audit_status": "complete",
+      "audit": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/evaluation/codex-pressure-local/audit.json",
+        "sha256": "7715bc7a562a2b46219d7451223639d353a86e4ea620a5cd21fd8cb15ba84a3d",
+        "version": null
+      }
+    },
+    {
+      "packet_id": "claude-shiv",
+      "run_id": "20261107T154116469Z-ssr-claim-full-claude-shiv-review-12f32888-caa2-4d67-bca4-4e2264c2d6b2-z44hue3o",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "459b514797baf836d5ba4a61e0a4c55f653bae16",
+      "configuration_sha256": "f5a147ebe542067b497a68fea6d76132774d55c2df388be7b496d067745418d4",
+      "bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/reviews/20261107T154116469Z-ssr-claim-full-claude-shiv-review-12f32888-caa2-4d67-bca4-4e2264c2d6b2-z44hue3o",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/reviews/20261107T154116469Z-ssr-claim-full-claude-shiv-review-12f32888-caa2-4d67-bca4-4e2264c2d6b2-z44hue3o.inventory.json",
+        "sha256": "2688a00f530f65d68eadde1d37506fd846b8ce255413ec9b648b93bf95b27306",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 270.213,
+      "audit_status": "complete",
+      "audit": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/evaluation/claude-shiv/audit.json",
+        "sha256": "4fee158c5d3cdd19fdc6767662a4758811256d01e697557dea6c9aa0e49c497e",
+        "version": null
+      }
+    },
+    {
+      "packet_id": "claude-pressure-local",
+      "run_id": "20261107T154601117Z-ssr-claim-full-claude-pressure-local-review-a493b02d-3a84-4d66-8f01-272f81d239a7-r38dt05q",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "459b514797baf836d5ba4a61e0a4c55f653bae16",
+      "configuration_sha256": "a42fac3b6b65d48388d8310c9e84200c2c3411fa6a053530a16f1d7c73b4e038",
+      "bundle": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/reviews/20261107T154601117Z-ssr-claim-full-claude-pressure-local-review-a493b02d-3a84-4d66-8f01-272f81d239a7-r38dt05q",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/reviews/20261107T154601117Z-ssr-claim-full-claude-pressure-local-review-a493b02d-3a84-4d66-8f01-272f81d239a7-r38dt05q.inventory.json",
+        "sha256": "4f75baf63c72f9b6b88d6927b99fc4c3af6cd6204860191d3bf325d96cd93ea8",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 162.827,
+      "audit_status": "complete",
+      "audit": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/evaluation/claude-pressure-local/audit.json",
+        "sha256": "da272612d021860b245a8ad4f967dd2f32c403efedccb423e535d8fbd17f0001",
+        "version": null
+      }
+    }
+  ]
 }

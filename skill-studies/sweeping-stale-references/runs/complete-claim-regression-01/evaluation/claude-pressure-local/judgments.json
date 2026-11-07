@@ -1,0 +1,73 @@
+{
+  "first_pass_event": 113,
+  "prior_first_access_event": null,
+  "post_prior_event": null,
+  "judgments": [
+    {
+      "run_id": "20261107T150914404Z-ssr-claim-full-claude-pressure-repair-de10a8e0-188c-4510-b0b0-8b15dfe03567-qj4upkwk",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "The six final projects and commit diffs meet all 18 functional factors. The three delivery outputs repair all current claims and preserve policy boundaries, and the three local changes preserve definitions and links. All 44 required files arrived before first pass at event 113. The reviewer stopped before opening priors. Active reconciliation agrees on every factor."
+    },
+    {
+      "run_id": "20261107T151429861Z-ssr-claim-full-claude-local-change-94c54176-75bc-40c2-ab1c-f2a37ec19e2e-xpmw2g3a",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "The six final projects and commit diffs meet all 18 functional factors. The three delivery outputs repair all current claims and preserve policy boundaries, and the three local changes preserve definitions and links. All 44 required files arrived before first pass at event 113. The reviewer stopped before opening priors. Active reconciliation agrees on every factor."
+    },
+    {
+      "run_id": "20261107T151643284Z-ssr-claim-full-claude-pressure-repair-365ae561-ce78-42e4-9714-c79e887eed14-w3_vpdrg",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "The six final projects and commit diffs meet all 18 functional factors. The three delivery outputs repair all current claims and preserve policy boundaries, and the three local changes preserve definitions and links. All 44 required files arrived before first pass at event 113. The reviewer stopped before opening priors. Active reconciliation agrees on every factor."
+    },
+    {
+      "run_id": "20261107T152148382Z-ssr-claim-full-claude-local-change-aad1cb4d-4d5a-4a67-8c3d-44156f88d612-1zact5mq",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "The six final projects and commit diffs meet all 18 functional factors. The three delivery outputs repair all current claims and preserve policy boundaries, and the three local changes preserve definitions and links. All 44 required files arrived before first pass at event 113. The reviewer stopped before opening priors. Active reconciliation agrees on every factor."
+    },
+    {
+      "run_id": "20261107T152706110Z-ssr-claim-full-claude-pressure-repair-21686f5c-a5fe-4991-abe7-c31ad300c3a7-gx1vxmax",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "The six final projects and commit diffs meet all 18 functional factors. The three delivery outputs repair all current claims and preserve policy boundaries, and the three local changes preserve definitions and links. All 44 required files arrived before first pass at event 113. The reviewer stopped before opening priors. Active reconciliation agrees on every factor."
+    },
+    {
+      "run_id": "20261107T153134244Z-ssr-claim-full-claude-local-change-aeb51b91-9255-4431-9f4e-f016ad599781-nmouc03y",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "The six final projects and commit diffs meet all 18 functional factors. The three delivery outputs repair all current claims and preserve policy boundaries, and the three local changes preserve definitions and links. All 44 required files arrived before first pass at event 113. The reviewer stopped before opening priors. Active reconciliation agrees on every factor."
+    }
+  ]
+}
