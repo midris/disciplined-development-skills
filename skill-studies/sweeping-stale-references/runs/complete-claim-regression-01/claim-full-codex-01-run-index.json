@@ -3,5 +3,1623 @@
   "index_id": "claim-full-codex-01-attempts",
   "study_id": "sweeping-stale-references",
   "batch_id": "claim-full-codex-01",
-  "attempts": []
+  "attempts": [
+    {
+      "attempt_id": "claim-full-codex-01-pressure-repair-finalist-1-1",
+      "case_id": "pressure-repair",
+      "condition": "finalist",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-pressure-repair-manifest.json",
+        "sha256": "966b8cb08dea9033fce50fdca0ecfb0162b4b53e95cf229fa946cc0a87f78fe6",
+        "version": "1",
+        "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+        },
+        "selector": "Batch: claim-full-codex-01; order 1"
+      },
+      "run_id": "20261107T150723416Z-ssr-claim-full-codex-pressure-repair-302c9db0-eca4-461f-bf56-617372133be6-1t9v3c6b",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T150723416Z-ssr-claim-full-codex-pressure-repair-302c9db0-eca4-461f-bf56-617372133be6-1t9v3c6b",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T150723416Z-ssr-claim-full-codex-pressure-repair-302c9db0-eca4-461f-bf56-617372133be6-1t9v3c6b.inventory.json",
+          "sha256": "8f85b1359c6a5ed5ba15da3c1d8b53e36588491340052f76476417213a62f905",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-pressure-repair-finalist-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T150723416Z-ssr-claim-full-codex-pressure-repair-302c9db0-eca4-461f-bf56-617372133be6-1t9v3c6b.json",
+          "sha256": "b3a2167a93bd033b5b3c4c039eb3eb7058327017f69d460949545c4ec7712edb",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-discovery-shiv-finalist-1-1",
+      "case_id": "discovery-shiv",
+      "condition": "finalist",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-discovery-shiv-manifest.json",
+        "sha256": "178d8219d0edce5d498fb699323d52be82942fba60fab4f30f2e37126df5dc2f",
+        "version": "1",
+        "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+        },
+        "selector": "Batch: claim-full-codex-01; order 2"
+      },
+      "run_id": "20261107T151004557Z-ssr-claim-full-codex-discovery-shiv-a72fb43f-64b3-409a-9217-c23db1ba3a3b-4qangb6g",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151004557Z-ssr-claim-full-codex-discovery-shiv-a72fb43f-64b3-409a-9217-c23db1ba3a3b-4qangb6g",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151004557Z-ssr-claim-full-codex-discovery-shiv-a72fb43f-64b3-409a-9217-c23db1ba3a3b-4qangb6g.inventory.json",
+          "sha256": "dcc89d100e09be8936c1854a47271878ce1d7800e45d9a7681eb3469d3b24c1b",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-discovery-shiv-finalist-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T151004557Z-ssr-claim-full-codex-discovery-shiv-a72fb43f-64b3-409a-9217-c23db1ba3a3b-4qangb6g.json",
+          "sha256": "4dc64af9339361100eaef90ad5ec44978a026d7542f00c9d9ec460ad6a84ffe4",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-local-change-finalist-1-1",
+      "case_id": "local-change",
+      "condition": "finalist",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-local-change-manifest.json",
+        "sha256": "5ae8af8fb597dd30022f6533c5419fe93775ef9c41388f93b58125dc201066c5",
+        "version": "1",
+        "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+        },
+        "selector": "Batch: claim-full-codex-01; order 3"
+      },
+      "run_id": "20261107T151302392Z-ssr-claim-full-codex-local-change-4cba2b75-6496-4fdf-8ec1-07fdffe82f84-s2etsdls",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151302392Z-ssr-claim-full-codex-local-change-4cba2b75-6496-4fdf-8ec1-07fdffe82f84-s2etsdls",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151302392Z-ssr-claim-full-codex-local-change-4cba2b75-6496-4fdf-8ec1-07fdffe82f84-s2etsdls.inventory.json",
+          "sha256": "ed6cba14490a32d8aa966afa346e9f0fb688a31352372fbe01109f576c2adae6",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-local-change-finalist-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T151302392Z-ssr-claim-full-codex-local-change-4cba2b75-6496-4fdf-8ec1-07fdffe82f84-s2etsdls.json",
+          "sha256": "111f410349da2c250cb527b451e994eb46e01367798d55f0097336f98f2b15cb",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-large-sweep-account-finalist-1-1",
+      "case_id": "large-sweep-account",
+      "condition": "finalist",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-large-sweep-account-manifest.json",
+        "sha256": "b7105967eea4ca01730076f2c0f84a4b50a059b5c3d5348ba2d1d1a9a0f16c31",
+        "version": "1",
+        "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+        },
+        "selector": "Batch: claim-full-codex-01; order 4"
+      },
+      "run_id": "20261107T151504244Z-ssr-claim-full-codex-large-sweep-account-fde194f4-d790-4c62-91b9-d180a71ab8f1-xivj5x_n",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151504244Z-ssr-claim-full-codex-large-sweep-account-fde194f4-d790-4c62-91b9-d180a71ab8f1-xivj5x_n",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151504244Z-ssr-claim-full-codex-large-sweep-account-fde194f4-d790-4c62-91b9-d180a71ab8f1-xivj5x_n.inventory.json",
+          "sha256": "ee06f1737471b660f51de0d1303f1d80667a4f9ee3529e511c0c27e7235f320f",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-large-sweep-account-finalist-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T151504244Z-ssr-claim-full-codex-large-sweep-account-fde194f4-d790-4c62-91b9-d180a71ab8f1-xivj5x_n.json",
+          "sha256": "48670ba0a20085cc79af5a1de60b724624b23b2373178a8c0a28504549fe6f03",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-pressure-repair-finalist-2-1",
+      "case_id": "pressure-repair",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-pressure-repair-manifest.json",
+        "sha256": "966b8cb08dea9033fce50fdca0ecfb0162b4b53e95cf229fa946cc0a87f78fe6",
+        "version": "1",
+        "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+        },
+        "selector": "Batch: claim-full-codex-01; order 5"
+      },
+      "run_id": "20261107T151736506Z-ssr-claim-full-codex-pressure-repair-a60c6aea-d42b-4af2-a40b-3dee9e9fc4dc-a7fecjgd",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151736506Z-ssr-claim-full-codex-pressure-repair-a60c6aea-d42b-4af2-a40b-3dee9e9fc4dc-a7fecjgd",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151736506Z-ssr-claim-full-codex-pressure-repair-a60c6aea-d42b-4af2-a40b-3dee9e9fc4dc-a7fecjgd.inventory.json",
+          "sha256": "778979f5dd10a9bac4bec1b469967ea6a62cd139dcf1c029d0757d77747af518",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-pressure-repair-finalist-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T151736506Z-ssr-claim-full-codex-pressure-repair-a60c6aea-d42b-4af2-a40b-3dee9e9fc4dc-a7fecjgd.json",
+          "sha256": "f0dbbebd3a3eb52696a4461b2c448d05e9bfcaca299f8b2ae71bcdd2da355728",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-discovery-shiv-finalist-2-1",
+      "case_id": "discovery-shiv",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-discovery-shiv-manifest.json",
+        "sha256": "178d8219d0edce5d498fb699323d52be82942fba60fab4f30f2e37126df5dc2f",
+        "version": "1",
+        "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+        },
+        "selector": "Batch: claim-full-codex-01; order 6"
+      },
+      "run_id": "20261107T152000707Z-ssr-claim-full-codex-discovery-shiv-9068ec05-2532-49cd-a6e0-0eb2c1a1e723-cihtim_5",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T152000707Z-ssr-claim-full-codex-discovery-shiv-9068ec05-2532-49cd-a6e0-0eb2c1a1e723-cihtim_5",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T152000707Z-ssr-claim-full-codex-discovery-shiv-9068ec05-2532-49cd-a6e0-0eb2c1a1e723-cihtim_5.inventory.json",
+          "sha256": "4d69f66c74dc5911e245eeb5f13032f759c2d80d344962b624a484987effd545",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-discovery-shiv-finalist-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T152000707Z-ssr-claim-full-codex-discovery-shiv-9068ec05-2532-49cd-a6e0-0eb2c1a1e723-cihtim_5.json",
+          "sha256": "b9d4530107cf80d2ab0dbf4020f8f0e47cb0e0e0fab837024b06c2253a4c678b",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-local-change-finalist-2-1",
+      "case_id": "local-change",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-local-change-manifest.json",
+        "sha256": "5ae8af8fb597dd30022f6533c5419fe93775ef9c41388f93b58125dc201066c5",
+        "version": "1",
+        "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+        },
+        "selector": "Batch: claim-full-codex-01; order 7"
+      },
+      "run_id": "20261107T152230199Z-ssr-claim-full-codex-local-change-b5da69ee-6ea5-4955-8995-1a6ca0aa83f1-xwmy94a9",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T152230199Z-ssr-claim-full-codex-local-change-b5da69ee-6ea5-4955-8995-1a6ca0aa83f1-xwmy94a9",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T152230199Z-ssr-claim-full-codex-local-change-b5da69ee-6ea5-4955-8995-1a6ca0aa83f1-xwmy94a9.inventory.json",
+          "sha256": "323255e209f9c574fff2ea7305495f49a1631ef66c2d6228bc79fd138cb2f583",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-local-change-finalist-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T152230199Z-ssr-claim-full-codex-local-change-b5da69ee-6ea5-4955-8995-1a6ca0aa83f1-xwmy94a9.json",
+          "sha256": "cebd5e60e0a08e683e3c1d7570c3f6145b752905fb42284711e0766bca6a21e2",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-large-sweep-account-finalist-2-1",
+      "case_id": "large-sweep-account",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-large-sweep-account-manifest.json",
+        "sha256": "b7105967eea4ca01730076f2c0f84a4b50a059b5c3d5348ba2d1d1a9a0f16c31",
+        "version": "1",
+        "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+        },
+        "selector": "Batch: claim-full-codex-01; order 8"
+      },
+      "run_id": "20261107T152448131Z-ssr-claim-full-codex-large-sweep-account-ee89370a-af3d-46e2-b38f-51d741d0ed2a-3ll3f099",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T152448131Z-ssr-claim-full-codex-large-sweep-account-ee89370a-af3d-46e2-b38f-51d741d0ed2a-3ll3f099",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T152448131Z-ssr-claim-full-codex-large-sweep-account-ee89370a-af3d-46e2-b38f-51d741d0ed2a-3ll3f099.inventory.json",
+          "sha256": "7f3beb594d5bc918c951a8212af45a8a9e14aa77e25115a38720577a9668e1b8",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-large-sweep-account-finalist-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T152448131Z-ssr-claim-full-codex-large-sweep-account-ee89370a-af3d-46e2-b38f-51d741d0ed2a-3ll3f099.json",
+          "sha256": "4617cd2b1c2bb3b40513731240a857b6a1f5911f95f441338094881d7cbd96ff",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-pressure-repair-finalist-3-1",
+      "case_id": "pressure-repair",
+      "condition": "finalist",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-pressure-repair-manifest.json",
+        "sha256": "966b8cb08dea9033fce50fdca0ecfb0162b4b53e95cf229fa946cc0a87f78fe6",
+        "version": "1",
+        "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+        },
+        "selector": "Batch: claim-full-codex-01; order 9"
+      },
+      "run_id": "20261107T152538243Z-ssr-claim-full-codex-pressure-repair-2613de03-3c60-4e12-838c-bb4ee7872f61-exrvzrme",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T152538243Z-ssr-claim-full-codex-pressure-repair-2613de03-3c60-4e12-838c-bb4ee7872f61-exrvzrme",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T152538243Z-ssr-claim-full-codex-pressure-repair-2613de03-3c60-4e12-838c-bb4ee7872f61-exrvzrme.inventory.json",
+          "sha256": "c3fb970448c8943a2d6dc9f3e98b6ac7e567b0b3d97a282a670e0ae768427b77",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-pressure-repair-finalist-3",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T152538243Z-ssr-claim-full-codex-pressure-repair-2613de03-3c60-4e12-838c-bb4ee7872f61-exrvzrme.json",
+          "sha256": "4fb43dd9cc793a64ebfbfa1f80e70a49b9e141ffc0953dd50dd276c9d5d2827a",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-discovery-shiv-finalist-3-1",
+      "case_id": "discovery-shiv",
+      "condition": "finalist",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-discovery-shiv-manifest.json",
+        "sha256": "178d8219d0edce5d498fb699323d52be82942fba60fab4f30f2e37126df5dc2f",
+        "version": "1",
+        "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+        },
+        "selector": "Batch: claim-full-codex-01; order 10"
+      },
+      "run_id": "20261107T152753814Z-ssr-claim-full-codex-discovery-shiv-6f02f24f-dbe0-4222-ba8a-e39a22740b0b-dsaobaht",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T152753814Z-ssr-claim-full-codex-discovery-shiv-6f02f24f-dbe0-4222-ba8a-e39a22740b0b-dsaobaht",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T152753814Z-ssr-claim-full-codex-discovery-shiv-6f02f24f-dbe0-4222-ba8a-e39a22740b0b-dsaobaht.inventory.json",
+          "sha256": "ba2280d7a013d2541ef47a448300db3a49d2fcbc4e7835e8f28a948242d7e587",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-discovery-shiv-finalist-3",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T152753814Z-ssr-claim-full-codex-discovery-shiv-6f02f24f-dbe0-4222-ba8a-e39a22740b0b-dsaobaht.json",
+          "sha256": "0ee1b77f3347b7647bc38f000e7e6d8c94ea4ddc38195be450d05ba42005018c",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-local-change-finalist-3-1",
+      "case_id": "local-change",
+      "condition": "finalist",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-local-change-manifest.json",
+        "sha256": "5ae8af8fb597dd30022f6533c5419fe93775ef9c41388f93b58125dc201066c5",
+        "version": "1",
+        "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+        },
+        "selector": "Batch: claim-full-codex-01; order 11"
+      },
+      "run_id": "20261107T153024715Z-ssr-claim-full-codex-local-change-d2fded96-1f00-4cae-898c-d5c1d7a54657-mlz7p0ov",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T153024715Z-ssr-claim-full-codex-local-change-d2fded96-1f00-4cae-898c-d5c1d7a54657-mlz7p0ov",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T153024715Z-ssr-claim-full-codex-local-change-d2fded96-1f00-4cae-898c-d5c1d7a54657-mlz7p0ov.inventory.json",
+          "sha256": "43b4d0779e71aa52682744084280fc65aa51e3bb948d3dfc1730ff0fb7eb68a8",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-local-change-finalist-3",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T153024715Z-ssr-claim-full-codex-local-change-d2fded96-1f00-4cae-898c-d5c1d7a54657-mlz7p0ov.json",
+          "sha256": "f1988fe9cb896460d757b229d6130ab700c596076d1aba5ec01d8f1e80db7579",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-large-sweep-account-finalist-3-1",
+      "case_id": "large-sweep-account",
+      "condition": "finalist",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-large-sweep-account-manifest.json",
+        "sha256": "b7105967eea4ca01730076f2c0f84a4b50a059b5c3d5348ba2d1d1a9a0f16c31",
+        "version": "1",
+        "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+        },
+        "selector": "Batch: claim-full-codex-01; order 12"
+      },
+      "run_id": "20261107T153209861Z-ssr-claim-full-codex-large-sweep-account-38f2e2a9-36d8-43ff-ba1c-48394194580c-kt0tc15_",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T153209861Z-ssr-claim-full-codex-large-sweep-account-38f2e2a9-36d8-43ff-ba1c-48394194580c-kt0tc15_",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T153209861Z-ssr-claim-full-codex-large-sweep-account-38f2e2a9-36d8-43ff-ba1c-48394194580c-kt0tc15_.inventory.json",
+          "sha256": "93da9f397aa74d4da1a5108b6d9faf26e97e607f85c8b24e1c69f45cccaea003",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-large-sweep-account-finalist-3",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T153209861Z-ssr-claim-full-codex-large-sweep-account-38f2e2a9-36d8-43ff-ba1c-48394194580c-kt0tc15_.json",
+          "sha256": "540498d9e7c07716a0a8a696b9bba7ecfb6356d31203d477d55b0d78a3c1922c",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-initiating-change-finalist-1-1",
+      "case_id": "initiating-change",
+      "condition": "finalist",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-initiating-change-manifest.json",
+        "sha256": "c79c217ecaef257da65d4138047b0d731c0bb63d7e0ad9c62a6af8da6ac7745c",
+        "version": "1",
+        "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+        },
+        "selector": "Batch: claim-full-codex-01; order 13"
+      },
+      "run_id": "20261107T154907208Z-ssr-claim-full-codex-initiating-change-715a1b13-7caf-466c-9880-d0fa3578486a-yyscq2na",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T154907208Z-ssr-claim-full-codex-initiating-change-715a1b13-7caf-466c-9880-d0fa3578486a-yyscq2na",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T154907208Z-ssr-claim-full-codex-initiating-change-715a1b13-7caf-466c-9880-d0fa3578486a-yyscq2na.inventory.json",
+          "sha256": "b9001a7cb906b900cf0a0de76782c7f6281ffa589be4239466b5d7633aad6754",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-initiating-change-finalist-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T154907208Z-ssr-claim-full-codex-initiating-change-715a1b13-7caf-466c-9880-d0fa3578486a-yyscq2na.json",
+          "sha256": "1e06d8b788d2ca6342c91b6d026fa13f42a20a9b4482f0c25bc65b67e0f20be5",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-moved-guide-finalist-1-1",
+      "case_id": "moved-guide",
+      "condition": "finalist",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-moved-guide-manifest.json",
+        "sha256": "b0eefa137de994bbca040772e54173ab9fbd192fa0fb2ba77a11b71466bd8f04",
+        "version": "1",
+        "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+        },
+        "selector": "Batch: claim-full-codex-01; order 14"
+      },
+      "run_id": "20261107T155116328Z-ssr-claim-full-codex-moved-guide-7fd5ccfa-3b08-4d53-a8f7-346bd32ead34-jku4lpto",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T155116328Z-ssr-claim-full-codex-moved-guide-7fd5ccfa-3b08-4d53-a8f7-346bd32ead34-jku4lpto",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T155116328Z-ssr-claim-full-codex-moved-guide-7fd5ccfa-3b08-4d53-a8f7-346bd32ead34-jku4lpto.inventory.json",
+          "sha256": "41eeca88a632d9f7d7ebf648dba87751cb10eb7d73f1ede4f1a0e5d67ce817f1",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-moved-guide-finalist-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T155116328Z-ssr-claim-full-codex-moved-guide-7fd5ccfa-3b08-4d53-a8f7-346bd32ead34-jku4lpto.json",
+          "sha256": "7bb6d36544a43ee949efb93b496debc1a776114d0c87380b18981d72f5b60c54",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-semantic-delivery-finalist-1-1",
+      "case_id": "semantic-delivery",
+      "condition": "finalist",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-semantic-delivery-manifest.json",
+        "sha256": "dbed7550e944e1825b2865b3f03406b3ebb76802cba79a320419e4a07459a534",
+        "version": "1",
+        "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+        },
+        "selector": "Batch: claim-full-codex-01; order 15"
+      },
+      "run_id": "20261107T155354187Z-ssr-claim-full-codex-semantic-delivery-84948bea-e738-4e57-af7d-79404e73011a-4ap1baog",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T155354187Z-ssr-claim-full-codex-semantic-delivery-84948bea-e738-4e57-af7d-79404e73011a-4ap1baog",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T155354187Z-ssr-claim-full-codex-semantic-delivery-84948bea-e738-4e57-af7d-79404e73011a-4ap1baog.inventory.json",
+          "sha256": "94af180650c49305d1b89d34cfb956ce7c85902325b090e60569be9db9b74b02",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-semantic-delivery-finalist-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T155354187Z-ssr-claim-full-codex-semantic-delivery-84948bea-e738-4e57-af7d-79404e73011a-4ap1baog.json",
+          "sha256": "66fb1e5528ae6ef18c8e4c75c9fa78b954e7442c929d59fee49163239a25d80a",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-invocation-change-finalist-1-1",
+      "case_id": "invocation-change",
+      "condition": "finalist",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-invocation-change-manifest.json",
+        "sha256": "fe3b5fc7dac1725cf491fea9d04dd1d9af3dcadba056572b93d181f04cb52bd4",
+        "version": "1",
+        "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+        },
+        "selector": "Batch: claim-full-codex-01; order 16"
+      },
+      "run_id": "20261107T155609869Z-ssr-claim-full-codex-invocation-change-104366d5-2289-4f79-bf09-540b36afacbc-aaymv_xt",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T155609869Z-ssr-claim-full-codex-invocation-change-104366d5-2289-4f79-bf09-540b36afacbc-aaymv_xt",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T155609869Z-ssr-claim-full-codex-invocation-change-104366d5-2289-4f79-bf09-540b36afacbc-aaymv_xt.inventory.json",
+          "sha256": "b0be1872e9cb81cb326bc6ef148451bd8cea5e1e5a500ffa286c702492644e18",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-invocation-change-finalist-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T155609869Z-ssr-claim-full-codex-invocation-change-104366d5-2289-4f79-bf09-540b36afacbc-aaymv_xt.json",
+          "sha256": "f1efdc84c7545675900be2a4731ae1e02f3949ebaf3cd9f4a38819b50203f804",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-invocation-review-finalist-1-1",
+      "case_id": "invocation-review",
+      "condition": "finalist",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-invocation-review-manifest.json",
+        "sha256": "065f52462ea358d71629bec0b23bfdb5bf22fa88d41703a10b0e300bd52a67c2",
+        "version": "1",
+        "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+        },
+        "selector": "Batch: claim-full-codex-01; order 17"
+      },
+      "run_id": "20261107T155837950Z-ssr-claim-full-codex-invocation-review-7a5f091c-b102-4679-95e3-28f87de266af-ggp6ttmv",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T155837950Z-ssr-claim-full-codex-invocation-review-7a5f091c-b102-4679-95e3-28f87de266af-ggp6ttmv",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T155837950Z-ssr-claim-full-codex-invocation-review-7a5f091c-b102-4679-95e3-28f87de266af-ggp6ttmv.inventory.json",
+          "sha256": "1a5f26afb91dc5f52034b95e8bac7b9a2380aa19f1c613f1ba91aef83a7ac129",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-invocation-review-finalist-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T155837950Z-ssr-claim-full-codex-invocation-review-7a5f091c-b102-4679-95e3-28f87de266af-ggp6ttmv.json",
+          "sha256": "cd30b5a5f1cf17348188eaa43910af3a68850c8164e722f79c4ca645fbd12b95",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-invocation-verification-finalist-1-1",
+      "case_id": "invocation-verification",
+      "condition": "finalist",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-invocation-verification-manifest.json",
+        "sha256": "0ce6c1ae379664da7c5bcc8df51ab99d989e307ee3b7a4efaa8a7174ad01eb10",
+        "version": "1",
+        "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+        },
+        "selector": "Batch: claim-full-codex-01; order 18"
+      },
+      "run_id": "20261107T160052122Z-ssr-claim-full-codex-invocation-verification-5eda628e-17fc-4aea-a124-2c367e90e48d-t3gkupml",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T160052122Z-ssr-claim-full-codex-invocation-verification-5eda628e-17fc-4aea-a124-2c367e90e48d-t3gkupml",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T160052122Z-ssr-claim-full-codex-invocation-verification-5eda628e-17fc-4aea-a124-2c367e90e48d-t3gkupml.inventory.json",
+          "sha256": "368b729202aa6461ac7d34aac831208fc6aa4f8b25f08be9c8d4d115f0df8d6c",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-invocation-verification-finalist-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T160052122Z-ssr-claim-full-codex-invocation-verification-5eda628e-17fc-4aea-a124-2c367e90e48d-t3gkupml.json",
+          "sha256": "df8c5d547f1fcba6e83c836c9841c5c86286e01f1d4068eaf8bb41f8780ace59",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-invocation-unrelated-finalist-1-1",
+      "case_id": "invocation-unrelated",
+      "condition": "finalist",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-invocation-unrelated-manifest.json",
+        "sha256": "2a092032000fd7a9a6e8e4580ef5ea3d75aac31b40a29c4883819b0692f7537b",
+        "version": "1",
+        "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+        },
+        "selector": "Batch: claim-full-codex-01; order 19"
+      },
+      "run_id": "20261107T160148559Z-ssr-claim-full-codex-invocation-unrelated-f6363bee-c9c6-4e98-bb0b-44e2f61a2e50-rtb9q2rs",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T160148559Z-ssr-claim-full-codex-invocation-unrelated-f6363bee-c9c6-4e98-bb0b-44e2f61a2e50-rtb9q2rs",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T160148559Z-ssr-claim-full-codex-invocation-unrelated-f6363bee-c9c6-4e98-bb0b-44e2f61a2e50-rtb9q2rs.inventory.json",
+          "sha256": "683f8fc3f1894f5422a2951cd0623c2a96be3a6ffa5c3428ce47c73f13bea10f",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-invocation-unrelated-finalist-1",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T160148559Z-ssr-claim-full-codex-invocation-unrelated-f6363bee-c9c6-4e98-bb0b-44e2f61a2e50-rtb9q2rs.json",
+          "sha256": "673773d8389f5ececc7f611b102420cd2719a80632a7bfa69ec31c12bc3a6d87",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-initiating-change-finalist-2-1",
+      "case_id": "initiating-change",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-initiating-change-manifest.json",
+        "sha256": "c79c217ecaef257da65d4138047b0d731c0bb63d7e0ad9c62a6af8da6ac7745c",
+        "version": "1",
+        "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+        },
+        "selector": "Batch: claim-full-codex-01; order 20"
+      },
+      "run_id": "20261107T160336832Z-ssr-claim-full-codex-initiating-change-2126bd4e-c0de-4ea5-a6c0-2fd8c6304b7e-abab8_j3",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T160336832Z-ssr-claim-full-codex-initiating-change-2126bd4e-c0de-4ea5-a6c0-2fd8c6304b7e-abab8_j3",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T160336832Z-ssr-claim-full-codex-initiating-change-2126bd4e-c0de-4ea5-a6c0-2fd8c6304b7e-abab8_j3.inventory.json",
+          "sha256": "742000c70ef2981f0de69daa528bf6635d6e162f7f296e0240923ee8618bda90",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-initiating-change-finalist-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T160336832Z-ssr-claim-full-codex-initiating-change-2126bd4e-c0de-4ea5-a6c0-2fd8c6304b7e-abab8_j3.json",
+          "sha256": "c77b72fd7659d1b2b815a8925b8b2cce48a6562d9108ff5d0bb8171d607aba4d",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-moved-guide-finalist-2-1",
+      "case_id": "moved-guide",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-moved-guide-manifest.json",
+        "sha256": "b0eefa137de994bbca040772e54173ab9fbd192fa0fb2ba77a11b71466bd8f04",
+        "version": "1",
+        "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+        },
+        "selector": "Batch: claim-full-codex-01; order 21"
+      },
+      "run_id": "20261107T160534948Z-ssr-claim-full-codex-moved-guide-0161bc9e-a91c-4b80-b7b5-08a654cd91d8-t08yz9lp",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T160534948Z-ssr-claim-full-codex-moved-guide-0161bc9e-a91c-4b80-b7b5-08a654cd91d8-t08yz9lp",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T160534948Z-ssr-claim-full-codex-moved-guide-0161bc9e-a91c-4b80-b7b5-08a654cd91d8-t08yz9lp.inventory.json",
+          "sha256": "b0aee41e0e12f9e3692c97afcff85d632ebca3d558780f3ca7c7451815b038dc",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-moved-guide-finalist-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T160534948Z-ssr-claim-full-codex-moved-guide-0161bc9e-a91c-4b80-b7b5-08a654cd91d8-t08yz9lp.json",
+          "sha256": "0c2c5ddbf4deba891bd78f18cbc624f282c65cb50d78afe432abe15465fda641",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-semantic-delivery-finalist-2-1",
+      "case_id": "semantic-delivery",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-semantic-delivery-manifest.json",
+        "sha256": "dbed7550e944e1825b2865b3f03406b3ebb76802cba79a320419e4a07459a534",
+        "version": "1",
+        "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+        },
+        "selector": "Batch: claim-full-codex-01; order 22"
+      },
+      "run_id": "20261107T160751231Z-ssr-claim-full-codex-semantic-delivery-ea45fcda-79f3-43db-af1e-3b1e24656885-eofntl6l",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T160751231Z-ssr-claim-full-codex-semantic-delivery-ea45fcda-79f3-43db-af1e-3b1e24656885-eofntl6l",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T160751231Z-ssr-claim-full-codex-semantic-delivery-ea45fcda-79f3-43db-af1e-3b1e24656885-eofntl6l.inventory.json",
+          "sha256": "7e411fcc79eb6a0ac1a0d9e37499968986127d289aa34df35766cc5587c92984",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-semantic-delivery-finalist-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T160751231Z-ssr-claim-full-codex-semantic-delivery-ea45fcda-79f3-43db-af1e-3b1e24656885-eofntl6l.json",
+          "sha256": "6dc10d9d7ae8c24d378d927ed5aa6a9eeca3fcb4c1e133cc93a911bc40807aac",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-invocation-change-finalist-2-1",
+      "case_id": "invocation-change",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-invocation-change-manifest.json",
+        "sha256": "fe3b5fc7dac1725cf491fea9d04dd1d9af3dcadba056572b93d181f04cb52bd4",
+        "version": "1",
+        "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+        },
+        "selector": "Batch: claim-full-codex-01; order 23"
+      },
+      "run_id": "20261107T161002278Z-ssr-claim-full-codex-invocation-change-99de356c-490c-4ce1-9d6f-1101aacfaf95-gibfjrgn",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T161002278Z-ssr-claim-full-codex-invocation-change-99de356c-490c-4ce1-9d6f-1101aacfaf95-gibfjrgn",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T161002278Z-ssr-claim-full-codex-invocation-change-99de356c-490c-4ce1-9d6f-1101aacfaf95-gibfjrgn.inventory.json",
+          "sha256": "bdb27babcd9a3104dccd9de6cd3afc4ac3a207d45a35765cad27f6b3125c72be",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-invocation-change-finalist-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T161002278Z-ssr-claim-full-codex-invocation-change-99de356c-490c-4ce1-9d6f-1101aacfaf95-gibfjrgn.json",
+          "sha256": "97be10aa37289208abc8972c5f1239a83155b007108383c8477bb1749ec267a4",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-invocation-review-finalist-2-1",
+      "case_id": "invocation-review",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-invocation-review-manifest.json",
+        "sha256": "065f52462ea358d71629bec0b23bfdb5bf22fa88d41703a10b0e300bd52a67c2",
+        "version": "1",
+        "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+        },
+        "selector": "Batch: claim-full-codex-01; order 24"
+      },
+      "run_id": "20261107T161213875Z-ssr-claim-full-codex-invocation-review-20b6c3ef-3814-45f6-8004-6dfb165d2c1d-20nx5cxi",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T161213875Z-ssr-claim-full-codex-invocation-review-20b6c3ef-3814-45f6-8004-6dfb165d2c1d-20nx5cxi",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T161213875Z-ssr-claim-full-codex-invocation-review-20b6c3ef-3814-45f6-8004-6dfb165d2c1d-20nx5cxi.inventory.json",
+          "sha256": "c2d738756d6aaad6346cd3ecd3b14846d80d9163cc116080f03e9b80fff1a662",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-invocation-review-finalist-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T161213875Z-ssr-claim-full-codex-invocation-review-20b6c3ef-3814-45f6-8004-6dfb165d2c1d-20nx5cxi.json",
+          "sha256": "91a1d11402065a21aa3336c321f7c32c95a6bf0aacd79d135883e5232feca053",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-invocation-verification-finalist-2-1",
+      "case_id": "invocation-verification",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-invocation-verification-manifest.json",
+        "sha256": "0ce6c1ae379664da7c5bcc8df51ab99d989e307ee3b7a4efaa8a7174ad01eb10",
+        "version": "1",
+        "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+        },
+        "selector": "Batch: claim-full-codex-01; order 25"
+      },
+      "run_id": "20261107T161423865Z-ssr-claim-full-codex-invocation-verification-aa38e763-b06e-4e72-b37e-f7c6957a01db-mn144y_0",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T161423865Z-ssr-claim-full-codex-invocation-verification-aa38e763-b06e-4e72-b37e-f7c6957a01db-mn144y_0",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T161423865Z-ssr-claim-full-codex-invocation-verification-aa38e763-b06e-4e72-b37e-f7c6957a01db-mn144y_0.inventory.json",
+          "sha256": "f7b8d954fa50d1c9b2df21dcf311e088c8e0360906615c2a091ac8d998dbad0e",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-invocation-verification-finalist-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T161423865Z-ssr-claim-full-codex-invocation-verification-aa38e763-b06e-4e72-b37e-f7c6957a01db-mn144y_0.json",
+          "sha256": "6b72ec7888d257e331140393a03ce61a0b386d206016ade807fe7ddfad6550ae",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-invocation-unrelated-finalist-2-1",
+      "case_id": "invocation-unrelated",
+      "condition": "finalist",
+      "repetition": 2,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-invocation-unrelated-manifest.json",
+        "sha256": "2a092032000fd7a9a6e8e4580ef5ea3d75aac31b40a29c4883819b0692f7537b",
+        "version": "1",
+        "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+        },
+        "selector": "Batch: claim-full-codex-01; order 26"
+      },
+      "run_id": "20261107T161514297Z-ssr-claim-full-codex-invocation-unrelated-ed0b2f4f-27de-4193-907f-dd3c5f8eb66b-y3rmoxh9",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T161514297Z-ssr-claim-full-codex-invocation-unrelated-ed0b2f4f-27de-4193-907f-dd3c5f8eb66b-y3rmoxh9",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T161514297Z-ssr-claim-full-codex-invocation-unrelated-ed0b2f4f-27de-4193-907f-dd3c5f8eb66b-y3rmoxh9.inventory.json",
+          "sha256": "3a59c2a773837c1613638c1e4d2ae2774274fe42cfce6e89a97091cdaf90822e",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-invocation-unrelated-finalist-2",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T161514297Z-ssr-claim-full-codex-invocation-unrelated-ed0b2f4f-27de-4193-907f-dd3c5f8eb66b-y3rmoxh9.json",
+          "sha256": "82e583aa47dd4ce95323a3a43b949d530f78b5bc43ba08924950998168373924",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-initiating-change-finalist-3-1",
+      "case_id": "initiating-change",
+      "condition": "finalist",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-initiating-change-manifest.json",
+        "sha256": "c79c217ecaef257da65d4138047b0d731c0bb63d7e0ad9c62a6af8da6ac7745c",
+        "version": "1",
+        "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+        },
+        "selector": "Batch: claim-full-codex-01; order 27"
+      },
+      "run_id": "20261107T161550024Z-ssr-claim-full-codex-initiating-change-48741eba-dfa5-4163-8003-532823fc8d49-bsmftfn8",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T161550024Z-ssr-claim-full-codex-initiating-change-48741eba-dfa5-4163-8003-532823fc8d49-bsmftfn8",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T161550024Z-ssr-claim-full-codex-initiating-change-48741eba-dfa5-4163-8003-532823fc8d49-bsmftfn8.inventory.json",
+          "sha256": "cf98c71a1103a90ae74aa4fee1e699f699fad9a8030fd1c675e86856d01a794f",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-initiating-change-finalist-3",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T161550024Z-ssr-claim-full-codex-initiating-change-48741eba-dfa5-4163-8003-532823fc8d49-bsmftfn8.json",
+          "sha256": "8ff8340b9ac246d1504051042989c033c42439f9370c3c785862bd6795bcf39b",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-moved-guide-finalist-3-1",
+      "case_id": "moved-guide",
+      "condition": "finalist",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-moved-guide-manifest.json",
+        "sha256": "b0eefa137de994bbca040772e54173ab9fbd192fa0fb2ba77a11b71466bd8f04",
+        "version": "1",
+        "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+        },
+        "selector": "Batch: claim-full-codex-01; order 28"
+      },
+      "run_id": "20261107T161803379Z-ssr-claim-full-codex-moved-guide-d1628ee0-5e7d-4686-b233-6083048343f6-r1acwadq",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T161803379Z-ssr-claim-full-codex-moved-guide-d1628ee0-5e7d-4686-b233-6083048343f6-r1acwadq",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T161803379Z-ssr-claim-full-codex-moved-guide-d1628ee0-5e7d-4686-b233-6083048343f6-r1acwadq.inventory.json",
+          "sha256": "8422d597174144b8f488d1e9dd84a34cea4cfc20ef8a8b14ab8dd01cd60ce6c1",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-moved-guide-finalist-3",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T161803379Z-ssr-claim-full-codex-moved-guide-d1628ee0-5e7d-4686-b233-6083048343f6-r1acwadq.json",
+          "sha256": "bdcfc1b8ae16a6cca4faa0c67a0b5755c571dd1199a7b4245a0e238190b965dd",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-semantic-delivery-finalist-3-1",
+      "case_id": "semantic-delivery",
+      "condition": "finalist",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-semantic-delivery-manifest.json",
+        "sha256": "dbed7550e944e1825b2865b3f03406b3ebb76802cba79a320419e4a07459a534",
+        "version": "1",
+        "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+        },
+        "selector": "Batch: claim-full-codex-01; order 29"
+      },
+      "run_id": "20261107T162019373Z-ssr-claim-full-codex-semantic-delivery-f00521c3-0baf-48ae-9a7b-8e0a98580d5a-jzx5lgui",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T162019373Z-ssr-claim-full-codex-semantic-delivery-f00521c3-0baf-48ae-9a7b-8e0a98580d5a-jzx5lgui",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T162019373Z-ssr-claim-full-codex-semantic-delivery-f00521c3-0baf-48ae-9a7b-8e0a98580d5a-jzx5lgui.inventory.json",
+          "sha256": "2ef5a31b4e8b5ce94808f05899883a0f313152114c0096d7b5ab34bbb81c1563",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-semantic-delivery-finalist-3",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T162019373Z-ssr-claim-full-codex-semantic-delivery-f00521c3-0baf-48ae-9a7b-8e0a98580d5a-jzx5lgui.json",
+          "sha256": "6e7d07648815cf39136221ab9f7edc44bcac2f40c9886342c1bad734cfa25470",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-invocation-change-finalist-3-1",
+      "case_id": "invocation-change",
+      "condition": "finalist",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-invocation-change-manifest.json",
+        "sha256": "fe3b5fc7dac1725cf491fea9d04dd1d9af3dcadba056572b93d181f04cb52bd4",
+        "version": "1",
+        "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+        },
+        "selector": "Batch: claim-full-codex-01; order 30"
+      },
+      "run_id": "20261107T162218587Z-ssr-claim-full-codex-invocation-change-c5b8aa84-860b-4706-8e57-f984d3b67133-x5zyxal9",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T162218587Z-ssr-claim-full-codex-invocation-change-c5b8aa84-860b-4706-8e57-f984d3b67133-x5zyxal9",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T162218587Z-ssr-claim-full-codex-invocation-change-c5b8aa84-860b-4706-8e57-f984d3b67133-x5zyxal9.inventory.json",
+          "sha256": "64c2b6cf115045022b055fee216864f5df98b26919a86bd9d9e314dd88f5602d",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-invocation-change-finalist-3",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T162218587Z-ssr-claim-full-codex-invocation-change-c5b8aa84-860b-4706-8e57-f984d3b67133-x5zyxal9.json",
+          "sha256": "19158745e7aae974f8dde890b7142b6e9728d33fcb79625113ec6da56e5f3428",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-invocation-review-finalist-3-1",
+      "case_id": "invocation-review",
+      "condition": "finalist",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-invocation-review-manifest.json",
+        "sha256": "065f52462ea358d71629bec0b23bfdb5bf22fa88d41703a10b0e300bd52a67c2",
+        "version": "1",
+        "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+        },
+        "selector": "Batch: claim-full-codex-01; order 31"
+      },
+      "run_id": "20261107T162419515Z-ssr-claim-full-codex-invocation-review-01277da4-6e2b-4956-97ee-dffa6c83d493-1rcq0k7t",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T162419515Z-ssr-claim-full-codex-invocation-review-01277da4-6e2b-4956-97ee-dffa6c83d493-1rcq0k7t",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T162419515Z-ssr-claim-full-codex-invocation-review-01277da4-6e2b-4956-97ee-dffa6c83d493-1rcq0k7t.inventory.json",
+          "sha256": "9693c0cc62db74f0e5afc5a67c7b84a16778dc5eefc2f359bc5bcbce185b33a7",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-invocation-review-finalist-3",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T162419515Z-ssr-claim-full-codex-invocation-review-01277da4-6e2b-4956-97ee-dffa6c83d493-1rcq0k7t.json",
+          "sha256": "31438dcec07d31403f51d01320ee9122fa28a1e1d975d11efc57d5ee3c897209",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-invocation-verification-finalist-3-1",
+      "case_id": "invocation-verification",
+      "condition": "finalist",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-invocation-verification-manifest.json",
+        "sha256": "0ce6c1ae379664da7c5bcc8df51ab99d989e307ee3b7a4efaa8a7174ad01eb10",
+        "version": "1",
+        "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+        },
+        "selector": "Batch: claim-full-codex-01; order 32"
+      },
+      "run_id": "20261107T162619792Z-ssr-claim-full-codex-invocation-verification-9b22d743-433c-4028-bcf0-213b28d81bbd-qav7oqqh",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T162619792Z-ssr-claim-full-codex-invocation-verification-9b22d743-433c-4028-bcf0-213b28d81bbd-qav7oqqh",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T162619792Z-ssr-claim-full-codex-invocation-verification-9b22d743-433c-4028-bcf0-213b28d81bbd-qav7oqqh.inventory.json",
+          "sha256": "62260e2461b64378daa0ee10075cfd6f003c310ea552333966ccc27df2c170ea",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-invocation-verification-finalist-3",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T162619792Z-ssr-claim-full-codex-invocation-verification-9b22d743-433c-4028-bcf0-213b28d81bbd-qav7oqqh.json",
+          "sha256": "5a35692b062f80516acb8d6d715bc3055a4102b6992452669950ece8ae9c1a7c",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    },
+    {
+      "attempt_id": "claim-full-codex-01-invocation-unrelated-finalist-3-1",
+      "case_id": "invocation-unrelated",
+      "condition": "finalist",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-invocation-unrelated-manifest.json",
+        "sha256": "2a092032000fd7a9a6e8e4580ef5ea3d75aac31b40a29c4883819b0692f7537b",
+        "version": "1",
+        "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/sweeping-stale-references/protocol.md",
+          "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+          "version": "1",
+          "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+        },
+        "selector": "Batch: claim-full-codex-01; order 33"
+      },
+      "run_id": "20261107T162720757Z-ssr-claim-full-codex-invocation-unrelated-cb08d73e-2d80-4f1a-aeee-e8bf13bf9edf-li05b7ni",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Exposed three-repetition full regression. Functional reviews are recorded in the evaluator ledger. Native use and procedure come from the active trace assessment."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T162720757Z-ssr-claim-full-codex-invocation-unrelated-cb08d73e-2d80-4f1a-aeee-e8bf13bf9edf-li05b7ni",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T162720757Z-ssr-claim-full-codex-invocation-unrelated-cb08d73e-2d80-4f1a-aeee-e8bf13bf9edf-li05b7ni.inventory.json",
+          "sha256": "f3fbfce1bc48388d2645650cb10d4e488a785dc823bcf8c4b2c1663fc06b5ff3",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claim-full-codex-01-invocation-unrelated-finalist-3",
+        "record": {
+          "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/results/20261107T162720757Z-ssr-claim-full-codex-invocation-unrelated-cb08d73e-2d80-4f1a-aeee-e8bf13bf9edf-li05b7ni.json",
+          "sha256": "b14bb09fb7a55f77d23df11db951af87f78badfce2e4cb026970f7f89a7200a1",
+          "version": "2",
+          "git_revision": "8b39cf2640e820b83c1c1f24939992792acd41b7"
+        }
+      }
+    }
+  ]
 }
