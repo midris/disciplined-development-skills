@@ -2,7 +2,7 @@
 
 Format version: `1`
 Study ID: `writing-explicit-rationale`
-Status: inputs frozen. Both provider batches passed preparation and collection document checks. The installed shell and isolation probes passed. The reader smoke awaits separate owner approval.
+Status: inputs frozen. Both provider batches passed preparation and collection document checks. The installed shell and isolation probes passed. The owner approved one reader smoke.
 Plan: [current milestone](../../plans/2026-09-11-model-driven-skill-testing.md#wer-milestones)
 General spec: [testing framework](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md)
 
@@ -47,7 +47,8 @@ Use the [focused design](../../plans/specs/2026-11-08-wer-focused-baseline.md#re
 
 From the canonical checkout, each proposed subject or evaluator command is `TMPDIR=/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/wer-baseline-01 skill-validation/runner/.venv/bin/skilltest run CONFIG` with the exact scheduled config. Host permission enables provider initialization under the runner’s permission policy. Recheck binaries and input identities before dispatch. The runner timeout is 900 seconds.
 Original mounts the shipped bytes at GUIDANCE.md and requests a complete read before the task. Control and native share the ordinary prompt. Only native mounts the shipped skill in the provider catalog. Verify actual init, catalog and ordered full delivery from retained evidence.
-The proposed first call uses the [constructed smoke config](runs/baseline-01/reader-smoke/config.json) with Claude Opus 5.5 medium, read-only and zero fixtures. Verify exact prompt, fresh init, workspace, catalog, persistence and zero tool calls before releasing any positive-case readings. Subjects use low effort and workspace-write. The two reconciliations also use fresh read-only Opus medium sessions.
+On 2026-11-09 the owner answered “approved” to one Claude reader smoke using the constructed project. This grants one evaluator invocation, with zero retries. Subject runs and further readings await separate approval.
+The approved call uses the [constructed smoke config](runs/baseline-01/reader-smoke/config.json) with Claude Opus 5.5 medium, read-only and zero fixtures. Verify exact prompt, fresh init, workspace, catalog, persistence and zero tool calls before releasing any positive-case readings. Subjects use low effort and workspace-write. The two reconciliations also use fresh read-only Opus medium sessions.
 
 #### Qualification on 2026-11-09
 
@@ -126,7 +127,7 @@ The external `qualification.inventory.json` covers all 728 entries in `qualifica
 Host loss remains a recovery gap for WER. Include single-host retention in the owner’s allocation decision.
 
 Proposed outer limits: 24 subject, 21 evaluator, 0 authoring and 0 retry invocations.
-Dispatched calls are **0 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **24 / 21 / 0 / 0** under the proposal. Approved dispatch capacity is zero.
+Dispatched calls are **0 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **24 / 21 / 0 / 0** under the proposal. One evaluator invocation is authorized for the smoke.
 Evaluators comprise one smoke, up to 18 eligible isolated positive-case readings and up to two provider-grouped reconciliations. Invalid readings consume their invocation. Any repeat needs a new allocation.
 
 0 active minutes booked; 260 minutes below the 260-minute planning guideline. This is an opening budget ledger for the proposed run sequence. Earlier case development has no measured time entry.
@@ -143,4 +144,4 @@ The original end-to-end estimate is 160–260 active minutes. Remaining planning
 ## Results and decision
 
 The eight frozen manifests pin input revision `37d66bb9`. Both 12-slot schedules passed the runner’s preparation and collection document checks. Both subject indexes passed structural validation.
-Zero observations. The owner has authorized offline preparation only.
+Zero subject observations. The single constructed reader smoke is authorized.
