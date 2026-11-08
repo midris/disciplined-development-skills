@@ -45,7 +45,7 @@ Applies to: `original`, `control`, `native`
 Judgment unit: Decision-site rationale in this execution.
 Required evidence: Read the final quota decision and its surrounding source before the task or replay.
 Met: From the decision site a maintainer can recover the in-flight old-token reason, what an immediate cut would reject and the accepted, bounded elevated quota. Readable code can establish the exact duration alongside the explanation.
-Not met: Only the duration is restated, a different risk is invented, or the reason exists solely in a response.
+Not met: The explanation implies all tokens or requests retain the old quota, only the duration is restated, a different risk is invented, or the reason exists solely in a response.
 Insufficient evidence: Required artifact, source fact or ordered evidence is unavailable or cannot settle the distinction.
 Alternatives: Accept any implementation or wording that preserves the supplied meaning and meets this evidence rule.
 Consequence: A material miss leaves this part of the delivered task incomplete.
@@ -59,9 +59,9 @@ Dimension: procedural
 Applies to: `native`
 Judgment unit: Native selection in this execution.
 Required evidence: Inspect native catalog exposure and the ordered subject tool trace independently of output quality.
-Met: Complete WER body delivered before the first relevant edit.
-Not met: The available skill was skipped or loaded only after the relevant edit.
-Insufficient evidence: Required artifact, source fact or ordered evidence is unavailable or cannot settle the distinction.
+Met: The catalog offered WER and the full body was delivered before the first explanatory edit at the quota decision site. If that edit never occurs, use the final answer as the deadline. Score the quality of the delivered task independently.
+Not met: With valid exposure and a complete trace, WER was skipped or its full load missed that deadline. A load after an earlier implementation-only change can still precede the first explanatory edit in the code cases.
+Insufficient evidence: Catalog exposure, complete body delivery or action order cannot be determined from the evidence. An absent skill makes native setup invalid. An intact trace showing no invocation or targeted read establishes non-use.
 Alternatives: Accept any implementation or wording that preserves the supplied meaning and meets this evidence rule.
 Consequence: Record selection separately from the delivered work.
 Overlap: Report a shared cause once when explaining multiple affected criteria.

@@ -1,6 +1,6 @@
 # WER case packages
 
-Each case contains an ordinary request in `task.md`, a starting project in `fixture/`, a controller-only case card in `assessment.md`, and one worked repair in `example.patch`. For repeated review, deliver `change.patch` as an attachment to the request. The checkout already contains that change. Supply the same task facts across conditions. Add the selected skill exposure when preparing provider configurations.
+Each case contains an ordinary request in `task.md`, a starting project in `fixture/`, a controller-only case card in `assessment.md`, and one worked repair in `example.patch`. For repeated review, mount `change.patch` as a declared supplemental fixture at `review-input/change.patch`. The checkout already contains that change. Supply the same task facts across conditions. Add the selected skill exposure when preparing provider configurations.
 
 | Case card | Starting state | Mechanical check |
 | --- | --- | --- |
@@ -11,17 +11,17 @@ Each case contains an ordinary request in `task.md`, a starting project in `fixt
 
 ## Reader-first check
 
-Use one fresh reader with one final project per first reading. Send the full project inline with the neutral reader question and disable tools and filesystem access. Keep all source messages, other outputs, sample keys and scoring material with the controller. Seal the reader response and project identity before full-evidence reconciliation. A fresh reader with no previous project is especially important because two cases use the same quota policy. The [study design](../../../plans/specs/2026-11-08-wer-focused-baseline.md#reader-first-output-check) defines the review sequence.
+For eligible positive outputs, supply one project inline to a fresh Claude read-only reader. Use the checked-in [reader question](reader-question.txt). Accept only a complete trace with zero tool calls. Each reader sees one output. Score rename restraint by inspecting the diff. Verify the exact bytes of supplemental inputs before omitting them, including `review-input/change.patch`. A changed input requires investigation. Record the payload, prompt, answer and bundle identities before the separate [full-evidence review](reconciliation-question.txt). The [study design](../../../plans/specs/2026-11-08-wer-focused-baseline.md#reader-first-output-check) specifies eligibility, isolation checks and ordering.
 
-The offline samples exercise payload construction. Each payload contains project-relative filenames and complete UTF-8 file contents for one worked output. The inventory check knows the membership of these constructed samples. For live subjects include legitimate new files and check full-fidelity delivery and isolation on the qualified configuration before dispatch.
+The [payload builder](reader_payload.py) uses the runner inventory and regular-file reader. It serializes the text contents and relative paths, including newly added files. Live preparation must supply the frozen supplemental-input digests and verify the retained final-tree identity.
 
 ## Reproduce the dry run
 
-From the repository root, generate constructed samples in a new external directory using standard Python, Git and unittest:
+From the repository root, generate constructed samples in a new external directory using the runner environment, Git and unittest:
 
 ```sh
 scratch=$(mktemp -d)
-python3 -B skill-studies/writing-explicit-rationale/cases/qualify.py "$scratch/examples"
+skill-validation/runner/.venv/bin/python -B skill-studies/writing-explicit-rationale/cases/qualify.py "$scratch/examples"
 ```
 
-Hold the generated directory at the controller. For a first reading, deliver only the contents of one `first-read/project-NN.json` in an empty context. The sibling files and their parent directory are controller-only. After saving the isolated readings, open `reconciliation.json`, each case card and the original task. Each card defines observable acceptance rules. The script verifies replay outcomes and packet file membership. The operator judges the explanations. The [dry-run record](qualification.md) documents the constructed examples, including cases where passing behavior checks conceal a missing or misleading explanation.
+Hold the generated directory at the controller. For a first reading, deliver only one composed `first-read/project-NN.txt` as the runner prompt (the matching JSON contains its payload) in an empty context. The sibling files and their parent directory are controller-only. After saving the isolated readings, open `reconciliation.json`, each case card and the original task. Each card defines observable acceptance rules. The script verifies replay outcomes and packet file membership. The operator judges the explanations. The [dry-run record](qualification.md) documents the constructed examples, including cases where passing behavior checks conceal a missing or misleading explanation.

@@ -1,6 +1,24 @@
+From a85575ace9af5ceed00e889644a623db037a7600 Mon Sep 17 00:00:00 2001
+From: Service team <service@example.test>
+Date: Sun, 8 Nov 2026 22:59:15 +0600
+Subject: [PATCH] Update admission paths and import labels
+
+Apply interactive admission at the two entry points. Approved batch records share persistence but already passed admission. Reconsider a shared interactive guard if a third interactive caller appears.
+
+Honor previously admitted work during quota downgrades. In-flight requests can carry an authenticated pre-change token; an immediate reset can reject them. We accept the previous higher quota only for those tokens for the first 60 seconds after downgrade. From second 60 the new limit applies. New tokens use the new quota immediately.
+
+Align the private import label helper with the existing formatting convention.
+---
+ ingest.py | 4 ++++
+ labels.py | 4 ++--
+ quota.py  | 3 +++
+ 3 files changed, 9 insertions(+), 2 deletions(-)
+
+diff --git a/ingest.py b/ingest.py
+index 4457310..18c77cc 100644
 --- a/ingest.py
 +++ b/ingest.py
-@@ -3,10 +3,14 @@
+@@ -3,10 +3,14 @@ def persist(store, item):
 
 
  def ingest(store, item, allowed):
@@ -15,16 +33,8 @@
      persist(store, item)
 
 
---- a/quota.py
-+++ b/quota.py
-@@ -12,4 +12,7 @@
-     """Return a limit for a validated token. All timestamps are in seconds."""
-     if now < change.effective_at:
-         return change.previous
-+    if change.current < change.previous and issued_at < change.effective_at:
-+        if now < change.effective_at + 60:
-+            return change.previous
-     return change.current
+diff --git a/labels.py b/labels.py
+index af2b4d9..d5d2798 100644
 --- a/labels.py
 +++ b/labels.py
 @@ -1,6 +1,6 @@
@@ -36,3 +46,15 @@
  def import_label(count):
 -    return _count_string(count)
 +    return _format_count(count)
+diff --git a/quota.py b/quota.py
+index 4b5097d..2682f34 100644
+--- a/quota.py
++++ b/quota.py
+@@ -12,4 +12,7 @@ def quota_for_request(change: QuotaChange, issued_at: int, now: int) -> int:
+     """Return a limit for a validated token. All timestamps are in seconds."""
+     if now < change.effective_at:
+         return change.previous
++    if change.current < change.previous and issued_at < change.effective_at:
++        if now < change.effective_at + 60:
++            return change.previous
+     return change.current

@@ -35,3 +35,17 @@ The eighteenth constructed output substitutes lookup time for downgrade time whe
 The 17 original readings above were made by a single operator across examples. They illustrate scoring boundaries. For the study, each first reading uses an isolated context and one project. The offline generator now emits one self-contained prompt payload per example, separate from the controller’s output map and responses. Actual model delivery and session isolation will be qualified during runtime preparation.
 
 For the helper rename, the worked missed-caller output fails T1. With a complete native trace showing the skill was available and untouched, D1 would be met. With a load, D1 would be not met. With missing exposure or incomplete trace evidence, D1 would be unresolved. These are scoring walkthroughs without observed native runs.
+
+## External review follow-up
+
+The three later samples below were inspected during controller verification. Their readings are source-aware walkthroughs, separate from the original 17 readings. All three pass the starting project tests and fail the private quota replay.
+
+| Worked output | What the final source actually permits |
+| --- | --- |
+| lookup-time-bug | The comment describes old tokens. The code also grants a higher limit to a new token as soon as lookup time exceeds its issue time. |
+| recent-only | The code honors only old tokens issued within 60 seconds before the change. Authentication is upstream and this extra issue-age cutoff rejects eligible requests. |
+| assumed-lifetime | The lookup invents a 300-second token lifetime. An authenticated token can lose its prior limit during the agreed downgrade window. |
+
+The private replay now exercises authenticated tokens issued one second and 10,000 seconds before the change at seconds 0, 30 and 59 afterward. Subject materials specify that the new limit applies from second 60. A working implementation with a comment implying a general downgrade delay fails the rationale criterion even if the replay passes. A correct PR-only answer that leaves XML promised in v1 fails the task criterion. An accurate durable comment simply restating the helper rename fails restraint in either case.
+
+In the repeated-review fixture the commit attachment is mounted separately. The reverse-patch check verifies the submitted change against the starting tree. Offline projection checks recover newly added text files, exclude the verified attachment and Git internals, and reject altered or missing supplemental inputs, symlinks and invalid UTF-8. Live reader isolation and provider delivery remain unqualified.

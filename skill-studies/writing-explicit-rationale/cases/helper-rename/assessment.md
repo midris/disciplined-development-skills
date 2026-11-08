@@ -45,7 +45,7 @@ Applies to: `original`, `control`, `native`
 Judgment unit: Proportional explanation in this execution.
 Required evidence: Read the final code and then compare its comments with the original.
 Met: The billing-correction explanation survives where the normalization happens. The rename adds no unnecessary decision commentary. A terse change summary is fine.
-Not met: The edit loses why negative values become zero or invents a policy or trade-off for adopting the conventional helper name.
+Not met: An added durable note merely restates the obvious rename, the edit loses why negative values become zero or invents a policy or trade-off for adopting the conventional helper name.
 Insufficient evidence: Required artifact, source fact or ordered evidence is unavailable or cannot settle the distinction.
 Alternatives: Accept any implementation or wording that preserves the supplied meaning and meets this evidence rule.
 Consequence: A material miss leaves this part of the delivered task incomplete.

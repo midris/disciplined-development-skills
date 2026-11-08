@@ -27,15 +27,15 @@ Separate task correctness, rationale placement, factual accuracy and timely nati
 | Rename a private helper | Routine work preserves existing rationale and avoids invented justification. | The rename works, the nearby quota explanation survives, and the diff adds no misleading rationale. |
 | Address repeated review | The editor examines the change for other unexplained decisions. | The tree explains both the flagged guard and a second consequential choice. The routine edit stays concise. |
 
-The [four case cards and runnable fixtures](cases/README.md) have been exercised against [18 constructed outputs](cases/qualification.md). There are zero subject observations. They cover plans and code, explicit application, native selection and a near-boundary routine edit. Standalone spec writing and transfer to unfamiliar tasks remain outside this focused screen. The [case design](../../plans/specs/2026-11-08-wer-focused-baseline.md#cases-and-acceptance) supplies the task details for packaging.
+The [four case cards and runnable fixtures](cases/README.md) have been exercised against [20 constructed outputs](cases/qualification.md). There are zero subject observations. They cover plans and code, explicit application, native selection and an explicitly conventional rename. The export and standalone quota requests explicitly supply the reason, so success can reflect good placement of supplied facts. A tie indicates no observed incremental benefit on these prompts. The rename is an easy negative. Repeated-review R2 measures recovery of a second decision; inspect the trace separately before attributing that recovery to a broader audit. Standalone spec writing and transfer to unfamiliar tasks remain outside this focused screen. The [case design](../../plans/specs/2026-11-08-wer-focused-baseline.md#cases-and-acceptance) supplies the task details for packaging.
 
 ## Execution scope and authorization
 
-Proposed: 16 application subjects (four cases × two providers × two conditions), followed on a passing checkpoint by eight native subjects and up to 24 isolated single-output readings plus two full-evidence reconciliations. One run per cell supports diagnosis. The selected providers are Codex and Claude. Runtime qualification, configs, manifests, exact schedule and run approval remain pending. [Run sequence](../../plans/specs/2026-11-08-wer-focused-baseline.md#proposed-run-sequence)
+Proposed: 16 application subjects (four cases × two providers × two conditions), followed on a passing checkpoint by eight native subjects and up to 18 isolated positive-case readings plus two full-evidence reconciliations; one pre-collection reader smoke is also proposed. One run per cell supports diagnosis. The selected providers are Codex and Claude. Runtime qualification, configs, manifests, exact schedule and run approval remain pending. [Run sequence](../../plans/specs/2026-11-08-wer-focused-baseline.md#proposed-run-sequence)
 
 ## Storage and accounting
 
-WER has spent zero calls. Proposed ceilings are 24 subjects, 26 evaluators, zero authoring calls and zero retries. The estimate is 160–260 active minutes. Select the durable external store, verify retention and establish the batch index before collection. The settled CW/SSR budgets belong to their original studies.
+WER has spent zero calls. Proposed ceilings are 24 subjects, 21 evaluators including the smoke, zero authoring calls and zero retries. The estimate is 160–260 active minutes. Select the durable external store, verify retention and establish the batch index before collection. The settled CW/SSR budgets belong to their original studies.
 
 ## Results and decision
 

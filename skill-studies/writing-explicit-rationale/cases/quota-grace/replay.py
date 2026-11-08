@@ -15,6 +15,8 @@ class PolicyReplay(unittest.TestCase):
                 (-5, -1, old), (-5, 0, old), (-5, 59, old),
                 (-5, 60, new), (-5, 61, new), (0, 0, new), (1, 1, new),
                 (0, 10, new), (1, 10, new),
+                (-1, 0, old), (-1, 30, old), (-1, 59, old),
+                (-10_000, 0, old), (-10_000, 30, old), (-10_000, 59, old),
             ]:
                 with self.subTest(change=change, issued=issued, now=now):
                     self.assertEqual(quota_for_request(change, start + issued, start + now), expected)

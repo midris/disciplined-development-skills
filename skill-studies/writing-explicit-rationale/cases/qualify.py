@@ -1,11 +1,14 @@
 """Reconstruct worked outputs and run offline checks in a new disposable directory."""
 import argparse
+import hashlib
 import json
 from pathlib import Path
 import random
 import shutil
 import subprocess
 import sys
+
+from reader_payload import payload_bytes, reader_prompt
 
 CASES = Path(__file__).resolve().parent
 PROJECT_FILES = {
@@ -51,6 +54,12 @@ def construct(case, variant, tree):
         replace(tree / "quota.py", " and issued_at < change.effective_at", "")
     elif variant == "lookup-time-bug":
         replace(tree / "quota.py", "issued_at < change.effective_at", "issued_at < now")
+    elif variant == "recent-only":
+        replace(tree / "quota.py", "issued_at < change.effective_at",
+                "change.effective_at - 60 <= issued_at < change.effective_at")
+    elif variant == "assumed-lifetime":
+        replace(tree / "quota.py", "issued_at < change.effective_at",
+                "issued_at < change.effective_at and now - issued_at < 300")
     elif variant == "behavior-only":
         path = tree / "quota.py"
         path.write_text("".join(line for line in path.read_text().splitlines(True)
@@ -84,7 +93,7 @@ def qualify(output):
     packets.mkdir()
     # Labels reveal neither the variant nor its expected judgment in the first pass.
     samples = [
-        ("quota-grace", v) for v in ("starting", "complete", "expiry-bug", "new-token-bug", "lookup-time-bug", "behavior-only")
+        ("quota-grace", v) for v in ("starting", "complete", "expiry-bug", "new-token-bug", "lookup-time-bug", "recent-only", "assumed-lifetime", "behavior-only")
     ] + [
         ("export-deferral", v) for v in ("complete", "pr-only", "invented-date")
     ] + [
@@ -104,18 +113,29 @@ def qualify(output):
             run([sys.executable, "-B", "-m", "unittest", "discover"], tree, ok)
             checks["project tests"] = "pass" if ok else "fail"
         if case in {"quota-grace", "repeated-review"}:
-            ok = variant not in {"starting", "expiry-bug", "new-token-bug", "lookup-time-bug"}
+            ok = variant not in {"starting", "expiry-bug", "new-token-bug", "lookup-time-bug", "recent-only", "assumed-lifetime"}
             run([sys.executable, "-I", "-B", str(CASES / "quota-grace/replay.py"), str(tree)], tree, ok)
             checks["quota replay"] = "pass" if ok else "fail"
         members = {p.relative_to(tree).as_posix() for p in tree.rglob("*") if p.is_file()}
         expected = PROJECT_FILES[case]
         if members != expected:
             raise RuntimeError(f"Unexpected worked-project contents: {members ^ expected}")
-        # Each file is a complete standalone first-read payload. The controller
-        # supplies one payload as prompt data to a fresh reader with no tools.
-        files = {name: (tree / name).read_bytes().decode("utf-8") for name in sorted(members)}
-        (packets / f"{label}.json").write_text(json.dumps(files, indent=2) + "\n")
-        entry = {"case": case, "variant": variant, "checks": checks}
+        supplemental = {}
+        if case == "repeated-review":
+            attachment = (CASES / case / "change.patch").read_bytes()
+            target = tree / "review-input/change.patch"
+            target.parent.mkdir()
+            target.write_bytes(attachment)
+            supplemental["review-input/change.patch"] = hashlib.sha256(attachment).hexdigest()
+        payload = payload_bytes(tree, supplemental)
+        if json.loads(payload) != {name: (tree / name).read_bytes().decode() for name in expected}:
+            raise ValueError(f"Reader projection differs from final project: {label}")
+        (packets / f"{label}.json").write_bytes(payload)
+        prompt = reader_prompt(payload)
+        (packets / f"{label}.txt").write_bytes(prompt)
+        entry = {"case": case, "variant": variant, "checks": checks,
+                 "payload_sha256": hashlib.sha256(payload).hexdigest(),
+                 "prompt_sha256": hashlib.sha256(prompt).hexdigest()}
         if case == "export-deferral":
             entry["response"] = ("CSV and JSON stay in v1. XML customers will wait until the partner "
                                  "approves a stable schema because the schema is still changing.")

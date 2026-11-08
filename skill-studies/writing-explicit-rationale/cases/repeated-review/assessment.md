@@ -12,7 +12,7 @@ Development case in the [WER suite](../../protocol.md#suite-and-evidence).
 
 ## Inputs and setup
 
-Supply [task](task.md) as the work request and only [fixture](fixture/) as the editable project. Attach [the change under review](change.patch) alongside the request, outside the project tree.
+Supply [task](task.md) as the work request and only [fixture](fixture/) as the editable project. Mount [the submitted commit](change.patch) as the separate declared input `review-input/change.patch`. The prompt names the file. The quota handover is available only inside the commit message. Verify and omit this supplied attachment from the final-project reader payload as specified in the [packet rules](../README.md#reader-first-check).
 Use identical facts and project bytes in original, control and native conditions. The original arm explicitly receives the full skill, control has no target, and native uses ordinary catalog availability. Confirm the workspace and assigned exposure from captured inputs and traces. Missing evidence limits the affected judgment.
 
 ## Rules and evidence
@@ -44,10 +44,10 @@ Dimension: functional
 Applies to: `original`, `control`, `native`
 Judgment unit: Resolve the guard finding in the tree in this execution.
 Required evidence: Locate the guard decision and inspect the full final code before reading either review round.
-Met: A maintainer can recover why the shared persistence path must serve approved batches, why two interactive guards are accepted, and that a third interactive caller triggers reconsideration. One suitable explanation can cover both callers.
+Met: A maintainer can recover why the shared persistence path must serve approved batches, why two interactive guards are accepted, and that a third interactive caller triggers reconsideration. One suitable explanation can cover both callers. If the design changes, judge the actual boundary under Alternatives below.
 Not met: Only a review reply addresses the guard, or the durable explanation changes the trigger or implies that batches are checked.
 Insufficient evidence: Required artifact, source fact or ordered evidence is unavailable or cannot settle the distinction.
-Alternatives: Accept any implementation or wording that preserves the supplied meaning and meets this evidence rule.
+Alternatives: An equivalent factoring can pass if the tree explains why approved batches bypass interactive admission and accounts for the supplied third-caller decision. If a shared helper already removes the duplication, explain what changed and why revisiting duplication is now obsolete. A silent reversal or an invented new trigger fails R1. Judge runtime behavior under T1.
 Consequence: A material miss leaves this part of the delivered task incomplete.
 Overlap: Report a shared cause once when explaining multiple affected criteria.
 
@@ -58,7 +58,7 @@ Coverage: [Study coverage](../../protocol.md#suite-and-evidence) for address a r
 Dimension: functional
 Applies to: `original`, `control`, `native`
 Judgment unit: Find the second decision in this execution.
-Required evidence: Inspect the quota decision site and the release handover during reconciliation.
+Required evidence: Inspect the quota decision site and the commit message during reconciliation. Record trace evidence of inspecting the submitted change separately. Accurate tree text can establish durable repair; a claim about the audit process requires supporting trace evidence.
 Met: The tree also explains the old-token reason and bounded exposure for already admitted requests.
 Not met: The guard alone is explained or quota wording implies a grace period for all requests.
 Insufficient evidence: Required artifact, source fact or ordered evidence is unavailable or cannot settle the distinction.
@@ -74,8 +74,8 @@ Dimension: functional
 Applies to: `original`, `control`, `native`
 Judgment unit: Leave routine work proportionate in this execution.
 Required evidence: Inspect the label helper and the rest of the diff for unnecessary or invented policy commentary.
-Met: The routine rename receives no speculative justification. Necessary edits elsewhere remain proportionate.
-Not met: The output invents a downstream consequence for the helper rename.
+Met: The routine rename receives no unnecessary durable justification. Necessary edits elsewhere remain proportionate.
+Not met: The output adds a redundant explanation of the rename or invents a downstream consequence for it.
 Insufficient evidence: Required artifact, source fact or ordered evidence is unavailable or cannot settle the distinction.
 Alternatives: Accept any implementation or wording that preserves the supplied meaning and meets this evidence rule.
 Consequence: A material miss leaves this part of the delivered task incomplete.
@@ -89,9 +89,9 @@ Dimension: procedural
 Applies to: `native`
 Judgment unit: Native selection in this execution.
 Required evidence: Inspect native catalog exposure and the ordered subject tool trace independently of output quality.
-Met: Complete WER body delivered before the first relevant edit.
-Not met: The available skill was skipped or loaded only after the relevant edit.
-Insufficient evidence: Required artifact, source fact or ordered evidence is unavailable or cannot settle the distinction.
+Met: The catalog offered WER and the full body was delivered before the first explanatory edit at either reviewed decision site. If that edit never occurs, use the final answer as the deadline. Score the quality of the delivered task independently.
+Not met: With valid exposure and a complete trace, WER was skipped or its full load missed that deadline. A load after an earlier implementation-only change can still precede the first explanatory edit in the code cases.
+Insufficient evidence: Catalog exposure, complete body delivery or action order cannot be determined from the evidence. An absent skill makes native setup invalid. An intact trace showing no invocation or targeted read establishes non-use.
 Alternatives: Accept any implementation or wording that preserves the supplied meaning and meets this evidence rule.
 Consequence: Record selection separately from the delivered work.
 Overlap: Report a shared cause once when explaining multiple affected criteria.
