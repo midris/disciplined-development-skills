@@ -72,7 +72,15 @@ Use that catalog with the probe removed as the expected Claude control/reader ca
 The single approved live reader smoke completed in 14.2 seconds. Its fresh read-only launch disabled persistence, the fixture contained only the Git boundary, the captured prompt matched the frozen bytes, and the full trace contained one turn and zero tool calls.
 The init listed 17 skills. Compared with the 16 expected built-ins, it added `schedule` and removed none. The tools, three plugins and empty MCP list matched. WER was absent.
 The frozen rule requires catalog agreement. The reading is unusable for qualification. The [evaluator ledger](runs/baseline-01/evaluator-run-index.json) pins the complete retained bundle inventory, private audit and authority.
-Investigate the difference between the scripted and live catalogs offline before proposing a remedy. A replacement smoke requires a separate allocation and approval.
+#### Offline catalog diagnosis
+
+The installed Claude Code 2.1.319 binary matches the qualified SHA-256. Its bundled `registerScheduleRemoteAgentsSkill` registers `schedule` (alias `routines`) and checks the first-party provider, Claude.ai OAuth scope, local session and effective `allow_routines` policy before exposing it.
+The [scripted qualification](../../skill-validation/runner/acceptance/test_claude_cli.py) uses a surrogate home, API key and localhost service. The [production adapter](../../skill-validation/runner/src/skilltest/claude_runtime.py) requires a Claude.ai login. Both inventoried scripted init records identify API-key authentication. The inventoried live init has the same CLI version and three built-in plugins, with no API key, project skills or MCP servers.
+A separate offline startup check used the installed CLI with Opus 5.5 medium, read-only permissions, an empty fixture, persistence disabled and an added sandbox network denial. Only a stream-JSON SDK `initialize` control request was supplied, with no user message. The returned command catalog included `schedule` under the existing subscription profile. A surrogate home with a synthetic API key omitted it, as did a synthetic OAuth token alone. This command listing corroborates the live skill init. It does not identify the individual account-policy value responsible for each synthetic result.
+The original 16-skill expectation came from a different authentication and policy context. The observed extra entry has built-in provenance; the smoke trace records zero invocations.
+
+**Proposed amendment before retry.** Freeze a distinct Claude.ai catalog expectation for this CLI and profile: the exact 16 qualified built-ins plus `schedule`. Retain the scripted API-key expectation separately. Apply the subscription expectation to the reader and relevant subject arms, adding WER only for native. Keep exact tool, plugin and MCP checks, fresh read-only session, prompt identity, zero tool calls and the stop on any other catalog difference. Keep the first smoke unusable under its original rule.
+Recheck the CLI identity and subscription startup catalog before a replacement. Record the prospective amendment, a separate one-call replacement allocation and owner approval before dispatch. The proposed amendment confers no dispatch authority.
 
 ### Proposed batch: codex-baseline-01
 
