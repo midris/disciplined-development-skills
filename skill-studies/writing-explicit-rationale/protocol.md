@@ -68,7 +68,7 @@ In both modes both providers selected Python 3.14.10 and Git 2.56.0.
 Use this runner revision for the proposed smoke and subjects, with the existing frozen task inputs.
 The verified external inventory `python-requalification.inventory.json` beside the original inventory records 582 entries and hashes to `c0c11fcc011eb555b8ae5de459ef0736272ac0642bcc5b94b1a8728fcde35bc3`.
 The scripted Claude traces show the declared probe skill, 16 bundled skills, three built-in plugins and zero MCP servers in both modes.
-Use that catalog with the probe removed as the expected Claude control/reader catalog and with WER substituted for native. Compare actual names and provenance to the retained init records. Check actual Codex catalog and ordered loads on the first approved traces.
+The initial smoke used that catalog with the probe removed. The subscription amendment below governs subsequent live launches. Compare actual names and provenance to the retained init records. Check actual Codex catalog and ordered loads on the first approved traces.
 The single approved live reader smoke completed in 14.2 seconds. Its fresh read-only launch disabled persistence, the fixture contained only the Git boundary, the captured prompt matched the frozen bytes, and the full trace contained one turn and zero tool calls.
 The init listed 17 skills. Compared with the 16 expected built-ins, it added `schedule` and removed none. The tools, three plugins and empty MCP list matched. WER was absent.
 The frozen rule requires catalog agreement. The reading is unusable for qualification. The [evaluator ledger](runs/baseline-01/evaluator-run-index.json) pins the complete retained bundle inventory, private audit and authority.
@@ -79,8 +79,8 @@ The [scripted qualification](../../skill-validation/runner/acceptance/test_claud
 A separate offline startup check used the installed CLI with Opus 5.5 medium, read-only permissions, an empty fixture, persistence disabled and an added sandbox network denial. Only a stream-JSON SDK `initialize` control request was supplied, with no user message. The returned command catalog included `schedule` under the existing subscription profile. A surrogate home with a synthetic API key omitted it, as did a synthetic OAuth token alone. This command listing corroborates the live skill init. It does not identify the individual account-policy value responsible for each synthetic result.
 The original 16-skill expectation came from a different authentication and policy context. The observed extra entry has built-in provenance; the smoke trace records zero invocations.
 
-**Proposed amendment before retry.** Freeze a distinct Claude.ai catalog expectation for this CLI and profile: the exact 16 qualified built-ins plus `schedule`. Retain the scripted API-key expectation separately. Apply the subscription expectation to the reader and relevant subject arms, adding WER only for native. Keep exact tool, plugin and MCP checks, fresh read-only session, prompt identity, zero tool calls and the stop on any other catalog difference. Keep the first smoke unusable under its original rule.
-Recheck the CLI identity and subscription startup catalog before a replacement. Record the prospective amendment, a separate one-call replacement allocation and owner approval before dispatch. The proposed amendment confers no dispatch authority.
+**Subscription amendment effective before the replacement.** The [frozen subscription catalog](runs/baseline-01/reader-smoke/subscription-catalog.json) lists the exact 17 expected built-ins, read-only tools, plugin provenance, MCP list and empty-project startup command names. Retain the scripted API-key expectation separately. Apply the subscription expectation to the reader and relevant subject arms, adding WER only for native. Keep exact tool, plugin and MCP checks, fresh read-only session, prompt identity, zero tool calls and the stop on any other catalog difference. Keep the first smoke unusable under its original rule.
+On 2026-11-09 the owner approved any further allocations needed to fix this issue. Allocate one retry invocation for the replacement reader smoke with the identical config and prompt, after verifying the CLI and startup catalog. Record its parent in the evaluator ledger. Subject collection requires separate approval.
 
 ### Proposed batch: codex-baseline-01
 
@@ -137,8 +137,8 @@ Stop on an unresolved charge or inventory mismatch. A local copy preserves evide
 The external `qualification.inventory.json` covers all 728 entries in `qualification/` and hashes to `d229e15631dc749d5a01edadea68d89c274d99d37706ac504b9fab9e0488385e`.
 Host loss remains a recovery gap for WER. Include single-host retention in the owner’s allocation decision.
 
-Proposed outer limits: 24 subject, 21 evaluator, 0 authoring and 0 retry invocations.
-Dispatched calls are **0 subject, 1 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **24 / 20 / 0 / 0** under the proposal. The single approved evaluator invocation is spent.
+Proposed outer limits: 24 subject, 21 evaluator, 0 authoring and 1 retry invocations.
+Dispatched calls are **0 subject, 1 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **24 / 20 / 0 / 1** under the proposal. The original smoke is spent. One retry invocation is allocated to reader qualification.
 Evaluators comprise one smoke, up to 18 eligible isolated positive-case readings and up to two provider-grouped reconciliations. Invalid readings consume their invocation. Any repeat needs a new allocation.
 
 0 active minutes booked; 260 minutes below the 260-minute planning guideline. This is an opening budget ledger for the proposed run sequence. Earlier case development has no measured time entry.
