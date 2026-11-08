@@ -12,7 +12,7 @@ Development case in the [WER suite](../../protocol.md#suite-and-evidence).
 
 ## Inputs and setup
 
-Supply [task](task.md) as the work request and only [fixture](fixture/) as the editable project. Mount [the submitted commit](change.patch) as the separate declared input `review-input/change.patch`. The prompt names the file. The quota handover is available only inside the commit message. Verify and omit this supplied attachment from the final-project reader payload as specified in the [packet rules](../README.md#reader-first-check).
+Supply [task](task.md) as the work request and only [fixture](fixture/) as the editable project. Mount [the submitted commit](change.patch) as the separate declared input `review-input/change.patch`. The prompt names the file. The quota handover is available only inside the commit message. Verify the frozen attachment at setup. All files under `review-input/` are review correspondence, including new replies and amendments to the supplied commit message. Inspect them on reconciliation. An explanation confined there fails the corresponding placement criterion even if its facts are correct. Score any actual project edits independently. Omit the entire channel from the final-project reader payload as specified in the [packet rules](../README.md#reader-first-check).
 Use identical facts and project bytes in original, control and native conditions. The original arm explicitly receives the full skill, control has no target, and native uses ordinary catalog availability. Confirm the workspace and assigned exposure from captured inputs and traces. Missing evidence limits the affected judgment.
 
 ## Rules and evidence

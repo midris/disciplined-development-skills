@@ -127,7 +127,8 @@ def qualify(output):
             target.parent.mkdir()
             target.write_bytes(attachment)
             supplemental["review-input/change.patch"] = hashlib.sha256(attachment).hexdigest()
-        payload = payload_bytes(tree, supplemental)
+        excluded = {}
+        payload = payload_bytes(tree, supplemental, exclusions=excluded)
         if json.loads(payload) != {name: (tree / name).read_bytes().decode() for name in expected}:
             raise ValueError(f"Reader projection differs from final project: {label}")
         (packets / f"{label}.json").write_bytes(payload)
@@ -135,7 +136,8 @@ def qualify(output):
         (packets / f"{label}.txt").write_bytes(prompt)
         entry = {"case": case, "variant": variant, "checks": checks,
                  "payload_sha256": hashlib.sha256(payload).hexdigest(),
-                 "prompt_sha256": hashlib.sha256(prompt).hexdigest()}
+                 "prompt_sha256": hashlib.sha256(prompt).hexdigest(),
+                 "excluded_paths": excluded}
         if case == "export-deferral":
             entry["response"] = ("CSV and JSON stay in v1. XML customers will wait until the partner "
                                  "approves a stable schema because the schema is still changing.")

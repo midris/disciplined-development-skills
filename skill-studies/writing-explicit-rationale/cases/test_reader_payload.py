@@ -41,3 +41,44 @@ class ReaderPayloadTests(unittest.TestCase):
         (self.tree / "binary").write_bytes(b"\xff")
         with self.assertRaises(UnicodeDecodeError):
             payload_bytes(self.tree, self.inputs)
+
+    def test_skill_mounts_require_matching_declarations(self):
+        for root in (".claude", ".agents"):
+            with self.subTest(root=root):
+                path = self.tree / root / "skills/wer/SKILL.md"
+                path.parent.mkdir(parents=True)
+                path.write_bytes(b"WER body")
+                name = path.relative_to(self.tree).as_posix()
+                with self.assertRaisesRegex(ValueError, "Undeclared skill mount"):
+                    payload_bytes(self.tree, self.inputs)
+                inputs = {**self.inputs, name: hashlib.sha256(b"WER body").hexdigest()}
+                self.assertEqual(json.loads(payload_bytes(self.tree, inputs)), {})
+                path.write_bytes(b"changed")
+                with self.assertRaisesRegex(ValueError, "Modified supplemental"):
+                    payload_bytes(self.tree, inputs)
+                path.unlink()
+
+    def test_nested_cache_files_are_logged_controller_side(self):
+        for name in ("src/__pycache__/quota.pyc", ".pytest_cache/v/cache/nodeids"):
+            path = self.tree / name
+            path.parent.mkdir(parents=True)
+            path.write_bytes(b"\xff")
+        (self.tree / "cache-notes.md").write_text("durable")
+        excluded = {}
+        payload = payload_bytes(self.tree, self.inputs, exclusions=excluded)
+        self.assertEqual(json.loads(payload), {"cache-notes.md": "durable"})
+        self.assertEqual(excluded["src/__pycache__/quota.pyc"], "generated cache")
+        self.assertEqual(excluded[".pytest_cache/v/cache/nodeids"], "generated cache")
+
+    def test_review_channel_is_separate_even_if_attachment_is_amended(self):
+        channel = self.tree / "review-input"
+        channel.mkdir()
+        (channel / "change.patch").write_text("amended commit reason")
+        (channel / "reply.md").write_text("reviewer reply")
+        (self.tree / "policy.md").write_text("actual project explanation")
+        inputs = {**self.inputs, "review-input/change.patch": self.inputs["change.patch"]}
+        excluded = {}
+        payload = payload_bytes(self.tree, inputs, exclusions=excluded)
+        self.assertEqual(json.loads(payload), {"policy.md": "actual project explanation"})
+        self.assertEqual(excluded["review-input/change.patch"], "amended review attachment")
+        self.assertEqual(excluded["review-input/reply.md"], "review channel")
