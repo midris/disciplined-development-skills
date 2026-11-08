@@ -2,7 +2,7 @@
 
 Format version: `1`
 Study ID: `writing-explicit-rationale`
-Status: draft. The owner selected WER, added the repeated-review case and accepted the reader-first output check. Case packages and frozen dispatch inputs are pending.
+Status: draft. The owner selected WER, added the repeated-review case and accepted the reader-first output check. The four case packages passed offline qualification. Provider configurations and frozen dispatch inputs are pending.
 Plan: [current milestone](../../plans/2026-09-11-model-driven-skill-testing.md#wer-milestones)
 General spec: [testing framework](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md)
 
@@ -27,11 +27,11 @@ Separate task correctness, rationale placement, factual accuracy and timely nati
 | Rename a private helper | Routine work preserves existing rationale and avoids invented justification. | The rename works, the nearby quota explanation survives, and the diff adds no misleading rationale. |
 | Address repeated review | The editor examines the change for other unexplained decisions. | The tree explains both the flagged guard and a second consequential choice. The routine edit stays concise. |
 
-These are designed cases with zero collected observations. They cover plans and code, explicit application, native selection and a near-boundary routine edit. Standalone spec writing and transfer to unfamiliar tasks remain outside this focused screen. The [case design](../../plans/specs/2026-11-08-wer-focused-baseline.md#cases-and-acceptance) supplies the task details for packaging.
+The [four case cards and runnable fixtures](cases/README.md) have been exercised against [17 constructed outputs](cases/qualification.md). There are zero subject observations. They cover plans and code, explicit application, native selection and a near-boundary routine edit. Standalone spec writing and transfer to unfamiliar tasks remain outside this focused screen. The [case design](../../plans/specs/2026-11-08-wer-focused-baseline.md#cases-and-acceptance) supplies the task details for packaging.
 
 ## Execution scope and authorization
 
-Proposed: 16 application subjects (four cases × two providers × two conditions), followed on a passing checkpoint by eight native subjects and two read-only output reviews. One run per cell supports diagnosis. The selected providers are Codex and Claude. Runtime qualification, case cards, configs, manifests, exact schedule and frozen approval remain pending. [Run sequence](../../plans/specs/2026-11-08-wer-focused-baseline.md#proposed-run-sequence)
+Proposed: 16 application subjects (four cases × two providers × two conditions), followed on a passing checkpoint by eight native subjects and two read-only output reviews. One run per cell supports diagnosis. The selected providers are Codex and Claude. Runtime qualification, configs, manifests, exact schedule and run approval remain pending. [Run sequence](../../plans/specs/2026-11-08-wer-focused-baseline.md#proposed-run-sequence)
 
 ## Storage and accounting
 

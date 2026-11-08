@@ -1,0 +1,128 @@
+"""Reconstruct worked outputs and run offline checks in a new disposable directory."""
+import argparse
+import json
+from pathlib import Path
+import random
+import shutil
+import subprocess
+import sys
+
+CASES = Path(__file__).resolve().parent
+PROJECT_FILES = {
+    "quota-grace": {"quota.py", "test_quota.py"},
+    "export-deferral": {"release-plan.md"},
+    "helper-rename": {"quota.py", "test_quota.py"},
+    "repeated-review": {"ingest.py", "labels.py", "quota.py", "test_service.py"},
+}
+
+
+def run(args, cwd, expect_pass=True):
+    result = subprocess.run(args, cwd=cwd, capture_output=True, text=True, timeout=30)
+    if (result.returncode == 0) != expect_pass:
+        raise RuntimeError(f"{args} exited {result.returncode}\n{result.stdout}\n{result.stderr}")
+    if not expect_pass and "FAIL:" not in result.stderr and "ERROR:" not in result.stderr:
+        raise RuntimeError(f"Expected a test failure, got {result.stderr}")
+    return result
+
+
+def replace(path, before, after):
+    text = path.read_text()
+    if text.count(before) != 1:
+        raise ValueError(f"Ambiguous worked-example edit in {path}")
+    path.write_text(text.replace(before, after))
+
+
+def construct(case, variant, tree):
+    source = CASES / case
+    shutil.copytree(source / "fixture", tree, ignore=shutil.ignore_patterns("__pycache__", ".pytest_cache"))
+    if case == "repeated-review":
+        # The attachment must describe an actual change ending at the supplied tree.
+        patch = str(source / "change.patch")
+        run(["git", "apply", "--check", "--reverse", patch], tree)
+    if variant not in {"starting", "reply-only"}:
+        args = ["git", "apply"]
+        if variant == "guard-only":
+            args.append("--include=ingest.py")
+        run([*args, str(source / "example.patch")], tree)
+
+    if variant == "expiry-bug":
+        replace(tree / "quota.py", "now < change.effective_at + 60", "now <= change.effective_at + 60")
+    elif variant == "new-token-bug":
+        replace(tree / "quota.py", " and issued_at < change.effective_at", "")
+    elif variant == "behavior-only":
+        path = tree / "quota.py"
+        path.write_text("".join(line for line in path.read_text().splitlines(True)
+                                if not line.lstrip().startswith("#")))
+    elif variant == "pr-only":
+        replace(tree / "release-plan.md",
+                " XML customers must wait until the partner approves a stable schema because it is still changing.", "")
+    elif variant == "invented-date":
+        replace(tree / "release-plan.md", "until the partner approves a stable schema because it is still changing",
+                "until our next quarterly release")
+    elif variant == "rename-clutter":
+        replace(tree / "quota.py", "def _normalize_units(value):",
+                "# The new name is required by the billing wire protocol.\ndef _normalize_units(value):")
+    elif variant == "lost-reason":
+        replace(tree / "quota.py", "    # The billing feed sometimes sends negative corrections. They cannot\n"
+                "    # authorize extra work, so the admission service treats them as zero.\n", "")
+    elif variant == "missed-caller":
+        replace(tree / "quota.py", "_normalize_units(value) - consumed", "_quota_units(value) - consumed")
+    elif variant == "batch-regression":
+        replace(tree / "ingest.py", "        persist(store, item)", "        ingest(store, item, False)")
+    elif variant == "unnecessary-comment":
+        replace(tree / "labels.py", "def _format_count(count):",
+                "# The billing contract requires this exact helper name.\ndef _format_count(count):")
+
+
+def qualify(output):
+    output.mkdir()
+    reader = output / "reader"
+    reader.mkdir()
+    # Labels reveal neither the variant nor its expected judgment in the first pass.
+    samples = [
+        ("quota-grace", v) for v in ("starting", "complete", "expiry-bug", "new-token-bug", "behavior-only")
+    ] + [
+        ("export-deferral", v) for v in ("complete", "pr-only", "invented-date")
+    ] + [
+        ("helper-rename", v) for v in ("complete", "rename-clutter", "lost-reason", "missed-caller")
+    ] + [
+        ("repeated-review", v) for v in ("complete", "reply-only", "guard-only", "batch-regression", "unnecessary-comment")
+    ]
+    random.SystemRandom().shuffle(samples)
+    key = {}
+    for number, (case, variant) in enumerate(samples, 1):
+        label = f"project-{number:02}"
+        tree = reader / label
+        construct(case, variant, tree)
+        checks = {}
+        if case != "export-deferral":
+            ok = variant not in {"missed-caller", "batch-regression"}
+            run([sys.executable, "-B", "-m", "unittest", "discover"], tree, ok)
+            checks["project tests"] = "pass" if ok else "fail"
+        if case in {"quota-grace", "repeated-review"}:
+            ok = variant not in {"starting", "expiry-bug", "new-token-bug"}
+            run([sys.executable, "-I", "-B", str(CASES / "quota-grace/replay.py"), str(tree)], tree, ok)
+            checks["quota replay"] = "pass" if ok else "fail"
+        members = {p.relative_to(tree).as_posix() for p in tree.rglob("*") if p.is_file()}
+        expected = PROJECT_FILES[case]
+        if members != expected:
+            raise RuntimeError(f"Unexpected worked-project contents: {members ^ expected}")
+        entry = {"case": case, "variant": variant, "checks": checks}
+        if case == "export-deferral":
+            entry["response"] = ("CSV and JSON stay in v1. XML customers will wait until the partner "
+                                 "approves a stable schema because the schema is still changing.")
+        elif variant == "reply-only":
+            entry["response"] = "The shared helper serves approved batches. A third interactive caller would prompt a redesign."
+        key[label] = entry
+    (output / "reconciliation.json").write_text(json.dumps(key, indent=2) + "\n")
+    print(f"Qualified {len(samples)} constructed outputs in {output}. Reader packets are in {reader}.")
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("output", type=Path, help="New directory outside the checkout")
+    path = parser.parse_args().output.resolve()
+    repo = Path(subprocess.check_output(["git", "rev-parse", "--show-toplevel"], cwd=CASES, text=True).strip())
+    if path == repo or repo in path.parents:
+        parser.error("Choose an external scratch directory")
+    qualify(path)

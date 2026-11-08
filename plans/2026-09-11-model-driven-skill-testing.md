@@ -8,13 +8,13 @@ Study one shipped skill at a time. Establish a fresh baseline, identify a concre
 | --- | --- | --- |
 | Concise writing (CW) | Closed. The owner adopted the rewritten description with the original body. | [CW adoption](../skill-studies/concise-writing/protocol.md#closure-and-adoption) |
 | Sweeping stale references (SSR) | Closed. The owner adopted the compact, count-free skill with the tested description and complete-claim instruction. | [SSR adoption](../skill-studies/sweeping-stale-references/protocol.md#full-regression-adoption) |
-| Writing explicit rationale (WER) | Selected. Four cases and the reader-first review are designed. Next comes offline fixture and scoring preparation. | [WER protocol](../skill-studies/writing-explicit-rationale/protocol.md) |
+| Writing explicit rationale (WER) | Selected. Four case packages passed offline checks. Next comes provider configuration, scope preparation and collection readiness. | [WER protocol](../skill-studies/writing-explicit-rationale/protocol.md) |
 | Remaining skills | Select the next skill with the owner after the WER decision. | [Skill inventory and composition](../ARCHITECTURE.md#composition-boundaries) |
 
 ### WER milestones
 
 - [x] Read the shipped skill, select the cases and agree how to check what a future reader can recover. [Focused design](specs/2026-11-08-wer-focused-baseline.md)
-- [ ] Build the four case packages and criterion cards. Exercise good, incomplete and misleading outputs locally. Confirm the reader-first evidence boundary works.
+- [x] Built the four case packages and criterion cards. The [offline dry run](../skill-studies/writing-explicit-rationale/cases/qualification.md) exercised 17 constructed outputs and artifact-only first readings. Verify live reviewer access isolation during runtime preparation.
 - [ ] Prepare provider configs, manifests, schedule and forecast. Check preparation, freeze inputs and check collection readiness. Record the approved allocation before dispatch.
 - [ ] Run the authorized baseline stages. Retain every attempt, score complete artifacts, reconcile output reviews and record the decision the evidence supports.
 - [ ] If a change is warranted, compare it against the preserved original, regression-test the exact proposed version, then record the owner's decision. Close the study and select the next skill.

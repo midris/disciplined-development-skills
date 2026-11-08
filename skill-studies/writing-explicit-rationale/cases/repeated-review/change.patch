@@ -1,0 +1,38 @@
+--- a/ingest.py
++++ b/ingest.py
+@@ -3,10 +3,14 @@
+
+
+ def ingest(store, item, allowed):
++    if not allowed:
++        raise PermissionError("interactive limit reached")
+     persist(store, item)
+
+
+ def admin_ingest(store, item, allowed):
++    if not allowed:
++        raise PermissionError("interactive limit reached")
+     persist(store, item)
+
+
+--- a/quota.py
++++ b/quota.py
+@@ -12,4 +12,7 @@
+     """Return a limit for a validated token. All timestamps are in seconds."""
+     if now < change.effective_at:
+         return change.previous
++    if change.current < change.previous and issued_at < change.effective_at:
++        if now < change.effective_at + 60:
++            return change.previous
+     return change.current
+--- a/labels.py
++++ b/labels.py
+@@ -1,6 +1,6 @@
+-def _count_string(count):
++def _format_count(count):
+     return f"{count} rows"
+
+
+ def import_label(count):
+-    return _count_string(count)
++    return _format_count(count)

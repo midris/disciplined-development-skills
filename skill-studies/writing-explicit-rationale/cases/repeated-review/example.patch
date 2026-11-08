@@ -1,0 +1,22 @@
+--- a/ingest.py
++++ b/ingest.py
+@@ -3,6 +3,8 @@
+
+
+ def ingest(store, item, allowed):
++    # Approved batch imports also use persist and must bypass interactive admission.
++    # Keep two entry checks; reconsider sharing them on a third interactive caller.
+     if not allowed:
+         raise PermissionError("interactive limit reached")
+     persist(store, item)
+--- a/quota.py
++++ b/quota.py
+@@ -12,6 +12,8 @@
+     """Return a limit for a validated token. All timestamps are in seconds."""
+     if now < change.effective_at:
+         return change.previous
++    # In-flight work admitted under the old token could be rejected on downgrade.
++    # Keep its higher allowance for the agreed 60-second handover.
+     if change.current < change.previous and issued_at < change.effective_at:
+         if now < change.effective_at + 60:
+             return change.previous
