@@ -8,7 +8,7 @@ Study one shipped skill at a time. Establish a fresh baseline, identify a concre
 | --- | --- | --- |
 | Concise writing (CW) | Closed. The owner adopted the rewritten description with the original body. | [CW adoption](../skill-studies/concise-writing/protocol.md#closure-and-adoption) |
 | Sweeping stale references (SSR) | Closed. The owner adopted the compact, count-free skill with the tested description and complete-claim instruction. | [SSR adoption](../skill-studies/sweeping-stale-references/protocol.md#full-regression-adoption) |
-| Writing explicit rationale (WER) | Selected. Baseline inputs prepared. The replacement reader smoke passed. Next decision is approval for the 16 application subjects. | [WER protocol](../skill-studies/writing-explicit-rationale/protocol.md) |
+| Writing explicit rationale (WER) | Selected. Baseline inputs prepared. Application checkpoint paused after 10 of 16 approved subjects. The Claude guided export invented a categorical compatibility claim. Review the pause before further collection. | [WER protocol](../skill-studies/writing-explicit-rationale/protocol.md) |
 | Remaining skills | Select the next skill with the owner after the WER decision. | [Skill inventory and composition](../ARCHITECTURE.md#composition-boundaries) |
 
 ### WER milestones
@@ -20,7 +20,8 @@ Study one shipped skill at a time. Establish a fresh baseline, identify a concre
 - [x] Record approval, run one reader smoke and audit its retained evidence. The live catalog added `schedule` to the expected set.
 - [x] Diagnose the catalog mismatch offline. The subscription and surrogate API-key profiles expose different catalogs.
 - [x] Freeze the [subscription catalog amendment](../skill-studies/writing-explicit-rationale/protocol.md#offline-catalog-diagnosis), dispatch the approved replacement and verify its isolated reading.
-- [ ] Obtain approval for the 16 application subjects and run the authorized baseline stages. Retain every attempt, score complete artifacts, reconcile output reviews and record the decision the evidence supports.
+- [x] Record approval for 16 application subjects. Retain and score all ten attempted slots through the [checkpoint pause](../skill-studies/writing-explicit-rationale/protocol.md#application-checkpoint--paused-after-10-of-16-slots).
+- [ ] Resolve the material-invention stop before the six remaining Claude application slots. Native discovery awaits a separate decision. Isolated output readings and reconciliation remain open.
 - [ ] If a change is warranted, compare it against the preserved original, regression-test the exact proposed version, then record the owner's decision. Close the study and select the next skill.
 
 ## Starting or resuming without conversation history
