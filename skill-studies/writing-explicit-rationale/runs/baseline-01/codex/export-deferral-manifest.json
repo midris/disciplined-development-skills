@@ -3,9 +3,9 @@
   "manifest_id": "wer-codex-export-deferral-1",
   "study_id": "writing-explicit-rationale",
   "case_id": "export-deferral",
-  "status": "draft",
+  "status": "frozen",
   "created_at": "2026-11-09",
-  "source_revision": "",
+  "source_revision": "37d66bb9e84c822b021239ff591f8fcc10f46d8a",
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",

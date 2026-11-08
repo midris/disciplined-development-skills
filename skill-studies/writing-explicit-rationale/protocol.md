@@ -2,7 +2,7 @@
 
 Format version: `1`
 Study ID: `writing-explicit-rationale`
-Status: prepared for offline checks. All model dispatch requires separate owner approval.
+Status: inputs frozen. Both provider batches passed preparation and collection document checks. Shell qualification and owner approval remain open.
 Plan: [current milestone](../../plans/2026-09-11-model-driven-skill-testing.md#wer-milestones)
 General spec: [testing framework](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md)
 
@@ -138,4 +138,5 @@ The original end-to-end estimate is 160–260 active minutes. Remaining planning
 
 ## Results and decision
 
+The eight frozen manifests pin input revision `37d66bb9`. Both 12-slot schedules passed the runner’s preparation and collection document checks. Both subject indexes passed structural validation.
 Zero observations. The owner has authorized offline preparation only.
