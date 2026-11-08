@@ -2,7 +2,7 @@
 
 Format version: `1`
 Study ID: `writing-explicit-rationale`
-Status: draft. The owner selected WER, added the repeated-review case and accepted the reader-first output check. The four case packages passed offline qualification. Provider configurations and frozen dispatch inputs are pending.
+Status: prepared for offline checks. All model dispatch requires separate owner approval.
 Plan: [current milestone](../../plans/2026-09-11-model-driven-skill-testing.md#wer-milestones)
 General spec: [testing framework](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md)
 
@@ -18,6 +18,16 @@ WER should make consequential choices understandable at the decision site, prese
 
 Separate task correctness, rationale placement, factual accuracy and timely native loading. Record what the reviewer could recover from the final tree before releasing the source facts, conversation, diff and final response. Use code replays to check behavior and human or agent judgment to evaluate meaning. Freeze criterion-level evidence rules and ambiguous examples before collection. [Reader-first procedure](../../plans/specs/2026-11-08-wer-focused-baseline.md#reader-first-output-check)
 
+Judge the complete artifact against each applicable criterion on the case card.
+Record met, not met or insufficient evidence with a specific artifact, replay or trace reference.
+A valid execution succeeds functionally when all functional criteria are met, fails if any is not met, and otherwise has an unknown outcome.
+Record native selection separately and explain shared causes once.
+Record each positive output’s eligibility before reader scores are available.
+Follow the reader-first procedure in the focused design and case package guide, seal first readings before full-evidence reconciliation, and report skips, gaps and invalid attempts separately.
+Include every valid-setup execution, including control failures, with one descriptive observation per cell.
+
+Policy snapshot: [WER assessment policy v1](runs/baseline-01/assessment-policy.txt).
+
 ## Suite and evidence
 
 | Proposed case | Behavior under test | Distinguishing evidence |
@@ -31,12 +41,101 @@ The [four case cards and runnable fixtures](cases/README.md) have been exercised
 
 ## Execution scope and authorization
 
-Proposed: 16 application subjects (four cases × two providers × two conditions), followed on a passing checkpoint by eight native subjects and up to 18 isolated positive-case readings plus two full-evidence reconciliations; one pre-collection reader smoke is also proposed. One run per cell supports diagnosis. The selected providers are Codex and Claude. Runtime qualification, configs, manifests, exact schedule and run approval remain pending. [Run sequence](../../plans/specs/2026-11-08-wer-focused-baseline.md#proposed-run-sequence)
+The two provider batches share a stage gate. Complete local orders 1–8 for Codex, then 1–8 for Claude. Inspect all 16 application outputs before releasing orders 9–12 for Codex and then Claude.
+Run one slot at a time in a fresh session. Pause for an invalid setup, missing preservation or unresolved charge, a policy change, an incomplete guided task or a material invented rationale.
+Use the [focused design](../../plans/specs/2026-11-08-wer-focused-baseline.md#reader-first-output-check) for the checkpoint and reading rules. Record approval in this protocol at a new revision before using any command below.
+
+From the canonical checkout, each proposed subject or evaluator command is `TMPDIR=/private/var/folders/55/6jqr25v5211fn00wych8b1jm0000gn/T/wer-baseline-01 skill-validation/runner/.venv/bin/skilltest run CONFIG` with the exact scheduled config. Host permission enables provider initialization under the runner’s permission policy. Recheck binaries and input identities before dispatch. The runner timeout is 900 seconds.
+Original mounts the shipped bytes at GUIDANCE.md and requests a complete read before the task. Control and native share the ordinary prompt. Only native mounts the shipped skill in the provider catalog. Verify actual init, catalog and ordered full delivery from retained evidence.
+The proposed first call uses the [constructed smoke config](runs/baseline-01/reader-smoke/config.json) with Claude Opus 5.5 medium, read-only and zero fixtures. Verify exact prompt, fresh init, workspace, catalog, persistence and zero tool calls before releasing any positive-case readings. Subjects use low effort and workspace-write. The two reconciliations also use fresh read-only Opus medium sessions.
+
+#### Qualification on 2026-11-09
+
+Materialized all 24 configs with the existing runner and compared the full fixture file sets, bytes and rendered prompts against the task, starting project, assigned skill exposure and review attachment.
+The packet builder recovered the original project files from every starting workspace. Sixteen paired comparisons allowed only the explicit instruction and GUIDANCE.md for original/control, and only the provider-specific SKILL.md for native/control.
+All subject configs use the same neutral run ID prefix because the provider sees its workspace path.
+The zero-fixture smoke prompt uses the complete constructed export repair. Its serialized payload SHA-256 is `dac3c74ef3c81477019d75156369a0385d6f43773f5b9582b6d6737bb3d711ab` and its composed prompt SHA-256 is `1f727ee00b085ac2b0c1724112f8c1f9c2a5aed771406e1d9b8fca8383bb83f4`.
+
+The runner at `a67b262acb71aface2fa18f02a03b91a987fe624` supplied the preparation and installed-policy checks.
+Codex CLI 0.167.0 at `/opt/homebrew/bin/codex` hashed to `030316ecfbb41f4e7946e584b0063ef333b7a36cd312ba349f2f6869e39b62cc`.
+Claude Code 2.1.319 at `/opt/homebrew/bin/claude` hashed to `1f53587e92dee8e089fa349188a4cda64fa34ace6e7b0ca2ee278ddaa3cc2ebd`.
+Seven installed-policy probes passed: both providers in both modes denied undeclared inputs, both read-only policies denied mutations and the writable Codex Git/network probe passed.
+Both Codex login-shell probes and both local scripted Claude CLI probes failed the shell-runtime checks. Both providers select Apple Python 3.9.6, below the required 3.11 minimum. Apple’s launcher also emits cache-write errors under the sandbox.
+Restore a supported Python on the adapters’ prepared PATH and rerun the installed qualification before dispatch.
+The scripted Claude traces show the declared probe skill, 16 bundled skills, three built-in plugins and zero MCP servers in both modes.
+Use that catalog with the probe removed as the expected Claude control/reader catalog and with WER substituted for native. Compare actual names and provenance to the retained init records. Check actual Codex catalog and ordered loads on the first approved traces.
+The live reader still needs to demonstrate fresh read-only startup, the expected catalog, exact prompt delivery and zero tool calls. Stop if any check fails.
+
+### Proposed batch: codex-baseline-01
+
+Scope: Four cases, three conditions, one repetition each on `gpt-5.6-sol`. Include every valid-setup execution. No automatic retry.
+Actual attempts: [subject index](runs/baseline-01/codex/run-index.json).
+
+[export-deferral](runs/baseline-01/codex/export-deferral-manifest.json) [quota-grace](runs/baseline-01/codex/quota-grace-manifest.json) [helper-rename](runs/baseline-01/codex/helper-rename-manifest.json) [repeated-review](runs/baseline-01/codex/repeated-review-manifest.json)
+
+| Order | Case | Condition | Repetition | CONFIG |
+| --- | --- | --- | --- | --- |
+| 1 | export-deferral | original | 1 | `skill-studies/writing-explicit-rationale/runs/baseline-01/codex/export-deferral-original.json` |
+| 2 | export-deferral | control | 1 | `skill-studies/writing-explicit-rationale/runs/baseline-01/codex/export-deferral-control.json` |
+| 3 | quota-grace | control | 1 | `skill-studies/writing-explicit-rationale/runs/baseline-01/codex/quota-grace-control.json` |
+| 4 | quota-grace | original | 1 | `skill-studies/writing-explicit-rationale/runs/baseline-01/codex/quota-grace-original.json` |
+| 5 | helper-rename | original | 1 | `skill-studies/writing-explicit-rationale/runs/baseline-01/codex/helper-rename-original.json` |
+| 6 | helper-rename | control | 1 | `skill-studies/writing-explicit-rationale/runs/baseline-01/codex/helper-rename-control.json` |
+| 7 | repeated-review | control | 1 | `skill-studies/writing-explicit-rationale/runs/baseline-01/codex/repeated-review-control.json` |
+| 8 | repeated-review | original | 1 | `skill-studies/writing-explicit-rationale/runs/baseline-01/codex/repeated-review-original.json` |
+| 9 | export-deferral | native | 1 | `skill-studies/writing-explicit-rationale/runs/baseline-01/codex/export-deferral-native.json` |
+| 10 | quota-grace | native | 1 | `skill-studies/writing-explicit-rationale/runs/baseline-01/codex/quota-grace-native.json` |
+| 11 | helper-rename | native | 1 | `skill-studies/writing-explicit-rationale/runs/baseline-01/codex/helper-rename-native.json` |
+| 12 | repeated-review | native | 1 | `skill-studies/writing-explicit-rationale/runs/baseline-01/codex/repeated-review-native.json` |
+
+### Proposed batch: claude-baseline-01
+
+Scope: Four cases, three conditions, one repetition each on `claude-opus-5-5`. Include every valid-setup execution. No automatic retry.
+Actual attempts: [subject index](runs/baseline-01/claude/run-index.json).
+
+[export-deferral](runs/baseline-01/claude/export-deferral-manifest.json) [quota-grace](runs/baseline-01/claude/quota-grace-manifest.json) [helper-rename](runs/baseline-01/claude/helper-rename-manifest.json) [repeated-review](runs/baseline-01/claude/repeated-review-manifest.json)
+
+| Order | Case | Condition | Repetition | CONFIG |
+| --- | --- | --- | --- | --- |
+| 1 | export-deferral | control | 1 | `skill-studies/writing-explicit-rationale/runs/baseline-01/claude/export-deferral-control.json` |
+| 2 | export-deferral | original | 1 | `skill-studies/writing-explicit-rationale/runs/baseline-01/claude/export-deferral-original.json` |
+| 3 | quota-grace | original | 1 | `skill-studies/writing-explicit-rationale/runs/baseline-01/claude/quota-grace-original.json` |
+| 4 | quota-grace | control | 1 | `skill-studies/writing-explicit-rationale/runs/baseline-01/claude/quota-grace-control.json` |
+| 5 | helper-rename | control | 1 | `skill-studies/writing-explicit-rationale/runs/baseline-01/claude/helper-rename-control.json` |
+| 6 | helper-rename | original | 1 | `skill-studies/writing-explicit-rationale/runs/baseline-01/claude/helper-rename-original.json` |
+| 7 | repeated-review | original | 1 | `skill-studies/writing-explicit-rationale/runs/baseline-01/claude/repeated-review-original.json` |
+| 8 | repeated-review | control | 1 | `skill-studies/writing-explicit-rationale/runs/baseline-01/claude/repeated-review-control.json` |
+| 9 | export-deferral | native | 1 | `skill-studies/writing-explicit-rationale/runs/baseline-01/claude/export-deferral-native.json` |
+| 10 | quota-grace | native | 1 | `skill-studies/writing-explicit-rationale/runs/baseline-01/claude/quota-grace-native.json` |
+| 11 | helper-rename | native | 1 | `skill-studies/writing-explicit-rationale/runs/baseline-01/claude/helper-rename-native.json` |
+| 12 | repeated-review | native | 1 | `skill-studies/writing-explicit-rationale/runs/baseline-01/claude/repeated-review-native.json` |
 
 ## Storage and accounting
 
-WER has spent zero calls. Proposed ceilings are 24 subjects, 21 evaluators including the smoke, zero authoring calls and zero retries. The estimate is 160–260 active minutes. Select the durable external store, verify retention and establish the batch index before collection. The settled CW/SSR budgets belong to their original studies.
+Canonical checkout: `/Users/simon/work/personal/disciplined-development-skills`.
+Durable store: `/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01`.
+Preserve stopped subject bundles under `subjects/` using `docs retain` with the scheduled batch, local order, subject index and committed approval revision.
+Keep every evaluator attempt under `evaluators/`, verify the complete bundle inventory and record its charge, config, authority, inventory digest and status in the [evaluator ledger](runs/baseline-01/evaluator-run-index.json).
+Keep first-read eligibility, exclusions, mapping, payload/prompt/answer digests and seal times with private controller records.
+Stop on an unresolved charge or inventory mismatch. A local copy preserves evidence after scratch cleanup. A verified copy of the constructed examples was restored to scratch and matched the original inventory.
+The external `qualification.inventory.json` covers all 728 entries in `qualification/` and hashes to `d229e15631dc749d5a01edadea68d89c274d99d37706ac504b9fab9e0488385e`.
+Host loss remains a recovery gap for WER. Include single-host retention in the owner’s allocation decision.
+
+Proposed outer limits: 24 subject, 21 evaluator, 0 authoring and 0 retry invocations.
+Dispatched calls are **0 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **24 / 21 / 0 / 0** under the proposal. Approved dispatch capacity is zero.
+Evaluators comprise one smoke, up to 18 eligible isolated positive-case readings and up to two provider-grouped reconciliations. Invalid readings consume their invocation. Any repeat needs a new allocation.
+
+0 active minutes booked; 260 minutes below the 260-minute planning guideline. This is an opening budget ledger for the proposed run sequence. Earlier case development has no measured time entry.
+The original end-to-end estimate is 160–260 active minutes. Remaining planning estimates assume a passing checkpoint.
+
+| Work | Estimate | Basis |
+| --- | --- | --- |
+| Runtime qualification and smoke audit | 25 | Resolve shell runtime and inspect the isolated reader |
+| Subject collection and retention | 60 | Up to 24 sequential attempts |
+| Replay and scoring | 65 | Complete projects, diffs and ordered traces |
+| Readings and reconciliation | 65 | Eligibility, sealed packets and two grouped reviews |
+| **Total** | **215** | Active minutes, excluding unattended wait time |
 
 ## Results and decision
 
-Baseline preparation is open. No model runs, scores or rewrite decision have been recorded.
+Zero observations. The owner has authorized offline preparation only.

@@ -1,0 +1,2 @@
+Before starting the task, read GUIDANCE.md in full and apply it.
+Work in the supplied project. Read TASK.md and carry out the request.
