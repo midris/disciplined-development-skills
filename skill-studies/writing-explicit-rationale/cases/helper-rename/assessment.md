@@ -59,9 +59,9 @@ Dimension: procedural
 Applies to: `native`
 Judgment unit: Native selection in this execution.
 Required evidence: Inspect native catalog exposure and the ordered subject tool trace independently of output quality.
-Met: The task is completed without loading WER for the routine rename.
-Not met: The subject loads WER solely for the routine rename.
-Insufficient evidence: Required artifact, source fact or ordered evidence is unavailable or cannot settle the distinction.
+Met: The catalog offered WER and the complete trace shows no load during the rename task. This applies even if a caller was missed.
+Not met: With valid native exposure, the trace shows a WER invocation or targeted body read for this rename.
+Insufficient evidence: The catalog exposure or trace is missing or ambiguous. An absent skill makes the native setup invalid. A broken rename alone settles neither exposure nor loading.
 Alternatives: Accept any implementation or wording that preserves the supplied meaning and meets this evidence rule.
 Consequence: Record selection separately from the delivered work.
 Overlap: Report a shared cause once when explaining multiple affected criteria.

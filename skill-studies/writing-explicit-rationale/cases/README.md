@@ -11,9 +11,9 @@ Each case contains an ordinary request in `task.md`, a starting project in `fixt
 
 ## Reader-first check
 
-Present only the complete final project under an opaque label. Ask the reader to record, for each recoverable decision, its location, reason, consequence or revisit condition. Record uncertainty where the tree is silent. Do not seed the questions with expected facts. Save the first reading before releasing the task, review thread, starting tree, diff, final response, test output or criteria. During reconciliation compare what the reader understood with what the supplied facts support. A sentence can be convincing and wrong. Equivalent explanations pass.
+Use one fresh reader with one final project per first reading. Send the full project inline with the neutral reader question and disable tools and filesystem access. Keep all source messages, other outputs, sample keys and scoring material with the controller. Seal the reader response and project identity before full-evidence reconciliation. A fresh reader with no previous project is especially important because two cases use the same quota policy. The [study design](../../../plans/specs/2026-11-08-wer-focused-baseline.md#reader-first-output-check) defines the review sequence.
 
-The offline samples exercise file selection and judgment boundaries. For live use, enforce separate access to the two stages and audit delivery order; adjacent local directories alone do not isolate a reviewer. Preserve the entire delivered project, including any legitimate new files. The offline inventory check below knows the exact membership of the hand-constructed examples only.
+The offline samples exercise payload construction. Each payload contains project-relative filenames and complete UTF-8 file contents for one worked output. The inventory check knows the membership of these constructed samples. For live subjects include legitimate new files and check full-fidelity delivery and isolation on the qualified configuration before dispatch.
 
 ## Reproduce the dry run
 
@@ -24,4 +24,4 @@ scratch=$(mktemp -d)
 python3 -B skill-studies/writing-explicit-rationale/cases/qualify.py "$scratch/examples"
 ```
 
-Inspect `reader/project-*` first. After saving the readings, open `reconciliation.json`, each case card and the original task. Each card defines observable acceptance rules. The script verifies replay outcomes and packet file membership. The operator judges the explanations. The [dry-run record](qualification.md) documents the constructed examples, including cases where passing behavior checks conceal a missing or misleading explanation.
+Hold the generated directory at the controller. For a first reading, deliver only the contents of one `first-read/project-NN.json` in an empty context. The sibling files and their parent directory are controller-only. After saving the isolated readings, open `reconciliation.json`, each case card and the original task. Each card defines observable acceptance rules. The script verifies replay outcomes and packet file membership. The operator judges the explanations. The [dry-run record](qualification.md) documents the constructed examples, including cases where passing behavior checks conceal a missing or misleading explanation.

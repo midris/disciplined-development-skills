@@ -12,7 +12,7 @@ A future maintainer encounters a choice in a plan or in code without the origina
 
 ## Behavioral contract and consumers
 
-WER should make consequential choices understandable at the decision site, preserve the supplied facts, and leave self-evident edits concise. Repeated review of the same decision should prompt an audit of related choices in the change. The subjects edit project artifacts. A fresh reviewer reads those artifacts as a maintainer would.
+WER should make consequential choices understandable at the decision site, preserve the supplied facts, and leave self-evident edits concise. Repeated review of the same decision should prompt an audit of related choices in the change. The subjects edit project artifacts. A fresh reader sees a single final project as a maintainer would.
 
 ## Assessment policy
 
@@ -27,15 +27,15 @@ Separate task correctness, rationale placement, factual accuracy and timely nati
 | Rename a private helper | Routine work preserves existing rationale and avoids invented justification. | The rename works, the nearby quota explanation survives, and the diff adds no misleading rationale. |
 | Address repeated review | The editor examines the change for other unexplained decisions. | The tree explains both the flagged guard and a second consequential choice. The routine edit stays concise. |
 
-The [four case cards and runnable fixtures](cases/README.md) have been exercised against [17 constructed outputs](cases/qualification.md). There are zero subject observations. They cover plans and code, explicit application, native selection and a near-boundary routine edit. Standalone spec writing and transfer to unfamiliar tasks remain outside this focused screen. The [case design](../../plans/specs/2026-11-08-wer-focused-baseline.md#cases-and-acceptance) supplies the task details for packaging.
+The [four case cards and runnable fixtures](cases/README.md) have been exercised against [18 constructed outputs](cases/qualification.md). There are zero subject observations. They cover plans and code, explicit application, native selection and a near-boundary routine edit. Standalone spec writing and transfer to unfamiliar tasks remain outside this focused screen. The [case design](../../plans/specs/2026-11-08-wer-focused-baseline.md#cases-and-acceptance) supplies the task details for packaging.
 
 ## Execution scope and authorization
 
-Proposed: 16 application subjects (four cases × two providers × two conditions), followed on a passing checkpoint by eight native subjects and two read-only output reviews. One run per cell supports diagnosis. The selected providers are Codex and Claude. Runtime qualification, configs, manifests, exact schedule and run approval remain pending. [Run sequence](../../plans/specs/2026-11-08-wer-focused-baseline.md#proposed-run-sequence)
+Proposed: 16 application subjects (four cases × two providers × two conditions), followed on a passing checkpoint by eight native subjects and up to 24 isolated single-output readings plus two full-evidence reconciliations. One run per cell supports diagnosis. The selected providers are Codex and Claude. Runtime qualification, configs, manifests, exact schedule and run approval remain pending. [Run sequence](../../plans/specs/2026-11-08-wer-focused-baseline.md#proposed-run-sequence)
 
 ## Storage and accounting
 
-WER has spent zero calls. Proposed ceilings are 24 subjects, two evaluators, zero authoring calls and zero retries. The estimate is 120–200 active minutes. Select the durable external store, verify retention and establish the batch index before collection. The settled CW/SSR budgets belong to their original studies.
+WER has spent zero calls. Proposed ceilings are 24 subjects, 26 evaluators, zero authoring calls and zero retries. The estimate is 160–260 active minutes. Select the durable external store, verify retention and establish the batch index before collection. The settled CW/SSR budgets belong to their original studies.
 
 ## Results and decision
 

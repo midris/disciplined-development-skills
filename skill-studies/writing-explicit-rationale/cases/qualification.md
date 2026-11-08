@@ -1,6 +1,6 @@
 # WER offline qualification
 
-The operator constructed 17 sample outputs and read the complete project artifacts under opaque labels before opening the sample key and response texts. The same operator authored the examples. This checks that the evidence and criteria distinguish the intended cases. It supplies no independent reviewer result or provider baseline.
+In the original offline exercise the operator constructed 17 sample outputs and read the complete project artifacts under opaque labels before opening the sample key and response texts. The same operator authored the examples. This checks that the evidence and criteria distinguish the intended cases. It supplies no independent reviewer result or provider baseline.
 
 | Case | Constructed output | Mechanical observations | First reading, reconciled to the sample label |
 | --- | --- | --- | --- |
@@ -27,3 +27,11 @@ For the PR-only deferral the second-pass response accurately gives the schema re
 The reply-only review answer mentions the batch exception and third-caller trigger, but neither decision is explained in the project. The guard-only project explains the first decision while leaving the second unresolved. In the complete example, both reasons are recoverable and behavior is intact. The quota example with comments removed passes the same timing replay as the complete example. The two boundary mutations fail that replay even though the project’s starting tests pass.
 
 Native selection requires an actual catalog and subject trace. All discovery criteria remain unmeasured.
+
+## Post-review qualification
+
+The eighteenth constructed output substitutes lookup time for downgrade time when testing token eligibility. The previous replay accepted it. The revised replay covers tokens issued at the change and just afterward, then used later during the grace period. In the example downgrade from 100 to 30 at second 200, either token must receive 30 at second 210. The mutation returns 100. The same replay applies to the repeated-review fixture.
+
+The 17 original readings above were made by a single operator across examples. They illustrate scoring boundaries. For the study, each first reading uses an isolated context and one project. The offline generator now emits one self-contained prompt payload per example, separate from the controller’s output map and responses. Actual model delivery and session isolation will be qualified during runtime preparation.
+
+For the helper rename, the worked missed-caller output fails T1. With a complete native trace showing the skill was available and untouched, D1 would be met. With a load, D1 would be not met. With missing exposure or incomplete trace evidence, D1 would be unresolved. These are scoring walkthroughs without observed native runs.

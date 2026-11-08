@@ -49,6 +49,8 @@ def construct(case, variant, tree):
         replace(tree / "quota.py", "now < change.effective_at + 60", "now <= change.effective_at + 60")
     elif variant == "new-token-bug":
         replace(tree / "quota.py", " and issued_at < change.effective_at", "")
+    elif variant == "lookup-time-bug":
+        replace(tree / "quota.py", "issued_at < change.effective_at", "issued_at < now")
     elif variant == "behavior-only":
         path = tree / "quota.py"
         path.write_text("".join(line for line in path.read_text().splitlines(True)
@@ -78,9 +80,11 @@ def qualify(output):
     output.mkdir()
     reader = output / "reader"
     reader.mkdir()
+    packets = output / "first-read"
+    packets.mkdir()
     # Labels reveal neither the variant nor its expected judgment in the first pass.
     samples = [
-        ("quota-grace", v) for v in ("starting", "complete", "expiry-bug", "new-token-bug", "behavior-only")
+        ("quota-grace", v) for v in ("starting", "complete", "expiry-bug", "new-token-bug", "lookup-time-bug", "behavior-only")
     ] + [
         ("export-deferral", v) for v in ("complete", "pr-only", "invented-date")
     ] + [
@@ -100,13 +104,17 @@ def qualify(output):
             run([sys.executable, "-B", "-m", "unittest", "discover"], tree, ok)
             checks["project tests"] = "pass" if ok else "fail"
         if case in {"quota-grace", "repeated-review"}:
-            ok = variant not in {"starting", "expiry-bug", "new-token-bug"}
+            ok = variant not in {"starting", "expiry-bug", "new-token-bug", "lookup-time-bug"}
             run([sys.executable, "-I", "-B", str(CASES / "quota-grace/replay.py"), str(tree)], tree, ok)
             checks["quota replay"] = "pass" if ok else "fail"
         members = {p.relative_to(tree).as_posix() for p in tree.rglob("*") if p.is_file()}
         expected = PROJECT_FILES[case]
         if members != expected:
             raise RuntimeError(f"Unexpected worked-project contents: {members ^ expected}")
+        # Each file is a complete standalone first-read payload. The controller
+        # supplies one payload as prompt data to a fresh reader with no tools.
+        files = {name: (tree / name).read_bytes().decode("utf-8") for name in sorted(members)}
+        (packets / f"{label}.json").write_text(json.dumps(files, indent=2) + "\n")
         entry = {"case": case, "variant": variant, "checks": checks}
         if case == "export-deferral":
             entry["response"] = ("CSV and JSON stay in v1. XML customers will wait until the partner "
@@ -115,7 +123,7 @@ def qualify(output):
             entry["response"] = "The shared helper serves approved batches. A third interactive caller would prompt a redesign."
         key[label] = entry
     (output / "reconciliation.json").write_text(json.dumps(key, indent=2) + "\n")
-    print(f"Qualified {len(samples)} constructed outputs in {output}. Reader packets are in {reader}.")
+    print(f"Qualified {len(samples)} constructed outputs in {output}. Single-output first-read payloads are in {packets}.")
 
 
 if __name__ == "__main__":
