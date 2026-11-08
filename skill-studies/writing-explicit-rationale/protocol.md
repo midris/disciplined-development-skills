@@ -2,7 +2,7 @@
 
 Format version: `1`
 Study ID: `writing-explicit-rationale`
-Status: inputs frozen. Both provider batches passed preparation and collection document checks. The installed shell and isolation probes passed. The replacement smoke qualified the reader. The application checkpoint awaits owner approval.
+Status: inputs frozen. Both provider batches passed preparation and collection document checks. The installed shell and isolation probes passed. The replacement smoke qualified the reader. The owner approved 16 application subjects.
 Plan: [current milestone](../../plans/2026-09-11-model-driven-skill-testing.md#wer-milestones)
 General spec: [testing framework](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md)
 
@@ -84,6 +84,7 @@ On 2026-11-09 the owner approved any further allocations needed to fix this issu
 
 ### Proposed batch: codex-baseline-01
 
+Authority on 2026-11-09: the owner approved the 16 application runs and requested checkpoint results before native discovery. Orders 1–8 of this batch are authorized once each under the stated stop rules.
 Scope: Four cases, three conditions, one repetition each on `gpt-5.6-sol`. Include every valid-setup execution. No automatic retry.
 Actual attempts: [subject index](runs/baseline-01/codex/run-index.json).
 
@@ -106,6 +107,7 @@ Actual attempts: [subject index](runs/baseline-01/codex/run-index.json).
 
 ### Proposed batch: claude-baseline-01
 
+Authority on 2026-11-09: the owner approved the 16 application runs and requested checkpoint results before native discovery. Orders 1–8 of this batch are authorized once each under the stated stop rules.
 Scope: Four cases, three conditions, one repetition each on `claude-opus-5-5`. Include every valid-setup execution. No automatic retry.
 Actual attempts: [subject index](runs/baseline-01/claude/run-index.json).
 
