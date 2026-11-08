@@ -76,7 +76,7 @@ class ClaudeRuntime(ProcessRuntime):
         (self.root / "tmp").mkdir(mode=0o700)
         self.environment = CLAUDE_ENV | {
             "HOME": str(home), "USER": user,
-            "PATH": f"{Path(self.executable).parent}:/usr/bin:/bin:/usr/sbin:/sbin",
+            "PATH": self._shell_path(),
             "TMPDIR": str(self.root / "tmp"), "CLAUDE_CODE_TMPDIR": str(self.root / "tmp"),
             "CLAUDE_CODE_DEBUG_LOGS_DIR": str(self.root / "tmp/debug"),
             "ZDOTDIR": str(self.root / "tmp"),

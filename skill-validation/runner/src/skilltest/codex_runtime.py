@@ -84,7 +84,7 @@ class CodexRuntime(ProcessRuntime):
         self.environment = {
             "HOME": str(self.root / "home"), "CODEX_HOME": str(self.root / "codex"),
             "TMPDIR": str(self.root / "tmp"),
-            "PATH": f"{Path(self.executable).parent}:/usr/bin:/bin:/usr/sbin:/sbin",
+            "PATH": self._shell_path(),
         }
         # macOS /etc/zprofile reorders PATH in login shells. Restore the prepared
         # tool order afterward, without exposing any ambient user startup files.

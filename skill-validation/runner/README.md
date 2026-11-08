@@ -330,7 +330,7 @@ The adapter fixes these additional controls:
 ```
 
 Each invocation creates private HOME, CODEX_HOME and TMPDIR directories outside its retained bundle, with private parents mode 0700.
-The CLI child receives only these three variables and PATH: the resolved Codex executable's directory followed by `/usr/bin:/bin:/usr/sbin:/sbin`. Shell tools receive that restricted PATH, private TMPDIR, HOME pointing to the same private scratch, and TMPPREFIX pointing to its `zsh` prefix while other environment inheritance stays disabled. This prevents zsh from inferring the real user home and from creating heredoc files under denied `/tmp`. The explicit PATH prevents environment stripping from selecting a different interpreter; a runner-owned `.zprofile` in private scratch restores that order after the system login profile. Explicit ZDOTDIR selects only that scratch for user startup files. [The Shiv runtime diagnosis](../../skill-studies/sweeping-stale-references/runs/claude-smoke-01/runtime-diagnosis.md) records the observed mismatch and qualification.
+The CLI child receives only these three variables and PATH: the resolved Codex executable's directory, Homebrew’s unversioned Python directory (`/opt/homebrew/opt/python@3/libexec/bin`), then `/usr/bin:/bin:/usr/sbin:/sbin`. Shell tools receive that restricted PATH, private TMPDIR, HOME pointing to the same private scratch, and TMPPREFIX pointing to its `zsh` prefix while other environment inheritance stays disabled. This prevents zsh from inferring the real user home and from creating heredoc files under denied `/tmp`. The explicit PATH prevents environment stripping from selecting a different interpreter; a runner-owned `.zprofile` in private scratch restores that order after the system login profile. Explicit ZDOTDIR selects only that scratch for user startup files. [The Shiv runtime diagnosis](../../skill-studies/sweeping-stale-references/runs/claude-smoke-01/runtime-diagnosis.md) records the observed mismatch and qualification.
 Resolve Codex through the invoking PATH before replacing the environment; use that same absolute executable for login-status preflight and the model call, recording the actual model argv in `runner.log`.
 `execution.executable` remains the provider label `codex`.
 
@@ -370,7 +370,7 @@ Both modes use `--permission-mode dontAsk --permission-prompts none`; permission
 The sibling evidence directory remains available for reading; `--add-dir` does not override the process sandbox.
 
 The controlled Claude runtime requires macOS `sandbox-exec` and an existing claude.ai subscription login using the standard `~/Library/Keychains/login.keychain-db` or supported file cache.
-It retains normal HOME/USER for authentication and launches with an explicit operational PATH, fresh private temporary directories and the accepted memory/history/telemetry controls.
+It retains normal HOME/USER for authentication and launches with the same prepared PATH order using the Claude executable’s directory, fresh private temporary directories and the accepted memory/history/telemetry controls.
 It does not inherit API keys, profile overrides, shell-startup environment variables or the old simple-system-prompt/bundled-skill suppression baseline.
 A private `TMPPREFIX` keeps zsh heredoc files inside allowed scratch.
 A private `ZDOTDIR` and `.zprofile` restore the prepared PATH after macOS login-zsh startup reorders it, without reading user startup files.

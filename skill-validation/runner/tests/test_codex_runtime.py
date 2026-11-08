@@ -54,7 +54,7 @@ def test_private_files_are_fresh_restricted_and_removed(tmp_path, setup_calls, p
         roots.append(runtime.root)
         assert not runtime.root.is_relative_to(request.workspace_dir)
         assert set(runtime.environment) == {"HOME", "CODEX_HOME", "TMPDIR", "PATH"}
-        assert runtime.environment["PATH"] == "/stub/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+        assert runtime.environment["PATH"] == "/stub/bin:/opt/homebrew/opt/python@3/libexec/bin:/usr/bin:/bin:/usr/sbin:/sbin"
         profile = Path(runtime.environment["CODEX_HOME"])
         assert sorted(p.name for p in profile.iterdir()) == ["auth.json"]
         assert (profile / "auth.json").read_bytes() == original

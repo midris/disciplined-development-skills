@@ -93,6 +93,10 @@ class ProcessRuntime:
         self.executable = ""
         self.process_cleanup_error: str | None = None
 
+    def _shell_path(self) -> str:
+        # Homebrew can expose unversioned python3 only in the formula's libexec.
+        return f"{Path(self.executable).parent}:/opt/homebrew/opt/python@3/libexec/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
     def _stop(self, process: subprocess.Popen) -> None:
         self.process_cleanup_error = stop_owned(process) or self.process_cleanup_error
 

@@ -153,6 +153,7 @@ def test_private_login_profile_and_heredoc_environment(setup, mode):
     try:
         runtime.prepare(setup.workspace / 'fixture')
         env = runtime.environment
+        assert env['PATH'].split(':')[1] == '/opt/homebrew/opt/python@3/libexec/bin'
         assert env['ZDOTDIR'] == str(runtime.root / 'tmp')
         assert env['TMPPREFIX'] == str(runtime.root / 'tmp/zsh')
         profile = Path(env['ZDOTDIR']) / '.zprofile'

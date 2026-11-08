@@ -49,7 +49,7 @@ def test_private_profile_git_and_dummy_provider_wiring(tmp_path, monkeypatch, fa
         assert login["auth_mode"] == 0o600 and login["profile_mode"] == 0o700
         assert login["profile_files"] == ["auth.json"]
         assert set(env) == {"HOME", "CODEX_HOME", "TMPDIR", "PATH"}
-        assert env["PATH"] == f"{fake_provider.settings_path.parent}:/usr/bin:/bin:/usr/sbin:/sbin"
+        assert env["PATH"] == f"{fake_provider.settings_path.parent}:/opt/homebrew/opt/python@3/libexec/bin:/usr/bin:/bin:/usr/sbin:/sbin"
         for name in ("HOME", "CODEX_HOME", "TMPDIR"):
             assert not Path(env[name]).exists()
         assert (workspace / "fixture/.git/config").is_file()
