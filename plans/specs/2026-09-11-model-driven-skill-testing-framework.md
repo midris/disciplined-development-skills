@@ -8,7 +8,7 @@ The [testing plan](../2026-09-11-model-driven-skill-testing.md) owns execution o
 
 Build a reusable model-driven framework that understands a skill's purpose and behavior, derives representative tests, establishes measured baseline results, and supports evidence-led rewriting with Superpowers `writing-skills`.
 The organizing workflow is skill development inside a Codex or Claude work session: edit a skill, ask the active agent to run the agreed scenarios, inspect and score the evidence, and record the result. The framework serves that workflow.
-The model owns interpretation, test design, evaluation and recommendations.
+The active agent or human operator owns interpretation, test design, evaluation and recommendations.
 Simple deterministic tools execute bounded operations and preserve evidence so the model can make those judgments reliably.
 Reliability means traceable expectations, representative coverage, trustworthy execution evidence, sufficiently consistent evaluation and conclusions proportionate to the observations.
 It does not mean that a model's repeated answer is necessarily correct or that a small suite proves universal effectiveness.
@@ -55,6 +55,7 @@ The runner owns predictable execution and evidence structure. The scoring contra
 ## CW testing model
 
 Use the completed [CW study](../../skill-studies/concise-writing/protocol.md#closure-and-adoption) as the process model, while deriving each skill's contract, scenarios, criteria and consequences from that skill and its intended use.
+Start each newly selected skill with a fresh baseline on its selected providers. Earlier studies may supply scenario ideas and fixture facts. Count only fresh observations in the new baseline, even when the shipped skill bytes match an archived version.
 The [focused body/discovery comparison](../../skill-studies/concise-writing/runs/revised-body-discovery-01/evaluation/assessment.md) demonstrates separate experiments; the [final handoff comparison](../../skill-studies/concise-writing/runs/final-comparison-01/handoff-02/evaluation/assessment.md) demonstrates repeated comparison and qualitative review of passing outputs.
 Adopt those methods, rather than CW's prose fixtures, factor names, historical call volume or every exploratory iteration.
 The objective is an effective, compact skill: correctness, useful outcomes and consequential output quality take priority over size.
@@ -465,17 +466,6 @@ Schema tests establish structural rules only. Review whether the artifacts colle
 If the representation cannot express an existing requirement, correct the representation. Change the spec only for a genuine requirement clarification, with the reason at that rule; do not invent new workflow steps to accommodate a template.
 Keep this check within the existing review and plan. It requires no separate traceability ledger, review service or additional owner approval. Git preserves superseded instructions; current documents describe the selected work.
 
-## Practical rollout and open design choices
+## Applying the framework to the next skill
 
-First select one skill with a bounded purpose and observable behavior, then work through the layers in order with scenario and criterion design developed together.
-Preserve known temporary historical material in durable storage; broader archival reorganization is not a prerequisite to the study.
-Keep original copies until preservation is verified and record missing evidence without reconstructing it.
-Use the completed CW study as the reusable process model, checking its fit against each new skill's evidence type and dependency pattern.
-Use a minimal practical organization for the first candidate, then settle reusable artifact templates and add tools for recurring mechanical work actually encountered.
-This avoids building a large harness around untested assumptions about evaluation.
-
-Before the next scored collection, settle the fixed rule/record formats, selected scenarios and skill versions, execution settings, authorized run count, cross-model output-review scope and handling of evidence gaps. Select held-out transfer only when that separate claim is needed.
-Before rewriting, settle the change objective, acceptance boundaries and any pure-cleanup conflict with the selected `writing-skills` version.
-Apply the CW model's operational defaults with recorded scope decisions; they prescribe neither identical scenario counts across skills nor a universal numerical acceptance threshold.
-
-Track execution in the fresh testing plan rather than duplicating its checklist here.
+Use the [per-skill plan skeleton](../../skill-studies/README.md#per-skill-plan-skeleton) to apply these responsibilities. Select one skill and record its milestones in the [active plan](../2026-09-11-model-driven-skill-testing.md). Prepare its protocol with the existing document generator. Freeze the cases, criteria, input identities and scope before collection. The study protocol records each batch decision and the reason for retaining or changing the skill.

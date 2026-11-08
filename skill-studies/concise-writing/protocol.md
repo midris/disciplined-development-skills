@@ -3,7 +3,7 @@
 Format version: `1`
 Study ID: `concise-writing`
 Status: closed; the owner approved adopting the original body with the selected rewritten description on 2026-10-22.
-Current action: none for CW. Its process is now the [methodology model](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#cw-testing-model); the [SSR protocol](../sweeping-stale-references/protocol.md#cw-model-alignment) owns remaining SSR scope preparation. No further calls are allocated; runner follow-ups remain in the shared plan.
+Current action: closed. Its [testing model](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#cw-testing-model) guides subsequent studies. The [active plan](../../plans/2026-09-11-model-driven-skill-testing.md#current-next-action) identifies the current skill.
 
 ## Closure and adoption
 

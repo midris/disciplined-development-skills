@@ -1,10 +1,6 @@
 # Skill Validation
 
-Current testing development follows the [fresh framework specification](../plans/specs/2026-09-11-model-driven-skill-testing-framework.md) and [fresh testing plan](../plans/2026-09-11-model-driven-skill-testing.md).
-The checked-in skills and [runner](runner/README.md) are the foundation; the framework and organization are being reconsidered on their merits.
-The prior testing frameworks and their pending workflows are **abandoned**.
-Their scenarios and results remain preserved for later reference, not adopted as requirements or validated baselines of the new design.
-Archive migration is planned but has not yet been performed.
+The [runner](runner/README.md) supports the current studies. Start study work from the [active plan](../plans/2026-09-11-model-driven-skill-testing.md) and [per-skill skeleton](../skill-studies/README.md#per-skill-plan-skeleton). The [archive](archive/README.md) and legacy scenarios retain earlier methods and evidence. New studies establish fresh baselines.
 
 ## Historical framework reference
 
