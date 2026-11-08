@@ -45,7 +45,7 @@ Applies to: `original`, `control`, `native`
 Judgment unit: Decision-site rationale in this execution.
 Required evidence: Read the final quota decision and its surrounding source before the task or replay.
 Met: From the decision site a maintainer can recover the in-flight old-token reason, what an immediate cut would reject and the accepted, bounded elevated quota. Readable code can establish the exact duration alongside the explanation.
-Not met: The explanation implies all tokens or requests retain the old quota, only the duration is restated, a different risk is invented, or the reason exists solely in a response.
+Not met: The explanation implies all tokens or requests retain the old quota, only the duration is restated, a different risk is invented, or the reason exists solely in a response or in the subject’s commit message.
 Insufficient evidence: Required artifact, source fact or ordered evidence is unavailable or cannot settle the distinction.
 Alternatives: Accept any implementation or wording that preserves the supplied meaning and meets this evidence rule.
 Consequence: A material miss leaves this part of the delivered task incomplete.

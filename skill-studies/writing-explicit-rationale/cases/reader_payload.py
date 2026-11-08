@@ -1,14 +1,22 @@
 """Build inline reader evidence from a verified, stopped final fixture tree."""
+import hashlib
 import json
 from pathlib import Path
 
+from skilltest.config import load_config
 from skilltest.documents.references import regular_bytes
 from skilltest.documents.retention import inventory
 
 
-def payload_bytes(tree, supplemental, *, exclusions=None):
-    """Project final files and optionally collect controller-only exclusion reasons."""
-    remaining = dict(supplemental)
+def payload_bytes(tree, config_path, fixture_source, *, exclusions=None):
+    """Use the subject config and its case's fixture/ from the verified input revision."""
+    config = load_config(config_path)
+    fixture_source = fixture_source.resolve(strict=True)
+    remaining = {
+        mount.target.as_posix(): hashlib.sha256(regular_bytes(mount.source)).hexdigest()
+        for mount in config.fixtures
+        if not mount.source.is_relative_to(fixture_source)
+    }
     files = {}
     omitted = {}
     for entry in inventory(tree):

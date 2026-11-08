@@ -45,7 +45,7 @@ Applies to: `original`, `control`, `native`
 Judgment unit: Resolve the guard finding in the tree in this execution.
 Required evidence: Locate the guard decision and inspect the full final code before reading either review round.
 Met: A maintainer can recover why the shared persistence path must serve approved batches, why two interactive guards are accepted, and that a third interactive caller triggers reconsideration. One suitable explanation can cover both callers. If the design changes, judge the actual boundary under Alternatives below.
-Not met: Only a review reply addresses the guard, or the durable explanation changes the trigger or implies that batches are checked.
+Not met: The guard is explained only in review correspondence or in the subject’s commit message, or the durable explanation changes the trigger or implies that batches are checked.
 Insufficient evidence: Required artifact, source fact or ordered evidence is unavailable or cannot settle the distinction.
 Alternatives: An equivalent factoring can pass if the tree explains why approved batches bypass interactive admission and accounts for the supplied third-caller decision. If a shared helper already removes the duplication, explain what changed and why revisiting duplication is now obsolete. A silent reversal or an invented new trigger fails R1. Judge runtime behavior under T1.
 Consequence: A material miss leaves this part of the delivered task incomplete.
@@ -60,7 +60,7 @@ Applies to: `original`, `control`, `native`
 Judgment unit: Find the second decision in this execution.
 Required evidence: Inspect the quota decision site and the commit message during reconciliation. Record trace evidence of inspecting the submitted change separately. Accurate tree text can establish durable repair; a claim about the audit process requires supporting trace evidence.
 Met: The tree also explains the old-token reason and bounded exposure for already admitted requests.
-Not met: The guard alone is explained or quota wording implies a grace period for all requests.
+Not met: The quota reason appears only in the subject’s commit message, the guard alone is explained, or quota wording implies a grace period for all requests.
 Insufficient evidence: Required artifact, source fact or ordered evidence is unavailable or cannot settle the distinction.
 Alternatives: Accept any implementation or wording that preserves the supplied meaning and meets this evidence rule.
 Consequence: A material miss leaves this part of the delivered task incomplete.

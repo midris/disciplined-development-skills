@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
 import random
 import shutil
@@ -102,6 +103,21 @@ def qualify(output):
         ("repeated-review", v) for v in ("complete", "reply-only", "guard-only", "batch-regression", "unnecessary-comment")
     ]
     random.SystemRandom().shuffle(samples)
+    # Offline configs exercise the same source-to-target classification as live runs.
+    configs = output / "configs"
+    configs.mkdir()
+    for case, project_files in PROJECT_FILES.items():
+        case_dir = CASES / case
+        sources = [(case_dir / "fixture" / name, name) for name in sorted(project_files)]
+        sources.append((case_dir / "task.md", "TASK.md"))
+        if case == "repeated-review":
+            sources.append((case_dir / "change.patch", "review-input/change.patch"))
+        config = {
+            "schema_version": "0.2", "id": case, "prompt": os.path.relpath(case_dir / "task.md", configs),
+            "fixtures": [{"source": os.path.relpath(source, configs), "target": target} for source, target in sources],
+            "execution": {"provider": "claude", "model": "claude-opus-5-5", "effort": "low"},
+        }
+        (configs / f"{case}.json").write_text(json.dumps(config))
     key = {}
     for number, (case, variant) in enumerate(samples, 1):
         label = f"project-{number:02}"
@@ -120,15 +136,14 @@ def qualify(output):
         expected = PROJECT_FILES[case]
         if members != expected:
             raise RuntimeError(f"Unexpected worked-project contents: {members ^ expected}")
-        supplemental = {}
+        shutil.copyfile(CASES / case / "task.md", tree / "TASK.md")
         if case == "repeated-review":
             attachment = (CASES / case / "change.patch").read_bytes()
             target = tree / "review-input/change.patch"
             target.parent.mkdir()
             target.write_bytes(attachment)
-            supplemental["review-input/change.patch"] = hashlib.sha256(attachment).hexdigest()
         excluded = {}
-        payload = payload_bytes(tree, supplemental, exclusions=excluded)
+        payload = payload_bytes(tree, configs / f"{case}.json", CASES / case / "fixture", exclusions=excluded)
         if json.loads(payload) != {name: (tree / name).read_bytes().decode() for name in expected}:
             raise ValueError(f"Reader projection differs from final project: {label}")
         (packets / f"{label}.json").write_bytes(payload)
