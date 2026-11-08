@@ -12,6 +12,17 @@ def payload_bytes(tree, config_path, fixture_source, *, exclusions=None):
     """Use the subject config and its case's fixture/ from the verified input revision."""
     config = load_config(config_path)
     fixture_source = fixture_source.resolve(strict=True)
+    project_sources = {
+        fixture_source / entry["path"]
+        for entry in inventory(fixture_source)
+        if entry["type"] != "directory"
+    }
+    if not project_sources:
+        raise ValueError(f"Empty fixture source: {fixture_source}")
+    missing = project_sources.difference(mount.source for mount in config.fixtures)
+    if missing:
+        names = sorted(str(path.relative_to(fixture_source)) for path in missing)
+        raise ValueError(f"Config does not mount every file in fixture source {fixture_source}: {names}")
     remaining = {
         mount.target.as_posix(): hashlib.sha256(regular_bytes(mount.source)).hexdigest()
         for mount in config.fixtures
