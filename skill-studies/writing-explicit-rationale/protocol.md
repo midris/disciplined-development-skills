@@ -2,7 +2,7 @@
 
 Format version: `1`
 Study ID: `writing-explicit-rationale`
-Status: inputs frozen. Both provider batches passed preparation and collection document checks. The installed shell and isolation probes passed. Collection paused. The approved reader smoke failed its catalog check.
+Status: inputs frozen. Both provider batches passed preparation and collection document checks. The installed shell and isolation probes passed. The replacement smoke qualified the reader. The application checkpoint awaits owner approval.
 Plan: [current milestone](../../plans/2026-09-11-model-driven-skill-testing.md#wer-milestones)
 General spec: [testing framework](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md)
 
@@ -138,7 +138,7 @@ The external `qualification.inventory.json` covers all 728 entries in `qualifica
 Host loss remains a recovery gap for WER. Include single-host retention in the owner’s allocation decision.
 
 Proposed outer limits: 24 subject, 21 evaluator, 0 authoring and 1 retry invocations.
-Dispatched calls are **0 subject, 1 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **24 / 20 / 0 / 1** under the proposal. The original smoke is spent. One retry invocation is allocated to reader qualification.
+Dispatched calls are **0 subject, 1 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **24 / 20 / 0 / 0** under the proposal. Both reader qualification calls are spent.
 Evaluators comprise one smoke, up to 18 eligible isolated positive-case readings and up to two provider-grouped reconciliations. Invalid readings consume their invocation. Any repeat needs a new allocation.
 
 0 active minutes booked; 260 minutes below the 260-minute planning guideline. This is an opening budget ledger for the proposed run sequence. Earlier case development has no measured time entry.
@@ -155,4 +155,4 @@ The original end-to-end estimate is 160–260 active minutes. Remaining planning
 ## Results and decision
 
 The eight frozen manifests pin input revision `37d66bb9`. Both 12-slot schedules passed the runner’s preparation and collection document checks. Both subject indexes passed structural validation.
-Zero subject observations. The constructed smoke failed qualification on catalog drift. Further dispatch awaits resolution and owner approval.
+Zero subject observations. The first smoke failed its original catalog rule. The replacement passed under the subscription amendment frozen at `7c63d02b`. The fresh read-only session received the exact frozen prompt, offered all 17 expected skills and the expected tools, plugins and MCP list, and returned an answer in one turn with zero tool calls. The evaluator ledger links both audits and inventories. The next dispatch decision covers the 16 application subjects.

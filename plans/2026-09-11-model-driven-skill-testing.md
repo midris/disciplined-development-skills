@@ -8,7 +8,7 @@ Study one shipped skill at a time. Establish a fresh baseline, identify a concre
 | --- | --- | --- |
 | Concise writing (CW) | Closed. The owner adopted the rewritten description with the original body. | [CW adoption](../skill-studies/concise-writing/protocol.md#closure-and-adoption) |
 | Sweeping stale references (SSR) | Closed. The owner adopted the compact, count-free skill with the tested description and complete-claim instruction. | [SSR adoption](../skill-studies/sweeping-stale-references/protocol.md#full-regression-adoption) |
-| Writing explicit rationale (WER) | Selected. Baseline inputs prepared. Reader smoke stopped on a catalog mismatch. The subscription startup reproduced the extra built-in offline. Review the proposed catalog amendment before authorizing a replacement. | [WER protocol](../skill-studies/writing-explicit-rationale/protocol.md) |
+| Writing explicit rationale (WER) | Selected. Baseline inputs prepared. The replacement reader smoke passed. Next decision is approval for the 16 application subjects. | [WER protocol](../skill-studies/writing-explicit-rationale/protocol.md) |
 | Remaining skills | Select the next skill with the owner after the WER decision. | [Skill inventory and composition](../ARCHITECTURE.md#composition-boundaries) |
 
 ### WER milestones
@@ -19,8 +19,8 @@ Study one shipped skill at a time. Establish a fresh baseline, identify a concre
 - [x] Resolve the provider shell failures and rerun the [installed qualification probes](../skill-studies/writing-explicit-rationale/protocol.md#qualification-on-2026-11-09).
 - [x] Record approval, run one reader smoke and audit its retained evidence. The live catalog added `schedule` to the expected set.
 - [x] Diagnose the catalog mismatch offline. The subscription and surrogate API-key profiles expose different catalogs.
-- [ ] Freeze the proposed [subscription catalog amendment](../skill-studies/writing-explicit-rationale/protocol.md#offline-catalog-diagnosis) and obtain separate replacement allocation and approval before a second smoke.
-- [ ] Run the authorized baseline stages. Retain every attempt, score complete artifacts, reconcile output reviews and record the decision the evidence supports.
+- [x] Freeze the [subscription catalog amendment](../skill-studies/writing-explicit-rationale/protocol.md#offline-catalog-diagnosis), dispatch the approved replacement and verify its isolated reading.
+- [ ] Obtain approval for the 16 application subjects and run the authorized baseline stages. Retain every attempt, score complete artifacts, reconcile output reviews and record the decision the evidence supports.
 - [ ] If a change is warranted, compare it against the preserved original, regression-test the exact proposed version, then record the owner's decision. Close the study and select the next skill.
 
 ## Starting or resuming without conversation history
