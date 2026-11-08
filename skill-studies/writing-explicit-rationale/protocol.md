@@ -2,7 +2,7 @@
 
 Format version: `1`
 Study ID: `writing-explicit-rationale`
-Status: inputs frozen. Both provider batches passed preparation and collection document checks. The installed shell and isolation probes passed. The owner approved one reader smoke.
+Status: inputs frozen. Both provider batches passed preparation and collection document checks. The installed shell and isolation probes passed. Collection paused. The approved reader smoke failed its catalog check.
 Plan: [current milestone](../../plans/2026-09-11-model-driven-skill-testing.md#wer-milestones)
 General spec: [testing framework](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md)
 
@@ -69,7 +69,10 @@ Use this runner revision for the proposed smoke and subjects, with the existing 
 The verified external inventory `python-requalification.inventory.json` beside the original inventory records 582 entries and hashes to `c0c11fcc011eb555b8ae5de459ef0736272ac0642bcc5b94b1a8728fcde35bc3`.
 The scripted Claude traces show the declared probe skill, 16 bundled skills, three built-in plugins and zero MCP servers in both modes.
 Use that catalog with the probe removed as the expected Claude control/reader catalog and with WER substituted for native. Compare actual names and provenance to the retained init records. Check actual Codex catalog and ordered loads on the first approved traces.
-The live reader still needs to demonstrate fresh read-only startup, the expected catalog, exact prompt delivery and zero tool calls. Stop if any check fails.
+The single approved live reader smoke completed in 14.2 seconds. Its fresh read-only launch disabled persistence, the fixture contained only the Git boundary, the captured prompt matched the frozen bytes, and the full trace contained one turn and zero tool calls.
+The init listed 17 skills. Compared with the 16 expected built-ins, it added `schedule` and removed none. The tools, three plugins and empty MCP list matched. WER was absent.
+The frozen rule requires catalog agreement. The reading is unusable for qualification. The [evaluator ledger](runs/baseline-01/evaluator-run-index.json) pins the complete retained bundle inventory, private audit and authority.
+Investigate the difference between the scripted and live catalogs offline before proposing a remedy. A replacement smoke requires a separate allocation and approval.
 
 ### Proposed batch: codex-baseline-01
 
@@ -127,7 +130,7 @@ The external `qualification.inventory.json` covers all 728 entries in `qualifica
 Host loss remains a recovery gap for WER. Include single-host retention in the owner’s allocation decision.
 
 Proposed outer limits: 24 subject, 21 evaluator, 0 authoring and 0 retry invocations.
-Dispatched calls are **0 subject, 0 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **24 / 21 / 0 / 0** under the proposal. One evaluator invocation is authorized for the smoke.
+Dispatched calls are **0 subject, 1 evaluator, 0 authoring, 0 retry**; remaining outer capacity is **24 / 20 / 0 / 0** under the proposal. The single approved evaluator invocation is spent.
 Evaluators comprise one smoke, up to 18 eligible isolated positive-case readings and up to two provider-grouped reconciliations. Invalid readings consume their invocation. Any repeat needs a new allocation.
 
 0 active minutes booked; 260 minutes below the 260-minute planning guideline. This is an opening budget ledger for the proposed run sequence. Earlier case development has no measured time entry.
@@ -144,4 +147,4 @@ The original end-to-end estimate is 160–260 active minutes. Remaining planning
 ## Results and decision
 
 The eight frozen manifests pin input revision `37d66bb9`. Both 12-slot schedules passed the runner’s preparation and collection document checks. Both subject indexes passed structural validation.
-Zero subject observations. The single constructed reader smoke is authorized.
+Zero subject observations. The constructed smoke failed qualification on catalog drift. Further dispatch awaits resolution and owner approval.
