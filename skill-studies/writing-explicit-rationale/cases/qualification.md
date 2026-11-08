@@ -53,3 +53,9 @@ In the repeated-review fixture the commit attachment is mounted separately. The 
 External re-review qualification covers both native skill-mount roots, nested Python and pytest caches, and new or amended review correspondence. The controller records omitted paths and reasons beside the payload identity. The retained final project remains available for full-evidence reconciliation.
 
 The latest dry run mounts a root task file in all 20 constructed trees. The builder derives its exclusion from each offline runner config. A separate regression exercises an explicit skill at an ordinary documentation path alongside a legitimate new project document. Rationale supplied only in the subject’s commit message fails placement for the plan, quota, and repeated-review decisions.
+
+## Offline case review closed
+
+In the owner-supplied re-review of `550bc6b3`, Claude confirmed the wrong-directory regression was fixed and reported no further case findings. With the correct fixture directory, the reader received the two unchanged quota project files and the newly added decision file. An unrelated directory stopped packet creation. Use a clean checkout of the frozen source when preparing live packets because the coverage check examines every file in that directory.
+
+The active session reran all nine reader-payload tests and the 20 constructed outputs successfully. These checks close preparation of the four cases. The provider configurations, manifests, runtime qualification and model-call allocation remain open.
