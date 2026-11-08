@@ -8,7 +8,7 @@ Study one shipped skill at a time. Establish a fresh baseline, identify a concre
 | --- | --- | --- |
 | Concise writing (CW) | Closed. The owner adopted the rewritten description with the original body. | [CW adoption](../skill-studies/concise-writing/protocol.md#closure-and-adoption) |
 | Sweeping stale references (SSR) | Closed. The owner adopted the compact, count-free skill with the tested description and complete-claim instruction. | [SSR adoption](../skill-studies/sweeping-stale-references/protocol.md#full-regression-adoption) |
-| Writing explicit rationale (WER) | Selected. Baseline inputs prepared. Resolve the provider shell runtime and record owner approval before the reader smoke or subject dispatch. | [WER protocol](../skill-studies/writing-explicit-rationale/protocol.md) |
+| Writing explicit rationale (WER) | Selected. Baseline inputs prepared. Both provider shells passed qualification. Next decision is approval for one reader smoke. | [WER protocol](../skill-studies/writing-explicit-rationale/protocol.md) |
 | Remaining skills | Select the next skill with the owner after the WER decision. | [Skill inventory and composition](../ARCHITECTURE.md#composition-boundaries) |
 
 ### WER milestones
@@ -16,7 +16,8 @@ Study one shipped skill at a time. Establish a fresh baseline, identify a concre
 - [x] Read the shipped skill, select the cases and agree how to check what a future reader can recover. [Focused design](specs/2026-11-08-wer-focused-baseline.md)
 - [x] Built the four case packages and criterion cards. The [offline dry run](../skill-studies/writing-explicit-rationale/cases/qualification.md) covers 20 constructed outputs and single-project reader payloads. Verify live reviewer access isolation during runtime preparation.
 - [x] Prepare provider configs, manifests, schedule, evidence store, indexes and forecast. Verify the mounted inputs and run the offline document checks.
-- [ ] Resolve the [shell qualification failures](../skill-studies/writing-explicit-rationale/protocol.md#qualification-on-2026-11-09), rerun the installed probes and record the approved allocation before dispatch.
+- [x] Resolve the provider shell failures and rerun the [installed qualification probes](../skill-studies/writing-explicit-rationale/protocol.md#qualification-on-2026-11-09).
+- [ ] Record approval for the reader smoke, then inspect its evidence before requesting subject allocation.
 - [ ] Run the authorized baseline stages. Retain every attempt, score complete artifacts, reconcile output reviews and record the decision the evidence supports.
 - [ ] If a change is warranted, compare it against the preserved original, regression-test the exact proposed version, then record the owner's decision. Close the study and select the next skill.
 

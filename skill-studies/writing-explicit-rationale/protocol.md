@@ -2,7 +2,7 @@
 
 Format version: `1`
 Study ID: `writing-explicit-rationale`
-Status: inputs frozen. Both provider batches passed preparation and collection document checks. Shell qualification and owner approval remain open.
+Status: inputs frozen. Both provider batches passed preparation and collection document checks. The installed shell and isolation probes passed. The reader smoke awaits separate owner approval.
 Plan: [current milestone](../../plans/2026-09-11-model-driven-skill-testing.md#wer-milestones)
 General spec: [testing framework](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md)
 
@@ -60,8 +60,12 @@ The runner at `a67b262acb71aface2fa18f02a03b91a987fe624` supplied the preparatio
 Codex CLI 0.167.0 at `/opt/homebrew/bin/codex` hashed to `030316ecfbb41f4e7946e584b0063ef333b7a36cd312ba349f2f6869e39b62cc`.
 Claude Code 2.1.319 at `/opt/homebrew/bin/claude` hashed to `1f53587e92dee8e089fa349188a4cda64fa34ace6e7b0ca2ee278ddaa3cc2ebd`.
 Seven installed-policy probes passed: both providers in both modes denied undeclared inputs, both read-only policies denied mutations and the writable Codex Git/network probe passed.
-Both Codex login-shell probes and both local scripted Claude CLI probes failed the shell-runtime checks. Both providers select Apple Python 3.9.6, below the required 3.11 minimum. Apple’s launcher also emits cache-write errors under the sandbox.
-Restore a supported Python on the adapters’ prepared PATH and rerun the installed qualification before dispatch.
+Both Codex login-shell probes and both local scripted Claude CLI probes failed the shell-runtime checks. Both providers initially selected Apple Python 3.9.6, below the required 3.11 minimum. Apple’s launcher also emits cache-write errors under the sandbox.
+Runner revision `2637312fd6877e821c70625a75204e043998a82f` adds Homebrew’s Python directory to the prepared PATH for both adapters.
+All 11 installed probes passed at these CLI identities, including the four shell probes and seven isolation, read-only and Git/network checks.
+In both modes both providers selected Python 3.14.10 and Git 2.56.0.
+Use this runner revision for the proposed smoke and subjects, with the existing frozen task inputs.
+The verified external inventory `python-requalification.inventory.json` beside the original inventory records 582 entries and hashes to `c0c11fcc011eb555b8ae5de459ef0736272ac0642bcc5b94b1a8728fcde35bc3`.
 The scripted Claude traces show the declared probe skill, 16 bundled skills, three built-in plugins and zero MCP servers in both modes.
 Use that catalog with the probe removed as the expected Claude control/reader catalog and with WER substituted for native. Compare actual names and provenance to the retained init records. Check actual Codex catalog and ordered loads on the first approved traces.
 The live reader still needs to demonstrate fresh read-only startup, the expected catalog, exact prompt delivery and zero tool calls. Stop if any check fails.
@@ -130,7 +134,7 @@ The original end-to-end estimate is 160–260 active minutes. Remaining planning
 
 | Work | Estimate | Basis |
 | --- | --- | --- |
-| Runtime qualification and smoke audit | 25 | Resolve shell runtime and inspect the isolated reader |
+| Runtime qualification and smoke audit | 25 | Original allowance includes shell qualification and isolated reader inspection |
 | Subject collection and retention | 60 | Up to 24 sequential attempts |
 | Replay and scoring | 65 | Complete projects, diffs and ordered traces |
 | Readings and reconciliation | 65 | Eligibility, sealed packets and two grouped reviews |
