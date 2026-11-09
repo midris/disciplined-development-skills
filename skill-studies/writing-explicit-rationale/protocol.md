@@ -2,7 +2,7 @@
 
 Format version: `1`
 Study ID: `writing-explicit-rationale`
-Status: inputs frozen. Both provider batches passed preparation and collection document checks. The installed shell and isolation probes passed. The replacement smoke qualified the reader. The owner accepted the reviewed application checkpoint. Native discovery awaits a dispatch decision.
+Status: inputs frozen. Both provider batches passed preparation and collection document checks. The installed shell and isolation probes passed. The replacement smoke qualified the reader. The owner accepted the reviewed application checkpoint. The owner approved eight native-discovery slots.
 Plan: [current milestone](../../plans/2026-09-11-model-driven-skill-testing.md#wer-milestones)
 General spec: [testing framework](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md)
 
@@ -98,6 +98,7 @@ On 2026-11-09 the owner approved any further allocations needed to fix this issu
 ### Proposed batch: codex-baseline-01
 
 Authority on 2026-11-09: the owner approved the 16 application runs and requested checkpoint results before native discovery. Orders 1–8 of this batch are authorized once each under the stated stop rules.
+Native authority on 2026-11-10: the owner approved orders 9–12 once per provider, with all results including behavioral failures retained for joint review. Run Codex then Claude, with the frozen inputs and no automatic replacement.
 Scope: Four cases, three conditions, one repetition each on `gpt-5.6-sol`. Include every valid-setup execution. No automatic retry.
 Actual attempts: [subject index](runs/baseline-01/codex/run-index.json).
 
@@ -123,6 +124,7 @@ Actual attempts: [subject index](runs/baseline-01/codex/run-index.json).
 Resumption on 2026-11-09: the owner requested completion of orders 3–8 with all outcomes, including failures, retained for joint review after collection. Record behavioral misses and continue through order 8. Setup, preservation and charge checks still apply. No additional calls or retries are allocated.
 
 Authority on 2026-11-09: the owner approved the 16 application runs and requested checkpoint results before native discovery. Orders 1–8 of this batch are authorized once each under the stated stop rules.
+Native authority on 2026-11-10: the owner approved orders 9–12 once per provider, with all results including behavioral failures retained for joint review. Run Codex then Claude, with the frozen inputs and no automatic replacement.
 Scope: Four cases, three conditions, one repetition each on `claude-opus-5-5`. Include every valid-setup execution. No automatic retry.
 Actual attempts: [subject index](runs/baseline-01/claude/run-index.json).
 
@@ -201,4 +203,4 @@ The other three export judgments stand. In particular, the Codex control names t
 The original Claude result remains preserved at its original evidence path and in the index at revision `7dd74a9b`. The current index links a separate reassessment of the same run.
 The first checkpoint counted 7 of 8 guided runs and 3 of 8 controls meeting all criteria. On 2026-11-10 the owner accepted the reviewed counts of 8 of 8 guided and 3 of 8 controls. The owner-supplied Claude review recorded its export judgments before consulting the checkpoint, agreed on all four and checked both guided repeated-review caveats. Its full text is retained at `application-checkpoint/owner-review/claude-review.txt` in the durable store. There were no subject retries.
 Of 12 positive-case outputs, 11 are eligible for independent first readings. The Claude repeated-review control was skipped under the unchanged-site rule; the four routine renames were assessed by diff. Controller-only eligibility, exclusions and packet identities are stored under `application-checkpoint/` in the durable store.
-Owner review of the application checkpoint is complete. Native discovery awaits separate authorization; independent first readings and full-evidence reconciliation remain pending. Reconciliation will examine whether unsupported elaboration recurs across cases before a skill change is considered.
+Owner review of the application checkpoint is complete. Native discovery is authorized; independent first readings and full-evidence reconciliation remain pending. Reconciliation will examine whether unsupported elaboration recurs across cases before a skill change is considered.
