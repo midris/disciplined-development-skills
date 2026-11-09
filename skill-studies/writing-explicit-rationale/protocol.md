@@ -2,7 +2,7 @@
 
 Format version: `1`
 Study ID: `writing-explicit-rationale`
-Status: inputs frozen. Both provider batches passed preparation and collection document checks. The installed shell and isolation probes passed. The replacement smoke qualified the reader. The owner resumed the six remaining Claude application subjects after the ten-run checkpoint.
+Status: inputs frozen. Both provider batches passed preparation and collection document checks. The installed shell and isolation probes passed. The replacement smoke qualified the reader. All 16 application subjects are complete and retained for owner review.
 Plan: [current milestone](../../plans/2026-09-11-model-driven-skill-testing.md#wer-milestones)
 General spec: [testing framework](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md)
 
@@ -37,7 +37,7 @@ Policy snapshot: [WER assessment policy v1](runs/baseline-01/assessment-policy.t
 | Rename a private helper | Routine work preserves existing rationale and avoids invented justification. | The rename works, the nearby quota explanation survives, and the diff adds no misleading rationale. |
 | Address repeated review | The editor examines the change for other unexplained decisions. | The tree explains both the flagged guard and a second consequential choice. The routine edit stays concise. |
 
-The [four case cards and runnable fixtures](cases/README.md) have been exercised against [20 constructed outputs](cases/qualification.md). The application checkpoint below covers ten subject observations. They cover plans and code, explicit application, native selection and an explicitly conventional rename. The export and standalone quota requests explicitly supply the reason, so success can reflect good placement of supplied facts. A tie indicates no observed incremental benefit on these prompts. The rename is an easy negative. Repeated-review R2 measures recovery of a second decision; inspect the trace separately before attributing that recovery to a broader audit. Standalone spec writing and transfer to unfamiliar tasks remain outside this focused screen. The [case design](../../plans/specs/2026-11-08-wer-focused-baseline.md#cases-and-acceptance) supplies the task details for packaging.
+The [four case cards and runnable fixtures](cases/README.md) have been exercised against [20 constructed outputs](cases/qualification.md). The application checkpoint below covers 16 subject observations. They cover plans and code, explicit application, native selection and an explicitly conventional rename. The export and standalone quota requests explicitly supply the reason, so success can reflect good placement of supplied facts. A tie indicates no observed incremental benefit on these prompts. The rename is an easy negative. Repeated-review R2 measures recovery of a second decision; inspect the trace separately before attributing that recovery to a broader audit. Standalone spec writing and transfer to unfamiliar tasks remain outside this focused screen. The [case design](../../plans/specs/2026-11-08-wer-focused-baseline.md#cases-and-acceptance) supplies the task details for packaging.
 
 ## Execution scope and authorization
 
@@ -142,7 +142,7 @@ The external `qualification.inventory.json` covers all 728 entries in `qualifica
 Host loss remains a recovery gap for WER. Include single-host retention in the owner’s allocation decision.
 
 Proposed outer limits: 24 subject, 21 evaluator, 0 authoring and 1 retry invocations.
-Dispatched calls are **10 subject, 1 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **14 / 20 / 0 / 0** under the proposal. Both reader qualification calls are spent.
+Dispatched calls are **16 subject, 1 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **8 / 20 / 0 / 0** under the proposal. Both reader qualification calls are spent.
 Evaluators comprise one smoke, up to 18 eligible isolated positive-case readings and up to two provider-grouped reconciliations. Invalid readings consume their invocation. Any repeat needs a new allocation.
 
 0 active minutes booked; 260 minutes below the 260-minute planning guideline. This is an opening budget ledger for the proposed run sequence. Earlier case development has no measured time entry.
@@ -161,21 +161,26 @@ The original end-to-end estimate is 160–260 active minutes. Remaining planning
 The eight frozen manifests pin input revision `37d66bb9`. Both 12-slot schedules passed the runner’s preparation and collection document checks. Both subject indexes passed structural validation.
 The first smoke failed its original catalog rule. The replacement passed under the subscription amendment frozen at `7c63d02b`. The fresh read-only session received the exact frozen prompt, offered all 17 expected skills and the expected tools, plugins and MCP list, and returned an answer in one turn with zero tool calls. The evaluator ledger links both audits and inventories.
 
-### Application checkpoint — paused after 10 of 16 slots
+### Completed application checkpoint
 
 The [Codex index](runs/baseline-01/codex/run-index.json) and [Claude index](runs/baseline-01/claude/run-index.json) link each valid setup to its verified bundle, criterion record and replay evidence.
-The active assessor inspected the final projects, supplied decisions, delivered responses and ordered traces. All five guided traces delivered the full skill before editing. Both providers used their expected application exposure. The original project tests passed in all six code runs, and the private quota replay passed in all four applicable runs.
+The active assessor inspected the final projects, supplied decisions, delivered responses and ordered traces. All eight guided traces delivered the full skill before editing. Both providers used their expected application exposure. The original project tests passed in all 12 code runs, and the private quota replay passed in all eight applicable runs.
 The table reports whole-case functional judgments under the frozen policy. One run per cell supports diagnosis only.
 
 | Case | Codex guided | Codex control | Claude guided | Claude control |
 | --- | --- | --- | --- | --- |
 | Export deferral | Met | Missed the instability reason and customer wait | Invented breakage on every schema revision | Met |
-| Quota grace | Met | Correct timing, missing admitted-work reason | Unrun | Unrun |
-| Helper rename | Met | Met | Unrun | Unrun |
-| Repeated review | Met, with wording caveat | Guard reversal unexplained and second reason absent | Unrun | Unrun |
+| Quota grace | Met | Correct timing, missing admitted-work reason | Met | Correct timing, missing admitted-work reason |
+| Helper rename | Met | Met | Met | Met |
+| Repeated review | Met, with wording caveat | Guard reversal unexplained and second reason absent | Met, with wording caveat | Reply only; both reasons absent from the tree |
 
 In Codex repeated review, both subjects inspected the submitted change. The guided project explained both decisions and left the routine helper alone. It preserved the third-caller trigger but said to factor at that point, a stronger instruction than the agreement to reconsider. The control centralized the guard, passing a constant approval for batches. Its tests passed, but the tree explained neither that reversal nor the quota decision.
 The Claude control captured the partner gate and customer wait in the release plan. The guided subject also captured them, then stated that shipping against the moving schema would break XML customers on each revision. The supplied decision gives no compatibility guarantee or failure history. The same categorical claim appeared in the PR summary. This single material factual error affects both the decision-site rationale and the accuracy of the handoff.
 The complete skill was delivered through Bash before the edit, the catalog matched and the frozen task contained only the supplied team message. This is a valid behavioral observation. One paired result cannot establish that the skill caused the invention.
-The protocol requires a pause on material invented rationale. Claude orders 3–8 remain unattempted. There were no native runs or subject retries.
-Eight positive-case projects are eligible for isolated first readings. Their controller-only payloads, prompt hashes, exclusions and eligibility reasons are retained under `application-checkpoint/` in the durable store. The two routine renames were assessed by direct diff. Independent readings and reconciliation remain outstanding.
+Collection paused on that invention at slot 10. The owner resumed the six remaining Claude slots for review together, including failures.
+Both resumed quota implementations passed the timing replay. Only the guided version explained the risk to already-admitted work and the accepted extra quota at the decision site. Both helper renames preserved the billing explanation verbatim.
+In repeated review, both Claude subjects opened the submitted patch. The guided version documented both decisions. Its suggested reply promised to factor the guard on the third caller, stronger than the agreement to reconsider. The control supplied a reviewer reply and left the project byte-identical to the fixture; both decision sites still lack rationale.
+
+Under the active assessor’s frozen whole-case rule, 7 of 8 guided runs and 3 of 8 controls met all applicable criteria. All six misses remain in the attempt indexes, including the guided export failure that triggered the pause. There were no subject retries.
+Of 12 positive-case outputs, 11 are eligible for independent first readings. The Claude repeated-review control was skipped under the unchanged-site rule; the four routine renames were assessed by diff. Controller-only eligibility, exclusions and packet identities are stored under `application-checkpoint/` in the durable store.
+The owner review, independent first readings and reconciliation remain open. Native discovery has not started.

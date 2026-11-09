@@ -98,6 +98,294 @@
           "version": "1"
         }
       }
+    },
+    {
+      "attempt_id": "claude-baseline-01-quota-grace-original-1-1",
+      "case_id": "quota-grace",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/claude/quota-grace-manifest.json",
+        "sha256": "9ad8082369124b6ffb4f36117b1bffded521b2e54625c66279cb1a4bb240f397",
+        "version": "1",
+        "git_revision": "f6c7e0e307ff2afc52dd14143c462cf9f62e1277"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "841e64d606da038d054bded967167f3dfa83e94dd9c38b4c4891651ba87ee86f",
+          "version": "1",
+          "git_revision": "f6c7e0e307ff2afc52dd14143c462cf9f62e1277"
+        },
+        "selector": "Batch: claude-baseline-01; order 3"
+      },
+      "run_id": "20261109T062336581Z-project-task-0e24ad8b-89bc-4f27-a2e9-28f10bfa72f1-ropce_rn",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Eligible for isolated reading because the decision site changed and could convey the rationale."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261109T062336581Z-project-task-0e24ad8b-89bc-4f27-a2e9-28f10bfa72f1-ropce_rn",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261109T062336581Z-project-task-0e24ad8b-89bc-4f27-a2e9-28f10bfa72f1-ropce_rn.inventory.json",
+          "sha256": "8bfe5341c8d283b1fdfe92280c3eba3be34827474f80b97e64302d1d599bc5f3",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-baseline-01-quota-grace-original-1-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/application-checkpoint/claude/3/execution-result.json",
+          "sha256": "b77ec2643a5adc3f159de7e4cee31c798379e6ce7e4746ab697ec8b1d164cca6",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-baseline-01-quota-grace-control-1-1",
+      "case_id": "quota-grace",
+      "condition": "control",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/claude/quota-grace-manifest.json",
+        "sha256": "9ad8082369124b6ffb4f36117b1bffded521b2e54625c66279cb1a4bb240f397",
+        "version": "1",
+        "git_revision": "f6c7e0e307ff2afc52dd14143c462cf9f62e1277"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "841e64d606da038d054bded967167f3dfa83e94dd9c38b4c4891651ba87ee86f",
+          "version": "1",
+          "git_revision": "f6c7e0e307ff2afc52dd14143c462cf9f62e1277"
+        },
+        "selector": "Batch: claude-baseline-01; order 4"
+      },
+      "run_id": "20261109T062403423Z-project-task-81c6e296-11c9-469d-904a-7d42b69e8db0-_1rkebc6",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Eligible for isolated reading because the decision site changed and could convey the rationale."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261109T062403423Z-project-task-81c6e296-11c9-469d-904a-7d42b69e8db0-_1rkebc6",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261109T062403423Z-project-task-81c6e296-11c9-469d-904a-7d42b69e8db0-_1rkebc6.inventory.json",
+          "sha256": "db584b1ac7baa7d20f5cc22d997a8feb08f8c0125682389174c6050964d2e951",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-baseline-01-quota-grace-control-1-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/application-checkpoint/claude/4/execution-result.json",
+          "sha256": "f552631cad31f1a975125c05ffa8e975fe4a496ed33ffcb166c232480656305d",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-baseline-01-helper-rename-control-1-1",
+      "case_id": "helper-rename",
+      "condition": "control",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/claude/helper-rename-manifest.json",
+        "sha256": "cc7a7a6fad0c9e511873fe3a70c278f784a5eaef20fd1e4dd276258e42ef8bf9",
+        "version": "1",
+        "git_revision": "f6c7e0e307ff2afc52dd14143c462cf9f62e1277"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "841e64d606da038d054bded967167f3dfa83e94dd9c38b4c4891651ba87ee86f",
+          "version": "1",
+          "git_revision": "f6c7e0e307ff2afc52dd14143c462cf9f62e1277"
+        },
+        "selector": "Batch: claude-baseline-01; order 5"
+      },
+      "run_id": "20261109T062424885Z-project-task-35b55c2c-64a1-44cb-a5a8-7e22ef3f067d-sgedhjkh",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct diff assessment of routine rename."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261109T062424885Z-project-task-35b55c2c-64a1-44cb-a5a8-7e22ef3f067d-sgedhjkh",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261109T062424885Z-project-task-35b55c2c-64a1-44cb-a5a8-7e22ef3f067d-sgedhjkh.inventory.json",
+          "sha256": "446514aa73a2da478df7cdf2f54b9bd8b1563e0489b3234e32b30ec922576b9b",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-baseline-01-helper-rename-control-1-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/application-checkpoint/claude/5/execution-result.json",
+          "sha256": "8a8ca0d01766fab37a117e3ebb2b96247f79678bca60a39f999a199d394a695c",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-baseline-01-helper-rename-original-1-1",
+      "case_id": "helper-rename",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/claude/helper-rename-manifest.json",
+        "sha256": "cc7a7a6fad0c9e511873fe3a70c278f784a5eaef20fd1e4dd276258e42ef8bf9",
+        "version": "1",
+        "git_revision": "f6c7e0e307ff2afc52dd14143c462cf9f62e1277"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "841e64d606da038d054bded967167f3dfa83e94dd9c38b4c4891651ba87ee86f",
+          "version": "1",
+          "git_revision": "f6c7e0e307ff2afc52dd14143c462cf9f62e1277"
+        },
+        "selector": "Batch: claude-baseline-01; order 6"
+      },
+      "run_id": "20261109T062443300Z-project-task-b1716f9b-7cea-4dfb-b10f-3857d0b0aff3-b3sqax1l",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct diff assessment of routine rename."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261109T062443300Z-project-task-b1716f9b-7cea-4dfb-b10f-3857d0b0aff3-b3sqax1l",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261109T062443300Z-project-task-b1716f9b-7cea-4dfb-b10f-3857d0b0aff3-b3sqax1l.inventory.json",
+          "sha256": "bf68568d49cf050de512283d96299a907a407ca8333905f4d226f145f891c0be",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-baseline-01-helper-rename-original-1-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/application-checkpoint/claude/6/execution-result.json",
+          "sha256": "649ebcc44058b3d141c532c700f91e17206a7e169af09078d23732bf4ca192f3",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-baseline-01-repeated-review-original-1-1",
+      "case_id": "repeated-review",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/claude/repeated-review-manifest.json",
+        "sha256": "647da0d01702349d352fe6ab6efeee8b8dfcff6c4af008117afa4b768918da07",
+        "version": "1",
+        "git_revision": "f6c7e0e307ff2afc52dd14143c462cf9f62e1277"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "841e64d606da038d054bded967167f3dfa83e94dd9c38b4c4891651ba87ee86f",
+          "version": "1",
+          "git_revision": "f6c7e0e307ff2afc52dd14143c462cf9f62e1277"
+        },
+        "selector": "Batch: claude-baseline-01; order 7"
+      },
+      "run_id": "20261109T062502754Z-project-task-7ba3eec5-eb2c-4725-9c1b-4c57e202c7e8-cx7wqzij",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Eligible for isolated reading because the decision site changed and could convey the rationale."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261109T062502754Z-project-task-7ba3eec5-eb2c-4725-9c1b-4c57e202c7e8-cx7wqzij",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261109T062502754Z-project-task-7ba3eec5-eb2c-4725-9c1b-4c57e202c7e8-cx7wqzij.inventory.json",
+          "sha256": "a507036f0660620c53e6205f8409bbf74ce04fd8285711ec797a57ceb2a05bf2",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-baseline-01-repeated-review-original-1-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/application-checkpoint/claude/7/execution-result.json",
+          "sha256": "8bfbdeb41ba3cb6b03ce4ead7672a723f1376952088f7bd7e1e984416cb7991a",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-baseline-01-repeated-review-control-1-1",
+      "case_id": "repeated-review",
+      "condition": "control",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/claude/repeated-review-manifest.json",
+        "sha256": "647da0d01702349d352fe6ab6efeee8b8dfcff6c4af008117afa4b768918da07",
+        "version": "1",
+        "git_revision": "f6c7e0e307ff2afc52dd14143c462cf9f62e1277"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "841e64d606da038d054bded967167f3dfa83e94dd9c38b4c4891651ba87ee86f",
+          "version": "1",
+          "git_revision": "f6c7e0e307ff2afc52dd14143c462cf9f62e1277"
+        },
+        "selector": "Batch: claude-baseline-01; order 8"
+      },
+      "run_id": "20261109T062541144Z-project-task-8a7e5774-6fb6-48dc-9eb8-b915ffb77f96-byrs65lg",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Skip isolated first reading: the entire projected project matches the starting fixture. Neither unchanged decision site explains its reason; the reviewer reply is outside the project."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261109T062541144Z-project-task-8a7e5774-6fb6-48dc-9eb8-b915ffb77f96-byrs65lg",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261109T062541144Z-project-task-8a7e5774-6fb6-48dc-9eb8-b915ffb77f96-byrs65lg.inventory.json",
+          "sha256": "ee8499e428d92a17ce4d1dcf17b14bbd4f5c8c0a2578ca22b9196723e8838480",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-baseline-01-repeated-review-control-1-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/application-checkpoint/claude/8/execution-result.json",
+          "sha256": "e5a4db08a11ac1dd8869f13945fbdf49df30e166b6c2664e106939bb1a4f1f28",
+          "version": "1"
+        }
+      }
     }
   ],
   "batch_id": "claude-baseline-01"
