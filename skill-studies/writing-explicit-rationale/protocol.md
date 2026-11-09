@@ -2,7 +2,7 @@
 
 Format version: `1`
 Study ID: `writing-explicit-rationale`
-Status: inputs frozen. Both provider batches passed preparation and collection document checks. The installed shell and isolation probes passed. The replacement smoke qualified the reader. The owner accepted the reviewed application checkpoint. The owner approved eight native-discovery slots.
+Status: inputs frozen. Both provider batches passed preparation and collection document checks. The installed shell and isolation probes passed. The replacement smoke qualified the reader. The owner accepted the reviewed application checkpoint. All eight native slots are complete and retained for owner review.
 Plan: [current milestone](../../plans/2026-09-11-model-driven-skill-testing.md#wer-milestones)
 General spec: [testing framework](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md)
 
@@ -157,7 +157,7 @@ The external `qualification.inventory.json` covers all 728 entries in `qualifica
 Host loss remains a recovery gap for WER. Include single-host retention in the owner’s allocation decision.
 
 Proposed outer limits: 24 subject, 21 evaluator, 0 authoring and 1 retry invocations.
-Dispatched calls are **16 subject, 1 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **8 / 20 / 0 / 0** under the proposal. Both reader qualification calls are spent.
+Dispatched calls are **24 subject, 1 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **0 / 20 / 0 / 0** under the proposal. Both reader qualification calls are spent.
 Evaluators comprise one smoke, up to 18 eligible isolated positive-case readings and up to two provider-grouped reconciliations. Invalid readings consume their invocation. Any repeat needs a new allocation.
 
 0 active minutes booked; 260 minutes below the 260-minute planning guideline. This is an opening budget ledger for the proposed run sequence. Earlier case development has no measured time entry.
@@ -203,4 +203,23 @@ The other three export judgments stand. In particular, the Codex control names t
 The original Claude result remains preserved at its original evidence path and in the index at revision `7dd74a9b`. The current index links a separate reassessment of the same run.
 The first checkpoint counted 7 of 8 guided runs and 3 of 8 controls meeting all criteria. On 2026-11-10 the owner accepted the reviewed counts of 8 of 8 guided and 3 of 8 controls. The owner-supplied Claude review recorded its export judgments before consulting the checkpoint, agreed on all four and checked both guided repeated-review caveats. Its full text is retained at `application-checkpoint/owner-review/claude-review.txt` in the durable store. There were no subject retries.
 Of 12 positive-case outputs, 11 are eligible for independent first readings. The Claude repeated-review control was skipped under the unchanged-site rule; the four routine renames were assessed by diff. Controller-only eligibility, exclusions and packet identities are stored under `application-checkpoint/` in the durable store.
-Owner review of the application checkpoint is complete. Native discovery is authorized; independent first readings and full-evidence reconciliation remain pending. Reconciliation will examine whether unsupported elaboration recurs across cases before a skill change is considered.
+Owner review of the application checkpoint is complete. Independent first readings and full-evidence reconciliation remain pending. Reconciliation will examine whether unsupported elaboration recurs across cases before a skill change is considered.
+
+### Native discovery checkpoint
+
+All eight native attempts had valid setups and verified inventories; each provider received the ordinary request and its native WER catalog entry.
+The [Codex index](runs/baseline-01/codex/run-index.json) and [Claude index](runs/baseline-01/claude/run-index.json) link orders 9–12 to the raw evidence, ordered trace judgments and per-criterion assessment.
+
+| Case | Codex selection | Claude selection | Codex artifact | Claude artifact |
+| --- | --- | --- | --- | --- |
+| Export deferral | Timely read | Timely invocation | T1 met; R1 missed schema instability | Met |
+| Quota grace | Timely read | Timely invocation | Met | Met |
+| Helper rename | Correct non-use | Correct non-use | Met | Met |
+| Repeated review | Timely read | Timely invocation | Met with a wording caveat | Met |
+
+All six positive traces delivered the complete WER body before the case deadline. Both rename traces showed no targeted read or invocation, and both edits preserved the billing explanation.
+Codex’s export plan says the partner must approve a stable XML schema and XML customers must wait. The plan and handoff omit that the partner is still changing the schema, leaving open whether the only outstanding action is sign-off. Scope and handoff passed; this is the single native artifact miss.
+Both repeated-review projects explain the guards and quota decision at their sites. Codex again instructs maintainers to factor when a third caller appears, a stronger commitment than reconsideration. Claude preserves the revisit condition in the code.
+All six code projects passed the original fixture tests; all four applicable private quota replays passed.
+Selection met D1 in 8 of 8 observed cells; 7 of 8 projects met all functional criteria under the active assessor’s whole-output reading. One observation per cell limits reliability claims.
+All six native positive projects qualify for isolated readings. Together with the application stage there are 17 eligible projects, one unchanged positive control skipped and six routine renames assessed by diff. Native controller packets and eligibility records live under `native-checkpoint/` in the private store. No new readers, reconciliations or subject retries were dispatched.
