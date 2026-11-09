@@ -91,10 +91,10 @@
         "verified": true
       },
       "result": {
-        "result_id": "claude-baseline-01-export-deferral-original-1-1",
+        "result_id": "claude-baseline-01-export-deferral-original-1-1-context-review",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/application-checkpoint/claude/2/execution-result.json",
-          "sha256": "e72caf1714cb1915e15107be629c1930898699dad6ee95b7d2de2201592c06d5",
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/application-checkpoint/claude/2/execution-result-context-review.json",
+          "sha256": "f479c2ad8ca520e28dccca5a16a6006d504ad80ccb89c636f0cb79d559db3722",
           "version": "1"
         }
       }

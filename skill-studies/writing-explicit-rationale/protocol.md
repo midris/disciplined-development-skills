@@ -28,6 +28,15 @@ Include every valid-setup execution, including control failures, with one descri
 
 Policy snapshot: [WER assessment policy v1](runs/baseline-01/assessment-policy.txt).
 
+### Whole-output interpretation
+
+Apply the [whole-output assessment guidance](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#6-assess-observations-and-establish-the-baseline) to the criterion evidence above.
+In the isolated reading, ask what the complete final project tells a maintainer and seal the answer before showing the original inputs.
+For the subsequent full-evidence review, append the [neutral context instructions](runs/baseline-01/reconciliation-context.txt) to the frozen reconciliation question and pin the composed reviewer prompt before dispatch.
+Compare the source message, original project, complete final project and full response. Check where the rationale survives and whether a disputed phrase materially changes the reader’s decision, reason, accepted consequence or next action.
+Record a shared precision concern once even when the plan and handoff repeat it.
+The frozen criteria, evidence boundaries and per-run aggregation rule continue to apply.
+
 ## Suite and evidence
 
 | Proposed case | Behavior under test | Distinguishing evidence |
@@ -169,18 +178,23 @@ The table reports whole-case functional judgments under the frozen policy. One r
 
 | Case | Codex guided | Codex control | Claude guided | Claude control |
 | --- | --- | --- | --- | --- |
-| Export deferral | Met | Missed the instability reason and customer wait | Invented breakage on every schema revision | Met |
+| Export deferral | Met | Missed the instability reason and customer wait | Met, with certainty caveat | Met |
 | Quota grace | Met | Correct timing, missing admitted-work reason | Met | Correct timing, missing admitted-work reason |
 | Helper rename | Met | Met | Met | Met |
 | Repeated review | Met, with wording caveat | Guard reversal unexplained and second reason absent | Met, with wording caveat | Reply only; both reasons absent from the tree |
 
 In Codex repeated review, both subjects inspected the submitted change. The guided project explained both decisions and left the routine helper alone. It preserved the third-caller trigger but said to factor at that point, a stronger instruction than the agreement to reconsider. The control centralized the guard, passing a constant approval for batches. Its tests passed, but the tree explained neither that reversal nor the quota decision.
-The Claude control captured the partner gate and customer wait in the release plan. The guided subject also captured them, then stated that shipping against the moving schema would break XML customers on each revision. The supplied decision gives no compatibility guarantee or failure history. The same categorical claim appeared in the PR summary. This single material factual error affects both the decision-site rationale and the accuracy of the handoff.
+The Claude control captured the partner gate and customer wait in the release plan. The guided subject also captured them, then stated that shipping against the moving schema would break XML customers on each revision. The supplied decision gives no compatibility guarantee or failure history. The same categorical claim appeared in the PR summary. The original assessment failed both criteria on that wording.
 The complete skill was delivered through Bash before the edit, the catalog matched and the frozen task contained only the supplied team message. This is a valid behavioral observation. One paired result cannot establish that the skill caused the invention.
-Collection paused on that invention at slot 10. The owner resumed the six remaining Claude slots for review together, including failures.
+Collection paused on that initial judgment at slot 10. The owner resumed the six remaining Claude slots for review together, including failures.
 Both resumed quota implementations passed the timing replay. Only the guided version explained the risk to already-admitted work and the accepted extra quota at the decision site. Both helper renames preserved the billing explanation verbatim.
 In repeated review, both Claude subjects opened the submitted patch. The guided version documented both decisions. Its suggested reply promised to factor the guard on the third caller, stronger than the agreement to reconsider. The control supplied a reviewer reply and left the project byte-identical to the fixture; both decision sites still lack rationale.
 
-Under the active assessor’s frozen whole-case rule, 7 of 8 guided runs and 3 of 8 controls met all applicable criteria. All six misses remain in the attempt indexes, including the guided export failure that triggered the pause. There were no subject retries.
+During owner review the active assessor reread all four export plans and their full PR summaries against the supplied message and starting plan under the same case card.
+The Claude guided output accurately communicates retained scope, partner instability, the stable-schema approval gate, customer wait and unaffected milestones in both deliverables.
+“Every time” overstates the certainty of a plausible compatibility risk. It leaves the release decision and its condition intact, so T1 and R1 both meet their criteria with one precision observation.
+The other three export judgments stand. In particular, the Codex control names the approval gate but leaves the partner’s continuing changes unexplained in both the plan and the handoff.
+The original Claude result remains preserved at its original evidence path and in the index at revision `7dd74a9b`. The current index links a separate reassessment of the same run.
+The first checkpoint counted 7 of 8 guided runs and 3 of 8 controls meeting all criteria. The reviewed counts are 8 of 8 guided and 3 of 8 controls. There were no subject retries.
 Of 12 positive-case outputs, 11 are eligible for independent first readings. The Claude repeated-review control was skipped under the unchanged-site rule; the four routine renames were assessed by diff. Controller-only eligibility, exclusions and packet identities are stored under `application-checkpoint/` in the durable store.
 The owner review, independent first readings and reconciliation remain open. Native discovery has not started.

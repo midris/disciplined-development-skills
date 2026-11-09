@@ -294,7 +294,14 @@ Exit condition: valid observations and unusable attempts are accounted for under
 ### 6. Assess observations and establish the baseline
 
 The active session applies the versioned scoring contract to the retained evidence and writes the assessment. A human uses the same rules and format. Cross-model review is required at the baseline/comparison decision boundary, not before reporting each run.
-Read evidence supporting passes as well as failures.
+For a judgment about meaning or usefulness, read the original request, supplied facts and starting artifact alongside the complete deliverable and handoff.
+Describe what the intended reader can recover or do from the evidence available to them at the point of use.
+Before marking a criterion unmet, identify the required outcome that is lost, contradicted or materially changed after accounting for surrounding context and reasonable paraphrases.
+A single sentence can reverse a release gate or authorize the wrong action; cite that consequence when it does.
+When the required outcome survives but the wording overstates certainty, omits nuance or adds friction, record the specific quality observation alongside the score.
+Honor the criterion’s evidence boundary: an explanation in chat can satisfy a handoff requirement while leaving a required code comment absent; executable behavior and ordered tool use still require their specified checks.
+Apply this reading to passes and failures in comparable conditions, including controls.
+The [CW disputed-output reread](../../skill-studies/concise-writing/runs/holistic-dispute-reassessment-01/README.md) illustrates both corrected scores and consequential failures that survived review.
 State the task-relevant consequence and distinguish missing evidence from observed failure.
 Preserve disagreement and uncertainty until resolved with evidence or explicitly left unresolved.
 

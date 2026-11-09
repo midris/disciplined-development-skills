@@ -22,7 +22,8 @@ Study one shipped skill at a time. Establish a fresh baseline, identify a concre
 - [x] Freeze the [subscription catalog amendment](../skill-studies/writing-explicit-rationale/protocol.md#offline-catalog-diagnosis), dispatch the approved replacement and verify its isolated reading.
 - [x] Record approval for 16 application subjects. Retain and score all ten attempted slots through the [checkpoint pause](../skill-studies/writing-explicit-rationale/protocol.md#completed-application-checkpoint).
 - [x] Resume the remaining six Claude application slots under owner authority and retain every outcome.
-- [ ] Review the completed checkpoint with the owner before native discovery. Independent first readings and reconciliation remain open.
+- [x] Clarify whole-output scoring and reread the four export outputs during owner review. The [WER reassessment](../skill-studies/writing-explicit-rationale/protocol.md#completed-application-checkpoint) records the revised judgment and original score.
+- [ ] Finish owner review of the application checkpoint before native discovery. Independent first readings and reconciliation remain open.
 - [ ] If a change is warranted, compare it against the preserved original, regression-test the exact proposed version, then record the owner's decision. Close the study and select the next skill.
 
 ## Starting or resuming without conversation history
