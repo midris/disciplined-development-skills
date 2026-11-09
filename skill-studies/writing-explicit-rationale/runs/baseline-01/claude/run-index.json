@@ -91,10 +91,10 @@
         "verified": true
       },
       "result": {
-        "result_id": "claude-baseline-01-export-deferral-original-1-1-context-review",
+        "result_id": "claude-baseline-01-export-deferral-original-1-1-context-review-owner-review",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/application-checkpoint/claude/2/execution-result-context-review.json",
-          "sha256": "f479c2ad8ca520e28dccca5a16a6006d504ad80ccb89c636f0cb79d559db3722",
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/application-checkpoint/claude/2/execution-result-owner-review.json",
+          "sha256": "071049a46820c4c6c9b602942d54f533eb77fa72afd6d33518e2e34972c938c2",
           "version": "1"
         }
       }
@@ -331,10 +331,10 @@
         "verified": true
       },
       "result": {
-        "result_id": "claude-baseline-01-repeated-review-original-1-1",
+        "result_id": "claude-baseline-01-repeated-review-original-1-1-owner-review",
         "record": {
-          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/application-checkpoint/claude/7/execution-result.json",
-          "sha256": "8bfbdeb41ba3cb6b03ce4ead7672a723f1376952088f7bd7e1e984416cb7991a",
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/application-checkpoint/claude/7/execution-result-owner-review.json",
+          "sha256": "0c9919bf51006a72e790f60099f093d6cd18b66e93b0ae6ee9dde6494efb2b6f",
           "version": "1"
         }
       }

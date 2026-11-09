@@ -1,5 +1,6 @@
 Read the whole delivered project and handoff against the original request, starting project and supplied facts before assigning the case judgments.
-For each disputed passage, say what the intended reader would understand in context and which decision, reason, accepted consequence, or action changes.
-Record a precision or style caveat when the complete work meets the criterion; cite the specific lost or contradicted requirement when it falls short.
+Identify what the output adds beyond the supplied facts and which additions are reasonable inferences.
+For each disputed passage, explain whether relying on it would materially change what the intended reader understands about the decision, reason, conditions, accepted consequences or next action.
+Record a precision or style caveat when the complete work meets the criterion; cite the specific lost, contradicted or materially changed requirement when it falls short.
 Judge decision-site placement from what survives in the project, handoff accuracy from the full response, and runtime behavior from the specified replay.
 Apply the same standard to all comparison conditions and give independent judgments before viewing prior scores.

@@ -8,7 +8,7 @@ Study one shipped skill at a time. Establish a fresh baseline, identify a concre
 | --- | --- | --- |
 | Concise writing (CW) | Closed. The owner adopted the rewritten description with the original body. | [CW adoption](../skill-studies/concise-writing/protocol.md#closure-and-adoption) |
 | Sweeping stale references (SSR) | Closed. The owner adopted the compact, count-free skill with the tested description and complete-claim instruction. | [SSR adoption](../skill-studies/sweeping-stale-references/protocol.md#full-regression-adoption) |
-| Writing explicit rationale (WER) | Selected. Baseline inputs prepared. All 16 application runs are retained and scored. Owner review is next. | [WER protocol](../skill-studies/writing-explicit-rationale/protocol.md) |
+| Writing explicit rationale (WER) | Selected. Baseline inputs prepared. All 16 application runs are retained and scored. The owner accepted the reviewed counts. Native discovery awaits authorization. | [WER protocol](../skill-studies/writing-explicit-rationale/protocol.md) |
 | Remaining skills | Select the next skill with the owner after the WER decision. | [Skill inventory and composition](../ARCHITECTURE.md#composition-boundaries) |
 
 ### WER milestones
@@ -23,7 +23,8 @@ Study one shipped skill at a time. Establish a fresh baseline, identify a concre
 - [x] Record approval for 16 application subjects. Retain and score all ten attempted slots through the [checkpoint pause](../skill-studies/writing-explicit-rationale/protocol.md#completed-application-checkpoint).
 - [x] Resume the remaining six Claude application slots under owner authority and retain every outcome.
 - [x] Clarify whole-output scoring and reread the four export outputs during owner review. The [WER reassessment](../skill-studies/writing-explicit-rationale/protocol.md#completed-application-checkpoint) records the revised judgment and original score.
-- [ ] Finish owner review of the application checkpoint before native discovery. Independent first readings and reconciliation remain open.
+- [x] Complete owner review and clarify materiality for added claims in scoring, collection pauses and full-evidence reconciliation.
+- [ ] Obtain the native discovery dispatch decision. Independent first readings and reconciliation remain open.
 - [ ] If a change is warranted, compare it against the preserved original, regression-test the exact proposed version, then record the owner's decision. Close the study and select the next skill.
 
 ## Starting or resuming without conversation history

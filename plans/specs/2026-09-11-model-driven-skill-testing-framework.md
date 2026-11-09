@@ -297,6 +297,9 @@ The active session applies the versioned scoring contract to the retained eviden
 For a judgment about meaning or usefulness, read the original request, supplied facts and starting artifact alongside the complete deliverable and handoff.
 Describe what the intended reader can recover or do from the evidence available to them at the point of use.
 Before marking a criterion unmet, identify the required outcome that is lost, contradicted or materially changed after accounting for surrounding context and reasonable paraphrases.
+Identify any added cause, guarantee, commitment or workaround and distinguish supplied facts from reasonable inferences.
+Ask whether relying on the addition would materially change the intended reader’s understanding of the decision, its reason, its conditions, its accepted consequences or what to do next.
+When it would, name the affected criterion and the consequence for the reader.
 A single sentence can reverse a release gate or authorize the wrong action; cite that consequence when it does.
 When the required outcome survives but the wording overstates certainty, omits nuance or adds friction, record the specific quality observation alongside the score.
 Honor the criterion’s evidence boundary: an explanation in chat can satisfy a handoff requirement while leaving a required code comment absent; executable behavior and ordered tool use still require their specified checks.
