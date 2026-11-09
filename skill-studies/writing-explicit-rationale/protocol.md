@@ -2,7 +2,7 @@
 
 Format version: `1`
 Study ID: `writing-explicit-rationale`
-Status: inputs frozen. Both provider batches passed preparation and collection document checks. The installed shell and isolation probes passed. The replacement smoke qualified the reader. Application collection paused at the material-invention stop after 10 of 16 authorized subjects.
+Status: inputs frozen. Both provider batches passed preparation and collection document checks. The installed shell and isolation probes passed. The replacement smoke qualified the reader. The owner resumed the six remaining Claude application subjects after the ten-run checkpoint.
 Plan: [current milestone](../../plans/2026-09-11-model-driven-skill-testing.md#wer-milestones)
 General spec: [testing framework](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md)
 
@@ -106,6 +106,8 @@ Actual attempts: [subject index](runs/baseline-01/codex/run-index.json).
 | 12 | repeated-review | native | 1 | `skill-studies/writing-explicit-rationale/runs/baseline-01/codex/repeated-review-native.json` |
 
 ### Proposed batch: claude-baseline-01
+
+Resumption on 2026-11-09: the owner requested completion of orders 3–8 with all outcomes, including failures, retained for joint review after collection. Record behavioral misses and continue through order 8. Setup, preservation and charge checks still apply. No additional calls or retries are allocated.
 
 Authority on 2026-11-09: the owner approved the 16 application runs and requested checkpoint results before native discovery. Orders 1–8 of this batch are authorized once each under the stated stop rules.
 Scope: Four cases, three conditions, one repetition each on `claude-opus-5-5`. Include every valid-setup execution. No automatic retry.
