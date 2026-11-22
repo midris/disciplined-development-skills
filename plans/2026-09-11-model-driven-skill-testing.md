@@ -29,7 +29,8 @@ Study one shipped skill at a time. Establish a fresh baseline, identify a concre
 - [x] Review the [reader checkpoint](../skill-studies/writing-explicit-rationale/protocol.md#independent-reader-checkpoint) with the owner before reconciliation.
 - [x] Complete both independently scored provider-grouped reconciliations.
 - [ ] Review the [reconciliation checkpoint](../skill-studies/writing-explicit-rationale/protocol.md#reconciliation-checkpoint) with the owner.
-- [ ] If a change is warranted, compare it against the preserved original, regression-test the exact proposed version, then record the owner's decision. Close the study and select the next skill.
+- [x] Draft a [compact WER candidate](../skill-studies/writing-explicit-rationale/protocol.md#compact-rewrite-candidate) against the preserved original.
+- [ ] Compare the candidate on the frozen cases, regression-test the exact finalist, and review the adoption decision with the owner before closing the study.
 
 ## Starting or resuming without conversation history
 
