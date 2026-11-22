@@ -240,3 +240,7 @@ The Codex native export reader recovered the v1 scope, partner approval conditio
 Both standalone quota controls yielded the timing rule. Their readers treated the motivation as uncertain. The guided and native readings connected the window to previously admitted work. On the native repeated-review projects, the Codex reader described a commitment to factor the guards on another interactive caller. The Claude reader described a condition for considering a shared guard.
 
 These are observations from the sealed readings. Joint review and full-evidence reconciliation are pending.
+
+### Reconciliation authority
+
+On 2026-11-22 the owner approved two read-only Opus medium reconciliations, one per provider's 12 subject outputs. Judge each complete output against the original inputs, retain all results including failures, and return both reviews to the owner. The independent reviewer packets include the applicable sealed first readings and omit prior judgments. The composed prompt SHA-256 values are `80428240961cc519eb16382f077c541d2525a74d3d000a70dd34931b785daa6e` for Codex outputs and `752cca44eb02e2d9ffd1a5288f93f0fcb25042984a2f11a3b70c0e4a4afed217` for Claude outputs.
