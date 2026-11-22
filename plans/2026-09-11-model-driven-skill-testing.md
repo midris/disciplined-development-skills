@@ -32,6 +32,7 @@ Study one shipped skill at a time. Establish a fresh baseline, identify a concre
 - [x] Draft a [compact WER candidate](../skill-studies/writing-explicit-rationale/protocol.md#compact-rewrite-candidate) against the preserved original.
 - [x] Compare three frozen WER drafts across both providers on the four baseline cases. The [application comparison](../skill-studies/writing-explicit-rationale/protocol.md#application-comparison-results) records the shared Codex regression and four retained setup failures.
 - [x] Add and offline-qualify the two [suite extension cases](../skill-studies/writing-explicit-rationale/protocol.md#suite-extension) for independent design review.
+- [x] Incorporate independent case-design review, qualify version 2 of both extension cards and document the staged comparison proposal.
 - [ ] Review the examples-and-warnings revision, confirm the repeated-review behavior and remaining coverage, and regression-test the exact finalist before an adoption decision.
 
 ## Starting or resuming without conversation history

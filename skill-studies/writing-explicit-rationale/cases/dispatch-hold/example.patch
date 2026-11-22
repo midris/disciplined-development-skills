@@ -5,7 +5,7 @@
  A held parcel can change destination before it leaves the depot. Both planners leave it off new trips so a driver does not collect it for the wrong address. The dispatcher owns any trip that already has the parcel loaded. Keep that parcel on its assigned trip so the dispatcher can redirect it.
  
 -The carrier currently sends the hold status as `manual_hold`.
-+Both `manual_hold` and `address_check` place a parcel on hold.
++The carrier sends `manual_hold`. Apply the same hold policy to parcels in `address_check`.
 --- a/morning.py
 +++ b/morning.py
 @@ -2,4 +2,5 @@

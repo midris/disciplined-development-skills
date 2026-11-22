@@ -51,7 +51,17 @@ def construct(case, variant, tree):
             args.append("--include=ingest.py")
         run([*args, str(source / "example.patch")], tree)
 
-    if variant == "conflicting-copy":
+    if variant in {"bare", "lost-policy", "full-copies"}:
+        spec = tree / "dispatch-spec.md"
+        policy, = (line for line in spec.read_text().splitlines() if line.startswith("A held parcel"))
+        for name in ("morning.py", "overflow.py"):
+            replace(tree / name, "    # Loaded parcels stay with their dispatcher. See dispatch-spec.md, Holds.\n",
+                    f"    # {policy}\n" if variant == "full-copies" else "")
+        if variant == "lost-policy":
+            replace(spec, policy, "Keep loaded parcels assigned and omit held parcels from new trips.")
+    elif variant == "ready-only":
+        replace(tree / "overflow.py", 'status not in {"manual_hold", "address_check"}', 'status == "ready"')
+    elif variant == "conflicting-copy":
         replace(tree / "overflow.py", "Loaded parcels stay with their dispatcher.",
                 "Remove even loaded parcels from assigned trips until the hold clears.")
     elif variant == "loaded-regression":
@@ -63,6 +73,18 @@ def construct(case, variant, tree):
     elif variant == "title-story":
         replace(tree / "overflow.py", 'TITLE = "Overflow dispatch"',
                 '# The carrier contract mandates this exact title.\nTITLE = "Overflow dispatch"')
+    elif variant in {"gate-only", "implicit-week", "lost-impact", "silent-cut"}:
+        plan = tree / "launch-plan.md"
+        if variant == "gate-only":
+            replace(plan, "Reconsider both once Finance agrees on a close rule.",
+                    "Both are deferred until Finance agrees on a close rule.")
+        elif variant == "implicit-week":
+            replace(plan, " by hand for such a week.", " by hand.")
+        elif variant == "lost-impact":
+            replace(plan, " Until then, Support may need to compare daily reports by hand for such a week.", "")
+        else:
+            before, rest = plan.read_text().split("## Deferred", 1)
+            plan.write_text(before + "## After launch" + rest.split("## After launch", 1)[1])
     elif variant == "lost-weekly-alert":
         replace(tree / "launch-plan.md", "weekly reconciliation and weekly discrepancy alerts", "weekly reconciliation")
     elif variant == "firm-promise":
@@ -129,9 +151,11 @@ def qualify(output):
         ("repeated-review", v) for v in ("complete", "reply-only", "guard-only", "batch-regression", "unnecessary-comment")
     ]
     samples.extend(("dispatch-hold", v) for v in
-                   ("complete", "local-reasons", "conflicting-copy", "loaded-regression", "title-story"))
+                   ("complete", "local-reasons", "conflicting-copy", "loaded-regression", "title-story",
+                    "bare", "lost-policy", "full-copies", "ready-only"))
     samples.extend(("scope-trim", v) for v in
-                   ("complete", "lost-weekly-alert", "firm-promise", "weekly-duty", "summary-only-reason"))
+                   ("complete", "lost-weekly-alert", "firm-promise", "weekly-duty", "summary-only-reason",
+                    "gate-only", "implicit-week", "lost-impact", "silent-cut"))
     random.SystemRandom().shuffle(samples)
     # Offline configs exercise the same source-to-target classification as live runs.
     configs = output / "configs"
@@ -163,7 +187,7 @@ def qualify(output):
             run([sys.executable, "-I", "-B", str(CASES / "quota-grace/replay.py"), str(tree)], tree, ok)
             checks["quota replay"] = "pass" if ok else "fail"
         if case == "dispatch-hold":
-            ok = variant != "loaded-regression"
+            ok = variant not in {"loaded-regression", "ready-only"}
             run([sys.executable, "-I", "-B", str(CASES / case / "replay.py"), str(tree)], tree, ok)
             checks["dispatch replay"] = "pass" if ok else "fail"
         members = {p.relative_to(tree).as_posix() for p in tree.rglob("*") if p.is_file()}

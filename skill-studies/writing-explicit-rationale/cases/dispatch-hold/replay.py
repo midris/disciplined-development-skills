@@ -11,10 +11,10 @@ import overflow
 class DispatchPolicy(unittest.TestCase):
     def test_planners(self):
         for lookup in (morning.include_in_morning, overflow.include_in_overflow):
-            for status in ("manual_hold", "address_check", "ready"):
+            for status in ("manual_hold", "address_check", "ready", "sorted"):
                 for loaded in (False, True):
                     with self.subTest(lookup=lookup.__name__, status=status, loaded=loaded):
-                        self.assertEqual(lookup(status, loaded), loaded or status == "ready")
+                        self.assertEqual(lookup(status, loaded), loaded or status not in {"manual_hold", "address_check"})
 
     def test_titles(self):
         self.assertEqual(morning.TITLE, "Morning dispatch")

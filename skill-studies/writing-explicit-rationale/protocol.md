@@ -309,4 +309,10 @@ These are whole-output judgments by the active assessor on development cases. On
 
 ### Suite extension
 
-[Dispatch hold](cases/dispatch-hold/assessment.md) and [Scope trim](cases/scope-trim/assessment.md) are additional development cases for a future original-versus-finalist comparison. The four original cases retain their previous scores and denominators. The extension has ten constructed outputs with offline replay and reader-packet checks. Its [qualification notes](cases/qualification.md#suite-extension) identify the distinctions that need judgment. Independent review of the case design precedes any model allocation.
+[Dispatch hold](cases/dispatch-hold/assessment.md) and [Scope trim](cases/scope-trim/assessment.md) are additional development cases for a future original-versus-finalist comparison. The four original cases retain their previous scores and denominators. The initial extension had ten constructed outputs with offline replay and reader-packet checks. Its [qualification notes](cases/qualification.md#suite-extension) identify the distinctions that need judgment. Independent review of the case design precedes any model allocation.
+
+#### Independent design review
+
+Version 2 of both cards includes a no-skill control. Dispatch hold primarily measures preservation and restraint in a project with a discoverable policy. A bare correct implementation passes. Scope trim tests whether the explanation and conditional obligation survive compression. Its corrected worked example separates the first-month review from the decision to reconsider delivery. See the [version 2 walkthrough](cases/qualification.md#version-2-scoring-walkthrough).
+
+The owner-supplied Claude review proposed 24 calls. A staged allocation would use six fresh Codex repeated-review subjects first (shipped and 599-word revision, three each, interleaved), then twelve scope-trim subjects (two providers, three arms, two each) and six dispatch-hold subjects (two providers, three arms, one each). Compare whole outputs and preserve all failures. The shipped example resembles the guard fixture and the revision was informed by it. This first stage can establish repeatability here. Before adoption, confirm recovery of the second reason on a different task. This proposal has no live allocation.

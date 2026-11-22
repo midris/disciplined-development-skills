@@ -1,6 +1,6 @@
 --- a/launch-plan.md
 +++ b/launch-plan.md
-@@ -1,13 +1,12 @@
+@@ -1,13 +1,14 @@
  # Deposit reporting rollout
  
 -## Launch commitments
@@ -19,4 +19,6 @@
 +
 +Defer weekly reconciliation and weekly discrepancy alerts because Finance has yet to settle how to close a week spanning two accounting periods. Reconsider both once Finance agrees on a close rule. Until then, Support may need to compare daily reports by hand for such a week.
  
++## After launch
++
  Review adoption after the first month.

@@ -62,6 +62,34 @@ The active session reran all nine reader-payload tests and the 20 constructed ou
 
 ## Suite extension
 
-The offline generator now constructs 30 outputs. For dispatch hold, both a precise spec reference and an accurate explanation at each consumer preserve the decision. A contradictory local comment and an invented carrier naming rule each pass the private replay but create separate rationale and restraint misses. Dropping already-loaded holds from the morning planner fails the private replay even with the worked explanation intact.
+The initial extension constructed 30 outputs. For dispatch hold, both a precise spec reference and an accurate explanation at each consumer preserve the decision. A contradictory local comment and an invented carrier naming rule each pass the private replay but create separate rationale and restraint misses. Dropping already-loaded holds from the morning planner fails the private replay even with the worked explanation intact.
 
 For scope trim, read the complete plan before the supplied handoff. The worked repair preserves both daily and both weekly decisions. The four contrasts omit the weekly alert from the plan, promise delivery when Finance agrees, make Support's manual comparison compulsory every week, or leave the underlying reason and condition solely in the response. Score the specific effect on scope, timing or Support's obligations. These are controller-authored examples. Equivalent concise prose can pass.
+
+### Version 2 scoring walkthrough
+
+The extension now adds 18 examples to the 20 original examples. These source-aware walkthroughs describe the intended semantic judgments. The generator verifies the replay and reader-packet mechanics.
+
+| Dispatch variant | What a maintainer can recover | Expected judgment |
+| --- | --- | --- |
+| complete | The references lead to the current reason and dispatcher exception. | Pass |
+| bare | Both planners use statuses named in the readily identifiable spec. | Pass without comments |
+| local-reasons | Each site explains the consequence accurately. | Pass |
+| conflicting-copy | Overflow directs removal of loaded parcels despite the spec. | R1 miss |
+| lost-policy | The spec preserves behavior but drops the reason and dispatcher role. | R1 miss |
+| full-copies | Three complete copies create separate update obligations. | R2 miss for disproportionate duplication |
+| title-story | The title acquires an invented carrier contract. | R2 miss |
+| ready-only | Overflow drops an ordinary sorted parcel. | T1 miss, replay fails |
+| loaded-regression | Morning drops an assigned held parcel. | T1 miss, replay fails |
+
+| Scope variant | What Operations or Support can recover | Expected judgment |
+| --- | --- | --- |
+| complete | The adoption review and Finance trigger have separate homes. | Pass |
+| gate-only | Finance agreement is a prerequisite. The plan makes no delivery promise. | Pass with a precision caveat |
+| implicit-week | Nearby text establishes which week may need manual work. | Pass |
+| lost-impact | The plan gives the reason and trigger but loses the possible Support workload. | R1 miss |
+| silent-cut | The weekly deliverables disappear entirely. | T1 and R1 miss, one omission |
+| lost-weekly-alert | A reader cannot tell what happened to the weekly alert. | T1 miss for missing scope |
+| firm-promise | Finance agreement commits Operations to delivery. | R1 miss |
+| weekly-duty | Support is told to do mandatory weekly comparisons. | R1 miss |
+| summary-only-reason | A correct reply leaves the plan with only the names of deferred items. | R1 miss |
