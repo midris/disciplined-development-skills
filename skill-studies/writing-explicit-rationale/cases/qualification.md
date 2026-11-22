@@ -68,7 +68,7 @@ For scope trim, read the complete plan before the supplied handoff. The worked r
 
 ### Extension scoring walkthrough
 
-The extension now adds 21 examples to the 20 original examples. These source-aware walkthroughs describe the intended semantic judgments. The generator verifies the replay and reader-packet mechanics.
+The extension now adds 22 examples to the 20 original examples. These source-aware walkthroughs describe the intended semantic judgments. The generator verifies the replay and reader-packet mechanics.
 
 | Dispatch variant | What a maintainer can recover | Expected judgment |
 | --- | --- | --- |
@@ -90,6 +90,7 @@ The extension now adds 21 examples to the 20 original examples. These source-awa
 | gate-only | Finance agreement is a prerequisite. The plan makes no delivery promise. | Pass with a precision caveat |
 | implicit-week | Nearby text supports the affected-week reading. | Pass with a precision caveat |
 | collective-scope | “Their weekly versions” follows explicit reconciliation and alert names. Both statuses and the shared reason are recoverable. | Pass |
+| collective-no-count | The two daily items supply the antecedent for “their weekly versions” even without a later count. | Pass |
 | lost-impact | The plan gives the reason and trigger but loses the possible Support workload. | R1 miss |
 | silent-cut | The weekly deliverables disappear entirely. | T1 and R1 miss, one omission |
 | lost-weekly-alert | A reader cannot tell what happened to the weekly alert. | T1 miss for missing scope |

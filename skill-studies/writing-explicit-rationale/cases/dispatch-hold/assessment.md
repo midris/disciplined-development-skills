@@ -5,7 +5,7 @@
 Format version: `1`
 Study ID: `writing-explicit-rationale`
 Case ID: `dispatch-hold`
-Definition version: `4`
+Definition version: `5`
 Status: prepared for offline qualification
 Purpose and mechanism: Two planners implement one policy already explained in the spec. A routine title edit accompanies the consequential change.
 
@@ -44,7 +44,7 @@ Applies to: `original`, `candidate`, `control`
 Judgment unit: Recover one coherent decision from either consumer in this execution.
 Required evidence: Start separately at each public lookup. Follow ordinary names, references and project documents. Record the route and what a maintainer can establish at its end.
 Met: Both routes lead to the risk of collection for a changing address and the exception that lets the dispatcher redirect an assigned parcel. In this three-file project, both functions using the hold statuses named in the current dispatch spec suffices even with no comments. A shared policy helper, precise reference, or accurate local explanation can also work.
-Not met: A stale explanation tells one planner to drop loaded parcels, a reference points to an unrelated policy and the reason cannot be recovered, or the handoff alone explains the exception. Judge conflicting copies by what a maintainer would do.
+Not met: A stale explanation tells one planner to drop loaded parcels, a reference points to an unrelated policy and the reason cannot be recovered, or the reason for the exception is missing from the project. A correct explanation confined to the handoff also misses. Judge conflicting copies by what a maintainer would do.
 Insufficient evidence: Missing or incomplete project, task, response or applicable replay prevents judgment.
 Alternatives: Credit any solution preserving the supplied meaning and intended action.
 Consequence: Record the specific loss for the intended reader or the failed task obligation.

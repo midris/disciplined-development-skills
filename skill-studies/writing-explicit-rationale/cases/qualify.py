@@ -88,9 +88,11 @@ def construct(case, variant, tree):
         else:
             before, rest = plan.read_text().split("## Deferred", 1)
             plan.write_text(before + "## After launch" + rest.split("## After launch", 1)[1])
-    elif variant == "collective-scope":
+    elif variant in {"collective-scope", "collective-no-count"}:
         replace(tree / "launch-plan.md", "Defer weekly reconciliation and weekly discrepancy alerts",
                 "For daily reconciliation and discrepancy alerts, defer their weekly versions")
+        if variant == "collective-no-count":
+            replace(tree / "launch-plan.md", "Reconsider both once", "Reconsider weekly scope once")
     elif variant == "lost-weekly-alert":
         replace(tree / "launch-plan.md", "weekly reconciliation and weekly discrepancy alerts", "weekly reconciliation")
     elif variant == "firm-promise":
@@ -161,7 +163,7 @@ def qualify(output):
                     "bare", "lost-policy", "handoff-only-policy", "full-copies", "ready-only", "keyword-regression"))
     samples.extend(("scope-trim", v) for v in
                    ("complete", "lost-weekly-alert", "firm-promise", "weekly-duty", "summary-only-reason",
-                    "gate-only", "implicit-week", "lost-impact", "silent-cut", "collective-scope"))
+                    "gate-only", "implicit-week", "lost-impact", "silent-cut", "collective-scope", "collective-no-count"))
     random.SystemRandom().shuffle(samples)
     # Offline configs exercise the same source-to-target classification as live runs.
     configs = output / "configs"
