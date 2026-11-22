@@ -1,0 +1,41 @@
+{
+  "sealed_at": "2026-11-22T19:28:54.719894+00:00",
+  "judgments": [
+    {
+      "label": "project-1",
+      "payload_sha256": "7baa7f4b42da83bab502bc3df38cb620017c09b5f2da31d2dc6613ba49b9c664",
+      "R2": "met",
+      "evidence": "Pre-change tokens may represent admitted work; bounded old quota and duration are explicit. \u201cOlder in-flight work\u201d is ambiguous, but the adjacent comparison measures time since downgrade."
+    },
+    {
+      "label": "project-2",
+      "payload_sha256": "24dd9c1c591a2959ecc04fab0faad9afc6a8bea25ae341212c335002e3c56880",
+      "R2": "met",
+      "evidence": "Preserving admission for authenticated pre-change work is the stated purpose, with an explicit bounded trade-off."
+    },
+    {
+      "label": "project-3",
+      "payload_sha256": "e13828962f346f0b7a18d9973b044ef62a7cb1630c0c1d4fedbfc6f6a37f3158",
+      "R2": "met",
+      "evidence": "Pre-change tokens may belong to admitted in-flight work; the explicit 60 seconds and adjacent return of previous quota convey the cost."
+    },
+    {
+      "label": "project-4",
+      "payload_sha256": "b732e4412bc702f4c9c20329e592f15f63048e3993289631a45aad5339a24343",
+      "R2": "met",
+      "evidence": "Letting authenticated pre-change work finish gives the reason. The adjacent branch names old tokens and returns the previous quota inside the 60-second window."
+    },
+    {
+      "label": "project-5",
+      "payload_sha256": "c4c27e46481ebf8279a18936087b38f1a7a501d5dc3d939af17b9c4896a9e690",
+      "R2": "not met",
+      "evidence": "Only the guard rationale was added. The quota branch shows timing but no project text explains what an immediate reset would reject."
+    },
+    {
+      "label": "project-6",
+      "payload_sha256": "9fe4a4a3ecb2633c4e8c4543222e2f3c062d120ef70a5ca4d6ac11b4b1f5d1dd",
+      "R2": "met",
+      "evidence": "The comment gives the motive of avoiding rejection of in-flight requests, with the old-token scope and bounded elevated quota clear from the adjacent branch."
+    }
+  ]
+}

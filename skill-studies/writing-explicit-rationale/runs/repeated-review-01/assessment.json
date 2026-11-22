@@ -1,0 +1,74 @@
+[
+  {
+    "order": 1,
+    "arm": "shipped",
+    "project_label": "project-5",
+    "T1": "met",
+    "R1": "met",
+    "R2": "not met",
+    "R3": "met",
+    "quota_in_handoff": false,
+    "commit_message_in_trace": true,
+    "observation": "Guard reason recovered; stronger factoring commitment. No quota explanation in project or handoff."
+  },
+  {
+    "order": 2,
+    "arm": "revision",
+    "project_label": "project-3",
+    "T1": "met",
+    "R1": "met",
+    "R2": "met",
+    "R3": "met",
+    "quota_in_handoff": true,
+    "commit_message_in_trace": true,
+    "observation": "Guard comments duplicated and factoring commitment stronger in both tree and reply."
+  },
+  {
+    "order": 3,
+    "arm": "shipped",
+    "project_label": "project-2",
+    "T1": "met",
+    "R1": "met",
+    "R2": "met",
+    "R3": "met",
+    "quota_in_handoff": true,
+    "commit_message_in_trace": true,
+    "observation": "Guard docstring specifies factoring when a third interactive caller appears."
+  },
+  {
+    "order": 4,
+    "arm": "revision",
+    "project_label": "project-4",
+    "T1": "met",
+    "R1": "met",
+    "R2": "met",
+    "R3": "met",
+    "quota_in_handoff": true,
+    "commit_message_in_trace": true,
+    "observation": "Third caller lacks the interactive qualifier in code. Handoff supplies it and promises factoring."
+  },
+  {
+    "order": 5,
+    "arm": "shipped",
+    "project_label": "project-1",
+    "T1": "met",
+    "R1": "met",
+    "R2": "met",
+    "R3": "met",
+    "quota_in_handoff": true,
+    "commit_message_in_trace": true,
+    "observation": "Third caller described as warranting extraction. Quota cutoff clearer in branch than in wording about older work."
+  },
+  {
+    "order": 6,
+    "arm": "revision",
+    "project_label": "project-6",
+    "T1": "met",
+    "R1": "met",
+    "R2": "met",
+    "R3": "met",
+    "quota_in_handoff": true,
+    "commit_message_in_trace": true,
+    "observation": "Guard comment accurately preserves reconsideration at a third interactive caller."
+  }
+]

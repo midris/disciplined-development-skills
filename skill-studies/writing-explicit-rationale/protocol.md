@@ -332,3 +332,11 @@ Apply the count rules only with three valid, assessable R2 outcomes per arm. Rep
 Fable’s follow-up confirmed the earlier fixes. Its scope judgments followed inspection of a diff containing the expected verdicts and count as informed design review.
 
 On 2026-11-23 the owner approved the six scheduled Codex subjects and one reserve subject for a verified invalid setup. Retain every attempt and report the checkpoint for joint review before scope-trim.
+
+#### Six-run repeated-review checkpoint
+
+Six approved subjects completed in the scheduled order with valid setups. All six inventory copies and full skill exposures were verified, and all twelve original service and private quota checks passed. Six calls were charged. The reserve was unused. The [attempt ledger](runs/repeated-review-01/attempts.json) preserves every output, including the behavioral failure.
+
+The active assessor recorded the [project-only R2 judgments](runs/repeated-review-01/project-only.json) under shuffled labels before opening the mapping and handoffs. Reconciliation against the original task and submitted commit produced the [per-run assessment](runs/repeated-review-01/assessment.json). All six traces delivered the submitted quota reason. Shipped recovered it at the decision site in two of three runs (slots 3 and 5). Slot 1 explained only the admission guard, and the handoff also omitted quota. The 599-word revision recovered it in all three runs (slots 2, 4 and 6). The five successful handoffs also mentioned quota. All six met T1, R1 and R3. Guard precision varied: several outputs strengthened reconsideration into a commitment, and slot 4's code omitted the interactive qualifier. Slot 6 kept both the qualifier and the open decision.
+
+The revision meets the prospective threshold to advance for further study. Both texts contain cues specific to this fixture. Three observations per arm do not establish a reliable difference in rates or which wording produced the result. Owner review of this checkpoint precedes scope-trim.
