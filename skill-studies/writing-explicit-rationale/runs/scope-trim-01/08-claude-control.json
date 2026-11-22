@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.2",
+  "id": "project-task",
+  "prompt": "../baseline-01/task-prompt.txt",
+  "fixtures": [
+    {
+      "source": "../../cases/scope-trim/fixture/launch-plan.md",
+      "target": "launch-plan.md"
+    },
+    {
+      "source": "../../cases/scope-trim/task.md",
+      "target": "TASK.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}
