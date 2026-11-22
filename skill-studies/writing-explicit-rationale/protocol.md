@@ -218,8 +218,15 @@ The [Codex index](runs/baseline-01/codex/run-index.json) and [Claude index](runs
 | Repeated review | Timely read | Timely invocation | Met with a wording caveat | Met |
 
 All six positive traces delivered the complete WER body before the case deadline. Both rename traces showed no targeted read or invocation, and both edits preserved the billing explanation.
-Codex’s export plan says the partner must approve a stable XML schema and XML customers must wait. The plan and handoff omit that the partner is still changing the schema, leaving open whether the only outstanding action is sign-off. Scope and handoff passed; this is the single native artifact miss.
+Codex’s export plan says the partner must approve a stable XML schema and XML customers must wait. The plan and handoff omit that the partner is still changing the schema, leaving open whether the only outstanding action is sign-off. This omission accounts for the recorded R1 miss.
+
+At the 2026-11-22 owner review, the owner judged the omission minor and non-blocking. Taken as a whole, the plan supports both intended actions. The team can ship CSV and JSON on the v1 schedule, and Support can tell XML customers to wait for partner approval without promising a date. The ongoing revisions would give a maintainer more context for a follow-up with the partner.
+
 Both repeated-review projects explain the guards and quota decision at their sites. Codex again instructs maintainers to factor when a third caller appears, a stronger commitment than reconsideration. Claude preserves the revisit condition in the code.
 All six code projects passed the original fixture tests; all four applicable private quota replays passed.
 Selection met D1 in 8 of 8 observed cells; 7 of 8 projects met all functional criteria under the active assessor’s whole-output reading. One observation per cell limits reliability claims.
 All six native positive projects qualify for isolated readings. Together with the application stage there are 17 eligible projects, one unchanged positive control skipped and six routine renames assessed by diff. Native controller packets and eligibility records live under `native-checkpoint/` in the private store. No new readers, reconciliations or subject retries were dispatched.
+
+### Independent reader authority
+
+On 2026-11-22 the owner approved one independent first reading for each of the 17 eligible packets. Retain every attempt, including failures, and report the readings for joint review before reconciliation.
