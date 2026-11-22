@@ -1,0 +1,335 @@
+[
+  {
+    "order": 1,
+    "run": "20261122T171534419Z-project-task-f0aaf99a-6f23-41b7-adeb-92b87ea505bf-x4ous7t0",
+    "checks": {},
+    "setup": "invalid: session creation failed"
+  },
+  {
+    "order": 2,
+    "run": "20261122T171606226Z-project-task-dadcd4c5-969a-4640-a817-331442b43b84-otn3qt_y",
+    "checks": {},
+    "full_body_verified": true,
+    "setup": "valid"
+  },
+  {
+    "order": 3,
+    "run": "20261122T171626776Z-project-task-b7a928e1-ff0d-4d23-807c-5f83729a7ecc-9nzaoooc",
+    "checks": {},
+    "full_body_verified": false,
+    "setup": "invalid: missing runtime helper"
+  },
+  {
+    "order": 4,
+    "run": "20261122T171650638Z-project-task-1a230842-833b-40d0-9f60-51c44f5a95a7-yp7jrt3l",
+    "checks": {},
+    "full_body_verified": true,
+    "setup": "valid"
+  },
+  {
+    "order": 5,
+    "run": "20261122T171710333Z-project-task-b7833287-a152-43ae-8867-23da7d3e6e3b-4qn9jmnk",
+    "checks": {},
+    "full_body_verified": false,
+    "setup": "invalid: missing runtime helper"
+  },
+  {
+    "order": 6,
+    "run": "20261122T171731404Z-project-task-69b03083-84b8-4f3a-9fc3-7b848d47ad65-nrs6ihv0",
+    "checks": {},
+    "full_body_verified": true,
+    "setup": "valid"
+  },
+  {
+    "order": 7,
+    "run": "20261122T171750586Z-project-task-b5a8d108-5e3a-4d9c-9ab8-1321dd7c7cdf-z48kol2d",
+    "checks": {},
+    "full_body_verified": false,
+    "setup": "invalid: missing runtime helper"
+  },
+  {
+    "order": 8,
+    "run": "20261122T171900702Z-project-task-8500a9e0-2a47-47fb-927f-2b340ae0847b-x5b6928j",
+    "checks": {
+      "original_tests": {
+        "exit_code": 0,
+        "output": "test_before_change (test_quota.QuotaTests.test_before_change) ... ok\ntest_upgrade_takes_effect_immediately (test_quota.QuotaTests.test_upgrade_takes_effect_immediately) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      },
+      "private_quota": {
+        "exit_code": 0,
+        "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      }
+    },
+    "full_body_verified": true,
+    "setup": "valid"
+  },
+  {
+    "order": 9,
+    "run": "20261122T171921985Z-project-task-7023be76-1e1c-4359-8fd7-606e98ba81c7-5pfwe7pk",
+    "checks": {
+      "original_tests": {
+        "exit_code": 0,
+        "output": "test_before_change (test_quota.QuotaTests.test_before_change) ... ok\ntest_upgrade_takes_effect_immediately (test_quota.QuotaTests.test_upgrade_takes_effect_immediately) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      },
+      "private_quota": {
+        "exit_code": 0,
+        "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      }
+    },
+    "full_body_verified": true,
+    "setup": "valid"
+  },
+  {
+    "order": 10,
+    "run": "20261122T172020512Z-project-task-54457470-abe2-43f6-ac49-a6f4a44ee835-j6odhuya",
+    "checks": {
+      "original_tests": {
+        "exit_code": 0,
+        "output": "test_before_change (test_quota.QuotaTests.test_before_change) ... ok\ntest_upgrade_takes_effect_immediately (test_quota.QuotaTests.test_upgrade_takes_effect_immediately) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      },
+      "private_quota": {
+        "exit_code": 0,
+        "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      }
+    },
+    "full_body_verified": true,
+    "setup": "valid"
+  },
+  {
+    "order": 11,
+    "run": "20261122T172045578Z-project-task-1cf71d14-655a-459d-aea3-bc51527f7fcb-7nl5z_kj",
+    "checks": {
+      "original_tests": {
+        "exit_code": 0,
+        "output": "test_before_change (test_quota.QuotaTests.test_before_change) ... ok\ntest_upgrade_takes_effect_immediately (test_quota.QuotaTests.test_upgrade_takes_effect_immediately) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      },
+      "private_quota": {
+        "exit_code": 0,
+        "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      }
+    },
+    "full_body_verified": true,
+    "setup": "valid"
+  },
+  {
+    "order": 12,
+    "run": "20261122T172148270Z-project-task-debdd292-457f-42bf-a8f4-081ba69b1a46-xx1l2rnl",
+    "checks": {
+      "original_tests": {
+        "exit_code": 0,
+        "output": "test_before_change (test_quota.QuotaTests.test_before_change) ... ok\ntest_upgrade_takes_effect_immediately (test_quota.QuotaTests.test_upgrade_takes_effect_immediately) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      },
+      "private_quota": {
+        "exit_code": 0,
+        "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      }
+    },
+    "full_body_verified": true,
+    "setup": "valid"
+  },
+  {
+    "order": 13,
+    "run": "20261122T172211737Z-project-task-18367b50-5c01-48f3-9e30-e4ebcedaee76-ifi_ydx3",
+    "checks": {
+      "original_tests": {
+        "exit_code": 0,
+        "output": "test_available (test_quota.QuotaTests.test_available) ... ok\ntest_display (test_quota.QuotaTests.test_display) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      }
+    },
+    "full_body_verified": true,
+    "setup": "valid"
+  },
+  {
+    "order": 14,
+    "run": "20261122T172300958Z-project-task-2f2dc321-fdca-46a9-a2b0-e8ed5cab1ea7-al_07k4j",
+    "checks": {
+      "original_tests": {
+        "exit_code": 0,
+        "output": "test_available (test_quota.QuotaTests.test_available) ... ok\ntest_display (test_quota.QuotaTests.test_display) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      }
+    },
+    "full_body_verified": true,
+    "setup": "valid"
+  },
+  {
+    "order": 15,
+    "run": "20261122T172317010Z-project-task-87d98ad0-caff-41ef-ba90-264faba3c7ec-ssmgbwu_",
+    "checks": {
+      "original_tests": {
+        "exit_code": 0,
+        "output": "test_available (test_quota.QuotaTests.test_available) ... ok\ntest_display (test_quota.QuotaTests.test_display) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      }
+    },
+    "full_body_verified": true,
+    "setup": "valid"
+  },
+  {
+    "order": 16,
+    "run": "20261122T172400822Z-project-task-4cc7685f-6eb5-43a7-ae00-b8947b882087-6up622_m",
+    "checks": {
+      "original_tests": {
+        "exit_code": 0,
+        "output": "test_available (test_quota.QuotaTests.test_available) ... ok\ntest_display (test_quota.QuotaTests.test_display) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      }
+    },
+    "full_body_verified": true,
+    "setup": "valid"
+  },
+  {
+    "order": 17,
+    "run": "20261122T172417694Z-project-task-6324ff8f-50ab-48d8-b28d-f9893dde4fcf-ruh01eei",
+    "checks": {
+      "original_tests": {
+        "exit_code": 0,
+        "output": "test_available (test_quota.QuotaTests.test_available) ... ok\ntest_display (test_quota.QuotaTests.test_display) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      }
+    },
+    "full_body_verified": true,
+    "setup": "valid"
+  },
+  {
+    "order": 18,
+    "run": "20261122T172502436Z-project-task-a197a36e-e35d-4ad9-bc5a-649e9f78dfb9-jio9fkn4",
+    "checks": {
+      "original_tests": {
+        "exit_code": 0,
+        "output": "test_available (test_quota.QuotaTests.test_available) ... ok\ntest_display (test_quota.QuotaTests.test_display) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      }
+    },
+    "full_body_verified": true,
+    "setup": "valid"
+  },
+  {
+    "order": 19,
+    "run": "20261122T172518142Z-project-task-bb9410ce-fa94-4b19-b7cd-99d495757ba6-voy2lk_h",
+    "checks": {
+      "original_tests": {
+        "exit_code": 0,
+        "output": "test_approved_batch (test_service.ServiceTests.test_approved_batch) ... ok\ntest_interactive_entry_points (test_service.ServiceTests.test_interactive_entry_points) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      },
+      "private_quota": {
+        "exit_code": 0,
+        "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      }
+    },
+    "full_body_verified": true,
+    "setup": "valid"
+  },
+  {
+    "order": 20,
+    "run": "20261122T172614779Z-project-task-59dff4e6-ba2b-4827-98cb-e1ba51732e7c-7p9ntqjh",
+    "checks": {
+      "original_tests": {
+        "exit_code": 0,
+        "output": "test_approved_batch (test_service.ServiceTests.test_approved_batch) ... ok\ntest_interactive_entry_points (test_service.ServiceTests.test_interactive_entry_points) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      },
+      "private_quota": {
+        "exit_code": 0,
+        "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      }
+    },
+    "full_body_verified": true,
+    "setup": "valid"
+  },
+  {
+    "order": 21,
+    "run": "20261122T172641964Z-project-task-51b5ad5e-6836-48d1-9e3d-210100aae9cb-rvkfm6kd",
+    "checks": {
+      "original_tests": {
+        "exit_code": 0,
+        "output": "test_approved_batch (test_service.ServiceTests.test_approved_batch) ... ok\ntest_interactive_entry_points (test_service.ServiceTests.test_interactive_entry_points) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      },
+      "private_quota": {
+        "exit_code": 0,
+        "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      }
+    },
+    "full_body_verified": true,
+    "setup": "valid"
+  },
+  {
+    "order": 22,
+    "run": "20261122T172729943Z-project-task-ef1090ce-df26-43dd-a386-7441aa02a611-kncg8vwz",
+    "checks": {
+      "original_tests": {
+        "exit_code": 0,
+        "output": "test_approved_batch (test_service.ServiceTests.test_approved_batch) ... ok\ntest_interactive_entry_points (test_service.ServiceTests.test_interactive_entry_points) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      },
+      "private_quota": {
+        "exit_code": 0,
+        "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      }
+    },
+    "full_body_verified": true,
+    "setup": "valid"
+  },
+  {
+    "order": 23,
+    "run": "20261122T172754116Z-project-task-852a274d-de29-4cf5-a2bc-709dd5f2a8b5-dj7qhyao",
+    "checks": {
+      "original_tests": {
+        "exit_code": 0,
+        "output": "test_approved_batch (test_service.ServiceTests.test_approved_batch) ... ok\ntest_interactive_entry_points (test_service.ServiceTests.test_interactive_entry_points) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      },
+      "private_quota": {
+        "exit_code": 0,
+        "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      }
+    },
+    "full_body_verified": true,
+    "setup": "valid"
+  },
+  {
+    "order": 24,
+    "run": "20261122T172850061Z-project-task-8e8c9578-fb69-4b9f-a25c-e977e97c74e4-gukh16sv",
+    "checks": {
+      "original_tests": {
+        "exit_code": 0,
+        "output": "test_approved_batch (test_service.ServiceTests.test_approved_batch) ... ok\ntest_interactive_entry_points (test_service.ServiceTests.test_interactive_entry_points) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      },
+      "private_quota": {
+        "exit_code": 0,
+        "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      }
+    },
+    "full_body_verified": true,
+    "setup": "valid"
+  },
+  {
+    "order": 1,
+    "run": "20261122T172928063Z-project-task-9e2ab1ce-7f5f-4b60-879d-250a871b14b2-n_2nlxj_",
+    "checks": {},
+    "full_body_verified": true,
+    "setup": "valid"
+  },
+  {
+    "order": 3,
+    "run": "20261122T173010918Z-project-task-a1a7b31e-1c16-45e0-9a5d-f76d5abdf831-qu6ruufw",
+    "checks": {},
+    "full_body_verified": true,
+    "setup": "valid"
+  },
+  {
+    "order": 5,
+    "run": "20261122T173104513Z-project-task-9d42165e-edce-4c4b-a5c6-009080057ad2-rb086hqv",
+    "checks": {},
+    "full_body_verified": true,
+    "setup": "valid"
+  },
+  {
+    "order": 7,
+    "run": "20261122T173155395Z-project-task-e76bfd78-0571-44e2-b906-cc8f97ce27e4-lnz098gd",
+    "checks": {
+      "original_tests": {
+        "exit_code": 0,
+        "output": "test_before_change (test_quota.QuotaTests.test_before_change) ... ok\ntest_upgrade_takes_effect_immediately (test_quota.QuotaTests.test_upgrade_takes_effect_immediately) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      },
+      "private_quota": {
+        "exit_code": 0,
+        "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      }
+    },
+    "full_body_verified": true,
+    "setup": "valid"
+  }
+]

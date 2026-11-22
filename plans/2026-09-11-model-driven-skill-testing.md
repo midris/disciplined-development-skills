@@ -30,7 +30,8 @@ Study one shipped skill at a time. Establish a fresh baseline, identify a concre
 - [x] Complete both independently scored provider-grouped reconciliations.
 - [ ] Review the [reconciliation checkpoint](../skill-studies/writing-explicit-rationale/protocol.md#reconciliation-checkpoint) with the owner.
 - [x] Draft a [compact WER candidate](../skill-studies/writing-explicit-rationale/protocol.md#compact-rewrite-candidate) against the preserved original.
-- [ ] Compare the candidate on the frozen cases, regression-test the exact finalist, and review the adoption decision with the owner before closing the study.
+- [x] Compare three frozen WER drafts across both providers on the four baseline cases. The [application comparison](../skill-studies/writing-explicit-rationale/protocol.md#application-comparison-results) records the shared Codex regression and four retained setup failures.
+- [ ] Review the examples-and-warnings revision, confirm the repeated-review behavior and remaining coverage, and regression-test the exact finalist before an adoption decision.
 
 ## Starting or resuming without conversation history
 

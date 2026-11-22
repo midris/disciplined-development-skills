@@ -275,3 +275,34 @@ The four cases give paired evidence on rationale placement, scope and customer i
 
 The owner approved one replacement of comparison slot 1 after Codex failed to create its session from the temporary executable path. Preserve the charged launch failure. Run the replacement after the scheduled cells using the hash-identical CLI in the original versioned Homebrew location.
 The owner also approved one replacement each for slots 3, 5 and 7. Their Codex sessions returned a final response reporting an absent code-mode host before they could read the candidate or perform the task. The runner marked those sessions complete. Treat them as invalid setups and retain them separately from behavioral outcomes. Verify a successful full skill read after restoring both version-matched helpers before using these replacements.
+
+#### Worked examples, rationalizations and red flags
+
+During collection the owner clarified that compression should preserve the practical value of worked examples, rationalizations and red flags. The [baseline edit with examples](drafts/baseline-edit-with-examples/SKILL.md) is a follow-up to the frozen baseline edit. Its five examples cover test deferral, residual risk, a rule exception, a capacity limit and a code choice. It groups the original rationalizations by the pressure an editor faces and uses concrete warning signs at handoff. Both texts remain inspectable. The 599-word revision has no subject observations.
+
+Two additions would make the suite more informative before adoption:
+
+1. **A shared decision in a spec and its consumers.** Start with current reasoning in a policy document. Ask for an ordinary change affecting two consumers, including one conventional choice. A reader starting at either consequential site should be able to recover the applicable reason and exception. Accept a precise reference or an equivalent concise local explanation. Inspect the whole change for contradictory copies and disproportionate commentary.
+2. **A scope cut under brevity pressure.** Ask for a shorter handoff-ready plan containing several superficially similar requirements, only some of which the source actually defers. Include a conditional consequence and a reason recorded outside the plan. Check that a reader can identify the affected items, why they moved and what remains open. Accept any wording or placement that preserves that meaning. This directly exercises the pressure addressed by the shipped examples and warnings.
+
+Freeze these as new cases and exercise the preserved original as well as the exact finalist before interpreting differences. The four existing cases informed authoring and support a development comparison.
+
+#### Application comparison results
+
+All 24 scheduled cells have a valid output with verified full candidate exposure. The [attempt index](runs/comparison-01/attempts.json) includes four additional charged invalid setups and links the four approved replacements to their originals. The [verification record](runs/comparison-01/verification.json) covers the complete retained inventories, full-text exposure and replay outcomes. The first failed launch's unused private runtime was removed after checking it had no session or open handles. The failed run bundle is preserved. The restored Codex 0.167.0 binary and matching helpers live alongside the host default. Both provider CLI hashes match the baseline.
+
+| Explicitly loaded version | Words | Codex outputs meeting all functional criteria | Claude outputs meeting all functional criteria |
+| --- | ---: | ---: | ---: |
+| Shipped, retained application baseline | 1,426 | 4/4 | 4/4 |
+| Comprehensive branch, unchanged | 372 | 3/4 | 4/4 |
+| Compact-01 | 286 | 3/4 | 4/4 |
+| Baseline edit | 344 | 3/4 | 4/4 |
+
+Active assessor judgments against the frozen case cards:
+
+- **Export.** T1 and R1 met in all six. The comprehensive and baseline-edit Codex plans identify the moving schema and approval gate. Readers have to infer the XML customer wait from the deferred publication. The compact Codex plan names that impact directly. The Claude baseline edit describes breakage as a risk. The Claude comprehensive wording about “no export path” is broader in isolation, but its plan explicitly retains CSV and JSON. All handoffs convey the v1 decision.
+- **Quota.** T1 and R1 met in all six. At the branch or its referenced constant, the explanation and surrounding code establish the old-token scope, admitted-work reason and accepted bounded exposure. All six passed original tests and the private boundary replay.
+- **Rename.** T1 and R1 met in all six. Every complete project was byte-identical to the expected private rename, including the billing comment. All original tests passed.
+- **Repeated review.** T1, R1 and R3 met in all six. All three Codex projects explain the approved-batch reason and guard placement, but turn reconsideration at a third caller into a firmer factoring commitment. Each leaves the quota file byte-identical to the original and misses R2, although the submitted patch and quota source were inspected. All three Claude projects explain the quota decision and meet R2. Claude compact-01 and comprehensive give stronger factoring commitments in the suggested handoff. Claude baseline-edit preserves reconsideration in both project and handoff. The repeated pointers to the shared explanation in the other two Claude projects are a density caveat. All original service tests and private quota replays passed.
+
+These are whole-output judgments by the active assessor on development cases. One run per cell and a historical original leave the cause of the Codex regression uncertain. No independent evaluator, native comparison or held-out test was run in this allocation. Keep the shipped version in place pending review. A targeted comparison of the examples-and-warnings revision and the shipped original on repeated review would test whether the follow-up restores the missed behavior under current conditions.
