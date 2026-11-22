@@ -344,3 +344,17 @@ The revision meets the prospective threshold to advance for further study. Both 
 #### Scope-trim authority
 
 The owner approved the [12 scope-trim subjects](runs/scope-trim-01/schedule.json), two fresh sessions per provider and arm (preserved shipped, examples-and-warnings revision and no-skill control). Apply the version 4 scope-trim card. Read each complete projected plan under a shuffled label before comparing the original and the delivered handoff. Preserve every attempt and report the checkpoint before dispatch-hold. This allocation contains no replacements or evaluator calls.
+
+#### Scope-trim checkpoint
+
+All 12 approved subjects completed with valid setups. The [attempt ledger](runs/scope-trim-01/attempts.json) retains the full outputs and inventories. All actual launch inputs matched the frozen schedule. Guided traces delivered the assigned skill and control workspaces received only the task and starting plan. The active assessor sealed [project-only judgments](runs/scope-trim-01/project-only.json) under shuffled labels before comparing each plan with the source request and handoff. The [reconciled judgments](runs/scope-trim-01/assessment.json) preserve the only functional miss.
+
+| Arm | Codex T1 / R1 | Claude T1 / R1 |
+| --- | --- | --- |
+| Shipped | 2/2 and 2/2 | 2/2 and 2/2 |
+| Examples-and-warnings revision | 2/2 and 2/2 | 2/2 and 2/2 |
+| No-skill control | 1/2 and 2/2 | 2/2 and 2/2 |
+
+All plans preserve the daily and weekly decisions, Finance dependency, possible manual comparison for an affected week, guide handoff and adoption review. In Codex control slot 3 the heading “Monday launch” introduces rollout timing unsupported by the request. Its accurate chat reference to a Monday handoff leaves Operations with conflicting timing in the plan. T1 misses for schedule fidelity and R1 passes. Codex revision slot 7 names Finance agreement as a prerequisite and leaves reconsideration implicit, a precision caveat. Claude revision slot 12 says “come back” in the handoff while the plan clearly says to revisit.
+
+The 599-word revision preserved the target behavior in these four observations. The no-skill controls also conveyed the rationale in all four, so this case showed no incremental rationale benefit. One control timing error and two repetitions per provider and arm give limited evidence for broader claims. No independent evaluator calls or replacements were used. Owner review of this checkpoint precedes dispatch-hold.
