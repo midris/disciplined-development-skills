@@ -9,6 +9,11 @@ Each case contains an ordinary request in `task.md`, a starting project in `fixt
 | [Helper rename](helper-rename/assessment.md) | Two callers use an inconsistently named helper next to a useful billing explanation. | Replay the original project tests and inspect the final definition, callers and adjacent explanation. |
 | [Repeated review](repeated-review/assessment.md) | A working three-file change has two rounds of feedback on the same guard. | Replay the original service tests and the same private quota checks. Inspect both decision sites and the routine change. |
 
+### Additional development cases
+
+- [Dispatch hold](dispatch-hold/assessment.md) updates a spec and two planners under one existing policy. The [private replay](dispatch-hold/replay.py) checks both hold states, assigned trips, ordinary parcels and the title edit.
+- [Scope trim](scope-trim/assessment.md) compresses a launch plan under handoff pressure. Inspect the full plan for daily versus weekly scope, the unresolved decision and conditional customer-support work.
+
 ## Reader-first check
 
 For eligible positive outputs, supply one project inline to a fresh Claude read-only reader. Use the checked-in [reader question](reader-question.txt). Accept only a complete trace with zero tool calls. Each reader sees one output. Score rename restraint by inspecting the diff. Verify supplemental inputs at setup and compare their final identities when building the reader packet. Record the payload, prompt, answer and bundle identities before the separate [full-evidence review](reconciliation-question.txt). The [study design](../../../plans/specs/2026-11-08-wer-focused-baseline.md#reader-first-output-check) specifies eligibility, isolation checks and ordering.

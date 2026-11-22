@@ -59,3 +59,9 @@ The latest dry run mounts a root task file in all 20 constructed trees. The buil
 In the owner-supplied re-review of `550bc6b3`, Claude confirmed the wrong-directory regression was fixed and reported no further case findings. With the correct fixture directory, the reader received the two unchanged quota project files and the newly added decision file. An unrelated directory stopped packet creation. Use a clean checkout of the frozen source when preparing live packets because the coverage check examines every file in that directory.
 
 The active session reran all nine reader-payload tests and the 20 constructed outputs successfully. These checks close preparation of the four cases. The provider configurations, manifests, runtime qualification and model-call allocation remain open.
+
+## Suite extension
+
+The offline generator now constructs 30 outputs. For dispatch hold, both a precise spec reference and an accurate explanation at each consumer preserve the decision. A contradictory local comment and an invented carrier naming rule each pass the private replay but create separate rationale and restraint misses. Dropping already-loaded holds from the morning planner fails the private replay even with the worked explanation intact.
+
+For scope trim, read the complete plan before the supplied handoff. The worked repair preserves both daily and both weekly decisions. The four contrasts omit the weekly alert from the plan, promise delivery when Finance agrees, make Support's manual comparison compulsory every week, or leave the underlying reason and condition solely in the response. Score the specific effect on scope, timing or Support's obligations. These are controller-authored examples. Equivalent concise prose can pass.

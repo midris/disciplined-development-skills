@@ -13,6 +13,8 @@ from reader_payload import payload_bytes, reader_prompt
 
 CASES = Path(__file__).resolve().parent
 PROJECT_FILES = {
+    "dispatch-hold": {"dispatch-spec.md", "morning.py", "overflow.py"},
+    "scope-trim": {"launch-plan.md"},
     "quota-grace": {"quota.py", "test_quota.py"},
     "export-deferral": {"release-plan.md"},
     "helper-rename": {"quota.py", "test_quota.py"},
@@ -49,7 +51,31 @@ def construct(case, variant, tree):
             args.append("--include=ingest.py")
         run([*args, str(source / "example.patch")], tree)
 
-    if variant == "expiry-bug":
+    if variant == "conflicting-copy":
+        replace(tree / "overflow.py", "Loaded parcels stay with their dispatcher.",
+                "Remove even loaded parcels from assigned trips until the hold clears.")
+    elif variant == "loaded-regression":
+        replace(tree / "morning.py", "already_loaded or status not in", "status not in")
+    elif variant == "local-reasons":
+        for name in ("morning.py", "overflow.py"):
+            replace(tree / name, "Loaded parcels stay with their dispatcher. See dispatch-spec.md, Holds.",
+                    "A held parcel may change address. Leave loaded parcels assigned so their dispatcher can redirect them.")
+    elif variant == "title-story":
+        replace(tree / "overflow.py", 'TITLE = "Overflow dispatch"',
+                '# The carrier contract mandates this exact title.\nTITLE = "Overflow dispatch"')
+    elif variant == "lost-weekly-alert":
+        replace(tree / "launch-plan.md", "weekly reconciliation and weekly discrepancy alerts", "weekly reconciliation")
+    elif variant == "firm-promise":
+        replace(tree / "launch-plan.md", "Reconsider both once", "Ship both as soon as")
+    elif variant == "weekly-duty":
+        replace(tree / "launch-plan.md", "may need to compare daily reports by hand for such a week",
+                "must compare daily reports by hand every week")
+    elif variant == "summary-only-reason":
+        plan = tree / "launch-plan.md"
+        before, rest = plan.read_text().split("Defer weekly reconciliation", 1)
+        plan.write_text(before + "Defer weekly reconciliation and weekly discrepancy alerts.\n\n"
+                        + rest.split("\n\n", 1)[1])
+    elif variant == "expiry-bug":
         replace(tree / "quota.py", "now < change.effective_at + 60", "now <= change.effective_at + 60")
     elif variant == "new-token-bug":
         replace(tree / "quota.py", " and issued_at < change.effective_at", "")
@@ -102,6 +128,10 @@ def qualify(output):
     ] + [
         ("repeated-review", v) for v in ("complete", "reply-only", "guard-only", "batch-regression", "unnecessary-comment")
     ]
+    samples.extend(("dispatch-hold", v) for v in
+                   ("complete", "local-reasons", "conflicting-copy", "loaded-regression", "title-story"))
+    samples.extend(("scope-trim", v) for v in
+                   ("complete", "lost-weekly-alert", "firm-promise", "weekly-duty", "summary-only-reason"))
     random.SystemRandom().shuffle(samples)
     # Offline configs exercise the same source-to-target classification as live runs.
     configs = output / "configs"
@@ -124,7 +154,7 @@ def qualify(output):
         tree = reader / label
         construct(case, variant, tree)
         checks = {}
-        if case != "export-deferral":
+        if case in {"quota-grace", "repeated-review", "helper-rename"}:
             ok = variant not in {"missed-caller", "batch-regression"}
             run([sys.executable, "-B", "-m", "unittest", "discover"], tree, ok)
             checks["project tests"] = "pass" if ok else "fail"
@@ -132,6 +162,10 @@ def qualify(output):
             ok = variant not in {"starting", "expiry-bug", "new-token-bug", "lookup-time-bug", "recent-only", "assumed-lifetime"}
             run([sys.executable, "-I", "-B", str(CASES / "quota-grace/replay.py"), str(tree)], tree, ok)
             checks["quota replay"] = "pass" if ok else "fail"
+        if case == "dispatch-hold":
+            ok = variant != "loaded-regression"
+            run([sys.executable, "-I", "-B", str(CASES / case / "replay.py"), str(tree)], tree, ok)
+            checks["dispatch replay"] = "pass" if ok else "fail"
         members = {p.relative_to(tree).as_posix() for p in tree.rglob("*") if p.is_file()}
         expected = PROJECT_FILES[case]
         if members != expected:
@@ -156,6 +190,9 @@ def qualify(output):
         if case == "export-deferral":
             entry["response"] = ("CSV and JSON stay in v1. XML customers will wait until the partner "
                                  "approves a stable schema because the schema is still changing.")
+        elif case == "scope-trim":
+            entry["response"] = ("Both weekly items await Finance's cross-period close rule. Reconsider them "
+                                 "on agreement. Support may need to compare daily reports for an affected week.")
         elif variant == "reply-only":
             entry["response"] = "The shared helper serves approved batches. A third interactive caller would prompt a redesign."
         key[label] = entry
