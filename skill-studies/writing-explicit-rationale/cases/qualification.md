@@ -68,7 +68,7 @@ For scope trim, read the complete plan before the supplied handoff. The worked r
 
 ### Extension scoring walkthrough
 
-The extension now adds 18 examples to the 20 original examples. These source-aware walkthroughs describe the intended semantic judgments. The generator verifies the replay and reader-packet mechanics.
+The extension now adds 21 examples to the 20 original examples. These source-aware walkthroughs describe the intended semantic judgments. The generator verifies the replay and reader-packet mechanics.
 
 | Dispatch variant | What a maintainer can recover | Expected judgment |
 | --- | --- | --- |
@@ -77,6 +77,8 @@ The extension now adds 18 examples to the 20 original examples. These source-awa
 | local-reasons | Each site explains the consequence accurately. | Pass |
 | conflicting-copy | Overflow directs removal of loaded parcels despite the spec. | R1 miss |
 | lost-policy | The spec preserves behavior but drops the reason and dispatcher role. | R1 miss |
+| handoff-only-policy | The reply explains both reasons, but the project records only the behavior. | R1 miss |
+| keyword-regression | Positional calls work but existing keyword calls raise TypeError. | T1 miss, replay fails |
 | full-copies | Three complete copies create separate update obligations. | Pass with a density caveat |
 | title-story | The title acquires an invented carrier contract. | R2 miss |
 | ready-only | Overflow drops an ordinary sorted parcel. | T1 miss, replay fails |
@@ -87,6 +89,7 @@ The extension now adds 18 examples to the 20 original examples. These source-awa
 | complete | The adoption review and Finance trigger have separate homes. | Pass |
 | gate-only | Finance agreement is a prerequisite. The plan makes no delivery promise. | Pass with a precision caveat |
 | implicit-week | Nearby text supports the affected-week reading. | Pass with a precision caveat |
+| collective-scope | “Their weekly versions” follows explicit reconciliation and alert names. Both statuses and the shared reason are recoverable. | Pass |
 | lost-impact | The plan gives the reason and trigger but loses the possible Support workload. | R1 miss |
 | silent-cut | The weekly deliverables disappear entirely. | T1 and R1 miss, one omission |
 | lost-weekly-alert | A reader cannot tell what happened to the weekly alert. | T1 miss for missing scope |

@@ -51,14 +51,17 @@ def construct(case, variant, tree):
             args.append("--include=ingest.py")
         run([*args, str(source / "example.patch")], tree)
 
-    if variant in {"bare", "lost-policy", "full-copies"}:
+    if variant in {"bare", "lost-policy", "handoff-only-policy", "full-copies"}:
         spec = tree / "dispatch-spec.md"
         policy, = (line for line in spec.read_text().splitlines() if line.startswith("A held parcel"))
         for name in ("morning.py", "overflow.py"):
             replace(tree / name, "    # Loaded parcels stay with their dispatcher. See dispatch-spec.md, Holds.\n",
                     f"    # {policy}\n" if variant == "full-copies" else "")
-        if variant == "lost-policy":
+        if variant in {"lost-policy", "handoff-only-policy"}:
             replace(spec, policy, "Keep loaded parcels assigned and omit held parcels from new trips.")
+    elif variant == "keyword-regression":
+        path = tree / "overflow.py"
+        path.write_text(path.read_text().replace("already_loaded", "assigned"))
     elif variant == "ready-only":
         replace(tree / "overflow.py", 'status not in {"manual_hold", "address_check"}', 'status == "ready"')
     elif variant == "conflicting-copy":
@@ -85,6 +88,9 @@ def construct(case, variant, tree):
         else:
             before, rest = plan.read_text().split("## Deferred", 1)
             plan.write_text(before + "## After launch" + rest.split("## After launch", 1)[1])
+    elif variant == "collective-scope":
+        replace(tree / "launch-plan.md", "Defer weekly reconciliation and weekly discrepancy alerts",
+                "For daily reconciliation and discrepancy alerts, defer their weekly versions")
     elif variant == "lost-weekly-alert":
         replace(tree / "launch-plan.md", "weekly reconciliation and weekly discrepancy alerts", "weekly reconciliation")
     elif variant == "firm-promise":
@@ -152,10 +158,10 @@ def qualify(output):
     ]
     samples.extend(("dispatch-hold", v) for v in
                    ("complete", "local-reasons", "conflicting-copy", "loaded-regression", "title-story",
-                    "bare", "lost-policy", "full-copies", "ready-only"))
+                    "bare", "lost-policy", "handoff-only-policy", "full-copies", "ready-only", "keyword-regression"))
     samples.extend(("scope-trim", v) for v in
                    ("complete", "lost-weekly-alert", "firm-promise", "weekly-duty", "summary-only-reason",
-                    "gate-only", "implicit-week", "lost-impact", "silent-cut"))
+                    "gate-only", "implicit-week", "lost-impact", "silent-cut", "collective-scope"))
     random.SystemRandom().shuffle(samples)
     # Offline configs exercise the same source-to-target classification as live runs.
     configs = output / "configs"
@@ -187,7 +193,7 @@ def qualify(output):
             run([sys.executable, "-I", "-B", str(CASES / "quota-grace/replay.py"), str(tree)], tree, ok)
             checks["quota replay"] = "pass" if ok else "fail"
         if case == "dispatch-hold":
-            ok = variant not in {"loaded-regression", "ready-only"}
+            ok = variant not in {"loaded-regression", "ready-only", "keyword-regression"}
             run([sys.executable, "-I", "-B", str(CASES / case / "replay.py"), str(tree)], tree, ok)
             checks["dispatch replay"] = "pass" if ok else "fail"
         members = {p.relative_to(tree).as_posix() for p in tree.rglob("*") if p.is_file()}
@@ -214,6 +220,9 @@ def qualify(output):
         if case == "export-deferral":
             entry["response"] = ("CSV and JSON stay in v1. XML customers will wait until the partner "
                                  "approves a stable schema because the schema is still changing.")
+        elif variant == "handoff-only-policy":
+            entry["response"] = ("Held parcels can change destination. Keeping them off new trips avoids collection "
+                                 "for the wrong address. Already-loaded parcels stay assigned so dispatch can redirect them.")
         elif case == "scope-trim":
             entry["response"] = ("Both weekly items await Finance's cross-period close rule. Reconsider them "
                                  "on agreement. Support may need to compare daily reports for an affected week.")

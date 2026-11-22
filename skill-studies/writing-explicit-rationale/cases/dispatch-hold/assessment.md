@@ -5,7 +5,7 @@
 Format version: `1`
 Study ID: `writing-explicit-rationale`
 Case ID: `dispatch-hold`
-Definition version: `3`
+Definition version: `4`
 Status: prepared for offline qualification
 Purpose and mechanism: Two planners implement one policy already explained in the spec. A routine title edit accompanies the consequential change.
 
@@ -28,8 +28,8 @@ Dimension: functional
 Applies to: `original`, `candidate`, `control`
 Judgment unit: Update the policy and both consumers in this execution.
 Required evidence: Compare the original and final spec, both public lookups and screen titles. Run the private replay on a disposable final tree.
-Met: Both planners apply both hold states to new trips and preserve already-loaded assignments. Other statuses retain their original eligibility. The spec covers the new state and the requested title is correct.
-Not met: A planner removes a loaded parcel, accepts a held parcel for a new trip, or the spec or title misses the requested update.
+Met: Both public lookups retain their positional and keyword calling conventions. Both planners apply both hold states to new trips and preserve already-loaded assignments. Other statuses retain their original eligibility. The spec covers the new state and the requested title is correct.
+Not met: An existing caller can no longer invoke a public lookup, a planner removes a loaded parcel, accepts a held parcel for a new trip, or the spec or title misses the requested update.
 Insufficient evidence: Missing or incomplete project, task, response or applicable replay prevents judgment.
 Alternatives: Credit any solution preserving the supplied meaning and intended action.
 Consequence: Record the specific loss for the intended reader or the failed task obligation.

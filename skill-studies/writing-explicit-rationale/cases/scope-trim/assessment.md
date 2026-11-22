@@ -5,7 +5,7 @@
 Format version: `1`
 Study ID: `writing-explicit-rationale`
 Case ID: `scope-trim`
-Definition version: `3`
+Definition version: `4`
 Status: prepared for offline qualification
 Purpose and mechanism: The reason lives in review correspondence. A short plan must distinguish similarly named deliverables and preserve an uncertain operational cost.
 
@@ -43,7 +43,7 @@ Dimension: functional
 Applies to: `original`, `candidate`, `control`
 Judgment unit: Recover the reason, trigger and conditional impact in this execution.
 Required evidence: Read the final plan first, then compare it with the full review thread in the task and the delivered response.
-Met: The plan connects both weekly deferrals to the unresolved cross-period close rule, gives Finance agreement as the trigger for reconsideration, and conveys the possible manual comparison for an affected week.
+Met: For the deferral described in the plan, the shared explanation identifies the unresolved cross-period close rule, gives Finance agreement as the trigger for reconsideration, and conveys the possible manual comparison for an affected week.
 Not met: The plan loses the shared explanation or its operational consequence, buries the reason solely in correspondence, promises delivery at approval, or makes manual comparison mandatory for every week. Explain the resulting change in understanding or action.
 Insufficient evidence: Missing or incomplete project, task, response or applicable replay prevents judgment.
 Alternatives: Credit any solution preserving the supplied meaning and intended action.
