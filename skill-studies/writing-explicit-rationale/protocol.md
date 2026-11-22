@@ -2,7 +2,7 @@
 
 Format version: `1`
 Study ID: `writing-explicit-rationale`
-Status: inputs frozen. Both provider batches passed preparation and collection document checks. The installed shell and isolation probes passed. The replacement smoke qualified the reader. The owner accepted the reviewed application checkpoint. All eight native slots are retained. All 17 independent readings are sealed for joint review.
+Status: inputs frozen. Both provider batches passed preparation and collection document checks. The installed shell and isolation probes passed. The replacement smoke qualified the reader. The owner accepted the reviewed application checkpoint. All eight native slots are retained. All 17 independent readings and both provider-grouped reconciliations are sealed. Owner review of the reconciliation is pending.
 Plan: [current milestone](../../plans/2026-09-11-model-driven-skill-testing.md#wer-milestones)
 General spec: [testing framework](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md)
 
@@ -157,7 +157,7 @@ The external `qualification.inventory.json` covers all 728 entries in `qualifica
 Host loss remains a recovery gap for WER. Include single-host retention in the owner’s allocation decision.
 
 Proposed outer limits: 24 subject, 21 evaluator, 0 authoring and 1 retry invocations.
-Dispatched calls are **24 subject, 18 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **0 / 3 / 0 / 0** under the proposal. Both reader qualification calls are spent.
+Dispatched calls are **24 subject, 20 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **0 / 1 / 0 / 0** under the proposal. Both reader qualification calls are spent.
 Evaluators comprise one smoke, up to 18 eligible isolated positive-case readings and up to two provider-grouped reconciliations. Invalid readings consume their invocation. Any repeat needs a new allocation.
 
 0 active minutes booked; 260 minutes below the 260-minute planning guideline. This is an opening budget ledger for the proposed run sequence. Earlier case development has no measured time entry.
@@ -244,3 +244,13 @@ These are observations from the sealed readings. Joint review and full-evidence 
 ### Reconciliation authority
 
 On 2026-11-22 the owner approved two read-only Opus medium reconciliations, one per provider's 12 subject outputs. Judge each complete output against the original inputs, retain all results including failures, and return both reviews to the owner. The independent reviewer packets include the applicable sealed first readings and omit prior judgments. The composed prompt SHA-256 values are `80428240961cc519eb16382f077c541d2525a74d3d000a70dd34931b785daa6e` for Codex outputs and `752cca44eb02e2d9ffd1a5288f93f0fcb25042984a2f11a3b70c0e4a4afed217` for Claude outputs.
+
+### Reconciliation checkpoint
+
+Two fresh Claude Opus 5.5 medium reviewers independently assessed 12 outputs each, one reviewer per subject provider. Both completed in one turn with zero tool calls after the 17 first readings were sealed. The [evaluator ledger](runs/baseline-01/evaluator-run-index.json) links the complete prompts, answers, audits and verified inventories. All 24 subject outputs, including failures, were covered. The ordered subject traces supply the native selection judgments.
+
+The reviewers agreed with the active assessor on 59 of 60 functional criterion judgments. Their whole-output counts were 8/8 explicitly guided, 3/8 controls and 8/8 native. The sole difference from the recorded 7/8 native checkpoint was Codex export R1. The reviewer judged it met with uncertainty. The plan conveys the dependency, approver, customer wait and unaffected v1 schedule. Ongoing schema changes are implicit. That is consistent with the owner's assessment of a minor omission. The original score and independent judgment are retained for joint review.
+
+Both standalone quota controls implemented the policy and omitted its reason. All four guided and native projects conveyed why old tokens receive grace and the accepted bounded exposure. Both repeated-review controls missed the guard and quota rationale in the project. All six routine renames met their criteria.
+
+The Claude guided export review treated breakage as a plausible risk and passed the whole output. The isolated reader repeated the stronger claim about every revision. The repeated-review passes also retain a qualification. The agreement was to reconsider at a third caller. Both Codex skill-exposed outputs commit to factoring there. The Claude native comment preserves discretion, while its suggested reply offers earlier factoring if the reviewer still prefers it. The offer is conditional. These observations concern fidelity to the handoff and future decision and remain available alongside the criterion scores.
