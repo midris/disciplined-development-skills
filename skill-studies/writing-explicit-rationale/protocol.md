@@ -2,7 +2,7 @@
 
 Format version: `1`
 Study ID: `writing-explicit-rationale`
-Status: inputs frozen. Both provider batches passed preparation and collection document checks. The installed shell and isolation probes passed. The replacement smoke qualified the reader. The owner accepted the reviewed application checkpoint. All eight native slots are complete and retained for owner review.
+Status: inputs frozen. Both provider batches passed preparation and collection document checks. The installed shell and isolation probes passed. The replacement smoke qualified the reader. The owner accepted the reviewed application checkpoint. All eight native slots are retained. All 17 independent readings are sealed for joint review.
 Plan: [current milestone](../../plans/2026-09-11-model-driven-skill-testing.md#wer-milestones)
 General spec: [testing framework](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md)
 
@@ -157,7 +157,7 @@ The external `qualification.inventory.json` covers all 728 entries in `qualifica
 Host loss remains a recovery gap for WER. Include single-host retention in the owner’s allocation decision.
 
 Proposed outer limits: 24 subject, 21 evaluator, 0 authoring and 1 retry invocations.
-Dispatched calls are **24 subject, 1 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **0 / 20 / 0 / 0** under the proposal. Both reader qualification calls are spent.
+Dispatched calls are **24 subject, 18 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **0 / 3 / 0 / 0** under the proposal. Both reader qualification calls are spent.
 Evaluators comprise one smoke, up to 18 eligible isolated positive-case readings and up to two provider-grouped reconciliations. Invalid readings consume their invocation. Any repeat needs a new allocation.
 
 0 active minutes booked; 260 minutes below the 260-minute planning guideline. This is an opening budget ledger for the proposed run sequence. Earlier case development has no measured time entry.
@@ -230,3 +230,13 @@ All six native positive projects qualify for isolated readings. Together with th
 ### Independent reader authority
 
 On 2026-11-22 the owner approved one independent first reading for each of the 17 eligible packets. Retain every attempt, including failures, and report the readings for joint review before reconciliation.
+
+### Independent reader checkpoint
+
+All 17 eligible projects received one fresh Opus medium reading. All 11 application and six native readings completed in one turn with zero tool calls. The evaluator ledger maps each packet to the retained answer, verified bundle inventory and seal. The host CLI had advanced to 2.1.330. A temporary copy of 2.1.319 matched the qualified executable digest before use. All 17 initializations matched the qualified catalog.
+
+The Codex native export reader recovered the v1 scope, partner approval condition, XML customer wait and unaffected release schedule. The reader gave approval as the reason for deferral and supplied no claim about active revisions. The Claude guided export reader recovered the active schema changes and repeated the artifact's claim about breakage on every change.
+
+Both standalone quota controls yielded the timing rule. Their readers treated the motivation as uncertain. The guided and native readings connected the window to previously admitted work. On the native repeated-review projects, the Codex reader described a commitment to factor the guards on another interactive caller. The Claude reader described a condition for considering a shared guard.
+
+These are observations from the sealed readings. Joint review and full-evidence reconciliation are pending.

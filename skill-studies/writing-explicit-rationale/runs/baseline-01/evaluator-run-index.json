@@ -47,6 +47,397 @@
         "sha256": "a5b8529c0d596f3679d54a708c0fbd1f1f670d2c5207de45d6f4b4f5e41104a3",
         "version": "1"
       }
+    },
+    {
+      "packet_id": "application-checkpoint/claude/1",
+      "run_id": "20261122T155630963Z-project-reader-a5ce5889-9784-4959-adce-63ac9a51a80a-1cy1o35t",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "e8da4d3d10055263b4da50ef3ad59e40ed5a469b",
+      "configuration_sha256": "35f09d4f4adb2d8c6a723eadac105853e28175c9cc9f89c8c204e45ccf3da6cf",
+      "bundle": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T155630963Z-project-reader-a5ce5889-9784-4959-adce-63ac9a51a80a-1cy1o35t",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T155630963Z-project-reader-a5ce5889-9784-4959-adce-63ac9a51a80a-1cy1o35t.inventory.json",
+        "sha256": "bf7bbd00d3cfbbe25d36040a056509808f71e1dd93f0842ed4a497dc38615c34",
+        "version": "1"
+      },
+      "audit": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T155630963Z-project-reader-a5ce5889-9784-4959-adce-63ac9a51a80a-1cy1o35t.audit.json",
+        "sha256": "6d7e8cbe8f9bd575192b221dba25eaf1424beba1e4ae9c592d752ba7ccc94885",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 32.435,
+      "audit_status": "sealed"
+    },
+    {
+      "packet_id": "application-checkpoint/claude/2",
+      "run_id": "20261122T155703727Z-project-reader-f418e744-f94f-4021-a713-b86f94d27002-jka9ra33",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "e8da4d3d10055263b4da50ef3ad59e40ed5a469b",
+      "configuration_sha256": "35f09d4f4adb2d8c6a723eadac105853e28175c9cc9f89c8c204e45ccf3da6cf",
+      "bundle": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T155703727Z-project-reader-f418e744-f94f-4021-a713-b86f94d27002-jka9ra33",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T155703727Z-project-reader-f418e744-f94f-4021-a713-b86f94d27002-jka9ra33.inventory.json",
+        "sha256": "9faf2d6f4bb9e49a8ccf918f5a88b926d039a636644549c5db771f587710df73",
+        "version": "1"
+      },
+      "audit": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T155703727Z-project-reader-f418e744-f94f-4021-a713-b86f94d27002-jka9ra33.audit.json",
+        "sha256": "e2819a9561b8178c4ab1f84d80c3a1d4f988fd38843a59e1d55de63278272388",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 21.152,
+      "audit_status": "sealed"
+    },
+    {
+      "packet_id": "application-checkpoint/claude/3",
+      "run_id": "20261122T155725159Z-project-reader-75cbcfe9-5bb3-47e0-ad89-76e00b7f0adc-bzio_hey",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "e8da4d3d10055263b4da50ef3ad59e40ed5a469b",
+      "configuration_sha256": "35f09d4f4adb2d8c6a723eadac105853e28175c9cc9f89c8c204e45ccf3da6cf",
+      "bundle": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T155725159Z-project-reader-75cbcfe9-5bb3-47e0-ad89-76e00b7f0adc-bzio_hey",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T155725159Z-project-reader-75cbcfe9-5bb3-47e0-ad89-76e00b7f0adc-bzio_hey.inventory.json",
+        "sha256": "0dc532d0804633acf7f6e84e8bdd572b57fdbb34376dfc25ab36f11ac26b34f1",
+        "version": "1"
+      },
+      "audit": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T155725159Z-project-reader-75cbcfe9-5bb3-47e0-ad89-76e00b7f0adc-bzio_hey.audit.json",
+        "sha256": "397d970c6346bd60200a46aa9a115b535068953dba448b874378811dd945d4cb",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 40.111,
+      "audit_status": "sealed"
+    },
+    {
+      "packet_id": "application-checkpoint/claude/4",
+      "run_id": "20261122T155805516Z-project-reader-274df916-02f3-47b2-a42e-b8db343131b5-jamptokj",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "e8da4d3d10055263b4da50ef3ad59e40ed5a469b",
+      "configuration_sha256": "35f09d4f4adb2d8c6a723eadac105853e28175c9cc9f89c8c204e45ccf3da6cf",
+      "bundle": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T155805516Z-project-reader-274df916-02f3-47b2-a42e-b8db343131b5-jamptokj",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T155805516Z-project-reader-274df916-02f3-47b2-a42e-b8db343131b5-jamptokj.inventory.json",
+        "sha256": "88753cb9eb8a9acb2b55534b64039a5be05d41c28c627ccb217c021fa4c48d40",
+        "version": "1"
+      },
+      "audit": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T155805516Z-project-reader-274df916-02f3-47b2-a42e-b8db343131b5-jamptokj.audit.json",
+        "sha256": "f526ab5993c4dade38270dfe8f714eb073929a6468269d76679215130145e3e5",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 34.449,
+      "audit_status": "sealed"
+    },
+    {
+      "packet_id": "application-checkpoint/claude/7",
+      "run_id": "20261122T155840316Z-project-reader-7c6993eb-5f69-4721-914c-07d7d66d6bd9-jibpzcs8",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "e8da4d3d10055263b4da50ef3ad59e40ed5a469b",
+      "configuration_sha256": "35f09d4f4adb2d8c6a723eadac105853e28175c9cc9f89c8c204e45ccf3da6cf",
+      "bundle": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T155840316Z-project-reader-7c6993eb-5f69-4721-914c-07d7d66d6bd9-jibpzcs8",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T155840316Z-project-reader-7c6993eb-5f69-4721-914c-07d7d66d6bd9-jibpzcs8.inventory.json",
+        "sha256": "cd9435bf02c424ac10059d7db56fe0302583916e3dc28c28d6316e642588ce56",
+        "version": "1"
+      },
+      "audit": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T155840316Z-project-reader-7c6993eb-5f69-4721-914c-07d7d66d6bd9-jibpzcs8.audit.json",
+        "sha256": "20519456e9727250fe85c89fc58f16be706a4bf359a85ad8d5d2914049049048",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 29.05,
+      "audit_status": "sealed"
+    },
+    {
+      "packet_id": "application-checkpoint/codex/1",
+      "run_id": "20261122T155909692Z-project-reader-01318985-e629-4481-87fa-eb284570fd33-yxxrfb76",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "e8da4d3d10055263b4da50ef3ad59e40ed5a469b",
+      "configuration_sha256": "35f09d4f4adb2d8c6a723eadac105853e28175c9cc9f89c8c204e45ccf3da6cf",
+      "bundle": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T155909692Z-project-reader-01318985-e629-4481-87fa-eb284570fd33-yxxrfb76",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T155909692Z-project-reader-01318985-e629-4481-87fa-eb284570fd33-yxxrfb76.inventory.json",
+        "sha256": "21556ff75e0d09b2e6682b9705600b94d338837dcaab953dcc3eda0849f75d71",
+        "version": "1"
+      },
+      "audit": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T155909692Z-project-reader-01318985-e629-4481-87fa-eb284570fd33-yxxrfb76.audit.json",
+        "sha256": "ed7a54b143186baff2f9302526112091ae9cf9fdf66cf6a39a9c8ac634126a0d",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 24.834,
+      "audit_status": "sealed"
+    },
+    {
+      "packet_id": "application-checkpoint/codex/2",
+      "run_id": "20261122T155934589Z-project-reader-970bf665-2043-49c1-b3f5-112e12fa6bf3-ts9w15oj",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "e8da4d3d10055263b4da50ef3ad59e40ed5a469b",
+      "configuration_sha256": "35f09d4f4adb2d8c6a723eadac105853e28175c9cc9f89c8c204e45ccf3da6cf",
+      "bundle": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T155934589Z-project-reader-970bf665-2043-49c1-b3f5-112e12fa6bf3-ts9w15oj",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T155934589Z-project-reader-970bf665-2043-49c1-b3f5-112e12fa6bf3-ts9w15oj.inventory.json",
+        "sha256": "67d9d787de4cd22917e68b74b8a3d438fc8dc034cbcc9ddfb0b5bd32e769e4c5",
+        "version": "1"
+      },
+      "audit": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T155934589Z-project-reader-970bf665-2043-49c1-b3f5-112e12fa6bf3-ts9w15oj.audit.json",
+        "sha256": "77e5f6405e9dcc287b97225ea3a86f419fe47aa1632dd33ccc46c9f5e44f177f",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 19.565,
+      "audit_status": "sealed"
+    },
+    {
+      "packet_id": "application-checkpoint/codex/3",
+      "run_id": "20261122T155954254Z-project-reader-e94527fd-cae4-40ff-8255-8c166da2807c-nbtj1nap",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "e8da4d3d10055263b4da50ef3ad59e40ed5a469b",
+      "configuration_sha256": "35f09d4f4adb2d8c6a723eadac105853e28175c9cc9f89c8c204e45ccf3da6cf",
+      "bundle": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T155954254Z-project-reader-e94527fd-cae4-40ff-8255-8c166da2807c-nbtj1nap",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T155954254Z-project-reader-e94527fd-cae4-40ff-8255-8c166da2807c-nbtj1nap.inventory.json",
+        "sha256": "629f62803bb6c24083e8b0d29fa7aea20b707e9dd4c44e2e39838562cac13858",
+        "version": "1"
+      },
+      "audit": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T155954254Z-project-reader-e94527fd-cae4-40ff-8255-8c166da2807c-nbtj1nap.audit.json",
+        "sha256": "61f964e0255bc634c62721c26655484015db34867dc6c207228638bba9c9cbfd",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 33.268,
+      "audit_status": "sealed"
+    },
+    {
+      "packet_id": "application-checkpoint/codex/4",
+      "run_id": "20261122T160027621Z-project-reader-665ca938-f464-4392-a5d7-6c1a842f74f0-u9bqho64",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "e8da4d3d10055263b4da50ef3ad59e40ed5a469b",
+      "configuration_sha256": "35f09d4f4adb2d8c6a723eadac105853e28175c9cc9f89c8c204e45ccf3da6cf",
+      "bundle": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T160027621Z-project-reader-665ca938-f464-4392-a5d7-6c1a842f74f0-u9bqho64",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T160027621Z-project-reader-665ca938-f464-4392-a5d7-6c1a842f74f0-u9bqho64.inventory.json",
+        "sha256": "864936f48e788e4624d079dd9536116ef5a575080b6cdbc1102965c3a9464812",
+        "version": "1"
+      },
+      "audit": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T160027621Z-project-reader-665ca938-f464-4392-a5d7-6c1a842f74f0-u9bqho64.audit.json",
+        "sha256": "3abf4bd342ea0c8a4b3fda4aa563aa8a275c3b8c47ab81c986bf29e5de129663",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 25.515,
+      "audit_status": "sealed"
+    },
+    {
+      "packet_id": "application-checkpoint/codex/7",
+      "run_id": "20261122T160053206Z-project-reader-ea1b886f-5ab0-4466-9286-7ed9fae556d9-38kk7uec",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "e8da4d3d10055263b4da50ef3ad59e40ed5a469b",
+      "configuration_sha256": "35f09d4f4adb2d8c6a723eadac105853e28175c9cc9f89c8c204e45ccf3da6cf",
+      "bundle": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T160053206Z-project-reader-ea1b886f-5ab0-4466-9286-7ed9fae556d9-38kk7uec",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T160053206Z-project-reader-ea1b886f-5ab0-4466-9286-7ed9fae556d9-38kk7uec.inventory.json",
+        "sha256": "f5c8edb0a9affc6a28a56fd7d2a1fbed8935717c25d9b1619754cf69c75294bb",
+        "version": "1"
+      },
+      "audit": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T160053206Z-project-reader-ea1b886f-5ab0-4466-9286-7ed9fae556d9-38kk7uec.audit.json",
+        "sha256": "47940cb6f1c7a33cb17626c3e0934252640bf3693e2ac771f4d13132b156fbcf",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 30.055,
+      "audit_status": "sealed"
+    },
+    {
+      "packet_id": "application-checkpoint/codex/8",
+      "run_id": "20261122T160123340Z-project-reader-1480345b-af64-4a9b-a7c1-8e50dfddd2ac-t_r2fe7z",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "e8da4d3d10055263b4da50ef3ad59e40ed5a469b",
+      "configuration_sha256": "35f09d4f4adb2d8c6a723eadac105853e28175c9cc9f89c8c204e45ccf3da6cf",
+      "bundle": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T160123340Z-project-reader-1480345b-af64-4a9b-a7c1-8e50dfddd2ac-t_r2fe7z",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T160123340Z-project-reader-1480345b-af64-4a9b-a7c1-8e50dfddd2ac-t_r2fe7z.inventory.json",
+        "sha256": "3f744f011132cf11e0d7ad51dceb714c83727c6d06062e042cf241bd366adfb0",
+        "version": "1"
+      },
+      "audit": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T160123340Z-project-reader-1480345b-af64-4a9b-a7c1-8e50dfddd2ac-t_r2fe7z.audit.json",
+        "sha256": "ad18d74897b9e96922bcb9ecd892c2e09f4c1320d2664b3375eb489d0b619d83",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 27.891,
+      "audit_status": "sealed"
+    },
+    {
+      "packet_id": "native-checkpoint/claude/10",
+      "run_id": "20261122T160151309Z-project-reader-462742fa-3a15-492a-b3d7-c5f110cd126f-fu8junel",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "e8da4d3d10055263b4da50ef3ad59e40ed5a469b",
+      "configuration_sha256": "35f09d4f4adb2d8c6a723eadac105853e28175c9cc9f89c8c204e45ccf3da6cf",
+      "bundle": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T160151309Z-project-reader-462742fa-3a15-492a-b3d7-c5f110cd126f-fu8junel",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T160151309Z-project-reader-462742fa-3a15-492a-b3d7-c5f110cd126f-fu8junel.inventory.json",
+        "sha256": "2bc651c0aa2ba01755136a2d0ec96a4d06aca1787e920fdcd81fa201ea68f6a1",
+        "version": "1"
+      },
+      "audit": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T160151309Z-project-reader-462742fa-3a15-492a-b3d7-c5f110cd126f-fu8junel.audit.json",
+        "sha256": "12942da600685f9ff5f84d7fb78a1520d43f561ecc08fc3af9b31e4c9461bde2",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 27.849,
+      "audit_status": "sealed"
+    },
+    {
+      "packet_id": "native-checkpoint/claude/12",
+      "run_id": "20261122T160219236Z-project-reader-e0627a93-9ac5-4036-b610-0d3dface73c7-t8510e_f",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "e8da4d3d10055263b4da50ef3ad59e40ed5a469b",
+      "configuration_sha256": "35f09d4f4adb2d8c6a723eadac105853e28175c9cc9f89c8c204e45ccf3da6cf",
+      "bundle": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T160219236Z-project-reader-e0627a93-9ac5-4036-b610-0d3dface73c7-t8510e_f",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T160219236Z-project-reader-e0627a93-9ac5-4036-b610-0d3dface73c7-t8510e_f.inventory.json",
+        "sha256": "75fccc637fc9f5cb5ee57312e9fa02c0a5e6654a69711c592013811fe8ed58a0",
+        "version": "1"
+      },
+      "audit": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T160219236Z-project-reader-e0627a93-9ac5-4036-b610-0d3dface73c7-t8510e_f.audit.json",
+        "sha256": "e8e99d402dc7b5c4124b2e85739915244a91b4a841b71ce53e4e124eef6f107d",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 25.609,
+      "audit_status": "sealed"
+    },
+    {
+      "packet_id": "native-checkpoint/claude/9",
+      "run_id": "20261122T160244924Z-project-reader-3dc78fd8-9772-4cea-89eb-6fe40bfc1446-yb863dy9",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "e8da4d3d10055263b4da50ef3ad59e40ed5a469b",
+      "configuration_sha256": "35f09d4f4adb2d8c6a723eadac105853e28175c9cc9f89c8c204e45ccf3da6cf",
+      "bundle": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T160244924Z-project-reader-3dc78fd8-9772-4cea-89eb-6fe40bfc1446-yb863dy9",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T160244924Z-project-reader-3dc78fd8-9772-4cea-89eb-6fe40bfc1446-yb863dy9.inventory.json",
+        "sha256": "7de32889f93a80f632742a09b7688cef9cf0d74ff68140ebb6f23f10a6cdd701",
+        "version": "1"
+      },
+      "audit": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T160244924Z-project-reader-3dc78fd8-9772-4cea-89eb-6fe40bfc1446-yb863dy9.audit.json",
+        "sha256": "56ef64944d665a012afb9ffe3beb9a47bf9248b11c42b634ab885028280e2038",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 19.006,
+      "audit_status": "sealed"
+    },
+    {
+      "packet_id": "native-checkpoint/codex/10",
+      "run_id": "20261122T160304024Z-project-reader-07f623ed-54f8-4e96-92f2-3889f722ba6b-etqsxz4n",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "e8da4d3d10055263b4da50ef3ad59e40ed5a469b",
+      "configuration_sha256": "35f09d4f4adb2d8c6a723eadac105853e28175c9cc9f89c8c204e45ccf3da6cf",
+      "bundle": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T160304024Z-project-reader-07f623ed-54f8-4e96-92f2-3889f722ba6b-etqsxz4n",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T160304024Z-project-reader-07f623ed-54f8-4e96-92f2-3889f722ba6b-etqsxz4n.inventory.json",
+        "sha256": "c43867076765adb216dbb68448158ad9d0250d180b6f6669ceb1acdf2607493a",
+        "version": "1"
+      },
+      "audit": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T160304024Z-project-reader-07f623ed-54f8-4e96-92f2-3889f722ba6b-etqsxz4n.audit.json",
+        "sha256": "383c61e319f3660a0e009e764419393437b7a414240506ebe0f295117962ecd0",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 29.863,
+      "audit_status": "sealed"
+    },
+    {
+      "packet_id": "native-checkpoint/codex/12",
+      "run_id": "20261122T160333991Z-project-reader-feeb6488-f724-42fa-b774-a0978be36aaa-u9_0bh04",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "e8da4d3d10055263b4da50ef3ad59e40ed5a469b",
+      "configuration_sha256": "35f09d4f4adb2d8c6a723eadac105853e28175c9cc9f89c8c204e45ccf3da6cf",
+      "bundle": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T160333991Z-project-reader-feeb6488-f724-42fa-b774-a0978be36aaa-u9_0bh04",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T160333991Z-project-reader-feeb6488-f724-42fa-b774-a0978be36aaa-u9_0bh04.inventory.json",
+        "sha256": "bd699a6b059c4526c7186d2fb3ba9f71fcde6ad6203233b1e8b4b6ce397e8f90",
+        "version": "1"
+      },
+      "audit": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T160333991Z-project-reader-feeb6488-f724-42fa-b774-a0978be36aaa-u9_0bh04.audit.json",
+        "sha256": "5f00379e7d4503293a38b1bdc2af4236578b837683940074d896a00a66c7fc4c",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 27.109,
+      "audit_status": "sealed"
+    },
+    {
+      "packet_id": "native-checkpoint/codex/9",
+      "run_id": "20261122T160401198Z-project-reader-2b79ad1b-42d2-4a7b-bc6e-73345b8c705b-ulmeufz5",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "charge": 1,
+      "authority_revision": "e8da4d3d10055263b4da50ef3ad59e40ed5a469b",
+      "configuration_sha256": "35f09d4f4adb2d8c6a723eadac105853e28175c9cc9f89c8c204e45ccf3da6cf",
+      "bundle": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T160401198Z-project-reader-2b79ad1b-42d2-4a7b-bc6e-73345b8c705b-ulmeufz5",
+      "inventory": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T160401198Z-project-reader-2b79ad1b-42d2-4a7b-bc6e-73345b8c705b-ulmeufz5.inventory.json",
+        "sha256": "f3bb3e1693952184ee336e636d518014eb7625cf2e6773d754f983f1f18fb2b7",
+        "version": "1"
+      },
+      "audit": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/evaluators/20261122T160401198Z-project-reader-2b79ad1b-42d2-4a7b-bc6e-73345b8c705b-ulmeufz5.audit.json",
+        "sha256": "2e76c8f57a0d4774414a62dceb505ae7d92d76042aedb9517ac2ffed23d0c30c",
+        "version": "1"
+      },
+      "status": "COMPLETED",
+      "duration_seconds": 21.589,
+      "audit_status": "sealed"
     }
   ]
 }

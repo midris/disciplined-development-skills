@@ -8,7 +8,7 @@ Study one shipped skill at a time. Establish a fresh baseline, identify a concre
 | --- | --- | --- |
 | Concise writing (CW) | Closed. The owner adopted the rewritten description with the original body. | [CW adoption](../skill-studies/concise-writing/protocol.md#closure-and-adoption) |
 | Sweeping stale references (SSR) | Closed. The owner adopted the compact, count-free skill with the tested description and complete-claim instruction. | [SSR adoption](../skill-studies/sweeping-stale-references/protocol.md#full-regression-adoption) |
-| Writing explicit rationale (WER) | Selected. Baseline inputs prepared. All 16 application runs are retained and scored. The owner accepted the reviewed counts. All eight native runs are retained and scored for joint review. | [WER protocol](../skill-studies/writing-explicit-rationale/protocol.md) |
+| Writing explicit rationale (WER) | Selected. Baseline inputs prepared. All 16 application runs are retained and scored. The owner accepted the reviewed counts. All eight native runs are retained and scored. All 17 independent readings are sealed for joint review. | [WER protocol](../skill-studies/writing-explicit-rationale/protocol.md) |
 | Remaining skills | Select the next skill with the owner after the WER decision. | [Skill inventory and composition](../ARCHITECTURE.md#composition-boundaries) |
 
 ### WER milestones
@@ -25,7 +25,8 @@ Study one shipped skill at a time. Establish a fresh baseline, identify a concre
 - [x] Clarify whole-output scoring and reread the four export outputs during owner review. The [WER reassessment](../skill-studies/writing-explicit-rationale/protocol.md#completed-application-checkpoint) records the revised judgment and original score.
 - [x] Complete owner review and clarify materiality for added claims in scoring, collection pauses and full-evidence reconciliation.
 - [x] Run the eight authorized native subjects and record the [native checkpoint](../skill-studies/writing-explicit-rationale/protocol.md#native-discovery-checkpoint).
-- [ ] Review native results with the owner. Independent first readings and reconciliation remain open.
+- [x] Review the native export omission with the owner and seal all 17 authorized independent first readings.
+- [ ] Review the [reader checkpoint](../skill-studies/writing-explicit-rationale/protocol.md#independent-reader-checkpoint) with the owner before reconciliation.
 - [ ] If a change is warranted, compare it against the preserved original, regression-test the exact proposed version, then record the owner's decision. Close the study and select the next skill.
 
 ## Starting or resuming without conversation history
