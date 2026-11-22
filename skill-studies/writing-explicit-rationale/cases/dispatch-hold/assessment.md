@@ -5,7 +5,7 @@
 Format version: `1`
 Study ID: `writing-explicit-rationale`
 Case ID: `dispatch-hold`
-Definition version: `2`
+Definition version: `3`
 Status: prepared for offline qualification
 Purpose and mechanism: Two planners implement one policy already explained in the spec. A routine title edit accompanies the consequential change.
 
@@ -16,7 +16,7 @@ Supply [the task](task.md) and [starting project](fixture/). Keep the case card,
 ## Rules and evidence
 
 Apply the [whole-output policy](../../protocol.md#assessment-policy) and the [reader-first procedure](../README.md#reader-first-check). Read the entire project and handoff against the original inputs. Accept alternate wording, layout and implementation. The [worked repair](example.patch) illustrates one passing solution.
- The [private replay](replay.py) checks observable behavior and the two titles. Judge meaning by reading the project. A reader may find the policy without a literal link.
+ The [private replay](replay.py) checks observable behavior and the two titles. Judge meaning by reading the project. The worked comments are optional. A reader may find the policy without a literal link. Inspect the actual branch for other non-hold statuses beyond the examples exercised by the replay.
 
 ## Criteria
 
@@ -58,8 +58,8 @@ Dimension: functional
 Applies to: `original`, `candidate`, `control`
 Judgment unit: Keep routine work proportionate in this execution.
 Required evidence: Inspect the entire diff, including the title, both planners and the spec. Identify which independently maintained statements would need updating if the exception changed.
-Met: The conventional title edit carries no needless durable justification. Accurate brief duplication of policy context is acceptable.
-Not met: Copying the full policy into both planners creates three independently maintained explanations of the same exception. Count that as a restraint miss when the copies add no site-specific information. An invented external obligation is attached to the title or the output adds a durable rationale solely to justify the requested wording.
+Met: The conventional title edit carries no needless durable justification. Accurate repetition of the policy passes. Record a density caveat if several complete copies add maintenance work. Assess a materially misleading or conflicting copy under R1.
+Not met: An invented external obligation is attached to the title or the output adds a durable rationale solely to justify the requested wording.
 Insufficient evidence: Missing or incomplete project, task, response or applicable replay prevents judgment.
 Alternatives: Credit any solution preserving the supplied meaning and intended action.
 Consequence: Record the specific loss for the intended reader or the failed task obligation.

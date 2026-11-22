@@ -66,7 +66,7 @@ The initial extension constructed 30 outputs. For dispatch hold, both a precise 
 
 For scope trim, read the complete plan before the supplied handoff. The worked repair preserves both daily and both weekly decisions. The four contrasts omit the weekly alert from the plan, promise delivery when Finance agrees, make Support's manual comparison compulsory every week, or leave the underlying reason and condition solely in the response. Score the specific effect on scope, timing or Support's obligations. These are controller-authored examples. Equivalent concise prose can pass.
 
-### Version 2 scoring walkthrough
+### Extension scoring walkthrough
 
 The extension now adds 18 examples to the 20 original examples. These source-aware walkthroughs describe the intended semantic judgments. The generator verifies the replay and reader-packet mechanics.
 
@@ -77,7 +77,7 @@ The extension now adds 18 examples to the 20 original examples. These source-awa
 | local-reasons | Each site explains the consequence accurately. | Pass |
 | conflicting-copy | Overflow directs removal of loaded parcels despite the spec. | R1 miss |
 | lost-policy | The spec preserves behavior but drops the reason and dispatcher role. | R1 miss |
-| full-copies | Three complete copies create separate update obligations. | R2 miss for disproportionate duplication |
+| full-copies | Three complete copies create separate update obligations. | Pass with a density caveat |
 | title-story | The title acquires an invented carrier contract. | R2 miss |
 | ready-only | Overflow drops an ordinary sorted parcel. | T1 miss, replay fails |
 | loaded-regression | Morning drops an assigned held parcel. | T1 miss, replay fails |
@@ -86,7 +86,7 @@ The extension now adds 18 examples to the 20 original examples. These source-awa
 | --- | --- | --- |
 | complete | The adoption review and Finance trigger have separate homes. | Pass |
 | gate-only | Finance agreement is a prerequisite. The plan makes no delivery promise. | Pass with a precision caveat |
-| implicit-week | Nearby text establishes which week may need manual work. | Pass |
+| implicit-week | Nearby text supports the affected-week reading. | Pass with a precision caveat |
 | lost-impact | The plan gives the reason and trigger but loses the possible Support workload. | R1 miss |
 | silent-cut | The weekly deliverables disappear entirely. | T1 and R1 miss, one omission |
 | lost-weekly-alert | A reader cannot tell what happened to the weekly alert. | T1 miss for missing scope |

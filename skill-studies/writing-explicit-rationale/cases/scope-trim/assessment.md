@@ -5,7 +5,7 @@
 Format version: `1`
 Study ID: `writing-explicit-rationale`
 Case ID: `scope-trim`
-Definition version: `2`
+Definition version: `3`
 Status: prepared for offline qualification
 Purpose and mechanism: The reason lives in review correspondence. A short plan must distinguish similarly named deliverables and preserve an uncertain operational cost.
 
@@ -28,8 +28,8 @@ Dimension: functional
 Applies to: `original`, `candidate`, `control`
 Judgment unit: Deliver a shorter usable plan in this execution.
 Required evidence: Compare the entire final plan and handoff with the original plan and request.
-Met: The plan is visibly tighter, keeps both daily commitments, moves both weekly commitments out of launch, preserves the guide handoff and adoption review.
-Not met: A weekly alert still ships, a daily item disappears, an unrelated commitment is dropped, or the original verbose plan survives with only a chat summary.
+Met: The plan removes redundant prose. A reader can identify both daily commitments as in launch and both weekly commitments as deliberately outside launch. The guide handoff and first-month adoption review retain their meaning.
+Not met: A weekly item disappears without a recoverable status, a weekly alert still ships, a daily item disappears, an unrelated commitment is dropped, or the original verbose plan survives with only a chat summary.
 Insufficient evidence: Missing or incomplete project, task, response or applicable replay prevents judgment.
 Alternatives: Credit any solution preserving the supplied meaning and intended action.
 Consequence: Record the specific loss for the intended reader or the failed task obligation.
@@ -44,7 +44,7 @@ Applies to: `original`, `candidate`, `control`
 Judgment unit: Recover the reason, trigger and conditional impact in this execution.
 Required evidence: Read the final plan first, then compare it with the full review thread in the task and the delivered response.
 Met: The plan connects both weekly deferrals to the unresolved cross-period close rule, gives Finance agreement as the trigger for reconsideration, and conveys the possible manual comparison for an affected week.
-Not met: The plan leaves the affected items ambiguous, buries the reason solely in correspondence, promises delivery at approval, or makes manual comparison mandatory for every week. Explain the resulting change in understanding or action.
+Not met: The plan loses the shared explanation or its operational consequence, buries the reason solely in correspondence, promises delivery at approval, or makes manual comparison mandatory for every week. Explain the resulting change in understanding or action.
 Insufficient evidence: Missing or incomplete project, task, response or applicable replay prevents judgment.
 Alternatives: Credit any solution preserving the supplied meaning and intended action.
 Consequence: Record the specific loss for the intended reader or the failed task obligation.
@@ -52,9 +52,11 @@ Overlap: Report a shared cause once across affected criteria.
 
 ## Boundary rulings
 
-Read headings and surrounding sentences together. “Deferred until Finance agrees” can accurately name a prerequisite. Credit it if the plan leaves delivery open. A commitment to ship on agreement gives Operations a delivery milestone the team never agreed to. The same materiality rule applies to the guard case: there the reader still knew when to reopen an internal design choice. Here an invented milestone can change a launch plan.
+For T1, state the status of each original deliverable from the plan alone. “Their weekly versions” can identify both when it follows the daily reconciliation and alert commitments. “Weekly reporting” alone may leave alerts unaccounted for. Record an unidentified item under T1. Assess the reason, trigger and consequence under R1. If all weekly material vanishes, both criteria miss from one deletion.
 
-“Support may need to compare daily reports” can inherit the affected-week condition from the immediately preceding cross-period discussion. Credit that reading. If the plan directs Support to compare reports routinely, the obligation has changed. If the possible Support workload disappears entirely, R1 misses an operational consequence even when the reason and trigger survive. Judge the first-month adoption review independently of the Finance trigger.
+Read headings and surrounding sentences together. “Deferred until Finance agrees” can accurately name a prerequisite. Under a deferral heading with no commitment to ship, credit it with a precision caveat. A delivery verb, dated sequence or list of committed follow-ups can turn the same words into a promise. Judge their meaning together. A commitment to ship on agreement gives Operations a delivery milestone the team never agreed to. The same materiality rule applies to the guard case: there the reader still knew when to reopen an internal design choice. Here an invented milestone can change a launch plan.
+
+“Support may need to compare daily reports” can inherit the affected-week condition from the immediately preceding cross-period discussion. Credit that reading with a precision caveat if a broader reading is also plausible. If the plan directs Support to compare reports routinely, the obligation has changed. If the possible Support workload disappears entirely, R1 misses an operational consequence even when the reason and trigger survive. Judge the first-month adoption review independently of the Finance trigger.
 
 ## Limits
 
