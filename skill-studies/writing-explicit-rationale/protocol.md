@@ -2,7 +2,7 @@
 
 Format version: `1`
 Study ID: `writing-explicit-rationale`
-Status: catalog decision contrast complete. Review the diagnostic and settle the shipped baseline scope. [Reader checkpoint](#catalog-decision-contrast-checkpoint)
+Status: fresh shipped application benchmark prepared; dispatch awaits owner allocation. [Benchmark freeze](#shipped-application-benchmark-freeze)
 Plan: [current milestone](../../plans/2026-09-11-model-driven-skill-testing.md#wer-milestones)
 General spec: [testing framework](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md)
 
@@ -178,6 +178,130 @@ Actual attempts: [subject index](runs/functional-pilot-01/claude/run-index.json)
 | 2 | catalog-review | original | 1 | `skill-studies/writing-explicit-rationale/runs/functional-pilot-01/claude/catalog-review-original.json` |
 | 3 | dispatch-hold | original | 1 | `skill-studies/writing-explicit-rationale/runs/functional-pilot-01/claude/dispatch-hold-original.json` |
 | 4 | dispatch-hold | control | 1 | `skill-studies/writing-explicit-rationale/runs/functional-pilot-01/claude/dispatch-hold-control.json` |
+
+### Proposed batch: codex-application-benchmark-01
+
+Scope: 52 fresh subjects, explicitly shipped and control. Include every valid-setup execution. No automatic retry. Pending owner allocation.
+Actual attempts: [subject index](runs/application-benchmark-01/codex/run-index.json).
+
+[export-deferral](runs/application-benchmark-01/codex/export-deferral-manifest.json) [quota-grace](runs/application-benchmark-01/codex/quota-grace-manifest.json) [repeated-review](runs/application-benchmark-01/codex/repeated-review-manifest.json) [catalog-review](runs/application-benchmark-01/codex/catalog-review-manifest.json) [helper-rename](runs/application-benchmark-01/codex/helper-rename-manifest.json) [scope-trim](runs/application-benchmark-01/codex/scope-trim-manifest.json) [dispatch-hold](runs/application-benchmark-01/codex/dispatch-hold-manifest.json)
+
+| Order | Case | Condition | Repetition | CONFIG |
+| --- | --- | --- | --- | --- |
+| 1 | export-deferral | original | 1 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/export-deferral-original.json` |
+| 2 | export-deferral | control | 1 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/export-deferral-control.json` |
+| 3 | quota-grace | control | 1 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/quota-grace-control.json` |
+| 4 | quota-grace | original | 1 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/quota-grace-original.json` |
+| 5 | repeated-review | original | 1 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/repeated-review-original.json` |
+| 6 | repeated-review | control | 1 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/repeated-review-control.json` |
+| 7 | catalog-review | control | 1 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/catalog-review-control.json` |
+| 8 | catalog-review | original | 1 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/catalog-review-original.json` |
+| 9 | helper-rename | original | 1 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/helper-rename-original.json` |
+| 10 | helper-rename | control | 1 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/helper-rename-control.json` |
+| 11 | scope-trim | control | 1 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/scope-trim-control.json` |
+| 12 | scope-trim | original | 1 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/scope-trim-original.json` |
+| 13 | dispatch-hold | original | 1 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/dispatch-hold-original.json` |
+| 14 | dispatch-hold | control | 1 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/dispatch-hold-control.json` |
+| 15 | export-deferral | control | 2 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/export-deferral-control.json` |
+| 16 | export-deferral | original | 2 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/export-deferral-original.json` |
+| 17 | quota-grace | original | 2 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/quota-grace-original.json` |
+| 18 | quota-grace | control | 2 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/quota-grace-control.json` |
+| 19 | repeated-review | control | 2 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/repeated-review-control.json` |
+| 20 | repeated-review | original | 2 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/repeated-review-original.json` |
+| 21 | catalog-review | original | 2 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/catalog-review-original.json` |
+| 22 | catalog-review | control | 2 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/catalog-review-control.json` |
+| 23 | helper-rename | control | 2 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/helper-rename-control.json` |
+| 24 | helper-rename | original | 2 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/helper-rename-original.json` |
+| 25 | scope-trim | original | 2 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/scope-trim-original.json` |
+| 26 | scope-trim | control | 2 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/scope-trim-control.json` |
+| 27 | dispatch-hold | control | 2 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/dispatch-hold-control.json` |
+| 28 | dispatch-hold | original | 2 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/dispatch-hold-original.json` |
+| 29 | export-deferral | original | 3 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/export-deferral-original.json` |
+| 30 | export-deferral | control | 3 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/export-deferral-control.json` |
+| 31 | quota-grace | control | 3 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/quota-grace-control.json` |
+| 32 | quota-grace | original | 3 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/quota-grace-original.json` |
+| 33 | repeated-review | original | 3 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/repeated-review-original.json` |
+| 34 | repeated-review | control | 3 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/repeated-review-control.json` |
+| 35 | catalog-review | control | 3 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/catalog-review-control.json` |
+| 36 | catalog-review | original | 3 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/catalog-review-original.json` |
+| 37 | export-deferral | control | 4 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/export-deferral-control.json` |
+| 38 | export-deferral | original | 4 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/export-deferral-original.json` |
+| 39 | quota-grace | original | 4 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/quota-grace-original.json` |
+| 40 | quota-grace | control | 4 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/quota-grace-control.json` |
+| 41 | repeated-review | control | 4 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/repeated-review-control.json` |
+| 42 | repeated-review | original | 4 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/repeated-review-original.json` |
+| 43 | catalog-review | original | 4 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/catalog-review-original.json` |
+| 44 | catalog-review | control | 4 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/catalog-review-control.json` |
+| 45 | export-deferral | original | 5 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/export-deferral-original.json` |
+| 46 | export-deferral | control | 5 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/export-deferral-control.json` |
+| 47 | quota-grace | control | 5 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/quota-grace-control.json` |
+| 48 | quota-grace | original | 5 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/quota-grace-original.json` |
+| 49 | repeated-review | original | 5 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/repeated-review-original.json` |
+| 50 | repeated-review | control | 5 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/repeated-review-control.json` |
+| 51 | catalog-review | control | 5 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/catalog-review-control.json` |
+| 52 | catalog-review | original | 5 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/catalog-review-original.json` |
+
+### Proposed batch: claude-application-benchmark-01
+
+Scope: 52 fresh subjects, explicitly shipped and control. Include every valid-setup execution. No automatic retry. Pending owner allocation.
+Actual attempts: [subject index](runs/application-benchmark-01/claude/run-index.json).
+
+[export-deferral](runs/application-benchmark-01/claude/export-deferral-manifest.json) [quota-grace](runs/application-benchmark-01/claude/quota-grace-manifest.json) [repeated-review](runs/application-benchmark-01/claude/repeated-review-manifest.json) [catalog-review](runs/application-benchmark-01/claude/catalog-review-manifest.json) [helper-rename](runs/application-benchmark-01/claude/helper-rename-manifest.json) [scope-trim](runs/application-benchmark-01/claude/scope-trim-manifest.json) [dispatch-hold](runs/application-benchmark-01/claude/dispatch-hold-manifest.json)
+
+| Order | Case | Condition | Repetition | CONFIG |
+| --- | --- | --- | --- | --- |
+| 1 | export-deferral | control | 1 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/export-deferral-control.json` |
+| 2 | export-deferral | original | 1 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/export-deferral-original.json` |
+| 3 | quota-grace | original | 1 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/quota-grace-original.json` |
+| 4 | quota-grace | control | 1 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/quota-grace-control.json` |
+| 5 | repeated-review | control | 1 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/repeated-review-control.json` |
+| 6 | repeated-review | original | 1 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/repeated-review-original.json` |
+| 7 | catalog-review | original | 1 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/catalog-review-original.json` |
+| 8 | catalog-review | control | 1 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/catalog-review-control.json` |
+| 9 | helper-rename | control | 1 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/helper-rename-control.json` |
+| 10 | helper-rename | original | 1 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/helper-rename-original.json` |
+| 11 | scope-trim | original | 1 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/scope-trim-original.json` |
+| 12 | scope-trim | control | 1 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/scope-trim-control.json` |
+| 13 | dispatch-hold | control | 1 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/dispatch-hold-control.json` |
+| 14 | dispatch-hold | original | 1 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/dispatch-hold-original.json` |
+| 15 | export-deferral | original | 2 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/export-deferral-original.json` |
+| 16 | export-deferral | control | 2 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/export-deferral-control.json` |
+| 17 | quota-grace | control | 2 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/quota-grace-control.json` |
+| 18 | quota-grace | original | 2 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/quota-grace-original.json` |
+| 19 | repeated-review | original | 2 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/repeated-review-original.json` |
+| 20 | repeated-review | control | 2 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/repeated-review-control.json` |
+| 21 | catalog-review | control | 2 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/catalog-review-control.json` |
+| 22 | catalog-review | original | 2 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/catalog-review-original.json` |
+| 23 | helper-rename | original | 2 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/helper-rename-original.json` |
+| 24 | helper-rename | control | 2 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/helper-rename-control.json` |
+| 25 | scope-trim | control | 2 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/scope-trim-control.json` |
+| 26 | scope-trim | original | 2 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/scope-trim-original.json` |
+| 27 | dispatch-hold | original | 2 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/dispatch-hold-original.json` |
+| 28 | dispatch-hold | control | 2 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/dispatch-hold-control.json` |
+| 29 | export-deferral | control | 3 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/export-deferral-control.json` |
+| 30 | export-deferral | original | 3 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/export-deferral-original.json` |
+| 31 | quota-grace | original | 3 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/quota-grace-original.json` |
+| 32 | quota-grace | control | 3 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/quota-grace-control.json` |
+| 33 | repeated-review | control | 3 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/repeated-review-control.json` |
+| 34 | repeated-review | original | 3 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/repeated-review-original.json` |
+| 35 | catalog-review | original | 3 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/catalog-review-original.json` |
+| 36 | catalog-review | control | 3 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/catalog-review-control.json` |
+| 37 | export-deferral | original | 4 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/export-deferral-original.json` |
+| 38 | export-deferral | control | 4 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/export-deferral-control.json` |
+| 39 | quota-grace | control | 4 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/quota-grace-control.json` |
+| 40 | quota-grace | original | 4 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/quota-grace-original.json` |
+| 41 | repeated-review | original | 4 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/repeated-review-original.json` |
+| 42 | repeated-review | control | 4 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/repeated-review-control.json` |
+| 43 | catalog-review | control | 4 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/catalog-review-control.json` |
+| 44 | catalog-review | original | 4 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/catalog-review-original.json` |
+| 45 | export-deferral | control | 5 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/export-deferral-control.json` |
+| 46 | export-deferral | original | 5 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/export-deferral-original.json` |
+| 47 | quota-grace | original | 5 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/quota-grace-original.json` |
+| 48 | quota-grace | control | 5 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/quota-grace-control.json` |
+| 49 | repeated-review | control | 5 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/repeated-review-control.json` |
+| 50 | repeated-review | original | 5 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/repeated-review-original.json` |
+| 51 | catalog-review | original | 5 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/catalog-review-original.json` |
+| 52 | catalog-review | control | 5 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/catalog-review-control.json` |
 
 ## Storage and accounting
 
@@ -507,3 +631,19 @@ Of the three credit-only readers, one explicitly recognized the missing reason a
 All three suggested adding a title index. This was reasonable on their incomplete information and would duplicate something the complete spec already describes.
 Both the ordering reason and the index differed between packets. The diagnostic supports a difference in grounded reasoning and follow-up advice; it observed no difference in the immediate printer instruction.
 Keep the action and its evidential basis as separate outcomes in the benchmark. These constructed-project readings do not measure the effect of loading WER.
+
+### Shipped application benchmark freeze
+
+The [schedule](runs/application-benchmark-01/schedule.json) assigns 104 new subject sessions, 52 per provider and 52 per condition. Run sequentially by global order, interleaving providers and rotating arm order across repetitions. The first 28 slots cover every case/provider/condition once.
+Five repetitions per cell cover export deferral, quota grace, repeated review and catalog review. Two cover helper rename, scope trim and dispatch hold. The smaller strata check restraint and regressions with limited repeatability evidence. Report each provider, case and condition separately.
+
+Use the preserved shipped bytes, pilot runtime pin and its PATH order, subject models at low effort with workspace-write, and fresh isolated sessions. Verify binary identities, config, task, project and supplied attachment hashes and actual exposure from runner logs and traces. Only the shipped arm receives GUIDANCE.md and the explicit read instruction. Keep case cards, evaluator prompts, replays and prior results in the controller. Five cards use application-only projections that retain the functional criteria and boundary rulings. Baseline attempts belong only to this batch.
+Seal the [whole-output scoring policy](runs/application-benchmark-01/scoring-policy.txt) with the case definitions. The active assessor conducts opaque project-first readings for all cases; the independent decision readers are the catalog-only sample. After sealing first readings, reconcile against complete original inputs, project, diff, handoff and applicable mechanical checks. Record valid misses and continue. Pause on invalid setup, missing retention, unverified exposure, unresolved charge or a collection-boundary breach. No retries or reserve.
+Retain every launched attempt, failures included, using docs retain with the provider batch, local order, run index and committed approval revision. Store inventories, mappings, roles, projections, full prompts, answers, read times, checks and result records under the private single-host development/application-benchmark-01 store. Recheck evidence hashes and record each charge before continuing.
+
+Allocate up to 20 fresh Claude Opus 5.5 medium decision readers, one for each eligible catalog subject regardless of score. Use the pilot read-only configuration, exact printer question and verified catalog projection. Classify added files before composing either reading; unresolved roles or empty projections leave a slot unmeasured. Record action and grounded reasoning separately. Seal these decisions before cross-model review.
+Allocate 14 fresh read-only Claude Opus 5.5 medium review calls, one per case and subject provider, covering both arms and every repetition (4 or 10 slots per group). Claude supplies a different family from the active Codex assessor and shares a family with Claude subjects. Use the [review question](runs/application-benchmark-01/review-question.txt) followed by a UTF-8 JSON object containing the task, original fixture, declared review attachment, the frozen materiality rules, applicable criterion text and boundary rulings, and an opaque-labeled array of outputs. Supply whole final project, full handoff including correspondence, diff, replay evidence and raw catalog reader answer when available; identify unavailable evidence and invalid slots. Keep active scores, pilot verdicts, historical examples, conditions and identity mapping outside the review packet. Outputs can themselves reveal exposure; disclose any such clues. Seal the reviewers' own judgments before comparing with active results. Record disagreements separately for owner review.
+For both evaluator roles stage the pinned reader config beside prompt.txt, with zero fixtures, fresh init, qualified Claude catalog, no persistence, one response and zero tool calls. Hash composed prompts before dispatch; they depend on future outputs. Preserve failed calls, incomplete group coverage and all bundle inventories in the [evaluator ledger](runs/application-benchmark-01/evaluator-index.json). An unusable packet or review cannot silently consume another slot.
+The proposed ceiling is 138 model invocations: 104 subjects, up to 20 decision readers and 14 cross-model reviews, zero replacements. No native discovery, rewrite work or live dispatch is allocated by this freeze.
+
+For planning, applying the eight pilot subject durations to 52 calls per provider gives about 73 minutes of serial subject runtime. The six-reader contrast suggests about three minutes for 20 decision readers; the two prior reconciliations suggest about 16 minutes for 14 group reviews. These are approximate CLI runtimes. Packet preparation, replay, assessment and any pauses add time. The historical samples cover different task mixes and group sizes.

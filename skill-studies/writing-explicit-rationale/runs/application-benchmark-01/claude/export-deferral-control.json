@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.2",
+  "id": "project-task",
+  "prompt": "../../baseline-01/task-prompt.txt",
+  "fixtures": [
+    {
+      "source": "../../../cases/export-deferral/fixture/release-plan.md",
+      "target": "release-plan.md"
+    },
+    {
+      "source": "../../../cases/export-deferral/task.md",
+      "target": "TASK.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}
