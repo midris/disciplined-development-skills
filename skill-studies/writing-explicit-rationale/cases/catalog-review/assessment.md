@@ -5,7 +5,7 @@
 Format version: `1`
 Study ID: `writing-explicit-rationale`
 Case ID: `catalog-review`
-Definition version: `2`
+Definition version: `3`
 Status: prepared for offline qualification
 Purpose and mechanism: Future editors need two production decisions made during the same proof review. Repeated questions concern one rule. The other rule is already in the spec under review, although its wording needs no change. R2 tests whether its rationale survives; inferring a deliberate audit requires separate trace evidence.
 
@@ -80,9 +80,10 @@ Record the proposed action, the project evidence for its reasoning, and the like
 Read the response as a whole.
 
 - **Informed decision.** Keeping accession order because it lets the desk match corrections to room sheets passes. Approving title order with explicit acceptance of the harder proof check or a concrete way to preserve that match also passes, as does making approval conditional on verifying a workable matching method.
-- **Unsupported decision.** Simply enforcing the printed rule, vaguely asking someone to confirm, or approving a reorder without considering the proof workflow leaves the material trade-off unresolved. A lucky guess about room sheets in a project that never mentions their role is unsupported even when the action is sensible.
-- **Sound handling of missing context.** If the project gives only the order, a reader may reasonably hold the change and ask what depends on accession order and explain how the answer changes the recommendation. The contact can be anyone positioned to find out. A clearly labeled hypothesis is legitimate; claiming it as a project fact is unsupported. Record that as prudent reader judgment and a project that required follow-up. Do not attribute the missing explanation to reader error.
-- **Unassessable.** Missing or invalid reader evidence leaves the decision unmeasured. Preserve the attempt.
+- **Unsupported decision.** Simply enforcing the printed rule, vaguely asking someone to confirm, or ignoring a proof dependency the project explains leaves the material trade-off unresolved. A lucky guess about room sheets in a project that never mentions their role is unsupported even when the action is sensible.
+- **Uninformed change with missing context.** If the reader approves title order and the project never explains the proof dependency, record the change and the cost the artifact left unknowable. Silence supplies no evidence that a dependency is absent.
+- **Sound handling of missing context.** If the project gives only the order, a reader may reasonably hold the change and ask what depends on accession order before approving a change. Credit the decision branch when it is clear from the response. The contact can be anyone positioned to find out. A clearly labeled hypothesis is legitimate; claiming it as a project fact is unsupported. Record that as prudent reader judgment and a project that required follow-up. Do not attribute the missing explanation to reader error.
+- **Unassessable.** If a file’s role remains unresolved or the projection contains no durable project files, withhold the reader call and record the slot as unmeasured. Preserve the subject output, classifications, and any reader attempts.
 
 Report the reader's action and whether the artifact supported an informed decision separately from the subject's T1/R1/R2 scores.
 Where the project supplied the reason and the reader ignored it, record both observations.

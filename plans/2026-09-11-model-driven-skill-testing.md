@@ -36,6 +36,7 @@ Study one shipped skill at a time. Establish a fresh baseline, identify a concre
 - [x] Complete the six-subject [repeated-review checkpoint](../skill-studies/writing-explicit-rationale/protocol.md#six-run-repeated-review-checkpoint). Review with the owner before scope-trim.
 - [x] Complete the 12 authorized [scope-trim subjects](../skill-studies/writing-explicit-rationale/protocol.md#scope-trim-checkpoint). Review with the owner before dispatch-hold.
 - [ ] Review the catalog reader decision exercise alongside the mechanical checks and agree the [functional coverage and limits](../skill-studies/writing-explicit-rationale/protocol.md#coverage-before-the-shipped-benchmark) for the fresh shipped baseline.
+- [x] Resolve the pilot case-card and decision-scoring findings and verify both cards against the shipped and control conditions offline.
 - [ ] Freeze and seek allocation for the [two-case pilot](../skill-studies/writing-explicit-rationale/protocol.md#proposed-pilot-before-benchmark-freeze), review its reader and subject evidence, then settle the matrix.
 - [ ] Freeze the agreed benchmark, settings, scoring and budget. Obtain allocation and collect the shipped, control and native evidence.
 - [ ] Review the complete baseline and cross-model output assessment with the owner before resuming rewrite work.

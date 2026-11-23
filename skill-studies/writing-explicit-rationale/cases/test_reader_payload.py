@@ -59,6 +59,14 @@ class ReaderPayloadTests(unittest.TestCase):
         self.assertEqual(json.loads(result), {k: files[k] for k in ("catalog-spec.md", "policy.md")})
         self.assertEqual(excluded, {"answer.txt": "editor correspondence"})
 
+    def test_catalog_requires_durable_material_after_classification(self):
+        payload = json.dumps({"renamed.md": "A reply"}).encode()
+        with self.assertRaisesRegex(ValueError, "no durable project"):
+            catalog_payload(payload, {"renamed.md": "correspondence"}, {})
+        renamed_spec = {"renamed.md": "Sort by accession number."}
+        payload = json.dumps(renamed_spec).encode()
+        self.assertEqual(json.loads(catalog_payload(payload, {"renamed.md": "project"}, {})), renamed_spec)
+
     def test_new_files_round_trip_and_inputs_are_omitted(self):
         (self.tree / "docs").mkdir()
         (self.tree / "docs/added.md").write_bytes("new é\r\n".encode())

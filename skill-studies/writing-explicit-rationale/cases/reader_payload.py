@@ -72,6 +72,8 @@ def catalog_payload(payload, classifications, exclusions):
             exclusions[name] = "editor correspondence"
         elif role != "project":
             raise ValueError(f"Unresolved catalog file role: {name}")
+    if not files:
+        raise ValueError("Catalog packet has no durable project files")
     return (json.dumps(files, sort_keys=True, indent=2) + "\n").encode("utf-8")
 
 

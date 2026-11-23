@@ -411,5 +411,6 @@ The previous uniform proposal was 140 application subjects plus 40 native subjec
 A smaller option is five repetitions on quota, repeated review, catalog and export, and two on rename, scope trim and dispatch hold: 104 application subjects across both providers and arms.
 Decide repetitions, native scope and evaluator allocation after the pilot, including the required cross-model review.
 Keep historical scope-trim results separate from a fresh benchmark. Any pooling of unchanged pilot cells must be declared before collection.
-Six additional readers on constructed catalog packets are an optional diagnostic if the pilot leaves the reader exercise unresolved.
+If all four catalog projects explain the room-sheet dependency, record the missing-rationale branch as untested and propose six fresh readers, three per constructed complete and credit-only packet, for separate approval.
+Likewise report any unmeasured reader slots separately before interpreting pilot coverage.
 No pilot, benchmark, reader or rewrite allocation is active.

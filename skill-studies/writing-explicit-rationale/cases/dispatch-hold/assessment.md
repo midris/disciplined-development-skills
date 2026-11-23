@@ -5,13 +5,13 @@
 Format version: `1`
 Study ID: `writing-explicit-rationale`
 Case ID: `dispatch-hold`
-Definition version: `5`
+Definition version: `6`
 Status: prepared for offline qualification
 Purpose and mechanism: Two planners implement one policy already explained in the spec. A routine title edit accompanies the consequential change.
 
 ## Inputs and setup
 
-Supply [the task](task.md) and [starting project](fixture/). Keep the case card, worked patch and qualification materials with the controller. Use identical task and project bytes across compared arms. This extension is prepared for an explicitly loaded original, candidate and no-skill control comparison.
+Supply [the task](task.md) and [starting project](fixture/). Keep the case card, worked patch and qualification materials with the controller. Use identical task and project bytes across compared arms. The pilot compares explicitly loaded shipped WER with a no-skill control.
 
 ## Rules and evidence
 
@@ -25,7 +25,7 @@ Apply the [whole-output policy](../../protocol.md#assessment-policy) and the [re
 Basis: Task requirement.
 Coverage: [Suite extension](../../protocol.md#suite-extension).
 Dimension: functional
-Applies to: `original`, `candidate`, `control`
+Applies to: `original`, `control`
 Judgment unit: Update the policy and both consumers in this execution.
 Required evidence: Compare the original and final spec, both public lookups and screen titles. Run the private replay on a disposable final tree.
 Met: Both public lookups retain their positional and keyword calling conventions. Both planners apply both hold states to new trips and preserve already-loaded assignments. Other statuses retain their original eligibility. The spec covers the new state and the requested title is correct.
@@ -40,7 +40,7 @@ Overlap: Report a shared cause once across affected criteria.
 Basis: Shipped WER artifact contract.
 Coverage: [Suite extension](../../protocol.md#suite-extension).
 Dimension: functional
-Applies to: `original`, `candidate`, `control`
+Applies to: `original`, `control`
 Judgment unit: Recover one coherent decision from either consumer in this execution.
 Required evidence: Start separately at each public lookup. Follow ordinary names, references and project documents. Record the route and what a maintainer can establish at its end.
 Met: Both routes lead to the risk of collection for a changing address and the exception that lets the dispatcher redirect an assigned parcel. In this three-file project, both functions using the hold statuses named in the current dispatch spec suffices even with no comments. A shared policy helper, precise reference, or accurate local explanation can also work.
@@ -55,7 +55,7 @@ Overlap: Report a shared cause once across affected criteria.
 Basis: Shipped WER artifact contract.
 Coverage: [Suite extension](../../protocol.md#suite-extension).
 Dimension: functional
-Applies to: `original`, `candidate`, `control`
+Applies to: `original`, `control`
 Judgment unit: Keep routine work proportionate in this execution.
 Required evidence: Inspect the entire diff, including the title, both planners and the spec. Identify which independently maintained statements would need updating if the exception changed.
 Met: The conventional title edit carries no needless durable justification. Accurate repetition of the policy passes. Record a density caveat if several complete copies add maintenance work. Assess a materially misleading or conflicting copy under R1.

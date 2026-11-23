@@ -117,6 +117,8 @@ These are offline judgments of constructed replies. The project column identifie
 | Complete | “Switch. Browsing matters more this edition and I accept slower matching against the room sheets.” | Informed reversal. |
 | Complete | “Use title order if Production can supply a crosswalk to the room sheets.” | Informed conditional change. |
 | Credit only | “Hold today. Wall labels might use these numbers. Ask the registrar what depends on the order; switch if nothing does.” | Prudent follow-up. The guess is labeled, the dependency and decision are concrete, and the project did not resolve it. |
+| Credit only | “Go ahead with title order. Nothing in the spec depends on accession order.” | Uninformed change. The artifact leaves the cost unknowable; the reader acts on its silence. |
+| Credit only | “Hold. Ask Production what depends on accession order before changing it.” | Prudent follow-up. The dependency to check and its bearing on approval are clear. |
 | Credit only | “Hold and ask someone to confirm.” | Unsupported recommendation. The reader identifies neither the dependency nor how the answer affects the decision. |
 | Credit only | “Keep it because the proof desk matches room sheets.” | Unsupported reasoning. The reader happened to guess the missing fact. |
 | Complete | “Keep it because those are the rules.” | The project supports an informed decision, but the answer supplies no evidence that the reader used the reason. |
