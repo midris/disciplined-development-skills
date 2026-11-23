@@ -1,0 +1,152 @@
+{
+  "format_version": "1",
+  "manifest_id": "wer-codex-dispatch-hold-pilot-01",
+  "study_id": "writing-explicit-rationale",
+  "case_id": "dispatch-hold",
+  "status": "draft",
+  "created_at": "2026-11-23",
+  "source_revision": "",
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "b096a78b10819dc39b432b4afb669bbf164490ed8debdd8d44bbedc2fd35a158",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/writing-explicit-rationale/protocol.md",
+      "sha256": "b66eb4e4de87268fd68684b4aa4f058b0125b0561ac4e6cbc671314361f80218",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "f54cb58884f9dbffd39f37746234487d6113e1f01ad3b1d355fe269310895321",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result.schema.json",
+      "sha256": "0abc6cdd04c2c90495736dd9b0020bbee8ed4772babe46e8e8eb637ebd03f358",
+      "version": "1"
+    },
+    "policy": {
+      "path": "skill-studies/writing-explicit-rationale/protocol.md",
+      "sha256": "b66eb4e4de87268fd68684b4aa4f058b0125b0561ac4e6cbc671314361f80218",
+      "version": "1"
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/writing-explicit-rationale/cases/dispatch-hold/assessment.md",
+        "sha256": "858bde35ce7c5552e1a66e6cd5492b463674dd87794b3ed5fc2e85b3ef5d702d",
+        "version": "6"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "control",
+      "configuration": {
+        "path": "skill-studies/writing-explicit-rationale/runs/functional-pilot-01/codex/dispatch-hold-control.json",
+        "sha256": "63e2c7bbdcb428e86ef2cfdf9e2ce8c0475ed722acb64e84d2b9a1bcb798ec10",
+        "version": "0.2"
+      },
+      "target_skill": null
+    },
+    {
+      "id": "original",
+      "configuration": {
+        "path": "skill-studies/writing-explicit-rationale/runs/functional-pilot-01/codex/dispatch-hold-original.json",
+        "sha256": "fe46303cb2550ed41fa3b526dd2bd4dbb68ff350d50c63db073b93d553ea6eb3",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/writing-explicit-rationale/cases/skill-original/SKILL.md"
+    }
+  ],
+  "subject_sources": [
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/dispatch-hold/fixture/dispatch-spec.md",
+      "sha256": "76dcc70dff5e2c40d4a6b6338e45ef85c6ed8c4ea29bd05686f9bd98fc3e92a2",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/dispatch-hold/fixture/morning.py",
+      "sha256": "a06ddf3ada4c777000da069b61b51e80a41642e932f478e3de6959cb26cd68bb",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/dispatch-hold/fixture/overflow.py",
+      "sha256": "6eb1dfe529af1df3e2695f01ecf45f4494dbc7c6f063ad068e3222f4f8976e71",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/dispatch-hold/task.md",
+      "sha256": "cf6e6c88b6e8aef8dde9f205ab20bbbb63cef52683b341ca61b4a6237f978d77",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/skill-original/SKILL.md",
+      "sha256": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/original-prompt.txt",
+      "sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/task-prompt.txt",
+      "sha256": "f37b712f4d6ad47417b5706f57656537c1eaf5fb180bca568ee0d338604baf49",
+      "version": null
+    }
+  ],
+  "controller_only": [
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/dispatch-hold/example.patch",
+      "sha256": "796ef0a56965e911cc53fabaffd8b3414026b3e0677b5d52640574b78456a950",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/qualification.md",
+      "sha256": "bcba5ebae7b9219b6b73ffc5b7c6e456c6873d4ff64059aecb1ad7cd4407f423",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/README.md",
+      "sha256": "77bf5f7f98014d47a7a99373801a3eabb1969261f6cfb61ba0bbe8a02f32b9bf",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/reader_payload.py",
+      "sha256": "05eb1d127495ad5316a9ceeef83b2e8dd1c3e3063afe3375555739aa6bde2463",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/functional-pilot-01/runtime.json",
+      "sha256": "04f628d70da17701e1aed3d28b310b7d857d0416c9c27c3a4805deffc2918271",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/functional-pilot-01/schedule.json",
+      "sha256": "ab71046d1bc36d2aead77e316e02bf7b582437d1c2b119d1f8696e6e73373ac8",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/reader-smoke/subscription-catalog.json",
+      "sha256": "ecb4b248dccee2b95e0292c867065b3574be9bd599c3740e08149979dc887f91",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/reader-smoke/config.json",
+      "sha256": "35f09d4f4adb2d8c6a723eadac105853e28175c9cc9f89c8c204e45ccf3da6cf",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/catalog-review/maintenance-question.txt",
+      "sha256": "9f86d070a1d06cd863fd6093d578aea115c40428908a7456467d1403f3c8f0e5",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/dispatch-hold/replay.py",
+      "sha256": "311e59795cf28afbb37f328810fc5d6e2f6d6c83b66ff02bd32f400f9e32f9b8",
+      "version": null
+    }
+  ]
+}

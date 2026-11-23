@@ -1,0 +1,20 @@
+{
+  "claude": {
+    "path": "/private/tmp/wer-compare-bin/claude",
+    "sha256": "1f53587e92dee8e089fa349188a4cda64fa34ace6e7b0ca2ee278ddaa3cc2ebd",
+    "version": "2.1.319 (Claude Code)"
+  },
+  "codex": {
+    "path": "/opt/homebrew/Caskroom/codex/0.167.0/bin/codex",
+    "sha256": "030316ecfbb41f4e7946e584b0063ef333b7a36cd312ba349f2f6869e39b62cc",
+    "version": "codex-cli 0.167.0"
+  },
+  "codex-code-mode-host": {
+    "path": "/opt/homebrew/Caskroom/codex/0.167.0/bin/codex-code-mode-host",
+    "sha256": "5cc29d144fc05e3563f5f90c36adc95bdc287e2297b48ecf0bf4abdf1892d3ab"
+  },
+  "codex-exec-server": {
+    "path": "/opt/homebrew/Caskroom/codex/0.167.0/bin/codex-exec-server",
+    "sha256": "385736a6d82e125d4946a672074eb3a9f13e45a4aaecee4b72d592c0e1bb566a"
+  }
+}

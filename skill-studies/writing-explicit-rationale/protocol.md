@@ -149,6 +149,36 @@ Actual attempts: [subject index](runs/baseline-01/claude/run-index.json).
 | 11 | helper-rename | native | 1 | `skill-studies/writing-explicit-rationale/runs/baseline-01/claude/helper-rename-native.json` |
 | 12 | repeated-review | native | 1 | `skill-studies/writing-explicit-rationale/runs/baseline-01/claude/repeated-review-native.json` |
 
+### Proposed batch: codex-functional-pilot-01
+
+Scope: Two pilot cases, shipped and control, one repetition per cell. Include every valid-setup execution. No automatic retry. Pending allocation.
+Actual attempts: [subject index](runs/functional-pilot-01/codex/run-index.json).
+
+[catalog-review](runs/functional-pilot-01/codex/catalog-review-manifest.json)
+[dispatch-hold](runs/functional-pilot-01/codex/dispatch-hold-manifest.json)
+
+| Order | Case | Condition | Repetition | CONFIG |
+| --- | --- | --- | --- | --- |
+| 1 | catalog-review | original | 1 | `skill-studies/writing-explicit-rationale/runs/functional-pilot-01/codex/catalog-review-original.json` |
+| 2 | catalog-review | control | 1 | `skill-studies/writing-explicit-rationale/runs/functional-pilot-01/codex/catalog-review-control.json` |
+| 3 | dispatch-hold | control | 1 | `skill-studies/writing-explicit-rationale/runs/functional-pilot-01/codex/dispatch-hold-control.json` |
+| 4 | dispatch-hold | original | 1 | `skill-studies/writing-explicit-rationale/runs/functional-pilot-01/codex/dispatch-hold-original.json` |
+
+### Proposed batch: claude-functional-pilot-01
+
+Scope: Two pilot cases, shipped and control, one repetition per cell. Include every valid-setup execution. No automatic retry. Pending allocation.
+Actual attempts: [subject index](runs/functional-pilot-01/claude/run-index.json).
+
+[catalog-review](runs/functional-pilot-01/claude/catalog-review-manifest.json)
+[dispatch-hold](runs/functional-pilot-01/claude/dispatch-hold-manifest.json)
+
+| Order | Case | Condition | Repetition | CONFIG |
+| --- | --- | --- | --- | --- |
+| 1 | catalog-review | control | 1 | `skill-studies/writing-explicit-rationale/runs/functional-pilot-01/claude/catalog-review-control.json` |
+| 2 | catalog-review | original | 1 | `skill-studies/writing-explicit-rationale/runs/functional-pilot-01/claude/catalog-review-original.json` |
+| 3 | dispatch-hold | original | 1 | `skill-studies/writing-explicit-rationale/runs/functional-pilot-01/claude/dispatch-hold-original.json` |
+| 4 | dispatch-hold | control | 1 | `skill-studies/writing-explicit-rationale/runs/functional-pilot-01/claude/dispatch-hold-control.json` |
+
 ## Storage and accounting
 
 Canonical checkout: `/Users/simon/work/personal/disciplined-development-skills`.
@@ -414,3 +444,16 @@ Keep historical scope-trim results separate from a fresh benchmark. Any pooling 
 If all four catalog projects explain the room-sheet dependency, record the missing-rationale branch as untested and propose six fresh readers, three per constructed complete and credit-only packet, for separate approval.
 Likewise report any unmeasured reader slots separately before interpreting pilot coverage.
 No pilot, benchmark, reader or rewrite allocation is active.
+
+
+### Functional pilot freeze
+
+The [schedule](runs/functional-pilot-01/schedule.json) interleaves providers, reverses arm order within each provider on the second case, and maps subject slots to four isolated catalog decisions.
+The [runtime pin](runs/functional-pilot-01/runtime.json) includes both Codex helpers. Prepend the pinned Codex directory followed by `/private/tmp/wer-compare-bin` to PATH, verify selected executable paths, execute permissions and hashes before launch, and use a fresh directory under the user temporary root.
+Recheck provider init, tool use and complete task and assigned skill delivery in each trace. Preserve invalid setups and pause on a mismatch.
+Use the existing subject retention command with each provider's local order, committed authorization and run index. The private store is `/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/functional-pilot-01`, with subjects, evaluators and controller directories. Retention is on this host.
+Before each invocation record its scheduled slot privately, reconcile the runner's invocation-started flag and preserve the stopped bundle with verified inventory before continuing. Stop on uncertainty or missing evidence.
+For all catalog outputs, including behavioral failures, retain the full inventory and file-role classification and seal the project reading under opaque labels before full-evidence assessment.
+For each decision reader concatenate the exact question bytes with the canonical catalog payload bytes; classify additions using the case card. Preserve exclusions and hash the payload and complete prompt before dispatch.
+Copy the pinned reader config to isolated controller staging beside that prompt as prompt.txt. Reader config bytes must match the pinned config, with no fixtures. Require a fresh read-only session, the qualified subscription catalog, zero tool calls, one recommendation and retained prompt, answer, bundle inventory and charge in the [reader ledger](runs/functional-pilot-01/evaluator-index.json).
+The final prompt hashes depend on the subjects' future projects. Record unmeasured reader slots and their reason. No automatic replacements or additional diagnostic readers. All invocations await owner allocation.
