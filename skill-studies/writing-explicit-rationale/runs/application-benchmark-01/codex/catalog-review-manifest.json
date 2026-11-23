@@ -3,9 +3,9 @@
   "manifest_id": "wer-codex-catalog-review-application-01",
   "study_id": "writing-explicit-rationale",
   "case_id": "catalog-review",
-  "status": "draft",
+  "status": "frozen",
   "created_at": "2026-11-24",
-  "source_revision": "",
+  "source_revision": "b6c8157a9f61dd98589fc9b73e5e1fb1e3a1f60b",
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
@@ -14,7 +14,7 @@
     },
     "protocol": {
       "path": "skill-studies/writing-explicit-rationale/protocol.md",
-      "sha256": "be0da36187dbb7e49ad6977813b6f72ecca3f93fca84ec9fe5a07f953c3b1116",
+      "sha256": "6c2578af78ceee7d7236c30b0e13efa2785360c347a71db58190adb157551700",
       "version": "1"
     },
     "format_contract": {
