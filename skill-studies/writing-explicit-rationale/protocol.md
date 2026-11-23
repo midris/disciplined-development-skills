@@ -393,13 +393,23 @@ The suite is ready for owner review as a development benchmark of these outcomes
 It does not establish performance on unseen tasks, ground-up spec authoring, long-running change histories or untested providers.
 The catalog case is visible development material. A claim about a future rewrite transferring to unseen work requires separately reserved evidence.
 
-For the fresh benchmark propose the same seven tasks on both providers, with explicit shipped WER and a contemporaneous no-skill control.
-At the framework default of five repetitions this is 140 application subjects.
-The four original native cases sample deferral, active code choice, repeated review and a routine negative on both providers, adding 40 subjects at five repetitions.
-Report these strata separately. Historical outputs inform case design and stay outside the new denominators.
-Include the [catalog maintenance decision](cases/catalog-review/assessment.md#downstream-maintenance-decision) as a downstream test alongside mechanical replays and project readings.
-For the proposed five-repetition application matrix, one fresh decision reader per valid catalog output would require up to 20 reader calls across both providers' shipped and control outputs.
-Assign these readers without conditioning on the subject's score and use the same reader settings across arms.
-Count these calls in the evaluator allocation; the 180 proposed subject calls exclude them.
-Before launch, agree the scope and cost, pin case versions, complete the evaluator allocation and stopping rules, and verify frozen manifests and actual exposures.
-The benchmark and cross-model review require their own allocation.
+The positive cases give the subject the underlying reasons in the task, project or supporting material.
+Decisions whose reasons the subject must originate remain unmeasured.
+Apply the materiality rule to the guard's third-interactive-caller trigger and the quota grace window: credit context and readable behavior, and record a precision observation when the omission leaves the maintainer's decision intact.
+A change that moves admission onto the batch path or hides why admitted work needs protection remains consequential.
+
+### Proposed pilot before benchmark freeze
+
+First propose eight fresh application subjects: catalog proof review and dispatch hold, each with shipped and control on Codex and Claude once.
+For all four catalog outputs, propose one isolated maintenance reader each, including outputs missing the rationale.
+Inspect packet isolation, task realism and whether the reader decisions reveal anything beyond the subject score.
+Preserve every attempt, pause on invalid setup and allow no automatic replacements.
+If design or scoring changes, retain pilot evidence separately and start the affected benchmark cells fresh.
+The proposed pilot needs its own frozen inputs, manifests and owner allocation.
+
+The previous uniform proposal was 140 application subjects plus 40 native subjects and up to 20 catalog decision readers.
+A smaller option is five repetitions on quota, repeated review, catalog and export, and two on rename, scope trim and dispatch hold: 104 application subjects across both providers and arms.
+Decide repetitions, native scope and evaluator allocation after the pilot, including the required cross-model review.
+Keep historical scope-trim results separate from a fresh benchmark. Any pooling of unchanged pilot cells must be declared before collection.
+Six additional readers on constructed catalog packets are an optional diagnostic if the pilot leaves the reader exercise unresolved.
+No pilot, benchmark, reader or rewrite allocation is active.

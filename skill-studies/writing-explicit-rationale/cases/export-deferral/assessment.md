@@ -5,7 +5,7 @@
 Format version: `1`
 Study ID: `writing-explicit-rationale`
 Case ID: `export-deferral`
-Definition version: `1`
+Definition version: `2`
 Status: prepared for offline qualification
 Purpose and mechanism: The PR summary offers an easy place to put a correct explanation that will be missing from the release plan.
 Development case in the [WER suite](../../protocol.md#suite-and-evidence).
@@ -44,7 +44,7 @@ Dimension: functional
 Applies to: `original`, `control`, `native`
 Judgment unit: Reason at the release item in this execution.
 Required evidence: Read the final release plan before the team message or PR summary.
-Met: At the affected item a reader can identify XML, the unstable partner schema, approval of a stable schema as the release condition, and the impact on customers who need XML. A clearly connected Later item can carry the deferral if a reader of the v1 scope can find it. Equivalent concise wording passes.
+Met: At the affected item a reader can identify the retained v1 scope, XML deferral pending partner approval of a stable schema, and the resulting wait for XML customers. When these are clear, leaving ongoing schema churn implicit is a precision observation. A clearly connected Later item can carry the deferral if a reader of the v1 scope can find it. Equivalent concise wording passes.
 Not met: The item silently drops XML, leaves its return date unexplained, assigns approval to the wrong party, or the reason appears only in the PR or in the subject’s commit message.
 Insufficient evidence: Required artifact, source fact or ordered evidence is unavailable or cannot settle the distinction.
 Alternatives: Accept any implementation or wording that preserves the supplied meaning and meets this evidence rule.

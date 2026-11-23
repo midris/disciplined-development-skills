@@ -9,7 +9,7 @@ import shutil
 import subprocess
 import sys
 
-from reader_payload import payload_bytes, reader_prompt
+from reader_payload import catalog_payload, payload_bytes, reader_prompt
 
 CASES = Path(__file__).resolve().parent
 PROJECT_FILES = {
@@ -216,8 +216,14 @@ def qualify(output):
             target = tree / "review-input/change.patch"
             target.parent.mkdir()
             target.write_bytes(attachment)
+        classifications = {}
+        if case == "catalog-review" and variant == "credit-only":
+            (tree / "reply-to-editor.md").write_text("Room order matches the proof sheets.")
+            classifications["reply-to-editor.md"] = "correspondence"
         excluded = {}
         payload = payload_bytes(tree, configs / f"{case}.json", CASES / case / "fixture", exclusions=excluded)
+        if case == "catalog-review":
+            payload = catalog_payload(payload, classifications, excluded)
         if json.loads(payload) != {name: (tree / name).read_bytes().decode() for name in expected}:
             raise ValueError(f"Reader projection differs from final project: {label}")
         (packets / f"{label}.json").write_bytes(payload)

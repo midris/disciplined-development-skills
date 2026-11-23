@@ -4,7 +4,7 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
 
-from reader_payload import payload_bytes, reader_prompt
+from reader_payload import payload_bytes, reader_prompt, catalog_payload
 
 
 class ReaderPayloadTests(unittest.TestCase):
@@ -47,6 +47,17 @@ class ReaderPayloadTests(unittest.TestCase):
         payload = self.project(inputs, exclusions=excluded)
         self.assertEqual(json.loads(payload), {"project.md": "original project", "docs/decision.md": "durable"})
         self.assertEqual(set(excluded), set(inputs))
+
+    def test_catalog_requires_classification_and_logs_correspondence(self):
+        files = {"catalog-spec.md": "See policy.md", "policy.md": "Production rule",
+                 "answer.txt": "Dear editor, here is the missing reason"}
+        payload = json.dumps(files).encode()
+        with self.assertRaises(ValueError):
+            catalog_payload(payload, {}, {})
+        excluded = {}
+        result = catalog_payload(payload, {"policy.md": "project", "answer.txt": "correspondence"}, excluded)
+        self.assertEqual(json.loads(result), {k: files[k] for k in ("catalog-spec.md", "policy.md")})
+        self.assertEqual(excluded, {"answer.txt": "editor correspondence"})
 
     def test_new_files_round_trip_and_inputs_are_omitted(self):
         (self.tree / "docs").mkdir()

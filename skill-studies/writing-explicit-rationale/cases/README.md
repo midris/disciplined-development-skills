@@ -22,6 +22,10 @@ For eligible positive outputs, supply one project inline to a fresh Claude read-
 
 The [payload builder](reader_payload.py) uses the runner inventory and regular-file reader. It serializes the text contents and relative paths, including newly added files. Pass the subject’s exact runner config and the case’s original `fixture/` directory from the verified frozen input revision, together with the retained final tree. The builder requires a nonempty frozen fixture directory and checks that the config mounts every source file in it before projecting the final tree. It then derives every supplemental target and expected digest from mounted sources outside that directory, including task and explicit-skill copies at arbitrary target names. An undeclared file under either root skill mount (`.claude/` or `.agents/`) stops packet creation. Files under `__pycache__/` and `.pytest_cache/` anywhere in the project and the entire root `review-input/` channel are omitted. Keep the excluded paths and reasons with the controller’s retained inventory. The source and final inventory establish whether a review attachment was supplied correctly and later amended. Judge additions and amendments there as review correspondence; the decision-site artifact supplies placement evidence.
 
+For catalog readers, apply `catalog_payload` to the verified project projection before composing either prompt.
+Inspect each added file and record its role by relative path. Keep durable project material and exclude editor correspondence.
+Retain the full source inventory, role decisions and exclusion log alongside the sealed prompt.
+
 ## Reproduce the dry run
 
 From the repository root, generate constructed samples in a new external directory using the runner environment, Git and unittest:

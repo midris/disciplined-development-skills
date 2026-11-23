@@ -61,5 +61,19 @@ def payload_bytes(tree, config_path, fixture_source, *, exclusions=None):
     return (json.dumps(files, sort_keys=True, indent=2) + "\n").encode("utf-8")
 
 
+def catalog_payload(payload, classifications, exclusions):
+    """Project the verified tree after the controller reviews each added file."""
+    files = json.loads(payload)
+    if set(classifications) != set(files) - {"catalog-spec.md"}:
+        raise ValueError("Classify every catalog addition before delivering a reader packet")
+    for name, role in classifications.items():
+        if role == "correspondence":
+            del files[name]
+            exclusions[name] = "editor correspondence"
+        elif role != "project":
+            raise ValueError(f"Unresolved catalog file role: {name}")
+    return (json.dumps(files, sort_keys=True, indent=2) + "\n").encode("utf-8")
+
+
 def reader_prompt(payload):
     return Path(__file__).with_name("reader-question.txt").read_bytes() + payload
