@@ -2,7 +2,7 @@
 
 Format version: `1`
 Study ID: `writing-explicit-rationale`
-Status: fresh shipped application benchmark prepared; dispatch awaits owner allocation. [Benchmark freeze](#shipped-application-benchmark-freeze)
+Status: fresh shipped application benchmark approved for collection. [Benchmark freeze](#shipped-application-benchmark-freeze)
 Plan: [current milestone](../../plans/2026-09-11-model-driven-skill-testing.md#wer-milestones)
 General spec: [testing framework](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md)
 
@@ -181,7 +181,7 @@ Actual attempts: [subject index](runs/functional-pilot-01/claude/run-index.json)
 
 ### Proposed batch: codex-application-benchmark-01
 
-Scope: 52 fresh subjects, explicitly shipped and control. Include every valid-setup execution. No automatic retry. Pending owner allocation.
+Scope: 52 fresh subjects, explicitly shipped and control. Include every valid-setup execution. No automatic retry. On 2026-11-24 the owner approved all 52 scheduled slots once.
 Actual attempts: [subject index](runs/application-benchmark-01/codex/run-index.json).
 
 [export-deferral](runs/application-benchmark-01/codex/export-deferral-manifest.json) [quota-grace](runs/application-benchmark-01/codex/quota-grace-manifest.json) [repeated-review](runs/application-benchmark-01/codex/repeated-review-manifest.json) [catalog-review](runs/application-benchmark-01/codex/catalog-review-manifest.json) [helper-rename](runs/application-benchmark-01/codex/helper-rename-manifest.json) [scope-trim](runs/application-benchmark-01/codex/scope-trim-manifest.json) [dispatch-hold](runs/application-benchmark-01/codex/dispatch-hold-manifest.json)
@@ -243,7 +243,7 @@ Actual attempts: [subject index](runs/application-benchmark-01/codex/run-index.j
 
 ### Proposed batch: claude-application-benchmark-01
 
-Scope: 52 fresh subjects, explicitly shipped and control. Include every valid-setup execution. No automatic retry. Pending owner allocation.
+Scope: 52 fresh subjects, explicitly shipped and control. Include every valid-setup execution. No automatic retry. On 2026-11-24 the owner approved all 52 scheduled slots once.
 Actual attempts: [subject index](runs/application-benchmark-01/claude/run-index.json).
 
 [export-deferral](runs/application-benchmark-01/claude/export-deferral-manifest.json) [quota-grace](runs/application-benchmark-01/claude/quota-grace-manifest.json) [repeated-review](runs/application-benchmark-01/claude/repeated-review-manifest.json) [catalog-review](runs/application-benchmark-01/claude/catalog-review-manifest.json) [helper-rename](runs/application-benchmark-01/claude/helper-rename-manifest.json) [scope-trim](runs/application-benchmark-01/claude/scope-trim-manifest.json) [dispatch-hold](runs/application-benchmark-01/claude/dispatch-hold-manifest.json)
@@ -316,7 +316,7 @@ Host loss remains a recovery gap for WER. Include single-host retention in the o
 
 The runner totals below cover its linked subject and evaluator run indexes: the original baseline, the eight functional-pilot subjects and the proposed application benchmark. The original baseline used 24 subjects, 20 evaluators and one retry. The eight pilot subjects are fully spent. Historical comparison batches and the ten pilot/contrast readers use separate ledgers in their checkpoints and do not enter this runner subtotal. No historical capacity carries forward.
 Proposed outer limits for the linked indexes: 136 subject, 54 evaluator, 0 authoring and 1 retry invocations.
-Dispatched calls are **32 subject, 20 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **104 / 34 / 0 / 0** pending application benchmark approval.
+Dispatched calls are **32 subject, 20 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **104 / 34 / 0 / 0** under the approved application benchmark allocation.
 Record benchmark evaluator attempts with distinct run IDs, evaluator role, allocation pool and launcher charge in the version-1 evaluator ledger.
 
 0 active minutes booked; 260 minutes below the 260-minute planning guideline. This is an opening budget ledger for the proposed run sequence. Earlier case development has no measured time entry.
@@ -648,3 +648,5 @@ For both evaluator roles stage the pinned reader config beside prompt.txt, with 
 The proposed ceiling is 138 model invocations: 104 subjects, up to 20 decision readers and 14 cross-model reviews, zero replacements. No native discovery, rewrite work or live dispatch is allocated by this freeze.
 
 For planning, applying the eight pilot subject durations to 52 calls per provider gives about 73 minutes of serial subject runtime. The six-reader contrast suggests about three minutes for 20 decision readers; the two prior reconciliations suggest about 16 minutes for 14 group reviews. These are approximate CLI runtimes. Packet preparation, replay, assessment and any pauses add time. The historical samples cover different task mixes and group sizes.
+
+On 2026-11-24 the owner approved all 104 scheduled subjects, up to 20 eligible decision readers and the 14 cross-model review groups. Preserve every attempt and every failure. No replacements. Report for joint review before native discovery or rewrite work.
