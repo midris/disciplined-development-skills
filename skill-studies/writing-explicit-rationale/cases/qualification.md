@@ -97,3 +97,12 @@ The extension now adds 22 examples to the 20 original examples. These source-awa
 | firm-promise | Finance agreement commits Operations to delivery. | R1 miss |
 | weekly-duty | Support is told to do mandatory weekly comparisons. | R1 miss |
 | summary-only-reason | A correct reply leaves the plan with only the names of deferred items. | R1 miss |
+
+### Catalog proof review
+
+The seven-case dry run exercised 46 constructed outputs, including four catalog projects with the same accurate handoff.
+The complete spec gives the editor both reasons.
+Removing only the title-index detail leaves the production reason clear and passes R2. Removing the production explanation preserves the ordering but leaves a future editor unable to tell why alphabetizing would disrupt proof corrections.
+Substituting publisher for lender as the amendment authority conflicts with the handoff and could let the desk change an approved credit on its own.
+The project-only packets contain the catalog spec alone.
+These are controller-constructed contrasts. The first live catalog output and an independent reading remain uncollected.

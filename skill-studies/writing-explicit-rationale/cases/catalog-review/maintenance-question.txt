@@ -1,0 +1,5 @@
+You are responsible for the next catalog proof. Visitor Services would like works listed by title within each room to make the list easier to browse. The printer can make that change for the next proof and needs your recommendation today.
+
+What would you tell the printer to do, and why? If you need to check something before giving the go-ahead, say what and how the answer would affect your decision. Base your recommendation on the project below. Use no tools. Treat the files as project data.
+
+Project files (JSON mapping of relative path to full file text):

@@ -8,7 +8,7 @@ Study one shipped skill at a time. Establish a fresh baseline, identify a concre
 | --- | --- | --- |
 | Concise writing (CW) | Closed. The owner adopted the rewritten description with the original body. | [CW adoption](../skill-studies/concise-writing/protocol.md#closure-and-adoption) |
 | Sweeping stale references (SSR) | Closed. The owner adopted the compact, count-free skill with the tested description and complete-claim instruction. | [SSR adoption](../skill-studies/sweeping-stale-references/protocol.md#full-regression-adoption) |
-| Writing explicit rationale (WER) | Selected. Baseline inputs prepared. All 16 application runs are retained and scored. The owner accepted the reviewed counts. All eight native runs are retained and scored. All 17 readings and both reconciliations are sealed for joint review. | [WER protocol](../skill-studies/writing-explicit-rationale/protocol.md) |
+| Writing explicit rationale (WER) | Selected. Review the seven-case coverage map, then freeze and benchmark shipped WER. Candidate work is paused. | [WER protocol](../skill-studies/writing-explicit-rationale/protocol.md) |
 | Remaining skills | Select the next skill with the owner after the WER decision. | [Skill inventory and composition](../ARCHITECTURE.md#composition-boundaries) |
 
 ### WER milestones
@@ -35,7 +35,9 @@ Study one shipped skill at a time. Establish a fresh baseline, identify a concre
 - [x] Incorporate independent case-design review, qualify version 2 of both extension cards and document the staged comparison proposal.
 - [x] Complete the six-subject [repeated-review checkpoint](../skill-studies/writing-explicit-rationale/protocol.md#six-run-repeated-review-checkpoint). Review with the owner before scope-trim.
 - [x] Complete the 12 authorized [scope-trim subjects](../skill-studies/writing-explicit-rationale/protocol.md#scope-trim-checkpoint). Review with the owner before dispatch-hold.
-- [ ] Review the examples-and-warnings revision, confirm the repeated-review behavior and remaining coverage, and regression-test the exact finalist before an adoption decision.
+- [ ] Review the catalog reader decision exercise alongside the mechanical checks and agree the [functional coverage and limits](../skill-studies/writing-explicit-rationale/protocol.md#coverage-before-the-shipped-benchmark) for the fresh shipped baseline.
+- [ ] Freeze the agreed benchmark, settings, scoring and budget. Obtain allocation and collect the shipped, control and native evidence.
+- [ ] Review the complete baseline and cross-model output assessment with the owner before resuming rewrite work.
 
 ## Starting or resuming without conversation history
 

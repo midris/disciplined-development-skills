@@ -2,7 +2,7 @@
 
 Format version: `1`
 Study ID: `writing-explicit-rationale`
-Status: inputs frozen. Both provider batches passed preparation and collection document checks. The installed shell and isolation probes passed. The replacement smoke qualified the reader. The owner accepted the reviewed application checkpoint. All eight native slots are retained. All 17 independent readings and both provider-grouped reconciliations are sealed. Owner review of the reconciliation is pending.
+Status: reviewing functional coverage before freezing a fresh shipped-WER benchmark. Earlier runs and judgments remain in their original batches. Candidate work is paused. [Coverage decision](#coverage-before-the-shipped-benchmark)
 Plan: [current milestone](../../plans/2026-09-11-model-driven-skill-testing.md#wer-milestones)
 General spec: [testing framework](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md)
 
@@ -13,6 +13,10 @@ A future maintainer encounters a choice in a plan or in code without the origina
 ## Behavioral contract and consumers
 
 WER should make consequential choices understandable at the decision site, preserve the supplied facts, and leave self-evident edits concise. Repeated review of the same decision should prompt an audit of related choices in the change. The subjects edit project artifacts. A fresh reader sees a single final project as a maintainer would.
+
+The owner wants the artifact to carry all the context and reasoning a reader needs to understand a decision and act on it without asking the author or guessing their intent.
+Relevant details can include the constraint that drove the choice, who bears its cost, or what would justify revisiting it.
+When the original inputs leave a consequential question open, the artifact should preserve that uncertainty.
 
 ## Assessment policy
 
@@ -358,3 +362,44 @@ All 12 approved subjects completed with valid setups. The [attempt ledger](runs/
 All plans preserve the daily and weekly decisions, Finance dependency, possible manual comparison for an affected week, guide handoff and adoption review. In Codex control slot 3 the heading “Monday launch” introduces rollout timing unsupported by the request. Its accurate chat reference to a Monday handoff leaves Operations with conflicting timing in the plan. T1 misses for schedule fidelity and R1 passes. Codex revision slot 7 names Finance agreement as a prerequisite and leaves reconsideration implicit, a precision caveat. Claude revision slot 12 says “come back” in the handoff while the plan clearly says to revisit.
 
 The 599-word revision preserved the target behavior in these four observations. The no-skill controls also conveyed the rationale in all four, so this case showed no incremental rationale benefit. One control timing error and two repetitions per provider and arm give limited evidence for broader claims. No independent evaluator calls or replacements were used. Owner review of this checkpoint precedes dispatch-hold.
+
+### Coverage before the shipped benchmark
+
+The owner selected suite qualification, then a fresh shipped baseline, then a separate rewrite decision.
+This supersedes the proposed dispatch-hold candidate allocation.
+The original four-case screen and later experiments remain development evidence with their original denominators.
+
+For the fresh benchmark, judge the importance of missing context by the decision it informs.
+Identify who would face the choice, what they would reasonably be likely to do on the evidence in the project, and why the omitted fact would materially change that decision.
+A merely imaginable misunderstanding or an omitted background detail is insufficient grounds for a rationale failure.
+A targeted comment or a discoverable reference is sufficient when the surrounding artifact already explains the rest.
+An informed reader can still choose to reverse the original decision.
+For example, assess export deferral in light of whether the plan gives a maintainer the right v1 scope, dependency and customer expectation; the exact description of schema churn can be a precision observation if those are clear.
+For the fresh benchmark, ask the assessor to identify the project evidence for each consequential reason a reader reports.
+A reader who correctly guesses a reason known from the original request can still be missing that reason on the page.
+Credit meaning conveyed by the whole artifact, including nearby text, code and discoverable project references.
+For a disputed omission, identify what the source established, what the project communicates, and what the reader would still have to assume about the decision, its rationale or its implications.
+
+| Maintainer outcome | Development cases | Evidence and limits |
+| --- | --- | --- |
+| Recover what a plan deliberately leaves out, why and what happens until reconsideration | Export deferral, scope trim | Both exercised live. Export tests a single customer dependency. Scope trim tests collective wording, similar retained items and a conditional workload. Its controls also recovered the rationale. |
+| Understand an active design choice and the cost of reversing it | Quota grace | Live and replayed. Separates a working implementation from one that also explains why admitted work needs protection. |
+| Preserve useful explanations during routine work | Helper rename, dispatch hold | Rename exercised live. Dispatch hold is offline-qualified only. It tests a harder boundary where a discoverable spec already explains the policy and a bare implementation can pass. |
+| Resolve repeated review and make a second consequential choice understandable | Repeated review, catalog proof review | The live guard case resembles a shipped example and reuses quota. The new [catalog card](cases/catalog-review/assessment.md) tests two independent editorial decisions in a spec. Offline only. An explained second site supports recovery; a claim about the editor's process needs trace evidence. |
+| Select WER in ordinary use and exercise restraint | Original four native case cards | One historical native observation per case and provider. Distinguish selection from output quality. The conventional rename is the negative in a module with a real policy comment. |
+
+The seven cases span plans, specs and code, incidental and flagged decisions, useful silence, and rationale trapped in correspondence.
+The suite is ready for owner review as a development benchmark of these outcomes.
+It does not establish performance on unseen tasks, ground-up spec authoring, long-running change histories or untested providers.
+The catalog case is visible development material. A claim about a future rewrite transferring to unseen work requires separately reserved evidence.
+
+For the fresh benchmark propose the same seven tasks on both providers, with explicit shipped WER and a contemporaneous no-skill control.
+At the framework default of five repetitions this is 140 application subjects.
+The four original native cases sample deferral, active code choice, repeated review and a routine negative on both providers, adding 40 subjects at five repetitions.
+Report these strata separately. Historical outputs inform case design and stay outside the new denominators.
+Include the [catalog maintenance decision](cases/catalog-review/assessment.md#downstream-maintenance-decision) as a downstream test alongside mechanical replays and project readings.
+For the proposed five-repetition application matrix, one fresh decision reader per valid catalog output would require up to 20 reader calls across both providers' shipped and control outputs.
+Assign these readers without conditioning on the subject's score and use the same reader settings across arms.
+Count these calls in the evaluator allocation; the 180 proposed subject calls exclude them.
+Before launch, agree the scope and cost, pin case versions, complete the evaluator allocation and stopping rules, and verify frozen manifests and actual exposures.
+The benchmark and cross-model review require their own allocation.

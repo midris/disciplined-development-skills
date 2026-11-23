@@ -13,6 +13,7 @@ from reader_payload import payload_bytes, reader_prompt
 
 CASES = Path(__file__).resolve().parent
 PROJECT_FILES = {
+    "catalog-review": {"catalog-spec.md"},
     "dispatch-hold": {"dispatch-spec.md", "morning.py", "overflow.py"},
     "scope-trim": {"launch-plan.md"},
     "quota-grace": {"quota.py", "test_quota.py"},
@@ -51,7 +52,13 @@ def construct(case, variant, tree):
             args.append("--include=ingest.py")
         run([*args, str(source / "example.patch")], tree)
 
-    if variant in {"bare", "lost-policy", "handoff-only-policy", "full-copies"}:
+    if variant == "credit-only":
+        replace(tree / "catalog-spec.md", " so proof corrections line up with the room sheets. Visitors can look up titles in the index.", ".")
+    elif variant == "order-reason-only":
+        replace(tree / "catalog-spec.md", " Visitors can look up titles in the index.", "")
+    elif variant == "wrong-authority":
+        replace(tree / "catalog-spec.md", "until the lender amends it", "until the publisher amends it")
+    elif variant in {"bare", "lost-policy", "handoff-only-policy", "full-copies"}:
         spec = tree / "dispatch-spec.md"
         policy, = (line for line in spec.read_text().splitlines() if line.startswith("A held parcel"))
         for name in ("morning.py", "overflow.py"):
@@ -164,6 +171,7 @@ def qualify(output):
     samples.extend(("scope-trim", v) for v in
                    ("complete", "lost-weekly-alert", "firm-promise", "weekly-duty", "summary-only-reason",
                     "gate-only", "implicit-week", "lost-impact", "silent-cut", "collective-scope", "collective-no-count"))
+    samples.extend(("catalog-review", v) for v in ("complete", "credit-only", "order-reason-only", "wrong-authority"))
     random.SystemRandom().shuffle(samples)
     # Offline configs exercise the same source-to-target classification as live runs.
     configs = output / "configs"
@@ -215,11 +223,18 @@ def qualify(output):
         (packets / f"{label}.json").write_bytes(payload)
         prompt = reader_prompt(payload)
         (packets / f"{label}.txt").write_bytes(prompt)
+        if case == "catalog-review":
+            question = (CASES / case / "maintenance-question.txt").read_bytes()
+            decision_dir = output / "decision-read"
+            decision_dir.mkdir(exist_ok=True)
+            (decision_dir / f"{label}.txt").write_bytes(question + payload)
         entry = {"case": case, "variant": variant, "checks": checks,
                  "payload_sha256": hashlib.sha256(payload).hexdigest(),
                  "prompt_sha256": hashlib.sha256(prompt).hexdigest(),
                  "excluded_paths": excluded}
-        if case == "export-deferral":
+        if case == "catalog-review":
+            entry["response"] = ("Keep the approved credit until the lender amends the form. Room order matches the proof sheets; visitors have the title index.")
+        elif case == "export-deferral":
             entry["response"] = ("CSV and JSON stay in v1. XML customers will wait until the partner "
                                  "approves a stable schema because the schema is still changing.")
         elif variant == "handoff-only-policy":

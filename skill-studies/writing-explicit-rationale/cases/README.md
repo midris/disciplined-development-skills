@@ -11,6 +11,8 @@ Each case contains an ordinary request in `task.md`, a starting project in `fixt
 
 ### Additional development cases
 
+- [Catalog proof review](catalog-review/assessment.md) tests whether a second editorial decision survives a review focused on a different rule. Compare both decisions in the spec with the editorial request and handover.
+
 - [Dispatch hold](dispatch-hold/assessment.md) updates a spec and two planners under one existing policy. The [private replay](dispatch-hold/replay.py) checks both hold states, assigned trips, ordinary parcels and the title edit.
 - [Scope trim](scope-trim/assessment.md) compresses a launch plan under handoff pressure. Inspect the full plan for daily versus weekly scope, the unresolved decision and conditional customer-support work.
 
