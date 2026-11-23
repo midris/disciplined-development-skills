@@ -1,0 +1,56 @@
+{
+  "question": {
+    "path": "skill-studies/writing-explicit-rationale/cases/catalog-review/maintenance-question.txt",
+    "version": null,
+    "sha256": "9f86d070a1d06cd863fd6093d578aea115c40428908a7456467d1403f3c8f0e5"
+  },
+  "reader_template": {
+    "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/reader-smoke/config.json",
+    "version": null,
+    "sha256": "35f09d4f4adb2d8c6a723eadac105853e28175c9cc9f89c8c204e45ccf3da6cf"
+  },
+  "reader_execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "permissions": "read-only"
+  },
+  "packets": {
+    "credit-only": {
+      "path": "skill-studies/writing-explicit-rationale/runs/catalog-contrast-01/credit-only.json",
+      "sha256": "cf61deeb51ec6cd24541d75c02400edc15983e283864ff46ee50829260fe78dc",
+      "prompt_sha256": "63a8ca5a5cd97ecec8bbcdcb0a1f4109b56a7988ce724d341aea929bbf61511c"
+    },
+    "complete": {
+      "path": "skill-studies/writing-explicit-rationale/runs/catalog-contrast-01/complete.json",
+      "sha256": "9787f50f31fb8e45f3167ab099a72fecd117bdbccad289d19edf57a4397490bd",
+      "prompt_sha256": "a9646c59f5f211fdd4d3efb172300414550ca253c14e3a5b3289b492eec7267d"
+    }
+  },
+  "readers": [
+    {
+      "order": 1,
+      "arm": "credit-only"
+    },
+    {
+      "order": 2,
+      "arm": "complete"
+    },
+    {
+      "order": 3,
+      "arm": "complete"
+    },
+    {
+      "order": 4,
+      "arm": "credit-only"
+    },
+    {
+      "order": 5,
+      "arm": "credit-only"
+    },
+    {
+      "order": 6,
+      "arm": "complete"
+    }
+  ]
+}

@@ -488,3 +488,11 @@ The pilot yielded no observed incremental shipped-skill benefit on these two cas
 Proposal for owner review: use six fresh decision readers on the constructed complete and credit-only specs, three each, with the same printer request and reader settings.
 That diagnostic directly tests the missing-context question without buying more subject outputs that may all include the reason.
 Its six calls and the full benchmark remain unallocated. Keep these pilot executions outside the fresh benchmark denominators.
+
+### Catalog decision contrast authority
+
+The owner approved six fresh decision readers, three on each constructed catalog project.
+The [frozen order and hashes](runs/catalog-contrast-01/schedule.json) pin the previous qualification packets and printer question.
+Credit-only keeps the order rule and lender authority. Complete adds the proof-sheet dependency and title-index alternative together, so the contrast measures their combined context.
+Use the pilot's pinned Claude runtime, read-only settings, isolation checks and retention procedure. Preserve all outcomes, stop on invalid setup, and allocate no replacements.
+Classify the recommended action and the grounds available in the project under the existing catalog card. Separate an inferred purpose from a fact the reader can substantiate. These are diagnostic reader calls outside subject and benchmark counts.
