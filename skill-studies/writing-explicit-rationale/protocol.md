@@ -151,7 +151,7 @@ Actual attempts: [subject index](runs/baseline-01/claude/run-index.json).
 
 ### Proposed batch: codex-functional-pilot-01
 
-Scope: Two pilot cases, shipped and control, one repetition per cell. Include every valid-setup execution. No automatic retry. Pending allocation.
+Scope: Two pilot cases, shipped and control, one repetition per cell. Include every valid-setup execution. No automatic retry. Owner approval on 2026-11-23 covers orders 1–4 once each in this batch.
 Actual attempts: [subject index](runs/functional-pilot-01/codex/run-index.json).
 
 [catalog-review](runs/functional-pilot-01/codex/catalog-review-manifest.json)
@@ -166,7 +166,7 @@ Actual attempts: [subject index](runs/functional-pilot-01/codex/run-index.json).
 
 ### Proposed batch: claude-functional-pilot-01
 
-Scope: Two pilot cases, shipped and control, one repetition per cell. Include every valid-setup execution. No automatic retry. Pending allocation.
+Scope: Two pilot cases, shipped and control, one repetition per cell. Include every valid-setup execution. No automatic retry. Owner approval on 2026-11-23 covers orders 1–4 once each in this batch.
 Actual attempts: [subject index](runs/functional-pilot-01/claude/run-index.json).
 
 [catalog-review](runs/functional-pilot-01/claude/catalog-review-manifest.json)
@@ -443,7 +443,7 @@ Decide repetitions, native scope and evaluator allocation after the pilot, inclu
 Keep historical scope-trim results separate from a fresh benchmark. Any pooling of unchanged pilot cells must be declared before collection.
 If all four catalog projects explain the room-sheet dependency, record the missing-rationale branch as untested and propose six fresh readers, three per constructed complete and credit-only packet, for separate approval.
 Likewise report any unmeasured reader slots separately before interpreting pilot coverage.
-No pilot, benchmark, reader or rewrite allocation is active.
+The owner approved the functional pilot only.
 
 
 ### Functional pilot freeze
@@ -456,7 +456,7 @@ Before each invocation record its scheduled slot privately, reconcile the runner
 For all catalog outputs, including behavioral failures, retain the full inventory and file-role classification and seal the project reading under opaque labels before full-evidence assessment.
 For each decision reader concatenate the exact question bytes with the canonical catalog payload bytes; classify additions using the case card. Preserve exclusions and hash the payload and complete prompt before dispatch.
 Copy the pinned reader config to isolated controller staging beside that prompt as prompt.txt. Reader config bytes must match the pinned config, with no fixtures. Require a fresh read-only session, the qualified subscription catalog, zero tool calls, one recommendation and retained prompt, answer, bundle inventory and charge in the [reader ledger](runs/functional-pilot-01/evaluator-index.json).
-The final prompt hashes depend on the subjects' future projects. Record unmeasured reader slots and their reason. No automatic replacements or additional diagnostic readers. All invocations await owner allocation.
+The final prompt hashes depend on the subjects' future projects. Record unmeasured reader slots and their reason. No automatic replacements or additional diagnostic readers. Owner approval on 2026-11-23 covers the eight frozen subject slots and up to four scheduled decision readers. Preserve failures, pause on invalid setup, and report before any additional allocation.
 
 Installed qualification retained both original Claude scripted-probe failures: the Apple Git launcher emitted cache-write diagnostics under the sandbox.
 The pinned Claude directory selects the direct Xcode Git executable. Both scripted CLI modes passed with this path and the same filesystem policy.
