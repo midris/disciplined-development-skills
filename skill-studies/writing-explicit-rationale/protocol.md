@@ -2,7 +2,7 @@
 
 Format version: `1`
 Study ID: `writing-explicit-rationale`
-Status: reviewing functional coverage before freezing a fresh shipped-WER benchmark. Earlier runs and judgments remain in their original batches. Candidate work is paused. [Coverage decision](#coverage-before-the-shipped-benchmark)
+Status: functional pilot complete. Owner review of the reader contrast precedes further spending. [Pilot checkpoint](#functional-pilot-checkpoint)
 Plan: [current milestone](../../plans/2026-09-11-model-driven-skill-testing.md#wer-milestones)
 General spec: [testing framework](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md)
 
@@ -462,3 +462,29 @@ Installed qualification retained both original Claude scripted-probe failures: t
 The pinned Claude directory selects the direct Xcode Git executable. Both scripted CLI modes passed with this path and the same filesystem policy.
 The first Codex Git probe exceeded its 60-second harness limit; the isolated repeat passed, and the original scratch evidence was copied to the private controller store.
 Subject slots and reader calls remain unused.
+
+### Functional pilot checkpoint
+
+All eight subject sessions completed with valid setups, and all four decision readers produced sealed single-turn recommendations with zero tool calls.
+The [assessments](runs/functional-pilot-01/assessment.json) link the complete execution results, reader answers and qualifications.
+Both subject indexes validate, all twelve inventories matched the retained bundles, and no replacements were used.
+
+| Case | Codex shipped / control | Claude shipped / control | Outcome |
+| --- | --- | --- | --- |
+| Catalog proof review | Pass / pass | Pass / pass | All four specs preserve lender amendment authority and the proof-desk reason for room order. |
+| Dispatch hold | Pass / pass | Pass / pass | All four private replays passed, both consumers led to the policy, and the routine title stayed proportionate. |
+
+The [opaque project readings](runs/functional-pilot-01/project-only.json) were sealed before reconciliation.
+Codex control saved its short editorial reply separately. The delivered handoff linked the file; it counted for the reply task and was excluded from both reader projections.
+All four catalog readers recommended keeping accession order for the next proof and grounded that decision in matching corrections to room sheets. They also mentioned the title index.
+That establishes informed use of all four artifacts, including both controls. The exercise did not observe how a reader acts when the reason is missing.
+The first reader's offline audit initially compared two macOS spellings of the same workspace path; canonical path verification sealed the same retained answer without another call.
+
+All four dispatch plans retained the distinction between excluding new trips and allowing dispatchers to redirect already-loaded parcels.
+Both controls used bare lookup functions. Claude shipped introduced a shared status set and a reference to the spec. Codex shipped repeated part of the existing exception in the spec.
+All four specs attributed both status values to the carrier, while the starting spec identified the carrier only for manual_hold. This had no effect on the requested routing decision.
+
+The pilot yielded no observed incremental shipped-skill benefit on these two cases. It exercised the packet boundary with actual correspondence and the private replays on three different implementation forms.
+Proposal for owner review: use six fresh decision readers on the constructed complete and credit-only specs, three each, with the same printer request and reader settings.
+That diagnostic directly tests the missing-context question without buying more subject outputs that may all include the reason.
+Its six calls and the full benchmark remain unallocated. Keep these pilot executions outside the fresh benchmark denominators.

@@ -3,5 +3,198 @@
   "index_id": "claude-functional-pilot-01-attempts",
   "study_id": "writing-explicit-rationale",
   "batch_id": "claude-functional-pilot-01",
-  "attempts": []
+  "attempts": [
+    {
+      "attempt_id": "claude-functional-pilot-01-catalog-review-control-1-1",
+      "case_id": "catalog-review",
+      "condition": "control",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/functional-pilot-01/claude/catalog-review-manifest.json",
+        "sha256": "3a95d7310452153df91b68eb4007d6f62e38ae3fc2c43d9aa0a78d1ee29f1f78",
+        "version": "1",
+        "git_revision": "ceede0fc65594f7e42f9b19b0287809f2dc4d5c0"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "197e2662435d8643167573e94e9625e488b3d5e373903695af46f52fd1b6b48e",
+          "version": "1",
+          "git_revision": "ceede0fc65594f7e42f9b19b0287809f2dc4d5c0"
+        },
+        "selector": "Batch: claude-functional-pilot-01; order 1"
+      },
+      "run_id": "20261123T140350994Z-project-task-e79b203d-026b-4203-8001-db3f1a630c23-67nky6wb",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "One observation per provider, case and condition."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/functional-pilot-01/subjects/20261123T140350994Z-project-task-e79b203d-026b-4203-8001-db3f1a630c23-67nky6wb",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/functional-pilot-01/subjects/20261123T140350994Z-project-task-e79b203d-026b-4203-8001-db3f1a630c23-67nky6wb.inventory.json",
+          "sha256": "9ca61f09f01a9f91d37f04b794620b695dde9c2f0c798e583ad3569dec926e5d",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-functional-pilot-01-catalog-review-control-1-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/functional-pilot-01/controller/subject-02/execution-result.json",
+          "sha256": "02c76ce4b0fce040327e36037fc75015551bd7859777f5a323cd0e1210b86586",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-functional-pilot-01-catalog-review-original-1-1",
+      "case_id": "catalog-review",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/functional-pilot-01/claude/catalog-review-manifest.json",
+        "sha256": "3a95d7310452153df91b68eb4007d6f62e38ae3fc2c43d9aa0a78d1ee29f1f78",
+        "version": "1",
+        "git_revision": "ceede0fc65594f7e42f9b19b0287809f2dc4d5c0"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "197e2662435d8643167573e94e9625e488b3d5e373903695af46f52fd1b6b48e",
+          "version": "1",
+          "git_revision": "ceede0fc65594f7e42f9b19b0287809f2dc4d5c0"
+        },
+        "selector": "Batch: claude-functional-pilot-01; order 2"
+      },
+      "run_id": "20261123T140510868Z-project-task-2e5d7d0b-a46e-42b7-8941-22b7f7c6578b-ti7q9o4g",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "One observation per provider, case and condition."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/functional-pilot-01/subjects/20261123T140510868Z-project-task-2e5d7d0b-a46e-42b7-8941-22b7f7c6578b-ti7q9o4g",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/functional-pilot-01/subjects/20261123T140510868Z-project-task-2e5d7d0b-a46e-42b7-8941-22b7f7c6578b-ti7q9o4g.inventory.json",
+          "sha256": "3fb0d0943e580b5793764899d00e0d1bd4358006372d511a59c1b4835f8e0793",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-functional-pilot-01-catalog-review-original-1-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/functional-pilot-01/controller/subject-04/execution-result.json",
+          "sha256": "cbfd599797bc43597a88069154dc249a9c291235286bd33b5cec1ce63b1df83e",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-functional-pilot-01-dispatch-hold-original-1-1",
+      "case_id": "dispatch-hold",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/functional-pilot-01/claude/dispatch-hold-manifest.json",
+        "sha256": "bf468b5c8ba0c797bf2d9451e5f2b0d256ae18151076b8195e17e8e1c3ae6a39",
+        "version": "1",
+        "git_revision": "ceede0fc65594f7e42f9b19b0287809f2dc4d5c0"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "197e2662435d8643167573e94e9625e488b3d5e373903695af46f52fd1b6b48e",
+          "version": "1",
+          "git_revision": "ceede0fc65594f7e42f9b19b0287809f2dc4d5c0"
+        },
+        "selector": "Batch: claude-functional-pilot-01; order 3"
+      },
+      "run_id": "20261123T140620402Z-project-task-60568b09-daf2-483c-b340-b0d28ce82da6-oe53_z2l",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "One observation per provider, case and condition."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/functional-pilot-01/subjects/20261123T140620402Z-project-task-60568b09-daf2-483c-b340-b0d28ce82da6-oe53_z2l",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/functional-pilot-01/subjects/20261123T140620402Z-project-task-60568b09-daf2-483c-b340-b0d28ce82da6-oe53_z2l.inventory.json",
+          "sha256": "5be1fd35a82a60968fb71a2926112da7ac842d9cc1c8f8808bbc2dba52bbd669",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-functional-pilot-01-dispatch-hold-original-1-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/functional-pilot-01/controller/subject-06/execution-result.json",
+          "sha256": "2d52ff89437dce214035c87b490d72fa5daf47dc00115fb69d273e397ecc961b",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-functional-pilot-01-dispatch-hold-control-1-1",
+      "case_id": "dispatch-hold",
+      "condition": "control",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/functional-pilot-01/claude/dispatch-hold-manifest.json",
+        "sha256": "bf468b5c8ba0c797bf2d9451e5f2b0d256ae18151076b8195e17e8e1c3ae6a39",
+        "version": "1",
+        "git_revision": "ceede0fc65594f7e42f9b19b0287809f2dc4d5c0"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "197e2662435d8643167573e94e9625e488b3d5e373903695af46f52fd1b6b48e",
+          "version": "1",
+          "git_revision": "ceede0fc65594f7e42f9b19b0287809f2dc4d5c0"
+        },
+        "selector": "Batch: claude-functional-pilot-01; order 4"
+      },
+      "run_id": "20261123T140743169Z-project-task-ffa3cdd9-d995-409d-a62c-cee11124fc6c-hdr_fdx9",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "One observation per provider, case and condition."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/functional-pilot-01/subjects/20261123T140743169Z-project-task-ffa3cdd9-d995-409d-a62c-cee11124fc6c-hdr_fdx9",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/functional-pilot-01/subjects/20261123T140743169Z-project-task-ffa3cdd9-d995-409d-a62c-cee11124fc6c-hdr_fdx9.inventory.json",
+          "sha256": "6faa0facaab9b6d276038e3ab463d25b3a64ffc0beb9f3540d9e7018af3f8e4f",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-functional-pilot-01-dispatch-hold-control-1-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/functional-pilot-01/controller/subject-08/execution-result.json",
+          "sha256": "323d1d73dee59230567dedfd2f4de5f0100417c1baaca3334eacc96e2dffb5b5",
+          "version": "1"
+        }
+      }
+    }
+  ]
 }

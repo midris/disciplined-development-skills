@@ -1,0 +1,209 @@
+{
+  "subjects": [
+    {
+      "order": 1,
+      "provider": "codex",
+      "condition": "original",
+      "case": "catalog-review",
+      "label": "8ceea5e0",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "observations": [],
+      "execution_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/functional-pilot-01/controller/subject-01/execution-result.json",
+        "sha256": "19f56f438bdea5ecbccd7cc9147652f0f6680afde55a236c93e991b517472497",
+        "version": "1"
+      }
+    },
+    {
+      "order": 2,
+      "provider": "claude",
+      "condition": "control",
+      "case": "catalog-review",
+      "label": "65c7fa69",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "observations": [],
+      "execution_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/functional-pilot-01/controller/subject-02/execution-result.json",
+        "sha256": "02c76ce4b0fce040327e36037fc75015551bd7859777f5a323cd0e1210b86586",
+        "version": "1"
+      }
+    },
+    {
+      "order": 3,
+      "provider": "codex",
+      "condition": "control",
+      "case": "catalog-review",
+      "label": "68c34b20",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "observations": [
+        "Saved reply excluded from project and reader packets."
+      ],
+      "execution_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/functional-pilot-01/controller/subject-03/execution-result.json",
+        "sha256": "751f205ebb578083840770ded7ecf198e2836b7a4b14aaec2b25032b0ec405e2",
+        "version": "1"
+      }
+    },
+    {
+      "order": 4,
+      "provider": "claude",
+      "condition": "original",
+      "case": "catalog-review",
+      "label": "213a0e1c",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "observations": [],
+      "execution_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/functional-pilot-01/controller/subject-04/execution-result.json",
+        "sha256": "cbfd599797bc43597a88069154dc249a9c291235286bd33b5cec1ce63b1df83e",
+        "version": "1"
+      }
+    },
+    {
+      "order": 5,
+      "provider": "codex",
+      "condition": "control",
+      "case": "dispatch-hold",
+      "label": "42088656",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "observations": [
+        "Spec attributes both statuses to the carrier; the source identifies the carrier only for manual_hold."
+      ],
+      "execution_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/functional-pilot-01/controller/subject-05/execution-result.json",
+        "sha256": "409c1a53f6cfb56f6fd29ec09552afb85c5fd5dedc0d63c678470d65ac8c80a6",
+        "version": "1"
+      }
+    },
+    {
+      "order": 6,
+      "provider": "claude",
+      "condition": "original",
+      "case": "dispatch-hold",
+      "label": "a1af3543",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "observations": [
+        "Spec attributes both statuses to the carrier; the source identifies the carrier only for manual_hold."
+      ],
+      "execution_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/functional-pilot-01/controller/subject-06/execution-result.json",
+        "sha256": "2d52ff89437dce214035c87b490d72fa5daf47dc00115fb69d273e397ecc961b",
+        "version": "1"
+      }
+    },
+    {
+      "order": 7,
+      "provider": "codex",
+      "condition": "original",
+      "case": "dispatch-hold",
+      "label": "04ff7ad8",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "observations": [
+        "Spec attributes both statuses to the carrier; the source identifies the carrier only for manual_hold.",
+        "The spec repeats the loaded-parcel exception."
+      ],
+      "execution_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/functional-pilot-01/controller/subject-07/execution-result.json",
+        "sha256": "ac0426e5f5bc35093ec0defab8500b4c0203419996e526be00ead843f6eb3579",
+        "version": "1"
+      }
+    },
+    {
+      "order": 8,
+      "provider": "claude",
+      "condition": "control",
+      "case": "dispatch-hold",
+      "label": "59f262e9",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "observations": [
+        "Spec attributes both statuses to the carrier; the source identifies the carrier only for manual_hold."
+      ],
+      "execution_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/functional-pilot-01/controller/subject-08/execution-result.json",
+        "sha256": "323d1d73dee59230567dedfd2f4de5f0100417c1baaca3334eacc96e2dffb5b5",
+        "version": "1"
+      }
+    }
+  ],
+  "readers": [
+    {
+      "order": 1,
+      "subject_order": 2,
+      "outcome": "informed retention",
+      "decision": "Keep accession order for the next proof; matching corrections against room sheets would be harder after a title sort.",
+      "qualification": null,
+      "answer": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/functional-pilot-01/evaluators/20261123T140815537Z-project-reader-dd97bb85-a693-4db7-a91c-008ae8929f85-ojxh8_ke/final.txt",
+        "sha256": "67dfbfefde8184a3e8ba599548691fae349a124bfb035263e2f90edf9625e71a",
+        "version": null
+      }
+    },
+    {
+      "order": 2,
+      "subject_order": 3,
+      "outcome": "informed retention",
+      "decision": "Keep accession order for the next proof; matching corrections against room sheets would be harder after a title sort.",
+      "qualification": null,
+      "answer": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/functional-pilot-01/evaluators/20261123T140934904Z-project-reader-be257f68-2d49-4f76-8fc4-cc7c5e9f4521-aj_qvske/final.txt",
+        "sha256": "2bc4eb3434580955cb9441e0ce9767493f38065f2822e58f4d20ce12153f619a",
+        "version": null
+      }
+    },
+    {
+      "order": 3,
+      "subject_order": 1,
+      "outcome": "informed retention",
+      "decision": "Keep accession order for the next proof; matching corrections against room sheets would be harder after a title sort.",
+      "qualification": null,
+      "answer": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/functional-pilot-01/evaluators/20261123T140942888Z-project-reader-cd8e3780-0900-418f-81b8-4502257c6c9d-9usdyg44/final.txt",
+        "sha256": "310901c672f80592a5fb6f93c354aeb2a4f7475fe4b302a8b1de162e59fab2a2",
+        "version": null
+      }
+    },
+    {
+      "order": 4,
+      "subject_order": 4,
+      "outcome": "informed retention",
+      "decision": "Keep accession order for the next proof; matching corrections against room sheets would be harder after a title sort.",
+      "qualification": "Says title order would break checking, then explains that checks would take longer and invite errors.",
+      "answer": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/functional-pilot-01/evaluators/20261123T140950828Z-project-reader-30ffe76e-fd15-4ccc-ac63-901bf14044a5-4dscuv83/final.txt",
+        "sha256": "b87ed9d1386e3a1b409a6cfb2e0fa7ac249400390cb71efde00daaae54fea2c4",
+        "version": null
+      }
+    }
+  ]
+}
