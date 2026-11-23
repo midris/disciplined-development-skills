@@ -1,6 +1,6 @@
 {
   "claude": {
-    "path": "/private/tmp/wer-compare-bin/claude",
+    "path": "/private/tmp/wer-functional-bin.q6NB3i/claude",
     "sha256": "1f53587e92dee8e089fa349188a4cda64fa34ace6e7b0ca2ee278ddaa3cc2ebd",
     "version": "2.1.319 (Claude Code)"
   },
@@ -16,5 +16,11 @@
   "codex-exec-server": {
     "path": "/opt/homebrew/Caskroom/codex/0.167.0/bin/codex-exec-server",
     "sha256": "385736a6d82e125d4946a672074eb3a9f13e45a4aaecee4b72d592c0e1bb566a"
+  },
+  "claude-shell-git": {
+    "path": "/private/tmp/wer-functional-bin.q6NB3i/git",
+    "target": "/Applications/Xcode.app/Contents/Developer/usr/bin/git",
+    "sha256": "775851091335fd0f0e3eba68e92667b95115208e57ad5ca312936d10edb9ffd3",
+    "version": "git version 2.54.0 (Apple Git-157)"
   }
 }
