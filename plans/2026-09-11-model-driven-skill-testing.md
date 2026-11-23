@@ -38,7 +38,8 @@ Study one shipped skill at a time. Establish a fresh baseline, identify a concre
 - [ ] Review the catalog reader decision exercise alongside the mechanical checks and agree the [functional coverage and limits](../skill-studies/writing-explicit-rationale/protocol.md#coverage-before-the-shipped-benchmark) for the fresh shipped baseline.
 - [x] Resolve the pilot case-card and decision-scoring findings and verify both cards against the shipped and control conditions offline.
 - [x] Complete the [functional pilot](../skill-studies/writing-explicit-rationale/protocol.md#functional-pilot-checkpoint) and retain all eight subject and four decision-reader outcomes.
-- [ ] Review the pilot and its proposed six-reader contrast before settling the full benchmark allocation.
+- [x] Complete the [six-reader catalog contrast](../skill-studies/writing-explicit-rationale/protocol.md#catalog-decision-contrast-checkpoint).
+- [ ] Review the reader contrast and agree the fresh shipped benchmark matrix and allocation.
 - [ ] Freeze the agreed benchmark, settings, scoring and budget. Obtain allocation and collect the shipped, control and native evidence.
 - [ ] Review the complete baseline and cross-model output assessment with the owner before resuming rewrite work.
 

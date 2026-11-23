@@ -2,7 +2,7 @@
 
 Format version: `1`
 Study ID: `writing-explicit-rationale`
-Status: functional pilot complete. Owner review of the reader contrast precedes further spending. [Pilot checkpoint](#functional-pilot-checkpoint)
+Status: catalog decision contrast complete. Review the diagnostic and settle the shipped baseline scope. [Reader checkpoint](#catalog-decision-contrast-checkpoint)
 Plan: [current milestone](../../plans/2026-09-11-model-driven-skill-testing.md#wer-milestones)
 General spec: [testing framework](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md)
 
@@ -496,3 +496,14 @@ The [frozen order and hashes](runs/catalog-contrast-01/schedule.json) pin the pr
 Credit-only keeps the order rule and lender authority. Complete adds the proof-sheet dependency and title-index alternative together, so the contrast measures their combined context.
 Use the pilot's pinned Claude runtime, read-only settings, isolation checks and retention procedure. Preserve all outcomes, stop on invalid setup, and allocate no replacements.
 Classify the recommended action and the grounds available in the project under the existing catalog card. Separate an inferred purpose from a fact the reader can substantiate. These are diagnostic reader calls outside subject and benchmark counts.
+
+### Catalog decision contrast checkpoint
+
+Six fresh one-turn Claude readers completed the approved diagnostic with zero tool calls. All six bundles, inventories and answers were verified. No replacements were used.
+The [individual assessments](runs/catalog-contrast-01/assessment.json) and [evaluator ledger](runs/catalog-contrast-01/evaluator-index.json) preserve all recommendations.
+
+All six kept accession order for the next proof. The three complete-packet readers identified the proof-sheet dependency and pointed to the existing title index.
+Of the three credit-only readers, one explicitly recognized the missing reason and labeled its guesses, one deferred to spec-owner approval, and one gave unsupported weight to the cost of changing versus waiting.
+All three suggested adding a title index. This was reasonable on their incomplete information and would duplicate something the complete spec already describes.
+Both the ordering reason and the index differed between packets. The diagnostic supports a difference in grounded reasoning and follow-up advice; it observed no difference in the immediate printer instruction.
+Keep the action and its evidential basis as separate outcomes in the benchmark. These constructed-project readings do not measure the effect of loading WER.

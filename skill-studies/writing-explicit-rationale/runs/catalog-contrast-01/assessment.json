@@ -1,0 +1,62 @@
+[
+  {
+    "order": 1,
+    "packet": "credit-only",
+    "printer_action": "retain accession order for next proof",
+    "room_sheet_reason_grounded": false,
+    "judgment": "prudent follow-up with missing context",
+    "whole_response": "Explicitly labels possible dependencies as guesses and refers the unresolved trade-off to the spec owner. Suggests adding a title index.",
+    "answer": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/catalog-contrast-01/evaluators/20261123T142326556Z-project-reader-172c389b-e461-4863-9b2f-4e751d4edc84-srb1bi47/final.txt",
+    "sha256": "e1a1377e598b49683ce9f82bbebbab7572359045ef0c4c63d4a156d9e2a4a6e9"
+  },
+  {
+    "order": 2,
+    "packet": "complete",
+    "printer_action": "retain accession order for next proof",
+    "room_sheet_reason_grounded": true,
+    "judgment": "informed retention",
+    "whole_response": "Names the proof-sheet match and the existing title index. Would reconsider the sheet order if the spec changes.",
+    "answer": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/catalog-contrast-01/evaluators/20261123T142336193Z-project-reader-6329da74-eaea-4353-9de0-751a11fc5c45-i1jytifp/final.txt",
+    "sha256": "27601254c031fb65b8dfd90cf5aaab1300340f57ade731648439c2ad85dc0b8a"
+  },
+  {
+    "order": 3,
+    "packet": "complete",
+    "printer_action": "retain accession order for next proof",
+    "room_sheet_reason_grounded": true,
+    "judgment": "informed retention",
+    "whole_response": "Explains the proof-sheet dependency and points to the title index. Distinguishes the spec from verification that the proof implements the index.",
+    "answer": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/catalog-contrast-01/evaluators/20261123T142345411Z-project-reader-457db7da-570f-4276-8e54-58cd14ebbfa0-7ejnn44e/final.txt",
+    "sha256": "53c5976583bb23d7c43ec397ce7876eeb41c5bc21886a42ea83ee04b86babe52"
+  },
+  {
+    "order": 4,
+    "packet": "credit-only",
+    "printer_action": "retain accession order for next proof",
+    "room_sheet_reason_grounded": false,
+    "judgment": "rule-based retention with missing context",
+    "whole_response": "Seeks approval to change the spec. Mentions registrar or lender reference as possibilities, without asking what production process relies on the order. Suggests adding a title index.",
+    "answer": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/catalog-contrast-01/evaluators/20261123T142352828Z-project-reader-7b3d3cfd-8131-4f61-8dc5-1eff2b159388-311l7ibu/final.txt",
+    "sha256": "456f1d9e7f59208515b6d123975c9b66ce61ae051b72e8aa56fe411609231628"
+  },
+  {
+    "order": 5,
+    "packet": "credit-only",
+    "printer_action": "retain accession order for next proof",
+    "room_sheet_reason_grounded": false,
+    "judgment": "partly speculative retention with missing context",
+    "whole_response": "Suggests plausible dependencies, then treats rechecking everything and negligible cost of waiting as established. The project supplies neither cost. Suggests adding a title index.",
+    "answer": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/catalog-contrast-01/evaluators/20261123T142403302Z-project-reader-3ddc2ee5-7e28-429f-b041-4c3097271b3a-sub2rm6w/final.txt",
+    "sha256": "d4a30314eabf1792bc92c93061fd40694237f3bdc3419a873cd25e50a3f32e68"
+  },
+  {
+    "order": 6,
+    "packet": "complete",
+    "printer_action": "retain accession order for next proof",
+    "room_sheet_reason_grounded": true,
+    "judgment": "informed retention",
+    "whole_response": "Explains how a title sort would complicate correction matching and directs Visitor Services to the existing index.",
+    "answer": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/catalog-contrast-01/evaluators/20261123T142414653Z-project-reader-220f5e42-4d6c-49a8-a183-c6e4fdd7165a-g6qyuls4/final.txt",
+    "sha256": "1fb81866f6b3e37585cec53fc418cd7a994eeb916723da599267250cfb65cbff"
+  }
+]
