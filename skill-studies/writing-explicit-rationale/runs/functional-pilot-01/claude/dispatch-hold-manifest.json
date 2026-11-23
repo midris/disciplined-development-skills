@@ -3,9 +3,9 @@
   "manifest_id": "wer-claude-dispatch-hold-pilot-01",
   "study_id": "writing-explicit-rationale",
   "case_id": "dispatch-hold",
-  "status": "draft",
+  "status": "frozen",
   "created_at": "2026-11-23",
-  "source_revision": "",
+  "source_revision": "ce8744ffcb593d755b7f1e2f5a2c9814c39de9af",
   "authorities": {
     "spec": {
       "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
@@ -14,7 +14,7 @@
     },
     "protocol": {
       "path": "skill-studies/writing-explicit-rationale/protocol.md",
-      "sha256": "b66eb4e4de87268fd68684b4aa4f058b0125b0561ac4e6cbc671314361f80218",
+      "sha256": "e3ff2cfd03916bd359357083a41936508e3dc70a16f2b9a9fea9d33a644273c1",
       "version": "1"
     },
     "format_contract": {
@@ -29,7 +29,7 @@
     },
     "policy": {
       "path": "skill-studies/writing-explicit-rationale/protocol.md",
-      "sha256": "b66eb4e4de87268fd68684b4aa4f058b0125b0561ac4e6cbc671314361f80218",
+      "sha256": "e3ff2cfd03916bd359357083a41936508e3dc70a16f2b9a9fea9d33a644273c1",
       "version": "1"
     },
     "criteria": [
@@ -120,7 +120,7 @@
     },
     {
       "path": "skill-studies/writing-explicit-rationale/runs/functional-pilot-01/runtime.json",
-      "sha256": "04f628d70da17701e1aed3d28b310b7d857d0416c9c27c3a4805deffc2918271",
+      "sha256": "92d24a3ddc9cedfe0536efb14cb33ec178f87466c9bb8039884e9fc6d3637f92",
       "version": null
     },
     {
