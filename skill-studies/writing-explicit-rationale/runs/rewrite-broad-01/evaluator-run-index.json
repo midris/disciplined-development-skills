@@ -1,3 +1,50 @@
 {
-  "runs": []
+  "runs": [
+    {
+      "order": 1,
+      "subject_order": 4,
+      "purpose": "decision",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "label": "2a40f636",
+      "prompt_sha256": "cd804b7146ffb580bb14856379a8f1c9364eaf747968ba5151fdcc6a622e8d65",
+      "payload_sha256": "568d2abd6468d1e88f6ba6f2ac352410126522b2e467cdb3040ecec5f4e88f85",
+      "config_sha256": "35f09d4f4adb2d8c6a723eadac105853e28175c9cc9f89c8c204e45ccf3da6cf",
+      "authority": "eef51594",
+      "run_id": "20261124T202523909Z-project-reader-295c22bd-4d7d-4060-b986-e6a7b91ce6e7-pii95ms7",
+      "bundle": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-01/evaluators/20261124T202523909Z-project-reader-295c22bd-4d7d-4060-b986-e6a7b91ce6e7-pii95ms7",
+      "inventory": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-01/evaluators/20261124T202523909Z-project-reader-295c22bd-4d7d-4060-b986-e6a7b91ce6e7-pii95ms7.inventory.json",
+      "inventory_sha256": "951dda5087b0e55afe5c9af98d81d1a1beb549307c38402490ef63d8eac5a5d2",
+      "status": "COMPLETED",
+      "charge": 1,
+      "outcome": "sealed",
+      "session_id": "00eaaa84-df68-4be0-aeb5-b1e1b1fdc976",
+      "tool_calls": 0,
+      "answer_sha256": "32fe8f65ef81a86efffde3753229b5b490b70ea325cbbb13b2876bc18732d724",
+      "sealed_at": "2026-11-24T20:25:32.560447+00:00"
+    },
+    {
+      "order": 2,
+      "subject_order": 5,
+      "purpose": "decision",
+      "role": "evaluator",
+      "allocation_pool": "evaluator",
+      "label": "202df9df",
+      "prompt_sha256": "89d08630162ff268b5431f9a715277104d57654825ee2b7485f909b01a01f85c",
+      "payload_sha256": "79658a7411090f5d8f06c6cfc26c83361682c7eec3b9b92c51a50ad86705fef4",
+      "config_sha256": "35f09d4f4adb2d8c6a723eadac105853e28175c9cc9f89c8c204e45ccf3da6cf",
+      "authority": "eef51594",
+      "run_id": "20261124T202532726Z-project-reader-eeb5a5a1-fb87-437c-a47b-8f0bcbdef371-vtmatpi6",
+      "bundle": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-01/evaluators/20261124T202532726Z-project-reader-eeb5a5a1-fb87-437c-a47b-8f0bcbdef371-vtmatpi6",
+      "inventory": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-01/evaluators/20261124T202532726Z-project-reader-eeb5a5a1-fb87-437c-a47b-8f0bcbdef371-vtmatpi6.inventory.json",
+      "inventory_sha256": "86a276734e769131f5849db6e55980207cdac22dc3a327d7bbd86efe71ab9acb",
+      "status": "COMPLETED",
+      "charge": 1,
+      "outcome": "sealed",
+      "session_id": "b237fef6-fc21-4c7e-8a4e-4e5a4ac4504b",
+      "tool_calls": 0,
+      "answer_sha256": "741e1a1f6b68e13e7aa0880e142738d249bd79f7662e090d66cc23a607f5be09",
+      "sealed_at": "2026-11-24T20:25:41.269664+00:00"
+    }
+  ]
 }
