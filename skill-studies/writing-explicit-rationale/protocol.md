@@ -752,3 +752,5 @@ The [completed top-up and combined benchmark](runs/application-topup-01/report.m
 ### Three-run candidate checkpoint
 
 The owner authorized repetitions 2 and 3 of the [frozen 599-word screen](runs/rewrite-screen-01/freeze.json) under the same settings and rubric. Retain every attempt. This adds two subject slots and zero replacements or evaluator calls. Review the three outputs before allocating repetitions 4 and 5.
+
+All three fresh outputs met T1 and R1–R3. The [second](runs/rewrite-screen-01/rep-2/assessment.json) and [third](runs/rewrite-screen-01/rep-3/assessment.json) assessments retain the evidence for each. Both new projects explain the admission boundary and old-token exception in the tree. The candidate qualifies for two more observations under the frozen rule, pending owner review and allocation.

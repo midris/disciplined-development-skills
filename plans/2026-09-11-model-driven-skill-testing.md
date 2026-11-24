@@ -8,7 +8,7 @@ Study one shipped skill at a time. Establish a fresh baseline, identify a concre
 | --- | --- | --- |
 | Concise writing (CW) | Closed. The owner adopted the rewritten description with the original body. | [CW adoption](../skill-studies/concise-writing/protocol.md#closure-and-adoption) |
 | Sweeping stale references (SSR) | Closed. The owner adopted the compact, count-free skill with the tested description and complete-claim instruction. | [SSR adoption](../skill-studies/sweeping-stale-references/protocol.md#full-regression-adoption) |
-| Writing explicit rationale (WER) | Following the [completed shipped benchmark](../skill-studies/writing-explicit-rationale/runs/application-topup-01/report.md), collect two further frozen candidate observations for the three-run checkpoint under the [WER comparison rules](../skill-studies/writing-explicit-rationale/protocol.md#rewrite-comparison-rules). | [WER protocol](../skill-studies/writing-explicit-rationale/protocol.md) |
+| Writing explicit rationale (WER) | Following the [completed shipped benchmark](../skill-studies/writing-explicit-rationale/runs/application-topup-01/report.md), review the [three-run candidate checkpoint](../skill-studies/writing-explicit-rationale/protocol.md#three-run-candidate-checkpoint) before expanding to five under the [WER comparison rules](../skill-studies/writing-explicit-rationale/protocol.md#rewrite-comparison-rules). | [WER protocol](../skill-studies/writing-explicit-rationale/protocol.md) |
 | Remaining skills | Select the next skill with the owner after the WER decision. | [Skill inventory and composition](../ARCHITECTURE.md#composition-boundaries) |
 
 ### WER milestones
