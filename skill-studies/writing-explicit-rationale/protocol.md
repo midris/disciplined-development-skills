@@ -784,3 +784,7 @@ All [eight outputs](runs/rewrite-broad-02/assessment.json) met every applicable 
 Codex repeated the dispatch rule in both planners. Claude shared a policy function. Both projects explain the wrong-address risk and the dispatcher’s need to redirect loaded parcels. Both attributed the new status to the carrier although the task establishes that provenance only for the manual hold. This fidelity observation also occurred with shipped WER; it did not change the required action.
 
 The candidate now has one fresh observation in each of 13 provider and case combinations and five in Codex repeated review. On these four stage 2 cases the apps-disabled Codex shipped baseline met every criterion in 3/3 for export and 4/4 each for scope, rename and dispatch. Claude shipped met 5/5 for each. Review before allocating stage 3. The first proposed block adds two observations in each of the five higher-priority stage 1 combinations, with one reader per valid catalog output (up to four).
+
+### Broader candidate comparison, stage 3
+
+The owner approved [ten subjects and up to four eligible catalog readers](runs/rewrite-broad-03/schedule.json). Repeat the exact stage 1 configurations twice, retain every attempt without replacement and apply its whole-output rules. Use one independent printer reader per valid catalog project with the frozen question. Combine the observations with stage 1 for the three-run checkpoint. Advance only after owner review under the existing three-run rule.
