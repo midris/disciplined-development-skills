@@ -660,3 +660,27 @@ Report Codex results by launch phase within each case and arm. Retain the earlie
 ### Shipped application benchmark checkpoint
 
 The [benchmark report](runs/application-benchmark-01/benchmark-report.md) records 104 subjects, 102 valid setups, 18 eligible decision readers and 14 cross-model reviews. All 61 resumed subjects passed the revised tool-use check. The two unused evaluator slots belonged to invalid catalog subjects and are closed without replacement. Review the independent disagreements with the owner before deciding on discovery or rewrites.
+
+### Rewrite comparison rules
+
+The owner accepted the shipped benchmark as the regression baseline after the Fable review. Keep the active grades and the independent disagreements. For future comparisons, read v1 and Later together: an identifiable XML item under Later naming stable partner approval can convey the customer wait. Listing XML under Version 1 can leave it in scope. A Monday *handoff* supplies no launch date; a “Monday launch” heading changes the schedule even when the weekly deferral and Finance rationale are accurate. Score that under T1. Report task correctness, rationale and restraint and all-criteria counts separately. Track claims of certain customer breakage on every schema revision as fidelity observations wherever they occur, including the durable plan.
+
+Use the apps-disabled shipped phase as the primary Codex comparator, with its actual denominators (three repeated-review subjects, for example). Show pooled valid shipped results as context. Use the unchanged Claude configuration for its comparison. Keep the seven frozen cases and the existing printer question. In future independent review packets, label each check by purpose (original tests or named private replay) beside its result. Mix subject providers and arms under opaque labels within case groups so a single reviewer's strictness does not coincide with provider. Preserve complete handoffs and disclose any exposure clues.
+
+#### Incremental candidate screen
+
+The [framework's repetition rule](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md#cw-testing-model) permits a fixed screen and separately authorized top-ups. For WER, start each candidate with **one subject call total**, on Codex repeated review. Its second decision tests whether the subject looks past the issue the reviewer already identified. The shipped skill itself missed this decision once. Prior candidate runs inform case selection; they are outside the fresh screen.
+
+| Evidence available for unchanged candidate, case and provider | Decision before allocating more |
+| --- | --- |
+| One valid output | Stop on an outright failure, such as breaking approved imports or leaving both consequential decisions only in correspondence. If it works, or fixes the guard but misses the second rationale as shipped sometimes does, add two fresh runs. Record the miss and its consequence. |
+| Three valid outputs total | Advance to five by adding two if at least two deliver the complete repair and the remaining output shows no serious task regression. Stop if the same material omission recurs in two outputs. Resolve a genuinely disputed grade from the whole output before making the allocation decision. |
+| Five valid outputs total | Compare the individual outcomes and recurring failure modes with shipped WER. Report the observed counts and uncertainty. Advancement here earns a broader comparison across the other cases and Claude; adoption requires that broader evidence. |
+
+Carry earlier observations forward only for identical candidate bytes, case inputs, provider settings and scoring rules. An edited skill starts a new series. Preserve failed and invalid attempts separately; an invalid setup cannot decide the candidate's behavior. A stopped candidate retains its actual denominator. Each stage needs only the additional calls for that stage.
+
+For the broader comparison, give the most weight to the second repeated-review rationale, the quota admission rationale and the catalog proof dependency. Use rename and dispatch to check restraint, and export and scope trim to check fidelity. Before dispatch freeze the selected cells, per-case advancement criteria, candidate hash and token-count method. Compare the full text delivered using the same tokenizer for candidate and shipped. Prefer a smaller candidate when it preserves consequential behavior across the selected cases; record the actual savings. A one-run difference in these small cells calls for inspecting the outputs. The first candidate proposed for screening is the existing 599-word examples-and-warnings revision; preserve the comprehensive rewrite as a distinct candidate. This is a prospective schedule; the completed baseline allocation is closed.
+
+### First 599-word rewrite screen
+
+The owner approved one fresh Codex repeated-review subject with the [frozen candidate and inputs](runs/rewrite-screen-01/freeze.json). Use the apps-disabled runner and whole-output scoring. Retain the attempt regardless of outcome, then report before any expansion to three. This screen has its own ledger, one subject slot and no replacement or evaluator allocation.

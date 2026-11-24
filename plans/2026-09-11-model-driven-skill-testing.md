@@ -8,7 +8,7 @@ Study one shipped skill at a time. Establish a fresh baseline, identify a concre
 | --- | --- | --- |
 | Concise writing (CW) | Closed. The owner adopted the rewritten description with the original body. | [CW adoption](../skill-studies/concise-writing/protocol.md#closure-and-adoption) |
 | Sweeping stale references (SSR) | Closed. The owner adopted the compact, count-free skill with the tested description and complete-claim instruction. | [SSR adoption](../skill-studies/sweeping-stale-references/protocol.md#full-regression-adoption) |
-| Writing explicit rationale (WER) | Shipped application benchmark complete. Review the independent judgments and two Codex runtime phases with the owner. | [WER protocol](../skill-studies/writing-explicit-rationale/protocol.md) |
+| Writing explicit rationale (WER) | Shipped benchmark accepted. Prepare the first one-call rewrite screen under the [WER comparison rules](../skill-studies/writing-explicit-rationale/protocol.md#rewrite-comparison-rules). | [WER protocol](../skill-studies/writing-explicit-rationale/protocol.md) |
 | Remaining skills | Select the next skill with the owner after the WER decision. | [Skill inventory and composition](../ARCHITECTURE.md#composition-boundaries) |
 
 ### WER milestones
@@ -42,7 +42,8 @@ Study one shipped skill at a time. Establish a fresh baseline, identify a concre
 - [x] Review the reader contrast and select the fresh shipped application matrix for an offline freeze.
 - [x] Prepare and freeze the [104-subject application benchmark](../skill-studies/writing-explicit-rationale/protocol.md#shipped-application-benchmark-freeze), scoring rules and evaluator forecast.
 - [x] Complete the [shipped application benchmark](../skill-studies/writing-explicit-rationale/runs/application-benchmark-01/benchmark-report.md), including the reader decisions, cross-model judgments and Codex launch phases. Decide native discovery separately.
-- [ ] Review the complete baseline and cross-model output assessment with the owner before resuming rewrite work.
+- [x] Review the shipped baseline, cross-model disagreements and Fable findings with the owner; retain the active judgments.
+- [x] Freeze the first candidate screen and its allocation under the [incremental comparison rules](../skill-studies/writing-explicit-rationale/protocol.md#incremental-candidate-screen).
 
 ## Starting or resuming without conversation history
 
