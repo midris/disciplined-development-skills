@@ -306,7 +306,7 @@ Actual attempts: [subject index](runs/application-benchmark-01/claude/run-index.
 ### Proposed batch: codex-application-topup-01
 
 Scope: 18 approved subjects for repetitions 3–5. Include every valid-setup execution. No automatic retry. Preserve every attempt.
-Actual attempts: [subject index](runs/application-topup-01/codex/run-index.json).
+Actual attempts: [subject index](runs/application-topup-01/codex/run-index.json). [Assessment](runs/application-topup-01/codex-assessment.md).
 
 [helper-rename](runs/application-benchmark-01/codex/helper-rename-manifest.json) [scope-trim](runs/application-benchmark-01/codex/scope-trim-manifest.json) [dispatch-hold](runs/application-benchmark-01/codex/dispatch-hold-manifest.json)
 
@@ -334,7 +334,7 @@ Actual attempts: [subject index](runs/application-topup-01/codex/run-index.json)
 ### Proposed batch: claude-application-topup-01
 
 Scope: 18 approved subjects for repetitions 3–5. Include every valid-setup execution. No automatic retry. Preserve every attempt.
-Actual attempts: [subject index](runs/application-topup-01/claude/run-index.json).
+Actual attempts: [subject index](runs/application-topup-01/claude/run-index.json). [Assessment](runs/application-topup-01/claude-assessment.md).
 
 [helper-rename](runs/application-benchmark-01/claude/helper-rename-manifest.json) [scope-trim](runs/application-benchmark-01/claude/scope-trim-manifest.json) [dispatch-hold](runs/application-benchmark-01/claude/dispatch-hold-manifest.json)
 
@@ -372,7 +372,7 @@ Host loss remains a recovery gap for WER. Include single-host retention in the o
 
 The runner totals below cover its linked subject and evaluator run indexes: the original baseline, the eight functional-pilot subjects and the proposed application benchmark. The original baseline used 24 subjects, 20 evaluators and one retry. The eight pilot subjects are fully spent. Historical comparison batches and the ten pilot/contrast readers use separate ledgers in their checkpoints and do not enter this runner subtotal. No historical capacity carries forward.
 Proposed outer limits for the linked indexes: 172 subject, 54 evaluator, 0 authoring and 1 retry invocations.
-Dispatched calls are **136 subject, 52 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **36 / 2 / 0 / 0** before the subject top-up.
+Dispatched calls are **172 subject, 52 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **0 / 2 / 0 / 0** after the subject top-up.
 Record benchmark evaluator attempts with distinct run IDs, evaluator role, allocation pool and launcher charge in the version-1 evaluator ledger.
 
 0 active minutes booked; 260 minutes below the 260-minute planning guideline. This is an opening budget ledger for the proposed run sequence. Earlier case development has no measured time entry.
@@ -746,3 +746,5 @@ The [first fresh screen result](runs/rewrite-screen-01/assessment.json) met T1 a
 ### Shipped benchmark top-up
 
 The owner approved [36 additional subjects](runs/application-topup-01/schedule.json) before further candidate work. Add repetitions 3–5 to the existing two for helper rename, scope trim and dispatch hold, in both arms and providers. Reuse the frozen case manifests, application scoring policy, runtime pins, apps-disabled Codex boundary and post-resumption audit. Preserve failures. Apply the Monday handoff ruling consistently. Report new and combined results; distinguish the earlier Codex apps-enabled stratum. The historical independent assessments cover only the earlier outputs. No other calls are allocated.
+
+The [completed top-up and combined benchmark](runs/application-topup-01/report.md) retain all 36 subjects. Shipped met every functional criterion in 18/18 new outputs and control in 17/18. Review the combined baseline before allocating further candidate subjects.

@@ -2,6 +2,8 @@
 
 All 104 scheduled subjects ran once. The [Codex assessment](codex-assessment.md) and [Claude assessment](claude-assessment.md) include every attempt and criterion. The [individual records](assessment.json) link the retained evidence and active assessor's reconciliation. Two Codex catalog setups were invalid, one per condition. No replacements were used.
 
+The [combined benchmark](../application-topup-01/report.md) includes the 36 subsequent subjects and reports five scheduled repetitions per model and condition on every scenario.
+
 ## What changed in the finished work
 
 Cells show outputs meeting every functional criterion / valid outputs. Each case received two or five repetitions per provider and condition. These counts measure explicit application on seven known development fixtures. They do not estimate population reliability or native selection.
