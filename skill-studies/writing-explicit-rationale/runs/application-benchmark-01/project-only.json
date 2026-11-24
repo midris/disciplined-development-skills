@@ -256,5 +256,371 @@
     "payload_sha256": "392688d5cc96dc2e780c6aac34c9cd16a347f73782a828aabb972c4e6f94d4a8",
     "project_read": "The signed credit survives a rebrand until the lender supplies an amended form. Room order is specified without the production reason, so the printer request would require follow-up.",
     "sealed_at": "2026-11-23T21:35:07.427956+00:00"
+  },
+  {
+    "label": "e18cecc6",
+    "payload_sha256": "10515d56eb8b586e3cfa4a412f88445c4afaee4aab38df5b287d213c8b146c69",
+    "project_read": "The signed credit survives a rebrand until the lender amends the form. The registrar routes requests. Room sheets match accession order; alphabetizing makes corrections harder, with title lookup available through the index.",
+    "sealed_at": "2026-11-24T07:03:46.023507+00:00"
+  },
+  {
+    "label": "d7e4bb75",
+    "payload_sha256": "c641dafd50787b5da77bded06be68d6ebbef6ee1eaa5ca6e6e771fd91a8d353f",
+    "project_read": "Same complete renamed helper and retained billing-correction comment as the other rename outputs. No extra durable commentary.",
+    "sealed_at": "2026-11-24T07:05:23.756324+00:00"
+  },
+  {
+    "label": "0bf0f077",
+    "payload_sha256": "c641dafd50787b5da77bded06be68d6ebbef6ee1eaa5ca6e6e771fd91a8d353f",
+    "project_read": "Same complete renamed helper and retained billing-correction comment as the other rename outputs. No extra durable commentary.",
+    "sealed_at": "2026-11-24T07:06:44.663675+00:00"
+  },
+  {
+    "label": "25d710a5",
+    "payload_sha256": "c641dafd50787b5da77bded06be68d6ebbef6ee1eaa5ca6e6e771fd91a8d353f",
+    "project_read": "Same complete renamed helper and retained billing-correction comment as the other rename outputs. No extra durable commentary.",
+    "sealed_at": "2026-11-24T07:06:44.663926+00:00"
+  },
+  {
+    "label": "82f30326",
+    "payload_sha256": "c641dafd50787b5da77bded06be68d6ebbef6ee1eaa5ca6e6e771fd91a8d353f",
+    "project_read": "Same complete renamed helper and retained billing-correction comment as the other rename outputs. No extra durable commentary.",
+    "sealed_at": "2026-11-24T07:06:44.663955+00:00"
+  },
+  {
+    "label": "a772ad92",
+    "payload_sha256": "f96866b14da0062532d3601bad6435c4ec892a07435ef8619587825809bf28db",
+    "project_read": "Both daily commitments and the Support guide remain at launch, with the first-month review intact. The deferred heading links both weekly items to the unresolved cross-period close rule and conditional manual work. Finance agreement is a prerequisite; no delivery date is promised.",
+    "sealed_at": "2026-11-24T07:08:12.343391+00:00"
+  },
+  {
+    "label": "b56d3589",
+    "payload_sha256": "e7f0f9bc6665e52c5676f2655e27d5646e1dfeec2401d84008abdf86bd1c3f7f",
+    "project_read": "The compact plan separates both daily commitments from both deferred weekly items, preserves the guide and adoption review, and identifies Finance agreement as a reconsideration trigger and possible manual comparison for affected weeks.",
+    "sealed_at": "2026-11-24T07:08:12.343579+00:00"
+  },
+  {
+    "label": "1862670b",
+    "payload_sha256": "3eedeefba09bdba6b86187eeb612896f7be258dc01d0561eff80ead8aa988321",
+    "project_read": "The retained daily work, guide handoff and adoption review are clear. Both weekly items are deferred and the plan explicitly links Finance agreement and conditional extra Support work to the cross-period rule.",
+    "sealed_at": "2026-11-24T07:09:51.199542+00:00"
+  },
+  {
+    "label": "fd539d7d",
+    "payload_sha256": "5ef5095e2be689df8d6e93fcf176f5396d98ce2289ff93308c043c3450dc4cdd",
+    "project_read": "The plan gives a Monday launch milestone. Both weekly items are deliberately deferred, the Finance close rule triggers reconsideration, and possible manual comparison is confined to affected weeks. The guide and adoption check survive.",
+    "sealed_at": "2026-11-24T07:09:51.199982+00:00"
+  },
+  {
+    "label": "b81aa5ad",
+    "payload_sha256": "de5d8a39f286a40839884db70ad7ee5f3f442185c2db7a92b8d4b892eccbcafe",
+    "project_read": "The two uncommented lookup functions share names with statuses in the spec. Holds explains both omission from new trips and dispatcher ownership. Carrier attribution covers both.",
+    "sealed_at": "2026-11-24T07:12:12.865156+00:00"
+  },
+  {
+    "label": "9ef02389",
+    "payload_sha256": "bc4772a804e7a7588437b036226be4c1977668e69866a501e9d409d85607e9df",
+    "project_read": "Both planners use matching hold states, keep loaded parcels assigned, and use the expected titles. Spec and comments explain the wrong-address risk and dispatcher redirection. Repeated accurate text adds some maintenance cost.",
+    "sealed_at": "2026-11-24T07:12:24.221986+00:00"
+  },
+  {
+    "label": "b2903e0e",
+    "payload_sha256": "371687114179b8ea0f3fbe44c924e7f4a71ae8f43c8e49bd2fac860cf3ee2e0c",
+    "project_read": "A maintainer can follow either planner's status values to the spec, which explains the wrong-address risk, already-loaded exception and dispatcher ownership. Title correction adds no extra prose.",
+    "sealed_at": "2026-11-24T07:12:24.222149+00:00"
+  },
+  {
+    "label": "bef47934",
+    "payload_sha256": "0f3e2cd2823e543c500e5b4c4cf67ec42b8c517f512c2ffac2282e0545666c61",
+    "project_read": "Both public wrappers preserve their caller interface and share a hold definition. The adjacent reference reaches a spec covering collection risk, loaded-parcel ownership and both statuses; some explanation repeats but remains consistent.",
+    "sealed_at": "2026-11-24T07:12:24.222191+00:00"
+  },
+  {
+    "label": "a732cc41",
+    "payload_sha256": "df89a9cb9b437bc18b3a01057eaa4e40a84f2aca148a131eaab924d3f2ce5b7c",
+    "project_read": "CSV and JSON are in v1, XML is in Later after stable-schema approval by the partner. An XML customer must therefore wait. The ongoing churn is implicit and no date is claimed.",
+    "sealed_at": "2026-11-24T07:14:00.062795+00:00"
+  },
+  {
+    "label": "30799ca0",
+    "payload_sha256": "b2df70ab1b4e5a3a3fd0908a0c41317b88b4ce03868de50034f30dff302dde03",
+    "project_read": "CSV and JSON proceed on schedule. XML waits for stable partner approval, with no dated promise. The cross-reference works. Predicting breakage on every revision overstates a real compatibility risk; the scope and decision gate are still clear.",
+    "sealed_at": "2026-11-24T07:14:10.061247+00:00"
+  },
+  {
+    "label": "e5f8998f",
+    "payload_sha256": "816f7e2c41fcf1c502ce60682370a7f741bb9c9dbfd157cc3bf819f636ee0102",
+    "project_read": "The Later item explains the ongoing schema changes, the stable partner approval gate and the XML customers' wait. The v1 scope and other milestones remain intelligible.",
+    "sealed_at": "2026-11-24T07:14:10.061410+00:00"
+  },
+  {
+    "label": "ef4a0e24",
+    "payload_sha256": "c513dd4a9e606a1e931fbe819550fce6428e7e2302cac7fdb2a572e6d486625e",
+    "project_read": "The blocked item gives XML customers' wait, ongoing churn, no date and the stable partner approval gate. V1 commitments and later adoption-related work remain clear.",
+    "sealed_at": "2026-11-24T07:14:10.061449+00:00"
+  },
+  {
+    "label": "a98246d9",
+    "payload_sha256": "41859969c729b6b7d9b7c3fa2eb1118c9107f81c5003714bd6f16a4ada19e6a7",
+    "project_read": "The guard and tests convey the precise old-token window and immediate new limit. No explanation links the exception to protecting already-admitted work.",
+    "sealed_at": "2026-11-24T07:17:34.879340+00:00"
+  },
+  {
+    "label": "cd7e82e8",
+    "payload_sha256": "0deaf39aa0673541d8332f6d7cbad4aa4059e3943936eb8417b8d9a183d589be",
+    "project_read": "The comment at the referenced duration names the gateway, in-flight work, risk of rejecting admitted requests, bounded extra quota and exact endpoint. Tests exercise the boundaries and upgrades.",
+    "sealed_at": "2026-11-24T07:17:34.879995+00:00"
+  },
+  {
+    "label": "ee5fdfd5",
+    "payload_sha256": "62220c5d32bdf8b2c19a969e7b9e1877b30880003c8283a43fc011ade954c02a",
+    "project_read": "A compact comment at the guard explains both the admission risk and the accepted extra quota for 60 seconds, and code and tests identify which tokens qualify.",
+    "sealed_at": "2026-11-24T07:17:34.880468+00:00"
+  },
+  {
+    "label": "fb331e1e",
+    "payload_sha256": "bed7488d8a78be2a019a5dd131f6041fc925533932780a68bfad23b473362ad2",
+    "project_read": "The constant identifies a gateway agreement and the affected tokens, but says nothing about in-flight work already admitted. A maintainer must still ask what cutting the limit immediately would break.",
+    "sealed_at": "2026-11-24T07:17:34.880543+00:00"
+  },
+  {
+    "label": "dc57c06b",
+    "payload_sha256": "22ac29fd6c170e51ecef8edf946df2508bb0f544cc6f291ecd3747edae8c0c35",
+    "project_read": "Guard placement and the quota grace are visible, but no local explanation identifies why the duplicated checks should remain, what triggers reconsideration, or why extra quota is accepted for admitted work.",
+    "sealed_at": "2026-11-24T07:20:12.681362+00:00"
+  },
+  {
+    "label": "753f9bcb",
+    "payload_sha256": "d9665db04f86499134606f597edffc393ada0eb0159b6010313142b654f8e93c",
+    "project_read": "Guard and persist comments document the already-approved batch path, accepted duplication and a third interactive caller. Factoring is expressed more definitely than reconsidering. The quota window is visible but the admitted-work reason is absent; the rename has no excess explanation.",
+    "sealed_at": "2026-11-24T07:20:23.760252+00:00"
+  },
+  {
+    "label": "8d36299d",
+    "payload_sha256": "98a7f2474898a1eb92094af9568a5c478acd8ee2d33a82a36e5e07b015b9ffaa",
+    "project_read": "Admission was moved to persistence with a default permit for batch calls. A test establishes rejection when an explicit limit is supplied, but the intended boundary, third-caller decision and quota rationale are absent. The renamed helper remains straightforward.",
+    "sealed_at": "2026-11-24T07:20:23.760497+00:00"
+  },
+  {
+    "label": "a9dd68a5",
+    "payload_sha256": "09cc0545a538aefcfa388a336a776b3cc9f7cab2cdaa2d83771805976f6f6747",
+    "project_read": "The shared persistence comment ties approval, duplicate guards and a third interactive caller together. The quota branch gives the admission risk, old-token scope and 60-second cost. A definite promise to factor is stronger than a revisit. The label remains simple.",
+    "sealed_at": "2026-11-24T07:20:23.760539+00:00"
+  },
+  {
+    "label": "1b7ea8a1",
+    "payload_sha256": "c3660ad405e493f654611bf3d1c7a46a95caeedea967947bad45fbd1154518bc",
+    "project_read": "Both decisions are discoverable: only the lender can amend the signed credit, and accession order aligns proof corrections with room sheets. The separate title index explains the cost to browsers.",
+    "sealed_at": "2026-11-24T07:23:06.240372+00:00"
+  },
+  {
+    "label": "22524c33",
+    "payload_sha256": "819c1f8aaa36d8a4a39048282cf167d463c411048f1e606903b5f81b68c66458",
+    "project_read": "The signed form authorizes an apparently outdated name until lender amendment. The room-sheet dependency and title index give a printer the reason and tradeoff underlying accession order.",
+    "sealed_at": "2026-11-24T07:23:06.240758+00:00"
+  },
+  {
+    "label": "49a336bb",
+    "payload_sha256": "e06b382e648433ddcb2eb9f417fc58aedff40efaf5b59abaa93d859a195388d9",
+    "project_read": "A maintainer can recover the lender's amendment authority, room-sheet dependence on accession order, and title index alternative, even though the text does not explicitly mention rebranding.",
+    "sealed_at": "2026-11-24T07:23:06.240844+00:00"
+  },
+  {
+    "label": "d1ac7603",
+    "payload_sha256": "121592ea4ef7abce673e269cc8e78cdbc184cdbb370af63aae2aa1f1901a0069",
+    "project_read": "Clear signed-credit rule and lender amendment authority after a rebrand. The bare room-order rule gives no reason to retain it under a request to alphabetize.",
+    "sealed_at": "2026-11-24T07:23:06.240891+00:00"
+  },
+  {
+    "label": "b0ca9ae8",
+    "payload_sha256": "b8312b0597d5b4ee6f2c2c4854b4e3116967e97ee78f48ed9ec47bf36ac24dfe",
+    "project_read": "V1 and Later establish that XML customers wait until stable partner approval while CSV and JSON proceed. Why that approval matters is implicit in stable schema.",
+    "sealed_at": "2026-11-24T07:26:00.171494+00:00"
+  },
+  {
+    "label": "31223b27",
+    "payload_sha256": "515e0dc58ba3f650668c4d1183f6d898ca34e1e5fcb85325471b1c3cb4378ab5",
+    "project_read": "The Later item explains ongoing churn and partner approval. V1 naming only CSV and JSON conveys the XML customer's wait; the other release commitments remain legible.",
+    "sealed_at": "2026-11-24T07:26:11.676031+00:00"
+  },
+  {
+    "label": "a3a23cb8",
+    "payload_sha256": "b383f73905a4117fd2960ca20a8219c21e33791c5d15e0a3cbaee199e4d7e04a",
+    "project_read": "The v1 note explains building against a changing schema, the wait for stable partner approval and retained CSV/JSON schedule. The Later cross-reference keeps the deferred work discoverable.",
+    "sealed_at": "2026-11-24T07:26:11.677472+00:00"
+  },
+  {
+    "label": "c4248796",
+    "payload_sha256": "c99b8facaf3b7fe884ad0a801f8835f407b6d6fea60398383b6f977bf178a451",
+    "project_read": "The Later item explicitly explains churn, partner approval and the accepted XML customer wait without changing the other release commitments.",
+    "sealed_at": "2026-11-24T07:26:11.677926+00:00"
+  },
+  {
+    "label": "4b81e4fc",
+    "payload_sha256": "a5d1ef31f1dc1afd8b506041c13486aaefc0b6eed73049ba458c33c70b01ef52",
+    "project_read": "The gateway agreement, already-admitted in-flight work and bounded higher quota are explained at the duration constant. The comment shortens the constant name to GRACE_SECONDS, but the definition and code identify it unambiguously.",
+    "sealed_at": "2026-11-24T07:28:31.911719+00:00"
+  },
+  {
+    "label": "5416dc6e",
+    "payload_sha256": "b32f4826799f0d0a05d79a52996648c777585833dd0da9fe60d3f928c5deefca",
+    "project_read": "Named conditions and tests give old-token eligibility and the cutoff. The project does not explain why enforcing the lower limit immediately would be harmful.",
+    "sealed_at": "2026-11-24T07:28:31.911955+00:00"
+  },
+  {
+    "label": "91b8cd53",
+    "payload_sha256": "af8d221bc7624f69e6202b124d3338d12764d4933ff19c23ba175a37c62eb7d3",
+    "project_read": "The docstring precisely describes old tokens, immediate upgrades and the exclusive cutoff; no durable explanation of protecting admitted work or accepting bounded excess.",
+    "sealed_at": "2026-11-24T07:28:31.911994+00:00"
+  },
+  {
+    "label": "b013a7a8",
+    "payload_sha256": "f96e5d2cf509e17a4e5fd1d0b4d9ad448da46ce20f89638332f0609176d467dd",
+    "project_read": "Comment and code together connect the old higher limit to work admitted before the downgrade and the accepted 60 seconds of extra quota. The phrase 'retain a downgraded quota' is imprecise but clarified by old limit and tests.",
+    "sealed_at": "2026-11-24T07:28:31.912029+00:00"
+  },
+  {
+    "label": "e3dc3a58",
+    "payload_sha256": "22ac29fd6c170e51ecef8edf946df2508bb0f544cc6f291ecd3747edae8c0c35",
+    "project_read": "Guard placement and the quota grace are visible, but no local explanation identifies why the duplicated checks should remain, what triggers reconsideration, or why extra quota is accepted for admitted work.",
+    "sealed_at": "2026-11-24T07:32:21.379301+00:00"
+  },
+  {
+    "label": "bfdcb3b6",
+    "payload_sha256": "f079e3fd8f170f974bb7c10b7ed105f677c239b6ea13662fdfe74902fadd0e9e",
+    "project_read": "The guard explains the approved batch bypass, accepted duplication and reconsideration if a third interactive caller appears. The quota branch identifies admitted work and accepted excess limited to old tokens for 60 seconds. The rename stays routine.",
+    "sealed_at": "2026-11-24T07:32:31.837018+00:00"
+  },
+  {
+    "label": "c9db23cb",
+    "payload_sha256": "0392c6065d3d7779192fc9f3437706934ea6799ac9c7304a5f3bc1f44ddcb3f8",
+    "project_read": "Persistence enforces admission when given an explicit flag, and the added rejection test verifies that arrangement. The code omits why the earlier boundary changed and why admitted work receives quota grace. The routine rename stays proportionate.",
+    "sealed_at": "2026-11-24T07:32:31.837204+00:00"
+  },
+  {
+    "label": "cfa50b85",
+    "payload_sha256": "041085ff36a66a196a024070b4d75821437e656da5065f6dd3e2a040b4d00a09",
+    "project_read": "The guard comment connects the two interactive callers to already-approved batches and the third-caller trigger. Factoring reads as a decision already made. The quota branch explains admission and accepted one-minute excess; labels stay simple.",
+    "sealed_at": "2026-11-24T07:32:31.837252+00:00"
+  },
+  {
+    "label": "33e1a033",
+    "payload_sha256": "66618f7540f2ec2030a5ae74ccb002e04167c6000a0a0f58f051a986237ff1da",
+    "project_read": "The signed credit only changes on lender amendment, including after a rebrand. Accession order preserves the proof desk's room-sheet check and title lookup remains available in the index.",
+    "sealed_at": "2026-11-24T07:34:50.804343+00:00"
+  },
+  {
+    "label": "93f95ebe",
+    "payload_sha256": "51da183bdd4dd787100d857319d70c777f781b6747882c1a47c4813ca2d0c150",
+    "project_read": "A short spec directly names the signed credit, sole amendment authority and the room-sheet correction check that depends on accession order. Title lookup uses the index.",
+    "sealed_at": "2026-11-24T07:34:50.804504+00:00"
+  },
+  {
+    "label": "ea7ce3a1",
+    "payload_sha256": "31268173f06e9d3d1e1b92dba7203f8273c5b7fe102290bce48705068ab8e91e",
+    "project_read": "The signed form and lender control the credit after rebranding. Both the purpose and key of room sheets are explicit in the ordering rule, with title lookup elsewhere.",
+    "sealed_at": "2026-11-24T07:34:50.804544+00:00"
+  },
+  {
+    "label": "fc0e0832",
+    "payload_sha256": "5df05f928e0e4cc32c42fd16dda3ca4c7535e6a61d6fffcc2da5d0ba7cfe0029",
+    "project_read": "Each decision includes the rule, source and practical downside, including the proof desk's dependence on accession order. Saying a visitor cannot find a title in the main listing overstates the browsing cost; the index alternative remains clear.",
+    "sealed_at": "2026-11-24T07:34:50.804581+00:00"
+  },
+  {
+    "label": "02c11204",
+    "payload_sha256": "6de40e03fa200140d614c5a0f417137c31f704e3f36407601cbf628be662d524",
+    "project_read": "V1 and Later agree on the XML deferral, the signed-off schema gate, wait and schedule. Breakage on every revision is a stronger prediction than compatibility risk requires.",
+    "sealed_at": "2026-11-24T07:38:04.905944+00:00"
+  },
+  {
+    "label": "3f521ff0",
+    "payload_sha256": "c56ae89b82e6d55417f01d9a5c494ba601848a28ea256e425b4fe68ccf1b9979",
+    "project_read": "The Later item explicitly gives schema churn and stable partner approval. The v1 list and deferred placement convey that XML users wait.",
+    "sealed_at": "2026-11-24T07:38:04.906103+00:00"
+  },
+  {
+    "label": "d8d99831",
+    "payload_sha256": "2a9cd151f80d8c1835030945f4dbb15f2d451923e9ac4cef9be5e7c384da3596",
+    "project_read": "The Later item ties the customer wait to an incompatible-export risk and stable schema approval, confirming the rest of v1 proceeds on schedule.",
+    "sealed_at": "2026-11-24T07:38:04.906142+00:00"
+  },
+  {
+    "label": "efeef827",
+    "payload_sha256": "b336897a4c2c117d7e782590d20d603313fec1396a241bd47bed0c2674e0f428",
+    "project_read": "XML remains listed as a Version 1 commitment with approval as its prerequisite. A maintainer may treat approval as a v1 deliverable or gate even though CSV and JSON are on schedule. Later does not identify XML, so whether it is outside v1 is unclear.",
+    "sealed_at": "2026-11-24T07:38:04.906179+00:00"
+  },
+  {
+    "label": "af4fd2f7",
+    "payload_sha256": "a47264d1c23874a6e0ca8276e546034a6e5ee7568e1b6ac21dac84b10ae88d75",
+    "project_read": "Referencing the named duration takes a maintainer to the Gateway agreement, prior admission, mid-flight rejection risk and accepted bounded higher quota. The code and tests define the cutoff.",
+    "sealed_at": "2026-11-24T07:38:04.906216+00:00"
+  },
+  {
+    "label": "f48283c5",
+    "payload_sha256": "0ee4dc5013ae9838be853cb0955a8af4d16e72e4a1999e7c64e4f3d335a609b6",
+    "project_read": "Conditions and tests convey which tokens get the old limit and when. The reason to preserve that exception for already-admitted work does not appear.",
+    "sealed_at": "2026-11-24T07:38:04.906252+00:00"
+  },
+  {
+    "label": "7e39aa05",
+    "payload_sha256": "ccfcaf5fe5abe60b039e94fef42dd3586f6d0c453ad1a0e356eb022501c0a30e",
+    "project_read": "The guard explains that the old quota avoids rejecting already-admitted work at a bounded cost for pre-change tokens. The cutoff and immediate treatment of new tokens are clear in code and tests.",
+    "sealed_at": "2026-11-24T07:39:09.177476+00:00"
+  },
+  {
+    "label": "a6d5d76d",
+    "payload_sha256": "06f89817e1e1be253e0c85673c826ddcea8668b9f2f26e413c3a626d8a3a8d01",
+    "project_read": "The duration and docstring explain the exact behavioral exception. They do not give the admitted-work reason or explain why excess quota is accepted.",
+    "sealed_at": "2026-11-24T07:39:09.177648+00:00"
+  },
+  {
+    "label": "c4eac4af",
+    "payload_sha256": "22ac29fd6c170e51ecef8edf946df2508bb0f544cc6f291ecd3747edae8c0c35",
+    "project_read": "Guard placement and the quota grace are visible, but no local explanation identifies why the duplicated checks should remain, what triggers reconsideration, or why extra quota is accepted for admitted work.",
+    "sealed_at": "2026-11-24T07:43:12.014244+00:00"
+  },
+  {
+    "label": "1c667759",
+    "payload_sha256": "d53c03c0481588d0bb7c25e67459298f31c5d29926ab584fd8eef597da44e3ed",
+    "project_read": "The interactive guard explains two duplicated checks and the third-caller revisit, with a reference from the batch path. The quota branch explains admitted work, old tokens and the bounded extra use. The label needs no explanation.",
+    "sealed_at": "2026-11-24T07:43:23.354653+00:00"
+  },
+  {
+    "label": "222312e4",
+    "payload_sha256": "d4af50a840709c74e3705c524a288b9470b9c5fdc72b02d0aee0b2c7890ffe96",
+    "project_read": "Persistence now takes a required flag, and approved batches pass True. Tests establish behavior but the tree never explains reversing the earlier boundary or accepting the old-token grace. The label helper is unchanged.",
+    "sealed_at": "2026-11-24T07:43:23.354812+00:00"
+  },
+  {
+    "label": "3ebd66ec",
+    "payload_sha256": "a0af19a5d22ded446df4c40231c117f2fdb18096755ae27654371f0b7753e60c",
+    "project_read": "The guard explains shared batch use, duplication and the third-caller trigger. The quota comment ties old tokens to protecting in-flight work. Returning the previous quota under the downgrade comparison for less than 60 seconds conveys the bounded higher allowance.",
+    "sealed_at": "2026-11-24T07:43:23.354854+00:00"
+  },
+  {
+    "label": "51e0fffa",
+    "payload_sha256": "73065ada941778a0cd08e715827a52a0c8b17fc1608ffada4573a032cfd9f006",
+    "project_read": "The signed credit and amendment rule are clear, and the accession-order item links corrections to room sheets. The title index gives a browsing alternative.",
+    "sealed_at": "2026-11-24T07:43:23.354891+00:00"
+  },
+  {
+    "label": "d3acd5b3",
+    "payload_sha256": "e96e0c2a6229c872e4fd3c42efd6046a74af0249fe116200d6238c8719340c55",
+    "project_read": "Both rules have adjacent reasons and implications. The registrar requests a lender amendment; proof corrections match the ordered room sheets. The instruction against editing at proof stage reads broadly, but the signed-form exception is explicit nearby.",
+    "sealed_at": "2026-11-24T07:43:23.354924+00:00"
+  },
+  {
+    "label": "1caec7fa",
+    "payload_sha256": "2f1c46dfa14c2d7f195a8fa759db1bbeea849ffc1b9bf8a223a0412d8dedc466",
+    "project_read": "The project states the signed credit and lender amendment authority. Accession-keyed room sheets give the practical reason for keeping object order; the title index serves browsing.",
+    "sealed_at": "2026-11-24T07:44:26.150609+00:00"
+  },
+  {
+    "label": "5e7f60b2",
+    "payload_sha256": "3d29fa440fc447f3a5ad3159a095b652e9a2c71c936b4ae802cb7819a0abc73d",
+    "project_read": "Both rules and their consequences are visible in the spec without the editor letter: approved credit persists until a lender amendment and room order keeps proof corrections aligned with room sheets.",
+    "sealed_at": "2026-11-24T07:44:26.150761+00:00"
   }
 ]

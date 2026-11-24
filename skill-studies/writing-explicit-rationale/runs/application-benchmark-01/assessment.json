@@ -1,0 +1,2296 @@
+{
+  "subjects": [
+    {
+      "order": 1,
+      "label": "4f781572",
+      "provider": "codex",
+      "case": "export-deferral",
+      "condition": "original",
+      "repetition": 1,
+      "phase": "apps enabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-01/execution-result.json",
+        "sha256": "df06afbf91ac515a243a20ef252f31432f1fda593e2e8f90c809b2f616604ba9",
+        "version": "1"
+      },
+      "interpretation": "The plan and short PR summary agree on v1 and partner approval. The plan itself states the cost for XML customers."
+    },
+    {
+      "order": 2,
+      "label": "a1ed3a11",
+      "provider": "claude",
+      "case": "export-deferral",
+      "condition": "control",
+      "repetition": 1,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-02/execution-result.json",
+        "sha256": "1366b4fd923c3e76c049794221c05dfefdc0e4867071aa5d5a6b560a80145b24",
+        "version": "1"
+      },
+      "interpretation": "The wait follows from XML's explicit Later gate and no date; churn is explicit. Extra Git detail does not affect the handoff."
+    },
+    {
+      "order": 3,
+      "label": "369fad18",
+      "provider": "codex",
+      "case": "export-deferral",
+      "condition": "control",
+      "repetition": 1,
+      "phase": "apps enabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-03/execution-result.json",
+        "sha256": "8c3ae50c256ed629d876e303dfd1b85dc9bebe80f7f5cec8eddea10a7da66cb5",
+        "version": "1"
+      },
+      "interpretation": "Both plan and handoff place XML after stable partner approval. Churn is implicit but neither implies a release date."
+    },
+    {
+      "order": 4,
+      "label": "64887b5b",
+      "provider": "claude",
+      "case": "export-deferral",
+      "condition": "original",
+      "repetition": 1,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-04/execution-result.json",
+        "sha256": "5951322db91d50dbc4b10b86e8cb5446f9b73514445589a49536b7817e57521a",
+        "version": "1"
+      },
+      "interpretation": "Overstates certainty of breakage once across plan and handoff, while clearly preserving the actual scope, dependency and customer wait."
+    },
+    {
+      "order": 5,
+      "label": "7a478a2d",
+      "provider": "codex",
+      "case": "quota-grace",
+      "condition": "control",
+      "repetition": 1,
+      "phase": "apps enabled",
+      "setup": "valid",
+      "functional_result": "not met",
+      "criteria": {
+        "T1": "met",
+        "R1": "not met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-05/execution-result.json",
+        "sha256": "6020dc7622497a0d53f81440ee37de335ec8b228c308e0fe150893542ef53a9d",
+        "version": "1"
+      },
+      "interpretation": "Implementation, claimed tests and replays agree. No project artifact explains the in-flight admitted-work reason."
+    },
+    {
+      "order": 6,
+      "label": "2dd8431f",
+      "provider": "claude",
+      "case": "quota-grace",
+      "condition": "original",
+      "repetition": 1,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-06/execution-result.json",
+        "sha256": "0c59e4260104110746b99940c1de04e235cac49dd0fffb45df67b6399149da4b",
+        "version": "1"
+      },
+      "interpretation": "Implementation and tests preserve each boundary; the constant's comment explains the reason and accepted cost."
+    },
+    {
+      "order": 7,
+      "label": "b097885a",
+      "provider": "codex",
+      "case": "quota-grace",
+      "condition": "original",
+      "repetition": 1,
+      "phase": "apps enabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-07/execution-result.json",
+        "sha256": "b4108299b390a8bd8c4c263910f4a48aa7a18949d0c53e9c878d75ec3f069903",
+        "version": "1"
+      },
+      "interpretation": "The public lookup preserves all boundaries. Predicates and comment connect pre-change tokens with already-admitted work and bounded extra quota."
+    },
+    {
+      "order": 8,
+      "label": "2af860d7",
+      "provider": "claude",
+      "case": "quota-grace",
+      "condition": "control",
+      "repetition": 1,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "not met",
+      "criteria": {
+        "T1": "met",
+        "R1": "not met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-08/execution-result.json",
+        "sha256": "cb9dd076f90811b9a9ef9a9de8b79c0097fa18d340eacc7a28a1d9becd634cb6",
+        "version": "1"
+      },
+      "interpretation": "Project and handoff give accurate timing. Neither gives the admitted-work reason a maintainer needs before removing the exception."
+    },
+    {
+      "order": 9,
+      "label": "319ae927",
+      "provider": "codex",
+      "case": "repeated-review",
+      "condition": "original",
+      "repetition": 1,
+      "phase": "apps enabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met",
+        "R3": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-09/execution-result.json",
+        "sha256": "6705c52bd0e4a18aad8a1488edd536a7bd6048fe7bbf652533e8b545b3c76b8b",
+        "version": "1"
+      },
+      "interpretation": "Guard location and second explanation are durable; a slightly imperative factoring instruction is softened by the handoff. Both replays pass.",
+      "quota_commit_reason_seen": true,
+      "handoff_mentions_quota": true
+    },
+    {
+      "order": 10,
+      "label": "e15f8eb8",
+      "provider": "claude",
+      "case": "repeated-review",
+      "condition": "control",
+      "repetition": 1,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "not met",
+      "criteria": {
+        "T1": "met",
+        "R1": "not met",
+        "R2": "not met",
+        "R3": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-10/execution-result.json",
+        "sha256": "eb63fed787cd0254a77389a76228e01399e008861fa6314f79538098784fac8b",
+        "version": "1"
+      },
+      "interpretation": "The suggested reply addresses guard placement, but the rationale of neither guard nor quota is written into the tree. Both replays pass.",
+      "quota_commit_reason_seen": true,
+      "handoff_mentions_quota": false
+    },
+    {
+      "order": 11,
+      "label": "852d0709",
+      "provider": "codex",
+      "case": "repeated-review",
+      "condition": "control",
+      "repetition": 1,
+      "phase": "apps enabled",
+      "setup": "valid",
+      "functional_result": "not met",
+      "criteria": {
+        "T1": "met",
+        "R1": "not met",
+        "R2": "not met",
+        "R3": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-11/execution-result.json",
+        "sha256": "83f5c3c8e49d6c8dfd83ed30a4b84e9bfe0d42e15a97e5c61c4c5ee3c1bbd7b2",
+        "version": "1"
+      },
+      "interpretation": "Refactored behavior passes both replays, but neither the old decision nor a reason for superseding it is recoverable, and the quota reasoning is absent.",
+      "quota_commit_reason_seen": true,
+      "handoff_mentions_quota": false
+    },
+    {
+      "order": 12,
+      "label": "d88c271d",
+      "provider": "claude",
+      "case": "repeated-review",
+      "condition": "original",
+      "repetition": 1,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met",
+        "R3": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-12/execution-result.json",
+        "sha256": "893ab030324d6b613d0b93f2dcb7b0d6544f0de0ce92e4d60b23226be2324392",
+        "version": "1"
+      },
+      "interpretation": "Project and handoff preserve the interactive and quota reasons. Factoring sounds firmer than reconsideration in the handoff; the code says revisit.",
+      "quota_commit_reason_seen": true,
+      "handoff_mentions_quota": true
+    },
+    {
+      "order": 13,
+      "label": "068239db",
+      "provider": "codex",
+      "case": "catalog-review",
+      "condition": "control",
+      "repetition": 1,
+      "phase": "apps enabled",
+      "setup": "valid",
+      "functional_result": "not met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "not met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-13/execution-result.json",
+        "sha256": "e196e2eb08192bce2c058941e5673d68570f32d51aadc5a958a0b9ad385afadc",
+        "version": "1"
+      },
+      "interpretation": "The handoff links the short accurate editor reply and the spec meets the credit rule. Saying ordering remains required by production does not explain its purpose at the decision site."
+    },
+    {
+      "order": 14,
+      "label": "3c0f4f80",
+      "provider": "claude",
+      "case": "catalog-review",
+      "condition": "original",
+      "repetition": 1,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-14/execution-result.json",
+        "sha256": "24baea45517b44dd03f909bd1cc2087740b85e72817ed4dc0edae5f60a1619f2",
+        "version": "1"
+      },
+      "interpretation": "The short editor reply explains amendment authority, and the spec preserves both lender authority and the proof-desk rationale."
+    },
+    {
+      "order": 15,
+      "label": "41b09e49",
+      "provider": "codex",
+      "case": "catalog-review",
+      "condition": "original",
+      "repetition": 1,
+      "phase": "apps enabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-15/execution-result.json",
+        "sha256": "62b8b857917b69bf0f7524c1b5a0b6e5139cc7555d4a7a79ba300fc4bda618c9",
+        "version": "1"
+      },
+      "interpretation": "The editor receives an accurate answer, and both decisions and their reasons remain clear in the catalog spec."
+    },
+    {
+      "order": 16,
+      "label": "369b819a",
+      "provider": "claude",
+      "case": "catalog-review",
+      "condition": "control",
+      "repetition": 1,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "not met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "not met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-16/execution-result.json",
+        "sha256": "c9b8c11a2f0da262363b23599220e33ae5cbaf3e6799c238a81c61c5ed54029a",
+        "version": "1"
+      },
+      "interpretation": "Accurate editor reply and clear credit authority; the proof desk appears in chat only, so the next editor sees an unexplained sort rule."
+    },
+    {
+      "order": 17,
+      "label": "27f13339",
+      "provider": "codex",
+      "case": "helper-rename",
+      "condition": "original",
+      "repetition": 1,
+      "phase": "apps enabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-17/execution-result.json",
+        "sha256": "ecdc9703beaee3db029aad49ee0e4b7221e5a252054107f6d04e677c76c01c87",
+        "version": "1"
+      },
+      "interpretation": "Both callers, billing rationale and original tests survive the rename."
+    },
+    {
+      "order": 18,
+      "label": "2bb95851",
+      "provider": "claude",
+      "case": "helper-rename",
+      "condition": "control",
+      "repetition": 1,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-18/execution-result.json",
+        "sha256": "4296474ff52c4a70c2bf206334c876a3c58bd0a6593fa3945e3a31272da0e7fd",
+        "version": "1"
+      },
+      "interpretation": "Clean rename and passing original tests. Public callers keep their behavior and rationale."
+    },
+    {
+      "order": 19,
+      "label": "1380abc8",
+      "provider": "codex",
+      "case": "helper-rename",
+      "condition": "control",
+      "repetition": 1,
+      "phase": "apps enabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-19/execution-result.json",
+        "sha256": "063f23a2a03c5bea41b402cc59518cf834a2f37f6f1e3c130835f2e627db65ca",
+        "version": "1"
+      },
+      "interpretation": "Both callers changed consistently. The original tests pass and the existing explanation remains."
+    },
+    {
+      "order": 20,
+      "label": "d0717152",
+      "provider": "claude",
+      "case": "helper-rename",
+      "condition": "original",
+      "repetition": 1,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-20/execution-result.json",
+        "sha256": "916319ea411e75e80414a92a1932003232425820abb3fec8db133cecbf2ad97c",
+        "version": "1"
+      },
+      "interpretation": "The handoff mentions the decision to skip an extra note; the durable implementation stays concise and tested."
+    },
+    {
+      "order": 21,
+      "label": "75c73767",
+      "provider": "codex",
+      "case": "scope-trim",
+      "condition": "control",
+      "repetition": 1,
+      "phase": "apps enabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-21/execution-result.json",
+        "sha256": "22a7a0437f663887016bca2ab1a1412cec395b19b9113105c5faa8448d67e57c",
+        "version": "1"
+      },
+      "interpretation": "A compact and accurate handoff preserves Monday as handoff, the Finance review trigger and possible manual work."
+    },
+    {
+      "order": 22,
+      "label": "3cd46b0a",
+      "provider": "claude",
+      "case": "scope-trim",
+      "condition": "original",
+      "repetition": 1,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-22/execution-result.json",
+        "sha256": "2a0c7fe9c6f863e372f90e3d4732ad4fc98a320b59a2dd0fbbbe20df246bba1d",
+        "version": "1"
+      },
+      "interpretation": "Accurate separation of decisions and post-launch review. The conditional Support work is stated on the plan."
+    },
+    {
+      "order": 23,
+      "label": "6a0c9fbc",
+      "provider": "codex",
+      "case": "scope-trim",
+      "condition": "original",
+      "repetition": 1,
+      "phase": "apps enabled",
+      "setup": "valid",
+      "functional_result": "not met",
+      "criteria": {
+        "T1": "not met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-23/execution-result.json",
+        "sha256": "8d5695fc813fd34e0089ea4b80b971050fbc20326b94a096ec3aaaf4050eb1cf",
+        "version": "1"
+      },
+      "interpretation": "Monday's handoff became Monday's launch in both the plan heading and the delivered summary. The deferral reason and conditional work survive."
+    },
+    {
+      "order": 24,
+      "label": "0ad94737",
+      "provider": "claude",
+      "case": "scope-trim",
+      "condition": "control",
+      "repetition": 1,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-24/execution-result.json",
+        "sha256": "85024beda8d99b4b86890778d2524595979b8d85ca96113dc5630a8a0ebaaa01",
+        "version": "1"
+      },
+      "interpretation": "Both deferred items, their common cause, possible interim work and both unaffected commitments survive."
+    },
+    {
+      "order": 25,
+      "label": "9ff39600",
+      "provider": "codex",
+      "case": "dispatch-hold",
+      "condition": "original",
+      "repetition": 1,
+      "phase": "apps enabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-25/execution-result.json",
+        "sha256": "7264e777a62d3de6e23225040c2156d929ee2a995f5801a6760f87f6619d67d6",
+        "version": "1"
+      },
+      "interpretation": "Public behavior passes. Four copies of parts of the same reason invite drift but agree; attribution to carrier is a precision caveat."
+    },
+    {
+      "order": 26,
+      "label": "e9e6c816",
+      "provider": "claude",
+      "case": "dispatch-hold",
+      "condition": "control",
+      "repetition": 1,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-26/execution-result.json",
+        "sha256": "4082e0f2be9ff83c3b186fcb5a0b168da1383f2ece0712607c8ea90bf7eb5f5b",
+        "version": "1"
+      },
+      "interpretation": "Status names link both lookups to the existing policy. Original public calling convention and behavior pass. Carrier attribution is nonmaterial."
+    },
+    {
+      "order": 27,
+      "label": "ad4a424f",
+      "provider": "codex",
+      "case": "dispatch-hold",
+      "condition": "control",
+      "repetition": 1,
+      "phase": "apps enabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-27/execution-result.json",
+        "sha256": "521c89f4647a17f7e56ab0e75ce250fb2ab98e6d458e07e020033c5071d3e1bd",
+        "version": "1"
+      },
+      "interpretation": "Bare code plus the updated spec explain the decision with no title justification. Replays pass. Carrier attribution is unsupported for the new status."
+    },
+    {
+      "order": 28,
+      "label": "c2bebbad",
+      "provider": "claude",
+      "case": "dispatch-hold",
+      "condition": "original",
+      "repetition": 1,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-28/execution-result.json",
+        "sha256": "1330243dc3bdebd1dfefab65c3ef0556ae89d60c827b4a254e2407b47c0a7a73",
+        "version": "1"
+      },
+      "interpretation": "Shared set, explicit reference and notes give coherent traces to the spec. Some repetition and carrier attribution; all replay cases pass."
+    },
+    {
+      "order": 29,
+      "label": "3d116433",
+      "provider": "codex",
+      "case": "export-deferral",
+      "condition": "control",
+      "repetition": 2,
+      "phase": "apps enabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-29/execution-result.json",
+        "sha256": "c58ceb50e4979306372a08c0ba4d3f7034f93c9fcdbfde7a66d9265b23ec975e",
+        "version": "1"
+      },
+      "interpretation": "The concise summary and the plan together leave no reasonable ambiguity about v1 scope or approval. Stable schema and the Later placement convey the reason and XML wait implicitly."
+    },
+    {
+      "order": 30,
+      "label": "393ab302",
+      "provider": "claude",
+      "case": "export-deferral",
+      "condition": "original",
+      "repetition": 2,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-30/execution-result.json",
+        "sha256": "a33db95cee0a5420b900c6027694b4d7955de545731376fa85081d29c8c9b4e7",
+        "version": "1"
+      },
+      "interpretation": "The complete PR summary and plan preserve the release scope, the provisional approval gate, and who bears the cost. Possible breakage is framed as a risk."
+    },
+    {
+      "order": 31,
+      "label": "7540b408",
+      "provider": "codex",
+      "case": "export-deferral",
+      "condition": "original",
+      "repetition": 2,
+      "phase": "apps enabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-31/execution-result.json",
+        "sha256": "b7195ac517df7971c925c6a51b454a151d33c89971811019e6da53878af9cf88",
+        "version": "1"
+      },
+      "interpretation": "The plan and PR summary convey the reason, customer wait, retained schedule and trigger."
+    },
+    {
+      "order": 32,
+      "label": "3e0bed47",
+      "provider": "claude",
+      "case": "export-deferral",
+      "condition": "control",
+      "repetition": 2,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-32/execution-result.json",
+        "sha256": "c7104929c4dc2a4f51dcc72bf110d549c58bbc763e9099c560ecf98732d03a56",
+        "version": "1"
+      },
+      "interpretation": "The plan explains the unstable schema at the deferred item and the handoff confirms all remaining commitments. The tracking aside does not affect the plan."
+    },
+    {
+      "order": 33,
+      "label": "9f80445d",
+      "provider": "codex",
+      "case": "quota-grace",
+      "condition": "original",
+      "repetition": 2,
+      "phase": "apps enabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-33/execution-result.json",
+        "sha256": "b2d82d85a4be31a9337707fec6febaebe9e062edc9d552e3d0184aa617ba3a40",
+        "version": "1"
+      },
+      "interpretation": "Tests ran and independent replays pass. The comment at the decision explains the risk to admitted work and bounded extra quota."
+    },
+    {
+      "order": 34,
+      "label": "ec47491c",
+      "provider": "claude",
+      "case": "quota-grace",
+      "condition": "control",
+      "repetition": 2,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "not met",
+      "criteria": {
+        "T1": "met",
+        "R1": "not met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-34/execution-result.json",
+        "sha256": "182f7d1782b707684680942191f5f082e43e57ca452a9a83538c2849671cc72c",
+        "version": "1"
+      },
+      "interpretation": "Tests and replays confirm behavior. Neither the project nor the handoff explains why the pre-change tokens merit continued excess quota."
+    },
+    {
+      "order": 35,
+      "label": "f0daab1f",
+      "provider": "codex",
+      "case": "quota-grace",
+      "condition": "control",
+      "repetition": 2,
+      "phase": "apps enabled",
+      "setup": "valid",
+      "functional_result": "not met",
+      "criteria": {
+        "T1": "met",
+        "R1": "not met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-35/execution-result.json",
+        "sha256": "d4a36b7087c8307a9c0d3b9c1e7e5e3475811736164a60969b4ca06de50c291f",
+        "version": "1"
+      },
+      "interpretation": "Boundary tests and both replays pass. Implementation and summary say what happens without the decision to protect admitted work at a bounded cost."
+    },
+    {
+      "order": 36,
+      "label": "a24a3243",
+      "provider": "claude",
+      "case": "quota-grace",
+      "condition": "original",
+      "repetition": 2,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-36/execution-result.json",
+        "sha256": "4f7b698da2eef1d67155d254005852845254aa5dc32947f5c864f5be04398d27",
+        "version": "1"
+      },
+      "interpretation": "Tests ran and replays pass. The local rationale identifies affected requests, their prior admission, boundary and downside. The handoff explicitly mentions guidance, a potential reviewer blinding leak."
+    },
+    {
+      "order": 37,
+      "label": "1878563f",
+      "provider": "codex",
+      "case": "repeated-review",
+      "condition": "control",
+      "repetition": 2,
+      "phase": "apps enabled",
+      "setup": "valid",
+      "functional_result": "not met",
+      "criteria": {
+        "T1": "met",
+        "R1": "not met",
+        "R2": "not met",
+        "R3": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-37/execution-result.json",
+        "sha256": "f1fb3e2923bad24d6ace6e5ec3a329e401eb882ac62c098f5ee3364203971585",
+        "version": "1"
+      },
+      "interpretation": "Both replays pass and approved imports bypass interactive admission via the default argument, preserving T1. Moving admission inside persist silently reverses the chosen boundary and leaves no explanation for the reviewer or third-caller decision. The model saw the quota reason but left it out. The label rename stays proportionate.",
+      "quota_commit_reason_seen": true,
+      "handoff_mentions_quota": false
+    },
+    {
+      "order": 38,
+      "label": "1e8c2daa",
+      "provider": "claude",
+      "case": "repeated-review",
+      "condition": "original",
+      "repetition": 2,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met",
+        "R3": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-38/execution-result.json",
+        "sha256": "7553148ec2b11d76030195b1859485e41c2de11e21c266cbad1df056c42e37de",
+        "version": "1"
+      },
+      "interpretation": "Both replays pass. The reply directs the reviewer to the local explanation, identifies the independently found quota decision, and leaves labels simple. The third caller warrants revisiting the guard; the definite factoring language is a minor precision difference.",
+      "quota_commit_reason_seen": true,
+      "handoff_mentions_quota": true
+    },
+    {
+      "order": 39,
+      "label": "2796b3ff",
+      "provider": "codex",
+      "case": "repeated-review",
+      "condition": "original",
+      "repetition": 2,
+      "phase": "apps enabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met",
+        "R3": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-39/execution-result.json",
+        "sha256": "f38fed813e2907fb9ffa7cf226445a371a716cf7369eff7029b7505d7bae5ad4",
+        "version": "1"
+      },
+      "interpretation": "Replays pass and both the reply and local code identify the intended interactive boundary and independent quota finding. The routine rename is left alone.",
+      "quota_commit_reason_seen": true,
+      "handoff_mentions_quota": true
+    },
+    {
+      "order": 40,
+      "label": "7a593ea8",
+      "provider": "claude",
+      "case": "repeated-review",
+      "condition": "control",
+      "repetition": 2,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "not met",
+      "criteria": {
+        "T1": "met",
+        "R1": "not met",
+        "R2": "not met",
+        "R3": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-40/execution-result.json",
+        "sha256": "9b1b02679337df6f9604e96d9a973d50bb4dc2696ecf897a91ae6481b3e75367",
+        "version": "1"
+      },
+      "interpretation": "Replays pass. The reply reconstructs the guard decision well, but relies on correspondence. Nothing at quota explains the admitted-work tradeoff. The rename remains proportionate.",
+      "quota_commit_reason_seen": true,
+      "handoff_mentions_quota": false
+    },
+    {
+      "order": 41,
+      "label": "04da5ec5",
+      "provider": "codex",
+      "case": "catalog-review",
+      "condition": "original",
+      "repetition": 2,
+      "phase": "apps enabled",
+      "setup": "invalid",
+      "functional_result": "invalid",
+      "criteria": {
+        "T1": "insufficient evidence",
+        "R1": "insufficient evidence",
+        "R2": "insufficient evidence"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-41/execution-result.json",
+        "sha256": "c77f4573aec76ea9c2a4e9c11f2b8b8bf0687c98b75a0a7352bd6cbdaaa2dcc7",
+        "version": "1"
+      },
+      "interpretation": "The plan and editor reply convey approved credits, amendment authority and the room-sheet dependency. Preserve this artifact-only observation, excluded from the benchmark due to the subject contacting the host document connector."
+    },
+    {
+      "order": 42,
+      "label": "f9601d9a",
+      "provider": "claude",
+      "case": "catalog-review",
+      "condition": "control",
+      "repetition": 2,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "not met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "not met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-42/execution-result.json",
+        "sha256": "8f4b231edd70c0a4bb9b7d52a12c9e13467ef78cc94aa5e875445b4c1d5dfb26",
+        "version": "1"
+      },
+      "interpretation": "The editor reply and spec correctly retain signed credits. The handoff explains the proof-desk cost, but a future editor reading the spec sees only the sort order."
+    },
+    {
+      "order": 43,
+      "label": "83ef5b8f",
+      "provider": "codex",
+      "case": "catalog-review",
+      "condition": "control",
+      "repetition": 2,
+      "phase": "apps enabled",
+      "setup": "invalid",
+      "functional_result": "invalid",
+      "criteria": {
+        "T1": "insufficient evidence",
+        "R1": "insufficient evidence",
+        "R2": "insufficient evidence"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-43/execution-result.json",
+        "sha256": "5f4df2b05bb815a5f3a60ad3e40d3a905fd0935072363d9d6ff09ec4dc0ef6a2",
+        "version": "1"
+      },
+      "interpretation": "The reply and project agree about signed credits. The project retains the order but gives no reason for a future editor to keep it when the printer wants a change."
+    },
+    {
+      "order": 44,
+      "label": "e18cecc6",
+      "provider": "claude",
+      "case": "catalog-review",
+      "condition": "original",
+      "repetition": 2,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-44/execution-result.json",
+        "sha256": "3240449e84a67ef5be655167534143f5056162316725edc7b0fdf74f809b6a63",
+        "version": "1"
+      },
+      "interpretation": "The reply addresses the repeated credit request accurately. The spec equips the next editor to decide both the amendment and proof-order questions."
+    },
+    {
+      "order": 45,
+      "label": "d7e4bb75",
+      "provider": "codex",
+      "case": "helper-rename",
+      "condition": "control",
+      "repetition": 2,
+      "phase": "apps disabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-45/execution-result.json",
+        "sha256": "88ea974052248776a0a5ede49cffe22eda4d3e2724859b1277457a80a13ba96a",
+        "version": "1"
+      },
+      "interpretation": "The internal callers and private helper use the new name. The existing billing explanation survives, and the handoff and passing replay confirm preserved behavior."
+    },
+    {
+      "order": 46,
+      "label": "25d710a5",
+      "provider": "claude",
+      "case": "helper-rename",
+      "condition": "original",
+      "repetition": 2,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-46/execution-result.json",
+        "sha256": "4d7c0775a2da4ea55efe1b4f10199107054f5c69b76fb38f06076945fa296eb6",
+        "version": "1"
+      },
+      "interpretation": "The handoff accounts for both callers, preserved behavior and the billing comment. No new project commentary. Both original tests replayed successfully."
+    },
+    {
+      "order": 47,
+      "label": "0bf0f077",
+      "provider": "codex",
+      "case": "helper-rename",
+      "condition": "original",
+      "repetition": 2,
+      "phase": "apps disabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-47/execution-result.json",
+        "sha256": "bb9f8bba2a87ac2c446d2fa0383fd9b32f3f713c78aa69175df9d0cd17f14ebc",
+        "version": "1"
+      },
+      "interpretation": "The concise handoff and original-tests replay confirm the rename and preserved behavior. The existing comment remains at the helper."
+    },
+    {
+      "order": 48,
+      "label": "82f30326",
+      "provider": "claude",
+      "case": "helper-rename",
+      "condition": "control",
+      "repetition": 2,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-48/execution-result.json",
+        "sha256": "cc48c3765262990e40ca3852d9250e10ea81eb2d23b309aa8cb963821c9f9c77",
+        "version": "1"
+      },
+      "interpretation": "The reply correctly identifies both callers and the retained billing rationale. Original tests pass without unnecessary durable additions."
+    },
+    {
+      "order": 49,
+      "label": "a772ad92",
+      "provider": "codex",
+      "case": "scope-trim",
+      "condition": "original",
+      "repetition": 2,
+      "phase": "apps disabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-49/execution-result.json",
+        "sha256": "902b33aa2a0c01f7f6e01ea4fc76b3140db341698bd95aa65500d01731abc382",
+        "version": "1"
+      },
+      "interpretation": "The whole plan and handoff preserve scope, the conditional workflow for Support and the Finance gate. Deferred until is slightly less precise than reconsider, without committing Operations to delivery."
+    },
+    {
+      "order": 50,
+      "label": "b56d3589",
+      "provider": "claude",
+      "case": "scope-trim",
+      "condition": "control",
+      "repetition": 2,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-50/execution-result.json",
+        "sha256": "593f0f9b631e2088a8ac4c78143fedfbf8fa9bc97e8ed073a897d56f70bfa2ec",
+        "version": "1"
+      },
+      "interpretation": "The plan directly identifies both sides of the scope change, reassessment on agreement, and the conditional cost. The handoff and retained first-month review agree with the source."
+    },
+    {
+      "order": 51,
+      "label": "fd539d7d",
+      "provider": "codex",
+      "case": "scope-trim",
+      "condition": "control",
+      "repetition": 2,
+      "phase": "apps disabled",
+      "setup": "valid",
+      "functional_result": "not met",
+      "criteria": {
+        "T1": "not met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-51/execution-result.json",
+        "sha256": "27ba123cf9e38aca1929fa272997d999ac2eab72b86cfa59077353747d40f0a1",
+        "version": "1"
+      },
+      "interpretation": "Monday applies to the handoff in the source, but the plan headings tell Operations to launch Monday. The handoff does not correct that scheduling change. Both weekly decisions and their practical cost remain clear."
+    },
+    {
+      "order": 52,
+      "label": "1862670b",
+      "provider": "claude",
+      "case": "scope-trim",
+      "condition": "original",
+      "repetition": 2,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-52/execution-result.json",
+        "sha256": "861da3308d6113302c39f6a756c0e2579c069db6298f8c5cded23e4b9c87b7bb",
+        "version": "1"
+      },
+      "interpretation": "The shortened plan and handoff retain both daily and both weekly dispositions, guide, adoption review, Finance decision and possible workload in an affected week."
+    },
+    {
+      "order": 53,
+      "label": "b81aa5ad",
+      "provider": "codex",
+      "case": "dispatch-hold",
+      "condition": "control",
+      "repetition": 2,
+      "phase": "apps disabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-53/execution-result.json",
+        "sha256": "a0c125e359c681f1cc360a498af6373273838f219d94e5a664a232dfb57263bb",
+        "version": "1"
+      },
+      "interpretation": "Replay passes both entry points and title. Reading either lookup with the spec explains both decisions. The title change is proportionate."
+    },
+    {
+      "order": 54,
+      "label": "bef47934",
+      "provider": "claude",
+      "case": "dispatch-hold",
+      "condition": "original",
+      "repetition": 2,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-54/execution-result.json",
+        "sha256": "a2872937b1dccc468f2a11c9c87e131b1da552f0aecf2cf007dfff67a4134078",
+        "version": "1"
+      },
+      "interpretation": "The shared status set links both public entry points to the spec. The handoff accurately reports both hold behaviors, the title and stable signatures. Replay passes; explanation is somewhat repetitive."
+    },
+    {
+      "order": 55,
+      "label": "9ef02389",
+      "provider": "codex",
+      "case": "dispatch-hold",
+      "condition": "original",
+      "repetition": 2,
+      "phase": "apps disabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-55/execution-result.json",
+        "sha256": "3d777f811603c989cd59171f452812d5b0d30699b3d6332a7151e71265829dbd",
+        "version": "1"
+      },
+      "interpretation": "All compatibility checks pass. Accurate local comments and the spec explain assignment and collection. Repetition is a density observation and the title carries no needless rationale."
+    },
+    {
+      "order": 56,
+      "label": "b2903e0e",
+      "provider": "claude",
+      "case": "dispatch-hold",
+      "condition": "control",
+      "repetition": 2,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-56/execution-result.json",
+        "sha256": "b1ebd4623e87345c77cc6a7a0448b7c24e36f17971998cf13f31de85529304dc",
+        "version": "1"
+      },
+      "interpretation": "The handoff, matching status identifiers and spec agree on the policy and the exception. Replay confirms both public APIs and the title. Scope and commentary remain proportionate."
+    },
+    {
+      "order": 57,
+      "label": "e5f8998f",
+      "provider": "codex",
+      "case": "export-deferral",
+      "condition": "original",
+      "repetition": 3,
+      "phase": "apps disabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-57/execution-result.json",
+        "sha256": "22213bf5493fc7f922ae77526b20da55cf20dd515c4670c853e63c697f006e4c",
+        "version": "1"
+      },
+      "interpretation": "The concise PR summary and plan agree on the scope, reason and approval gate, and the plan explicitly conveys the wait."
+    },
+    {
+      "order": 58,
+      "label": "ef4a0e24",
+      "provider": "claude",
+      "case": "export-deferral",
+      "condition": "control",
+      "repetition": 3,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-58/execution-result.json",
+        "sha256": "471142fbe7103d60e4d16fabb9bb9375031aa06b41af915a566dfc9d0a545662",
+        "version": "1"
+      },
+      "interpretation": "The blocked section and summary preserve the pending decision without a date or version promise. The guide, encoding and scheduled-delivery work retain their meaning."
+    },
+    {
+      "order": 59,
+      "label": "a732cc41",
+      "provider": "codex",
+      "case": "export-deferral",
+      "condition": "control",
+      "repetition": 3,
+      "phase": "apps disabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-59/execution-result.json",
+        "sha256": "bfabe1bd8d04126e8e9e971678f92c1a7666814e0c05e62c11c2a3f382e44ce9",
+        "version": "1"
+      },
+      "interpretation": "Scope and stable approval are explicit. An XML customer would understand the wait from Later and the handoff. Leaving current schema churn implicit has no material consequence here."
+    },
+    {
+      "order": 60,
+      "label": "30799ca0",
+      "provider": "claude",
+      "case": "export-deferral",
+      "condition": "original",
+      "repetition": 3,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-60/execution-result.json",
+        "sha256": "e82cdbbab3f6b4c875239cdb06d02ed88c982ec19088dc36af97d85f69d92cea",
+        "version": "1"
+      },
+      "interpretation": "The plan and handoff explain the correct scope, customer wait, tradeoff and approval gate. Both overstate compatibility risk as certain breakage on each revision. This does not change the stated release decision."
+    },
+    {
+      "order": 61,
+      "label": "a98246d9",
+      "provider": "codex",
+      "case": "quota-grace",
+      "condition": "control",
+      "repetition": 3,
+      "phase": "apps disabled",
+      "setup": "valid",
+      "functional_result": "not met",
+      "criteria": {
+        "T1": "met",
+        "R1": "not met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-61/execution-result.json",
+        "sha256": "f5f3036c34c67ffd557f75efd27e7c9b497bd5f413fd01b18ec3364c32490034",
+        "version": "1"
+      },
+      "interpretation": "Observed tests and both replays pass. Neither the handoff nor implementation tells the maintainer why old tokens warrant extra quota."
+    },
+    {
+      "order": 62,
+      "label": "cd7e82e8",
+      "provider": "claude",
+      "case": "quota-grace",
+      "condition": "original",
+      "repetition": 3,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-62/execution-result.json",
+        "sha256": "08267edae778d04a4175a408a8eb2748ae4ec28271b60bad13d53543734df5cc",
+        "version": "1"
+      },
+      "interpretation": "Observed tests and both replays pass. The constant supplies the admission history and accepted cost. The handoff names GUIDANCE.md, an exposure clue for cross-model review."
+    },
+    {
+      "order": 63,
+      "label": "ee5fdfd5",
+      "provider": "codex",
+      "case": "quota-grace",
+      "condition": "original",
+      "repetition": 3,
+      "phase": "apps disabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-63/execution-result.json",
+        "sha256": "758d46d9deb40f2a7fb3b2ac1586cffca0db3489d25a66b66c48ac62ea44c9b0",
+        "version": "1"
+      },
+      "interpretation": "Both replays and observed tests pass, with a concise branch-local tradeoff that explains why the code protects admitted work."
+    },
+    {
+      "order": 64,
+      "label": "fb331e1e",
+      "provider": "claude",
+      "case": "quota-grace",
+      "condition": "control",
+      "repetition": 3,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "not met",
+      "criteria": {
+        "T1": "met",
+        "R1": "not met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-64/execution-result.json",
+        "sha256": "4084cd8412832d995261b3771edd1df4da4fc22b9819ac72815cfff3e4a74ba3",
+        "version": "1"
+      },
+      "interpretation": "Behavior and replays are correct. The gateway attribution could direct a follow-up, but the reason is absent from the project and reply, leaving the consequence of immediate enforcement unclear."
+    },
+    {
+      "order": 65,
+      "label": "753f9bcb",
+      "provider": "codex",
+      "case": "repeated-review",
+      "condition": "original",
+      "repetition": 3,
+      "phase": "apps disabled",
+      "setup": "valid",
+      "functional_result": "not met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "not met",
+        "R3": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-65/execution-result.json",
+        "sha256": "017d086147a39110607503d934606c55c5603bf13f924d6add45e5475d771117",
+        "version": "1"
+      },
+      "interpretation": "Both replays pass. The reply and local guard explain the reviewed choice, with an appropriate reconsideration qualifier in the handoff. The submitted quota rationale reached the subject, but neither reply nor project repairs that second decision.",
+      "quota_commit_reason_seen": true,
+      "handoff_mentions_quota": false
+    },
+    {
+      "order": 66,
+      "label": "dc57c06b",
+      "provider": "claude",
+      "case": "repeated-review",
+      "condition": "control",
+      "repetition": 3,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "not met",
+      "criteria": {
+        "T1": "met",
+        "R1": "not met",
+        "R2": "not met",
+        "R3": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-66/execution-result.json",
+        "sha256": "4c635cc873fcfd1c5e26204c21e366aadcf66fce8af526433baa38b43811c209",
+        "version": "1"
+      },
+      "interpretation": "Both replays pass. The accurate reply would help today's reviewer, but the unchanged project leaves future maintainers to recover both admission and quota reasons from correspondence.",
+      "quota_commit_reason_seen": true,
+      "handoff_mentions_quota": false
+    },
+    {
+      "order": 67,
+      "label": "8d36299d",
+      "provider": "codex",
+      "case": "repeated-review",
+      "condition": "control",
+      "repetition": 3,
+      "phase": "apps disabled",
+      "setup": "valid",
+      "functional_result": "not met",
+      "criteria": {
+        "T1": "met",
+        "R1": "not met",
+        "R2": "not met",
+        "R3": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-67/execution-result.json",
+        "sha256": "19639ad6ec0d8ad6413aac7cd5c1a15a62efcfcbd7537f06aa8f2a374a514103",
+        "version": "1"
+      },
+      "interpretation": "The supplied runtime behavior survives both replays. Moving the interactive check into persist silently reverses the prior choice; the new test cannot explain that reversal or what became of the third-caller agreement. Quota remains unexplained.",
+      "quota_commit_reason_seen": true,
+      "handoff_mentions_quota": false
+    },
+    {
+      "order": 68,
+      "label": "a9dd68a5",
+      "provider": "claude",
+      "case": "repeated-review",
+      "condition": "original",
+      "repetition": 3,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met",
+        "R3": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-68/execution-result.json",
+        "sha256": "12903de7b83a7ddee8926a7e24005cdf21b9e1a4581a394148d6e11fbf3b4a09",
+        "version": "1"
+      },
+      "interpretation": "The reply directs the reviewer to the shared decision site and identifies the independently repaired quota branch; both replays pass. Definite factoring is a precision caveat. The routine helper stays proportionate.",
+      "quota_commit_reason_seen": true,
+      "handoff_mentions_quota": true
+    },
+    {
+      "order": 69,
+      "label": "d1ac7603",
+      "provider": "codex",
+      "case": "catalog-review",
+      "condition": "control",
+      "repetition": 3,
+      "phase": "apps disabled",
+      "setup": "valid",
+      "functional_result": "not met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "not met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-69/execution-result.json",
+        "sha256": "39f8b6ca39e24a0c2bdd1d26a56b8ac3648870d48c10b6a38ebf9588315f1d0b",
+        "version": "1"
+      },
+      "interpretation": "The editor reply and spec keep signed credits and lender authority. The room-sheet reason never appears, so the future printer decision needs follow-up."
+    },
+    {
+      "order": 70,
+      "label": "22524c33",
+      "provider": "claude",
+      "case": "catalog-review",
+      "condition": "original",
+      "repetition": 3,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-70/execution-result.json",
+        "sha256": "1b4e04e156acba456cb8ccdd5c15fcd0c4db2684b2ad633976650ac401508b96",
+        "version": "1"
+      },
+      "interpretation": "The complete reply answers the repeated request. The signed-credit explanation and separate ordering rationale both remain at their decision sites."
+    },
+    {
+      "order": 71,
+      "label": "1b7ea8a1",
+      "provider": "codex",
+      "case": "catalog-review",
+      "condition": "original",
+      "repetition": 3,
+      "phase": "apps disabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-71/execution-result.json",
+        "sha256": "b15b5f9e6fd3fe5eb19bb9cdf2ee4ef8091537e4bb8cc09176f09a271c27b1e0",
+        "version": "1"
+      },
+      "interpretation": "The handoff answers the credit question and points to the spec. Both rules have decision-relevant reasons in the project."
+    },
+    {
+      "order": 72,
+      "label": "49a336bb",
+      "provider": "claude",
+      "case": "catalog-review",
+      "condition": "control",
+      "repetition": 3,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-72/execution-result.json",
+        "sha256": "f8d2aa0935018a8dcaa50d7d8fa6c81b31b9e4203bba37e442fb6b6a046d247a",
+        "version": "1"
+      },
+      "interpretation": "The separate saved editor letter accurately explains amendment and proof order. Both reasons also survive in the spec, sufficient to decide even without the letter."
+    },
+    {
+      "order": 73,
+      "label": "b0ca9ae8",
+      "provider": "codex",
+      "case": "export-deferral",
+      "condition": "control",
+      "repetition": 4,
+      "phase": "apps disabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-73/execution-result.json",
+        "sha256": "b9eb4a2ef49d541fdf98c5a35109fbbe58fdc98547692439fde3c98485add871",
+        "version": "1"
+      },
+      "interpretation": "V1 and Later together with the PR summary communicate scope and the stable-schema approval gate. Current churn is implicit; the wait is recoverable."
+    },
+    {
+      "order": 74,
+      "label": "a3a23cb8",
+      "provider": "claude",
+      "case": "export-deferral",
+      "condition": "original",
+      "repetition": 4,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-74/execution-result.json",
+        "sha256": "ecc5f0d7a59fa159c48163e551e1459d47e3cd45307135fc791c17855092b2e8",
+        "version": "1"
+      },
+      "interpretation": "An accurate PR handoff accompanies a linked plan that preserves the original commitments and the XML customer consequence."
+    },
+    {
+      "order": 75,
+      "label": "c4248796",
+      "provider": "codex",
+      "case": "export-deferral",
+      "condition": "original",
+      "repetition": 4,
+      "phase": "apps disabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-75/execution-result.json",
+        "sha256": "60f09043b41c32d2bffa0288fa4dd962e09d7b3281e5622ee6970264adaddb6b",
+        "version": "1"
+      },
+      "interpretation": "The handoff and affected item preserve scope, churn, approval and wait. V1 timing remains clear."
+    },
+    {
+      "order": 76,
+      "label": "31223b27",
+      "provider": "claude",
+      "case": "export-deferral",
+      "condition": "control",
+      "repetition": 4,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-76/execution-result.json",
+        "sha256": "c550297d61f8c5915c19d6dda653896a2316e194fed55fc1daeb2a9c2950bf0a",
+        "version": "1"
+      },
+      "interpretation": "The handoff reinforces the Later item's gate and ongoing churn. V1 readers can identify the customer wait without an exact date."
+    },
+    {
+      "order": 77,
+      "label": "b013a7a8",
+      "provider": "codex",
+      "case": "quota-grace",
+      "condition": "original",
+      "repetition": 4,
+      "phase": "apps disabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-77/execution-result.json",
+        "sha256": "7829ccdaaf974fa1ba854a9a0b67faa814f58a3ff1c00ebbf20de571b324f64a",
+        "version": "1"
+      },
+      "interpretation": "The handoff, tests and replays confirm the useful reading of the old limit. The local explanation gives the admission reason and bounded cost despite imprecise opening wording."
+    },
+    {
+      "order": 78,
+      "label": "91b8cd53",
+      "provider": "claude",
+      "case": "quota-grace",
+      "condition": "control",
+      "repetition": 4,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "not met",
+      "criteria": {
+        "T1": "met",
+        "R1": "not met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-78/execution-result.json",
+        "sha256": "52b1f4caacd004a42691d0bb0ace0d7d14f2da4d5f31e762994d2ec1cd58f0cb",
+        "version": "1"
+      },
+      "interpretation": "Both replays pass. The timing explanation and advice that the constant is easy to change omit what shortening it could do to in-flight work."
+    },
+    {
+      "order": 79,
+      "label": "5416dc6e",
+      "provider": "codex",
+      "case": "quota-grace",
+      "condition": "control",
+      "repetition": 4,
+      "phase": "apps disabled",
+      "setup": "valid",
+      "functional_result": "not met",
+      "criteria": {
+        "T1": "met",
+        "R1": "not met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-79/execution-result.json",
+        "sha256": "6dcb444ccbf93a653554b8aa8a68b092cf7ce3f0f52ceaadd3fb9808b63fb3c7",
+        "version": "1"
+      },
+      "interpretation": "The handoff, tests and replays confirm correct timing. No durable reason explains retaining higher quota for admitted work."
+    },
+    {
+      "order": 80,
+      "label": "4b81e4fc",
+      "provider": "claude",
+      "case": "quota-grace",
+      "condition": "original",
+      "repetition": 4,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-80/execution-result.json",
+        "sha256": "eeb1ba03a752e3bd9323b787c06b4447bb66826a8410f816e7a0a1b82d3a2ad0",
+        "version": "1"
+      },
+      "interpretation": "Tests and replays pass. The branch references the duration with the gateway reason, admitted work and accepted exposure. The handoff names the guidance file, a potential blinding clue."
+    },
+    {
+      "order": 81,
+      "label": "c9db23cb",
+      "provider": "codex",
+      "case": "repeated-review",
+      "condition": "control",
+      "repetition": 4,
+      "phase": "apps disabled",
+      "setup": "valid",
+      "functional_result": "not met",
+      "criteria": {
+        "T1": "met",
+        "R1": "not met",
+        "R2": "not met",
+        "R3": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-81/execution-result.json",
+        "sha256": "067e0b1551354c6e7cc2b487bf2df02f52e247c4cde00822b7fbfceff90ae29c",
+        "version": "1"
+      },
+      "interpretation": "Approved batches explicitly pass True and both replays pass. A tested design reversal gives no durable account of the prior duplication trigger; quota remains unexplained despite delivery of the commit reason.",
+      "quota_commit_reason_seen": true,
+      "handoff_mentions_quota": false
+    },
+    {
+      "order": 82,
+      "label": "bfdcb3b6",
+      "provider": "claude",
+      "case": "repeated-review",
+      "condition": "original",
+      "repetition": 4,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met",
+        "R3": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-82/execution-result.json",
+        "sha256": "35846e32609b860e705d3ee2800993b224c41f72ab5f411acdfd49a737f71882",
+        "version": "1"
+      },
+      "interpretation": "Local comments accurately explain both decisions, with the third caller framed as a revisit in the tree. The reply is slightly more definite. The routine rename stays simple and both replays pass.",
+      "quota_commit_reason_seen": true,
+      "handoff_mentions_quota": true
+    },
+    {
+      "order": 83,
+      "label": "cfa50b85",
+      "provider": "codex",
+      "case": "repeated-review",
+      "condition": "original",
+      "repetition": 4,
+      "phase": "apps disabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met",
+        "R3": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-83/execution-result.json",
+        "sha256": "09804b222b4c6080c13e2c8f1ab1674eff97e6e1298542fedec89ddb072c76d2",
+        "version": "1"
+      },
+      "interpretation": "The handoff identifies both the reviewed guard and separate quota issue. The tree contains both reasons and the bounded exception. Definite factoring is a minor qualification, with successful replays and a proportionate rename.",
+      "quota_commit_reason_seen": true,
+      "handoff_mentions_quota": true
+    },
+    {
+      "order": 84,
+      "label": "e3dc3a58",
+      "provider": "claude",
+      "case": "repeated-review",
+      "condition": "control",
+      "repetition": 4,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "not met",
+      "criteria": {
+        "T1": "met",
+        "R1": "not met",
+        "R2": "not met",
+        "R3": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-84/execution-result.json",
+        "sha256": "6c0ebd4f467ef70d9653336fb298dcff8abef90d00022fb8c0c18c2cb8f70cc1",
+        "version": "1"
+      },
+      "interpretation": "The clear review reply protects the batch behavior, and both replays pass. The project still requires external history for guard and quota; the second issue goes unmentioned in the reply.",
+      "quota_commit_reason_seen": true,
+      "handoff_mentions_quota": false
+    },
+    {
+      "order": 85,
+      "label": "33e1a033",
+      "provider": "codex",
+      "case": "catalog-review",
+      "condition": "original",
+      "repetition": 4,
+      "phase": "apps disabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-85/execution-result.json",
+        "sha256": "3d5f1f72fe1b4f4da5f314f2d08e2e72f67c653493ea5d7353bc82dd739274e5",
+        "version": "1"
+      },
+      "interpretation": "The reply answers the repeated request; the spec independently explains both amendment authority and production order."
+    },
+    {
+      "order": 86,
+      "label": "ea7ce3a1",
+      "provider": "claude",
+      "case": "catalog-review",
+      "condition": "control",
+      "repetition": 4,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-86/execution-result.json",
+        "sha256": "01b9036a938cef29a945505783004b5b1562c29c94eb4085a6c9c0d3ec2b44c7",
+        "version": "1"
+      },
+      "interpretation": "The saved letter suggests contacting the lender through the registrar; that preserves the lender's authority. The spec independently supports both credit and ordering decisions."
+    },
+    {
+      "order": 87,
+      "label": "93f95ebe",
+      "provider": "codex",
+      "case": "catalog-review",
+      "condition": "control",
+      "repetition": 4,
+      "phase": "apps disabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-87/execution-result.json",
+        "sha256": "22979f5a6f4f459208e162ba1bea1e292c4f300892151bcfa603530d16b9100f",
+        "version": "1"
+      },
+      "interpretation": "The separate editor reply addresses the outdated credit accurately. Both justifications remain independently recoverable in the concise specification."
+    },
+    {
+      "order": 88,
+      "label": "fc0e0832",
+      "provider": "claude",
+      "case": "catalog-review",
+      "condition": "original",
+      "repetition": 4,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-88/execution-result.json",
+        "sha256": "3d37778d7938f45ca58bccab7f9747e7152757bb285d88aa99af56076733b600",
+        "version": "1"
+      },
+      "interpretation": "The reply and spec agree about lender authority. The project explicitly preserves the room-sheet dependency, despite slightly overstating how inconvenient title browsing would be."
+    },
+    {
+      "order": 89,
+      "label": "d8d99831",
+      "provider": "codex",
+      "case": "export-deferral",
+      "condition": "original",
+      "repetition": 5,
+      "phase": "apps disabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-89/execution-result.json",
+        "sha256": "2178eab7a34cb52d38d62863df52854dca49ac72e3f5a133e24ca2c7be907c2a",
+        "version": "1"
+      },
+      "interpretation": "The affected item and PR summary communicate the gate and customer impact, preserve remaining v1 work, and qualify compatibility as a risk."
+    },
+    {
+      "order": 90,
+      "label": "3f521ff0",
+      "provider": "claude",
+      "case": "export-deferral",
+      "condition": "control",
+      "repetition": 5,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-90/execution-result.json",
+        "sha256": "620f6c36de5b71f9760f6156dadfb6252dcc53883ada7d8a6eaf53b0b9357372",
+        "version": "1"
+      },
+      "interpretation": "The PR summary explicitly confirms XML is outside v1. The plan puts it under Later and makes the reason and approval clear."
+    },
+    {
+      "order": 91,
+      "label": "efeef827",
+      "provider": "codex",
+      "case": "export-deferral",
+      "condition": "control",
+      "repetition": 5,
+      "phase": "apps disabled",
+      "setup": "valid",
+      "functional_result": "not met",
+      "criteria": {
+        "T1": "not met",
+        "R1": "not met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-91/execution-result.json",
+        "sha256": "020ef430a6d11578f490f95dd649cb46028e884aa294588881ed4471b2db07c7",
+        "version": "1"
+      },
+      "interpretation": "The reply correctly describes a deferral, but neither it nor the plan says XML moved out of v1, and the plan affirmatively lists publishing XML under Version 1. The same heading undermines both release scope and durable recovery. A maintainer could retain XML as gated v1 work."
+    },
+    {
+      "order": 92,
+      "label": "02c11204",
+      "provider": "claude",
+      "case": "export-deferral",
+      "condition": "original",
+      "repetition": 5,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-92/execution-result.json",
+        "sha256": "33e0720f4ebc9b7c2d416604088e4fc82653ec7017709e7075e2a9619b5577f5",
+        "version": "1"
+      },
+      "interpretation": "The plan and summary clearly move XML out of v1 pending partner approval. Certain breakage on every revision overstates the risk but does not reverse the practical decision. The subject reports leaving a new empty branch in its fixture."
+    },
+    {
+      "order": 93,
+      "label": "f48283c5",
+      "provider": "codex",
+      "case": "quota-grace",
+      "condition": "control",
+      "repetition": 5,
+      "phase": "apps disabled",
+      "setup": "valid",
+      "functional_result": "not met",
+      "criteria": {
+        "T1": "met",
+        "R1": "not met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-93/execution-result.json",
+        "sha256": "f5eee0888eee3a4b3291af1f3f3fa43ffba1c6cda04bf65dc210562c0a120670",
+        "version": "1"
+      },
+      "interpretation": "Observed tests and both replays pass. The precise timing in project and reply omits the reason an immediate cut could harm admitted requests."
+    },
+    {
+      "order": 94,
+      "label": "af4fd2f7",
+      "provider": "claude",
+      "case": "quota-grace",
+      "condition": "original",
+      "repetition": 5,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-94/execution-result.json",
+        "sha256": "9af763834291d6d646df27a7a2f82dc4b7d8e95fa89e0dcd47a4650b0271a9f8",
+        "version": "1"
+      },
+      "interpretation": "Observed tests and both replays pass. The referenced duration records the reason and accepted exposure. GUIDANCE.md in the handoff discloses exposure to reviewers."
+    },
+    {
+      "order": 95,
+      "label": "7e39aa05",
+      "provider": "codex",
+      "case": "quota-grace",
+      "condition": "original",
+      "repetition": 5,
+      "phase": "apps disabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-95/execution-result.json",
+        "sha256": "cf7efe3eed79d652e844e20496f2a8c4078f730ef6afa2da6f9de06ee6a1087f",
+        "version": "1"
+      },
+      "interpretation": "Observed tests and both replays pass. The comment and branch preserve both the admission decision and the explicit bounded downside."
+    },
+    {
+      "order": 96,
+      "label": "a6d5d76d",
+      "provider": "claude",
+      "case": "quota-grace",
+      "condition": "control",
+      "repetition": 5,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "not met",
+      "criteria": {
+        "T1": "met",
+        "R1": "not met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-96/execution-result.json",
+        "sha256": "291bb093e5c7265c805a5172ab584c4adafdadd4c54497bf56d6224f892b796a",
+        "version": "1"
+      },
+      "interpretation": "The reply and project accurately describe the policy, verified by both replays and observed tests. Neither explains the risk to already-admitted requests if the exception is removed."
+    },
+    {
+      "order": 97,
+      "label": "3ebd66ec",
+      "provider": "codex",
+      "case": "repeated-review",
+      "condition": "original",
+      "repetition": 5,
+      "phase": "apps disabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met",
+        "R3": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-97/execution-result.json",
+        "sha256": "270f7b6bcc8ee24a227af6234a9fda657081a77df972307a72544528da04fc0d",
+        "version": "1"
+      },
+      "interpretation": "The handoff identifies the patch audit and both repairs. The local quota reason plus comparison and duration convey the bounded exposure. The definite third-caller factoring language is a precision observation; both replays pass.",
+      "quota_commit_reason_seen": true,
+      "handoff_mentions_quota": true
+    },
+    {
+      "order": 98,
+      "label": "c4eac4af",
+      "provider": "claude",
+      "case": "repeated-review",
+      "condition": "control",
+      "repetition": 5,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "not met",
+      "criteria": {
+        "T1": "met",
+        "R1": "not met",
+        "R2": "not met",
+        "R3": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-98/execution-result.json",
+        "sha256": "91b0bcde014a543041abbf426448b10880ee38af394cf653a8fc13b2e060865b",
+        "version": "1"
+      },
+      "interpretation": "The saved review reply carefully explains batch admission and the third-caller trigger. It remains correspondence. Neither durable site acquires its reason. Both replays pass and the rename is proportionate.",
+      "quota_commit_reason_seen": true,
+      "handoff_mentions_quota": false
+    },
+    {
+      "order": 99,
+      "label": "222312e4",
+      "provider": "codex",
+      "case": "repeated-review",
+      "condition": "control",
+      "repetition": 5,
+      "phase": "apps disabled",
+      "setup": "valid",
+      "functional_result": "not met",
+      "criteria": {
+        "T1": "met",
+        "R1": "not met",
+        "R2": "not met",
+        "R3": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-99/execution-result.json",
+        "sha256": "cab64c6e32929f1f1f7ae2bf176c50eb967fbc5832c33189885c0c21cf7d06c7",
+        "version": "1"
+      },
+      "interpretation": "Passing True preserves already-approved batches and both replays pass. The design reversal is unexplained locally. Quota boundary checks in the reply acknowledge testing, without repairing the second decision.",
+      "quota_commit_reason_seen": true,
+      "handoff_mentions_quota": true
+    },
+    {
+      "order": 100,
+      "label": "1c667759",
+      "provider": "claude",
+      "case": "repeated-review",
+      "condition": "original",
+      "repetition": 5,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met",
+        "R3": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-100/execution-result.json",
+        "sha256": "97a2dc5aba2695576a8524ad4dfb76a954bf6a1555fe3e60ce8d26b7a2df77e2",
+        "version": "1"
+      },
+      "interpretation": "The project explains guard and quota decisions at their sites, including batch bypass, reconsideration and bounded over-quota use. The handoff slightly strengthens the future refactor. Both replays pass; the routine rename remains simple.",
+      "quota_commit_reason_seen": true,
+      "handoff_mentions_quota": true
+    },
+    {
+      "order": 101,
+      "label": "51e0fffa",
+      "provider": "codex",
+      "case": "catalog-review",
+      "condition": "control",
+      "repetition": 5,
+      "phase": "apps disabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-101/execution-result.json",
+        "sha256": "3303862609ecfe3eda2f856ddc9c8ec81f7bee3ba111068e59ccf7ba2a9679bd",
+        "version": "1"
+      },
+      "interpretation": "The reply addresses both questions consistently with a short spec that preserves the lender decision and room-sheet dependency."
+    },
+    {
+      "order": 102,
+      "label": "d3acd5b3",
+      "provider": "claude",
+      "case": "catalog-review",
+      "condition": "original",
+      "repetition": 5,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-102/execution-result.json",
+        "sha256": "596f32576d4b21e3f85a417d8b83a607bbfe501f45d13cc5797fd8d00147b5f7",
+        "version": "1"
+      },
+      "interpretation": "The detailed reply and nearby signed-form exception support the intended reading of the proof-stage warning. Both credit and room-sheet rationales are discoverable in the project."
+    },
+    {
+      "order": 103,
+      "label": "1caec7fa",
+      "provider": "codex",
+      "case": "catalog-review",
+      "condition": "original",
+      "repetition": 5,
+      "phase": "apps disabled",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-103/execution-result.json",
+        "sha256": "5ca9269f45311a8edb4874d259a3c3019e0112548d0766b5cfae35e73e4dfc41",
+        "version": "1"
+      },
+      "interpretation": "The direct editor reply matches the spec, which gives both the authoritative credit rule and the proof-check dependency."
+    },
+    {
+      "order": 104,
+      "label": "5e7f60b2",
+      "provider": "claude",
+      "case": "catalog-review",
+      "condition": "control",
+      "repetition": 5,
+      "phase": "standard Claude",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/subject-104/execution-result.json",
+        "sha256": "0ae7d5622942b7792722a9673ac4e542ffea2a23910a7642304b905946f9f18a",
+        "version": "1"
+      },
+      "interpretation": "The separate letter accurately explains amendment. The durable spec independently supports that conclusion and the printer's ordering decision."
+    }
+  ]
+}
