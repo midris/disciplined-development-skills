@@ -303,6 +303,62 @@ Actual attempts: [subject index](runs/application-benchmark-01/claude/run-index.
 | 51 | catalog-review | original | 5 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/catalog-review-original.json` |
 | 52 | catalog-review | control | 5 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/catalog-review-control.json` |
 
+### Proposed batch: codex-application-topup-01
+
+Scope: 18 approved subjects for repetitions 3–5. Include every valid-setup execution. No automatic retry. Preserve every attempt.
+Actual attempts: [subject index](runs/application-topup-01/codex/run-index.json).
+
+[helper-rename](runs/application-benchmark-01/codex/helper-rename-manifest.json) [scope-trim](runs/application-benchmark-01/codex/scope-trim-manifest.json) [dispatch-hold](runs/application-benchmark-01/codex/dispatch-hold-manifest.json)
+
+| Order | Case | Condition | Repetition | CONFIG |
+| --- | --- | --- | --- | --- |
+| 1 | helper-rename | original | 3 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/helper-rename-original.json` |
+| 2 | helper-rename | control | 3 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/helper-rename-control.json` |
+| 3 | scope-trim | control | 3 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/scope-trim-control.json` |
+| 4 | scope-trim | original | 3 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/scope-trim-original.json` |
+| 5 | dispatch-hold | original | 3 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/dispatch-hold-original.json` |
+| 6 | dispatch-hold | control | 3 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/dispatch-hold-control.json` |
+| 7 | helper-rename | control | 4 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/helper-rename-control.json` |
+| 8 | helper-rename | original | 4 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/helper-rename-original.json` |
+| 9 | scope-trim | original | 4 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/scope-trim-original.json` |
+| 10 | scope-trim | control | 4 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/scope-trim-control.json` |
+| 11 | dispatch-hold | control | 4 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/dispatch-hold-control.json` |
+| 12 | dispatch-hold | original | 4 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/dispatch-hold-original.json` |
+| 13 | helper-rename | original | 5 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/helper-rename-original.json` |
+| 14 | helper-rename | control | 5 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/helper-rename-control.json` |
+| 15 | scope-trim | control | 5 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/scope-trim-control.json` |
+| 16 | scope-trim | original | 5 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/scope-trim-original.json` |
+| 17 | dispatch-hold | original | 5 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/dispatch-hold-original.json` |
+| 18 | dispatch-hold | control | 5 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/dispatch-hold-control.json` |
+
+### Proposed batch: claude-application-topup-01
+
+Scope: 18 approved subjects for repetitions 3–5. Include every valid-setup execution. No automatic retry. Preserve every attempt.
+Actual attempts: [subject index](runs/application-topup-01/claude/run-index.json).
+
+[helper-rename](runs/application-benchmark-01/claude/helper-rename-manifest.json) [scope-trim](runs/application-benchmark-01/claude/scope-trim-manifest.json) [dispatch-hold](runs/application-benchmark-01/claude/dispatch-hold-manifest.json)
+
+| Order | Case | Condition | Repetition | CONFIG |
+| --- | --- | --- | --- | --- |
+| 1 | helper-rename | control | 3 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/helper-rename-control.json` |
+| 2 | helper-rename | original | 3 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/helper-rename-original.json` |
+| 3 | scope-trim | original | 3 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/scope-trim-original.json` |
+| 4 | scope-trim | control | 3 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/scope-trim-control.json` |
+| 5 | dispatch-hold | control | 3 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/dispatch-hold-control.json` |
+| 6 | dispatch-hold | original | 3 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/dispatch-hold-original.json` |
+| 7 | helper-rename | original | 4 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/helper-rename-original.json` |
+| 8 | helper-rename | control | 4 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/helper-rename-control.json` |
+| 9 | scope-trim | control | 4 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/scope-trim-control.json` |
+| 10 | scope-trim | original | 4 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/scope-trim-original.json` |
+| 11 | dispatch-hold | original | 4 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/dispatch-hold-original.json` |
+| 12 | dispatch-hold | control | 4 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/dispatch-hold-control.json` |
+| 13 | helper-rename | control | 5 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/helper-rename-control.json` |
+| 14 | helper-rename | original | 5 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/helper-rename-original.json` |
+| 15 | scope-trim | original | 5 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/scope-trim-original.json` |
+| 16 | scope-trim | control | 5 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/scope-trim-control.json` |
+| 17 | dispatch-hold | control | 5 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/dispatch-hold-control.json` |
+| 18 | dispatch-hold | original | 5 | `skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/dispatch-hold-original.json` |
+
 ## Storage and accounting
 
 Canonical checkout: `/Users/simon/work/personal/disciplined-development-skills`.
@@ -315,8 +371,8 @@ The external `qualification.inventory.json` covers all 728 entries in `qualifica
 Host loss remains a recovery gap for WER. Include single-host retention in the owner’s allocation decision.
 
 The runner totals below cover its linked subject and evaluator run indexes: the original baseline, the eight functional-pilot subjects and the proposed application benchmark. The original baseline used 24 subjects, 20 evaluators and one retry. The eight pilot subjects are fully spent. Historical comparison batches and the ten pilot/contrast readers use separate ledgers in their checkpoints and do not enter this runner subtotal. No historical capacity carries forward.
-Proposed outer limits for the linked indexes: 136 subject, 54 evaluator, 0 authoring and 1 retry invocations.
-Dispatched calls are **136 subject, 52 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **0 / 2 / 0 / 0** under the approved application benchmark allocation.
+Proposed outer limits for the linked indexes: 172 subject, 54 evaluator, 0 authoring and 1 retry invocations.
+Dispatched calls are **136 subject, 52 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **36 / 2 / 0 / 0** before the subject top-up.
 Record benchmark evaluator attempts with distinct run IDs, evaluator role, allocation pool and launcher charge in the version-1 evaluator ledger.
 
 0 active minutes booked; 260 minutes below the 260-minute planning guideline. This is an opening budget ledger for the proposed run sequence. Earlier case development has no measured time entry.
@@ -686,3 +742,7 @@ For the broader comparison, give the most weight to the second repeated-review r
 The owner approved one fresh Codex repeated-review subject with the [frozen candidate and inputs](runs/rewrite-screen-01/freeze.json). Use the apps-disabled runner and whole-output scoring. Retain the attempt regardless of outcome, then report before any expansion to three. This screen has its own ledger, one subject slot and no replacement or evaluator allocation.
 
 The [first fresh screen result](runs/rewrite-screen-01/assessment.json) met T1 and R1–R3. The [attempt](runs/rewrite-screen-01/attempt.json) consumed the single approved call. Both offline replays passed. The candidate is eligible for two further observations after owner review.
+
+### Shipped benchmark top-up
+
+The owner approved [36 additional subjects](runs/application-topup-01/schedule.json) before further candidate work. Add repetitions 3–5 to the existing two for helper rename, scope trim and dispatch hold, in both arms and providers. Reuse the frozen case manifests, application scoring policy, runtime pins, apps-disabled Codex boundary and post-resumption audit. Preserve failures. Apply the Monday handoff ruling consistently. Report new and combined results; distinguish the earlier Codex apps-enabled stratum. The historical independent assessments cover only the earlier outputs. No other calls are allocated.
