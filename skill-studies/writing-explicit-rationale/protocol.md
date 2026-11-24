@@ -684,3 +684,5 @@ For the broader comparison, give the most weight to the second repeated-review r
 ### First 599-word rewrite screen
 
 The owner approved one fresh Codex repeated-review subject with the [frozen candidate and inputs](runs/rewrite-screen-01/freeze.json). Use the apps-disabled runner and whole-output scoring. Retain the attempt regardless of outcome, then report before any expansion to three. This screen has its own ledger, one subject slot and no replacement or evaluator allocation.
+
+The [first fresh screen result](runs/rewrite-screen-01/assessment.json) met T1 and R1–R3. The [attempt](runs/rewrite-screen-01/attempt.json) consumed the single approved call. Both offline replays passed. The candidate is eligible for two further observations after owner review.
