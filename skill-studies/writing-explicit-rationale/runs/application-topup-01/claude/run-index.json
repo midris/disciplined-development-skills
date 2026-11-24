@@ -3,5 +3,870 @@
   "index_id": "claude-application-topup-01-attempts",
   "study_id": "writing-explicit-rationale",
   "batch_id": "claude-application-topup-01",
-  "attempts": []
+  "attempts": [
+    {
+      "attempt_id": "claude-application-topup-01-helper-rename-control-3-1",
+      "case_id": "helper-rename",
+      "condition": "control",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/helper-rename-manifest.json",
+        "sha256": "199d032ae57ad46627861003c9893e45f272a161ec816f830151e39b4be51a1d",
+        "version": "1",
+        "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "5908dc75387fad009a6268650f8bc1f2032628cf388757bdfe8d86698b41657d",
+          "version": "1",
+          "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+        },
+        "selector": "Batch: claude-application-topup-01; order 1"
+      },
+      "run_id": "20261124T175322656Z-project-task-af1a8710-74cb-4187-aebe-9590f513d343-_c_qiebs",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Complete scoped assessment retained."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T175322656Z-project-task-af1a8710-74cb-4187-aebe-9590f513d343-_c_qiebs",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T175322656Z-project-task-af1a8710-74cb-4187-aebe-9590f513d343-_c_qiebs.inventory.json",
+          "sha256": "18bf6651206a850ea4bf1271b0937d00a1ad6f7fbf636c5e10322f523da46722",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-application-topup-01-helper-rename-control-3-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-02/execution-result.json",
+          "sha256": "f88397fdf3ead0d9849ed17dc87b96788bd2631e4f86e23fde9a04b41a00a5af",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-application-topup-01-helper-rename-original-3-1",
+      "case_id": "helper-rename",
+      "condition": "original",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/helper-rename-manifest.json",
+        "sha256": "199d032ae57ad46627861003c9893e45f272a161ec816f830151e39b4be51a1d",
+        "version": "1",
+        "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "5908dc75387fad009a6268650f8bc1f2032628cf388757bdfe8d86698b41657d",
+          "version": "1",
+          "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+        },
+        "selector": "Batch: claude-application-topup-01; order 2"
+      },
+      "run_id": "20261124T175423451Z-project-task-2667bf0b-b23e-451c-aae8-d25369aa8c32-0gez3piy",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Complete scoped assessment retained."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T175423451Z-project-task-2667bf0b-b23e-451c-aae8-d25369aa8c32-0gez3piy",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T175423451Z-project-task-2667bf0b-b23e-451c-aae8-d25369aa8c32-0gez3piy.inventory.json",
+          "sha256": "580deb016f39b989ba05254c94d332d873bb4e7a34088b3706087b5b044d40ca",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-application-topup-01-helper-rename-original-3-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-04/execution-result.json",
+          "sha256": "1962a57acce3b7b20a091169835f9b039cbd9b6330fb62afa4d2d872fd475561",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-application-topup-01-scope-trim-original-3-1",
+      "case_id": "scope-trim",
+      "condition": "original",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/scope-trim-manifest.json",
+        "sha256": "22c712dbb126ca56bf0c1ccbf242c373cb66d7f5597b763b21f6ae8bb0ed30c3",
+        "version": "1",
+        "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "5908dc75387fad009a6268650f8bc1f2032628cf388757bdfe8d86698b41657d",
+          "version": "1",
+          "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+        },
+        "selector": "Batch: claude-application-topup-01; order 3"
+      },
+      "run_id": "20261124T175533303Z-project-task-ffab27df-9821-44d0-9656-95557ccd200f-qth64yvk",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Complete scoped assessment retained."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T175533303Z-project-task-ffab27df-9821-44d0-9656-95557ccd200f-qth64yvk",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T175533303Z-project-task-ffab27df-9821-44d0-9656-95557ccd200f-qth64yvk.inventory.json",
+          "sha256": "a31c88eeb4f5d3e028ac24b43bbf4a3e9f68b91852a42ca0beb883199f8167d5",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-application-topup-01-scope-trim-original-3-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-06/execution-result.json",
+          "sha256": "88aa6a8f3838230fbfcc0c589458f706bd683b6f91d85735fcc284460fa346fd",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-application-topup-01-scope-trim-control-3-1",
+      "case_id": "scope-trim",
+      "condition": "control",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/scope-trim-manifest.json",
+        "sha256": "22c712dbb126ca56bf0c1ccbf242c373cb66d7f5597b763b21f6ae8bb0ed30c3",
+        "version": "1",
+        "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "5908dc75387fad009a6268650f8bc1f2032628cf388757bdfe8d86698b41657d",
+          "version": "1",
+          "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+        },
+        "selector": "Batch: claude-application-topup-01; order 4"
+      },
+      "run_id": "20261124T175642069Z-project-task-4d9cf84a-eeca-48ab-b186-db3c73468019-h7t8zvpc",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Complete scoped assessment retained."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T175642069Z-project-task-4d9cf84a-eeca-48ab-b186-db3c73468019-h7t8zvpc",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T175642069Z-project-task-4d9cf84a-eeca-48ab-b186-db3c73468019-h7t8zvpc.inventory.json",
+          "sha256": "f5248812389b8b2dc2b4b07f0dbf0bacad5af0bfb699812a5b5ca6b5e6ae917a",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-application-topup-01-scope-trim-control-3-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-08/execution-result.json",
+          "sha256": "4fdfb707a16ca3f4921f6e10c8bc8810f091cc2838d9813b92c388eef5e4b46d",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-application-topup-01-dispatch-hold-control-3-1",
+      "case_id": "dispatch-hold",
+      "condition": "control",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/dispatch-hold-manifest.json",
+        "sha256": "f395b574d434dcea20108cf9c270ad7dba563b64353880653b7c5e329fb726ad",
+        "version": "1",
+        "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "5908dc75387fad009a6268650f8bc1f2032628cf388757bdfe8d86698b41657d",
+          "version": "1",
+          "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+        },
+        "selector": "Batch: claude-application-topup-01; order 5"
+      },
+      "run_id": "20261124T175808128Z-project-task-d44a8a8f-146f-4272-890d-865c10316dc1-l1r4790_",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Complete scoped assessment retained."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T175808128Z-project-task-d44a8a8f-146f-4272-890d-865c10316dc1-l1r4790_",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T175808128Z-project-task-d44a8a8f-146f-4272-890d-865c10316dc1-l1r4790_.inventory.json",
+          "sha256": "8a7b9cd52435fa0ebabb06a3669abbd6a0cad85814bcc07a0ea97fef2f5579ae",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-application-topup-01-dispatch-hold-control-3-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-10/execution-result.json",
+          "sha256": "77f801ade22061376fc8a6cbf5d13f23e2d87ae675e2e698b54fbce3e72605d2",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-application-topup-01-dispatch-hold-original-3-1",
+      "case_id": "dispatch-hold",
+      "condition": "original",
+      "repetition": 3,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/dispatch-hold-manifest.json",
+        "sha256": "f395b574d434dcea20108cf9c270ad7dba563b64353880653b7c5e329fb726ad",
+        "version": "1",
+        "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "5908dc75387fad009a6268650f8bc1f2032628cf388757bdfe8d86698b41657d",
+          "version": "1",
+          "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+        },
+        "selector": "Batch: claude-application-topup-01; order 6"
+      },
+      "run_id": "20261124T175924196Z-project-task-baabb40a-d50f-4658-ac6a-a40a4ec2a84f-9jani7im",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Complete scoped assessment retained."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T175924196Z-project-task-baabb40a-d50f-4658-ac6a-a40a4ec2a84f-9jani7im",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T175924196Z-project-task-baabb40a-d50f-4658-ac6a-a40a4ec2a84f-9jani7im.inventory.json",
+          "sha256": "6cfced731c77c2ed96dbb45f058ab88d772ca608aa2d3e471c84e23a7ddffd99",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-application-topup-01-dispatch-hold-original-3-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-12/execution-result.json",
+          "sha256": "f2ce73207147d9aa5f7168859d7dd63aa419146d2c66503eb5c15ede4710f8f7",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-application-topup-01-helper-rename-original-4-1",
+      "case_id": "helper-rename",
+      "condition": "original",
+      "repetition": 4,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/helper-rename-manifest.json",
+        "sha256": "199d032ae57ad46627861003c9893e45f272a161ec816f830151e39b4be51a1d",
+        "version": "1",
+        "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "5908dc75387fad009a6268650f8bc1f2032628cf388757bdfe8d86698b41657d",
+          "version": "1",
+          "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+        },
+        "selector": "Batch: claude-application-topup-01; order 7"
+      },
+      "run_id": "20261124T180044465Z-project-task-61b088ab-a596-4cba-bc5d-f578dc7a22e3-v7el6mjh",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Complete scoped assessment retained."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T180044465Z-project-task-61b088ab-a596-4cba-bc5d-f578dc7a22e3-v7el6mjh",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T180044465Z-project-task-61b088ab-a596-4cba-bc5d-f578dc7a22e3-v7el6mjh.inventory.json",
+          "sha256": "3fb583e6f04dfd3f3e686f5aa36f95b1853e91fd4e73f11441c7981a04121963",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-application-topup-01-helper-rename-original-4-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-14/execution-result.json",
+          "sha256": "39fb8419416332f032a1c52edceb2e157a22b96b5bb8be4baa0f6e0a67626b4e",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-application-topup-01-helper-rename-control-4-1",
+      "case_id": "helper-rename",
+      "condition": "control",
+      "repetition": 4,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/helper-rename-manifest.json",
+        "sha256": "199d032ae57ad46627861003c9893e45f272a161ec816f830151e39b4be51a1d",
+        "version": "1",
+        "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "5908dc75387fad009a6268650f8bc1f2032628cf388757bdfe8d86698b41657d",
+          "version": "1",
+          "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+        },
+        "selector": "Batch: claude-application-topup-01; order 8"
+      },
+      "run_id": "20261124T180157083Z-project-task-8884c35c-b512-4def-b6fb-9d809e449591-30nsbkyp",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Complete scoped assessment retained."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T180157083Z-project-task-8884c35c-b512-4def-b6fb-9d809e449591-30nsbkyp",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T180157083Z-project-task-8884c35c-b512-4def-b6fb-9d809e449591-30nsbkyp.inventory.json",
+          "sha256": "a027fe68433f075a7afcf36369f5e29ffb3ce17e1d2161de94fa72d79e040314",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-application-topup-01-helper-rename-control-4-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-16/execution-result.json",
+          "sha256": "ef748153c6188871e1d0b48a31d0468448d0096d4bd5df13787aee989c8c2ba6",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-application-topup-01-scope-trim-control-4-1",
+      "case_id": "scope-trim",
+      "condition": "control",
+      "repetition": 4,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/scope-trim-manifest.json",
+        "sha256": "22c712dbb126ca56bf0c1ccbf242c373cb66d7f5597b763b21f6ae8bb0ed30c3",
+        "version": "1",
+        "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "5908dc75387fad009a6268650f8bc1f2032628cf388757bdfe8d86698b41657d",
+          "version": "1",
+          "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+        },
+        "selector": "Batch: claude-application-topup-01; order 9"
+      },
+      "run_id": "20261124T180305108Z-project-task-0a2751f7-5605-452f-80de-4bda25b7c417-q6doqs3o",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Complete scoped assessment retained."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T180305108Z-project-task-0a2751f7-5605-452f-80de-4bda25b7c417-q6doqs3o",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T180305108Z-project-task-0a2751f7-5605-452f-80de-4bda25b7c417-q6doqs3o.inventory.json",
+          "sha256": "76e0611c1fd590efe3e83912914862c38463024882ab2f5d44947f53d28ff598",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-application-topup-01-scope-trim-control-4-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-18/execution-result.json",
+          "sha256": "7a6ca257b1422a792de0444854cfeae43f12fc9e5d836f40a17d0cce98c38e39",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-application-topup-01-scope-trim-original-4-1",
+      "case_id": "scope-trim",
+      "condition": "original",
+      "repetition": 4,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/scope-trim-manifest.json",
+        "sha256": "22c712dbb126ca56bf0c1ccbf242c373cb66d7f5597b763b21f6ae8bb0ed30c3",
+        "version": "1",
+        "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "5908dc75387fad009a6268650f8bc1f2032628cf388757bdfe8d86698b41657d",
+          "version": "1",
+          "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+        },
+        "selector": "Batch: claude-application-topup-01; order 10"
+      },
+      "run_id": "20261124T180413894Z-project-task-18cfa061-7465-4aff-a2dd-b0e9bcdac3fb-95kb0nux",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Complete scoped assessment retained."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T180413894Z-project-task-18cfa061-7465-4aff-a2dd-b0e9bcdac3fb-95kb0nux",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T180413894Z-project-task-18cfa061-7465-4aff-a2dd-b0e9bcdac3fb-95kb0nux.inventory.json",
+          "sha256": "3c942e787069e86279ce621190b5433763a260908214888dd63da54370709cd4",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-application-topup-01-scope-trim-original-4-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-20/execution-result.json",
+          "sha256": "3d8cb3dee61544b3c704fb97462d27cd060498084dfca3c84ecc674d79b7e79e",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-application-topup-01-dispatch-hold-original-4-1",
+      "case_id": "dispatch-hold",
+      "condition": "original",
+      "repetition": 4,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/dispatch-hold-manifest.json",
+        "sha256": "f395b574d434dcea20108cf9c270ad7dba563b64353880653b7c5e329fb726ad",
+        "version": "1",
+        "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "5908dc75387fad009a6268650f8bc1f2032628cf388757bdfe8d86698b41657d",
+          "version": "1",
+          "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+        },
+        "selector": "Batch: claude-application-topup-01; order 11"
+      },
+      "run_id": "20261124T180545450Z-project-task-2a85dfa8-df57-4476-a04c-d62f9a236902-bz50zg6r",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Complete scoped assessment retained."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T180545450Z-project-task-2a85dfa8-df57-4476-a04c-d62f9a236902-bz50zg6r",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T180545450Z-project-task-2a85dfa8-df57-4476-a04c-d62f9a236902-bz50zg6r.inventory.json",
+          "sha256": "7aafc51aa138d594974c8aa132de6cf03b5ac1787a3277d6036de0477cda9ed7",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-application-topup-01-dispatch-hold-original-4-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-22/execution-result.json",
+          "sha256": "e854211b1bc15ce99d1b3c403c480145d90d3a7eed27bfbca34184256e1b37f3",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-application-topup-01-dispatch-hold-control-4-1",
+      "case_id": "dispatch-hold",
+      "condition": "control",
+      "repetition": 4,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/dispatch-hold-manifest.json",
+        "sha256": "f395b574d434dcea20108cf9c270ad7dba563b64353880653b7c5e329fb726ad",
+        "version": "1",
+        "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "5908dc75387fad009a6268650f8bc1f2032628cf388757bdfe8d86698b41657d",
+          "version": "1",
+          "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+        },
+        "selector": "Batch: claude-application-topup-01; order 12"
+      },
+      "run_id": "20261124T180720810Z-project-task-a5ce3b4b-feaf-4ded-b1fc-6965bc40c50c-ictdsg7q",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Complete scoped assessment retained."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T180720810Z-project-task-a5ce3b4b-feaf-4ded-b1fc-6965bc40c50c-ictdsg7q",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T180720810Z-project-task-a5ce3b4b-feaf-4ded-b1fc-6965bc40c50c-ictdsg7q.inventory.json",
+          "sha256": "85822dbadc9f6db7a61b87a9518c9cd11c8df58df9f8e002a3a9e6b0f117bf8e",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-application-topup-01-dispatch-hold-control-4-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-24/execution-result.json",
+          "sha256": "52ba25605de9196ed42267436ec555073ac5f3b7487958e1ff8119f07a165a05",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-application-topup-01-helper-rename-control-5-1",
+      "case_id": "helper-rename",
+      "condition": "control",
+      "repetition": 5,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/helper-rename-manifest.json",
+        "sha256": "199d032ae57ad46627861003c9893e45f272a161ec816f830151e39b4be51a1d",
+        "version": "1",
+        "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "5908dc75387fad009a6268650f8bc1f2032628cf388757bdfe8d86698b41657d",
+          "version": "1",
+          "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+        },
+        "selector": "Batch: claude-application-topup-01; order 13"
+      },
+      "run_id": "20261124T180853762Z-project-task-3af79d08-bcbf-4c45-a6b5-2bc1cf094c80-hc3hg8bu",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Complete scoped assessment retained."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T180853762Z-project-task-3af79d08-bcbf-4c45-a6b5-2bc1cf094c80-hc3hg8bu",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T180853762Z-project-task-3af79d08-bcbf-4c45-a6b5-2bc1cf094c80-hc3hg8bu.inventory.json",
+          "sha256": "6ada35df542823458038ae04085fcc41ccb97db2d61d5928d8dabcc2031b7957",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-application-topup-01-helper-rename-control-5-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-26/execution-result.json",
+          "sha256": "1c1f9251c575edcef6a591ab58b7a25444f66db11e1969a507fc3bf49478456b",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-application-topup-01-helper-rename-original-5-1",
+      "case_id": "helper-rename",
+      "condition": "original",
+      "repetition": 5,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/helper-rename-manifest.json",
+        "sha256": "199d032ae57ad46627861003c9893e45f272a161ec816f830151e39b4be51a1d",
+        "version": "1",
+        "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "5908dc75387fad009a6268650f8bc1f2032628cf388757bdfe8d86698b41657d",
+          "version": "1",
+          "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+        },
+        "selector": "Batch: claude-application-topup-01; order 14"
+      },
+      "run_id": "20261124T180954204Z-project-task-e0eee646-f42a-4422-8f30-728a3d01a44a-m2gfkyp2",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Complete scoped assessment retained."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T180954204Z-project-task-e0eee646-f42a-4422-8f30-728a3d01a44a-m2gfkyp2",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T180954204Z-project-task-e0eee646-f42a-4422-8f30-728a3d01a44a-m2gfkyp2.inventory.json",
+          "sha256": "c2085dbaa6f5b9ad5ae7aec441b2b14b1353c1fad9ed6b1a40a026b007ad9a5f",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-application-topup-01-helper-rename-original-5-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-28/execution-result.json",
+          "sha256": "247b4a843fb4d9aec14b7ca1ecb6564051ee40a096ea1f37d87e77ef4e3e9d52",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-application-topup-01-scope-trim-original-5-1",
+      "case_id": "scope-trim",
+      "condition": "original",
+      "repetition": 5,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/scope-trim-manifest.json",
+        "sha256": "22c712dbb126ca56bf0c1ccbf242c373cb66d7f5597b763b21f6ae8bb0ed30c3",
+        "version": "1",
+        "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "5908dc75387fad009a6268650f8bc1f2032628cf388757bdfe8d86698b41657d",
+          "version": "1",
+          "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+        },
+        "selector": "Batch: claude-application-topup-01; order 15"
+      },
+      "run_id": "20261124T181055624Z-project-task-5a728e73-64e4-45fe-a6fb-27547d64a5da-40w5z_fm",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Complete scoped assessment retained."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T181055624Z-project-task-5a728e73-64e4-45fe-a6fb-27547d64a5da-40w5z_fm",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T181055624Z-project-task-5a728e73-64e4-45fe-a6fb-27547d64a5da-40w5z_fm.inventory.json",
+          "sha256": "67c7e453569164f22683c5befddaa7335e2752eb58d85065c187d3c13a0efe5d",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-application-topup-01-scope-trim-original-5-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-30/execution-result.json",
+          "sha256": "0b2e1376f9dbdf40eb7152ae499a756275e2c002bfbcc7ba43c1e890c6d95bb6",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-application-topup-01-scope-trim-control-5-1",
+      "case_id": "scope-trim",
+      "condition": "control",
+      "repetition": 5,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/scope-trim-manifest.json",
+        "sha256": "22c712dbb126ca56bf0c1ccbf242c373cb66d7f5597b763b21f6ae8bb0ed30c3",
+        "version": "1",
+        "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "5908dc75387fad009a6268650f8bc1f2032628cf388757bdfe8d86698b41657d",
+          "version": "1",
+          "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+        },
+        "selector": "Batch: claude-application-topup-01; order 16"
+      },
+      "run_id": "20261124T181200890Z-project-task-eeb5a452-a436-40ac-a87f-ec153a18344d-poykf2mn",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Complete scoped assessment retained."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T181200890Z-project-task-eeb5a452-a436-40ac-a87f-ec153a18344d-poykf2mn",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T181200890Z-project-task-eeb5a452-a436-40ac-a87f-ec153a18344d-poykf2mn.inventory.json",
+          "sha256": "c16bb9023054ee8a559a0f60b4961567d5529c26c7b7c61ecce981aa94caa590",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-application-topup-01-scope-trim-control-5-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-32/execution-result.json",
+          "sha256": "e8b03c5cc0b308d91f78d6943426bb5d63a46f7095ffa5216cd3d612af997f8b",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-application-topup-01-dispatch-hold-control-5-1",
+      "case_id": "dispatch-hold",
+      "condition": "control",
+      "repetition": 5,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/dispatch-hold-manifest.json",
+        "sha256": "f395b574d434dcea20108cf9c270ad7dba563b64353880653b7c5e329fb726ad",
+        "version": "1",
+        "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "5908dc75387fad009a6268650f8bc1f2032628cf388757bdfe8d86698b41657d",
+          "version": "1",
+          "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+        },
+        "selector": "Batch: claude-application-topup-01; order 17"
+      },
+      "run_id": "20261124T181318726Z-project-task-1566d7f6-569e-4a1f-adcb-21f1436c5efb-neskvxu2",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Complete scoped assessment retained."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T181318726Z-project-task-1566d7f6-569e-4a1f-adcb-21f1436c5efb-neskvxu2",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T181318726Z-project-task-1566d7f6-569e-4a1f-adcb-21f1436c5efb-neskvxu2.inventory.json",
+          "sha256": "85e5fc83075f4a097f1dae957ac69d288fb1917bd86e8456f8f778dcb6221014",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-application-topup-01-dispatch-hold-control-5-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-34/execution-result.json",
+          "sha256": "b6a6674ff23edb7d554267a735a5068b6562e7fb788128df0c394b02c6052106",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "claude-application-topup-01-dispatch-hold-original-5-1",
+      "case_id": "dispatch-hold",
+      "condition": "original",
+      "repetition": 5,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/dispatch-hold-manifest.json",
+        "sha256": "f395b574d434dcea20108cf9c270ad7dba563b64353880653b7c5e329fb726ad",
+        "version": "1",
+        "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "5908dc75387fad009a6268650f8bc1f2032628cf388757bdfe8d86698b41657d",
+          "version": "1",
+          "git_revision": "20793244b5f243d4b9819cf4667505633bdfa74d"
+        },
+        "selector": "Batch: claude-application-topup-01; order 18"
+      },
+      "run_id": "20261124T181427314Z-project-task-c97ad480-834b-40ce-95f6-84f809a1a55b-t9v6bgvj",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Complete scoped assessment retained."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T181427314Z-project-task-c97ad480-834b-40ce-95f6-84f809a1a55b-t9v6bgvj",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/subjects/20261124T181427314Z-project-task-c97ad480-834b-40ce-95f6-84f809a1a55b-t9v6bgvj.inventory.json",
+          "sha256": "70151a63b4919fbe693ace13fef20704bca7165331253ed5f4aa416f3adb6506",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "claude-application-topup-01-dispatch-hold-original-5-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-36/execution-result.json",
+          "sha256": "6aec61425774da64763c9805a82336656738381879e37aea61bfdb119f6b9af0",
+          "version": "1"
+        }
+      }
+    }
+  ]
 }
