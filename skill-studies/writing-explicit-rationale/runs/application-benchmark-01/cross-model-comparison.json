@@ -1,0 +1,1279 @@
+{
+  "assessments": [
+    {
+      "group": 1,
+      "label": "369fad18",
+      "subject_order": 3,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "604fb1059a225f345add9c861c4cb939f1952156ae3df5f219a2dff03307346e"
+    },
+    {
+      "group": 1,
+      "label": "3d116433",
+      "subject_order": 29,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "604fb1059a225f345add9c861c4cb939f1952156ae3df5f219a2dff03307346e"
+    },
+    {
+      "group": 1,
+      "label": "4f781572",
+      "subject_order": 1,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "604fb1059a225f345add9c861c4cb939f1952156ae3df5f219a2dff03307346e"
+    },
+    {
+      "group": 1,
+      "label": "7540b408",
+      "subject_order": 31,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "604fb1059a225f345add9c861c4cb939f1952156ae3df5f219a2dff03307346e"
+    },
+    {
+      "group": 1,
+      "label": "a732cc41",
+      "subject_order": 59,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "604fb1059a225f345add9c861c4cb939f1952156ae3df5f219a2dff03307346e"
+    },
+    {
+      "group": 1,
+      "label": "b0ca9ae8",
+      "subject_order": 73,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "604fb1059a225f345add9c861c4cb939f1952156ae3df5f219a2dff03307346e"
+    },
+    {
+      "group": 1,
+      "label": "c4248796",
+      "subject_order": 75,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "604fb1059a225f345add9c861c4cb939f1952156ae3df5f219a2dff03307346e"
+    },
+    {
+      "group": 1,
+      "label": "d8d99831",
+      "subject_order": 89,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "604fb1059a225f345add9c861c4cb939f1952156ae3df5f219a2dff03307346e"
+    },
+    {
+      "group": 1,
+      "label": "e5f8998f",
+      "subject_order": 57,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "604fb1059a225f345add9c861c4cb939f1952156ae3df5f219a2dff03307346e"
+    },
+    {
+      "group": 1,
+      "label": "efeef827",
+      "subject_order": 91,
+      "included": true,
+      "independent_criteria": {
+        "T1": "not met",
+        "R1": "not met"
+      },
+      "review_answer_sha256": "604fb1059a225f345add9c861c4cb939f1952156ae3df5f219a2dff03307346e"
+    },
+    {
+      "group": 2,
+      "label": "02c11204",
+      "subject_order": 92,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "4f2b24d80d4d6d28d091805be5f1c8b96444d85b5f99925771a1663e5438bfb9"
+    },
+    {
+      "group": 2,
+      "label": "30799ca0",
+      "subject_order": 60,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "4f2b24d80d4d6d28d091805be5f1c8b96444d85b5f99925771a1663e5438bfb9"
+    },
+    {
+      "group": 2,
+      "label": "31223b27",
+      "subject_order": 76,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "not met"
+      },
+      "review_answer_sha256": "4f2b24d80d4d6d28d091805be5f1c8b96444d85b5f99925771a1663e5438bfb9"
+    },
+    {
+      "group": 2,
+      "label": "393ab302",
+      "subject_order": 30,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "4f2b24d80d4d6d28d091805be5f1c8b96444d85b5f99925771a1663e5438bfb9"
+    },
+    {
+      "group": 2,
+      "label": "3e0bed47",
+      "subject_order": 32,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "not met"
+      },
+      "review_answer_sha256": "4f2b24d80d4d6d28d091805be5f1c8b96444d85b5f99925771a1663e5438bfb9"
+    },
+    {
+      "group": 2,
+      "label": "3f521ff0",
+      "subject_order": 90,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "not met"
+      },
+      "review_answer_sha256": "4f2b24d80d4d6d28d091805be5f1c8b96444d85b5f99925771a1663e5438bfb9"
+    },
+    {
+      "group": 2,
+      "label": "64887b5b",
+      "subject_order": 4,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "4f2b24d80d4d6d28d091805be5f1c8b96444d85b5f99925771a1663e5438bfb9"
+    },
+    {
+      "group": 2,
+      "label": "a1ed3a11",
+      "subject_order": 2,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "not met"
+      },
+      "review_answer_sha256": "4f2b24d80d4d6d28d091805be5f1c8b96444d85b5f99925771a1663e5438bfb9"
+    },
+    {
+      "group": 2,
+      "label": "a3a23cb8",
+      "subject_order": 74,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "4f2b24d80d4d6d28d091805be5f1c8b96444d85b5f99925771a1663e5438bfb9"
+    },
+    {
+      "group": 2,
+      "label": "ef4a0e24",
+      "subject_order": 58,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "4f2b24d80d4d6d28d091805be5f1c8b96444d85b5f99925771a1663e5438bfb9"
+    },
+    {
+      "group": 3,
+      "label": "5416dc6e",
+      "subject_order": 79,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "not met"
+      },
+      "review_answer_sha256": "bd525d7b1c53254545a6b795bc864795141197cc1daaf3e1ccaf9e84005cd496"
+    },
+    {
+      "group": 3,
+      "label": "7a478a2d",
+      "subject_order": 5,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "not met"
+      },
+      "review_answer_sha256": "bd525d7b1c53254545a6b795bc864795141197cc1daaf3e1ccaf9e84005cd496"
+    },
+    {
+      "group": 3,
+      "label": "7e39aa05",
+      "subject_order": 95,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "bd525d7b1c53254545a6b795bc864795141197cc1daaf3e1ccaf9e84005cd496"
+    },
+    {
+      "group": 3,
+      "label": "9f80445d",
+      "subject_order": 33,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "bd525d7b1c53254545a6b795bc864795141197cc1daaf3e1ccaf9e84005cd496"
+    },
+    {
+      "group": 3,
+      "label": "a98246d9",
+      "subject_order": 61,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "not met"
+      },
+      "review_answer_sha256": "bd525d7b1c53254545a6b795bc864795141197cc1daaf3e1ccaf9e84005cd496"
+    },
+    {
+      "group": 3,
+      "label": "b013a7a8",
+      "subject_order": 77,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "bd525d7b1c53254545a6b795bc864795141197cc1daaf3e1ccaf9e84005cd496"
+    },
+    {
+      "group": 3,
+      "label": "b097885a",
+      "subject_order": 7,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "bd525d7b1c53254545a6b795bc864795141197cc1daaf3e1ccaf9e84005cd496"
+    },
+    {
+      "group": 3,
+      "label": "ee5fdfd5",
+      "subject_order": 63,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "bd525d7b1c53254545a6b795bc864795141197cc1daaf3e1ccaf9e84005cd496"
+    },
+    {
+      "group": 3,
+      "label": "f0daab1f",
+      "subject_order": 35,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "not met"
+      },
+      "review_answer_sha256": "bd525d7b1c53254545a6b795bc864795141197cc1daaf3e1ccaf9e84005cd496"
+    },
+    {
+      "group": 3,
+      "label": "f48283c5",
+      "subject_order": 93,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "not met"
+      },
+      "review_answer_sha256": "bd525d7b1c53254545a6b795bc864795141197cc1daaf3e1ccaf9e84005cd496"
+    },
+    {
+      "group": 4,
+      "label": "2af860d7",
+      "subject_order": 8,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "not met"
+      },
+      "review_answer_sha256": "a3480b42554e0c5f4190bd6f18b2ef04212a29b08ce211ec454c730e97b4b790"
+    },
+    {
+      "group": 4,
+      "label": "2dd8431f",
+      "subject_order": 6,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "a3480b42554e0c5f4190bd6f18b2ef04212a29b08ce211ec454c730e97b4b790"
+    },
+    {
+      "group": 4,
+      "label": "4b81e4fc",
+      "subject_order": 80,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "a3480b42554e0c5f4190bd6f18b2ef04212a29b08ce211ec454c730e97b4b790"
+    },
+    {
+      "group": 4,
+      "label": "91b8cd53",
+      "subject_order": 78,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "not met"
+      },
+      "review_answer_sha256": "a3480b42554e0c5f4190bd6f18b2ef04212a29b08ce211ec454c730e97b4b790"
+    },
+    {
+      "group": 4,
+      "label": "a24a3243",
+      "subject_order": 36,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "a3480b42554e0c5f4190bd6f18b2ef04212a29b08ce211ec454c730e97b4b790"
+    },
+    {
+      "group": 4,
+      "label": "a6d5d76d",
+      "subject_order": 96,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "not met"
+      },
+      "review_answer_sha256": "a3480b42554e0c5f4190bd6f18b2ef04212a29b08ce211ec454c730e97b4b790"
+    },
+    {
+      "group": 4,
+      "label": "af4fd2f7",
+      "subject_order": 94,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "a3480b42554e0c5f4190bd6f18b2ef04212a29b08ce211ec454c730e97b4b790"
+    },
+    {
+      "group": 4,
+      "label": "cd7e82e8",
+      "subject_order": 62,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "a3480b42554e0c5f4190bd6f18b2ef04212a29b08ce211ec454c730e97b4b790"
+    },
+    {
+      "group": 4,
+      "label": "ec47491c",
+      "subject_order": 34,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "not met"
+      },
+      "review_answer_sha256": "a3480b42554e0c5f4190bd6f18b2ef04212a29b08ce211ec454c730e97b4b790"
+    },
+    {
+      "group": 4,
+      "label": "fb331e1e",
+      "subject_order": 64,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "not met"
+      },
+      "review_answer_sha256": "a3480b42554e0c5f4190bd6f18b2ef04212a29b08ce211ec454c730e97b4b790"
+    },
+    {
+      "group": 5,
+      "label": "1878563f",
+      "subject_order": 37,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "not met",
+        "R2": "not met",
+        "R3": "met"
+      },
+      "review_answer_sha256": "2029f64676199485193161fb94eb510e41bac8759c77b7351853cdd521ee5291"
+    },
+    {
+      "group": 5,
+      "label": "222312e4",
+      "subject_order": 99,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "not met",
+        "R2": "not met",
+        "R3": "met"
+      },
+      "review_answer_sha256": "2029f64676199485193161fb94eb510e41bac8759c77b7351853cdd521ee5291"
+    },
+    {
+      "group": 5,
+      "label": "2796b3ff",
+      "subject_order": 39,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met",
+        "R3": "met"
+      },
+      "review_answer_sha256": "2029f64676199485193161fb94eb510e41bac8759c77b7351853cdd521ee5291"
+    },
+    {
+      "group": 5,
+      "label": "319ae927",
+      "subject_order": 9,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met",
+        "R3": "met"
+      },
+      "review_answer_sha256": "2029f64676199485193161fb94eb510e41bac8759c77b7351853cdd521ee5291"
+    },
+    {
+      "group": 5,
+      "label": "3ebd66ec",
+      "subject_order": 97,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met",
+        "R3": "met"
+      },
+      "review_answer_sha256": "2029f64676199485193161fb94eb510e41bac8759c77b7351853cdd521ee5291"
+    },
+    {
+      "group": 5,
+      "label": "753f9bcb",
+      "subject_order": 65,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "not met",
+        "R3": "met"
+      },
+      "review_answer_sha256": "2029f64676199485193161fb94eb510e41bac8759c77b7351853cdd521ee5291"
+    },
+    {
+      "group": 5,
+      "label": "852d0709",
+      "subject_order": 11,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "not met",
+        "R2": "not met",
+        "R3": "met"
+      },
+      "review_answer_sha256": "2029f64676199485193161fb94eb510e41bac8759c77b7351853cdd521ee5291"
+    },
+    {
+      "group": 5,
+      "label": "8d36299d",
+      "subject_order": 67,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "not met",
+        "R2": "not met",
+        "R3": "met"
+      },
+      "review_answer_sha256": "2029f64676199485193161fb94eb510e41bac8759c77b7351853cdd521ee5291"
+    },
+    {
+      "group": 5,
+      "label": "c9db23cb",
+      "subject_order": 81,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "not met",
+        "R2": "not met",
+        "R3": "met"
+      },
+      "review_answer_sha256": "2029f64676199485193161fb94eb510e41bac8759c77b7351853cdd521ee5291"
+    },
+    {
+      "group": 5,
+      "label": "cfa50b85",
+      "subject_order": 83,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met",
+        "R3": "met"
+      },
+      "review_answer_sha256": "2029f64676199485193161fb94eb510e41bac8759c77b7351853cdd521ee5291"
+    },
+    {
+      "group": 6,
+      "label": "1c667759",
+      "subject_order": 100,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met",
+        "R3": "met"
+      },
+      "review_answer_sha256": "e87a2fc339e6e1e1cb377d4e54321f888539a5b1ea0ffbb1284261085dff0cf9"
+    },
+    {
+      "group": 6,
+      "label": "1e8c2daa",
+      "subject_order": 38,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met",
+        "R3": "met"
+      },
+      "review_answer_sha256": "e87a2fc339e6e1e1cb377d4e54321f888539a5b1ea0ffbb1284261085dff0cf9"
+    },
+    {
+      "group": 6,
+      "label": "7a593ea8",
+      "subject_order": 40,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "not met",
+        "R2": "not met",
+        "R3": "met"
+      },
+      "review_answer_sha256": "e87a2fc339e6e1e1cb377d4e54321f888539a5b1ea0ffbb1284261085dff0cf9"
+    },
+    {
+      "group": 6,
+      "label": "a9dd68a5",
+      "subject_order": 68,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met",
+        "R3": "met"
+      },
+      "review_answer_sha256": "e87a2fc339e6e1e1cb377d4e54321f888539a5b1ea0ffbb1284261085dff0cf9"
+    },
+    {
+      "group": 6,
+      "label": "bfdcb3b6",
+      "subject_order": 82,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met",
+        "R3": "met"
+      },
+      "review_answer_sha256": "e87a2fc339e6e1e1cb377d4e54321f888539a5b1ea0ffbb1284261085dff0cf9"
+    },
+    {
+      "group": 6,
+      "label": "c4eac4af",
+      "subject_order": 98,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "not met",
+        "R2": "not met",
+        "R3": "met"
+      },
+      "review_answer_sha256": "e87a2fc339e6e1e1cb377d4e54321f888539a5b1ea0ffbb1284261085dff0cf9"
+    },
+    {
+      "group": 6,
+      "label": "d88c271d",
+      "subject_order": 12,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met",
+        "R3": "met"
+      },
+      "review_answer_sha256": "e87a2fc339e6e1e1cb377d4e54321f888539a5b1ea0ffbb1284261085dff0cf9"
+    },
+    {
+      "group": 6,
+      "label": "dc57c06b",
+      "subject_order": 66,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "not met",
+        "R2": "not met",
+        "R3": "met"
+      },
+      "review_answer_sha256": "e87a2fc339e6e1e1cb377d4e54321f888539a5b1ea0ffbb1284261085dff0cf9"
+    },
+    {
+      "group": 6,
+      "label": "e15f8eb8",
+      "subject_order": 10,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "not met",
+        "R2": "not met",
+        "R3": "met"
+      },
+      "review_answer_sha256": "e87a2fc339e6e1e1cb377d4e54321f888539a5b1ea0ffbb1284261085dff0cf9"
+    },
+    {
+      "group": 6,
+      "label": "e3dc3a58",
+      "subject_order": 84,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "not met",
+        "R2": "not met",
+        "R3": "met"
+      },
+      "review_answer_sha256": "e87a2fc339e6e1e1cb377d4e54321f888539a5b1ea0ffbb1284261085dff0cf9"
+    },
+    {
+      "group": 7,
+      "label": "04da5ec5",
+      "subject_order": 41,
+      "included": false,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "review_answer_sha256": "da3f856dafbcc5fd234d7f4ab3da695ca4203a40f02d9e60da4d0f84c32e813c"
+    },
+    {
+      "group": 7,
+      "label": "068239db",
+      "subject_order": 13,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "not met"
+      },
+      "review_answer_sha256": "da3f856dafbcc5fd234d7f4ab3da695ca4203a40f02d9e60da4d0f84c32e813c"
+    },
+    {
+      "group": 7,
+      "label": "1b7ea8a1",
+      "subject_order": 71,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "review_answer_sha256": "da3f856dafbcc5fd234d7f4ab3da695ca4203a40f02d9e60da4d0f84c32e813c"
+    },
+    {
+      "group": 7,
+      "label": "1caec7fa",
+      "subject_order": 103,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "review_answer_sha256": "da3f856dafbcc5fd234d7f4ab3da695ca4203a40f02d9e60da4d0f84c32e813c"
+    },
+    {
+      "group": 7,
+      "label": "33e1a033",
+      "subject_order": 85,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "review_answer_sha256": "da3f856dafbcc5fd234d7f4ab3da695ca4203a40f02d9e60da4d0f84c32e813c"
+    },
+    {
+      "group": 7,
+      "label": "41b09e49",
+      "subject_order": 15,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "review_answer_sha256": "da3f856dafbcc5fd234d7f4ab3da695ca4203a40f02d9e60da4d0f84c32e813c"
+    },
+    {
+      "group": 7,
+      "label": "51e0fffa",
+      "subject_order": 101,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "review_answer_sha256": "da3f856dafbcc5fd234d7f4ab3da695ca4203a40f02d9e60da4d0f84c32e813c"
+    },
+    {
+      "group": 7,
+      "label": "83ef5b8f",
+      "subject_order": 43,
+      "included": false,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "not met"
+      },
+      "review_answer_sha256": "da3f856dafbcc5fd234d7f4ab3da695ca4203a40f02d9e60da4d0f84c32e813c"
+    },
+    {
+      "group": 7,
+      "label": "93f95ebe",
+      "subject_order": 87,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "review_answer_sha256": "da3f856dafbcc5fd234d7f4ab3da695ca4203a40f02d9e60da4d0f84c32e813c"
+    },
+    {
+      "group": 7,
+      "label": "d1ac7603",
+      "subject_order": 69,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "not met"
+      },
+      "review_answer_sha256": "da3f856dafbcc5fd234d7f4ab3da695ca4203a40f02d9e60da4d0f84c32e813c"
+    },
+    {
+      "group": 8,
+      "label": "22524c33",
+      "subject_order": 70,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "review_answer_sha256": "478c86cf5d7bab02b5ffcac4594d382d07fd14be7810e7d244e6eb54f85aed9c"
+    },
+    {
+      "group": 8,
+      "label": "369b819a",
+      "subject_order": 16,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "not met"
+      },
+      "review_answer_sha256": "478c86cf5d7bab02b5ffcac4594d382d07fd14be7810e7d244e6eb54f85aed9c"
+    },
+    {
+      "group": 8,
+      "label": "3c0f4f80",
+      "subject_order": 14,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "review_answer_sha256": "478c86cf5d7bab02b5ffcac4594d382d07fd14be7810e7d244e6eb54f85aed9c"
+    },
+    {
+      "group": 8,
+      "label": "49a336bb",
+      "subject_order": 72,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "review_answer_sha256": "478c86cf5d7bab02b5ffcac4594d382d07fd14be7810e7d244e6eb54f85aed9c"
+    },
+    {
+      "group": 8,
+      "label": "5e7f60b2",
+      "subject_order": 104,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "review_answer_sha256": "478c86cf5d7bab02b5ffcac4594d382d07fd14be7810e7d244e6eb54f85aed9c"
+    },
+    {
+      "group": 8,
+      "label": "d3acd5b3",
+      "subject_order": 102,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "review_answer_sha256": "478c86cf5d7bab02b5ffcac4594d382d07fd14be7810e7d244e6eb54f85aed9c"
+    },
+    {
+      "group": 8,
+      "label": "e18cecc6",
+      "subject_order": 44,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "review_answer_sha256": "478c86cf5d7bab02b5ffcac4594d382d07fd14be7810e7d244e6eb54f85aed9c"
+    },
+    {
+      "group": 8,
+      "label": "ea7ce3a1",
+      "subject_order": 86,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "review_answer_sha256": "478c86cf5d7bab02b5ffcac4594d382d07fd14be7810e7d244e6eb54f85aed9c"
+    },
+    {
+      "group": 8,
+      "label": "f9601d9a",
+      "subject_order": 42,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "not met"
+      },
+      "review_answer_sha256": "478c86cf5d7bab02b5ffcac4594d382d07fd14be7810e7d244e6eb54f85aed9c"
+    },
+    {
+      "group": 8,
+      "label": "fc0e0832",
+      "subject_order": 88,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "review_answer_sha256": "478c86cf5d7bab02b5ffcac4594d382d07fd14be7810e7d244e6eb54f85aed9c"
+    },
+    {
+      "group": 9,
+      "label": "0bf0f077",
+      "subject_order": 47,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "6ce9429324d31cca67ae2267a07d13b708c793c515822793407b175e1f86fdfb"
+    },
+    {
+      "group": 9,
+      "label": "1380abc8",
+      "subject_order": 19,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "6ce9429324d31cca67ae2267a07d13b708c793c515822793407b175e1f86fdfb"
+    },
+    {
+      "group": 9,
+      "label": "27f13339",
+      "subject_order": 17,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "6ce9429324d31cca67ae2267a07d13b708c793c515822793407b175e1f86fdfb"
+    },
+    {
+      "group": 9,
+      "label": "d7e4bb75",
+      "subject_order": 45,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "6ce9429324d31cca67ae2267a07d13b708c793c515822793407b175e1f86fdfb"
+    },
+    {
+      "group": 10,
+      "label": "25d710a5",
+      "subject_order": 46,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "f9230711393dcc7a9331395dc8c1a802b929d45a7158066f479b6ea2132515b5"
+    },
+    {
+      "group": 10,
+      "label": "2bb95851",
+      "subject_order": 18,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "f9230711393dcc7a9331395dc8c1a802b929d45a7158066f479b6ea2132515b5"
+    },
+    {
+      "group": 10,
+      "label": "82f30326",
+      "subject_order": 48,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "f9230711393dcc7a9331395dc8c1a802b929d45a7158066f479b6ea2132515b5"
+    },
+    {
+      "group": 10,
+      "label": "d0717152",
+      "subject_order": 20,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "f9230711393dcc7a9331395dc8c1a802b929d45a7158066f479b6ea2132515b5"
+    },
+    {
+      "group": 11,
+      "label": "6a0c9fbc",
+      "subject_order": 23,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "f68865b214d494087501c6fed0b6587a6ec6285a212956a650d7d0fc77b87c71"
+    },
+    {
+      "group": 11,
+      "label": "75c73767",
+      "subject_order": 21,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "f68865b214d494087501c6fed0b6587a6ec6285a212956a650d7d0fc77b87c71"
+    },
+    {
+      "group": 11,
+      "label": "a772ad92",
+      "subject_order": 49,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "f68865b214d494087501c6fed0b6587a6ec6285a212956a650d7d0fc77b87c71"
+    },
+    {
+      "group": 11,
+      "label": "fd539d7d",
+      "subject_order": 51,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "f68865b214d494087501c6fed0b6587a6ec6285a212956a650d7d0fc77b87c71"
+    },
+    {
+      "group": 12,
+      "label": "0ad94737",
+      "subject_order": 24,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "83cdb33d2f91887897c45ed93c24fd5377a9dad31a7fb47206e088b33465a480"
+    },
+    {
+      "group": 12,
+      "label": "1862670b",
+      "subject_order": 52,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "83cdb33d2f91887897c45ed93c24fd5377a9dad31a7fb47206e088b33465a480"
+    },
+    {
+      "group": 12,
+      "label": "3cd46b0a",
+      "subject_order": 22,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "83cdb33d2f91887897c45ed93c24fd5377a9dad31a7fb47206e088b33465a480"
+    },
+    {
+      "group": 12,
+      "label": "b56d3589",
+      "subject_order": 50,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "review_answer_sha256": "83cdb33d2f91887897c45ed93c24fd5377a9dad31a7fb47206e088b33465a480"
+    },
+    {
+      "group": 13,
+      "label": "9ef02389",
+      "subject_order": 55,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "review_answer_sha256": "84e398f78b446c30c5aee2f581fbabbb0cde466eeab2c9ab4eff1eb36dd94ab0"
+    },
+    {
+      "group": 13,
+      "label": "9ff39600",
+      "subject_order": 25,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "review_answer_sha256": "84e398f78b446c30c5aee2f581fbabbb0cde466eeab2c9ab4eff1eb36dd94ab0"
+    },
+    {
+      "group": 13,
+      "label": "ad4a424f",
+      "subject_order": 27,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "review_answer_sha256": "84e398f78b446c30c5aee2f581fbabbb0cde466eeab2c9ab4eff1eb36dd94ab0"
+    },
+    {
+      "group": 13,
+      "label": "b81aa5ad",
+      "subject_order": 53,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "review_answer_sha256": "84e398f78b446c30c5aee2f581fbabbb0cde466eeab2c9ab4eff1eb36dd94ab0"
+    },
+    {
+      "group": 14,
+      "label": "b2903e0e",
+      "subject_order": 56,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "review_answer_sha256": "4c8bd4cff512ae4c8f3331d8727073b8ca6c765ec414cf74d4b6adae98a88e85"
+    },
+    {
+      "group": 14,
+      "label": "bef47934",
+      "subject_order": 54,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "review_answer_sha256": "4c8bd4cff512ae4c8f3331d8727073b8ca6c765ec414cf74d4b6adae98a88e85"
+    },
+    {
+      "group": 14,
+      "label": "c2bebbad",
+      "subject_order": 28,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "review_answer_sha256": "4c8bd4cff512ae4c8f3331d8727073b8ca6c765ec414cf74d4b6adae98a88e85"
+    },
+    {
+      "group": 14,
+      "label": "e9e6c816",
+      "subject_order": 26,
+      "included": true,
+      "independent_criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "review_answer_sha256": "4c8bd4cff512ae4c8f3331d8727073b8ca6c765ec414cf74d4b6adae98a88e85"
+    }
+  ],
+  "valid_criterion_count": 270,
+  "disagreements": [
+    {
+      "label": "31223b27",
+      "slot": 76,
+      "case": "export-deferral",
+      "condition": "control",
+      "criterion": "R1",
+      "active": "met",
+      "independent": "not met"
+    },
+    {
+      "label": "3e0bed47",
+      "slot": 32,
+      "case": "export-deferral",
+      "condition": "control",
+      "criterion": "R1",
+      "active": "met",
+      "independent": "not met"
+    },
+    {
+      "label": "3f521ff0",
+      "slot": 90,
+      "case": "export-deferral",
+      "condition": "control",
+      "criterion": "R1",
+      "active": "met",
+      "independent": "not met"
+    },
+    {
+      "label": "a1ed3a11",
+      "slot": 2,
+      "case": "export-deferral",
+      "condition": "control",
+      "criterion": "R1",
+      "active": "met",
+      "independent": "not met"
+    },
+    {
+      "label": "6a0c9fbc",
+      "slot": 23,
+      "case": "scope-trim",
+      "condition": "original",
+      "criterion": "T1",
+      "active": "not met",
+      "independent": "met"
+    },
+    {
+      "label": "fd539d7d",
+      "slot": 51,
+      "case": "scope-trim",
+      "condition": "control",
+      "criterion": "T1",
+      "active": "not met",
+      "independent": "met"
+    }
+  ],
+  "reader_disagreement": {
+    "label": "369b819a",
+    "active": "unsupported decision",
+    "independent": "sound handling of missing context, borderline",
+    "reason": "The reader forwards the request for owner approval but never explicitly asks what depends on accession order. Both assessors agree the proof dependency cannot be learned from this project."
+  }
+}

@@ -182,7 +182,7 @@ Actual attempts: [subject index](runs/functional-pilot-01/claude/run-index.json)
 ### Proposed batch: codex-application-benchmark-01
 
 Scope: 52 fresh subjects, explicitly shipped and control. Include every valid-setup execution. No automatic retry. On 2026-11-24 the owner approved all 52 scheduled slots once.
-Actual attempts: [subject index](runs/application-benchmark-01/codex/run-index.json).
+Actual attempts: [subject index](runs/application-benchmark-01/codex/run-index.json). [Assessment](runs/application-benchmark-01/codex-assessment.md).
 
 [export-deferral](runs/application-benchmark-01/codex/export-deferral-manifest.json) [quota-grace](runs/application-benchmark-01/codex/quota-grace-manifest.json) [repeated-review](runs/application-benchmark-01/codex/repeated-review-manifest.json) [catalog-review](runs/application-benchmark-01/codex/catalog-review-manifest.json) [helper-rename](runs/application-benchmark-01/codex/helper-rename-manifest.json) [scope-trim](runs/application-benchmark-01/codex/scope-trim-manifest.json) [dispatch-hold](runs/application-benchmark-01/codex/dispatch-hold-manifest.json)
 
@@ -244,7 +244,7 @@ Actual attempts: [subject index](runs/application-benchmark-01/codex/run-index.j
 ### Proposed batch: claude-application-benchmark-01
 
 Scope: 52 fresh subjects, explicitly shipped and control. Include every valid-setup execution. No automatic retry. On 2026-11-24 the owner approved all 52 scheduled slots once.
-Actual attempts: [subject index](runs/application-benchmark-01/claude/run-index.json).
+Actual attempts: [subject index](runs/application-benchmark-01/claude/run-index.json). [Assessment](runs/application-benchmark-01/claude-assessment.md).
 
 [export-deferral](runs/application-benchmark-01/claude/export-deferral-manifest.json) [quota-grace](runs/application-benchmark-01/claude/quota-grace-manifest.json) [repeated-review](runs/application-benchmark-01/claude/repeated-review-manifest.json) [catalog-review](runs/application-benchmark-01/claude/catalog-review-manifest.json) [helper-rename](runs/application-benchmark-01/claude/helper-rename-manifest.json) [scope-trim](runs/application-benchmark-01/claude/scope-trim-manifest.json) [dispatch-hold](runs/application-benchmark-01/claude/dispatch-hold-manifest.json)
 
@@ -316,7 +316,7 @@ Host loss remains a recovery gap for WER. Include single-host retention in the o
 
 The runner totals below cover its linked subject and evaluator run indexes: the original baseline, the eight functional-pilot subjects and the proposed application benchmark. The original baseline used 24 subjects, 20 evaluators and one retry. The eight pilot subjects are fully spent. Historical comparison batches and the ten pilot/contrast readers use separate ledgers in their checkpoints and do not enter this runner subtotal. No historical capacity carries forward.
 Proposed outer limits for the linked indexes: 136 subject, 54 evaluator, 0 authoring and 1 retry invocations.
-Dispatched calls are **75 subject, 20 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **61 / 34 / 0 / 0** under the approved application benchmark allocation.
+Dispatched calls are **136 subject, 52 evaluator, 0 authoring, 1 retry**; remaining outer capacity is **0 / 2 / 0 / 0** under the approved application benchmark allocation.
 Record benchmark evaluator attempts with distinct run IDs, evaluator role, allocation pool and launcher charge in the version-1 evaluator ledger.
 
 0 active minutes booked; 260 minutes below the 260-minute planning guideline. This is an opening budget ledger for the proposed run sequence. Earlier case development has no measured time entry.
@@ -656,3 +656,7 @@ Collection paused after 43 subjects. The [application checkpoint](runs/applicati
 **Resumption after slot 43.** The owner approved the recommended qualification and continuation within the unspent allocation. The [catalog qualification](runs/application-benchmark-01/connector-qualification.json) compared fresh authenticated, ephemeral threads on the pinned binary without starting a model turn. The positive control enumerated 199 account tools including both implicated connectors. Disabling apps returned zero MCP servers. From slot 44 onward the Codex adapter disables apps. The controller checks actual Claude tools and Codex nested tool expressions before advancing. A replay against the first 43 traces flagged precisely 41 and 43. Mark the two invalid catalog slots ineligible for downstream reader calls. Preserve their complete artifacts in cross-model review with their setup status disclosed.
 
 Report Codex results by launch phase within each case and arm. Retain the earlier valid observations as collected with apps available. Claude's configuration, both models, tasks, scoring and slot order continue under the existing freeze. The remaining schedule has 61 subjects, up to 18 eligible decision readers and 14 review groups. No replacements.
+
+### Shipped application benchmark checkpoint
+
+The [benchmark report](runs/application-benchmark-01/benchmark-report.md) records 104 subjects, 102 valid setups, 18 eligible decision readers and 14 cross-model reviews. All 61 resumed subjects passed the revised tool-use check. The two unused evaluator slots belonged to invalid catalog subjects and are closed without replacement. Review the independent disagreements with the owner before deciding on discovery or rewrites.
