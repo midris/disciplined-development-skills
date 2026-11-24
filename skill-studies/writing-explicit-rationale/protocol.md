@@ -748,3 +748,7 @@ The [first fresh screen result](runs/rewrite-screen-01/assessment.json) met T1 a
 The owner approved [36 additional subjects](runs/application-topup-01/schedule.json) before further candidate work. Add repetitions 3–5 to the existing two for helper rename, scope trim and dispatch hold, in both arms and providers. Reuse the frozen case manifests, application scoring policy, runtime pins, apps-disabled Codex boundary and post-resumption audit. Preserve failures. Apply the Monday handoff ruling consistently. Report new and combined results; distinguish the earlier Codex apps-enabled stratum. The historical independent assessments cover only the earlier outputs. No other calls are allocated.
 
 The [completed top-up and combined benchmark](runs/application-topup-01/report.md) retain all 36 subjects. Shipped met every functional criterion in 18/18 new outputs and control in 17/18. Review the combined baseline before allocating further candidate subjects.
+
+### Three-run candidate checkpoint
+
+The owner authorized repetitions 2 and 3 of the [frozen 599-word screen](runs/rewrite-screen-01/freeze.json) under the same settings and rubric. Retain every attempt. This adds two subject slots and zero replacements or evaluator calls. Review the three outputs before allocating repetitions 4 and 5.
