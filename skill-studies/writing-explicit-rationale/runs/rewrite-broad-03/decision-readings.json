@@ -1,0 +1,38 @@
+[
+  {
+    "label": "e543ad4e",
+    "order": 1,
+    "subject_order": 4,
+    "action": "retain",
+    "decision_assessment": "informed",
+    "grounding_and_consequence": "The reader keeps accession order to preserve the room-sheet correction workflow, offers the title index and suggests checking with the proof desk before changing the main listing. Every correction requiring a manual lookup is a stronger inference than the spec requires.",
+    "answer_sha256": "d90012b1c7520ec01183dae6af951ef17b5a58ed20a6e19c30ca88fffc3cc857"
+  },
+  {
+    "label": "ea3e61d0",
+    "order": 2,
+    "subject_order": 5,
+    "action": "retain",
+    "decision_assessment": "informed",
+    "grounding_and_consequence": "Uses the room-sheet dependency and title index to justify the decision and identifies the proof desk as a participant in any future workflow change.",
+    "answer_sha256": "ba89b65df5a77da584049b6bea71699ad86742025b1ab83a4feec73689173d22"
+  },
+  {
+    "label": "4a9f642c",
+    "order": 3,
+    "subject_order": 9,
+    "action": "retain",
+    "decision_assessment": "informed",
+    "grounding_and_consequence": "Uses the room-sheet dependency, points to the index and identifies the need for an alternative means of matching corrections before reordering. The claim that every correction requires hand checking goes beyond the source.",
+    "answer_sha256": "58cefb2826e798ad3eb245d613710e1a22b86e0692be1e093df9f11544ca700d"
+  },
+  {
+    "label": "ac31be40",
+    "order": 4,
+    "subject_order": 10,
+    "action": "retain",
+    "decision_assessment": "informed",
+    "grounding_and_consequence": "Explains the proof desk's correction workflow, recommends the title index and proposes involving the proof desk if the specification changes. The additional lender-credit note is accurate.",
+    "answer_sha256": "b0e825109d4d2c322cefe1ceb45060107c1384de350f93093d657023d166399e"
+  }
+]

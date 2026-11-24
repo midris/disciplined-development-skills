@@ -1,0 +1,62 @@
+[
+  {
+    "label": "5984219e",
+    "project_read": "The shared persistence site explicitly explains the approved batch exception, why two guards stand and when to reconsider factoring. The quota site describes rejected in-flight work and confines the old higher limit to pre-change tokens for 60 seconds. The label remains simple.",
+    "payload_sha256": "41d21098f48f0836b3ec5eb02b5ae4304d03bb443da072788b29d5c510f0e458",
+    "sealed_at": "2026-11-24T21:03:56.053051+00:00"
+  },
+  {
+    "label": "7bc7a581",
+    "project_read": "The branch protects in-flight pre-downgrade tokens and explicitly accepts extra quota up to second 60. The named comparisons and tests establish the lower limit and which requests an immediate cut would affect. The potential rejection is implicit.",
+    "payload_sha256": "6106d8e703e57e07a1f52b0792cf12d2754c1f952bd4605c28e6c8c06b3ac47e",
+    "sealed_at": "2026-11-24T21:05:21.862948+00:00"
+  },
+  {
+    "label": "07abf03e",
+    "project_read": "The named constant leads from the decision site to the explicit risk of rejecting work the gateway already admitted and the accepted extra quota. Both the code and tests implement the cutoff; the upgrade comment is slightly loose about when the higher limit starts.",
+    "payload_sha256": "fe881b5bba9110f4209339c7b81527869217e455581329fd5041f84f9f11f495",
+    "sealed_at": "2026-11-24T21:05:21.863151+00:00"
+  },
+  {
+    "label": "e543ad4e",
+    "project_read": "The lender controls the publication credit through the signed form and amendments. Accession order matches proof corrections to room-sheet keys; title searches go to the index. Both dependencies are actionable.",
+    "payload_sha256": "9c19b3a3f3fc7f629c92589b45c9b6abb97537d62176bd674445b80136fd2ed4",
+    "sealed_at": "2026-11-24T21:05:39.621917+00:00"
+  },
+  {
+    "label": "ea3e61d0",
+    "project_read": "The spec explains printing lender-approved credits until the lender amends the form. It directly explains why changing room order would make proof corrections harder and provides a title lookup.",
+    "payload_sha256": "76a4570e6982769f0de99b93d556844d718a5fdb93bc7b40854d36a83018f718",
+    "sealed_at": "2026-11-24T21:06:24.309236+00:00"
+  },
+  {
+    "label": "f6b6182a",
+    "project_read": "The shared persistence function explicitly explains both interactive guards and the approved importer. Factoring is a reconsideration at a third interactive caller. The quota comment gives the old-token reason and the 60-second higher-limit exposure. The routine label has no unnecessary commentary.",
+    "payload_sha256": "e9eef7e0ad06d955d6089a4db60fb883e962160cd787ed34d13bfc7e848f7d0d",
+    "sealed_at": "2026-11-24T21:06:24.309417+00:00"
+  },
+  {
+    "label": "d03afa1b",
+    "project_read": "The branch explicitly protects gateway-admitted work from in-flight rejection, keeps the higher quota only through second 59, and applies the lower limit to fresh tokens. Boundary tests and predicates match the comment.",
+    "payload_sha256": "78d80132c54bbed6ea01114a5854fb7e95f5ef1f37902395140b6548e6f02718",
+    "sealed_at": "2026-11-24T21:13:12.070604+00:00"
+  },
+  {
+    "label": "578ea4cc",
+    "project_read": "A named constant with a nearby comment identifies already-admitted work and the accepted cost. The code protects old tokens until the exact cutoff; tests cover the boundary, new tokens and upgrades. A reader can follow the constant directly from the branch.",
+    "payload_sha256": "1ffcd5e33a37d1a0e278e5d6322ab7955c81557024f8bffe77ec0929e1911acc",
+    "sealed_at": "2026-11-24T21:13:12.070795+00:00"
+  },
+  {
+    "label": "ac31be40",
+    "project_read": "The form records the lender's credit, even through a rebrand, until the lender amends it. The proof desk uses accession-keyed room sheets for corrections; the index addresses title searches. Both grounds are durable.",
+    "payload_sha256": "b06e643335d0340e81fa3dffd6eff8d013c797496685f8da6979e2b87eae265e",
+    "sealed_at": "2026-11-24T21:14:01.191730+00:00"
+  },
+  {
+    "label": "4a9f642c",
+    "project_read": "The spec preserves lender authority to amend credit. Accession numbers connect the room listing to proof corrections, and the index covers title lookup. A future editor can tell why both decisions matter.",
+    "payload_sha256": "c7c64a737038887f35abe9f49a7f4851fbbd6f1ef58be0288ea9c3f2def066f2",
+    "sealed_at": "2026-11-24T21:14:01.191923+00:00"
+  }
+]
