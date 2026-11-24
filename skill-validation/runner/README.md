@@ -322,7 +322,7 @@ Inspect the first authorized observation under changed conditions before continu
 The adapter fixes these additional controls:
 
 ```text
---strict-config --ignore-user-config --ignore-rules
+--disable apps --strict-config --ignore-user-config --ignore-rules
 -c shell_environment_policy.inherit="none"
 -c shell_environment_policy.set={PATH="<prepared runtime PATH>",TMPDIR="<private scratch>",HOME="<private scratch>",ZDOTDIR="<private scratch>",TMPPREFIX="<private scratch>/zsh"}
 -c cli_auth_credentials_store="file"

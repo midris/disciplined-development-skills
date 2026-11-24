@@ -58,6 +58,8 @@ def test_codex_invokes_fixed_command_environment_and_deadline(tmp_path, boundari
         "gpt-5.4",
         "-c",
         'model_reasoning_effort="medium"',
+        "--disable",
+        "apps",
         "--strict-config",
         "--ignore-user-config",
         "--ignore-rules",

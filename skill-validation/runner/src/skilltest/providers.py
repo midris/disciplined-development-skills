@@ -136,7 +136,8 @@ def _arguments(request: ProviderRequest, *, executable: str = "codex", shell_pat
             "--color", "never", "--model", request.model, "-c",
             f'model_reasoning_effort="{request.effort}"',
             "-c", 'default_permissions="skilltest"', "-c", policy,
-            "--strict-config", "--ignore-user-config", "--ignore-rules", "-c", 'shell_environment_policy.inherit="none"',
+            # Account apps can reach live documents even with shell networking disabled.
+            "--disable", "apps", "--strict-config", "--ignore-user-config", "--ignore-rules", "-c", 'shell_environment_policy.inherit="none"',
             # Keep shell bookkeeping inside the already granted private scratch.
             # zsh invents the real HOME when unset and ignores TMPDIR for heredocs.
             *(["-c", f'shell_environment_policy.set={{PATH={json.dumps(shell_path)}'
