@@ -834,3 +834,7 @@ The owner approved [four additional subjects](runs/residual-risk-02/schedule.jso
 All four [additional subjects](runs/residual-risk-02/assessment.json) had valid setups and passed their frozen functional criteria, original tests and private replays. Every attempt was retained. Including the [initial pair](runs/residual-risk-01/assessment.json), all six decision sites explicitly accepted the temporary higher quota. All three Claude projects and one of three Codex projects explicitly identified rejection of already-admitted work as the risk of immediate enforcement. The other two Codex projects made that consequence inferable.
 
 Claude preserved reconsideration in the guard comment in two of three projects and in one of three handoffs. Repetition 2 strengthened the agreement in both places and repetition 3 did so in the handoff. The immediate guard boundary, rationale and third-interactive-caller trigger were intact throughout. The [599-word comparison](runs/rewrite-broad-05/report.md) credits the same distinction under the whole-output rubric. Recommend a separately authorized four-call top-up to five per cell to check consistency, especially Claude's open decision and Codex's rejection rationale.
+
+### Five-run residual-risk comparison
+
+The owner approved [four final subjects](runs/residual-risk-03/schedule.json), repetitions four and five in both cells. Use the frozen inputs, whole-output criteria and maintainer questions. Retain every attempt with zero replacements or evaluators. Compare at five with the frozen 599-word candidate.
