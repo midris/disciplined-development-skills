@@ -1,0 +1,38 @@
+[project]
+name = "skilltest"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = ["jsonschema>=4,<5"]
+
+[project.scripts]
+skilltest = "skilltest.cli:main"
+
+[dependency-groups]
+dev = [
+    "pytest",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["process_smoke: real local subprocess integration; no installed provider or network"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/skilltest"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"../methodology/formats/protocol.template.md" = "skilltest/_formats/protocol.template.md"
+"../methodology/formats/case-definition.template.md" = "skilltest/_formats/case-definition.template.md"
+"../methodology/formats/assessment.template.md" = "skilltest/_formats/assessment.template.md"
+"../methodology/formats/manifest.template.json" = "skilltest/_formats/manifest.template.json"
+"../methodology/formats/run-index.template.json" = "skilltest/_formats/run-index.template.json"
+"../methodology/formats/execution-result.template.json" = "skilltest/_formats/execution-result.template.json"
+"../methodology/formats/execution-result.schema.json" = "skilltest/_formats/execution-result.schema.json"
+
+"result.schema.json" = "skilltest/_result.schema.json"
+"../methodology/formats/execution-result-v2.schema.json" = "skilltest/_formats/execution-result-v2.schema.json"
+"../methodology/formats/execution-result-v2.template.json" = "skilltest/_formats/execution-result-v2.template.json"
+"../methodology/formats/assessment-v2.template.md" = "skilltest/_formats/assessment-v2.template.md"

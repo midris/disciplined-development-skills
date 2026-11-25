@@ -71,12 +71,12 @@ See [installation instructions](README.md#install) for usage and overwrite behav
 The [validation charter](skill-validation/charter/core-contracts.md) defines intended skill behavior and evaluation responsibilities.
 The [rewrite goal and design principles](plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#overall-goal) guide future changes; they do not describe an already-implemented runner redesign.
 
-[`skill-validation/runner/`](skill-validation/runner/) is separate development
+[`tests/runner/`](tests/runner/) is separate development
 tooling, not a fourth runtime layer or an installed consumer component.
 `skilltest run CONFIG` owns one configuration, bundle, workspace, provider
 process, result record, and exit; outside callers compose independent runs.
 Its operator contract and bundle layout are in its
-[README](skill-validation/runner/README.md).
+[README](tests/runner/README.md).
 Codex and Claude adapters share prepared-input checks and owned-process lifecycle mechanics; each owns its authentication and launch controls.
 Claude preserves raw stream output alongside the extracted final answer, using the same result and worksheet interfaces.
 
@@ -297,5 +297,5 @@ Durable (never aged out), append-only, sparse by source; the field groups are in
 - **Hook behavior, state model, observability:** [`hooks/README.md`](skills/disciplined-development/hooks/README.md)
 - **Config schema + env vars:** [`hooks/dd-config.md`](skills/disciplined-development/hooks/dd-config.md)
 - **Upgrading a deployment:** [`MIGRATIONS.md`](MIGRATIONS.md)
-- **One-run validation tooling:** [`skill-validation/runner/README.md`](skill-validation/runner/README.md)
+- **One-run validation tooling:** [`tests/runner/README.md`](tests/runner/README.md)
 - **Skill behavior contracts and validation navigation:** [charter](skill-validation/charter/core-contracts.md), [validation guide](skill-validation/README.md)

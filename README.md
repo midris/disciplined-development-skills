@@ -23,15 +23,7 @@ Claude Code-specific. See [Requirements](#requirements).
 
 ## Developing or evaluating these skills
 
-Read the [validation charter](skill-validation/charter/core-contracts.md) for core intent and the complete existing skill for its detailed behavior, scope and exceptions.
-Follow [baseline specification first](skill-validation/README.md#baseline-specification-first): document those promises, derive tests and rubrics, establish observed baseline effectiveness, then compare rewrites against the agreed specification.
-The charter's proposed suite changes retain their stated approval and activation conditions.
-
-The [rewrite goal and design principles](plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#overall-goal) explain the intended direction: cleaner, lighter, more effective skills, with dumb tools for smart agents and repeatable RED/GREEN evidence.
-The [validation guide](skill-validation/README.md) routes to the charter, scenarios, methodology and runner.
-The [current testing plan](plans/2026-09-09-dd-skill-testing.md) identifies completed work, retained candidate branches and the next decision.
-Testing is [model-led, supported by small deterministic tools](skill-validation/README.md#model-led-testing): the agent designs and judges tests; the tools prepare runs and record evidence.
-Agents must also read [CLAUDE.md](CLAUDE.md); [AGENTS.md](AGENTS.md) is the Codex entry point to that shared guidance.
+Start with the [skill study workflow and offline walkthrough](tests/README.md). Historical packages and their original contracts live in [skill-validation](skill-validation/README.md).
 
 ## What's included
 
@@ -75,9 +67,9 @@ They support repeatable skill testing; historical current-skill observations are
 distinct from the no-skill RED controls required for authoring.
 These are development records, not part of the installed bundle.
 
-[`skill-validation/runner/`](skill-validation/runner/) is also non-shipped: a
+[`tests/runner/`](tests/runner/) is also non-shipped: a
 small `skilltest run CONFIG` CLI for one retained, locally configured skill-test
-run. Its [operator guide](skill-validation/runner/README.md) covers setup,
+run. Its [operator guide](tests/runner/README.md) covers setup,
 configuration, bundles, and the strict one-run boundary.
 
 ## How it fits together
@@ -228,7 +220,7 @@ consumer's `.claude/settings.json`, which isn't present in the bundle).
 The non-shipped runner has its own locked environment and offline suite:
 
 ```
-cd skill-validation/runner
+cd tests/runner
 uv sync --locked
 uv run pytest -q
 ```

@@ -1,5 +1,7 @@
 # Skill Validation
 
+For new studies use the [current methodology and runner](../tests/README.md). This directory documents the historical validation program and its evidence under the original revisions.
+
 This directory contains the repository's validation contracts, packaged scenarios,
 mechanical runner, and legacy records. This page summarizes the testing approach
 and links its governing contracts; it creates no new scoring rules or execution authority.

@@ -1,0 +1,22 @@
+name: Study foundation
+on:
+  pull_request:
+    paths:
+      - tests/runner/**
+      - tests/methodology/**
+      - tests/README.md
+      - skill-validation/runner
+      - .github/workflows/study-foundation.yml
+jobs:
+  offline:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: brew install uv
+      - working-directory: tests/runner
+        run: |
+          uv sync --locked
+          sandbox-exec -p '(version 1)(allow default)(deny network*)' .venv/bin/python -m pytest -q tests/process_smoke/test_study_walkthrough.py
+          uv run --offline --locked pytest -q
+          uv run --offline --locked python -m unittest discover -s ../methodology/formats
+      - run: cd skill-validation/runner && .venv/bin/skilltest --help
