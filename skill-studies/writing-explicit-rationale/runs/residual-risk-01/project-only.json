@@ -1,0 +1,14 @@
+[
+  {
+    "label": "f98c3aaf",
+    "project_read": "The code identifies rejection of admitted work and expressly accepts the higher quota for pre-change tokens for under 60 seconds. Approved batches bypass interactive admission, duplication is deliberate, and a third interactive caller triggers reconsideration. The rename has no commentary.",
+    "payload_sha256": "a87888124cbad5b6fff1abf37abf4d3deae380aff422a3d5e60495ce897070b3",
+    "sealed_at": "2026-11-25T16:20:14.342112+00:00"
+  },
+  {
+    "label": "abe983d4",
+    "project_read": "The grace protects already-admitted work and expressly accepts extra quota for 60 seconds. The condition restricts grace to pre-change tokens. A maintainer can infer immediate enforcement could reject admitted work, although the comment does not state that outcome directly.",
+    "payload_sha256": "4972985a43ecd7ce94dca67ede76a8871ff8a9adb533af387b029c7437c46ef3",
+    "sealed_at": "2026-11-25T16:20:36.212690+00:00"
+  }
+]

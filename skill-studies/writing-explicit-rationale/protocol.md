@@ -824,3 +824,5 @@ The [completed post-freeze check](runs/transfer-01/report.md) met all three crit
 ### Explicit residual-risk example screen
 
 The owner approved one Claude repeated-review subject and one Codex quota-grace subject using the [604-word variant and frozen schedule](runs/residual-risk-01/schedule.json). The 599-word candidate remains frozen. Retain every attempt, with no replacements or evaluators. Apply the existing whole-output rubrics and record the two prospective maintainer questions separately. Credit any wording with the supported meaning and flag invented acceptance. Review the pair before any expansion.
+
+Both [initial subjects](runs/residual-risk-01/assessment.json) met all applicable criteria. Claude explicitly identified the potential rejection and accepted the bounded excess, and kept reconsideration open in the project and reply. Codex explicitly accepted extra quota to honor already-admitted work. The consequence of immediate enforcement remained inferable. Both original test suites and both private replays passed. The two results warrant a three-run checkpoint if authorized. One observation per cell cannot establish a wording effect.
