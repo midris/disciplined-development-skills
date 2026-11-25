@@ -1,4 +1,4 @@
-# Native CW selection while writing an update
+# Explicit CW application while writing an update
 
 ## Identity and purpose
 

@@ -105,7 +105,7 @@ That does not establish equivalent consequential quality or general reliability.
 Codex document-addition control repetition 5 is the only explicit-body factor disagreement.
 The source says: “The affected team can resume only after Omar has investigated and Nia approves resumption.”
 The output says: “Omar must investigate the report, and the affected team may resume the preview only after Nia approves resumption.”
-The complete [saved output](/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/review-inputs/codex-document-addition/outputs/control-5.md) retains the precautionary pause, restricted evidence, other-team boundary and separate later expansion decision.
+The complete saved output (private Concise Writing store, `revised-body-discovery-20261018/review-inputs/codex-document-addition/outputs/control-5.md`) retains the precautionary pause, restricted evidence, other-team boundary and separate later expansion decision.
 The active assessor reads investigation and approval as the required sequence with a precision weakness; Opus reads investigation as a separate obligation and fails F1 because approval could permit earlier resumption.
 Reading the complete output does not explicitly restore investigation-before-resumption elsewhere, but the conjunction/context can carry that ordering for a reader.
 The reconciliation therefore records **insufficient evidence to settle that consequential interpretation**, preserving the original active pass and Opus not-met judgment rather than selecting the stricter reading by default.

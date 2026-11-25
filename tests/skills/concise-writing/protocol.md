@@ -140,7 +140,7 @@ Historical configurations and collection manifests below preserve the actual sup
 
 ## Expanded-suite assessment policy
 
-Policy identity: **CW-expanded-1**, selected for the expanded collection; its [controller copy](https://github.com/midris/disciplined-development-skills/blob/44766517c4550cd65c13c9fe0f489ac26efee1e0/skill-studies/concise-writing/runs/suite-2026-09-27/preparation/assessment-policy.txt) also includes unchanged CW-assessment-4.
+Policy identity: **CW-expanded-1**, selected for the expanded collection; its [controller copy](expanded-assessment-policy.txt) also includes unchanged CW-assessment-4.
 It makes the case-specific rules explicit without changing CW-assessment-4, its controller copy, historical cards or retained scores.
 Freeze this section and the exact case-card revisions together before any new assessment.
 

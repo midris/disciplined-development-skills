@@ -14,6 +14,7 @@ The [closed protocol](protocol.md#closure-and-adoption) records that decision an
 
 Across these comparisons the indexes retain 203 subject attempts, including one expired-authentication attempt and its authorized retry, plus 20 evaluator calls.
 Subjects used Codex gpt-5.6-sol or Claude Sonnet 5 at low effort.
+On the numeric-only task, Claude gave the required literal-only reply in 5/5 runs with the old description and 1/5 with the selected description. All settings edits were correct. The study recorded reply compliance separately from functional scores.
 The reports distinguish the active assessment, Opus first passes and changes after exposure to prior scores.
 Native discovery of the exact adopted description/body pair across the prepared suite remains unmeasured.
 
@@ -29,10 +30,13 @@ uv run --locked --offline pytest -q ../skills/concise-writing/cases/fixtures/inv
 ```
 
 The check loads all twenty runner configurations, checks the frozen source fixtures and installed-source skill digest, and verifies the manifest and result hashes for every indexed subject attempt.
+It also checks the evaluator call count, the grading policy against each indexed manifest, and the shipped skill against the original-body source in each final comparison.
 The comment checker compares syntax and executable tokens without running a subject's code.
-Grade the complete artifact against its task, sources and [case criteria](cases/criteria/) using the [assessment policy](assessment-policy.txt).
+Grade the complete artifact against its task, sources and [case criteria](cases/criteria/) using the [expanded assessment policy](expanded-assessment-policy.txt).
+It sets the scoring and length rules for each task and identifies where the [original editing policy](assessment-policy.txt) applies.
 
 The [configurations](cases/configs/) cover recommendation editing, effective briefing, document addition, long handoff, explicit comment editing and drafting, and four native selection tasks.
+The [archived configuration index](cases/configuration-index.json) and case cards describe both arms at preparation time, including their pending-approval status. The local configs cover the adopted arm.
 They reproduce the prepared original-body arm for both providers with its skill source relocated to the shipped file.
 The full twenty-configuration matrix was prepared for regression testing. Only the subsets identified above were collected for the final comparison.
 For a separately approved live run, follow the [runner guide](../../runner/README.md) and pass one configuration to `skilltest run` from the runner environment.
