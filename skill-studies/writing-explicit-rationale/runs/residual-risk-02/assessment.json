@@ -1,0 +1,130 @@
+[
+  {
+    "order": 1,
+    "repetition": 2,
+    "provider": "claude",
+    "case": "repeated-review",
+    "attempt": "attempt-1.json",
+    "criteria": {
+      "T1": "met",
+      "R1": "met",
+      "R2": "met",
+      "R3": "met"
+    },
+    "reconciliation": "Both quota consequences explicit and source-supported. The project and reply strengthen reconsideration to factoring at the agreed trigger. Preserve this precision finding under the same threshold as the five-run comparison.",
+    "reading": "Quota code explicitly accepts the previous higher limit for older tokens until second 60 because immediately resetting could reject admitted work. The shared persistence comment protects approved imports and accepts duplication. It instructs factoring if a third interactive caller appears. The routine rename has no commentary.",
+    "checks": [
+      {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/residual-risk-02/controller/subject-01/audit.json",
+        "sha256": "83140ef3cf21ed05ab14f8a822e80043318ac9232212a8e3bd9dedc93031c710"
+      },
+      {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/residual-risk-02/controller/subject-01/full-evidence.json",
+        "sha256": "66f84619fc4d12765271029ddba3d9b35415eb76f35daa94db53a822a40796c7"
+      },
+      {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/residual-risk-02/controller/subject-01/replay.json",
+        "sha256": "57744ed435ad5fed48c29310c39df71018cc3f5484731cfc429b9b8955ff3370"
+      },
+      {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/residual-risk-02/subjects/20261125T174628894Z-project-task-f42684af-02b4-448f-872b-c4053b33a526-az_xoibh/final.txt",
+        "sha256": "d605e7cb4adeedddb8ce978ef5281db59f6080a61037d81569436b5622f75aae"
+      }
+    ]
+  },
+  {
+    "order": 2,
+    "repetition": 2,
+    "provider": "codex",
+    "case": "quota-grace",
+    "attempt": "attempt-2.json",
+    "criteria": {
+      "T1": "met",
+      "R1": "met"
+    },
+    "reconciliation": "The decision site explicitly identifies the rejection prevented and accepts temporary excess quota. Both are supported by the task. The handoff and added tests match the policy.",
+    "reading": "The downgrade branch explicitly accepts 60 seconds of extra quota to prevent rejection of previously admitted in-flight work. Strict issue-time and expiry predicates and the tests demonstrate the exact boundaries.",
+    "checks": [
+      {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/residual-risk-02/controller/subject-02/audit.json",
+        "sha256": "2cf89c6aab00039b6a235bcac421f11b2eb4c2286e3947de6afa7724b6bfdae1"
+      },
+      {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/residual-risk-02/controller/subject-02/full-evidence.json",
+        "sha256": "530143492e737c6f43fc9086c7facda4bb8fbd073ea0b195480b6e8243ee06d5"
+      },
+      {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/residual-risk-02/controller/subject-02/replay.json",
+        "sha256": "57744ed435ad5fed48c29310c39df71018cc3f5484731cfc429b9b8955ff3370"
+      },
+      {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/residual-risk-02/subjects/20261125T174628519Z-project-task-eb3f878a-553c-4e0c-8fd3-f2513de0eeb6-qcbmer86/final.txt",
+        "sha256": "9f390c534783562bf8aa9fb4e02f9d6572a5952ddc303bacc9f2c50f593a4615"
+      }
+    ]
+  },
+  {
+    "order": 3,
+    "repetition": 3,
+    "provider": "claude",
+    "case": "repeated-review",
+    "attempt": "attempt-3.json",
+    "criteria": {
+      "T1": "met",
+      "R1": "met",
+      "R2": "met",
+      "R3": "met"
+    },
+    "reconciliation": "Both quota consequences explicit and source-supported. Project preserves reconsideration; handoff implies a commitment to factor. The code remains sufficient for the future decision.",
+    "reading": "Quota code explicitly accepts a higher quota for older tokens until second 60 because an immediate reset could reject work already admitted. Interactive guards protect approved imports from rechecking and a third interactive caller triggers reconsideration. No label-rename explanation.",
+    "checks": [
+      {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/residual-risk-02/controller/subject-03/audit.json",
+        "sha256": "865b775dc92ed0e3541f0b3ace0279b1ea27c1aa3b6416c8982e1f333a6923eb"
+      },
+      {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/residual-risk-02/controller/subject-03/full-evidence.json",
+        "sha256": "8a35442a56f2f34f1784ebda0811dff1fc9003e2d95a425eb1c7c60be9f79407"
+      },
+      {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/residual-risk-02/controller/subject-03/replay.json",
+        "sha256": "57744ed435ad5fed48c29310c39df71018cc3f5484731cfc429b9b8955ff3370"
+      },
+      {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/residual-risk-02/subjects/20261125T174657314Z-project-task-746bcb00-91c5-486d-b3d5-fc289669b781-2_1jtdnp/final.txt",
+        "sha256": "385240e619843325b4e315f5b7736908b4a609c64e7143b6acf57c6909809690"
+      }
+    ]
+  },
+  {
+    "order": 4,
+    "repetition": 3,
+    "provider": "codex",
+    "case": "quota-grace",
+    "attempt": "attempt-4.json",
+    "criteria": {
+      "T1": "met",
+      "R1": "met"
+    },
+    "reconciliation": "The code expressly accepts bounded excess to honor in-flight tokens. Immediate rejection is inferable from the policy and inputs. The handoff accurately reports eligibility and timing. No invented acceptance.",
+    "reading": "The quota site accepts 60 seconds of extra quota to honor in-flight older tokens. A reader can infer why applying the lower limit immediately harms that work; rejection is implicit. Code and tests give the exact issue-time and expiry boundaries.",
+    "checks": [
+      {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/residual-risk-02/controller/subject-04/audit.json",
+        "sha256": "6d8f0c6351f1525921deee9820454f2a04feffc47cc9d257ddf1e61378c1484b"
+      },
+      {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/residual-risk-02/controller/subject-04/full-evidence.json",
+        "sha256": "627f94f432b96988d641a7868935e4792f6cb50471cc700a817c9521924f31ca"
+      },
+      {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/residual-risk-02/controller/subject-04/replay.json",
+        "sha256": "57744ed435ad5fed48c29310c39df71018cc3f5484731cfc429b9b8955ff3370"
+      },
+      {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/residual-risk-02/subjects/20261125T174739900Z-project-task-70a3350c-8a03-4918-859b-48e6096ed409-l676bh9a/final.txt",
+        "sha256": "8bf56c0f408dfd52e32fee4cec02ea17bff1571d06c8b1ae5818c164a6440f1e"
+      }
+    ]
+  }
+]
