@@ -24,15 +24,4 @@ build-backend = "hatchling.build"
 packages = ["src/skilltest"]
 
 [tool.hatch.build.targets.wheel.force-include]
-"../methodology/formats/protocol.template.md" = "skilltest/_formats/protocol.template.md"
-"../methodology/formats/case-definition.template.md" = "skilltest/_formats/case-definition.template.md"
-"../methodology/formats/assessment.template.md" = "skilltest/_formats/assessment.template.md"
-"../methodology/formats/manifest.template.json" = "skilltest/_formats/manifest.template.json"
-"../methodology/formats/run-index.template.json" = "skilltest/_formats/run-index.template.json"
-"../methodology/formats/execution-result.template.json" = "skilltest/_formats/execution-result.template.json"
-"../methodology/formats/execution-result.schema.json" = "skilltest/_formats/execution-result.schema.json"
-
 "result.schema.json" = "skilltest/_result.schema.json"
-"../methodology/formats/execution-result-v2.schema.json" = "skilltest/_formats/execution-result-v2.schema.json"
-"../methodology/formats/execution-result-v2.template.json" = "skilltest/_formats/execution-result-v2.template.json"
-"../methodology/formats/assessment-v2.template.md" = "skilltest/_formats/assessment-v2.template.md"

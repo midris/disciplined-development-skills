@@ -4,7 +4,6 @@ from copy import deepcopy
 from functools import lru_cache
 from importlib.resources import files
 import json
-from pathlib import Path
 import re
 
 from jsonschema import Draft202012Validator
@@ -21,14 +20,8 @@ TEMPLATES = {
 
 @lru_cache(maxsize=None)
 def resource(name):
-    packaged = files("skilltest").joinpath("_formats", name)
-    if packaged.is_file():
-        return packaged.read_text(encoding="utf-8")
-    # Editable installs use the canonical repository files; wheels include these
-    # same files through Hatch force-include, without a second maintained copy.
-    return (Path(__file__).resolve().parents[4] / "methodology" / "formats" / name).read_text(
-        encoding="utf-8"
-    )
+    return files("skilltest").joinpath("_formats", name).read_text(encoding="utf-8")
+
 
 
 def supported_versions(kind):

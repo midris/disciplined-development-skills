@@ -16,6 +16,7 @@ jobs:
       - working-directory: tests/runner
         run: |
           uv sync --locked
+          uv build --out-dir "$RUNNER_TEMP/skilltest-dist"
           sandbox-exec -p '(version 1)(allow default)(deny network*)' .venv/bin/python -m pytest -q tests/process_smoke/test_study_walkthrough.py
           uv run --offline --locked pytest -q
           uv run --offline --locked python -m unittest discover -s ../methodology/formats
