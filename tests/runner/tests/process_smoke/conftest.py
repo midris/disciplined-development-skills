@@ -52,6 +52,11 @@ def smoke_python():
 def fake_provider(tmp_path, monkeypatch, private_test_profile, smoke_python):
     bin_dir = tmp_path / "fake-bin"
     bin_dir.mkdir()
+    # Hosted macOS images use versioned Xcode paths outside the study policy.
+    # Select Homebrew Git in the dummy CLI directory when it is installed.
+    brew_git = Path("/opt/homebrew/bin/git")
+    if sys.platform == "darwin" and brew_git.is_file():
+        (bin_dir / "git").symlink_to(brew_git.resolve())
     fake = FakeProvider(tmp_path / "provider-record.jsonl", bin_dir / "provider-settings.json")
     script = """#!PYTHON_EXECUTABLE
 import base64,json,os,sys,subprocess
@@ -81,8 +86,8 @@ if Path(sys.argv[0]).name == "claude":
     answer=fixture.parent/"evidence/dummy-tool-write.txt"
     answer.write_text("dummy evidence")
     (fixture/"tracked.txt").write_text("local git fixture")
-    subprocess.run(["git", "add", "tracked.txt"], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    subprocess.run(["git", "-c", "user.name=Fixture", "-c", "user.email=fixture@example.invalid", "commit", "--quiet", "-m", "fixture"], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    subprocess.run(["git", "add", "tracked.txt"], check=True, stdout=subprocess.DEVNULL)
+    subprocess.run(["git", "-c", "user.name=Fixture", "-c", "user.email=fixture@example.invalid", "commit", "--quiet", "-m", "fixture"], check=True, stdout=subprocess.DEVNULL)
 with record.open("a") as stream:
     print(json.dumps({"argv": sys.argv, "cwd": os.getcwd(),
         "stdin": sys.stdin.buffer.read().decode(),

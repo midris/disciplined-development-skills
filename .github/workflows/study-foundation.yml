@@ -12,7 +12,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
-      - run: brew install uv
+      - run: brew install uv git
       - working-directory: tests/runner
         run: |
           uv sync --locked
