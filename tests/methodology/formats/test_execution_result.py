@@ -83,7 +83,9 @@ class ExecutionResultContract(unittest.TestCase):
     def test_known_failure_takes_precedence_over_unknown(self):
         value = copy.deepcopy(self.record)
         value['criteria'][0]['judgment'] = 'not met'
-        value['criteria'][1]['judgment'] = 'insufficient evidence'
+        value['criteria'].append(dict(value['criteria'][0], id='F2', judgment='insufficient evidence'))
+        value['functional_result'] = 'insufficient evidence'
+        self.rejects(value)
         value['functional_result'] = 'not met'
         self.validator.validate(value)
 

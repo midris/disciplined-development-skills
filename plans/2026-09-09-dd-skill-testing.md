@@ -2,9 +2,11 @@
 
 **Superseded.** The [study framework](../tests/methodology/framework.md) and [operator workflow](../tests/README.md) govern new studies. The decisions, authorizations and next actions below describe the earlier CW pilot.
 
-**Status:** Installation and baseline tooling are settled for the current Codex and Claude local workflows.
+## Status at the close of this pilot plan
+
+Installation and baseline tooling had been settled for the Codex and Claude local workflows.
 The accepted CW evidence and completed-plan cleanup are consolidated on `main`; ongoing testing work uses this primary checkout.
-Current work: the owner approved a fresh scoring rebuild for CW-02 followed by CW-19; start at the [bounded handoff](#fresh-scoring-rebuild-approved-handoff).
+At that point, the owner had approved a fresh scoring rebuild for CW-02 followed by CW-19, recorded in the [bounded handoff](#fresh-scoring-rebuild-approved-handoff).
 The CW pilot relevance audit is complete; all 18 purposes have initial judgeable evidence, but companion-only and incidental fidelity outcomes must not be presented as CW effectiveness.
 CW-13/14 passed their scope boundary; the owner directed that other authoring-method correctness be excluded from these tests.
 Their prospective tasks and rubrics now ask for guidance selection only and explicitly omit authoring-workflow scoring.
