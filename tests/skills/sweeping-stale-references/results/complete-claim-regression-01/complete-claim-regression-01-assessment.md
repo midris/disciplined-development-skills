@@ -59,6 +59,15 @@ In slots 43 and 56, Claude claimed post-edit searches absent from the complete t
 Some other reports overstated which matches remained or cited checks performed only after the commit.
 These issues affect the accuracy of the account. Direct project and commit inspection supplied the evidence for the functional judgments.
 
+## Adoption decision with a known reporting deficiency
+
+The owner chose to proceed with adoption because inspection of the committed projects and replay of the affected behavior verified all 48 repairs.
+The reports were less reliable: 17 of 42 applicable accounts missed the reporting criterion, including two that claimed searches absent from the traces.
+Those misses stand in the results.
+
+An earlier run illustrates why the owner made exact counts optional. Its inventory correctly listed 14 occurrences and 10 updates, but its summary reported 13 and 9. [Earlier baseline assessment](https://github.com/midris/disciplined-development-skills/blob/44766517c4550cd65c13c9fe0f489ac26efee1e0/skill-studies/sweeping-stale-references/runs/coverage-baseline-01/coverage-baseline-01-assessment.md)
+The final regression already used the count-optional rule. All six dedicated inventory reports preserved the eleven supplied groups. Accurate paths, changes and reasons for preserving matches remain part of the adopted skill.
+
 ## Execution and review
 
 The first 24 subjects and four audited reviews passed the [checkpoint](focused-gate.json).

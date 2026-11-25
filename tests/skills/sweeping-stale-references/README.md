@@ -16,7 +16,7 @@ Each provider ran three repetitions per scenario. These rows score overlapping a
 Claude completed the native reviewer-correction repair even when it missed the skill load. On one tests-only task it ran the tests, then searched and classified references without making edits.
 Of the 17 reporting misses, 12 came from the Shiv and initiating-rename cases. On each case, both models missed the full reporting criterion in all three repetitions.
 Most misses combined paths or outcomes. Two Claude reports also claimed post-edit searches absent from the traces (slots 43 and 56). Other reports overstated the remaining matches or cited checks performed after the commit.
-The owner accepted these reporting limits because direct inspection of the projects and commits verified the repairs.
+The owner accepted reporting accuracy as a known deficiency and chose to proceed because project and commit inspection verified all 48 repairs. [Adoption decision and the earlier counting example](results/complete-claim-regression-01/complete-claim-regression-01-assessment.md#adoption-decision-with-a-known-reporting-deficiency)
 Ten read-only Opus reviews covered all 48 repaired projects and agreed on all 144 functional judgments. The active assessor judged discovery, search timing and reporting from the traces. [Review packets and reconciliation](results/complete-claim-regression-01/evaluation/README.md)
 
 The [earlier regression](results/count-free-regression-01/count-free-regression-01-assessment.md) and [focused paragraph comparison](results/complete-claim-01/complete-claim-01-assessment.md) explain the revision.
