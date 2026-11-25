@@ -2,14 +2,21 @@
 
 Study one shipped skill at a time. Establish a fresh baseline, identify a concrete weakness or simplification worth testing, and use the observed work to decide whether to keep or change the skill. The [framework](specs/2026-09-11-model-driven-skill-testing-framework.md) defines the method. Each study protocol owns its scope, evidence links, call accounting and decisions.
 
+## Promotion to main
+
+The first promotion cycle is complete. [PR #42](https://github.com/midris/disciplined-development-skills/pull/42) shipped the shared runner, governing framework, study workflow, format contracts, templates and offline checks. Its clean-checkout walkthrough runs from preparation through assessment.
+Each skill promotion carries the tested skill, runnable suite, decision record, failures and evidence locators. The [testing guide on main](https://github.com/midris/disciplined-development-skills/blob/e2cf5dbf/tests/README.md) links all three studies.
+
+Continue study development on `codex/skill-testing-reset`. At each new study freeze, record the `main` revision and verify the shipped skill and relevant dependencies against it. This branch retains historical inputs and has diverged from the promoted runner and skill layout. Open each promotion PR from current `main` so it carries only the reviewed changes.
+
 ## Current next action
 
 | Skill | State | Decision record |
 | --- | --- | --- |
-| Concise writing (CW) | Closed. The owner adopted the rewritten description with the original body. | [CW adoption](../skill-studies/concise-writing/protocol.md#closure-and-adoption) |
-| Sweeping stale references (SSR) | Closed. The owner adopted the compact, count-free skill with the tested description and complete-claim instruction. | [SSR adoption](../skill-studies/sweeping-stale-references/protocol.md#full-regression-adoption) |
-| Writing explicit rationale (WER) | Review the [completed booking-slot comparison](../skill-studies/writing-explicit-rationale/runs/transfer-02/report.md) and decide adoption of the 604-word variant. | [WER protocol](../skill-studies/writing-explicit-rationale/protocol.md) |
-| Remaining skills | Select the next skill with the owner after the WER decision. | [Skill inventory and composition](../ARCHITECTURE.md#composition-boundaries) |
+| Concise writing (CW) | Closed and shipped in [#43](https://github.com/midris/disciplined-development-skills/pull/43). The original body uses the revised description. | [CW adoption](../skill-studies/concise-writing/protocol.md#closure-and-adoption) |
+| Sweeping stale references (SSR) | Closed and shipped in [#44](https://github.com/midris/disciplined-development-skills/pull/44). The owner accepted the reporting limitations after all 48 repairs passed. | [SSR adoption](../skill-studies/sweeping-stale-references/protocol.md#full-regression-adoption) |
+| Writing explicit rationale (WER) | Closed and shipped in [#45](https://github.com/midris/disciplined-development-skills/pull/45). The adopted 604-word variant passed its ten targeted and six transfer runs. | [WER protocol](../skill-studies/writing-explicit-rationale/protocol.md) |
+| Remaining skills | Select the next skill with the owner, then define its intended behavior and shipped/control baseline. | [Skill inventory and composition](../ARCHITECTURE.md#composition-boundaries) |
 
 ### WER milestones
 
@@ -28,7 +35,7 @@ Study one shipped skill at a time. Establish a fresh baseline, identify a concre
 - [x] Review the native export omission with the owner and seal all 17 authorized independent first readings.
 - [x] Review the [reader checkpoint](../skill-studies/writing-explicit-rationale/protocol.md#independent-reader-checkpoint) with the owner before reconciliation.
 - [x] Complete both independently scored provider-grouped reconciliations.
-- [ ] Review the [reconciliation checkpoint](../skill-studies/writing-explicit-rationale/protocol.md#reconciliation-checkpoint) with the owner.
+- [x] Review the [reconciliation checkpoint](../skill-studies/writing-explicit-rationale/protocol.md#reconciliation-checkpoint) with the owner.
 - [x] Draft a [compact WER candidate](../skill-studies/writing-explicit-rationale/protocol.md#compact-rewrite-candidate) against the preserved original.
 - [x] Compare three frozen WER drafts across both providers on the four baseline cases. The [application comparison](../skill-studies/writing-explicit-rationale/protocol.md#application-comparison-results) records the shared Codex regression and four retained setup failures.
 - [x] Add and offline-qualify the two [suite extension cases](../skill-studies/writing-explicit-rationale/protocol.md#suite-extension) for independent design review.
@@ -45,15 +52,18 @@ Study one shipped skill at a time. Establish a fresh baseline, identify a concre
 - [x] Review the shipped baseline, cross-model disagreements and Fable findings with the owner; retain the active judgments.
 - [x] Freeze the first candidate screen and its allocation under the [incremental comparison rules](../skill-studies/writing-explicit-rationale/protocol.md#incremental-candidate-screen).
 
+- [x] Complete the [shipped/control top-up](../skill-studies/writing-explicit-rationale/runs/application-topup-01/report.md) and the [seven-scenario comparison](../skill-studies/writing-explicit-rationale/runs/rewrite-broad-05/report.md) of the 599-word parent.
+- [x] Review the [targeted 604-word comparison](../skill-studies/writing-explicit-rationale/runs/residual-risk-03/report.md) and [booking-slot transfer](../skill-studies/writing-explicit-rationale/runs/transfer-02/report.md), adopt the frozen text and merge the reviewed promotion.
+
 ## Starting or resuming without conversation history
 
-1. Read [CLAUDE.md](../CLAUDE.md), this plan and the active protocol above. Inspect the working tree for existing work.
+1. Read [CLAUDE.md](../CLAUDE.md), this plan and the active protocol for any open study. Inspect the working tree for existing work.
 2. For a new skill, follow the [per-skill plan skeleton](../skill-studies/README.md#per-skill-plan-skeleton). Read the shipped skill and its actual dependencies, identify its users and verify which instructions each subject will receive.
 3. For an existing study, resolve the first open milestone against its protocol, frozen input identities, attempt index and latest assessment. Resume from the last verified state. The [runner guide](../skill-validation/runner/README.md#study-documents) owns command syntax and supported representations.
 
 ## Limits and information boundaries
 
-Accepted outer limits: 1041 subject, 90 evaluator, 4 authoring and 4 retry invocations for the CW/SSR program. The 20-hour active-work figure was a planning guideline. The [combined accounting record](../skill-studies/concise-writing/protocol.md#storage-and-accounting) retains actual spending, estimates and variance. WER needs its own recorded allocation. Unused capacity from earlier studies carries no dispatch authority.
+Accepted outer limits: 1041 subject, 90 evaluator, 4 authoring and 4 retry invocations for the CW/SSR program. The 20-hour active-work figure was a planning guideline. The [combined accounting record](../skill-studies/concise-writing/protocol.md#storage-and-accounting) retains actual spending, estimates and variance. WER allocations and outcomes are recorded in its protocol. Unused capacity from earlier studies carries no dispatch authority.
 
 Keep rubrics, expected facts, assessor notes and raw captures outside the subject's accessible inputs. Describe isolation from actual runtime evidence. New studies use fresh baselines. Declare any held-out transfer claim and its stronger isolation separately. [Framework](specs/2026-09-11-model-driven-skill-testing-framework.md#4-pilot-and-freeze-the-experiment-plan)
 

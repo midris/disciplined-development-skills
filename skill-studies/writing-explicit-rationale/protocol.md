@@ -2,7 +2,7 @@
 
 Format version: `1`
 Study ID: `writing-explicit-rationale`
-Status: fresh shipped application benchmark approved for collection. [Benchmark freeze](#shipped-application-benchmark-freeze)
+Status: closed. The owner adopted the frozen 604-word variant and merged it to `main` in [PR #45](https://github.com/midris/disciplined-development-skills/pull/45). The [published adoption record](https://github.com/midris/disciplined-development-skills/blob/e2cf5dbf/tests/skills/writing-explicit-rationale/README.md) distinguishes its 16 direct runs from the seven-scenario benchmark on its 599-word parent. The allocations below are historical.
 Plan: [current milestone](../../plans/2026-09-11-model-driven-skill-testing.md#wer-milestones)
 General spec: [testing framework](../../plans/specs/2026-09-11-model-driven-skill-testing-framework.md)
 
