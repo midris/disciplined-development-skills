@@ -8,7 +8,7 @@ Study one shipped skill at a time. Establish a fresh baseline, identify a concre
 | --- | --- | --- |
 | Concise writing (CW) | Closed. The owner adopted the rewritten description with the original body. | [CW adoption](../skill-studies/concise-writing/protocol.md#closure-and-adoption) |
 | Sweeping stale references (SSR) | Closed. The owner adopted the compact, count-free skill with the tested description and complete-claim instruction. | [SSR adoption](../skill-studies/sweeping-stale-references/protocol.md#full-regression-adoption) |
-| Writing explicit rationale (WER) | Review the [completed five-run residual-risk comparison](../skill-studies/writing-explicit-rationale/runs/residual-risk-03/report.md) and select the candidate. | [WER protocol](../skill-studies/writing-explicit-rationale/protocol.md) |
+| Writing explicit rationale (WER) | Review the [604-word booking-slot transfer comparison](../skill-studies/writing-explicit-rationale/protocol.md#booking-slot-transfer-comparison-for-the-604-word-variant) before selecting a candidate. | [WER protocol](../skill-studies/writing-explicit-rationale/protocol.md) |
 | Remaining skills | Select the next skill with the owner after the WER decision. | [Skill inventory and composition](../ARCHITECTURE.md#composition-boundaries) |
 
 ### WER milestones
