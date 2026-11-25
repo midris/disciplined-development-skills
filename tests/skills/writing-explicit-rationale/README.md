@@ -12,7 +12,7 @@ The [frozen text](drafts/explicit-residual-risk/SKILL.md) differs from its 599-w
 | Booking-slot transfer under pressure to put the reason in the handoff | 6/6 original | 6/6 | 6/6 |
 
 The ten targeted runs consisted of five Claude repeated reviews and five Codex quota-grace edits. Together with the six transfer runs, these are the 16 direct observations of the promoted bytes.
-The whole-output grades tied on the targeted cases. Claude more often named the accepted cost with the revised example. One of its five projects committed to future factoring when the source called for reconsideration.
+The whole-output grades tied on the targeted cases. A single assessor who knew the variant compared these runs with historical parent outputs. The revised example models the acceptance wording directly, and Claude more often named the accepted cost. One of its five projects committed to future factoring when the source called for reconsideration.
 All six transfer plans kept the morning slot off sale, gave the calibration reason in the plan and left reopening conditional on reviewing the logs.
 Two Codex summaries anticipated reinstatement more strongly than their plans did. The same nuance occurred with the parent.
 The owner chose the shorter skill on this evidence. The seven-scenario comparison and independent Fable review apply to the parent. Native discovery of the 604-word skill remains unmeasured. [Targeted comparison](results/residual-risk-03/report.md) · [Booking-slot transfer](results/transfer-02/report.md)
@@ -21,7 +21,7 @@ The owner chose the shorter skill on this evidence. The seven-scenario compariso
 
 - The [original benchmark](results/application-benchmark-01/benchmark-report.md) and [top-up](results/application-topup-01/report.md) retain two invalid Codex catalog attempts, one per arm, outside the functional denominators. The pooled counts above include both Codex runtime configurations. The parent report gives the smaller apps-disabled comparison separately.
 - The [599-word comparison](results/rewrite-broad-05/report.md) includes the Codex plan that invented a Monday launch date, the ten catalog decision readers, and Fable’s independent review and limits. The [first transfer](results/transfer-01/report.md) compares the original and parent. Fresh subjects repeated that known case for the 604-word text.
-- The [protocol](protocol.md) describes reader-first assessment, the separation of task correctness from rationale quality, historical native discovery, and the development runs and setup failures. Use the [benchmark scoring policy](results/application-benchmark-01/scoring-policy.txt) and [criteria](results/application-benchmark-01/criteria/) to judge each complete output against the original task. The reader’s decision and its stated reason matter alongside the mechanical checks.
+- The [protocol](protocol.md) describes reader-first assessment, the separation of task correctness from rationale quality, historical native discovery, and the development runs and setup failures. Use the [benchmark scoring policy](results/application-benchmark-01/scoring-policy.txt) and the [five revised cards](results/application-benchmark-01/criteria/), [catalog card](cases/catalog-review/assessment.md) and [dispatch card](cases/dispatch-hold/assessment.md) to judge each complete output against the original task. The reader’s decision and its stated reason matter alongside the mechanical checks.
 
 ## Run the public suite offline
 
@@ -37,7 +37,7 @@ scratch=$(mktemp -d)
 uv run --locked --offline python "$study/cases/qualify.py" "$scratch/qualification"
 ```
 
-The verifier checks both skill digests, all 14 promoted runner configurations against the historical benchmark inputs, the original and parent counts, and the 16 direct results. Qualification exercises 46 constructed outputs and their reader packets. No provider calls are needed.
+The verifier checks both skill digests, all 14 promoted runner configurations against the historical benchmark inputs, the original and parent counts, and the complete set of passing functional grades for all 16 direct runs. The explicit-acceptance and rejection counts summarize the assessor’s project readings in the targeted comparison. Qualification exercises 46 constructed outputs and their reader packets. No provider calls are needed.
 The [cases](cases/README.md) cover export deferral, quota grace, repeated review, catalog review, helper rename, scope trim and dispatch hold. They test decision-site rationale, recovery of a second decision, downstream decision making, preservation of existing facts, and restraint on routine edits.
 
 For an approved live comparison, follow the [runner guide](../../runner/README.md) and pass one [Codex](configs/codex/) or [Claude](configs/claude/) configuration to `skilltest run`.
@@ -46,8 +46,9 @@ The exact booking-slot task, fixture and scoring card remain in the controlled e
 
 ## Retrieve frozen evidence
 
-The [public source archive](https://github.com/midris/disciplined-development-skills/tree/8282b5db2313bf2a0a7e05af6cae680c0d591ee1e0/skill-studies/writing-explicit-rationale) preserves the collection paths, including the original protocol and its revision-specific authorizations.
+The [public source archive](https://github.com/midris/disciplined-development-skills/tree/8282b5db2313bf2a0a7e05af6cae680c0d591ee1/skill-studies/writing-explicit-rationale) preserves the collection paths, including the original protocol and its revision-specific authorizations.
 Fetch it with `git fetch origin tag archive/wer-promotion-sources`, then use `git show <revision>:<path>` for exact historical bytes. The public run records live here under [results](results/).
 
+Historical schedules use `candidate` for more than one version. Identify the text from the frozen `GUIDANCE.md` SHA-256: `36ab7246…` for the parent and `fd9f6177…` for the adopted text.
 For a direct run, follow the assessment row to its attempt record, inventory hash, and evidence references. Ask the study owner for authorized access to the private WER store. Resolve the suffix following `skill-study-private/writing-explicit-rationale/` under that root.
 Passing `--private-store /path/to/writing-explicit-rationale` to the verifier additionally checks the inventories and cited evidence files for all 16 direct subjects and the private transfer configuration and scoring card digests.

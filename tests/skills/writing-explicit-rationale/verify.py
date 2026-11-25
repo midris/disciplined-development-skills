@@ -65,10 +65,19 @@ def verify_public_suite():
 
     outcomes = []
     screen = RESULTS / "rewrite-screen-01"
+    freeze = read(screen / "freeze.json")
+    require(freeze["candidate"]["sha256"] == freeze["inputs"]["GUIDANCE.md"] == PARENT, screen)
     for path in [screen, *(screen / f"rep-{i}" for i in range(2, 6))]:
-        outcomes.append(read(path / "assessment.json")["outcome"] == "met")
+        row = read(path / "assessment.json")
+        require(row["setup"] == "valid", path)
+        outcomes.append(row["outcome"] == "met")
     for path in sorted(RESULTS.glob("rewrite-broad-*")):
-        for row in read(path / "assessment.json")["subjects"]:
+        slots = read(path / "schedule.json")["subjects"]
+        rows = read(path / "assessment.json")["subjects"]
+        require(len(slots) == len(rows), path)
+        for slot, row in zip(slots, rows):
+            require(slot["inputs"]["GUIDANCE.md"] == PARENT, slot)
+            require(all(slot[k] == row[k] for k in ("order", "provider", "case")), row)
             require(row["setup"] == "valid" and row["criteria"], row)
             outcomes.append(all(value == "met" for value in row["criteria"].values()))
     require(len(outcomes) == 70 and sum(outcomes) == 69, "599-word comparison")
@@ -80,6 +89,11 @@ def check_private(store, path, sha):
 
 
 def verify_adopted_runs(store):
+    factors = {
+        "repeated-review": ("T1", "R1", "R2", "R3"),
+        "quota-grace": ("T1", "R1"),
+        "booking-slot": ("T1", "R1", "R2"),
+    }
     runs = set()
     cells = Counter()
     repetitions = set()
@@ -99,7 +113,9 @@ def verify_adopted_runs(store):
             repetitions.add(key)
             require(row.get("case", "booking-slot") == key[1], key)
             require(slot["inputs"]["GUIDANCE.md"] == ADOPTED and row["provider"] == slot["provider"], slot)
-            require(row["criteria"] and all(v == "met" for v in row["criteria"].values()), row)
+            require(row["criteria"] == dict.fromkeys(factors[key[1]], "met"), row)
+            if name == "transfer-02":
+                require(row["setup"] == "valid" and row["condition"] == slot["condition"], row)
             if name != "transfer-02":
                 config_path = RESULTS / Path(slot["config"]).relative_to(SOURCE)
                 require(digest(config_path) == slot["sha256"], config_path)

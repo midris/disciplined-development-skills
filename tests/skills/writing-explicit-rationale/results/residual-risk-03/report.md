@@ -17,4 +17,6 @@ Both new Claude projects recovered the quota decision from the submitted change,
 
 Both final Codex projects explicitly accepted the temporary excess to honor already-admitted work. A maintainer can infer the consequence of immediate enforcement in both. Across five, only repetition two named rejection directly. The accepted cost is supported by the original inputs in all ten 604-word projects.
 
-Prefer the 604-word example for making an accepted cost explicit. Claude improved on this targeted observation and Codex already supplied it consistently. The two variants tied on the whole-output criteria. Five repetitions on each of two known provider–scenario combinations support a narrow wording preference; broader suite, transfer and independent review evidence belongs to the 599-word text.
+A single assessor knew which variant these batches used and compared them with historical 599-word outputs. The revised example directly models the explicit acceptance being assessed. No separate evaluator scored this comparison.
+
+Prefer the 604-word example for making an accepted cost explicit. Claude improved on this targeted observation and Codex already supplied it consistently. The two variants tied on the whole-output criteria. Five repetitions on each of two known provider–scenario combinations support a narrow wording preference; the broader suite and independent output review belong to the 599-word text. The [subsequent transfer report](../transfer-02/report.md) records six direct transfer runs of the 604-word text.
