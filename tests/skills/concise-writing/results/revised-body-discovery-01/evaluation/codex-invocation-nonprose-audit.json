@@ -1,0 +1,17 @@
+{
+  "configuration": "codex-invocation-nonprose",
+  "required_complete_files": 38,
+  "outputs": 15,
+  "first_pass_event": 91,
+  "prior_read_event": 92,
+  "first_pass_sha256": "49fec3567a953d1ba7f54979ddf75463fbfc1250aa573cafa2dbcfddc362dda8",
+  "first_pass_path": "skill-studies/concise-writing/runs/revised-body-discovery-01/evaluation/codex-invocation-nonprose-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/reviews/20261021T180712259Z-cw-suite-opus-codex-invocation-nonprose-89a42ee0-3470-4c37-9bcb-a1330b886521-08z2qn6p/final.txt",
+  "final_sha256": "75b88e36b1353fc59b829112cb26c4f60b38b0f44f7703bd7476393be1c4240e",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "pre_prior_grep_calls": [],
+  "semantic_completeness": "verified: manually checked fifteen settings/full assistant-stream task observations and final comparison; no F1-F3 or artifact-inferred D1 assigned; all numeric edits correct and all streams include extra messages; no pre-prior Grep exposure."
+}

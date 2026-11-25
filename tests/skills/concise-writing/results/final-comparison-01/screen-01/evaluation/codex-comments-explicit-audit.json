@@ -1,0 +1,17 @@
+{
+  "configuration": "codex-comments-explicit",
+  "required_complete_files": 16,
+  "outputs": 6,
+  "first_pass_event": 61,
+  "prior_read_event": 62,
+  "first_pass_sha256": "c1286da049d3788b70396c414b1ad496f61914720164494de43fa2ebefbbcf1b",
+  "first_pass_path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/evaluation/codex-comments-explicit-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/reviews/20261021T194229699Z-cw-suite-opus-codex-comments-explicit-229f526a-3cdd-46c7-9e0f-343c41f988b2-x6ag6f19/final.txt",
+  "final_sha256": "0b9001ace3dbd6aca2b066e7f0bcb3658d1e28c18e5f9a3b2dfcce325415f00c",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "pre_prior_grep_calls": [],
+  "semantic_completeness": "verified: all six independent F1-F3 judgments and complete final comparison manually checked against full outputs; unique abbreviated IDs manually mapped to exact run IDs. No prior exposure before emitted first pass, no pre-prior Grep. Reviewer imprecise move-into-handler counterfactual disclosed; correct factor evidence remains usable. No factor changes after prior."
+}

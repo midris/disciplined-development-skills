@@ -1,0 +1,184 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "codex-final-comments-screen-02-comments-explicit-revised-body-5-1-assessment",
+  "assessed_at": "2026-10-21T20:13:55.687161+00:00",
+  "run_id": "20261021T201139611Z-cw-final-codex-comments-explicit-revised-body-ea37b06e-36cc-4950-9fa3-d2c1b6a7b172-ni9m6s9t",
+  "condition": "revised-body",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same Codex controller authored/reviewed exposed development variants and directly judged complete outputs; no blind, held-out or independent assessor claim. Separate Opus review supplements this."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/preparation/manifests/codex-comments-explicit-manifest.json",
+    "sha256": "1a91c5fd330782bea9fbb74d6b687ebe31de29761a6900497120bb3c56ec8c44",
+    "version": "1",
+    "git_revision": "04325d4b24f67047979680b43a9700352cc41d1a"
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/subjects/20261021T201139611Z-cw-final-codex-comments-explicit-revised-body-ea37b06e-36cc-4950-9fa3-d2c1b6a7b172-ni9m6s9t/workspace/fixture/uploader.py",
+        "sha256": "9776c3e7c764486277b52fd6849dc9fe17e2ad0daea8900845d121b5762293c6",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/subjects/20261021T201139611Z-cw-final-codex-comments-explicit-revised-body-ea37b06e-36cc-4950-9fa3-d2c1b6a7b172-ni9m6s9t/provider-session.jsonl",
+        "sha256": "fef7068f622f7964a80b605baa9f583e04ed438e2d03914913c676c9b5b2d498",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/subjects/20261021T201139611Z-cw-final-codex-comments-explicit-revised-body-ea37b06e-36cc-4950-9fa3-d2c1b6a7b172-ni9m6s9t/result.json",
+        "sha256": "ac772983345e81c29f478b3e161fd2611f9c924ffe8ff2be486a6c6c29c8d46b",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/subjects/20261021T201139611Z-cw-final-codex-comments-explicit-revised-body-ea37b06e-36cc-4950-9fa3-d2c1b6a7b172-ni9m6s9t/runner.log",
+        "sha256": "5b40a1147c1d3490105bb34776786caf615ab499491ebecaf48bd75c598428c4",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/subjects/20261021T201139611Z-cw-final-codex-comments-explicit-revised-body-ea37b06e-36cc-4950-9fa3-d2c1b6a7b172-ni9m6s9t/final.txt",
+        "sha256": "f01b22dacb817673a6d0423d8476e0f882e97f4ed07744eb3cc284bc36c7489e",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/invocation-comments/uploader.py",
+        "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1",
+        "version": null,
+        "git_revision": "80cbe9445c7606834663a9e9808dcb0f43b06f41"
+      },
+      "selector": "Complete frozen uploader.py"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/invocation-comments/MAINTAINER-NOTES.md",
+        "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847",
+        "version": null,
+        "git_revision": "80cbe9445c7606834663a9e9808dcb0f43b06f41"
+      },
+      "selector": "Complete frozen MAINTAINER-NOTES.md"
+    },
+    {
+      "id": "source-2",
+      "artifact": {
+        "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/invocation-comments/TASK.md",
+        "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5",
+        "version": null,
+        "git_revision": "80cbe9445c7606834663a9e9808dcb0f43b06f41"
+      },
+      "selector": "Complete frozen TASK.md"
+    },
+    {
+      "id": "task-mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/mechanical/004.json",
+        "sha256": "e26251f63982aad3380511556ffa976e8cd61c25041f83ee26ff41d910ce78f8",
+        "version": null
+      },
+      "selector": "Complete saved parse/token or numeric/reply observation; no subject code execution"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Fixed provider/model/CLI and retained inventory verified. Complete assigned teaching body in tool output 16 before first task edit 38. Protected input bytes unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Four total attempts/three retries, send-only temporary retries, other/fourth failure propagation and early success are accurate. Acknowledgement once after acceptance with all errors including TemporaryUploadError propagating without resend matches unchanged code; syntax/tokens preserved.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Explicit prior acceptance, once-only acknowledgement, no further send even on TemporaryUploadError, duplicate-upload consequence and keep-outside-send-error-handler instruction fully explain the maintenance trap.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Retry policy and acknowledgement rationale are grouped beside their code. Some code-visible behavior is restated as useful reinforcement; the longer explanation remains easy to follow without burying the warning.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Fixed provider/model/CLI and retained inventory verified. Complete assigned teaching body in tool output 16 before first task edit 38. Protected input bytes unchanged. O4/O5 remain unscored; native D1 is distinct from functional outcome.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Complete output 95 wc-w words; supplied uploader.py: 48 words, MAINTAINER-NOTES.md: 136 words, TASK.md: 47 words. Counts describe length, not semantic success; comment-only counts are reported separately for N4.",
+      "consequence": "Descriptive counts only.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "Revised repetition5 uses62commentwords and is the most explicit of these Codex additions, including acknowledgement TemporaryUploadError. Original additions33/45words and revised41/62 all meet; combined means42original versus47.2revised. Extra explicitness is a trade-off, not proof of superiority or a length-based failure.",
+      "consequence": "Qualitative comparison is separate from threshold counts.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    }
+  ],
+  "uncertainty": []
+}

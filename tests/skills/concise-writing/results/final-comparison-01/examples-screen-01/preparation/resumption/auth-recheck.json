@@ -1,0 +1,33 @@
+{
+  "checked_at": "2026-10-23T01:21:16.274953+00:00",
+  "model_calls": 0,
+  "qualified_binaries": [
+    {
+      "name": "codex",
+      "path": "/opt/homebrew/Caskroom/codex/0.163.0/bin/codex",
+      "sha256": "8813367285524ac798dd96d1b071aea30d58708c7226fd236cd275cf1cfdee31",
+      "version": "codex-cli 0.163.0"
+    },
+    {
+      "name": "claude",
+      "path": "/opt/homebrew/Caskroom/claude-code@latest/2.1.308/claude",
+      "sha256": "ca923c86ac84b30574a82331a05b6e066c27477a926ceaffe46a845a33e4dd37",
+      "version": "2.1.308 (Claude Code)"
+    },
+    {
+      "name": "python",
+      "path": "/opt/homebrew/Cellar/python@3.14/3.14.9/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+      "sha256": "eef18fb5631f0054c2706a24f7f75fd716c9dc3c9a3b0f261f2f87b6385ae2af",
+      "version": "Python 3.14.9"
+    },
+    {
+      "name": "git",
+      "path": "/opt/homebrew/Cellar/git/2.56.0_1/bin/git",
+      "sha256": "40163333061f7223ecb604ed0f12988cfc8096d57ca8b1db006d410d4aeb700e",
+      "version": "git version 2.56.0"
+    }
+  ],
+  "claude_logged_in": true,
+  "owner_report": "I logged in, please try again",
+  "limitation": "Local metadata does not prove server acceptance; verify through the single authorized replacement. No extra model auth probe."
+}

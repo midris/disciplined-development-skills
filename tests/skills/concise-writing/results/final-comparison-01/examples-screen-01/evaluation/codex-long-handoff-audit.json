@@ -1,0 +1,23 @@
+{
+  "configuration": "codex-long-handoff",
+  "required_complete_files": 15,
+  "outputs": 6,
+  "first_pass_event": 89,
+  "prior_read_event": 90,
+  "first_pass_sha256": "2e42acf6360e971e0e59cc717c72c555e897441987e025347fd7c90d05e13bb2",
+  "first_pass_path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/evaluation/codex-long-handoff-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/reviews/20261023T013646842Z-cw-suite-opus-codex-long-handoff-004d0bc7-a2ef-4b49-8ebd-b564da8d762b-scu54j8a/final.txt",
+  "final_sha256": "43775b5a0bfd0f30564fb19a2766caf46eb51e02dbc4c2c3be4e90008d7eb41c",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "pre_prior_grep_calls": [],
+  "semantic_completeness": "verified: manually read complete independent first pass and final comparison; all six full run IDs, eighteen factors, quotations and counts checked. Two original1 factor reversals occurred only after prior access and are preserved as post-prior changes, not independent confirmation.",
+  "pre_prior_scope_verified": true,
+  "narrative_precision_notes": [
+    "First pass says examples have more consistent entry-point framing but immediately notes examples1 has none; do not adopt that condition-level claim.",
+    "First-pass blanket statement that all rollback safeguards survive is superseded for original1 by the explicit post-prior correction.",
+    "Reviewer language about nonconsequential precision is not a waiver for an actual introduced inaccuracy; retain the whole-input contextual judgments and wording cautions separately."
+  ]
+}

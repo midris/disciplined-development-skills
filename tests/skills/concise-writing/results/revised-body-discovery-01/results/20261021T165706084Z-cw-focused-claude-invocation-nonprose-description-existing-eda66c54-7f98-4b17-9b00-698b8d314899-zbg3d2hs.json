@@ -1,0 +1,155 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claude-discovery-focused-01-invocation-nonprose-description-existing-5-1-assessment",
+  "assessed_at": "2026-10-21T16:57:28.371141+00:00",
+  "run_id": "20261021T165706084Z-cw-focused-claude-invocation-nonprose-description-existing-eda66c54-7f98-4b17-9b00-698b8d314899-zbg3d2hs",
+  "condition": "description-existing",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same Codex controller authored/reviewed exposed development variants and directly judged complete outputs; no blind, held-out or independent assessor claim. Separate Opus review supplements this."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-invocation-nonprose-manifest.json",
+    "sha256": "bfea5f5426e6ecf5a1192d8ef511da355c48dc14728d4ee90ba10aef4e037c68",
+    "version": "1",
+    "git_revision": "b24610858644df1232e3627566554ade7eaa9fc8"
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T165706084Z-cw-focused-claude-invocation-nonprose-description-existing-eda66c54-7f98-4b17-9b00-698b8d314899-zbg3d2hs/workspace/fixture/settings.toml",
+        "sha256": "9cdef29c80346b6a4d90eb85a6612160a702925e9635c1b0b537b67afe3dd071",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T165706084Z-cw-focused-claude-invocation-nonprose-description-existing-eda66c54-7f98-4b17-9b00-698b8d314899-zbg3d2hs/stdout.txt",
+        "sha256": "c55cbdbb6e71309c5bffcdc8257fc760da370560ae9db3b4f93a585648248f57",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T165706084Z-cw-focused-claude-invocation-nonprose-description-existing-eda66c54-7f98-4b17-9b00-698b8d314899-zbg3d2hs/result.json",
+        "sha256": "18653bd265e99645590b3c664a3344f571d566aa1e8c58c1a48d7cfa6e82effa",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T165706084Z-cw-focused-claude-invocation-nonprose-description-existing-eda66c54-7f98-4b17-9b00-698b8d314899-zbg3d2hs/runner.log",
+        "sha256": "5970400cfe629b0c7329dfe95dd2f7b7cc785b62ae6be7f786ad1cc9392c7643",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T165706084Z-cw-focused-claude-invocation-nonprose-description-existing-eda66c54-7f98-4b17-9b00-698b8d314899-zbg3d2hs/final.txt",
+        "sha256": "ed251864987c367e9641fbdc89c1d83e9bf0fa2e3eecef8f301c79f619bfac81",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-nonprose/fixture/settings.toml",
+        "sha256": "38f8a9ddd2d83dc10d2f3681c0e56663d2fa9907c16e105bcc4d7f3fb387158c",
+        "version": null,
+        "git_revision": "835a41fab005d537ee34c8bb9f056409678fa3cc"
+      },
+      "selector": "Complete frozen settings.toml"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-nonprose/task.md",
+        "sha256": "8c960258723b03e87cfdae2fbfbd576c4ff4299206f02c87dcd50e9026c80733",
+        "version": null,
+        "git_revision": "835a41fab005d537ee34c8bb9f056409678fa3cc"
+      },
+      "selector": "Complete frozen TASK.md"
+    },
+    {
+      "id": "catalog-qualification",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/qualification-20261021/catalog-existing/claude-catalog-existing-workspace-write/requests.json",
+        "sha256": "1393f29d6d4e0d6a0bc26c7f1d62dc0371d78dca347c2182c50571d6fdf99e24",
+        "version": null
+      },
+      "selector": "Retained exact-description initial request without body and subsequent complete-body delivery; actual live init separately lists CW and Skill."
+    },
+    {
+      "id": "task-mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/mechanical/133.json",
+        "sha256": "840a8716e55b831a910672020c8f1f7d237c4b96fb247156dd63a15c40de0950",
+        "version": null
+      },
+      "selector": "Complete saved parse/token or numeric/reply observation; no subject code execution"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Fixed provider/model/CLI and retained inventory verified. Native skill available; complete assigned body before first edit: False; actual init lists CW and Skill; exact description/body separation established by retained byte-matched transport qualification, not echoed in live init. Protected input bytes unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log",
+      "catalog-qualification"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Actual catalog and matching existing-description qualification are verified. Complete baseline/read/edit calls contain no Skill invocation or skill-file read; no CW body is delivered at any time.",
+      "consequence": "Selection is reported separately from artifact quality.",
+      "evidence": [
+        "trace",
+        "log",
+        "catalog-qualification"
+      ]
+    }
+  ],
+  "functional_result": "not measured",
+  "procedural_summary": "Fixed provider/model/CLI and retained inventory verified. Native skill available; complete assigned body before first edit: False; actual init lists CW and Skill; exact description/body separation established by retained byte-matched transport qualification, not echoed in live init. Protected input bytes unchanged. O4/O5 remain unscored; native D1 is distinct from functional outcome.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "Length not applicable to numeric-only task.",
+      "consequence": "Descriptive counts only.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    },
+    {
+      "dimension": "procedural",
+      "description": "The numeric edit is exact and the sole assistant text is Done. All five existing-description Claude negative runs now avoid CW and meet both task observations; no functional CW score is assigned.",
+      "consequence": "Qualitative comparison is separate from threshold counts.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1"
+      ]
+    }
+  ],
+  "uncertainty": []
+}

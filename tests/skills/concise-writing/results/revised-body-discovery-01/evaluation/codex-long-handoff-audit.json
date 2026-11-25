@@ -1,0 +1,17 @@
+{
+  "configuration": "codex-long-handoff",
+  "required_complete_files": 23,
+  "outputs": 15,
+  "first_pass_event": 110,
+  "prior_read_event": 111,
+  "first_pass_sha256": "167b29a34c1706b28762e345eb629a08673d4c5c9505eb486a48e05efb89c3fb",
+  "first_pass_path": "skill-studies/concise-writing/runs/revised-body-discovery-01/evaluation/codex-long-handoff-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/reviews/20261021T173422119Z-cw-suite-opus-codex-long-handoff-12201064-dfe2-470f-b5c6-45986b5b0b94-syyz80hl/final.txt",
+  "final_sha256": "bfa1260f450047403f2149b2429bcef71abcc697e05490578ca388ce4bb37ab5",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "pre_prior_grep_calls": [],
+  "semantic_completeness": "verified: all15 outputs individually judged with evidence; complete first-pass/final comparison manually inspected; no pre-prior exposure"
+}

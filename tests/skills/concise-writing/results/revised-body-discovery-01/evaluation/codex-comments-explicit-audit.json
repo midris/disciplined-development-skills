@@ -1,0 +1,17 @@
+{
+  "configuration": "codex-comments-explicit",
+  "required_complete_files": 24,
+  "outputs": 15,
+  "first_pass_event": 77,
+  "prior_read_event": 78,
+  "first_pass_sha256": "175638cb34c090f0b7d1d44553e3061855d890c9eaf3c11e5b7b9a41e1a8c225",
+  "first_pass_path": "skill-studies/concise-writing/runs/revised-body-discovery-01/evaluation/codex-comments-explicit-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/reviews/20261021T174814496Z-cw-suite-opus-codex-comments-explicit-5f8df4b1-3dc2-496c-98b1-0494bf29c2e6-wtjywtmk/final.txt",
+  "final_sha256": "644dfb7154ca28262825959b97382fccaa0239d1d89baaad76f3b4a3cbf3012f",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "pre_prior_grep_calls": [],
+  "semantic_completeness": "verified: all15 outputs individually judged with evidence; full first-pass/final comparison manually inspected; no pre-prior exposure"
+}

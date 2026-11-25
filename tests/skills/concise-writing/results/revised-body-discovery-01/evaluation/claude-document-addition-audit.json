@@ -1,0 +1,17 @@
+{
+  "configuration": "claude-document-addition",
+  "required_complete_files": 24,
+  "outputs": 15,
+  "first_pass_event": 80,
+  "prior_read_event": 81,
+  "first_pass_sha256": "e9167c9039b80ab8f66b69ef949eae002aaf7a66e269121412befa8c07b82689",
+  "first_pass_path": "skill-studies/concise-writing/runs/revised-body-discovery-01/evaluation/claude-document-addition-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/reviews/20261021T180036005Z-cw-suite-opus-claude-document-addition-b2c2f2a6-aabb-4d90-8fbe-b327d93a39ab-s64y3c4a/final.txt",
+  "final_sha256": "a43ce9968c65413e8769aca9ca1a7755243816c87b5d137df3ee14baca776ea9",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "pre_prior_grep_calls": [],
+  "semantic_completeness": "verified: manually read all fifteen first-pass judgments and final comparison; E-specific contact/length interpretation applied; linked historical record absence disclosed without an identified missing operative rule; no pre-prior Grep exposure."
+}

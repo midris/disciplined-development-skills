@@ -1,0 +1,348 @@
+{
+  "prepared_at": "2026-10-22T20:02:34.901562+00:00",
+  "scope": "Two approved final long-handoff output reviews; twelve subjects; six outputs per packet; no automatic retry",
+  "model": "claude-opus-5-5",
+  "effort": "medium",
+  "active_assessor": "Codex controller (OpenAI family), exposed authoring/development context; reviewer different-family relative to assessor, labels visible",
+  "prompt": {
+    "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/evaluation/prompt.md",
+    "sha256": "44ebd6487dcfb4351f5a1228c7e564c7c6f05f5de630225cbf0e1833abaa5192",
+    "git_revision": "8605519249d4c0bcd912c1aa7dc852cfe714c1ab"
+  },
+  "controller": {
+    "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/controllers/collect-review.py",
+    "sha256": "45d49651b43a3300730730267bc155f12173156d62946fbfe252a87d6abd5ef6"
+  },
+  "controller_support": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/controllers/audit-review.py",
+      "sha256": "ba7fb12fd15c22005a6439cf05825eb1e1110ff6b919e04456d189d7e6b93160"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/controllers/prepare-packets.py",
+      "sha256": "4bb6ac73c6f36f961a3cc11068fcfa52764b05eae16e7cd7577b485bcc57785e"
+    }
+  ],
+  "subject_indexes": [
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/claude-final-handoff-01-run-index.json",
+      "sha256": "9ab2b1d760d0c0c7577e3d0ef70fed37254d6b9fca7097a1a6d978ec5c894f34",
+      "git_revision": "8605519249d4c0bcd912c1aa7dc852cfe714c1ab"
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/codex-final-handoff-01-run-index.json",
+      "sha256": "ce5c80c18867ecf0c5e68fcf70234836c293f34741b7a1004ccb0d8b7f5619ec",
+      "git_revision": "8605519249d4c0bcd912c1aa7dc852cfe714c1ab"
+    }
+  ],
+  "subject_assessments": [
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/claude-final-handoff-01-assessment.md",
+      "sha256": "6d12a9f279c038cc346a357d1d4e5594f0014987c3918f4c2583ff1341f6373f",
+      "git_revision": "8605519249d4c0bcd912c1aa7dc852cfe714c1ab"
+    },
+    {
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/codex-final-handoff-01-assessment.md",
+      "sha256": "c696c0dd855e39afbaad20678b5258733cdbfc69d503943b5d5ebf75a3d0a5aa",
+      "git_revision": "8605519249d4c0bcd912c1aa7dc852cfe714c1ab"
+    }
+  ],
+  "groups": [
+    {
+      "name": "codex-long-handoff",
+      "subject_provider": "codex",
+      "case": "long-handoff",
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/evaluation/configs/codex-long-handoff.json",
+      "configuration_sha256": "413114e7d8e3e3df110b585dac8d480f71227558acb561ef1f4edf13d3679097",
+      "packet": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/codex-long-handoff",
+      "outputs": 6,
+      "input_files": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/codex-long-handoff/EVALUATION-INDEX.json",
+          "target": "EVALUATION-INDEX.json",
+          "sha256": "1406320085d11d47c86651263bcd7bd34b0fcb28ea98231b56730005d6a987dc"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/codex-long-handoff/INTERPRETATION.md",
+          "target": "INTERPRETATION.md",
+          "sha256": "dfb3c05d7c5f345ecf7ea939ffbb131eb642df2dd93ee334e13e017fdd3f9df5"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/codex-long-handoff/MECHANICAL-CHECKS.json",
+          "target": "MECHANICAL-CHECKS.json",
+          "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/codex-long-handoff/SETUP.md",
+          "target": "SETUP.md",
+          "sha256": "ec75556bc64e9de7ef0ca76ef50fe2db02021e90c8a855901b6e08a854f4d81e"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/codex-long-handoff/WORD-COUNTS.json",
+          "target": "WORD-COUNTS.json",
+          "sha256": "07ec8cc24158a94671d3d9e623a60a5d4e00575ec44f6f5394f10583b95c2dc4"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/codex-long-handoff/criteria.md",
+          "target": "criteria.md",
+          "sha256": "04ff1b2c2b4f76a9c2936100111f679f7666f8a3f8a72c0d6f2a24c0728eb366"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/codex-long-handoff/outputs/original-body-1.md",
+          "target": "outputs/original-body-1.md",
+          "sha256": "aa6116f889c8d243e61ede8c83a84e5ca9337d2110fab64ab03dc193905ff370"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/codex-long-handoff/outputs/original-body-2.md",
+          "target": "outputs/original-body-2.md",
+          "sha256": "c45487e53e4968022c50dae18b95d1feb1e2547f14bceb310b0f0fc47f0f0629"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/codex-long-handoff/outputs/original-body-3.md",
+          "target": "outputs/original-body-3.md",
+          "sha256": "365cd761a7ec210a76d24b36c5565106c2829c0e9f47ea17a016e3d7459d848a"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/codex-long-handoff/outputs/revised-body-1.md",
+          "target": "outputs/revised-body-1.md",
+          "sha256": "14ea9fd3a06de1a5a16f9e0f6da5bd544e75556f5fe94ecfcfb521a12003fad4"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/codex-long-handoff/outputs/revised-body-2.md",
+          "target": "outputs/revised-body-2.md",
+          "sha256": "b4245ff313498f0451ab4d024ff5bd3a65cdd81d612b151a54931b6d20c147f3"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/codex-long-handoff/outputs/revised-body-3.md",
+          "target": "outputs/revised-body-3.md",
+          "sha256": "a122fa8d740d8bc4128613b09d880ab37bc967653e8a61ea9ae7853d4b46556f"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/codex-long-handoff/policy.txt",
+          "target": "policy.txt",
+          "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/codex-long-handoff/prior-assessment.md",
+          "target": "prior-assessment.md",
+          "sha256": "1496186ed4e582adc48018e24bce701c615ed517a1f4e9d770d9d26dd01a4023"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/codex-long-handoff/sources/TASK.md",
+          "target": "sources/TASK.md",
+          "sha256": "8be0f67fe6b62ca0a1d5f3af9ac2ffea79eef0d0615f0979853079653b8feab8"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/codex-long-handoff/sources/report.md",
+          "target": "sources/report.md",
+          "sha256": "0eb0946286d2a4b1708f14bcff5795cd1effdfa64af612a6cb9a89d2fac84737"
+        }
+      ],
+      "source_audit": [
+        {
+          "run_id": "20261022T194147448Z-cw-final-codex-long-handoff-original-body-d671ddc4-19d5-4189-95f9-d8c3cba752c0-sigu273f",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "aa6116f889c8d243e61ede8c83a84e5ca9337d2110fab64ab03dc193905ff370"
+        },
+        {
+          "run_id": "20261022T194313605Z-cw-final-codex-long-handoff-revised-body-23a09fab-04c5-469d-99ac-35ad09c6bc92-sxs0jm27",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "14ea9fd3a06de1a5a16f9e0f6da5bd544e75556f5fe94ecfcfb521a12003fad4"
+        },
+        {
+          "run_id": "20261022T194428548Z-cw-final-codex-long-handoff-revised-body-c5b68e9e-fdfe-4665-8ca8-3b031811b3b9-fnd0hr89",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "b4245ff313498f0451ab4d024ff5bd3a65cdd81d612b151a54931b6d20c147f3"
+        },
+        {
+          "run_id": "20261022T194535385Z-cw-final-codex-long-handoff-original-body-7cfa035a-7f94-4854-a4d5-671404ca9e24-ycbzdmah",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "c45487e53e4968022c50dae18b95d1feb1e2547f14bceb310b0f0fc47f0f0629"
+        },
+        {
+          "run_id": "20261022T194701944Z-cw-final-codex-long-handoff-original-body-d3edc56f-0ad2-468b-ad72-5fd73473fe4a-bbzyeo3i",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "365cd761a7ec210a76d24b36c5565106c2829c0e9f47ea17a016e3d7459d848a"
+        },
+        {
+          "run_id": "20261022T194822220Z-cw-final-codex-long-handoff-revised-body-7db7853d-d29b-435f-8738-98d45311dcf1-74o1boxw",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "a122fa8d740d8bc4128613b09d880ab37bc967653e8a61ea9ae7853d4b46556f"
+        }
+      ],
+      "order": 1
+    },
+    {
+      "name": "claude-long-handoff",
+      "subject_provider": "claude",
+      "case": "long-handoff",
+      "configuration": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/evaluation/configs/claude-long-handoff.json",
+      "configuration_sha256": "bb6ad576a14e0a2f2d1cacd0d05c0a0618225a095d2b0e94455a9257a8103e1f",
+      "packet": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/claude-long-handoff",
+      "outputs": 6,
+      "input_files": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/claude-long-handoff/EVALUATION-INDEX.json",
+          "target": "EVALUATION-INDEX.json",
+          "sha256": "ae0f174a3e9fc5be4462b32ac9107eccd40201753ccc0fce9ddb3c2a2346e65d"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/claude-long-handoff/INTERPRETATION.md",
+          "target": "INTERPRETATION.md",
+          "sha256": "dfb3c05d7c5f345ecf7ea939ffbb131eb642df2dd93ee334e13e017fdd3f9df5"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/claude-long-handoff/MECHANICAL-CHECKS.json",
+          "target": "MECHANICAL-CHECKS.json",
+          "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/claude-long-handoff/SETUP.md",
+          "target": "SETUP.md",
+          "sha256": "c72703762cfa9b2be16c09550e27b534fd378c68150004b8d039cbcc499df6bd"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/claude-long-handoff/WORD-COUNTS.json",
+          "target": "WORD-COUNTS.json",
+          "sha256": "2ddcd59209432223dea58be23eb1b9b1e6e9d6ef94bc9965faf1237f86791095"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/claude-long-handoff/criteria.md",
+          "target": "criteria.md",
+          "sha256": "04ff1b2c2b4f76a9c2936100111f679f7666f8a3f8a72c0d6f2a24c0728eb366"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/claude-long-handoff/outputs/original-body-1.md",
+          "target": "outputs/original-body-1.md",
+          "sha256": "9718b0a09c516de601a38c656a8677770e489479349462830cfbc37ca37d13ef"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/claude-long-handoff/outputs/original-body-2.md",
+          "target": "outputs/original-body-2.md",
+          "sha256": "1de4bd19ff3aa8ee6f02398330313ac9c6ce0322411343d797de65549175b2da"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/claude-long-handoff/outputs/original-body-3.md",
+          "target": "outputs/original-body-3.md",
+          "sha256": "4eb523e2adf1675fa28b57acbefe6e8764f152b2ee6ae8f7d4e9b71dccc93e2f"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/claude-long-handoff/outputs/revised-body-1.md",
+          "target": "outputs/revised-body-1.md",
+          "sha256": "802a48c66542703493a358f36fd3a06567c71d7e453fef0ae3d9a333373b8e37"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/claude-long-handoff/outputs/revised-body-2.md",
+          "target": "outputs/revised-body-2.md",
+          "sha256": "9c50dfa95aa995e02e5d05e5338da4fb741b56c5f223fe0d1982fb0ba689522f"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/claude-long-handoff/outputs/revised-body-3.md",
+          "target": "outputs/revised-body-3.md",
+          "sha256": "b9f4ce3a57c3db78649762da356349f6b9a24b81d94870a445cffa9524622246"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/claude-long-handoff/policy.txt",
+          "target": "policy.txt",
+          "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/claude-long-handoff/prior-assessment.md",
+          "target": "prior-assessment.md",
+          "sha256": "bd6c777c3c9fd013768259e8ac42a543b57ee750b434ebdbd27aa4d7d89884b4"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/claude-long-handoff/sources/TASK.md",
+          "target": "sources/TASK.md",
+          "sha256": "8be0f67fe6b62ca0a1d5f3af9ac2ffea79eef0d0615f0979853079653b8feab8"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/review-inputs/claude-long-handoff/sources/report.md",
+          "target": "sources/report.md",
+          "sha256": "0eb0946286d2a4b1708f14bcff5795cd1effdfa64af612a6cb9a89d2fac84737"
+        }
+      ],
+      "source_audit": [
+        {
+          "run_id": "20261022T194957957Z-cw-final-claude-long-handoff-revised-body-54ac6853-222f-4122-9722-0456e905db18-hf4os8zu",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "802a48c66542703493a358f36fd3a06567c71d7e453fef0ae3d9a333373b8e37"
+        },
+        {
+          "run_id": "20261022T195132875Z-cw-final-claude-long-handoff-original-body-091d019a-5c46-4d46-9d01-8b46c975a881-newbykys",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9718b0a09c516de601a38c656a8677770e489479349462830cfbc37ca37d13ef"
+        },
+        {
+          "run_id": "20261022T195250466Z-cw-final-claude-long-handoff-original-body-c8b930c2-78b6-473f-b7dd-3e9d32a78d5f-d08e3j3h",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "1de4bd19ff3aa8ee6f02398330313ac9c6ce0322411343d797de65549175b2da"
+        },
+        {
+          "run_id": "20261022T195409483Z-cw-final-claude-long-handoff-revised-body-e7632964-4301-443c-b200-8a781993e2e6-dgpsa5l2",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "9c50dfa95aa995e02e5d05e5338da4fb741b56c5f223fe0d1982fb0ba689522f"
+        },
+        {
+          "run_id": "20261022T195514678Z-cw-final-claude-long-handoff-revised-body-fa738718-6e85-4a50-b8c7-c8e29e5bc2d5-9ycpapu5",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "b9f4ce3a57c3db78649762da356349f6b9a24b81d94870a445cffa9524622246"
+        },
+        {
+          "run_id": "20261022T195659960Z-cw-final-claude-long-handoff-original-body-230d027f-2783-4993-9a34-802ab151970c-1e8z_iju",
+          "declared_non_skill_sources": [
+            "sources/report.md",
+            "sources/TASK.md"
+          ],
+          "source_hashes_match": true,
+          "output_sha256": "4eb523e2adf1675fa28b57acbefe6e8764f152b2ee6ae8f7d4e9b71dccc93e2f"
+        }
+      ],
+      "order": 2
+    }
+  ]
+}

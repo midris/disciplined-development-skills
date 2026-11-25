@@ -1,0 +1,121 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claude-final-examples-screen-01-long-handoff-original-examples-1-1-assessment",
+  "assessed_at": "2026-10-23T01:11:04.880367+00:00",
+  "run_id": "20261023T010814494Z-cw-examples-claude-long-handoff-original-examples-fbc3683d-9f8e-464e-9e06-74202c743f96-w7a2hzdu",
+  "condition": "original-examples",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Active controller inspecting retained authentication failure; no task output or skill efficacy inferred."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/manifests/claude-long-handoff-manifest.json",
+    "sha256": "fa2e0f2866af82219bada43c5194261d33825d38fff68e9eb5b409f9cd1ff6ec",
+    "version": "1",
+    "git_revision": "ad3f5adcd0f8e351021f7e318201299de5ded7b6"
+  },
+  "evidence": [
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/subjects/20261023T010814494Z-cw-examples-claude-long-handoff-original-examples-fbc3683d-9f8e-464e-9e06-74202c743f96-w7a2hzdu/stdout.txt",
+        "sha256": "e3a3b156c29c227194df766f5a48161933742eb9899706cd5de62f36bcacc77e",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/subjects/20261023T010814494Z-cw-examples-claude-long-handoff-original-examples-fbc3683d-9f8e-464e-9e06-74202c743f96-w7a2hzdu/result.json",
+        "sha256": "5d1895245351cc8f4b377d1f09bb601d08625337f431c8d300659ce80aad6a00",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/subjects/20261023T010814494Z-cw-examples-claude-long-handoff-original-examples-fbc3683d-9f8e-464e-9e06-74202c743f96-w7a2hzdu/runner.log",
+        "sha256": "048bf0fc6376b97852c4dc9b5f609a58bf965d7e8721475f449d37f8e056fe26",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "unchanged-fixture",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/examples-screen-01/subjects/20261023T010814494Z-cw-examples-claude-long-handoff-original-examples-fbc3683d-9f8e-464e-9e06-74202c743f96-w7a2hzdu/workspace/fixture/report.md",
+        "sha256": "0eb0946286d2a4b1708f14bcff5795cd1effdfa64af612a6cb9a89d2fac84737",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    }
+  ],
+  "setup": {
+    "status": "invalid",
+    "reason": "First server request returned401 OAuth access token expired. No inference/tool edit occurred; the captured source report is unchanged and no final artifact was delivered.",
+    "evidence": [
+      "trace",
+      "mechanical",
+      "unchanged-fixture"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "insufficient evidence",
+      "reason": "The request failed authentication before task execution; an unchanged fixture is not a delivered edit. This invalid setup is excluded from functional denominators, not scored as a skill failure.",
+      "consequence": "Not an observed behavioral outcome; retain failure and charge, stop collection.",
+      "evidence": [
+        "trace",
+        "mechanical",
+        "unchanged-fixture"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "insufficient evidence",
+      "reason": "The request failed authentication before task execution; an unchanged fixture is not a delivered edit. This invalid setup is excluded from functional denominators, not scored as a skill failure.",
+      "consequence": "Not an observed behavioral outcome; retain failure and charge, stop collection.",
+      "evidence": [
+        "trace",
+        "mechanical",
+        "unchanged-fixture"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "insufficient evidence",
+      "reason": "The request failed authentication before task execution; an unchanged fixture is not a delivered edit. This invalid setup is excluded from functional denominators, not scored as a skill failure.",
+      "consequence": "Not an observed behavioral outcome; retain failure and charge, stop collection.",
+      "evidence": [
+        "trace",
+        "mechanical",
+        "unchanged-fixture"
+      ]
+    }
+  ],
+  "functional_result": "insufficient evidence",
+  "procedural_summary": "One subject charge because invocation started; server reports0inference usage. Receipt remains uncleared, blocking later dispatch. No replacement authorized.",
+  "observations": [
+    {
+      "dimension": "procedural",
+      "description": "Failed to authenticate. API Error: 401 OAuth access token has expired. Re-authenticate to continue.",
+      "consequence": "Reauthenticate and obtain explicit replacement authorization before any resumed collection.",
+      "evidence": [
+        "trace"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "The failed slot supplies no evidence about original-examples effectiveness."
+  ]
+}

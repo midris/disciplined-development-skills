@@ -1,0 +1,17 @@
+{
+  "configuration": "codex-long-handoff",
+  "required_complete_files": 15,
+  "outputs": 6,
+  "first_pass_event": 86,
+  "prior_read_event": 87,
+  "first_pass_sha256": "e5ded56b3bbe0c8b781798ef9df15f15f8ef516630f038c0118a2a1d1c6c5f37",
+  "first_pass_path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-01/evaluation/codex-long-handoff-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-01/reviews/20261022T200403898Z-cw-suite-opus-codex-long-handoff-27777ee0-6cf8-4efa-9db0-bc268d2190a9-aozvx39u/final.txt",
+  "final_sha256": "54e54a661d4006608b43524259cbc354c9f0791a0603d27d2abc8a9d19445ecf",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "pre_prior_grep_calls": [],
+  "semantic_completeness": "verified: all six full run IDs, eighteen first-pass factors, quotes, contextual precision notes and comparative counts manually matched to complete inputs/outputs; no prior exposure before first pass; no post-prior corrections."
+}

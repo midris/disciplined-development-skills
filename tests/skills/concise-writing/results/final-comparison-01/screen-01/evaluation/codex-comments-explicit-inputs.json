@@ -1,0 +1,158 @@
+{
+  "name": "codex-comments-explicit",
+  "subject_provider": "codex",
+  "case": "comments-explicit",
+  "configuration": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/evaluation/configs/codex-comments-explicit.json",
+  "configuration_sha256": "7159d5a40aa5c71005f3815abcf331cb19d40ae49d7353b62367f8fc71abf1d8",
+  "packet": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/codex-comments-explicit",
+  "outputs": 6,
+  "input_files": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/codex-comments-explicit/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json",
+      "sha256": "9d6c0977824a388d0d954202362b7ab099932776a8ad94d89abdf0f85804a5a1"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/codex-comments-explicit/INTERPRETATION.md",
+      "target": "INTERPRETATION.md",
+      "sha256": "dfb3c05d7c5f345ecf7ea939ffbb131eb642df2dd93ee334e13e017fdd3f9df5"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/codex-comments-explicit/MECHANICAL-CHECKS.json",
+      "target": "MECHANICAL-CHECKS.json",
+      "sha256": "58c6fa7f2def16f63f46df141682d4acc265a39e9333c085a3e2440c4f7aeaea"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/codex-comments-explicit/SETUP.md",
+      "target": "SETUP.md",
+      "sha256": "ec75556bc64e9de7ef0ca76ef50fe2db02021e90c8a855901b6e08a854f4d81e"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/codex-comments-explicit/WORD-COUNTS.json",
+      "target": "WORD-COUNTS.json",
+      "sha256": "7f0719fec8893f4d3ab64596c1b3317a82620b1616268e0e29b46e96b9233236"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/codex-comments-explicit/criteria.md",
+      "target": "criteria.md",
+      "sha256": "dc682490e96bbc3776a8cb90fdfe9e5889795013a3dbdaf47df4490adb386229"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/codex-comments-explicit/outputs/original-body-1.py",
+      "target": "outputs/original-body-1.py",
+      "sha256": "7475c172895621d6e42d2354c04a58d4d4898ce1abbd3ba9c244b1ade8b8f792"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/codex-comments-explicit/outputs/original-body-2.py",
+      "target": "outputs/original-body-2.py",
+      "sha256": "afa2b015db254278acc7642bf72ec7114a8c373504d8b90ffeb56f4e8a0703db"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/codex-comments-explicit/outputs/original-body-3.py",
+      "target": "outputs/original-body-3.py",
+      "sha256": "b67c985d5b0b0e3c5504d4a9979d74ac21f6620aa41d0534a1e15e2738e227cc"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/codex-comments-explicit/outputs/revised-body-1.py",
+      "target": "outputs/revised-body-1.py",
+      "sha256": "52b57ef19f81f4adc7c5e44f3470bba493cfd1dfac76c7388746423021454f12"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/codex-comments-explicit/outputs/revised-body-2.py",
+      "target": "outputs/revised-body-2.py",
+      "sha256": "75e931aee637d67bb6e03a4164cb760a5b1ac6dde2ba5f12677ff82fa2084961"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/codex-comments-explicit/outputs/revised-body-3.py",
+      "target": "outputs/revised-body-3.py",
+      "sha256": "3e7769f0631d6fe2f981d4bd9011f533e517138accd33a191886781e6bcd9356"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/codex-comments-explicit/policy.txt",
+      "target": "policy.txt",
+      "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/codex-comments-explicit/prior-assessment.md",
+      "target": "prior-assessment.md",
+      "sha256": "b724ce74bbf010f55eb2512c455fe314bca0b6457ba5deb6ebd9f01e44ee1c9c"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/codex-comments-explicit/sources/MAINTAINER-NOTES.md",
+      "target": "sources/MAINTAINER-NOTES.md",
+      "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/codex-comments-explicit/sources/TASK.md",
+      "target": "sources/TASK.md",
+      "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/codex-comments-explicit/sources/uploader.py",
+      "target": "sources/uploader.py",
+      "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+    }
+  ],
+  "source_audit": [
+    {
+      "run_id": "20261021T192106786Z-cw-final-codex-comments-explicit-original-body-edd19c3e-6bef-49e2-9a55-881ecec9bc5b-0xrc7pdu",
+      "declared_non_skill_sources": [
+        "sources/uploader.py",
+        "sources/MAINTAINER-NOTES.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "7475c172895621d6e42d2354c04a58d4d4898ce1abbd3ba9c244b1ade8b8f792"
+    },
+    {
+      "run_id": "20261021T192300999Z-cw-final-codex-comments-explicit-revised-body-c4b7fa18-c41e-4264-aed1-5993195a94b2-k0fuy9bj",
+      "declared_non_skill_sources": [
+        "sources/uploader.py",
+        "sources/MAINTAINER-NOTES.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "52b57ef19f81f4adc7c5e44f3470bba493cfd1dfac76c7388746423021454f12"
+    },
+    {
+      "run_id": "20261021T192410997Z-cw-final-codex-comments-explicit-revised-body-e56a7e18-7ae7-4140-91f3-166dfb4bb2c5-hpdmjfq7",
+      "declared_non_skill_sources": [
+        "sources/uploader.py",
+        "sources/MAINTAINER-NOTES.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "75e931aee637d67bb6e03a4164cb760a5b1ac6dde2ba5f12677ff82fa2084961"
+    },
+    {
+      "run_id": "20261021T192531063Z-cw-final-codex-comments-explicit-original-body-6b2c3e11-e21d-4de2-99c4-c48b66a97ea8-rv61auqg",
+      "declared_non_skill_sources": [
+        "sources/uploader.py",
+        "sources/MAINTAINER-NOTES.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "afa2b015db254278acc7642bf72ec7114a8c373504d8b90ffeb56f4e8a0703db"
+    },
+    {
+      "run_id": "20261021T192718747Z-cw-final-codex-comments-explicit-original-body-a2d143cb-0b10-47af-960d-3846f2e2e5b5-zuv2m2zn",
+      "declared_non_skill_sources": [
+        "sources/uploader.py",
+        "sources/MAINTAINER-NOTES.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "b67c985d5b0b0e3c5504d4a9979d74ac21f6620aa41d0534a1e15e2738e227cc"
+    },
+    {
+      "run_id": "20261021T192825872Z-cw-final-codex-comments-explicit-revised-body-338ab5d0-873f-42e4-b15a-43511c02e320-ixuuc5fr",
+      "declared_non_skill_sources": [
+        "sources/uploader.py",
+        "sources/MAINTAINER-NOTES.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "3e7769f0631d6fe2f981d4bd9011f533e517138accd33a191886781e6bcd9356"
+    }
+  ]
+}

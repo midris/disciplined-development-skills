@@ -1,0 +1,184 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "codex-body-focused-01-comments-explicit-candidate-targeted-examples-4-1-assessment",
+  "assessed_at": "2026-10-21T07:37:39.894392+00:00",
+  "run_id": "20261021T073640316Z-cw-focused-codex-comments-explicit-candidate-targeted-examples-0f74d102-c525-44c1-8b1a-3c6eb1d4f9f5-w4rfwdcc",
+  "condition": "candidate-targeted-examples",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same Codex controller authored/reviewed exposed development variants and directly judged complete outputs; no blind, held-out or independent assessor claim. Separate Opus review supplements this."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/codex-comments-explicit-manifest.json",
+    "sha256": "e54f247c37249107d6858ba4ba08885a605f7734d54a27c2cbcb4b958bb40584",
+    "version": "1",
+    "git_revision": "5735f13b15a5ee3b272383694accc9bfae812034"
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T073640316Z-cw-focused-codex-comments-explicit-candidate-targeted-examples-0f74d102-c525-44c1-8b1a-3c6eb1d4f9f5-w4rfwdcc/workspace/fixture/uploader.py",
+        "sha256": "60bf6456653fb1558f5dbf91f4fa097065843f620f4a9fc1be79cf7196dfe78b",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T073640316Z-cw-focused-codex-comments-explicit-candidate-targeted-examples-0f74d102-c525-44c1-8b1a-3c6eb1d4f9f5-w4rfwdcc/provider-session.jsonl",
+        "sha256": "e8e4a49e8e379b441577c80b4a7f8421b16761bcd76032efae07a2053ea8c6a7",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T073640316Z-cw-focused-codex-comments-explicit-candidate-targeted-examples-0f74d102-c525-44c1-8b1a-3c6eb1d4f9f5-w4rfwdcc/result.json",
+        "sha256": "75941adc36001909d3eb256d8dcdef6cba09e59134c8dae8deb309fb1f532601",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T073640316Z-cw-focused-codex-comments-explicit-candidate-targeted-examples-0f74d102-c525-44c1-8b1a-3c6eb1d4f9f5-w4rfwdcc/runner.log",
+        "sha256": "66c982d42a8bbbe750257ea6ff87e12d3b031460b1e0270dbc06c2b1521b36c8",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T073640316Z-cw-focused-codex-comments-explicit-candidate-targeted-examples-0f74d102-c525-44c1-8b1a-3c6eb1d4f9f5-w4rfwdcc/final.txt",
+        "sha256": "ee0b6f400a0842996193580e30364e9774098a4f2217a804abefa2ae919a7c79",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-comments/task.md",
+        "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5",
+        "version": null,
+        "git_revision": "08ec3eee2b57037d52bc7f04edcd8e42736384cd"
+      },
+      "selector": "Complete frozen TASK.md"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-comments/fixture/uploader.py",
+        "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1",
+        "version": null,
+        "git_revision": "08ec3eee2b57037d52bc7f04edcd8e42736384cd"
+      },
+      "selector": "Complete frozen uploader.py"
+    },
+    {
+      "id": "source-2",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-comments/fixture/MAINTAINER-NOTES.md",
+        "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847",
+        "version": null,
+        "git_revision": "08ec3eee2b57037d52bc7f04edcd8e42736384cd"
+      },
+      "selector": "Complete frozen MAINTAINER-NOTES.md"
+    },
+    {
+      "id": "task-mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/mechanical/040.json",
+        "sha256": "a98fc88bf78e421d534dcfdcf417573e2a1a9f90a9ee2e4708f77a5ed933de8f",
+        "version": null
+      },
+      "selector": "Complete saved parse/token or numeric/reply observation; no subject code execution"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Fixed provider/model/CLI and retained inventory verified. Complete assigned body in tool output 16 before first task edit 38. Protected input bytes unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Executable tokens and syntax are unchanged. Comments accurately convey four total send attempts, temporary-send-only retry with other/fourth-failure propagation, and one receipt recording after acceptance whose errors propagate without resend. Remaining early-success details are clear in code.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "A maintainer can see budget and retry scope and the acknowledgement trap: the service accepted the batch, so recording errors must not resend it and cause a duplicate upload. The warning is beside record_ack outside the handler.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Two compact blocks explain relevant limits and rationale at their code locations. The40comment words add useful maintenance information without obvious narration or needless repetition.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Fixed provider/model/CLI and retained inventory verified. Complete assigned body in tool output 16 before first task edit 38. Protected input bytes unchanged. O4/O5 remain unscored; native D1 is distinct from functional outcome.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Complete output 70 wc-w words; supplied TASK.md: 47 words, uploader.py: 48 words, MAINTAINER-NOTES.md: 136 words. Counts describe length, not semantic success; comment-only counts are reported separately for N4.",
+      "consequence": "Descriptive counts only.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "Revised comments4 explicitly names acceptance and duplicate risk in a compact two-block layout. It closely resembles other passing original/revised outputs and establishes no consistent body advantage.",
+      "consequence": "Qualitative comparison is separate from threshold counts.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    }
+  ],
+  "uncertainty": []
+}

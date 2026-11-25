@@ -1,0 +1,17 @@
+{
+  "configuration": "codex-comments-explicit",
+  "required_complete_files": 20,
+  "outputs": 10,
+  "first_pass_event": 69,
+  "prior_read_event": 70,
+  "first_pass_sha256": "524c8af4d3ad9d65d3a7da4f1295cdfba929a807b82cef3b86b47529fac3e3d2",
+  "first_pass_path": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/evaluation/codex-comments-explicit-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/reviews/20261021T202154729Z-cw-suite-opus-codex-comments-explicit-866b2509-b031-4dcd-b88c-1f3388a8554f-1fcxo9tf/final.txt",
+  "final_sha256": "8a9f9860376948b61526d57fc1cbc8804c5636346a5e38363088243fbeed97fe",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "pre_prior_grep_calls": [],
+  "semantic_completeness": "verified: all ten independent F1-F3 rows, full-ID quote mappings, comparative element counts and complete final comparison manually inspected. Revised4 bare F3 met row is supported by complete-output and group readability discussion. All20files delivered before first pass; no pre-prior Grep. No factor/attribution change after prior; no consequential assessor disagreement."
+}

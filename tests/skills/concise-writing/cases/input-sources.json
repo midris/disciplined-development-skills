@@ -1,0 +1,111 @@
+{
+  "source_git_revision": "c6fdc89026268c6f99bd5ba608ac0caa98e955a1",
+  "inputs": [
+    {
+      "source": "skill-studies/concise-writing/cases/agent-recommendation/fixture/report.md",
+      "source_git_revision": "c6fdc89026268c6f99bd5ba608ac0caa98e955a1",
+      "sha256": "e9a992c7e4c14dfd5afc10cc637349f39c2030e98ed0311441675900bc3e93e9",
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/agent-recommendation/report.md",
+      "working_source_matches": true
+    },
+    {
+      "source": "skill-studies/concise-writing/cases/agent-recommendation/task.md",
+      "source_git_revision": "c6fdc89026268c6f99bd5ba608ac0caa98e955a1",
+      "sha256": "607cbe0562a19ea092fe76ec96f13bfbe033b2e1095baef2ca38be621c0baf82",
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/agent-recommendation/TASK.md",
+      "working_source_matches": true
+    },
+    {
+      "source": "skill-studies/concise-writing/cases/effective-briefing/fixture/report.md",
+      "source_git_revision": "c6fdc89026268c6f99bd5ba608ac0caa98e955a1",
+      "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491",
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/effective-briefing/report.md",
+      "working_source_matches": true
+    },
+    {
+      "source": "skill-studies/concise-writing/cases/effective-briefing/task.md",
+      "source_git_revision": "c6fdc89026268c6f99bd5ba608ac0caa98e955a1",
+      "sha256": "fbf576b5f00e154e6ee4618285d96980b1858de992e5390a1e83cf9b03cb1796",
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/effective-briefing/TASK.md",
+      "working_source_matches": true
+    },
+    {
+      "source": "skill-studies/concise-writing/cases/long-handoff/fixture/report.md",
+      "source_git_revision": "c6fdc89026268c6f99bd5ba608ac0caa98e955a1",
+      "sha256": "0eb0946286d2a4b1708f14bcff5795cd1effdfa64af612a6cb9a89d2fac84737",
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/long-handoff/report.md",
+      "working_source_matches": true
+    },
+    {
+      "source": "skill-studies/concise-writing/cases/long-handoff/task.md",
+      "source_git_revision": "c6fdc89026268c6f99bd5ba608ac0caa98e955a1",
+      "sha256": "8be0f67fe6b62ca0a1d5f3af9ac2ffea79eef0d0615f0979853079653b8feab8",
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/long-handoff/TASK.md",
+      "working_source_matches": true
+    },
+    {
+      "source": "skill-studies/concise-writing/cases/document-addition/task.md",
+      "source_git_revision": "c6fdc89026268c6f99bd5ba608ac0caa98e955a1",
+      "sha256": "d625196b6cf438dfe556238803851c5b86ae7f2eb07acaa31ddceb5c6e9b8db0",
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/document-addition/TASK.md",
+      "working_source_matches": true
+    },
+    {
+      "source": "skill-studies/concise-writing/cases/document-addition/new-notes.md",
+      "source_git_revision": "c6fdc89026268c6f99bd5ba608ac0caa98e955a1",
+      "sha256": "8ff2f1ece29e88f352aefe87506c1afcf7e3174849dd978d20ec7065e8da3b74",
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/document-addition/NEW-NOTES.md",
+      "working_source_matches": true
+    },
+    {
+      "source": "skill-studies/concise-writing/cases/invocation-write/fixture/notes.md",
+      "source_git_revision": "c6fdc89026268c6f99bd5ba608ac0caa98e955a1",
+      "sha256": "687328b186b130469d63398579e81d72b88866e0f7ba4e48b9dfbb4774581442",
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/invocation-write/notes.md",
+      "working_source_matches": false
+    },
+    {
+      "source": "skill-studies/concise-writing/cases/invocation-write/task.md",
+      "source_git_revision": "c6fdc89026268c6f99bd5ba608ac0caa98e955a1",
+      "sha256": "2e0ce51601ecd5e3a12168a3f0640b9ee49151fa3810cc59da0e4abcda85220f",
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/invocation-write/TASK.md",
+      "working_source_matches": true
+    },
+    {
+      "source": "skill-studies/concise-writing/cases/invocation-comments/fixture/uploader.py",
+      "source_git_revision": "c6fdc89026268c6f99bd5ba608ac0caa98e955a1",
+      "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1",
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/invocation-comments/uploader.py",
+      "working_source_matches": true
+    },
+    {
+      "source": "skill-studies/concise-writing/cases/invocation-comments/fixture/MAINTAINER-NOTES.md",
+      "source_git_revision": "c6fdc89026268c6f99bd5ba608ac0caa98e955a1",
+      "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847",
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/invocation-comments/MAINTAINER-NOTES.md",
+      "working_source_matches": true
+    },
+    {
+      "source": "skill-studies/concise-writing/cases/invocation-comments/task.md",
+      "source_git_revision": "c6fdc89026268c6f99bd5ba608ac0caa98e955a1",
+      "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5",
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/invocation-comments/TASK.md",
+      "working_source_matches": true
+    },
+    {
+      "source": "skill-studies/concise-writing/cases/invocation-nonprose/fixture/settings.toml",
+      "source_git_revision": "c6fdc89026268c6f99bd5ba608ac0caa98e955a1",
+      "sha256": "38f8a9ddd2d83dc10d2f3681c0e56663d2fa9907c16e105bcc4d7f3fb387158c",
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/invocation-nonprose/settings.toml",
+      "working_source_matches": true
+    },
+    {
+      "source": "skill-studies/concise-writing/cases/invocation-nonprose/task.md",
+      "source_git_revision": "c6fdc89026268c6f99bd5ba608ac0caa98e955a1",
+      "sha256": "8c960258723b03e87cfdae2fbfbd576c4ff4299206f02c87dcd50e9026c80733",
+      "path": "skill-studies/concise-writing/runs/final-comparison-01/preparation/fixtures/invocation-nonprose/TASK.md",
+      "working_source_matches": true
+    }
+  ],
+  "note": "Committed case inputs are copied; working fixture notes edit remains untouched."
+}
