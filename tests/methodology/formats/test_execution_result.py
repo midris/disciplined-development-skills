@@ -15,16 +15,18 @@ class ExecutionResultContract(unittest.TestCase):
         cls.schema = json.loads((ROOT / 'execution-result.schema.json').read_text())
         Draft202012Validator.check_schema(cls.schema)
         cls.validator = Draft202012Validator(cls.schema)
-        # Reuse retained evidence payload only as structural test data. The
-        # synthetic manifest below is not a migrated or accepted assessment.
-        cls.record = json.loads((ROOT.parent / 'examples/pilot-02-original-policy-3-example.json').read_text())
-        cls.record.update(schema_version='1', record_kind='execution result',
-                          result_id=cls.record.pop('assessment_id'),
-                          functional_result=cls.record.pop('functional_summary'))
-        for field in ('inputs', 'study_id', 'case_id', 'supersedes', 'relationship_to_prior'):
-            cls.record.pop(field)
-        cls.record['manifest'] = {'path': 'test-only/manifest.json', 'sha256': 'a' * 64,
-                                  'version': '1', 'git_revision': 'b' * 40}
+        # This synthetic structural record has no dependency on private evidence.
+        cls.record = json.loads((ROOT / 'execution-result.template.json').read_text())
+        cls.record.update(result_id='sample', assessed_at='2026-09-14', run_id='sample-run',
+                          condition='original', functional_result='met', procedural_summary='Observed')
+        cls.record['manifest'].update(path='sample/manifest.json', sha256='a' * 64, git_revision='b' * 40)
+        cls.record['assessor'].update(name='Fixture', context='Structural example')
+        cls.record['evidence'][0].update(id='output', selector='whole file')
+        cls.record['evidence'][0]['artifact'].update(path='sample/final.txt', sha256='c' * 64)
+        cls.record['setup'].update(status='valid', reason='Fixture delivered', evidence=['output'])
+        for criterion, name in zip(cls.record['criteria'], ('F1', 'P1')):
+            criterion.update(id=name, judgment='met', reason='Observed in fixture',
+                             consequence='Criterion satisfied', evidence=['output'])
 
     def rejects(self, value):
         self.assertTrue(list(self.validator.iter_errors(value)))

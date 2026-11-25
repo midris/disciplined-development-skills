@@ -419,8 +419,10 @@ def assessment(raw, path, ctx, planned=None, definitions=None):
     approval_scope = selected_scope
     if any(a["retry_of"] is not None for a, _, _ in records):
         # A later owner amendment may authorize a replacement in the same fixed schedule.
-        current_protocol = regular_bytes(ctx.root / sp).decode()
-        approval_scope = batch_sections(current_protocol).get(value["batch_id"], "")
+        # Read that amendment as of the assessed index, so subsequent edits
+        # cannot grant or withdraw authority for this historical assessment.
+        indexed_protocol = ctx.git_at(ctx.root, "show", f"{rev[1]}:{sp}").decode()
+        approval_scope = batch_sections(indexed_protocol).get(value["batch_id"], "")
     try:
         check_membership(planned, records, approval_scope)
     except ValueError as error:

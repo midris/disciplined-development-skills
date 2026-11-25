@@ -1280,3 +1280,14 @@ def test_batch_replacement_requires_specific_approval(mutation):
     else:
         with pytest.raises(ValueError):
             check_membership(planned, records, approval)
+
+
+def test_generated_manifest_schema_path_is_freezable_in_the_checkout(tmp_path, capsys):
+    from skilltest.documents.references import regular_bytes
+
+    draft = tmp_path / "manifest.json"
+    assert main(["docs", "new", "manifest", "--output", str(draft)]) == 0
+    capsys.readouterr()
+    schema = json.loads(draft.read_bytes())["authorities"]["execution_result_schema"]
+    checkout = Path(__file__).resolve().parents[3]
+    assert regular_bytes(checkout / schema["path"]) == (FORMATS / "execution-result.schema.json").read_bytes()

@@ -10,7 +10,7 @@ Before authoring, editing or evaluating a skill, read the [charter](charter/core
 The charter gives core intent; the skill defines the specifics that its tests must measure, including scope, exceptions and companion responsibilities.
 The [overall rewrite goal](../plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#overall-goal) and [RED/GREEN authoring requirement](../plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#redgreen-authoring-requirement) explain what this testing infrastructure supports.
 
-For current state and the next decision, read the [single active testing plan](../plans/2026-09-09-dd-skill-testing.md).
+For the status and decisions at the time of the pilot, read the [historical testing plan](../plans/2026-09-09-dd-skill-testing.md).
 Completed implementation and collection plans are archived; their accepted methodology contracts remain applicable.
 
 ## Model-led testing
@@ -19,8 +19,8 @@ Testing is model-led, built around the existing simple, reusable, deterministic 
 The orchestrating model derives tests from the reviewed baseline specification, audits inputs, invokes the tools, inspects raw evidence and applies the scenario rubrics.
 The tools scaffold execution and record results; they do not decide what good skill behavior means.
 
-- [`skilltest run CONFIG`](runner/README.md#run) prepares one declared run, invokes the configured provider and retains mechanical evidence.
-- [`skilltest worksheet SCENARIO RUN_BUNDLE --output PATH`](runner/README.md#worksheet) renders run metadata and a blank assessment worksheet for the model to complete.
+- [`skilltest run CONFIG`](../tests/runner/README.md#run) prepares one declared run, invokes the configured provider and retains mechanical evidence.
+- [`skilltest worksheet SCENARIO RUN_BUNDLE --output PATH`](../tests/runner/README.md#worksheet) renders run metadata and a blank assessment worksheet for the model to complete.
 
 Reuse these tools for the testing workflow; extend them only when an observed mechanical gap justifies it, rather than building a separate autonomous testing framework.
 The intended workflow is agent-followed written runbooks for baseline collection and skill edits, not more shell or Python programs.
@@ -134,12 +134,11 @@ The [criterion map and first-repair proposal](../plans/deferred/2026-09-07-skill
   scenarios and identifies their source and packaging authority.
 - [Methodology](../plans/completed/specs/2026-09-02-skill-testing-methodology-design.md)
   defines the evaluation ledgers, evidence review and run verdicts.
-- [Runner](runner/README.md) defines the mechanical `skilltest` interface. It does
+- [Runner](../tests/runner/README.md) defines the mechanical `skilltest` interface. It does
   not score evidence or assign behavioral verdicts, and provider invocation still
   requires explicit owner approval.
 - [Legacy archive](archive/README.md) holds the pre-baseline validation records.
-  Until an approved catalog replaces one, its archived per-skill record remains the
-  update target required by `CLAUDE.md`.
+  New evaluations follow the [study workflow](../tests/methodology/README.md).
 - [Controlled-input design amendment](../plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md)
   preserves accepted feasibility/methodology constraints and the completed pilot design.
   Its status identifies approved implementation units separately from deferred work and provider-call approvals.

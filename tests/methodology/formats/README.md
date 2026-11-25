@@ -19,6 +19,8 @@ The active agent or human inspects evidence supporting passes as well as failure
 
 ## Execution results
 
+Manifest authorities pin regular files in Git. The generated manifest uses `tests/runner/src/skilltest/_formats/execution-result.schema.json`. For version 2, pin `execution-result-v2.schema.json` in the same directory. The adjacent links are for browsing.
+
 Use the [version-1 schema](execution-result.schema.json) and blank template for functional assessments, or the [version-2 schema](execution-result-v2.schema.json) and [template](execution-result-v2.template.json) when recording unmeasured functional outcomes.
 The schema validates one execution and its functional rollup, not batch acceptance, evidence correctness or causal attribution.
 `judgment` is `met`, `not met` or `insufficient evidence`; reasons explain the outcome, not a hidden graded score.
@@ -46,9 +48,12 @@ See the [companion contract](companion-formats.md#execution-results-and-batch-as
 
 ## Historical example
 
-The [policy-3 pilot-02 example](../examples/pilot-02-original-policy-3-example.json) remains byte-for-byte unchanged in format `1-draft`.
-It illustrates evidence and criterion reasoning from one retained execution, not batch reliability or a replacement pilot assessment.
-Its [index](../examples/index.json) pins the original schema and the cited historical run index by full Git revision, path and SHA-256.
-These commits belong to the original study history. In a main-only clone, fetch the study branch with `git fetch origin codex/skill-testing-reset` before resolving the historical pins.
-Retrieve those bytes with `git show <git_revision>:<path>` and verify the hash before validation; do not apply the current schema to that historical record.
-The old schema lives in Git rather than a duplicate archive or compatibility branch in the current schema.
+The [historical example index](../examples/index.json) identifies the original worked assessment, schema and run index by full Git revision, path and SHA-256.
+Fetch the archival tag from a main-only checkout and inspect the original bytes:
+
+```sh
+git fetch origin tag archive/study-foundation-sources
+git show 3ba9169ee0de0db44e4014c31fbccb3abc921a94:skill-studies/sweeping-stale-references/assessments/pilot-02-original-policy-3-example.json | shasum -a 256
+```
+
+Compare the digest with the index before interpreting the record. Its original absolute evidence paths describe the operator's controlled store. The [offline walkthrough](../../README.md#walk-through-a-study-offline) supplies locally retrievable evidence for a new example.

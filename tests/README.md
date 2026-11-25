@@ -6,13 +6,14 @@ The [format contracts](methodology/formats/README.md) and [runner guide](runner/
 
 ## Walk through a study offline
 
-From a clean checkout with Git, uv and Python 3.11 or later, run the following commands in one shell.
+From a clean checkout on macOS with Git, uv and Python 3.11 or later, run the following commands in one shell.
 The runner tests create disposable repositories and synthetic subjects.
 The walkthrough leaves the example under a new temporary directory for inspection.
 
 ```sh
 cd tests/runner
 uv sync --locked
+export TMPDIR="$(getconf DARWIN_USER_TEMP_DIR)"
 study_tmp=$(mktemp -d)
 uv run --locked --offline pytest -q tests/process_smoke/test_study_walkthrough.py \
   --basetemp "$study_tmp/walkthrough"
@@ -24,7 +25,7 @@ cat "$(dirname "$protocol")/example-assessment.md"
 The walkthrough freezes a two-attempt study in Git, runs both slots through the installed CLI with a local stand-in for Codex, and checks the resulting bundles and judgments at collection and assessment readiness.
 Inspect its protocol, manifest, attempt index and results beside the assessment.
 The source assigns badge pickup to the west desk. One answer directs the visitor there and one sends them east. Expect two included attempts, one met and one not met, with both results cited.
-Changing a recorded judgment without reconciling its aggregate should fail the readiness check.
+To see the readiness check reject a mismatch, change the F1 count in the working example assessment from one met and one not met to two met and zero not met, then rerun the check. It compares that table to the revision-pinned result records.
 Run the full offline suite with `uv run --locked --offline pytest -q` from the same directory.
 
 ## Trace a real decision

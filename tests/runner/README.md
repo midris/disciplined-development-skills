@@ -79,6 +79,7 @@ Supported version-1 representations:
 
   Coverage counts both attempts and charges the replacement to the retry pool. The replacement occupies its original planned slot and requires an invalid-setup parent and identical collection manifest.
 - Aggregate tables with separate met/not-met/insufficient-evidence columns, or labelled `M/N/U` columns. Runtime strata use explicit `NAME includes orders A–B` declarations and must partition valid executions. Coverage uses the existing seven-column table; an explicit no-gap statement suffices only when every planned execution has a valid result.
+- For assessment, commit any later retry approval in the protocol by the Git revision cited for the attempt index. Working-table previews can use an uncommitted amendment.
 - Current accounting accepts plain integers or correctly comma-grouped booked, remaining and ceiling totals in the existing paragraph, dispatched/remaining pool paragraph and `Work / Estimate / Basis` forecast table; outer ceilings may be linked from the plan. Time totals also accept `N active minutes booked; D minutes above|below the historical L-minute planning guideline`; the difference must reconcile, but the guideline does not cap the forecast. Hard-ceiling paragraphs retain their forecast limit, and call ceilings remain enforced. Only referenced attempt indexes contribute. Historical process/development-pilot indexes supply a labelled accounting-only projection, not version-1 format conformance or reassessment.
 
 Unsupported historical documents remain unchanged. Unsupported layouts cannot silently pass stage checks; a required representation change needs explicit format review. Generation and validation share the canonical templates and structural rules, with the execution-result schema reused. Wheels package those same resource bytes; `jsonschema` is a runtime dependency.
@@ -230,7 +231,7 @@ Fixture targets must be pairwise non-conflicting: no target may equal or be a pa
 Both providers support both modes.
 Read-only mode denies model-initiated writes to fixtures, evidence, Git state and other project paths while retaining read/search tools.
 The runner and provider runtime still perform setup, output capture and private bookkeeping; this is not an all-tools-disabled mode or a restriction to reading only declared files.
-The original configuration snapshot and logged launch policy identify the selected mode; result schema `0.3` also records the resolved mode in `execution.permissions`.
+The original configuration snapshot and logged launch policy identify the selected mode; the current result schema (`0.5`) records the resolved mode in `execution.permissions`.
 Input schema remains `0.2`: this optional field preserves existing configurations and their writable default; input and result versions describe separate contracts.
 `provider` is `codex` or `claude`.
 `model` is a non-empty string, and `effort` matches `[a-z0-9][a-z0-9-]*`.

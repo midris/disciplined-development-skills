@@ -110,24 +110,6 @@ flowchart TB
 
 ### Composition boundaries
 
-For test selection, a **leaf task** exercises a skill's own procedure without requiring another DD skill's workflow.
-This is task-dependent: a pairing can become required when its trigger is present.
-Ownership references and incoming calls from the orchestrator do not themselves require loading the whole bundle.
-
-| Baseline skill | Own procedure | Composition relevant to test selection |
-|---|---|---|
-| [concise-writing](skills/concise-writing/SKILL.md) | Remove verbosity while preserving information and useful framing. | Ordinary prose editing is a leaf task. Plans/specs pair with lean-plan-writing; rationale with writing-explicit-rationale; removing a referenced anchor triggers sweeping-stale-references. No unconditional DD-parent or named Superpowers-workflow dependency in its body. |
-| [disciplined-research](skills/disciplined-research/SKILL.md) | Acquire and verify load-bearing claims against applicable sources. | A bounded source-grounding task is a leaf task. It assigns later sweeps and decision rationale to other owners without requiring those workflows for every claim. Source/tool availability still matters. |
-| [sweeping-stale-references](skills/sweeping-stale-references/SKILL.md) | Search, triage and reconcile changed facts, including commit accounting. | Can perform its sweep without a DD parent. Grounding and rationale have separate owners; realistic execution needs searchable project state and the permitted commit boundary. |
-| [writing-explicit-rationale](skills/writing-explicit-rationale/SKILL.md) | Put decision-useful what/why/accepted trade-offs beside a choice. | An ordinary decision-note task can stand alone. Plans/specs pair with lean-plan-writing; changed facts with stale rationale pair with sweeping-stale-references. |
-| [lean-plan-writing](skills/lean-plan-writing/SKILL.md) | Keep plans/specs as concrete prose contracts rather than implementations. | Always composes with Superpowers writing-plans, overriding its code-in-every-step rule while retaining scaffolding. Pairs with writing-explicit-rationale for relevant choices. |
-| [adversarial-review](skills/adversarial-review/SKILL.md) | Apply review posture, necessity checks, evidence scrutiny and applicable angles. | Adapter over Superpowers requesting-code-review; receiving-code-review governs handling findings. Explicitly loads CW for document reviews and writing-skills for skill-authoring review. |
-| [adversarial-review-loop](skills/adversarial-review-loop/SKILL.md) | Govern class-wide remediation, repeated review and the cap/escape decision. | Builds on review findings and sweeping/adversarial review responsibilities. Defers per-task loops to Superpowers subagent-driven-development; whole-branch remediation uses this skill's rules. Requires review history and reviewer interaction for full execution evidence. |
-| [dispatching-development-subagents](skills/dispatching-development-subagents/SKILL.md) | Bound development delegation and verify every returned commit. | Overlay on Superpowers subagent-driven-development or dispatching-parallel-agents, also covering ad-hoc fixers. Child instructions require disciplined-development; parent gates remain with the orchestrator. |
-| [disciplined-development](skills/disciplined-development/SKILL.md) | Own the Iron Law, gates, principles and mode routing. | Orchestrates all eight companions and the applicable Superpowers methodology workflows. Full validation requires their handoffs and parent/child authority boundaries. |
-
-### Composition boundaries
-
 This is the durable purpose and relationship map for skill-testing preparation, based on a complete read of all nine checked-in skills and the owner's clarification on 2026-09-12.
 Distinguish independent use, an explicit adapter/base pairing, and orchestration that chooses when to invoke a sibling.
 Default to testing a skill independently when its selected use does not explicitly require composition.

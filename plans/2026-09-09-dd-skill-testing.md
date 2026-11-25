@@ -1,4 +1,6 @@
-# DD skill testing: current state and next step
+# Historical DD skill testing plan
+
+**Superseded.** The [study framework](../tests/methodology/framework.md) and [operator workflow](../tests/README.md) govern new studies. The decisions, authorizations and next actions below describe the earlier CW pilot.
 
 **Status:** Installation and baseline tooling are settled for the current Codex and Claude local workflows.
 The accepted CW evidence and completed-plan cleanup are consolidated on `main`; ongoing testing work uses this primary checkout.
@@ -10,7 +12,7 @@ The earlier CW-14 fidelity clarification and evaluator reports remain historical
 CW-19's owner-reviewed preservation failure remains directly relevant; CW-23's no-DD overall failure is companion accounting despite both CW prose results passing.
 All original and owner-revised judgments remain unchanged.
 The prospective run verdict is now `RUN_NOT_JUDGEABLE`; earlier records retain their original `SCENARIO_INVALID` labels.
-This is the single active testing plan; the [validation guide](../skill-validation/README.md) indexes the durable contracts and execution instructions.
+This was the active plan for that pilot; the [validation guide](../skill-validation/README.md) indexes the durable contracts and execution instructions.
 
 **Goal:** A repeatable set of tests for each DD skill’s discoverability, effectiveness and composition, with distinct questions and observable scoring criteria.
 Use as many cases as the obligations require; neither a minimum count nor retaining every historical test is a goal.
@@ -35,7 +37,7 @@ Earlier observations remain evidence under their recorded contracts; neither the
 
 ### Resuming this work
 
-The specification-first decision above is settled methodology for every DD skill, not an open CW-only proposal.
+The specification-first decision above governed the earlier pilot.
 The question is how effectively the existing skill fulfills its actual promises; the charter supplies core intent, and the complete skill supplies specifics and exceptions.
 An extraction error calls for correcting the specification or test; a demonstrated failure to fulfill an actual promise is evidence about the skill.
 Desired new behavior requires an explicit specification change before evaluation.
@@ -150,7 +152,7 @@ Owner review of those judgments remains open; there is no automatic evidence pro
 | Work | Result and durable home |
 |---|---|
 | Copy installer | Copies whole shipped skill folders into `.claude/skills` or `.agents/skills`, replacing same-name skills and preserving unrelated consumer files/history. Implemented on main and applied to both Steno installations. [Completed spec](completed/specs/2026-09-09-copy-based-installer-design.md). |
-| Runner and worksheets | The same configuration, run bundles and model-scored worksheets support Codex and Claude. No campaign manager or automatic semantic scorer. [Runner](../skill-validation/runner/README.md), [methodology](completed/specs/2026-09-02-skill-testing-methodology-design.md). |
+| Runner and worksheets | The same configuration, run bundles and model-scored worksheets support Codex and Claude. No campaign manager or automatic semantic scorer. [Runner](../tests/runner/README.md), [methodology](completed/specs/2026-09-02-skill-testing-methodology-design.md). |
 | Controlled-input qualification | Codex controls and the procedure pilot are complete. Claude’s native catalogs/loading, companion access, seven local tools, file/Git work and capture/cleanup passed scoped qualification. [Qualification reference](../skill-validation/pilot/qualification/README.md), [completed Claude spec](completed/specs/2026-09-09-claude-skill-testing-design.md). |
 | Historical records and procedure pilot | All 105 historical records and 14 procedure observations are preserved. These are not matching-input controls for the later CW comparison. [Historical catalog](../skill-validation/scenarios/README.md), [accepted pilot package](../skill-validation/accepted/procedure-pilot/codex-gpt-5.6-sol-low/README.md). |
 | CW baseline | Owner-accepted: 99 observations covering 22 purpose-separated variants, current-DD and meaningful no-DD conditions, Sol medium. [Accepted baseline](../skill-validation/accepted/concise-writing/codex-gpt-5.6-sol-medium/README.md). |

@@ -7,10 +7,7 @@ gate.
 
 ## Transitional authority
 
-Until the owner explicitly approves a replacement for a skill catalog, its file in
-`skill-records/` remains the validation record that `CLAUDE.md` requires updating
-after a non-trivial skill change. After an approved catalog cutover, that legacy
-record becomes read-only historical evidence.
+Keep these per-skill records as historical evidence. For new evaluations and changes to a skill, use the [current study workflow](../../tests/methodology/README.md).
 
 Files in `shared-records/` preserve validation evidence that spans skills or records
 an earlier shared evaluation protocol. They are not standalone replacement catalogs.

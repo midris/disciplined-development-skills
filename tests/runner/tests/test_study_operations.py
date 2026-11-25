@@ -726,7 +726,7 @@ def test_retention_cleanup_version_boundary(retention_case, state, capsys):
         assert "cannot establish cleanup status" in capsys.readouterr().out
 
 
-def test_retry_does_not_fill_an_unattempted_slot(document_study):
+def test_retry_does_not_fill_an_unattempted_slot(document_study, capsys):
     root, write, commit, ident = document_study
     protocol = root / "protocol.md"
     index_path = root / "example-run-index.json"
@@ -743,6 +743,15 @@ def test_retry_does_not_fill_an_unattempted_slot(document_study):
     authority = ident("approval.md", revision)
     retry["authorization"]["artifact"] = authority
     write(index_path.name, index)
+    # Pin the assessed index before the later working-copy approval is added.
+    import hashlib
+    import re
+    index_revision = commit()
+    assessment = root / "example-assessment.md"
+    cited = re.sub(r"(Attempt index:.*? at Git `)[0-9a-f]{40}(`, SHA-256 `)[0-9a-f]{64}",
+                   lambda m: m[1] + index_revision + m[2] + hashlib.sha256(index_path.read_bytes()).hexdigest(),
+                   assessment.read_text())
+    assessment.write_text(cited)
     output = root / "tables.md"
     args = ["tables", protocol, "--batch", "example", "--index", index_path, "--output", output]
     assert invoke(args) != 0
@@ -752,8 +761,32 @@ def test_retry_does_not_fill_an_unattempted_slot(document_study):
     ))
     protocol.write_text(text)
     assert invoke(args) == 0
+    capsys.readouterr()
+    # Tables can preview working amendments. Assessed membership uses the approval
+    # that existed when the attempt index was pinned, even if the tree changes.
+    invoke(["check", assessment, "--json"])
+    diagnostics = json.loads(capsys.readouterr().out)["diagnostics"]
+    assert any("No matching batch approval" in d["message"] for d in diagnostics)
+    approved_revision = commit()
+    assessment.write_text(cited.replace(index_revision, approved_revision))
+    invoke(["check", assessment, "--json"])
+    diagnostics = json.loads(capsys.readouterr().out)["diagnostics"]
+    assert not any("No matching batch approval" in d["message"] for d in diagnostics)
     report = output.read_text()
     assert "| example / original | 2 | 2 | 1 | 1 | 0 | 1 |" in report
     assert "| 1 | example | original | 1 | invalid (excluded)" in report
     assert "| 1 | example | original | 1 | valid" in report
     assert "| 2 | example | original | 2 | unattempted" in report
+
+
+def test_interrupt_after_bundle_publication_preserves_interrupt_and_evidence(retention_case, monkeypatch):
+    from skilltest.documents import retention
+
+    _, source, store, index, args = retention_case
+    def interrupt(*args, **kwargs):
+        raise KeyboardInterrupt
+    monkeypatch.setattr(retention, "publish", interrupt)
+    with pytest.raises(KeyboardInterrupt):
+        invoke(args)
+    assert (store / source.name / "final.txt").is_file()
+    assert not index.exists()

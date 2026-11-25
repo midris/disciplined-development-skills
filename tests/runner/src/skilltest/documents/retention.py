@@ -196,7 +196,7 @@ def retain(args):
                 raise ValueError("Index changed during registration")
             publish(index, encoded(value), replace=original is not None)
         return index
-    except BaseException as error:
+    except Exception as error:
         if published:
             raise ValueError(
                 f"{error}; unregistered bundle retained for inspection at {dest}"
