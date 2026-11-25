@@ -52,6 +52,10 @@ def _group_exists(process: subprocess.Popen) -> bool:
         os.killpg(process.pid, 0)
     except ProcessLookupError:
         return False
+    except PermissionError:
+        # An exiting group can briefly deny the probe on macOS. Keep it
+        # outstanding until a subsequent probe confirms disappearance.
+        return True
     return True
 
 

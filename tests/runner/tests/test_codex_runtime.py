@@ -442,3 +442,13 @@ def test_session_evidence_is_published_before_cleanup_or_runtime_is_retained(tmp
     assert result.invocation_started
     assert result.exit_code == (7 if failure in ('nonzero', 'missing-nonzero') else 0)
     assert '--ephemeral' not in setup_calls.popen.call_args.args[0]
+
+
+def test_group_permission_denial_after_term_is_rechecked(monkeypatch):
+    process = Mock(pid=4321)
+    # macOS can briefly deny the signal-zero probe while a signalled child exits.
+    probe = Mock(side_effect=[None, None, PermissionError(), ProcessLookupError()])
+    monkeypatch.setattr(os, "killpg", probe)
+    monkeypatch.setattr(process_runtime.time, "sleep", Mock())
+    assert process_runtime.stop_owned(process) is None
+    assert [call.args[1] for call in probe.call_args_list] == [0, signal.SIGTERM, 0, 0]
