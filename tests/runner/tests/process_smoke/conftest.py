@@ -1,0 +1,113 @@
+"""Minimal executable dummy providers for wiring smoke tests, not fault injection."""
+
+import base64
+import json
+import os
+import sys
+import shutil
+import subprocess
+from dataclasses import dataclass
+from pathlib import Path
+
+import pytest
+
+
+@dataclass
+class FakeProvider:
+    record_path: Path
+    settings_path: Path
+
+    def configure(self, *, stdout=b"", stderr=b"", final=b"", exit_code=0):
+        settings = json.dumps({
+            "record": str(self.record_path), "exit_code": exit_code,
+            "stdout": base64.b64encode(stdout).decode(),
+            "stderr": base64.b64encode(stderr).decode(),
+            "final": base64.b64encode(final).decode(),
+        })
+        self.settings_path.write_text(settings)
+        for name in ("codex", "claude"):
+            path = self.settings_path.with_name(name)
+            lines = path.read_text().splitlines()
+            lines = ["settings=json.loads(" + repr(settings) + ")" if line.startswith("settings=") else line for line in lines]
+            path.write_text("\n".join(lines) + "\n")
+
+    def record(self):
+        path = self.record_path if self.record_path.exists() else next(self.record_path.parent.rglob("evidence/provider-record.jsonl"))
+        return json.loads(path.read_text().splitlines()[-1])
+
+
+@pytest.fixture(scope="session")
+def smoke_python():
+    if sys.platform != "darwin":
+        return sys.executable
+    # Use an interpreter inside the child policy's readable toolchain trees.
+    # /usr/bin/python3 is a launcher that can emit cache warnings on stderr.
+    executable = shutil.which("python3", path="/opt/homebrew/opt/python@3/libexec/bin:/opt/homebrew/bin")
+    if executable is None:
+        executable = subprocess.check_output(["/usr/bin/xcrun", "--find", "python3"], text=True).strip()
+    return str(Path(executable).resolve())
+
+
+@pytest.fixture
+def fake_provider(tmp_path, monkeypatch, private_test_profile, smoke_python):
+    bin_dir = tmp_path / "fake-bin"
+    bin_dir.mkdir()
+    # Hosted macOS images use versioned Xcode paths outside the study policy.
+    # Select Homebrew Git in the dummy CLI directory when it is installed.
+    brew_git = Path("/opt/homebrew/bin/git")
+    if sys.platform == "darwin" and brew_git.is_file():
+        (bin_dir / "git").symlink_to(brew_git.resolve())
+    fake = FakeProvider(tmp_path / "provider-record.jsonl", bin_dir / "provider-settings.json")
+    script = """#!PYTHON_EXECUTABLE
+import base64,json,os,sys,subprocess
+from pathlib import Path
+settings=json.loads(Path(__file__).with_name("provider-settings.json").read_text())
+record=(Path.cwd().parent/"evidence/provider-record.jsonl" if Path(sys.argv[0]).name == "claude" else Path(settings["record"]))
+environment={k: os.environ[k] for k in ("HOME","CODEX_HOME","TMPDIR","PATH") if k in os.environ}
+if "auth" in sys.argv and "status" in sys.argv:
+    print(json.dumps({"loggedIn": True, "authMethod": "claude.ai", "test_marker": "DUMMY_AUTH_STATUS_MUST_NOT_BE_RETAINED"}))
+    sys.exit(0)
+if "login" in sys.argv and "status" in sys.argv:
+    auth=Path(os.environ["CODEX_HOME"])/"auth.json"
+    record.with_name("login-record.json").write_text(json.dumps({
+        "argv": sys.argv, "environment": environment,
+        "environment_keys": sorted(os.environ),
+        "auth_mode": auth.stat().st_mode & 0o777,
+        "profile_mode": auth.parent.stat().st_mode & 0o777,
+        "profile_files": sorted(p.name for p in auth.parent.iterdir()),
+    }))
+    print("Logged in using ChatGPT")
+    print("DUMMY_AUTH_STATUS_MUST_NOT_BE_RETAINED", file=sys.stderr)
+    sys.exit(0)
+if Path(sys.argv[0]).name == "claude":
+    fixture=Path.cwd()
+    assert (fixture/".git/config").is_file()
+    assert os.environ["GIT_CONFIG_NOSYSTEM"] == "1" and os.environ["GIT_CONFIG_GLOBAL"] == os.devnull
+    answer=fixture.parent/"evidence/dummy-tool-write.txt"
+    answer.write_text("dummy evidence")
+    (fixture/"tracked.txt").write_text("local git fixture")
+    subprocess.run(["git", "add", "tracked.txt"], check=True, stdout=subprocess.DEVNULL)
+    subprocess.run(["git", "-c", "user.name=Fixture", "-c", "user.email=fixture@example.invalid", "commit", "--quiet", "-m", "fixture"], check=True, stdout=subprocess.DEVNULL)
+with record.open("a") as stream:
+    print(json.dumps({"argv": sys.argv, "cwd": os.getcwd(),
+        "stdin": sys.stdin.buffer.read().decode(),
+        "environment": environment,
+        "claude_baseline_env": {k:v for k,v in os.environ.items() if k.startswith("CLAUDE_CODE_")},
+    }), file=stream)
+sys.stdout.buffer.write(base64.b64decode(settings["stdout"]))
+sys.stderr.buffer.write(base64.b64decode(settings["stderr"]))
+if Path(sys.argv[0]).name == "codex":
+    Path(sys.argv[sys.argv.index("--output-last-message")+1]).write_bytes(base64.b64decode(settings["final"]))
+    sessions = Path(os.environ["CODEX_HOME"]) / "sessions"
+    sessions.mkdir()
+    (sessions / "rollout-dummy.jsonl").write_text(json.dumps({"type":"response_item","payload":{"type":"function_call_output","call_id":"dummy","output":"complete dummy tool output"}}))
+sys.exit(settings["exit_code"])
+"""
+    for name in ("codex", "claude"):
+        executable = bin_dir / name
+        executable.write_text(script.replace("PYTHON_EXECUTABLE", smoke_python, 1))
+        executable.chmod(0o700)
+    monkeypatch.setenv("PATH", str(bin_dir) + os.pathsep + os.environ["PATH"])
+    (private_test_profile / "auth.json").write_text('{"tokens":{"access_token":"dummy-test-only"}}')
+    fake.configure()
+    return fake

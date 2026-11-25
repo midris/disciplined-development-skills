@@ -1,0 +1,59 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "assessed_at": "",
+  "run_id": "",
+  "condition": "",
+  "assessor": {
+    "name": "",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": ""
+  },
+  "evidence": [
+    {
+      "id": "",
+      "artifact": {
+        "path": "",
+        "sha256": "",
+        "version": null
+      },
+      "selector": ""
+    }
+  ],
+  "setup": {
+    "status": "insufficient evidence",
+    "reason": "",
+    "evidence": []
+  },
+  "criteria": [
+    {
+      "id": "",
+      "dimension": "functional",
+      "judgment": "insufficient evidence",
+      "reason": "",
+      "consequence": "",
+      "evidence": []
+    },
+    {
+      "id": "",
+      "dimension": "procedural",
+      "judgment": "insufficient evidence",
+      "reason": "",
+      "consequence": "",
+      "evidence": []
+    }
+  ],
+  "procedural_summary": "",
+  "observations": [],
+  "uncertainty": [],
+  "result_id": "",
+  "functional_result": "insufficient evidence",
+  "manifest": {
+    "path": "",
+    "sha256": "",
+    "version": "1",
+    "git_revision": ""
+  }
+}

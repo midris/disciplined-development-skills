@@ -1,0 +1,1 @@
+../../runner/src/skilltest/_formats/assessment.template.md

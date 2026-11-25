@@ -12,8 +12,8 @@ Use the [qualification reference](qualification/README.md) for new or changed di
 Reuse its evidence only for controls demonstrably unchanged; unproved controls stop launch.
 For a qualified setup the routine path is: check inputs/version → run → inspect evidence/cleanup → score → update the summary.
 Do not repeat canaries, dummy profile setup, synthetic worksheet exercises or paid qualification calls per observation.
-The [Codex adapter](../runner/README.md#codex) owns private HOME/CODEX_HOME/TMPDIR, auth preflight, template-free Git boundary, input checks, exact invocation and cleanup; never duplicate that setup around a real run.
-The [Claude adapter](../runner/README.md#claude) supplies the equivalent local workflow using its qualified macOS controls and existing subscription, with `.claude/skills/` fixture targets.
+The [Codex adapter](../../tests/runner/README.md#codex) owns private HOME/CODEX_HOME/TMPDIR, auth preflight, template-free Git boundary, input checks, exact invocation and cleanup; never duplicate that setup around a real run.
+The [Claude adapter](../../tests/runner/README.md#claude) supplies the equivalent local workflow using its qualified macOS controls and existing subscription, with `.claude/skills/` fixture targets.
 Claude’s [scoped local qualification](qualification/README.md#claude-qualification-checkpoint) passed; the same batch approval, freeze, evidence review and worksheet procedure applies within its recorded limits.
 Both adapters produce raw traces and a separate final answer when available; inspect the full trace, not just `final.txt`.
 

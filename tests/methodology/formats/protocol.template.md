@@ -1,0 +1,1 @@
+../../runner/src/skilltest/_formats/protocol.template.md

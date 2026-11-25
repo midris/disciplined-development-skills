@@ -1,0 +1,39 @@
+name: Study foundation
+on:
+  push:
+    branches: [main]
+    paths:
+      - tests/runner/**
+      - tests/methodology/**
+      - tests/README.md
+      - skill-validation/runner
+      - .github/workflows/study-foundation.yml
+  pull_request:
+    paths:
+      - tests/runner/**
+      - tests/methodology/**
+      - tests/README.md
+      - skill-validation/runner
+      - .github/workflows/study-foundation.yml
+jobs:
+  offline:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: brew install uv git
+      - working-directory: tests/runner
+        run: |
+          uv sync --locked
+          uv build --out-dir "$RUNNER_TEMP/skilltest-dist"
+          sandbox-exec -p '(version 1)(allow default)(deny network*)' .venv/bin/python -m pytest -q tests/process_smoke/test_study_walkthrough.py
+          uv run --offline --locked pytest -q
+          uv run --offline --locked python -m unittest discover -s ../methodology/formats
+      - name: Check the installed wheel outside the checkout
+        run: |
+          uv venv "$RUNNER_TEMP/wheel-env" --python tests/runner/.venv/bin/python
+          uv pip install --python "$RUNNER_TEMP/wheel-env/bin/python" "$RUNNER_TEMP"/skilltest-dist/*.whl
+          cd "$RUNNER_TEMP"
+          wheel-env/bin/skilltest docs new result --format-version 2 --output result-draft.json
+          cmp result-draft.json "$GITHUB_WORKSPACE/tests/methodology/formats/execution-result-v2.template.json"
+          wheel-env/bin/python -c 'import json, os; from pathlib import Path; from skilltest.documents.capture import validator; assert validator().schema == json.loads((Path(os.environ["GITHUB_WORKSPACE"]) / "tests/runner/result.schema.json").read_text())'
+      - run: cd skill-validation/runner && .venv/bin/skilltest --help

@@ -6,10 +6,9 @@ Single source of truth for agent guidance in this repository.
 ## Highest Priority Rules
 
 - At session start, load the doctrine: `Read skills/disciplined-development/SKILL.md`. **The Skill tool doesn't see it** — the skill dirs live under `skills/` (the installer copies them to consumers), and no harness enumerates skills from there. Load companion `SKILL.md` files the same way when the parent dispatches: `skills/adversarial-review`, `skills/adversarial-review-loop`, `skills/concise-writing`, `skills/disciplined-research`, `skills/dispatching-development-subagents`, `skills/lean-plan-writing`, `skills/sweeping-stale-references`, `skills/writing-explicit-rationale`.
-- Before skill authoring, rewriting, validation or test-harness design, read the [validation charter](skill-validation/charter/core-contracts.md), the complete baseline skill body, the [validation guide](skill-validation/README.md#baseline-specification-first), and the [rewrite goal and design principles](plans/completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#overall-goal). The charter supplies core intent; the baseline skill supplies the detailed specification, including scope, exceptions and companion responsibilities. Derive tests and rubrics from their reviewed specification before measuring baseline effectiveness or comparing rewrites; do not substitute aspirational behavior or a rubric's assumptions for what the skill actually promises. Respect each document's status: a proposed suite or draft specification is not implementation authority.
+- Before skill authoring or evaluation, follow the [study workflow](tests/methodology/README.md) and read the shipped skill and relevant companions. The [framework](tests/methodology/framework.md) governs new studies.
 - Cross-reference `ARCHITECTURE.md` (current component interplay + diagrams), `README.md` (bundle overview, install/recovery flow), and `skills/disciplined-development/hooks/README.md` (hook design + state model) before non-trivial changes. Hook config schema: `skills/disciplined-development/hooks/dd-config.md`.
 - Treat active plans and design specs under `plans/` as live sources of truth — update them in the same change set as the work they track.
-- When starting validation of the next owner-selected skill, follow the [per-skill starting workflow](skill-validation/README.md#starting-the-next-skill), including intended project uses, Superpowers guidance and actual composition dependencies.
 - Test-first for behavior changes — see "Test-Driven Changes" below.
 - Periodic adversarial review per `disciplined-development` Principle 8 — at review-nudge signals or natural pauses, run a deep review per the adversarial-review skill, then log it via `dd-log` to reset the counter; iterate per `adversarial-review-loop` until clean.
 - After meaningful work, update docs that drifted — see "Documentation Update Checklist" below.
@@ -30,8 +29,8 @@ commands/                             # slash-command templates (installer copie
 examples/                             # reference configs consumers copy (hooks block, dd-config, CLAUDE.md snippet + starter template)
 research/                             # non-shipped experiment tooling (replay harness + its smoke test)
 skill-validation/                     # non-shipped validation records (skills, commands, project rules)
-skill-validation/runner/              # non-shipped one-run skill-test CLI, offline tests, and operator guide
-tests/                                # installer-level tests
+tests/runner/              # non-shipped one-run skill-test CLI, offline tests, and operator guide
+tests/                                # installer tests, skill study methodology and runner
 plans/                                # active plans (created on demand)
 plans/specs/                          # active design specs
 plans/completed/, plans/deferred/     # archived / deferred work
@@ -55,8 +54,8 @@ python3 -m pytest tests/ -q
 # The hook suite contains the settings-wiring test; it skips outside a consumer.
 
 # Non-shipped single-run skill-test CLI and its default offline suite
-cd skill-validation/runner && uv run pytest -q
-cd skill-validation/runner && uv run skilltest --help
+cd tests/runner && uv run pytest -q
+cd tests/runner && uv run skilltest --help
 
 # Install this bundle into a consumer project
 ./install-skills.sh /path/to/consumer-project
@@ -139,4 +138,4 @@ When a feature, fix, or batch of work is complete:
 3. Update `README.md` when install/recovery flow, requirements, or the skill list changes.
 4. Update `skills/disciplined-development/hooks/README.md` when hook behavior, the hook table, the state model, or the review tiers change. Update `skills/disciplined-development/hooks/dd-config.md` when the config schema changes.
 5. Update `ARCHITECTURE.md` when the layers, the component set, the review model, the state model, or the logging path change.
-6. Update the relevant `skills/<skill>/SKILL.md` when its doctrine, dispatch table, or examples drift from current practice. For non-trivial skill content changes, run a deep review per the adversarial-review skill on the staged branch before commit — no test catches a worse instruction. Until an approved catalog replaces it, update the skill's `skill-validation/archive/skill-records/<skill>.md` legacy record (its RED/GREEN scenario set) on a **non-trivial** change to its rules, angles, or behavior — anything that would alter a scenario's outcome, not wording/typo fixes. See `skill-validation/archive/README.md` for the transition rule.
+6. Update the relevant `skills/<skill>/SKILL.md` when its doctrine, dispatch table, or examples drift from current practice. For non-trivial skill content changes, run a deep review per the adversarial-review skill on the staged branch before commit — no test catches a worse instruction. Record new studies under `tests/skills/<skill>/` using the shared methodology.
