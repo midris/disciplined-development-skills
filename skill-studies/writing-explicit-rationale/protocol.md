@@ -844,3 +844,5 @@ The [five-run comparison](runs/residual-risk-03/report.md) records all four fina
 ### Booking-slot transfer comparison for the 604-word variant
 
 The owner approved [six subjects](runs/transfer-02/schedule.json), three per model. Reuse the original booking-slot task, fixture, functional criteria, prompt and provider settings. Retain all attempts without replacements or evaluators. Seal shuffled project readings and whole-output grades before revealing provider assignments. Compare with the 599-word candidate before any adoption decision.
+
+The [completed transfer comparison](runs/transfer-02/report.md) met all three criteria in all six subjects, matching the 599-word candidate. All attempts were retained. Adopt the exact 604-word variant on owner approval.
