@@ -38,6 +38,8 @@ Use the same chain from evidence to decision when promoting subsequent skills.
 
 The [Sweeping Stale References adoption record](skills/sweeping-stale-references/README.md) follows a full eleven-scenario regression. It separates complete repairs from native selection and reporting quality.
 
+The [Writing Explicit Rationale adoption record](skills/writing-explicit-rationale/README.md) distinguishes evidence on the adopted 604-word text from the broader comparison on its 599-word parent.
+
 ## Promoting a skill
 
 Use one PR per adopted skill. Put its protocol, runnable cases, assessment rules and adoption results under `tests/skills/<skill>/` and install the exact tested bytes under `skills/<skill>/`.

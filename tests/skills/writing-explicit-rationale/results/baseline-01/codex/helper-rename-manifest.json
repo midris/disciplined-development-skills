@@ -1,0 +1,156 @@
+{
+  "format_version": "1",
+  "manifest_id": "wer-codex-helper-rename-1",
+  "study_id": "writing-explicit-rationale",
+  "case_id": "helper-rename",
+  "status": "frozen",
+  "created_at": "2026-11-09",
+  "source_revision": "37d66bb9e84c822b021239ff591f8fcc10f46d8a",
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "f189e933885dd61b5be03e0f8257524b994c3db10c102fe7b55940fc555266af",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/writing-explicit-rationale/protocol.md",
+      "sha256": "e6bbe535708fb9c9ec9be1b5842490d07e37253ec761bc2c0e629bb85909b16a",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "f54cb58884f9dbffd39f37746234487d6113e1f01ad3b1d355fe269310895321",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result.schema.json",
+      "sha256": "0abc6cdd04c2c90495736dd9b0020bbee8ed4772babe46e8e8eb637ebd03f358",
+      "version": "1"
+    },
+    "policy": {
+      "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/assessment-policy.txt",
+      "sha256": "1c919b7e6730d72dc77608c8734cc87b0ace08c996c24659e6d56758953c6179",
+      "version": "1"
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/writing-explicit-rationale/cases/helper-rename/assessment.md",
+        "sha256": "45ced6e4eaf84ef891c183a8fff6f6c71c8503b8aabe98b84ad5c00dda9ca517",
+        "version": "1"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "original",
+      "configuration": {
+        "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/codex/helper-rename-original.json",
+        "sha256": "4d62f458f2ad06dd07dc21f153343763d4e98c84e8e953b77ab699096db1e656",
+        "version": "0.2"
+      },
+      "target_skill": "skills/writing-explicit-rationale/SKILL.md"
+    },
+    {
+      "id": "control",
+      "configuration": {
+        "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/codex/helper-rename-control.json",
+        "sha256": "15d2ca12257e38477806c29866d6f84eb49314d1c973130966211e0e8cb40868",
+        "version": "0.2"
+      },
+      "target_skill": null
+    },
+    {
+      "id": "native",
+      "configuration": {
+        "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/codex/helper-rename-native.json",
+        "sha256": "11f41eebd195db062f8b59eb310d7124fdf51f4d5833ae189e9698ec395fb4db",
+        "version": "0.2"
+      },
+      "target_skill": "skills/writing-explicit-rationale/SKILL.md"
+    }
+  ],
+  "subject_sources": [
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/helper-rename/fixture/quota.py",
+      "sha256": "e5c815b04e0b2762a7fd5a9dc3c177c5bf1448485cc5c327e620d94ad75e380e",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/helper-rename/fixture/test_quota.py",
+      "sha256": "c56171f3404ac0da30c997764cd1ac2d8e23a6611de98b1b9091dd7ca6f131c3",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/helper-rename/task.md",
+      "sha256": "d8909c8434b07b49d875435e8441b8df850fdc0351fd5dee0087ec77d0cb09b6",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/original-prompt.txt",
+      "sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/task-prompt.txt",
+      "sha256": "f37b712f4d6ad47417b5706f57656537c1eaf5fb180bca568ee0d338604baf49",
+      "version": null
+    },
+    {
+      "path": "skills/writing-explicit-rationale/SKILL.md",
+      "sha256": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe",
+      "version": null
+    }
+  ],
+  "controller_only": [
+    {
+      "path": "plans/specs/2026-11-08-wer-focused-baseline.md",
+      "sha256": "ec1c6825dd70981ad6295e26344493711f106a4f2726e0b0700992b68e6cc7be",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/helper-rename/example.patch",
+      "sha256": "c62f1a67dcec4719006183b5792ee89504e7b7b60d4ef851261147bc6d6bcf1d",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/README.md",
+      "sha256": "c25f4db887310ba437dfed3e5434b1881f3b7aa0724cb4e4c7b7ac505bf8a1b0",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/qualification.md",
+      "sha256": "8184f53946e5e24a91fbb5f3d3947b1bc668dec6048f1c7f6a87fdc44a9cb7e4",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/reader-question.txt",
+      "sha256": "d78d59a04423a1d1dc3c27029cdc3626efe1551e777216b0c18aabdea8de82e6",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/reader_payload.py",
+      "sha256": "f782b56a630b1babc24c983053fac8a77e7b509f7ec762b5b97b9907cdb4a984",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/reconciliation-question.txt",
+      "sha256": "3bb744a1852b01c84ca5ebb96297927672929b414db2f7f49c8534eca301ad76",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/qualify.py",
+      "sha256": "53579e648aa6f5948dc6d6cac4e1e47fef3a046d8d47890593eff1b53bd904a6",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/reader-smoke/prompt.txt",
+      "sha256": "1f727ee00b085ac2b0c1724112f8c1f9c2a5aed771406e1d9b8fca8383bb83f4",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/reader-smoke/config.json",
+      "sha256": "35f09d4f4adb2d8c6a723eadac105853e28175c9cc9f89c8c204e45ccf3da6cf",
+      "version": null
+    }
+  ]
+}

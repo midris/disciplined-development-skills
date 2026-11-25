@@ -1,0 +1,244 @@
+{
+  "subjects": [
+    {
+      "order": 1,
+      "label": "ca3b5e17",
+      "provider": "claude",
+      "condition": "candidate",
+      "repetition": 1,
+      "setup": "valid",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "attempt": "attempt-1.json",
+      "evidence": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/controller/readings/ca3b5e17/project.json",
+          "sha256": "e91cceeab66cbdddbe9a9bd03a64f4d31cc12d360ecca0b5e618a7daeb610811"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/controller/readings/ca3b5e17/first.json",
+          "sha256": "a5e3ae2fa00fc4d8590b42905dfe9bdfb63ad9a232778f4a9a0691017f96b7ac"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/controller/readings/ca3b5e17/grade.json",
+          "sha256": "609c0c21f7e90f73c5f7129ad332c23c1e1411a7784147a13857fde4b7778b39"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/controller/readings/ca3b5e17/handoff.json",
+          "sha256": "cfb9ae5a496f293206810940940b46e4c7647a83eab0178b5860bf07832c7652"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/subjects/20261125T190329414Z-project-task-6f33c5af-742d-4460-ad4f-f36307cd30d4-sx_g_2yk/final.txt",
+          "sha256": "472d0434c547ba7557b4fbe9a472b4a16fbafd02d502d9e72d0ba4f3b7018c5b"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/controller/subject-01/audit.json",
+          "sha256": "9437bfd69d2fe42665e2655c2d2d8164b26e37390065b825de449b4d14a3d2ad"
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "label": "bfce639d",
+      "provider": "codex",
+      "condition": "candidate",
+      "repetition": 1,
+      "setup": "valid",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "attempt": "attempt-2.json",
+      "evidence": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/controller/readings/bfce639d/project.json",
+          "sha256": "10951c7cbc226c5eaa69a18113f4ab895b6072602d46b79fe4757fa353cb441b"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/controller/readings/bfce639d/first.json",
+          "sha256": "e1d99dbf909094426d5abf2ff6d15bcd3111f2a90a43a38303af8ee2d112d522"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/controller/readings/bfce639d/grade.json",
+          "sha256": "9a7e8e4ee1ff131924606739330152c9bd8662cc3c3202208e977ff337b9725d"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/controller/readings/bfce639d/handoff.json",
+          "sha256": "f8ed109bd046053d5661282daf51a4376919f13a3661987115e1abb793135808"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/subjects/20261125T190330489Z-project-task-884ad99d-bf8a-4d73-85cf-ef4454769135-ez6y608v/final.txt",
+          "sha256": "2be1d54b1772b6819d44f0f75dea59e885aae78eb80c6a46be8a23ebe7eb5982"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/controller/subject-02/audit.json",
+          "sha256": "0743a0394a2e2f222079d70560ee1d804276a25e48847c93433543df79433ee9"
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "label": "1615d40a",
+      "provider": "codex",
+      "condition": "candidate",
+      "repetition": 2,
+      "setup": "valid",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "attempt": "attempt-3.json",
+      "evidence": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/controller/readings/1615d40a/project.json",
+          "sha256": "919dc6a9f6faeb84da9521ef66f493f3f9cf07a6bb0cd30da2c16b7f7f40539c"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/controller/readings/1615d40a/first.json",
+          "sha256": "e530284a8e0e52a0daceaaa0ab2ebcab53ce23dced44fdc5a6bf86ea5e8f43f6"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/controller/readings/1615d40a/grade.json",
+          "sha256": "e70c2a875bb6d6499fbc4d609977e954f46d0621c3404c2b0221e42772f5e1b6"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/controller/readings/1615d40a/handoff.json",
+          "sha256": "a34650a5e04819b006c015ef70b48552d77fbcf3b0a208ac3a8687fdef3e7b0d"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/subjects/20261125T190423047Z-project-task-097d7928-484d-4370-a430-d9e43fabdb97-cmkcv2f5/final.txt",
+          "sha256": "7c049ee8a2f0465826ac782404c64376351f36d289c1b41c9f5af1defbde8f17"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/controller/subject-03/audit.json",
+          "sha256": "be1a9e5f9a74634953635c44981d4c3a947308e4057f9dec8b44171db6ef59c5"
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "label": "494af6fb",
+      "provider": "claude",
+      "condition": "candidate",
+      "repetition": 2,
+      "setup": "valid",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "attempt": "attempt-4.json",
+      "evidence": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/controller/readings/494af6fb/project.json",
+          "sha256": "0c7702ee036101d5c3f20dbf8a43e72a7d8d7a5dca64908767a72e6d49a9d43d"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/controller/readings/494af6fb/first.json",
+          "sha256": "c8643c4cb9bedbbb459ba7746972a1a578eaee46810200e028de80f8dec756fd"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/controller/readings/494af6fb/grade.json",
+          "sha256": "b94a419c57d1ce9eb8ffae85a52e84b2ae22ef9f0eaee369ed9d0d8482b2f333"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/controller/readings/494af6fb/handoff.json",
+          "sha256": "89281cbaaf4ac263ddaefcc7a42fb0453ebc700b4bb07bde0a6af24d07233bfa"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/subjects/20261125T190349793Z-project-task-7df320c1-4dc3-4d87-8b11-815018238b66-cormpca0/final.txt",
+          "sha256": "207af0d2425bd3c9047deef38e81abd4a1b296772fb19fb1cfe397f8b662dfda"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/controller/subject-04/audit.json",
+          "sha256": "f847ebd050697a5cee7842b0661906a4d0efc2336e6db676060430a4020f43d5"
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "label": "c13587c5",
+      "provider": "claude",
+      "condition": "candidate",
+      "repetition": 3,
+      "setup": "valid",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "attempt": "attempt-5.json",
+      "evidence": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/controller/readings/c13587c5/project.json",
+          "sha256": "e091ee1093fcc039458ab16cd54e13458fe1b9a540458065a3323132dabe922b"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/controller/readings/c13587c5/first.json",
+          "sha256": "bc4d0a2243a3ac8fdcc5b12aa767b16e616643d2448277b5594c95015265b2db"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/controller/readings/c13587c5/grade.json",
+          "sha256": "a38a9e8b54b53874e4c360833ff7e3f74e68ddfd8a27866d68a728a85f6ae4ad"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/controller/readings/c13587c5/handoff.json",
+          "sha256": "00063d55e54abc1792a4ac75997711f8a3ecdf2c6303ef886590600f23fd7135"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/subjects/20261125T190414501Z-project-task-6ea0113e-87df-43fe-91d5-48be9059dbc9-50vxfs2z/final.txt",
+          "sha256": "0f8e744d6e98d66fbea26bc91c988c41fd7976cbd8dc4187de61659e521b1b65"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/controller/subject-05/audit.json",
+          "sha256": "30b4f0858d310e7c3ea864c07940e4f04b6ec7c6a0984a8e2ddf48ab0a7293bc"
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "label": "e38e1188",
+      "provider": "codex",
+      "condition": "candidate",
+      "repetition": 3,
+      "setup": "valid",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "attempt": "attempt-6.json",
+      "evidence": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/controller/readings/e38e1188/project.json",
+          "sha256": "b3727d87a0634858ee9c9b045952e11637f98651a3aa4cb662280b369a70a382"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/controller/readings/e38e1188/first.json",
+          "sha256": "8d1f70417cd8e0d26e91044dcaf09c9dd3ea002c6d9b0f2ddc33238b8119af9e"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/controller/readings/e38e1188/grade.json",
+          "sha256": "f68997040848f195a0bbb151bd47690379f38cc071920788c04ef6752e05376e"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/controller/readings/e38e1188/handoff.json",
+          "sha256": "e098c465d0ba173d931b0ae28d3eb272e1a16eacbb66645cb840c97dabfefbb8"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/subjects/20261125T190514462Z-project-task-c56c16a7-d835-4759-8ecc-f14db703c3e4-9vrvqedz/final.txt",
+          "sha256": "733707471e2aca00a386a790c487dc8e35c770fb9d00351fbba0de53984c4971"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/controller/subject-06/audit.json",
+          "sha256": "ae915c56b97ee2e33515637059a1c7a5b95f051fffc86b6a0fc56f76d9f7def8"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "format_version": "1",
+  "manifest_id": "wer-codex-quota-grace-1",
+  "study_id": "writing-explicit-rationale",
+  "case_id": "quota-grace",
+  "status": "frozen",
+  "created_at": "2026-11-09",
+  "source_revision": "37d66bb9e84c822b021239ff591f8fcc10f46d8a",
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "f189e933885dd61b5be03e0f8257524b994c3db10c102fe7b55940fc555266af",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/writing-explicit-rationale/protocol.md",
+      "sha256": "e6bbe535708fb9c9ec9be1b5842490d07e37253ec761bc2c0e629bb85909b16a",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "f54cb58884f9dbffd39f37746234487d6113e1f01ad3b1d355fe269310895321",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result.schema.json",
+      "sha256": "0abc6cdd04c2c90495736dd9b0020bbee8ed4772babe46e8e8eb637ebd03f358",
+      "version": "1"
+    },
+    "policy": {
+      "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/assessment-policy.txt",
+      "sha256": "1c919b7e6730d72dc77608c8734cc87b0ace08c996c24659e6d56758953c6179",
+      "version": "1"
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/writing-explicit-rationale/cases/quota-grace/assessment.md",
+        "sha256": "b1d8df27890208961f8b090f0150c9cc29e1c559242dd5dab7932babdbb58092",
+        "version": "1"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "control",
+      "configuration": {
+        "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/codex/quota-grace-control.json",
+        "sha256": "a4a0c036487e08b3fa761e41c9a632359825fd0509268a599efdd2aee43abe5b",
+        "version": "0.2"
+      },
+      "target_skill": null
+    },
+    {
+      "id": "original",
+      "configuration": {
+        "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/codex/quota-grace-original.json",
+        "sha256": "2b4623faf4b3f6a15f4f63d39f2e90a20179118a96bb10719d2701f6cefa9b03",
+        "version": "0.2"
+      },
+      "target_skill": "skills/writing-explicit-rationale/SKILL.md"
+    },
+    {
+      "id": "native",
+      "configuration": {
+        "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/codex/quota-grace-native.json",
+        "sha256": "8960c77e027f82f41fc48a227dc95db791930d15bbd7c8bfe8de3c7ec35e3054",
+        "version": "0.2"
+      },
+      "target_skill": "skills/writing-explicit-rationale/SKILL.md"
+    }
+  ],
+  "subject_sources": [
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/quota-grace/fixture/quota.py",
+      "sha256": "7deed5997f6930227a84a71f1f8d1b70259c6a87c55faa5461a6064fdfaaa052",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/quota-grace/fixture/test_quota.py",
+      "sha256": "722b6b47ed52378f9e1d48128119e376009cb931a61b25503c78c5a96ef19e17",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/quota-grace/task.md",
+      "sha256": "2bddc0dacfe3a85b32251042c636a5edc14180568163e77ad3814153f9f9e781",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/original-prompt.txt",
+      "sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/task-prompt.txt",
+      "sha256": "f37b712f4d6ad47417b5706f57656537c1eaf5fb180bca568ee0d338604baf49",
+      "version": null
+    },
+    {
+      "path": "skills/writing-explicit-rationale/SKILL.md",
+      "sha256": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe",
+      "version": null
+    }
+  ],
+  "controller_only": [
+    {
+      "path": "plans/specs/2026-11-08-wer-focused-baseline.md",
+      "sha256": "ec1c6825dd70981ad6295e26344493711f106a4f2726e0b0700992b68e6cc7be",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/quota-grace/example.patch",
+      "sha256": "524beba30457b7b48d5012697ee013ec57d0d8c4047e36ef81e79c0a8e15a23d",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/README.md",
+      "sha256": "c25f4db887310ba437dfed3e5434b1881f3b7aa0724cb4e4c7b7ac505bf8a1b0",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/qualification.md",
+      "sha256": "8184f53946e5e24a91fbb5f3d3947b1bc668dec6048f1c7f6a87fdc44a9cb7e4",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/reader-question.txt",
+      "sha256": "d78d59a04423a1d1dc3c27029cdc3626efe1551e777216b0c18aabdea8de82e6",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/reader_payload.py",
+      "sha256": "f782b56a630b1babc24c983053fac8a77e7b509f7ec762b5b97b9907cdb4a984",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/reconciliation-question.txt",
+      "sha256": "3bb744a1852b01c84ca5ebb96297927672929b414db2f7f49c8534eca301ad76",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/qualify.py",
+      "sha256": "53579e648aa6f5948dc6d6cac4e1e47fef3a046d8d47890593eff1b53bd904a6",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/reader-smoke/prompt.txt",
+      "sha256": "1f727ee00b085ac2b0c1724112f8c1f9c2a5aed771406e1d9b8fca8383bb83f4",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/reader-smoke/config.json",
+      "sha256": "35f09d4f4adb2d8c6a723eadac105853e28175c9cc9f89c8c204e45ccf3da6cf",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/quota-grace/replay.py",
+      "sha256": "cf9d745a99360ed4f8e9d4a9fffd2707fd0b86aa0dfa291eccca3c1f8d992eea",
+      "version": null
+    }
+  ]
+}

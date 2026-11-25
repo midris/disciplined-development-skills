@@ -1,0 +1,175 @@
+{
+  "subjects": [
+    {
+      "order": 1,
+      "provider": "claude",
+      "case": "repeated-review",
+      "attempt": "attempt-1.json",
+      "setup": "valid",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met",
+        "R3": "met"
+      },
+      "reading": "Both interactive callers enforce admission and the batch importer bypasses it. The comment accurately says to reconsider factoring when a third interactive caller appears. The quota site explicitly explains the rejected-work risk and the bounded higher allowance for old tokens. No extra label rationale.",
+      "reconciliation": "Original tests and quota replay pass. The code accurately keeps admission out of shared persistence, calls for reconsideration at a third interactive caller, recovers the independently supplied quota reason and leaves the rename alone. The proposed reply turns reconsideration into a promise; the code and preceding handoff accurately preserve the open decision.",
+      "checks": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-01/controller/subject-01/audit.json",
+          "sha256": "384a870c1e5bac7fc7a6d2ed6a14e43730629dfe4084f97aabb6552350da8e1c"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-01/controller/subject-01/full-evidence.json",
+          "sha256": "d6bbcbfc5a6eb5dd144092f9052ae44b559dfae3a94a914b863482d3368a1971"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-01/controller/project-read/52757a0f/payload.json",
+          "sha256": "4be45bddc4e5e1b58c08e1675648746e3112ed73d6d846ad6715df51812a4a38"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-01/subjects/20261124T202201325Z-project-task-ee6aae8a-1e64-4141-9d75-59a84f1ae19e-3b_aeia2/final.txt",
+          "sha256": "565cef6a5ba3ef82569b9c38558508ec99997d3d2ef2009a64407f73ca990def"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-01/controller/subject-01/replay.json",
+          "sha256": "39e360354fee3e9cfac7f3fbc8a06f4ac8ec212423268c1de719a52c6b2831e8"
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "provider": "codex",
+      "case": "quota-grace",
+      "attempt": "attempt-2.json",
+      "setup": "valid",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "reading": "The predicate and nearby comment identify old-token work already admitted, the accepted extra quota and the strict cutoff. A reader must infer that immediately applying the lower limit could reject that work. The named predicates and boundary tests support that inference.",
+      "reconciliation": "The public lookup and boundary behavior pass both checks. The project names protecting work admitted before the downgrade and accepting extra quota for it; with the lower-limit comparison the consequence of an immediate cut is recoverable. This is terser than explicitly saying it could reject that work.",
+      "checks": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-01/controller/subject-02/audit.json",
+          "sha256": "fe9350bae631e985fdae4b62f86240643d2bd63c78331c5d63624c9db9d1a42c"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-01/controller/subject-02/full-evidence.json",
+          "sha256": "e4ebde6def60af3fb43ad8244e34c21fb39763294ddbdb6d519db832539a6e63"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-01/controller/project-read/7390878d/payload.json",
+          "sha256": "564461ab16d3784acdff042f90056766a2f3154576d43fc572e49c70e7861548"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-01/subjects/20261124T202222965Z-project-task-7ab7c0e5-c3fa-4732-8268-05d1811555cd-ynq9rr3p/final.txt",
+          "sha256": "e4f617b79a7959d1ce675386bcf53295e8dc7361ea3eb7c49688c127cf444f52"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-01/controller/subject-02/replay.json",
+          "sha256": "72067b3402cd720e34edc59c937ebd76c059bf82807b5615546556444b3001ac"
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "provider": "claude",
+      "case": "quota-grace",
+      "attempt": "attempt-3.json",
+      "setup": "valid",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "reading": "The decision points to a documented 60-second constant, where the accepted extra quota and the risk of rejecting already-admitted work are explicit. Tests cover old and new tokens and the strict boundary. The second comment adds some repetition.",
+      "reconciliation": "The code implements the correct strict cutoff and both replay suites pass. A maintainer can follow the grace constant to the concrete rejection risk and the extra quota accepted for that window.",
+      "checks": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-01/controller/subject-03/audit.json",
+          "sha256": "cf70d2f89367c4f9c61aacc2e6647aff08bfef7bcb8d734ad389ec67cc508199"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-01/controller/subject-03/full-evidence.json",
+          "sha256": "519926092bf32af4b852674039df017c31bc17cdd635a75d958b960a2beed117"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-01/controller/project-read/21b1407c/payload.json",
+          "sha256": "f0282aa7a9fd1c58d80d8c764c37860598b3a606e7d4ecb2b68fe1e44bbdf5b3"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-01/subjects/20261124T202327819Z-project-task-9137aed2-39b6-49c4-ae54-df7c4dc29e2b-z0rf19rw/final.txt",
+          "sha256": "0ebbe5cc6cafe71b605fbee9ffbe18a15910161058b04c6db439afdadd8dbf6f"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-01/controller/subject-03/replay.json",
+          "sha256": "298f9c99aa54933e910b3aaf74fdf0ebc8c40409b9055e38d8beb83825011ea3"
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "provider": "codex",
+      "case": "catalog-review",
+      "attempt": "attempt-4.json",
+      "setup": "valid",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "reading": "The spec leaves amendment authority with the lender and retains accession order because room sheets use that key for corrections. The index supplies a title lookup without disrupting production.",
+      "reconciliation": "The reply resolves the credit question accurately. The durable spec explains when a rebrand may be reflected, why proof corrections require accession order, and how visitors can look up titles.",
+      "checks": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-01/controller/subject-04/audit.json",
+          "sha256": "fcf5c23858faf3f1d9752ff1e5b636d54b733891298f9303406c17e48f3efeca"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-01/controller/subject-04/full-evidence.json",
+          "sha256": "9aedf0e03ddce735d7334ed913f87bcd89b660bf3714eaae38aad433c4fc6058"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-01/controller/project-read/2a40f636/payload.json",
+          "sha256": "568d2abd6468d1e88f6ba6f2ac352410126522b2e467cdb3040ecec5f4e88f85"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-01/subjects/20261124T202348281Z-project-task-ed6ab255-a9e4-4ad2-9f50-b4dd71c7a876-n7r9p1uu/final.txt",
+          "sha256": "abd3ad59bba8ed78f6459e86de999c75f94c79bebae8df48f615c8c8260d2223"
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "provider": "claude",
+      "case": "catalog-review",
+      "attempt": "attempt-5.json",
+      "setup": "valid",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "reading": "The signed loan form controls publication credit through a rebrand until the lender amends it. Accession order lets the proof desk check corrections against keyed room sheets; the index serves title lookup. Both decisions are actionable in the spec.",
+      "reconciliation": "The spec and editor reply both preserve the lender's authority to amend the loan form. The spec also explains the room-sheet dependency and points visitors to the title index.",
+      "checks": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-01/controller/subject-05/audit.json",
+          "sha256": "fd7164ff06ff05bfc9c97a569d385718c646b28366239a8170f841182348dee7"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-01/controller/subject-05/full-evidence.json",
+          "sha256": "01d4d34f2d0b7ff3f9f31f13d8a0e525c4ef0f6d56e011988ee651ec87c715b4"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-01/controller/project-read/202df9df/payload.json",
+          "sha256": "79658a7411090f5d8f06c6cfc26c83361682c7eec3b9b92c51a50ad86705fef4"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-01/subjects/20261124T202444628Z-project-task-cb43f2ae-9e7b-4e67-b6e2-f3eea6d7b7b1-_ruuqru0/final.txt",
+          "sha256": "fa67212c36412922d2fbc7059b8d18f9d3f8a10ee6e961eb96c8f98ec132c89c"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "case": "repeated-review",
+  "candidate": {
+    "path": "skill-studies/writing-explicit-rationale/drafts/baseline-edit-with-examples/SKILL.md",
+    "sha256": "36ab7246d4c974cbf7d195b92780d835c31863477e33aaca1f0a8389c0f48381"
+  },
+  "config": {
+    "path": "skill-studies/writing-explicit-rationale/runs/repeated-review-01/02-revision.json",
+    "sha256": "71febcaa69fc990186e5409d95cc3078ae98087902215a5f43fada41932fb668"
+  },
+  "prompt": {
+    "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/writing-explicit-rationale/runs/baseline-01/original-prompt.txt",
+    "sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c"
+  },
+  "inputs": {
+    "ingest.py": "3eb96679a60bc60fbded053fd83be60b6df52a6478cab6319a9e7eccbbafbf81",
+    "labels.py": "ea76992b87ebfbd550cae798faf0a4c746fe1cd6ba42857c4b76f40b6b651c30",
+    "quota.py": "5f9ea763f1380feaf0dc7920e704c9e5a7a2d55ed194e1e7769a8d7259526978",
+    "test_service.py": "6043483e16545088f74717ddd7228416c1c1f4b787ff2def86cfc58a19e638d9",
+    "TASK.md": "ffe88c1bbf6ae01f85479828d95796ba7943c9589684b3b17402c5a710de103a",
+    "review-input/change.patch": "a9e80c458cf5dda3488ed18ee992af827ace6a6eb4fc119222953189bb28de88",
+    "GUIDANCE.md": "36ab7246d4c974cbf7d195b92780d835c31863477e33aaca1f0a8389c0f48381"
+  },
+  "runtime": {
+    "path": "skill-studies/writing-explicit-rationale/runs/functional-pilot-01/runtime.json",
+    "sha256": "92d24a3ddc9cedfe0536efb14cb33ec178f87466c9bb8039884e9fc6d3637f92"
+  },
+  "isolation": {
+    "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/connector-qualification.json",
+    "sha256": "c988892403eee2e79555a6ad2a33beb15dbe197dda33abee11fa34caca9a68e2"
+  },
+  "criteria": {
+    "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/criteria/repeated-review.md",
+    "sha256": "fae907be2ff87a87511ef62bf59b99edcb05c519865a6cf56bf87b7b5b602bec"
+  },
+  "policy": {
+    "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/scoring-policy.txt",
+    "sha256": "2f5a7e512fb1a3d978b36f0b410b94bb8459565df1b1a8f6e2a835766bf7bc8c"
+  },
+  "runner_revision": "d79ec879e51c620a788925445c05aa5a07f648e5",
+  "subject_calls": 1,
+  "replacements": 0,
+  "evaluators": 0,
+  "size_method": "Compare complete delivered skill files using o200k_base for both as a common token-count proxy; report whitespace words separately."
+}

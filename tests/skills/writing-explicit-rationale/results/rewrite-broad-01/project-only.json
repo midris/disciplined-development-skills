@@ -1,0 +1,32 @@
+[
+  {
+    "label": "52757a0f",
+    "payload_sha256": "4be45bddc4e5e1b58c08e1675648746e3112ed73d6d846ad6715df51812a4a38",
+    "project_read": "Both interactive callers enforce admission and the batch importer bypasses it. The comment accurately says to reconsider factoring when a third interactive caller appears. The quota site explicitly explains the rejected-work risk and the bounded higher allowance for old tokens. No extra label rationale.",
+    "sealed_at": "2026-11-24T20:24:52.770369+00:00"
+  },
+  {
+    "label": "21b1407c",
+    "payload_sha256": "f0282aa7a9fd1c58d80d8c764c37860598b3a606e7d4ecb2b68fe1e44bbdf5b3",
+    "project_read": "The decision points to a documented 60-second constant, where the accepted extra quota and the risk of rejecting already-admitted work are explicit. Tests cover old and new tokens and the strict boundary. The second comment adds some repetition.",
+    "sealed_at": "2026-11-24T20:24:52.770610+00:00"
+  },
+  {
+    "label": "7390878d",
+    "payload_sha256": "564461ab16d3784acdff042f90056766a2f3154576d43fc572e49c70e7861548",
+    "project_read": "The predicate and nearby comment identify old-token work already admitted, the accepted extra quota and the strict cutoff. A reader must infer that immediately applying the lower limit could reject that work. The named predicates and boundary tests support that inference.",
+    "sealed_at": "2026-11-24T20:24:52.770665+00:00"
+  },
+  {
+    "label": "202df9df",
+    "payload_sha256": "79658a7411090f5d8f06c6cfc26c83361682c7eec3b9b92c51a50ad86705fef4",
+    "project_read": "The signed loan form controls publication credit through a rebrand until the lender amends it. Accession order lets the proof desk check corrections against keyed room sheets; the index serves title lookup. Both decisions are actionable in the spec.",
+    "sealed_at": "2026-11-24T20:25:23.249778+00:00"
+  },
+  {
+    "label": "2a40f636",
+    "payload_sha256": "568d2abd6468d1e88f6ba6f2ac352410126522b2e467cdb3040ecec5f4e88f85",
+    "project_read": "The spec leaves amendment authority with the lender and retains accession order because room sheets use that key for corrections. The index supplies a title lookup without disrupting production.",
+    "sealed_at": "2026-11-24T20:25:23.249949+00:00"
+  }
+]

@@ -1,0 +1,162 @@
+{
+  "subjects": [
+    {
+      "order": 1,
+      "batch": "codex-functional-pilot-01",
+      "local_order": 1,
+      "case": "catalog-review",
+      "condition": "original",
+      "config": "skill-studies/writing-explicit-rationale/runs/functional-pilot-01/codex/catalog-review-original.json",
+      "sha256": "d3cfc8cb62406282b84c9628e62f1f92d39d283db373f9cae18028f6c1379fff",
+      "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+      "inputs": {
+        "catalog-spec.md": "47079199a0021b20018e71305f75237dcb2d60df714400acd4e5aa6a1209d0a6",
+        "TASK.md": "0cdc1dbfd2a96ee1af6a579acbbbf0d168d3a2411b5a85ef7459a6484f5c2ca3",
+        "GUIDANCE.md": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe"
+      }
+    },
+    {
+      "order": 2,
+      "batch": "claude-functional-pilot-01",
+      "local_order": 1,
+      "case": "catalog-review",
+      "condition": "control",
+      "config": "skill-studies/writing-explicit-rationale/runs/functional-pilot-01/claude/catalog-review-control.json",
+      "sha256": "e374670e51ae474a2a204a3ecc7832c78c9b51815462ba9f382c6711f1154671",
+      "prompt_sha256": "f37b712f4d6ad47417b5706f57656537c1eaf5fb180bca568ee0d338604baf49",
+      "inputs": {
+        "catalog-spec.md": "47079199a0021b20018e71305f75237dcb2d60df714400acd4e5aa6a1209d0a6",
+        "TASK.md": "0cdc1dbfd2a96ee1af6a579acbbbf0d168d3a2411b5a85ef7459a6484f5c2ca3"
+      }
+    },
+    {
+      "order": 3,
+      "batch": "codex-functional-pilot-01",
+      "local_order": 2,
+      "case": "catalog-review",
+      "condition": "control",
+      "config": "skill-studies/writing-explicit-rationale/runs/functional-pilot-01/codex/catalog-review-control.json",
+      "sha256": "e7d6e1e2bd7955abf5472e08af352f7af35710d7aca575712768caffb573b523",
+      "prompt_sha256": "f37b712f4d6ad47417b5706f57656537c1eaf5fb180bca568ee0d338604baf49",
+      "inputs": {
+        "catalog-spec.md": "47079199a0021b20018e71305f75237dcb2d60df714400acd4e5aa6a1209d0a6",
+        "TASK.md": "0cdc1dbfd2a96ee1af6a579acbbbf0d168d3a2411b5a85ef7459a6484f5c2ca3"
+      }
+    },
+    {
+      "order": 4,
+      "batch": "claude-functional-pilot-01",
+      "local_order": 2,
+      "case": "catalog-review",
+      "condition": "original",
+      "config": "skill-studies/writing-explicit-rationale/runs/functional-pilot-01/claude/catalog-review-original.json",
+      "sha256": "5034cfa3d34a4ab6be981d65e20cb5125e3dccf159389970410ac0479048def3",
+      "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+      "inputs": {
+        "catalog-spec.md": "47079199a0021b20018e71305f75237dcb2d60df714400acd4e5aa6a1209d0a6",
+        "TASK.md": "0cdc1dbfd2a96ee1af6a579acbbbf0d168d3a2411b5a85ef7459a6484f5c2ca3",
+        "GUIDANCE.md": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe"
+      }
+    },
+    {
+      "order": 5,
+      "batch": "codex-functional-pilot-01",
+      "local_order": 3,
+      "case": "dispatch-hold",
+      "condition": "control",
+      "config": "skill-studies/writing-explicit-rationale/runs/functional-pilot-01/codex/dispatch-hold-control.json",
+      "sha256": "63e2c7bbdcb428e86ef2cfdf9e2ce8c0475ed722acb64e84d2b9a1bcb798ec10",
+      "prompt_sha256": "f37b712f4d6ad47417b5706f57656537c1eaf5fb180bca568ee0d338604baf49",
+      "inputs": {
+        "dispatch-spec.md": "76dcc70dff5e2c40d4a6b6338e45ef85c6ed8c4ea29bd05686f9bd98fc3e92a2",
+        "morning.py": "a06ddf3ada4c777000da069b61b51e80a41642e932f478e3de6959cb26cd68bb",
+        "overflow.py": "6eb1dfe529af1df3e2695f01ecf45f4494dbc7c6f063ad068e3222f4f8976e71",
+        "TASK.md": "cf6e6c88b6e8aef8dde9f205ab20bbbb63cef52683b341ca61b4a6237f978d77"
+      }
+    },
+    {
+      "order": 6,
+      "batch": "claude-functional-pilot-01",
+      "local_order": 3,
+      "case": "dispatch-hold",
+      "condition": "original",
+      "config": "skill-studies/writing-explicit-rationale/runs/functional-pilot-01/claude/dispatch-hold-original.json",
+      "sha256": "63555183784e90596d2a55ca95ac4eea825b2edc4e3c7712770e3a44fcf7163d",
+      "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+      "inputs": {
+        "dispatch-spec.md": "76dcc70dff5e2c40d4a6b6338e45ef85c6ed8c4ea29bd05686f9bd98fc3e92a2",
+        "morning.py": "a06ddf3ada4c777000da069b61b51e80a41642e932f478e3de6959cb26cd68bb",
+        "overflow.py": "6eb1dfe529af1df3e2695f01ecf45f4494dbc7c6f063ad068e3222f4f8976e71",
+        "TASK.md": "cf6e6c88b6e8aef8dde9f205ab20bbbb63cef52683b341ca61b4a6237f978d77",
+        "GUIDANCE.md": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe"
+      }
+    },
+    {
+      "order": 7,
+      "batch": "codex-functional-pilot-01",
+      "local_order": 4,
+      "case": "dispatch-hold",
+      "condition": "original",
+      "config": "skill-studies/writing-explicit-rationale/runs/functional-pilot-01/codex/dispatch-hold-original.json",
+      "sha256": "fe46303cb2550ed41fa3b526dd2bd4dbb68ff350d50c63db073b93d553ea6eb3",
+      "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+      "inputs": {
+        "dispatch-spec.md": "76dcc70dff5e2c40d4a6b6338e45ef85c6ed8c4ea29bd05686f9bd98fc3e92a2",
+        "morning.py": "a06ddf3ada4c777000da069b61b51e80a41642e932f478e3de6959cb26cd68bb",
+        "overflow.py": "6eb1dfe529af1df3e2695f01ecf45f4494dbc7c6f063ad068e3222f4f8976e71",
+        "TASK.md": "cf6e6c88b6e8aef8dde9f205ab20bbbb63cef52683b341ca61b4a6237f978d77",
+        "GUIDANCE.md": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe"
+      }
+    },
+    {
+      "order": 8,
+      "batch": "claude-functional-pilot-01",
+      "local_order": 4,
+      "case": "dispatch-hold",
+      "condition": "control",
+      "config": "skill-studies/writing-explicit-rationale/runs/functional-pilot-01/claude/dispatch-hold-control.json",
+      "sha256": "53a215e28935f0f981976e3a73b8bb4ebe13b9e92e048febd302356a7fea4f70",
+      "prompt_sha256": "f37b712f4d6ad47417b5706f57656537c1eaf5fb180bca568ee0d338604baf49",
+      "inputs": {
+        "dispatch-spec.md": "76dcc70dff5e2c40d4a6b6338e45ef85c6ed8c4ea29bd05686f9bd98fc3e92a2",
+        "morning.py": "a06ddf3ada4c777000da069b61b51e80a41642e932f478e3de6959cb26cd68bb",
+        "overflow.py": "6eb1dfe529af1df3e2695f01ecf45f4494dbc7c6f063ad068e3222f4f8976e71",
+        "TASK.md": "cf6e6c88b6e8aef8dde9f205ab20bbbb63cef52683b341ca61b4a6237f978d77"
+      }
+    }
+  ],
+  "readers": [
+    {
+      "order": 1,
+      "subject_order": 2
+    },
+    {
+      "order": 2,
+      "subject_order": 3
+    },
+    {
+      "order": 3,
+      "subject_order": 1
+    },
+    {
+      "order": 4,
+      "subject_order": 4
+    }
+  ],
+  "reader_template": {
+    "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/reader-smoke/config.json",
+    "version": null,
+    "sha256": "35f09d4f4adb2d8c6a723eadac105853e28175c9cc9f89c8c204e45ccf3da6cf"
+  },
+  "question": {
+    "path": "skill-studies/writing-explicit-rationale/cases/catalog-review/maintenance-question.txt",
+    "version": null,
+    "sha256": "9f86d070a1d06cd863fd6093d578aea115c40428908a7456467d1403f3c8f0e5"
+  },
+  "reader_execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}

@@ -1,0 +1,182 @@
+[
+  {
+    "label": "068239db",
+    "order": 1,
+    "subject_order": 13,
+    "action": "retain",
+    "decision_assessment": "sound handling of missing context",
+    "grounding_and_consequence": "The reader holds the proof, recognizes that the reason is absent and asks the spec owner to check possible dependencies before removing the rule. Registrar checks and gallery labels are presented as possibilities.",
+    "answer_sha256": "06f7e39817c264ae8077bb0e146e7393c9ef7d5d9fde1381ddc7b6a91544e3b2",
+    "assessed_at": "2026-11-24T07:45:17.101534+00:00"
+  },
+  {
+    "label": "3c0f4f80",
+    "order": 2,
+    "subject_order": 14,
+    "action": "retain",
+    "decision_assessment": "informed",
+    "grounding_and_consequence": "The reader grounds retention in matching corrections to room sheets and identifies the title index as the project's alternative.",
+    "answer_sha256": "5e5d79ca43be9cd3758538f94275f3f801f3c78b5ccc99ff309f4b37ca7a493b",
+    "assessed_at": "2026-11-24T07:45:17.101588+00:00"
+  },
+  {
+    "label": "41b09e49",
+    "order": 3,
+    "subject_order": 15,
+    "action": "retain",
+    "decision_assessment": "informed",
+    "grounding_and_consequence": "The reader uses the explicit proof-sheet key and accepted browsing cost to recommend retention. Any later change would need a viable checking process.",
+    "answer_sha256": "5c860c1992645b1ba089e46f8f4139945f9ba4e381477a92dc47ca6939f543d1",
+    "assessed_at": "2026-11-24T07:45:17.101590+00:00"
+  },
+  {
+    "label": "369b819a",
+    "order": 4,
+    "subject_order": 16,
+    "action": "retain",
+    "decision_assessment": "unsupported decision",
+    "grounding_and_consequence": "The reader notes a possible dependency but its actual follow-up asks the owner to approve a rule change, without checking what relies on the existing order. The project does not give the production reason. Retention is prudent today; approval alone would leave the tradeoff unresolved.",
+    "answer_sha256": "a01ba99edb389b6b9e5e1b41d2a674b500ef2022f31ac2f37b9ba44cae65dc27",
+    "assessed_at": "2026-11-24T07:45:24.784029+00:00"
+  },
+  {
+    "label": "f9601d9a",
+    "order": 6,
+    "subject_order": 42,
+    "action": "retain",
+    "decision_assessment": "sound handling of missing context",
+    "grounding_and_consequence": "The reader explicitly asks the owner whether anything needs accession order and branches on the answer. Possible uses and an index are accurately labeled as suggestions.",
+    "answer_sha256": "2de24d197a699dd3f2dfa88f98c2390e4c4de85784c20185ea9d47e74d891c39",
+    "assessed_at": "2026-11-24T07:45:38.077938+00:00"
+  },
+  {
+    "label": "e18cecc6",
+    "order": 8,
+    "subject_order": 44,
+    "action": "retain",
+    "decision_assessment": "informed",
+    "grounding_and_consequence": "The reader cites accession-keyed room sheets, the correction-check cost and the index. A future change would require a new way to check proofs.",
+    "answer_sha256": "58d27061c10e37209389bed257a672af477d4fb6f6587f0e67234feab7cde207",
+    "assessed_at": "2026-11-24T07:45:38.077990+00:00"
+  },
+  {
+    "label": "d1ac7603",
+    "order": 9,
+    "subject_order": 69,
+    "action": "retain",
+    "decision_assessment": "sound handling of missing context",
+    "grounding_and_consequence": "The reader says the reason is unknown, identifies specific possible dependencies as hypotheses, and holds the change because proceeding without asking could break one. Its final referral asks for owner approval; checking those dependencies is clearer in the rationale than in that referral.",
+    "answer_sha256": "6d867b21b3873081a3fbb2fb4ef418a7e1f7230603544c937fa2ad54840a2b8c",
+    "assessed_at": "2026-11-24T07:45:54.367877+00:00"
+  },
+  {
+    "label": "22524c33",
+    "order": 10,
+    "subject_order": 70,
+    "action": "retain",
+    "decision_assessment": "informed",
+    "grounding_and_consequence": "The reader links the sort to checking accession-keyed corrections, directs browsing to the index and asks for a replacement checking method before any change.",
+    "answer_sha256": "a15b9e3a0caba4632dba55f6c2f987acfb85aaa2a6a8ae2e979e085c272fd7da",
+    "assessed_at": "2026-11-24T07:46:01.035294+00:00"
+  },
+  {
+    "label": "1b7ea8a1",
+    "order": 11,
+    "subject_order": 71,
+    "action": "retain",
+    "decision_assessment": "informed",
+    "grounding_and_consequence": "The reader grounds its recommendation in the matching sheets, suggests a cross-reference or aligned reordering for a future change, and keeps today's order.",
+    "answer_sha256": "26819c070b9f473067ddb8a7472ed72f44c594c04694660ebbc721c096d851be",
+    "assessed_at": "2026-11-24T07:46:01.035357+00:00"
+  },
+  {
+    "label": "49a336bb",
+    "order": 12,
+    "subject_order": 72,
+    "action": "retain",
+    "decision_assessment": "informed",
+    "grounding_and_consequence": "The reader explains why mismatched list orders would impede proof correction, identifies the existing index and flags the proof desk's role in a change.",
+    "answer_sha256": "1d272ffd3eaa7823c82147ba1c1f3b4511eb5595460a425870d6e12fd52cd4fa",
+    "assessed_at": "2026-11-24T07:46:01.035359+00:00"
+  },
+  {
+    "label": "33e1a033",
+    "order": 13,
+    "subject_order": 85,
+    "action": "retain",
+    "decision_assessment": "informed",
+    "grounding_and_consequence": "The reader uses the line-by-line correction check, existing title index and proof desk ownership to explain retaining the current order.",
+    "answer_sha256": "1905823f4c2b44556f2bfed4a9d3e6e612782fc91ada81748ebf5d11d1defd82",
+    "assessed_at": "2026-11-24T07:46:05.821941+00:00"
+  },
+  {
+    "label": "ea7ce3a1",
+    "order": 14,
+    "subject_order": 86,
+    "action": "retain",
+    "decision_assessment": "informed",
+    "grounding_and_consequence": "The reader identifies the line-by-line proof dependency, distinguishes unavailable supporting documents and proposes a cross-reference for any future change.",
+    "answer_sha256": "c784da8ab6292803667d5ce91cc7a02aab403ec56aa8638ecd43ddf33f8e3458",
+    "assessed_at": "2026-11-24T07:47:26.057710+00:00"
+  },
+  {
+    "label": "93f95ebe",
+    "order": 15,
+    "subject_order": 87,
+    "action": "retain",
+    "decision_assessment": "informed",
+    "grounding_and_consequence": "The specification supports the link from accession order to room-sheet checks. The reader explains the additional lookup cost and points to the index.",
+    "answer_sha256": "343ed0f5ace57eede4ea5583ca7e91c5ce8e1a1c692283ddb99d62c94e19aee2",
+    "assessed_at": "2026-11-24T07:47:26.057842+00:00"
+  },
+  {
+    "label": "fc0e0832",
+    "order": 16,
+    "subject_order": 88,
+    "action": "retain",
+    "decision_assessment": "informed",
+    "grounding_and_consequence": "The reader explains why changing order increases correction-check risk and suggests changing room sheets if the workflow is redesigned.",
+    "answer_sha256": "bcacc20855d2c33a0749f6352a413bace99d72ac51fc7ed9f37adaa345042ccc",
+    "assessed_at": "2026-11-24T07:47:26.057844+00:00"
+  },
+  {
+    "label": "51e0fffa",
+    "order": 17,
+    "subject_order": 101,
+    "action": "retain",
+    "decision_assessment": "informed",
+    "grounding_and_consequence": "The recommendation directly links retention to avoiding manual cross-reference during proof checking, with title lookup available through the index.",
+    "answer_sha256": "dadb9cc5bfe6011e5266d99222f5031049ff906c4728826e2ba27c4375f2ce8d",
+    "assessed_at": "2026-11-24T07:47:26.057846+00:00"
+  },
+  {
+    "label": "d3acd5b3",
+    "order": 18,
+    "subject_order": 102,
+    "action": "retain",
+    "decision_assessment": "informed",
+    "grounding_and_consequence": "The reader grounds retention in matching the keyed room sheets and considers ways to preserve checking if publication order changes later.",
+    "answer_sha256": "0a0dd0db8b88c7c3f32ed9045071e528f4b487034c385f49ee59903634a1cedd",
+    "assessed_at": "2026-11-24T07:47:26.057847+00:00"
+  },
+  {
+    "label": "1caec7fa",
+    "order": 19,
+    "subject_order": 103,
+    "action": "retain",
+    "decision_assessment": "informed",
+    "grounding_and_consequence": "The reader cites the explicit production tradeoff, warns of mismatch and identifies the effect of reordering on the proof desk.",
+    "answer_sha256": "980d3364715cb071dc7b6792e8390e07167ae12f6376d250ea8949b6e3f204c7",
+    "assessed_at": "2026-11-24T07:47:26.057849+00:00"
+  },
+  {
+    "label": "5e7f60b2",
+    "order": 20,
+    "subject_order": 104,
+    "action": "retain",
+    "decision_assessment": "informed",
+    "grounding_and_consequence": "The reader connects room-sheet alignment to slower checks and mistakes if sorted by title, and makes a future change conditional on revising the workflow.",
+    "answer_sha256": "9365a0d7fb86622da0d5f455b694fc3cc916a1ab1dbcac5de960dbe139d8eeb9",
+    "assessed_at": "2026-11-24T07:47:26.057850+00:00"
+  }
+]

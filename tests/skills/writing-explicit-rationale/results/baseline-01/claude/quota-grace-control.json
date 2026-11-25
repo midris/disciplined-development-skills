@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.2",
+  "id": "project-task",
+  "prompt": "../task-prompt.txt",
+  "fixtures": [
+    {
+      "source": "../../../cases/quota-grace/fixture/quota.py",
+      "target": "quota.py"
+    },
+    {
+      "source": "../../../cases/quota-grace/fixture/test_quota.py",
+      "target": "test_quota.py"
+    },
+    {
+      "source": "../../../cases/quota-grace/task.md",
+      "target": "TASK.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "label": "ebcb0477",
+    "project_read": "CSV and JSON and the unrelated milestones stay in v1 or Later as appropriate. The XML item explicitly ties the wait to churn and stable partner approval.",
+    "payload_sha256": "3e8b882997ce9bc9ac5883859a966d48e855222cdf8793eda18b4c2eb1929778",
+    "sealed_at": "2026-11-24T23:03:52.455280+00:00"
+  },
+  {
+    "label": "e17f29fb",
+    "project_read": "The v1 item cross-references Later, where stable partner approval prompts reconsideration. The customer wait and retained formats are explicit. Some rationale is repeated.",
+    "payload_sha256": "ff4ffa74c601e53073e7ae7f9e845767859dc6ebec3c769ba13d1580e1711bdb",
+    "sealed_at": "2026-11-24T23:03:52.455459+00:00"
+  },
+  {
+    "label": "cf4cb687",
+    "project_read": "The Monday launch heading reads as a rollout date. Daily scope, guide, adoption review, both weekly deferrals, Finance trigger and possible manual Support work remain clear.",
+    "payload_sha256": "2807c06bbf7f6f8c84ccf9d4e0fde2a7a0f891e2f08d32c15c82fba8a2ff6969",
+    "sealed_at": "2026-11-24T23:05:13.478230+00:00"
+  },
+  {
+    "label": "6438a699",
+    "project_read": "The plan preserves daily scope, pre-rollout guide and first-month review. A single deferral explains both weekly items, the split-period dependency, reconsideration after Finance agreement and possible manual comparisons.",
+    "payload_sha256": "1c40700df4bdd13f02d8042483761de735438e8e7d86e8c52253a613a98bb61c",
+    "sealed_at": "2026-11-24T23:05:13.478407+00:00"
+  },
+  {
+    "label": "6e74227b",
+    "project_read": "Both callers use the renamed helper. The billing correction explanation stays next to normalization and the routine rename carries no new rationale.",
+    "payload_sha256": "c641dafd50787b5da77bded06be68d6ebbef6ee1eaa5ca6e6e771fd91a8d353f",
+    "sealed_at": "2026-11-24T23:06:31.240107+00:00"
+  },
+  {
+    "label": "7b6b6f2b",
+    "project_read": "Both callers use the renamed helper. The billing correction explanation stays next to normalization and the routine rename carries no new rationale.",
+    "payload_sha256": "c641dafd50787b5da77bded06be68d6ebbef6ee1eaa5ca6e6e771fd91a8d353f",
+    "sealed_at": "2026-11-24T23:06:31.240289+00:00"
+  },
+  {
+    "label": "99b4641c",
+    "project_read": "Both public planners delegate to one shared rule connected to the spec. It explains the wrong-address risk and the dispatcher's reason for retaining loaded parcels. The carrier source of address_check and the visibility consequence are stronger than established. The title stands alone.",
+    "payload_sha256": "c573466ff42f7b774c353085cbfa0afefdcbe9e2a177ce46f91fbc77697a6b29",
+    "sealed_at": "2026-11-24T23:07:50.460523+00:00"
+  },
+  {
+    "label": "0934ad56",
+    "project_read": "Both planners implement the same status set and exception with matching comments. The spec supplies the collection risk and the reason for keeping loaded parcels assigned. The carrier attribution for address_check is unverified. Repetition adds some upkeep.",
+    "payload_sha256": "61f9f87bf896a90ec09565e7b44077b1146aae1bc99cf37315a9186d85c212f6",
+    "sealed_at": "2026-11-24T23:07:50.460699+00:00"
+  },
+  {
+    "label": "fbf070d4",
+    "project_read": "The v1 cross-reference and Later item make the XML wait, churn and partner approval trigger explicit. CSV and JSON and the other milestones remain intact.",
+    "payload_sha256": "0050797e898ad7c7908444153e11ef1b146e934e3d89da35ee723970e0386aa7",
+    "sealed_at": "2026-11-24T23:09:08.548139+00:00"
+  },
+  {
+    "label": "0a9da084",
+    "project_read": "A compact Later item ties the XML wait to the changing schema and stable partner approval. CSV and JSON remain in v1 with the other commitments preserved.",
+    "payload_sha256": "40531b4a9d38ba03fda5784f30f4347a86adcf30ef64ead6021bd39859608c7c",
+    "sealed_at": "2026-11-24T23:09:08.548309+00:00"
+  },
+  {
+    "label": "6c066eec",
+    "project_read": "The daily features and guide stay in scope, with first-month review intact. Both weekly items are deferred for the unresolved split-period rule, reconsidered at Finance agreement and linked to possible manual work. No rollout date is introduced.",
+    "payload_sha256": "ade68a88122a58d8140eb2ca91d5e413d06fce23eb48074e61f9bd7a8095ceba",
+    "sealed_at": "2026-11-24T23:10:26.045475+00:00"
+  },
+  {
+    "label": "ca74adf7",
+    "project_read": "The plan names both daily and deferred weekly features, the Finance rule, the revisit trigger and conditional Support work. Guide and adoption review survive. The handoff date is not assigned to launch.",
+    "payload_sha256": "a5ade64317e37147762850dfe10ab2123188693449fa26b0cad2465a000b7d15",
+    "sealed_at": "2026-11-24T23:10:26.045629+00:00"
+  },
+  {
+    "label": "4cc7c40e",
+    "project_read": "Both callers use the renamed helper. The billing correction explanation stays next to normalization and the routine rename carries no new rationale.",
+    "payload_sha256": "c641dafd50787b5da77bded06be68d6ebbef6ee1eaa5ca6e6e771fd91a8d353f",
+    "sealed_at": "2026-11-24T23:11:43.035803+00:00"
+  },
+  {
+    "label": "0eeee736",
+    "project_read": "Both callers use the renamed helper. The billing correction explanation stays next to normalization and the routine rename carries no new rationale.",
+    "payload_sha256": "c641dafd50787b5da77bded06be68d6ebbef6ee1eaa5ca6e6e771fd91a8d353f",
+    "sealed_at": "2026-11-24T23:11:43.035994+00:00"
+  },
+  {
+    "label": "a2bec845",
+    "project_read": "The local sets and comments in both planners name the same holds as the spec, where collection risk and the loaded exception are explicit. Both required functions and the updated title remain identifiable. Carrier provenance is assumed.",
+    "payload_sha256": "546f16bfadc09609622e773b13e5c61ffc125587a06543203c2b69c6a8fee9f0",
+    "sealed_at": "2026-11-24T23:12:38.483513+00:00"
+  },
+  {
+    "label": "47c8be66",
+    "project_read": "Both public wrappers connect to the shared hold rule and spec. They preserve the dispatcher exception and the wrong-address reason. The extra wrapper comment explains API compatibility, while the title has no added rationale. The spec assumes carrier provenance.",
+    "payload_sha256": "1bf5f1221e03ba8cd989648b3e3ac1ca85a4dd8b32b2c66c38301a2c4b305b9b",
+    "sealed_at": "2026-11-24T23:12:38.483719+00:00"
+  }
+]

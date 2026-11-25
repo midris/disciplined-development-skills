@@ -1,0 +1,10 @@
+{
+  "order": 3,
+  "status": "COMPLETED",
+  "run_id": "20261125T190423047Z-project-task-097d7928-484d-4370-a430-d9e43fabdb97-cmkcv2f5",
+  "charge": 1,
+  "authority": "ab79a30aab4e49bc7b9baab819cdd0359abe0910",
+  "bundle": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/subjects/20261125T190423047Z-project-task-097d7928-484d-4370-a430-d9e43fabdb97-cmkcv2f5",
+  "inventory": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-02/controller/subject-03/inventory.json",
+  "inventory_sha256": "291944d84afe52995680dcb0f491d504ff5d887b4c3ee2bbbc71619d6786087c"
+}

@@ -1,0 +1,374 @@
+[
+  {
+    "order": 1,
+    "provider": "codex",
+    "case": "export-deferral",
+    "candidate": "comprehensive",
+    "config": "skill-studies/writing-explicit-rationale/runs/comparison-01/codex/export-deferral-comprehensive.json",
+    "sha256": "221914563bb778df4a87172c960f63236a85bf4ffcb5dd934d6035da86e71ba3",
+    "inputs": {
+      "release-plan.md": "9084d8bbd4a951aeb6fdf6972ddfb76f1fb1f670a0787a936459b74d92c8ad7d",
+      "TASK.md": "a5aee3e4025f4ab8426519ccfa22c21a76021c614d42f7abf38924eaae72a6aa",
+      "GUIDANCE.md": "568b2a61bef3f7694014fb89228f933261837acd4f2b5978b2b8ef55aa108c9f"
+    },
+    "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c"
+  },
+  {
+    "order": 2,
+    "provider": "claude",
+    "case": "export-deferral",
+    "candidate": "compact-01",
+    "config": "skill-studies/writing-explicit-rationale/runs/comparison-01/claude/export-deferral-compact-01.json",
+    "sha256": "ace903e7db48760f31573c959d829d8707b2cf1d70291a88d05e3990aa74b599",
+    "inputs": {
+      "release-plan.md": "9084d8bbd4a951aeb6fdf6972ddfb76f1fb1f670a0787a936459b74d92c8ad7d",
+      "TASK.md": "a5aee3e4025f4ab8426519ccfa22c21a76021c614d42f7abf38924eaae72a6aa",
+      "GUIDANCE.md": "4a41eb79feef84279c0086d31190f1bd975424f1fe5ef3dec40235f5eef6ed19"
+    },
+    "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c"
+  },
+  {
+    "order": 3,
+    "provider": "codex",
+    "case": "export-deferral",
+    "candidate": "compact-01",
+    "config": "skill-studies/writing-explicit-rationale/runs/comparison-01/codex/export-deferral-compact-01.json",
+    "sha256": "bc4497dd7386a0613842d9cfc9540e0cf13420d3c4ff6fc90fa6e030522ceb10",
+    "inputs": {
+      "release-plan.md": "9084d8bbd4a951aeb6fdf6972ddfb76f1fb1f670a0787a936459b74d92c8ad7d",
+      "TASK.md": "a5aee3e4025f4ab8426519ccfa22c21a76021c614d42f7abf38924eaae72a6aa",
+      "GUIDANCE.md": "4a41eb79feef84279c0086d31190f1bd975424f1fe5ef3dec40235f5eef6ed19"
+    },
+    "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c"
+  },
+  {
+    "order": 4,
+    "provider": "claude",
+    "case": "export-deferral",
+    "candidate": "baseline-edit",
+    "config": "skill-studies/writing-explicit-rationale/runs/comparison-01/claude/export-deferral-baseline-edit.json",
+    "sha256": "90bdaa8d17480f9ead1c839efc9dbf44b9b72c459ff713970c49e105287a3cd2",
+    "inputs": {
+      "release-plan.md": "9084d8bbd4a951aeb6fdf6972ddfb76f1fb1f670a0787a936459b74d92c8ad7d",
+      "TASK.md": "a5aee3e4025f4ab8426519ccfa22c21a76021c614d42f7abf38924eaae72a6aa",
+      "GUIDANCE.md": "b615797aa732254cf844ac830f49b016f002bd382e595ef9f5757b60f296ca04"
+    },
+    "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c"
+  },
+  {
+    "order": 5,
+    "provider": "codex",
+    "case": "export-deferral",
+    "candidate": "baseline-edit",
+    "config": "skill-studies/writing-explicit-rationale/runs/comparison-01/codex/export-deferral-baseline-edit.json",
+    "sha256": "9c42175731633d5fa49f0d22aab41a3d77a38cb2dfa72db3220256aa5158df0c",
+    "inputs": {
+      "release-plan.md": "9084d8bbd4a951aeb6fdf6972ddfb76f1fb1f670a0787a936459b74d92c8ad7d",
+      "TASK.md": "a5aee3e4025f4ab8426519ccfa22c21a76021c614d42f7abf38924eaae72a6aa",
+      "GUIDANCE.md": "b615797aa732254cf844ac830f49b016f002bd382e595ef9f5757b60f296ca04"
+    },
+    "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c"
+  },
+  {
+    "order": 6,
+    "provider": "claude",
+    "case": "export-deferral",
+    "candidate": "comprehensive",
+    "config": "skill-studies/writing-explicit-rationale/runs/comparison-01/claude/export-deferral-comprehensive.json",
+    "sha256": "abc8091e15ca72974e20525f02a57d1d792240e4d2519940d0e775fb4dc18b02",
+    "inputs": {
+      "release-plan.md": "9084d8bbd4a951aeb6fdf6972ddfb76f1fb1f670a0787a936459b74d92c8ad7d",
+      "TASK.md": "a5aee3e4025f4ab8426519ccfa22c21a76021c614d42f7abf38924eaae72a6aa",
+      "GUIDANCE.md": "568b2a61bef3f7694014fb89228f933261837acd4f2b5978b2b8ef55aa108c9f"
+    },
+    "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c"
+  },
+  {
+    "order": 7,
+    "provider": "codex",
+    "case": "quota-grace",
+    "candidate": "compact-01",
+    "config": "skill-studies/writing-explicit-rationale/runs/comparison-01/codex/quota-grace-compact-01.json",
+    "sha256": "58aaab6ea6c63d15a8a013a9704411e2be5a77d4170f4e62fccbaafe47d2f175",
+    "inputs": {
+      "quota.py": "7deed5997f6930227a84a71f1f8d1b70259c6a87c55faa5461a6064fdfaaa052",
+      "test_quota.py": "722b6b47ed52378f9e1d48128119e376009cb931a61b25503c78c5a96ef19e17",
+      "TASK.md": "2bddc0dacfe3a85b32251042c636a5edc14180568163e77ad3814153f9f9e781",
+      "GUIDANCE.md": "4a41eb79feef84279c0086d31190f1bd975424f1fe5ef3dec40235f5eef6ed19"
+    },
+    "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c"
+  },
+  {
+    "order": 8,
+    "provider": "claude",
+    "case": "quota-grace",
+    "candidate": "baseline-edit",
+    "config": "skill-studies/writing-explicit-rationale/runs/comparison-01/claude/quota-grace-baseline-edit.json",
+    "sha256": "1decf34db44aea5de23af8e390495862db6d51764082fa62f59442e5d04a612f",
+    "inputs": {
+      "quota.py": "7deed5997f6930227a84a71f1f8d1b70259c6a87c55faa5461a6064fdfaaa052",
+      "test_quota.py": "722b6b47ed52378f9e1d48128119e376009cb931a61b25503c78c5a96ef19e17",
+      "TASK.md": "2bddc0dacfe3a85b32251042c636a5edc14180568163e77ad3814153f9f9e781",
+      "GUIDANCE.md": "b615797aa732254cf844ac830f49b016f002bd382e595ef9f5757b60f296ca04"
+    },
+    "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c"
+  },
+  {
+    "order": 9,
+    "provider": "codex",
+    "case": "quota-grace",
+    "candidate": "baseline-edit",
+    "config": "skill-studies/writing-explicit-rationale/runs/comparison-01/codex/quota-grace-baseline-edit.json",
+    "sha256": "edc581001c6d4912d58e641c034f3f394f1a4c975795cd27efb060a39ee4cf97",
+    "inputs": {
+      "quota.py": "7deed5997f6930227a84a71f1f8d1b70259c6a87c55faa5461a6064fdfaaa052",
+      "test_quota.py": "722b6b47ed52378f9e1d48128119e376009cb931a61b25503c78c5a96ef19e17",
+      "TASK.md": "2bddc0dacfe3a85b32251042c636a5edc14180568163e77ad3814153f9f9e781",
+      "GUIDANCE.md": "b615797aa732254cf844ac830f49b016f002bd382e595ef9f5757b60f296ca04"
+    },
+    "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c"
+  },
+  {
+    "order": 10,
+    "provider": "claude",
+    "case": "quota-grace",
+    "candidate": "comprehensive",
+    "config": "skill-studies/writing-explicit-rationale/runs/comparison-01/claude/quota-grace-comprehensive.json",
+    "sha256": "12f328407f791198ed3b98b16bb8df83329345e2bbd1909a1a59cf49ead4c922",
+    "inputs": {
+      "quota.py": "7deed5997f6930227a84a71f1f8d1b70259c6a87c55faa5461a6064fdfaaa052",
+      "test_quota.py": "722b6b47ed52378f9e1d48128119e376009cb931a61b25503c78c5a96ef19e17",
+      "TASK.md": "2bddc0dacfe3a85b32251042c636a5edc14180568163e77ad3814153f9f9e781",
+      "GUIDANCE.md": "568b2a61bef3f7694014fb89228f933261837acd4f2b5978b2b8ef55aa108c9f"
+    },
+    "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c"
+  },
+  {
+    "order": 11,
+    "provider": "codex",
+    "case": "quota-grace",
+    "candidate": "comprehensive",
+    "config": "skill-studies/writing-explicit-rationale/runs/comparison-01/codex/quota-grace-comprehensive.json",
+    "sha256": "7ecf787cf280dd7967595098662199a09f9e6582c09a960d0d57b3380188209d",
+    "inputs": {
+      "quota.py": "7deed5997f6930227a84a71f1f8d1b70259c6a87c55faa5461a6064fdfaaa052",
+      "test_quota.py": "722b6b47ed52378f9e1d48128119e376009cb931a61b25503c78c5a96ef19e17",
+      "TASK.md": "2bddc0dacfe3a85b32251042c636a5edc14180568163e77ad3814153f9f9e781",
+      "GUIDANCE.md": "568b2a61bef3f7694014fb89228f933261837acd4f2b5978b2b8ef55aa108c9f"
+    },
+    "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c"
+  },
+  {
+    "order": 12,
+    "provider": "claude",
+    "case": "quota-grace",
+    "candidate": "compact-01",
+    "config": "skill-studies/writing-explicit-rationale/runs/comparison-01/claude/quota-grace-compact-01.json",
+    "sha256": "ff83251181064867e649e6cb103742744fd58bb289bd4ae1afa823299ae3fabc",
+    "inputs": {
+      "quota.py": "7deed5997f6930227a84a71f1f8d1b70259c6a87c55faa5461a6064fdfaaa052",
+      "test_quota.py": "722b6b47ed52378f9e1d48128119e376009cb931a61b25503c78c5a96ef19e17",
+      "TASK.md": "2bddc0dacfe3a85b32251042c636a5edc14180568163e77ad3814153f9f9e781",
+      "GUIDANCE.md": "4a41eb79feef84279c0086d31190f1bd975424f1fe5ef3dec40235f5eef6ed19"
+    },
+    "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c"
+  },
+  {
+    "order": 13,
+    "provider": "codex",
+    "case": "helper-rename",
+    "candidate": "baseline-edit",
+    "config": "skill-studies/writing-explicit-rationale/runs/comparison-01/codex/helper-rename-baseline-edit.json",
+    "sha256": "62af04943c18a7a06ed1a71c19d6f4badac76d24ffc46193946f4d70e3726187",
+    "inputs": {
+      "quota.py": "e5c815b04e0b2762a7fd5a9dc3c177c5bf1448485cc5c327e620d94ad75e380e",
+      "test_quota.py": "c56171f3404ac0da30c997764cd1ac2d8e23a6611de98b1b9091dd7ca6f131c3",
+      "TASK.md": "d8909c8434b07b49d875435e8441b8df850fdc0351fd5dee0087ec77d0cb09b6",
+      "GUIDANCE.md": "b615797aa732254cf844ac830f49b016f002bd382e595ef9f5757b60f296ca04"
+    },
+    "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c"
+  },
+  {
+    "order": 14,
+    "provider": "claude",
+    "case": "helper-rename",
+    "candidate": "comprehensive",
+    "config": "skill-studies/writing-explicit-rationale/runs/comparison-01/claude/helper-rename-comprehensive.json",
+    "sha256": "4c716c684c5b8b14e31104f7bbce452d0e675f9036d0811bb7bc345daab18d65",
+    "inputs": {
+      "quota.py": "e5c815b04e0b2762a7fd5a9dc3c177c5bf1448485cc5c327e620d94ad75e380e",
+      "test_quota.py": "c56171f3404ac0da30c997764cd1ac2d8e23a6611de98b1b9091dd7ca6f131c3",
+      "TASK.md": "d8909c8434b07b49d875435e8441b8df850fdc0351fd5dee0087ec77d0cb09b6",
+      "GUIDANCE.md": "568b2a61bef3f7694014fb89228f933261837acd4f2b5978b2b8ef55aa108c9f"
+    },
+    "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c"
+  },
+  {
+    "order": 15,
+    "provider": "codex",
+    "case": "helper-rename",
+    "candidate": "comprehensive",
+    "config": "skill-studies/writing-explicit-rationale/runs/comparison-01/codex/helper-rename-comprehensive.json",
+    "sha256": "126f30f381abb218ffaec1c8d0c6b7b15ce5d5ff1836bbf4fa7cead52eea613c",
+    "inputs": {
+      "quota.py": "e5c815b04e0b2762a7fd5a9dc3c177c5bf1448485cc5c327e620d94ad75e380e",
+      "test_quota.py": "c56171f3404ac0da30c997764cd1ac2d8e23a6611de98b1b9091dd7ca6f131c3",
+      "TASK.md": "d8909c8434b07b49d875435e8441b8df850fdc0351fd5dee0087ec77d0cb09b6",
+      "GUIDANCE.md": "568b2a61bef3f7694014fb89228f933261837acd4f2b5978b2b8ef55aa108c9f"
+    },
+    "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c"
+  },
+  {
+    "order": 16,
+    "provider": "claude",
+    "case": "helper-rename",
+    "candidate": "compact-01",
+    "config": "skill-studies/writing-explicit-rationale/runs/comparison-01/claude/helper-rename-compact-01.json",
+    "sha256": "bbcac1ccd155b7c0883e440c55c567af702356d34998057c3f8a07cb1ea549c7",
+    "inputs": {
+      "quota.py": "e5c815b04e0b2762a7fd5a9dc3c177c5bf1448485cc5c327e620d94ad75e380e",
+      "test_quota.py": "c56171f3404ac0da30c997764cd1ac2d8e23a6611de98b1b9091dd7ca6f131c3",
+      "TASK.md": "d8909c8434b07b49d875435e8441b8df850fdc0351fd5dee0087ec77d0cb09b6",
+      "GUIDANCE.md": "4a41eb79feef84279c0086d31190f1bd975424f1fe5ef3dec40235f5eef6ed19"
+    },
+    "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c"
+  },
+  {
+    "order": 17,
+    "provider": "codex",
+    "case": "helper-rename",
+    "candidate": "compact-01",
+    "config": "skill-studies/writing-explicit-rationale/runs/comparison-01/codex/helper-rename-compact-01.json",
+    "sha256": "3bebd2540be1f4d888e1b6561f0de723bfd6aeb3343ff9659edef0e281cdc562",
+    "inputs": {
+      "quota.py": "e5c815b04e0b2762a7fd5a9dc3c177c5bf1448485cc5c327e620d94ad75e380e",
+      "test_quota.py": "c56171f3404ac0da30c997764cd1ac2d8e23a6611de98b1b9091dd7ca6f131c3",
+      "TASK.md": "d8909c8434b07b49d875435e8441b8df850fdc0351fd5dee0087ec77d0cb09b6",
+      "GUIDANCE.md": "4a41eb79feef84279c0086d31190f1bd975424f1fe5ef3dec40235f5eef6ed19"
+    },
+    "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c"
+  },
+  {
+    "order": 18,
+    "provider": "claude",
+    "case": "helper-rename",
+    "candidate": "baseline-edit",
+    "config": "skill-studies/writing-explicit-rationale/runs/comparison-01/claude/helper-rename-baseline-edit.json",
+    "sha256": "926707019f36c91011f515f8b02a0aa222837716e080a287576263f1b277f09b",
+    "inputs": {
+      "quota.py": "e5c815b04e0b2762a7fd5a9dc3c177c5bf1448485cc5c327e620d94ad75e380e",
+      "test_quota.py": "c56171f3404ac0da30c997764cd1ac2d8e23a6611de98b1b9091dd7ca6f131c3",
+      "TASK.md": "d8909c8434b07b49d875435e8441b8df850fdc0351fd5dee0087ec77d0cb09b6",
+      "GUIDANCE.md": "b615797aa732254cf844ac830f49b016f002bd382e595ef9f5757b60f296ca04"
+    },
+    "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c"
+  },
+  {
+    "order": 19,
+    "provider": "codex",
+    "case": "repeated-review",
+    "candidate": "comprehensive",
+    "config": "skill-studies/writing-explicit-rationale/runs/comparison-01/codex/repeated-review-comprehensive.json",
+    "sha256": "80e12effd2d117c22648ac92b3edc593410691d4fb9104eefe73d9dc908f6245",
+    "inputs": {
+      "ingest.py": "3eb96679a60bc60fbded053fd83be60b6df52a6478cab6319a9e7eccbbafbf81",
+      "labels.py": "ea76992b87ebfbd550cae798faf0a4c746fe1cd6ba42857c4b76f40b6b651c30",
+      "quota.py": "5f9ea763f1380feaf0dc7920e704c9e5a7a2d55ed194e1e7769a8d7259526978",
+      "test_service.py": "6043483e16545088f74717ddd7228416c1c1f4b787ff2def86cfc58a19e638d9",
+      "TASK.md": "ffe88c1bbf6ae01f85479828d95796ba7943c9589684b3b17402c5a710de103a",
+      "review-input/change.patch": "a9e80c458cf5dda3488ed18ee992af827ace6a6eb4fc119222953189bb28de88",
+      "GUIDANCE.md": "568b2a61bef3f7694014fb89228f933261837acd4f2b5978b2b8ef55aa108c9f"
+    },
+    "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c"
+  },
+  {
+    "order": 20,
+    "provider": "claude",
+    "case": "repeated-review",
+    "candidate": "compact-01",
+    "config": "skill-studies/writing-explicit-rationale/runs/comparison-01/claude/repeated-review-compact-01.json",
+    "sha256": "06d68650a760b3a8f37c4e97de91dd86cfa9dabcba488f9690915e778352e957",
+    "inputs": {
+      "ingest.py": "3eb96679a60bc60fbded053fd83be60b6df52a6478cab6319a9e7eccbbafbf81",
+      "labels.py": "ea76992b87ebfbd550cae798faf0a4c746fe1cd6ba42857c4b76f40b6b651c30",
+      "quota.py": "5f9ea763f1380feaf0dc7920e704c9e5a7a2d55ed194e1e7769a8d7259526978",
+      "test_service.py": "6043483e16545088f74717ddd7228416c1c1f4b787ff2def86cfc58a19e638d9",
+      "TASK.md": "ffe88c1bbf6ae01f85479828d95796ba7943c9589684b3b17402c5a710de103a",
+      "review-input/change.patch": "a9e80c458cf5dda3488ed18ee992af827ace6a6eb4fc119222953189bb28de88",
+      "GUIDANCE.md": "4a41eb79feef84279c0086d31190f1bd975424f1fe5ef3dec40235f5eef6ed19"
+    },
+    "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c"
+  },
+  {
+    "order": 21,
+    "provider": "codex",
+    "case": "repeated-review",
+    "candidate": "compact-01",
+    "config": "skill-studies/writing-explicit-rationale/runs/comparison-01/codex/repeated-review-compact-01.json",
+    "sha256": "413e59de2f177c66d2484ae3f0f9d5de683e2dde44de5c98274e62a1367b3032",
+    "inputs": {
+      "ingest.py": "3eb96679a60bc60fbded053fd83be60b6df52a6478cab6319a9e7eccbbafbf81",
+      "labels.py": "ea76992b87ebfbd550cae798faf0a4c746fe1cd6ba42857c4b76f40b6b651c30",
+      "quota.py": "5f9ea763f1380feaf0dc7920e704c9e5a7a2d55ed194e1e7769a8d7259526978",
+      "test_service.py": "6043483e16545088f74717ddd7228416c1c1f4b787ff2def86cfc58a19e638d9",
+      "TASK.md": "ffe88c1bbf6ae01f85479828d95796ba7943c9589684b3b17402c5a710de103a",
+      "review-input/change.patch": "a9e80c458cf5dda3488ed18ee992af827ace6a6eb4fc119222953189bb28de88",
+      "GUIDANCE.md": "4a41eb79feef84279c0086d31190f1bd975424f1fe5ef3dec40235f5eef6ed19"
+    },
+    "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c"
+  },
+  {
+    "order": 22,
+    "provider": "claude",
+    "case": "repeated-review",
+    "candidate": "baseline-edit",
+    "config": "skill-studies/writing-explicit-rationale/runs/comparison-01/claude/repeated-review-baseline-edit.json",
+    "sha256": "7968ae8a488fcded8bd7eb3a4d5f452d1fda06a608612d7f15a35f9db4abe562",
+    "inputs": {
+      "ingest.py": "3eb96679a60bc60fbded053fd83be60b6df52a6478cab6319a9e7eccbbafbf81",
+      "labels.py": "ea76992b87ebfbd550cae798faf0a4c746fe1cd6ba42857c4b76f40b6b651c30",
+      "quota.py": "5f9ea763f1380feaf0dc7920e704c9e5a7a2d55ed194e1e7769a8d7259526978",
+      "test_service.py": "6043483e16545088f74717ddd7228416c1c1f4b787ff2def86cfc58a19e638d9",
+      "TASK.md": "ffe88c1bbf6ae01f85479828d95796ba7943c9589684b3b17402c5a710de103a",
+      "review-input/change.patch": "a9e80c458cf5dda3488ed18ee992af827ace6a6eb4fc119222953189bb28de88",
+      "GUIDANCE.md": "b615797aa732254cf844ac830f49b016f002bd382e595ef9f5757b60f296ca04"
+    },
+    "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c"
+  },
+  {
+    "order": 23,
+    "provider": "codex",
+    "case": "repeated-review",
+    "candidate": "baseline-edit",
+    "config": "skill-studies/writing-explicit-rationale/runs/comparison-01/codex/repeated-review-baseline-edit.json",
+    "sha256": "3c0d829aac1b9928924c5fe2c55e0a9403eaaef66c4935d03adea3a83883814a",
+    "inputs": {
+      "ingest.py": "3eb96679a60bc60fbded053fd83be60b6df52a6478cab6319a9e7eccbbafbf81",
+      "labels.py": "ea76992b87ebfbd550cae798faf0a4c746fe1cd6ba42857c4b76f40b6b651c30",
+      "quota.py": "5f9ea763f1380feaf0dc7920e704c9e5a7a2d55ed194e1e7769a8d7259526978",
+      "test_service.py": "6043483e16545088f74717ddd7228416c1c1f4b787ff2def86cfc58a19e638d9",
+      "TASK.md": "ffe88c1bbf6ae01f85479828d95796ba7943c9589684b3b17402c5a710de103a",
+      "review-input/change.patch": "a9e80c458cf5dda3488ed18ee992af827ace6a6eb4fc119222953189bb28de88",
+      "GUIDANCE.md": "b615797aa732254cf844ac830f49b016f002bd382e595ef9f5757b60f296ca04"
+    },
+    "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c"
+  },
+  {
+    "order": 24,
+    "provider": "claude",
+    "case": "repeated-review",
+    "candidate": "comprehensive",
+    "config": "skill-studies/writing-explicit-rationale/runs/comparison-01/claude/repeated-review-comprehensive.json",
+    "sha256": "811132edd55078d409ef7d1b067147269eb47d753048cb025a5399984b4264fb",
+    "inputs": {
+      "ingest.py": "3eb96679a60bc60fbded053fd83be60b6df52a6478cab6319a9e7eccbbafbf81",
+      "labels.py": "ea76992b87ebfbd550cae798faf0a4c746fe1cd6ba42857c4b76f40b6b651c30",
+      "quota.py": "5f9ea763f1380feaf0dc7920e704c9e5a7a2d55ed194e1e7769a8d7259526978",
+      "test_service.py": "6043483e16545088f74717ddd7228416c1c1f4b787ff2def86cfc58a19e638d9",
+      "TASK.md": "ffe88c1bbf6ae01f85479828d95796ba7943c9589684b3b17402c5a710de103a",
+      "review-input/change.patch": "a9e80c458cf5dda3488ed18ee992af827ace6a6eb4fc119222953189bb28de88",
+      "GUIDANCE.md": "568b2a61bef3f7694014fb89228f933261837acd4f2b5978b2b8ef55aa108c9f"
+    },
+    "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c"
+  }
+]

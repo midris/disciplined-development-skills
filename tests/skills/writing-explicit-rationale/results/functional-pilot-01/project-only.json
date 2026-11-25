@@ -1,0 +1,66 @@
+[
+  {
+    "label": "213a0e1c",
+    "sealed_at": "2026-11-23T14:06:35.593617+00:00",
+    "payload_sha256": "f2dcb974bee08bb1d53e148c8f13e4f29b35dc4ff3ea124a11f20131ab13bd63",
+    "project_read": "Signed publication credit changes on amendment. Room sheets keyed by accession enable correction checks; title lookup shifts to the index. Both choices and consequences are explicit.",
+    "R1": "met",
+    "R2": "met"
+  },
+  {
+    "label": "65c7fa69",
+    "sealed_at": "2026-11-23T14:06:35.593728+00:00",
+    "payload_sha256": "0a7d137418e6ec0f2d138ff8eacf619bb0bc3fab4f8c3865d91f7fc9beeb2610",
+    "project_read": "The signed credit binds even after rebranding. Room order allows checking corrections against sheets keyed by accession, with title lookup in the index.",
+    "R1": "met",
+    "R2": "met"
+  },
+  {
+    "label": "68c34b20",
+    "sealed_at": "2026-11-23T14:06:35.593760+00:00",
+    "payload_sha256": "470d15f905614897cd533c1df01a443c87295649a84c7d8b16b8e900dbc68d73",
+    "project_read": "The lender must submit an amended form to change credit. Within-room accession order enables checking proofs against sheets. The title index is available. Both reasons survive in the spec itself.",
+    "R1": "met",
+    "R2": "met"
+  },
+  {
+    "label": "8ceea5e0",
+    "sealed_at": "2026-11-23T14:06:35.593813+00:00",
+    "payload_sha256": "519967a89aa8c072c16c31e7831c4dc2334c6e27ff4b6ac2e967634f15a87287",
+    "project_read": "The signed form records the approved credit until the lender amends it. The proof desk matches corrections by accession; alphabetical browsing gives way to the index.",
+    "R1": "met",
+    "R2": "met"
+  },
+  {
+    "label": "04ff7ad8",
+    "sealed_at": "2026-11-23T14:08:45.371518+00:00",
+    "payload_sha256": "f206f1af1900238f389df3e396e13834ac316803a3ac4d13568e6503b4b6e7e0",
+    "project_read": "Both lookups use the status names in Holds. Spec retains both reasons and then repeats the loaded exception. No story about the title.",
+    "R1": "met",
+    "R2": "met"
+  },
+  {
+    "label": "42088656",
+    "sealed_at": "2026-11-23T14:08:45.372123+00:00",
+    "payload_sha256": "a502d662c48b0e682cf76ada326be8159899ed0e7016f4c39ff13a9f3551ba7d",
+    "project_read": "Both simple conditions use the names in the spec, which explains changing addresses and dispatcher redirection. No title justification.",
+    "R1": "met",
+    "R2": "met"
+  },
+  {
+    "label": "59f262e9",
+    "sealed_at": "2026-11-23T14:08:45.372236+00:00",
+    "payload_sha256": "35965bf2d1b1c1e58a6410a38d5dcca297229485fa540c102765e3a305f5d96a",
+    "project_read": "Both planner-local sets match the statuses named in the spec. Holds explains why assignments survive and why new trips exclude held parcels. Title is bare.",
+    "R1": "met",
+    "R2": "met"
+  },
+  {
+    "label": "a1af3543",
+    "sealed_at": "2026-11-23T14:08:45.372494+00:00",
+    "payload_sha256": "6fd3234f7a7d7145f0be45a771b308d6a72163958d8850469c0b219e0c636765",
+    "project_read": "From either lookup follow the shared holds constant to the cited Holds section. Project explains redirection, new-trip risk and shared membership. The title changes without extra explanation.",
+    "R1": "met",
+    "R2": "met"
+  }
+]

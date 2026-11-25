@@ -1,0 +1,10 @@
+{
+  "order": 3,
+  "run_id": "20261124T193424710Z-project-task-2a44198b-224f-4143-b9e1-3b3e4464334f-wsek_xsw",
+  "status": "COMPLETED",
+  "launcher_charge": 1,
+  "bundle": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-screen-01/rep-3/20261124T193424710Z-project-task-2a44198b-224f-4143-b9e1-3b3e4464334f-wsek_xsw",
+  "inventory": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-screen-01/rep-3/inventory.json",
+  "inventory_sha256": "996ea0cb1c6e1aee7ff48fd5c0f6ca5c6f55bad45383d41f76bc362f7163702a",
+  "approval": "9ccd97cfb9a993518153e2cd524720beae0683a2"
+}

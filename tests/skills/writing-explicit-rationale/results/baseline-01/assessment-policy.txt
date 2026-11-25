@@ -1,0 +1,7 @@
+Judge the complete artifact against each applicable criterion on the case card.
+Record met, not met or insufficient evidence with a specific artifact, replay or trace reference.
+A valid execution succeeds functionally when all functional criteria are met, fails if any is not met, and otherwise has an unknown outcome.
+Record native selection separately and explain shared causes once.
+Record each positive output’s eligibility before reader scores are available.
+Follow the reader-first procedure in the focused design and case package guide, seal first readings before full-evidence reconciliation, and report skips, gaps and invalid attempts separately.
+Include every valid-setup execution, including control failures, with one descriptive observation per cell.

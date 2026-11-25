@@ -1,0 +1,89 @@
+{
+  "sealed_at": "2026-11-22T22:31:29.516959+00:00",
+  "judgments": [
+    {
+      "label": "project-1",
+      "payload_sha256": "ac007e461321a734b7a667477b81a1f771a5ffae2ebdbd7607e35c6989217d82",
+      "T1": "met",
+      "R1": "met",
+      "reason": "Both daily and weekly pairs explicit. Reconsideration and conditional Support work stated separately."
+    },
+    {
+      "label": "project-2",
+      "payload_sha256": "90510fe97f5b80305407ae05e66d18d85a04e011e9c49cbb0fb79109f2cf58e5",
+      "T1": "met",
+      "R1": "met",
+      "reason": "Explicit scope and Finance revisit condition. Accepted risk remains conditional on a cross-period week."
+    },
+    {
+      "label": "project-3",
+      "payload_sha256": "ceb1705acd8a60f4e59a27d491ad95379b7cfbfcac791b07032060c019323d83",
+      "T1": "met",
+      "R1": "met",
+      "reason": "Monday handoff heading accurately frames four concise bullets, including reconsideration."
+    },
+    {
+      "label": "project-4",
+      "payload_sha256": "6a110310332d5d083881a5c31e7cfe34908940b4485e2b8a896dfa34a935ab9d",
+      "T1": "met",
+      "R1": "met",
+      "reason": "Names both weekly items, Finance decision and conditional manual work at the deferral."
+    },
+    {
+      "label": "project-5",
+      "payload_sha256": "fb97e69815cb8b984b265016e5bf14c1633fc370836680d6c004a78df9960e2c",
+      "T1": "met",
+      "R1": "met",
+      "reason": "Defer until Finance agrees under After launch. No delivery verb or date commits implementation. Reconsideration is implicit; precision caveat."
+    },
+    {
+      "label": "project-6",
+      "payload_sha256": "3c34f3facd57b400fcad1749618c68a22cc9aaf19fd56bdac40de4bf3ac59bcd",
+      "T1": "met",
+      "R1": "met",
+      "reason": "States the reason, the agreed revisit and the conditional Support work directly."
+    },
+    {
+      "label": "project-7",
+      "payload_sha256": "1dee4c5a36f633f1f3a0064f793294cddbfd6f4cf333eb30d4e89268d99f3949",
+      "T1": "met",
+      "R1": "met",
+      "reason": "After launch grouping is clarified by explicit deferral and reconsideration on Finance agreement."
+    },
+    {
+      "label": "project-8",
+      "payload_sha256": "491f808a925e0e3505988863e78dbe40a8b10acbbd9d284665b16bc22791ceea",
+      "T1": "met",
+      "R1": "met",
+      "reason": "Daily scope is explicit. Reconsideration of both weekly items under After launch makes their status recoverable."
+    },
+    {
+      "label": "project-9",
+      "payload_sha256": "05b240c87963efa20bbb063cc88777fc03df7cfb3bcc6dad88105bf030cc415b",
+      "T1": "met",
+      "R1": "met",
+      "reason": "Names both weekly items in an explicit reconsideration step. Manual work applies only to affected weeks."
+    },
+    {
+      "label": "project-10",
+      "payload_sha256": "f519b2d495e31d30a1e9cfb07b363320fe170bde2519db0c2e4ed180c4343e24",
+      "T1": "not met",
+      "R1": "met",
+      "reason": "Monday launch heading introduces a launch date. The request dates only the handoff; Operations could schedule rollout and the guide against the wrong date. Weekly rationale, trigger and conditional impact are accurate."
+    },
+    {
+      "label": "project-11",
+      "payload_sha256": "7777c2306d2b018822b4021f7ca8e292d130f3f1848acf032d94fbf20f6fbb21",
+      "T1": "met",
+      "R1": "met",
+      "reason": "Launch and deferred sections name both pairs. Reconsideration and possible manual work are clear."
+    },
+    {
+      "label": "project-12",
+      "payload_sha256": "de7b4ba2e1235d33ad82e2553864080477a6ebeb6eb424783e7121316f6ce855",
+      "T1": "met",
+      "R1": "met",
+      "reason": "Both pairs and milestones are intact. The shared deferral explains the Finance rule and possible manual work."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+name: Writing Explicit Rationale study
+on:
+  pull_request:
+    paths:
+      - skills/writing-explicit-rationale/**
+      - tests/skills/writing-explicit-rationale/**
+      - tests/runner/**
+      - .github/workflows/wer-study.yml
+  push:
+    branches: [main]
+    paths:
+      - skills/writing-explicit-rationale/**
+      - tests/skills/writing-explicit-rationale/**
+      - tests/runner/**
+      - .github/workflows/wer-study.yml
+jobs:
+  verify:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: brew install uv git
+      - working-directory: tests/runner
+        run: |
+          uv sync --locked
+          study=../skills/writing-explicit-rationale
+          uv run --locked --offline python "$study/verify.py"
+          uv run --locked --offline pytest -q "$study/cases/test_reader_payload.py"
+          uv run --locked --offline python "$study/cases/qualify.py" "$RUNNER_TEMP/wer-qualification"

@@ -1,0 +1,41 @@
+{
+  "schema_version": "0.2",
+  "id": "project-task",
+  "prompt": "../../baseline-01/original-prompt.txt",
+  "fixtures": [
+    {
+      "source": "../../../cases/repeated-review/fixture/ingest.py",
+      "target": "ingest.py"
+    },
+    {
+      "source": "../../../cases/repeated-review/fixture/labels.py",
+      "target": "labels.py"
+    },
+    {
+      "source": "../../../cases/repeated-review/fixture/quota.py",
+      "target": "quota.py"
+    },
+    {
+      "source": "../../../cases/repeated-review/fixture/test_service.py",
+      "target": "test_service.py"
+    },
+    {
+      "source": "../../../cases/repeated-review/task.md",
+      "target": "TASK.md"
+    },
+    {
+      "source": "../../../cases/repeated-review/change.patch",
+      "target": "review-input/change.patch"
+    },
+    {
+      "source": "../../../drafts/explicit-residual-risk/SKILL.md",
+      "target": "GUIDANCE.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}

@@ -1,0 +1,134 @@
+[
+  {
+    "order": 1,
+    "provider": "codex",
+    "arm": "shipped",
+    "project_label": "project-9",
+    "T1": "met",
+    "R1": "met",
+    "basis": "Names both weekly items in an explicit reconsideration step. Manual work applies only to affected weeks.",
+    "handoff_review": "Consistent with the project on the launch decision.",
+    "handoff_sha256": "c687e88d6fa5237ae9aaee3f38f17a7c877e36201a7cb9bebbacfa78204665f2"
+  },
+  {
+    "order": 2,
+    "provider": "claude",
+    "arm": "control",
+    "project_label": "project-11",
+    "T1": "met",
+    "R1": "met",
+    "basis": "Launch and deferred sections name both pairs. Reconsideration and possible manual work are clear.",
+    "handoff_review": "Consistent with the project on the launch decision.",
+    "handoff_sha256": "691656322e583c1206952542bb3f09591c7e3ba6480bd0e1fbf075004a5c4589"
+  },
+  {
+    "order": 3,
+    "provider": "codex",
+    "arm": "control",
+    "project_label": "project-10",
+    "T1": "not met",
+    "R1": "met",
+    "basis": "Monday launch heading introduces a launch date. The request dates only the handoff; Operations could schedule rollout and the guide against the wrong date. Weekly rationale, trigger and conditional impact are accurate.",
+    "handoff_review": "Response correctly calls Monday the handoff, but the durable plan still labels it the launch. The conflicting heading could change scheduling.",
+    "handoff_sha256": "02d11852f989f69e6506b86f8885772ea80ac532798ee73980df29b645b1574e"
+  },
+  {
+    "order": 4,
+    "provider": "claude",
+    "arm": "revision",
+    "project_label": "project-12",
+    "T1": "met",
+    "R1": "met",
+    "basis": "Both pairs and milestones are intact. The shared deferral explains the Finance rule and possible manual work.",
+    "handoff_review": "Consistent with the project on the launch decision.",
+    "handoff_sha256": "acb47003bb2b4a613d16ab8c31712c5f43f9e7192dee4200783580ecc5def360"
+  },
+  {
+    "order": 5,
+    "provider": "codex",
+    "arm": "revision",
+    "project_label": "project-7",
+    "T1": "met",
+    "R1": "met",
+    "basis": "After launch grouping is clarified by explicit deferral and reconsideration on Finance agreement.",
+    "handoff_review": "Consistent with the project on the launch decision.",
+    "handoff_sha256": "3e92bc50e6478a6d6f5f8cd5c237feb6f63d121ba44c70fb70e446ff2f378547"
+  },
+  {
+    "order": 6,
+    "provider": "claude",
+    "arm": "shipped",
+    "project_label": "project-4",
+    "T1": "met",
+    "R1": "met",
+    "basis": "Names both weekly items, Finance decision and conditional manual work at the deferral.",
+    "handoff_review": "Consistent with the project on the launch decision.",
+    "handoff_sha256": "18e76a2fb216f4944f51b713835e27bf4c2a7321c4685666882ef41d7a95873b"
+  },
+  {
+    "order": 7,
+    "provider": "codex",
+    "arm": "revision",
+    "project_label": "project-5",
+    "T1": "met",
+    "R1": "met",
+    "basis": "Defer until Finance agrees under After launch. No delivery verb or date commits implementation. Reconsideration is implicit; precision caveat.",
+    "handoff_review": "Response also says pending. The deliverable makes approval a prerequisite without expressly promising to ship.",
+    "handoff_sha256": "854f7253584f74702f115a8fbe1d182c39cbc1af6b2ab944782e01176068a072"
+  },
+  {
+    "order": 8,
+    "provider": "claude",
+    "arm": "control",
+    "project_label": "project-1",
+    "T1": "met",
+    "R1": "met",
+    "basis": "Both daily and weekly pairs explicit. Reconsideration and conditional Support work stated separately.",
+    "handoff_review": "Consistent with the project on the launch decision.",
+    "handoff_sha256": "bf7c16856eeaf01c3a976b428979085c7af705dbcd96ffa5c6d4ae29d1cc5204"
+  },
+  {
+    "order": 9,
+    "provider": "codex",
+    "arm": "control",
+    "project_label": "project-3",
+    "T1": "met",
+    "R1": "met",
+    "basis": "Monday handoff heading accurately frames four concise bullets, including reconsideration.",
+    "handoff_review": "Consistent with the project on the launch decision.",
+    "handoff_sha256": "519fb8b2b3b58c7d96eef7df70303e594d1bee5e6e05ac8492702a87df4aaec4"
+  },
+  {
+    "order": 10,
+    "provider": "claude",
+    "arm": "shipped",
+    "project_label": "project-2",
+    "T1": "met",
+    "R1": "met",
+    "basis": "Explicit scope and Finance revisit condition. Accepted risk remains conditional on a cross-period week.",
+    "handoff_review": "Consistent with the project on the launch decision.",
+    "handoff_sha256": "ffea757b35f2cddff7a799eb2025fbebb58f5624eb6c41ee23f43faa900d5b37"
+  },
+  {
+    "order": 11,
+    "provider": "codex",
+    "arm": "shipped",
+    "project_label": "project-8",
+    "T1": "met",
+    "R1": "met",
+    "basis": "Daily scope is explicit. Reconsideration of both weekly items under After launch makes their status recoverable.",
+    "handoff_review": "Consistent with the project on the launch decision.",
+    "handoff_sha256": "7eb1284ce626210cb6fb3f4c4b71df51d21a6d2fb92a805eb58fb38bdd368e4f"
+  },
+  {
+    "order": 12,
+    "provider": "claude",
+    "arm": "revision",
+    "project_label": "project-6",
+    "T1": "met",
+    "R1": "met",
+    "basis": "States the reason, the agreed revisit and the conditional Support work directly.",
+    "handoff_review": "Handoff says the items come back. The plan explicitly says revisit and keeps delivery open.",
+    "handoff_sha256": "b9a253cf92e7d69506752becd0a7532bc75d7fbad2f587651864cd463e7152a9"
+  }
+]

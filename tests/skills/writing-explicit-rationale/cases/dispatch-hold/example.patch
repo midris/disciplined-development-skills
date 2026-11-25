@@ -1,0 +1,28 @@
+--- a/dispatch-spec.md
++++ b/dispatch-spec.md
+@@ -4,4 +4,4 @@
+ 
+ A held parcel can change destination before it leaves the depot. Both planners leave it off new trips so a driver does not collect it for the wrong address. The dispatcher owns any trip that already has the parcel loaded. Keep that parcel on its assigned trip so the dispatcher can redirect it.
+ 
+-The carrier currently sends the hold status as `manual_hold`.
++The carrier sends `manual_hold`. Apply the same hold policy to parcels in `address_check`.
+--- a/morning.py
++++ b/morning.py
+@@ -2,4 +2,5 @@
+ 
+ 
+ def include_in_morning(status, already_loaded):
+-    return already_loaded or status != "manual_hold"
++    # Loaded parcels stay with their dispatcher. See dispatch-spec.md, Holds.
++    return already_loaded or status not in {"manual_hold", "address_check"}
+--- a/overflow.py
++++ b/overflow.py
+@@ -1,5 +1,6 @@
+-TITLE = "Overflow"
++TITLE = "Overflow dispatch"
+ 
+ 
+ def include_in_overflow(status, already_loaded):
+-    return already_loaded or status != "manual_hold"
++    # Loaded parcels stay with their dispatcher. See dispatch-spec.md, Holds.
++    return already_loaded or status not in {"manual_hold", "address_check"}

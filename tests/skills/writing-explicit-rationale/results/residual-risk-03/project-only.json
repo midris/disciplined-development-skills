@@ -1,0 +1,26 @@
+[
+  {
+    "label": "64c0f0bc",
+    "project_read": "The quota branch explicitly accepts the previous higher quota for old tokens for under 60 seconds to protect admitted work from rejection. It phrases rejection as definite. The persistence comment explains approved imports, accepts duplication and leaves factoring open until a third interactive caller. The rename has no commentary.",
+    "payload_sha256": "a99cb01b538a4c09f2a51c1de26e45e8f35dd2d7246b699c0f63dfb163229f4f",
+    "sealed_at": "2026-11-25T18:02:35.917362+00:00"
+  },
+  {
+    "label": "3f7d1190",
+    "project_read": "Both quota consequences are explicit and bounded to older tokens until second 60. The trigger is reconsidering factoring at a third interactive caller. The batch bypass and restraint on the rename are clear.",
+    "payload_sha256": "bff8a2d6d11e5b4ec59cc91c244b185460e663cef90a9cd12c420f53fbbbd41e",
+    "sealed_at": "2026-11-25T18:03:10.023698+00:00"
+  },
+  {
+    "label": "4f2d5142",
+    "project_read": "The code explicitly accepts extra quota for 60 seconds to honor already-admitted work. Rejection by immediate enforcement is inferable. Tests and predicates distinguish the expiry and token issue boundaries.",
+    "payload_sha256": "4b7ecb809e4a77231698101a26c03cec0742f63dbe02acc48650f6b60c5a0116",
+    "sealed_at": "2026-11-25T18:03:10.024079+00:00"
+  },
+  {
+    "label": "2c8962a6",
+    "project_read": "The code deliberately accepts extra quota for 60 seconds to honor the terms under which in-flight work was admitted. A maintainer can infer that immediate enforcement could reject that work. The strict issue-time condition and tests cover tokens issued at the downgrade.",
+    "payload_sha256": "016c3805bc785cc62fdca3f81134e743b3c0e9bfbcf781f9009ed7ff0a935103",
+    "sealed_at": "2026-11-25T18:04:13.435168+00:00"
+  }
+]

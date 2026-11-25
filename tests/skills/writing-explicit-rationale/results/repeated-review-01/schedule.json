@@ -1,0 +1,98 @@
+[
+  {
+    "order": 1,
+    "arm": "shipped",
+    "config": "01-shipped.json",
+    "sha256": "1cd27e34dd9c370cd4b2ccc1c3c5e380bce791daefbe722dc23931654b001ec7",
+    "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+    "inputs": {
+      "ingest.py": "3eb96679a60bc60fbded053fd83be60b6df52a6478cab6319a9e7eccbbafbf81",
+      "labels.py": "ea76992b87ebfbd550cae798faf0a4c746fe1cd6ba42857c4b76f40b6b651c30",
+      "quota.py": "5f9ea763f1380feaf0dc7920e704c9e5a7a2d55ed194e1e7769a8d7259526978",
+      "test_service.py": "6043483e16545088f74717ddd7228416c1c1f4b787ff2def86cfc58a19e638d9",
+      "TASK.md": "ffe88c1bbf6ae01f85479828d95796ba7943c9589684b3b17402c5a710de103a",
+      "review-input/change.patch": "a9e80c458cf5dda3488ed18ee992af827ace6a6eb4fc119222953189bb28de88",
+      "GUIDANCE.md": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe"
+    }
+  },
+  {
+    "order": 2,
+    "arm": "revision",
+    "config": "02-revision.json",
+    "sha256": "71febcaa69fc990186e5409d95cc3078ae98087902215a5f43fada41932fb668",
+    "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+    "inputs": {
+      "ingest.py": "3eb96679a60bc60fbded053fd83be60b6df52a6478cab6319a9e7eccbbafbf81",
+      "labels.py": "ea76992b87ebfbd550cae798faf0a4c746fe1cd6ba42857c4b76f40b6b651c30",
+      "quota.py": "5f9ea763f1380feaf0dc7920e704c9e5a7a2d55ed194e1e7769a8d7259526978",
+      "test_service.py": "6043483e16545088f74717ddd7228416c1c1f4b787ff2def86cfc58a19e638d9",
+      "TASK.md": "ffe88c1bbf6ae01f85479828d95796ba7943c9589684b3b17402c5a710de103a",
+      "review-input/change.patch": "a9e80c458cf5dda3488ed18ee992af827ace6a6eb4fc119222953189bb28de88",
+      "GUIDANCE.md": "36ab7246d4c974cbf7d195b92780d835c31863477e33aaca1f0a8389c0f48381"
+    }
+  },
+  {
+    "order": 3,
+    "arm": "shipped",
+    "config": "03-shipped.json",
+    "sha256": "1cd27e34dd9c370cd4b2ccc1c3c5e380bce791daefbe722dc23931654b001ec7",
+    "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+    "inputs": {
+      "ingest.py": "3eb96679a60bc60fbded053fd83be60b6df52a6478cab6319a9e7eccbbafbf81",
+      "labels.py": "ea76992b87ebfbd550cae798faf0a4c746fe1cd6ba42857c4b76f40b6b651c30",
+      "quota.py": "5f9ea763f1380feaf0dc7920e704c9e5a7a2d55ed194e1e7769a8d7259526978",
+      "test_service.py": "6043483e16545088f74717ddd7228416c1c1f4b787ff2def86cfc58a19e638d9",
+      "TASK.md": "ffe88c1bbf6ae01f85479828d95796ba7943c9589684b3b17402c5a710de103a",
+      "review-input/change.patch": "a9e80c458cf5dda3488ed18ee992af827ace6a6eb4fc119222953189bb28de88",
+      "GUIDANCE.md": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe"
+    }
+  },
+  {
+    "order": 4,
+    "arm": "revision",
+    "config": "04-revision.json",
+    "sha256": "71febcaa69fc990186e5409d95cc3078ae98087902215a5f43fada41932fb668",
+    "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+    "inputs": {
+      "ingest.py": "3eb96679a60bc60fbded053fd83be60b6df52a6478cab6319a9e7eccbbafbf81",
+      "labels.py": "ea76992b87ebfbd550cae798faf0a4c746fe1cd6ba42857c4b76f40b6b651c30",
+      "quota.py": "5f9ea763f1380feaf0dc7920e704c9e5a7a2d55ed194e1e7769a8d7259526978",
+      "test_service.py": "6043483e16545088f74717ddd7228416c1c1f4b787ff2def86cfc58a19e638d9",
+      "TASK.md": "ffe88c1bbf6ae01f85479828d95796ba7943c9589684b3b17402c5a710de103a",
+      "review-input/change.patch": "a9e80c458cf5dda3488ed18ee992af827ace6a6eb4fc119222953189bb28de88",
+      "GUIDANCE.md": "36ab7246d4c974cbf7d195b92780d835c31863477e33aaca1f0a8389c0f48381"
+    }
+  },
+  {
+    "order": 5,
+    "arm": "shipped",
+    "config": "05-shipped.json",
+    "sha256": "1cd27e34dd9c370cd4b2ccc1c3c5e380bce791daefbe722dc23931654b001ec7",
+    "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+    "inputs": {
+      "ingest.py": "3eb96679a60bc60fbded053fd83be60b6df52a6478cab6319a9e7eccbbafbf81",
+      "labels.py": "ea76992b87ebfbd550cae798faf0a4c746fe1cd6ba42857c4b76f40b6b651c30",
+      "quota.py": "5f9ea763f1380feaf0dc7920e704c9e5a7a2d55ed194e1e7769a8d7259526978",
+      "test_service.py": "6043483e16545088f74717ddd7228416c1c1f4b787ff2def86cfc58a19e638d9",
+      "TASK.md": "ffe88c1bbf6ae01f85479828d95796ba7943c9589684b3b17402c5a710de103a",
+      "review-input/change.patch": "a9e80c458cf5dda3488ed18ee992af827ace6a6eb4fc119222953189bb28de88",
+      "GUIDANCE.md": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe"
+    }
+  },
+  {
+    "order": 6,
+    "arm": "revision",
+    "config": "06-revision.json",
+    "sha256": "71febcaa69fc990186e5409d95cc3078ae98087902215a5f43fada41932fb668",
+    "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+    "inputs": {
+      "ingest.py": "3eb96679a60bc60fbded053fd83be60b6df52a6478cab6319a9e7eccbbafbf81",
+      "labels.py": "ea76992b87ebfbd550cae798faf0a4c746fe1cd6ba42857c4b76f40b6b651c30",
+      "quota.py": "5f9ea763f1380feaf0dc7920e704c9e5a7a2d55ed194e1e7769a8d7259526978",
+      "test_service.py": "6043483e16545088f74717ddd7228416c1c1f4b787ff2def86cfc58a19e638d9",
+      "TASK.md": "ffe88c1bbf6ae01f85479828d95796ba7943c9589684b3b17402c5a710de103a",
+      "review-input/change.patch": "a9e80c458cf5dda3488ed18ee992af827ace6a6eb4fc119222953189bb28de88",
+      "GUIDANCE.md": "36ab7246d4c974cbf7d195b92780d835c31863477e33aaca1f0a8389c0f48381"
+    }
+  }
+]

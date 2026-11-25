@@ -1,0 +1,22 @@
+{
+  "runtime": "codex-cli 0.167.0",
+  "qualification": "Disposable authenticated thread-start and full thread MCP inventory. No turn started.",
+  "enabled": {
+    "codex_apps": 199
+  },
+  "disabled": {},
+  "historical_audit": {
+    "inspected": 43,
+    "flagged": [
+      41,
+      43
+    ]
+  },
+  "private_directory": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-benchmark-01/controller/apps-qualification",
+  "sha256": {
+    "subject-controller.py": "fe94a9de007a4b1b1b6c488900903433b78b83937b9efb82e30a7cb0f5dee483",
+    "wer-catalog-probe-False.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "wer-catalog-probe.py": "4993ec8a5ef1b95fa751472663f862611860456f42659b0007892ea151d04f17",
+    "wer-catalog-probe-True.json": "1a92ca1c26db437ab8739639166facb98c80e43464af8a6af5e41a8b83dadb44"
+  }
+}
