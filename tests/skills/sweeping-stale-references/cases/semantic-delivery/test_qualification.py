@@ -1,4 +1,5 @@
 """Construction guarantees for local qualification, using disposable Git paths."""
+import json
 import os
 from pathlib import Path
 import subprocess
@@ -13,6 +14,20 @@ CASE = Path(__file__).resolve().parent
 
 
 class QualificationTests(unittest.TestCase):
+    def test_qualifier_prepares_both_historical_arms_from_another_directory(self):
+        with tempfile.TemporaryDirectory() as scratch:
+            result = subprocess.run(
+                [sys.executable, "-B", str(CASE / "qualify_case.py")],
+                cwd=scratch, env={**os.environ, "TMPDIR": scratch},
+                capture_output=True, text=True, timeout=90,
+            )
+            self.assertEqual(result.returncode, 0, result.stderr)
+            report = json.loads(Path(result.stdout.strip()).read_text())
+            trees = report["runner_preparation"]["baseline_trees"]
+            self.assertEqual(trees["control"], trees["original"])
+            variants = json.loads((CASE / "qualification-variants.json").read_text())
+            self.assertEqual([v["id"] for v in report["variants"]], [v["id"] for v in variants["variants"]])
+
     def test_optimized_python_cannot_silently_skip_qualification_checks(self):
         result = subprocess.run(
             [sys.executable, "-O", "-B", str(CASE / "qualify_case.py")],

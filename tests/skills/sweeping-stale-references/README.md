@@ -14,7 +14,9 @@ The owner adopted these bytes after the [full regression](results/complete-claim
 
 Each provider ran three repetitions per scenario. These rows score overlapping aspects of the same 66 attempts.
 Claude completed the native reviewer-correction repair even when it missed the skill load. On one tests-only task it ran the tests, then searched and classified references without making edits.
-Most reporting misses combined paths or outcomes that needed separate accounting. The owner accepted those limitations given the verified repairs.
+Of the 17 reporting misses, 12 came from the Shiv and initiating-rename cases. On each case, both models missed the full reporting criterion in all three repetitions.
+Most misses combined paths or outcomes. Two Claude reports also claimed post-edit searches absent from the traces (slots 43 and 56). Other reports overstated the remaining matches or cited checks performed after the commit.
+The owner accepted these reporting limits because direct inspection of the projects and commits verified the repairs.
 Ten read-only Opus reviews covered all 48 repaired projects and agreed on all 144 functional judgments. The active assessor judged discovery, search timing and reporting from the traces. [Review packets and reconciliation](results/complete-claim-regression-01/evaluation/README.md)
 
 The [earlier regression](results/count-free-regression-01/count-free-regression-01-assessment.md) and [focused paragraph comparison](results/complete-claim-01/complete-claim-01-assessment.md) explain the revision.
@@ -32,6 +34,7 @@ uv run --locked --offline pytest -q ../skills/sweeping-stale-references
 ```
 
 The verifier loads all 22 runner configurations, matches their prompts and fixture bytes to the manifests, compares the tested snapshot with the shipped skill, and checks the case cards, grading policy, 66 scheduled subject records and ten review audits.
+It recomputes each provider’s functional, selection and reporting totals, checks the 18 indexed complete-claim observations, and reconciles the 144 first-pass review judgments with the scored repairs.
 The offline tests exercise reference repairs and deliberately incomplete alternatives in disposable projects. Use the runner environment for pytest so the Shiv fixture’s shell commands also find its Python interpreter.
 
 The six explicit repair cases cover a pressured correction, Shiv command consumers, a moved guide, semantic delivery-policy drift, an initiating rename, and a local correction.

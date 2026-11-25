@@ -44,15 +44,35 @@ def verify():
     require(len(cases) == 11, "Expected eleven cases")
     require(set(slots) == {(p, c, r) for p in ("claude", "codex") for c in cases for r in (1, 2, 3)}, "Incomplete schedule")
 
-    observed = []
+    observed = {}
+    subject_runs = set()
+    repair_scores = {}
+    summary = read(BATCH / "verification.json")
     verified_manifests = set()
     for provider in ("codex", "claude"):
         index = read(BATCH / f"claim-full-{provider}-01-run-index.json")
+        totals = Counter()
         for attempt in index["attempts"]:
             key = (provider, attempt["case_id"], attempt["repetition"])
-            observed.append(key)
+            require(key not in observed, key)
+            observed[key] = attempt["run_id"]
             score = read(checked(attempt["result"]["record"]))
-            require(score["run_id"] == attempt["run_id"], key)
+            run_id = attempt["run_id"]
+            require(run_id not in subject_runs, f"Subject run reused at {key}: {run_id}")
+            subject_runs.add(run_id)
+            require(score["run_id"] == run_id and score["result_id"] == attempt["result"]["result_id"], key)
+            require(score["condition"] == attempt["condition"] and score["manifest"] == attempt["manifest"], key)
+            totals["subjects"] += 1
+            totals[f"functional {score['functional_result']}"] += 1
+            factors = {c["id"]: c["judgment"] for c in score["criteria"]}
+            for criterion, judgment in factors.items():
+                totals[f"{criterion} {judgment}"] += 1
+            if "D1" in factors:
+                case = attempt["case_id"]
+                group = "positive load" if case in {"invocation-change", "invocation-review"} else case
+                totals[f"{group} {factors['D1']}"] += 1
+            if score["functional_result"] != "not measured":
+                repair_scores[run_id] = {key: factors[key] for key in ("F1", "F2", "F3")}
             path = checked(attempt["manifest"])
             manifest = read(path)
             condition, = manifest["conditions"]
@@ -69,12 +89,33 @@ def verify():
             for criteria in manifest["authorities"]["criteria"]:
                 checked(criteria)
             verified_manifests.add(path)
-    require(Counter(observed) == Counter(slots.keys()) and len(verified_manifests) == 22, "Incomplete subject records")
+        require(dict(totals) == summary["by_provider"][provider], f"{provider} aggregate differs from scored records")
+    require(observed.keys() == slots.keys() and len(verified_manifests) == 22, "Incomplete subject records")
+
+    claim_cases = {"pressure-repair", "semantic-delivery", "invocation-review"}
+    expected_claims = {run for (_, case, _), run in observed.items() if case in claim_cases}
+    claims = read(BATCH / "claim-inspection.json")["rows"]
+    for claim in claims:
+        key = (claim["provider"], claim["case"], claim["repetition"])
+        require(claim["run_id"] == observed[key] and claim["pre_edit_complete_claim_stdout_event"] > 0, key)
+    require(len(claims) == 18 and {c["run_id"] for c in claims} == expected_claims, "Incomplete claim inspections")
 
     reviews = read(BATCH / "evaluation/evaluator-run-index.json")["runs"]
     require(len({r["run_id"] for r in reviews}) == len(reviews) == 10, "Incomplete evaluator ledger")
+    reviewed = set()
     for review in reviews:
-        checked(review["audit"])
+        audit = read(checked(review["audit"]))
+        require((audit["run_id"], audit["packet_id"]) == (review["run_id"], review["packet_id"]), review["run_id"])
+        packet = read(BATCH / "evaluation" / review["packet_id"] / "judgments.json")
+        for judgment in packet["judgments"]:
+            run_id = judgment["run_id"]
+            require(run_id not in reviewed and run_id in repair_scores, run_id)
+            reviewed.add(run_id)
+            for factor, active in repair_scores[run_id].items():
+                require(judgment["first_pass"][factor] == active, (run_id, factor))
+    require(reviewed == set(repair_scores), "Missing independent review of a repair")
+    require(len(reviewed) == summary["reviewed_unique_repairs"], "Repair count differs")
+    require(sum(map(len, repair_scores.values())) == summary["reviewed_functional_factors"], "Factor count differs")
     print("Verified the shipped skill, 22 frozen configurations, 66 subject attempts and 10 review audits.")
 
 

@@ -16,7 +16,7 @@ import tempfile
 from probe_behavior import observe
 
 CASE = Path(__file__).resolve().parent
-ROOT = CASE.parents[3]
+RUNNER_SRC = CASE.parents[3] / "runner" / "src"
 
 
 def run(argv, cwd):
@@ -83,7 +83,7 @@ def qualify():
             "rationale": definition["rationale"],
             "documents": {str(p.relative_to(fixture)): p.read_text() for p in sorted(fixture.rglob("*.md"))}})
     # Exercise the actual runner loader/copy functions, never its provider dispatch.
-    sys.path.insert(0, str(ROOT / "skill-validation/runner/src"))
+    sys.path.insert(0, str(RUNNER_SRC))
     from skilltest.config import load_config
     from skilltest.workspace import create_run, prepare_workspace
     pairs = {}
