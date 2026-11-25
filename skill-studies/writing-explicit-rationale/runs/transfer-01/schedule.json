@@ -1,0 +1,218 @@
+{
+  "runtime": {
+    "path": "skill-studies/writing-explicit-rationale/runs/functional-pilot-01/runtime.json",
+    "sha256": "92d24a3ddc9cedfe0536efb14cb33ec178f87466c9bb8039884e9fc6d3637f92"
+  },
+  "isolation": {
+    "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/connector-qualification.json",
+    "sha256": "c988892403eee2e79555a6ad2a33beb15dbe197dda33abee11fa34caca9a68e2"
+  },
+  "candidate": {
+    "path": "skill-studies/writing-explicit-rationale/drafts/baseline-edit-with-examples/SKILL.md",
+    "sha256": "36ab7246d4c974cbf7d195b92780d835c31863477e33aaca1f0a8389c0f48381"
+  },
+  "policy": {
+    "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/scoring-policy.txt",
+    "sha256": "2f5a7e512fb1a3d978b36f0b410b94bb8459565df1b1a8f6e2a835766bf7bc8c"
+  },
+  "original": {
+    "path": "skill-studies/writing-explicit-rationale/cases/skill-original/SKILL.md",
+    "sha256": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe"
+  },
+  "subjects": [
+    {
+      "order": 1,
+      "provider": "codex",
+      "condition": "original",
+      "repetition": 1,
+      "config": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-01/codex-original.json",
+      "sha256": "fd869af161a8b265cff11228744e0d586d22b4e82fcee10e8be92110bddb0fd7",
+      "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+      "inputs": {
+        "booking-plan.md": "243227ea902af5a488b58d08124d802add63f220e62d6e86ea7de80c669b1970",
+        "TASK.md": "a61fc2a9cebef3527177fbf6ac2bf77d676075f829bed7925c697c14221cd10c",
+        "GUIDANCE.md": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe"
+      },
+      "criteria": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-01/criteria.md",
+      "criteria_sha256": "2359349f85f20fd37bffb9ceb79bb8db4bb83b2aa737973eec1405bc4f7c45ff"
+    },
+    {
+      "order": 2,
+      "provider": "claude",
+      "condition": "candidate",
+      "repetition": 1,
+      "config": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-01/claude-candidate.json",
+      "sha256": "16ad220868e6fc30a9b1ea4190140f150e722b9c57965230a0e5a12f5c792eb6",
+      "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+      "inputs": {
+        "booking-plan.md": "243227ea902af5a488b58d08124d802add63f220e62d6e86ea7de80c669b1970",
+        "TASK.md": "a61fc2a9cebef3527177fbf6ac2bf77d676075f829bed7925c697c14221cd10c",
+        "GUIDANCE.md": "36ab7246d4c974cbf7d195b92780d835c31863477e33aaca1f0a8389c0f48381"
+      },
+      "criteria": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-01/criteria.md",
+      "criteria_sha256": "2359349f85f20fd37bffb9ceb79bb8db4bb83b2aa737973eec1405bc4f7c45ff"
+    },
+    {
+      "order": 3,
+      "provider": "codex",
+      "condition": "candidate",
+      "repetition": 1,
+      "config": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-01/codex-candidate.json",
+      "sha256": "b848b216368e47e1b11920f6a648bca957c09a157c0284775ac0eca5a6ef85de",
+      "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+      "inputs": {
+        "booking-plan.md": "243227ea902af5a488b58d08124d802add63f220e62d6e86ea7de80c669b1970",
+        "TASK.md": "a61fc2a9cebef3527177fbf6ac2bf77d676075f829bed7925c697c14221cd10c",
+        "GUIDANCE.md": "36ab7246d4c974cbf7d195b92780d835c31863477e33aaca1f0a8389c0f48381"
+      },
+      "criteria": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-01/criteria.md",
+      "criteria_sha256": "2359349f85f20fd37bffb9ceb79bb8db4bb83b2aa737973eec1405bc4f7c45ff"
+    },
+    {
+      "order": 4,
+      "provider": "claude",
+      "condition": "original",
+      "repetition": 1,
+      "config": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-01/claude-original.json",
+      "sha256": "4dc5a9e44d122ad5dcb638299cc278aa4cb631c2a3a39d00000720e23d6f51f8",
+      "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+      "inputs": {
+        "booking-plan.md": "243227ea902af5a488b58d08124d802add63f220e62d6e86ea7de80c669b1970",
+        "TASK.md": "a61fc2a9cebef3527177fbf6ac2bf77d676075f829bed7925c697c14221cd10c",
+        "GUIDANCE.md": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe"
+      },
+      "criteria": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-01/criteria.md",
+      "criteria_sha256": "2359349f85f20fd37bffb9ceb79bb8db4bb83b2aa737973eec1405bc4f7c45ff"
+    },
+    {
+      "order": 5,
+      "provider": "codex",
+      "condition": "candidate",
+      "repetition": 2,
+      "config": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-01/codex-candidate.json",
+      "sha256": "b848b216368e47e1b11920f6a648bca957c09a157c0284775ac0eca5a6ef85de",
+      "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+      "inputs": {
+        "booking-plan.md": "243227ea902af5a488b58d08124d802add63f220e62d6e86ea7de80c669b1970",
+        "TASK.md": "a61fc2a9cebef3527177fbf6ac2bf77d676075f829bed7925c697c14221cd10c",
+        "GUIDANCE.md": "36ab7246d4c974cbf7d195b92780d835c31863477e33aaca1f0a8389c0f48381"
+      },
+      "criteria": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-01/criteria.md",
+      "criteria_sha256": "2359349f85f20fd37bffb9ceb79bb8db4bb83b2aa737973eec1405bc4f7c45ff"
+    },
+    {
+      "order": 6,
+      "provider": "claude",
+      "condition": "original",
+      "repetition": 2,
+      "config": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-01/claude-original.json",
+      "sha256": "4dc5a9e44d122ad5dcb638299cc278aa4cb631c2a3a39d00000720e23d6f51f8",
+      "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+      "inputs": {
+        "booking-plan.md": "243227ea902af5a488b58d08124d802add63f220e62d6e86ea7de80c669b1970",
+        "TASK.md": "a61fc2a9cebef3527177fbf6ac2bf77d676075f829bed7925c697c14221cd10c",
+        "GUIDANCE.md": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe"
+      },
+      "criteria": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-01/criteria.md",
+      "criteria_sha256": "2359349f85f20fd37bffb9ceb79bb8db4bb83b2aa737973eec1405bc4f7c45ff"
+    },
+    {
+      "order": 7,
+      "provider": "codex",
+      "condition": "original",
+      "repetition": 2,
+      "config": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-01/codex-original.json",
+      "sha256": "fd869af161a8b265cff11228744e0d586d22b4e82fcee10e8be92110bddb0fd7",
+      "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+      "inputs": {
+        "booking-plan.md": "243227ea902af5a488b58d08124d802add63f220e62d6e86ea7de80c669b1970",
+        "TASK.md": "a61fc2a9cebef3527177fbf6ac2bf77d676075f829bed7925c697c14221cd10c",
+        "GUIDANCE.md": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe"
+      },
+      "criteria": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-01/criteria.md",
+      "criteria_sha256": "2359349f85f20fd37bffb9ceb79bb8db4bb83b2aa737973eec1405bc4f7c45ff"
+    },
+    {
+      "order": 8,
+      "provider": "claude",
+      "condition": "candidate",
+      "repetition": 2,
+      "config": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-01/claude-candidate.json",
+      "sha256": "16ad220868e6fc30a9b1ea4190140f150e722b9c57965230a0e5a12f5c792eb6",
+      "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+      "inputs": {
+        "booking-plan.md": "243227ea902af5a488b58d08124d802add63f220e62d6e86ea7de80c669b1970",
+        "TASK.md": "a61fc2a9cebef3527177fbf6ac2bf77d676075f829bed7925c697c14221cd10c",
+        "GUIDANCE.md": "36ab7246d4c974cbf7d195b92780d835c31863477e33aaca1f0a8389c0f48381"
+      },
+      "criteria": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-01/criteria.md",
+      "criteria_sha256": "2359349f85f20fd37bffb9ceb79bb8db4bb83b2aa737973eec1405bc4f7c45ff"
+    },
+    {
+      "order": 9,
+      "provider": "codex",
+      "condition": "original",
+      "repetition": 3,
+      "config": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-01/codex-original.json",
+      "sha256": "fd869af161a8b265cff11228744e0d586d22b4e82fcee10e8be92110bddb0fd7",
+      "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+      "inputs": {
+        "booking-plan.md": "243227ea902af5a488b58d08124d802add63f220e62d6e86ea7de80c669b1970",
+        "TASK.md": "a61fc2a9cebef3527177fbf6ac2bf77d676075f829bed7925c697c14221cd10c",
+        "GUIDANCE.md": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe"
+      },
+      "criteria": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-01/criteria.md",
+      "criteria_sha256": "2359349f85f20fd37bffb9ceb79bb8db4bb83b2aa737973eec1405bc4f7c45ff"
+    },
+    {
+      "order": 10,
+      "provider": "claude",
+      "condition": "candidate",
+      "repetition": 3,
+      "config": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-01/claude-candidate.json",
+      "sha256": "16ad220868e6fc30a9b1ea4190140f150e722b9c57965230a0e5a12f5c792eb6",
+      "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+      "inputs": {
+        "booking-plan.md": "243227ea902af5a488b58d08124d802add63f220e62d6e86ea7de80c669b1970",
+        "TASK.md": "a61fc2a9cebef3527177fbf6ac2bf77d676075f829bed7925c697c14221cd10c",
+        "GUIDANCE.md": "36ab7246d4c974cbf7d195b92780d835c31863477e33aaca1f0a8389c0f48381"
+      },
+      "criteria": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-01/criteria.md",
+      "criteria_sha256": "2359349f85f20fd37bffb9ceb79bb8db4bb83b2aa737973eec1405bc4f7c45ff"
+    },
+    {
+      "order": 11,
+      "provider": "codex",
+      "condition": "candidate",
+      "repetition": 3,
+      "config": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-01/codex-candidate.json",
+      "sha256": "b848b216368e47e1b11920f6a648bca957c09a157c0284775ac0eca5a6ef85de",
+      "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+      "inputs": {
+        "booking-plan.md": "243227ea902af5a488b58d08124d802add63f220e62d6e86ea7de80c669b1970",
+        "TASK.md": "a61fc2a9cebef3527177fbf6ac2bf77d676075f829bed7925c697c14221cd10c",
+        "GUIDANCE.md": "36ab7246d4c974cbf7d195b92780d835c31863477e33aaca1f0a8389c0f48381"
+      },
+      "criteria": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-01/criteria.md",
+      "criteria_sha256": "2359349f85f20fd37bffb9ceb79bb8db4bb83b2aa737973eec1405bc4f7c45ff"
+    },
+    {
+      "order": 12,
+      "provider": "claude",
+      "condition": "original",
+      "repetition": 3,
+      "config": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-01/claude-original.json",
+      "sha256": "4dc5a9e44d122ad5dcb638299cc278aa4cb631c2a3a39d00000720e23d6f51f8",
+      "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+      "inputs": {
+        "booking-plan.md": "243227ea902af5a488b58d08124d802add63f220e62d6e86ea7de80c669b1970",
+        "TASK.md": "a61fc2a9cebef3527177fbf6ac2bf77d676075f829bed7925c697c14221cd10c",
+        "GUIDANCE.md": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe"
+      },
+      "criteria": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/transfer-01/criteria.md",
+      "criteria_sha256": "2359349f85f20fd37bffb9ceb79bb8db4bb83b2aa737973eec1405bc4f7c45ff"
+    }
+  ],
+  "replacements": 0,
+  "evaluators": 0
+}
