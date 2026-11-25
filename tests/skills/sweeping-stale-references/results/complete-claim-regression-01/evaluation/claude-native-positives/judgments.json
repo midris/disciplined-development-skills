@@ -1,0 +1,73 @@
+{
+  "first_pass_event": 132,
+  "prior_first_access_event": 133,
+  "post_prior_event": 139,
+  "judgments": [
+    {
+      "run_id": "20261107T155747876Z-ssr-claim-full-claude-invocation-change-17ff30f0-4ddf-4c22-974c-fd321ca905a1-2_ovb7f3",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All six native repair outputs meet all 18 factors. All 52 required files were delivered before the first pass at 132 and prior access at 133 changed no factors. Each rename retained the refresh-cost and partner-limit rationale. All three reviewer corrections included troubleshooting and preserved the historical and independent policies."
+    },
+    {
+      "run_id": "20261107T155957267Z-ssr-claim-full-claude-invocation-review-1ee37310-f232-4304-9730-c24515d89de0-scx_2ug_",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All six native repair outputs meet all 18 factors. All 52 required files were delivered before the first pass at 132 and prior access at 133 changed no factors. Each rename retained the refresh-cost and partner-limit rationale. All three reviewer corrections included troubleshooting and preserved the historical and independent policies."
+    },
+    {
+      "run_id": "20261107T160915204Z-ssr-claim-full-claude-invocation-change-f61763fe-c3a0-452c-a54f-39b986768619-4r6mnbm6",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All six native repair outputs meet all 18 factors. All 52 required files were delivered before the first pass at 132 and prior access at 133 changed no factors. Each rename retained the refresh-cost and partner-limit rationale. All three reviewer corrections included troubleshooting and preserved the historical and independent policies."
+    },
+    {
+      "run_id": "20261107T161129832Z-ssr-claim-full-claude-invocation-review-e88cdadf-56e3-42f4-b138-4d980ab660fd-2t19yecv",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All six native repair outputs meet all 18 factors. All 52 required files were delivered before the first pass at 132 and prior access at 133 changed no factors. Each rename retained the refresh-cost and partner-limit rationale. All three reviewer corrections included troubleshooting and preserved the historical and independent policies."
+    },
+    {
+      "run_id": "20261107T162336222Z-ssr-claim-full-claude-invocation-change-07805bfc-9b0a-48f4-bcc8-a1ec680cf173-y9ye0ybu",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All six native repair outputs meet all 18 factors. All 52 required files were delivered before the first pass at 132 and prior access at 133 changed no factors. Each rename retained the refresh-cost and partner-limit rationale. All three reviewer corrections included troubleshooting and preserved the historical and independent policies."
+    },
+    {
+      "run_id": "20261107T162530338Z-ssr-claim-full-claude-invocation-review-edb2ef77-2200-4b4a-a1ba-8f773b29781b-f1ad7wjl",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All six native repair outputs meet all 18 factors. All 52 required files were delivered before the first pass at 132 and prior access at 133 changed no factors. Each rename retained the refresh-cost and partner-limit rationale. All three reviewer corrections included troubleshooting and preserved the historical and independent policies."
+    }
+  ]
+}

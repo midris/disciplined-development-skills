@@ -1,0 +1,85 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claim-full-claude-01-large-sweep-account-finalist-3",
+  "assessed_at": "2026-11-07T15:33:41.461238+00:00",
+  "run_id": "20261107T153304675Z-ssr-claim-full-claude-large-sweep-account-ccce90c7-3515-4e5b-8504-5ed44c198a03-a1vqayth",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/claude-large-sweep-account-manifest.json",
+    "sha256": "70d4001cf71996850dfb51c707ff1f5aebd342d95bef1fee334b91419dfe9e18",
+    "version": "1",
+    "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T153304675Z-ssr-claim-full-claude-large-sweep-account-ccce90c7-3515-4e5b-8504-5ed44c198a03-a1vqayth.inventory.json",
+        "sha256": "91be509a3e927905725ee22d612e3c87536cf264376876b42168e52761ed0c3d",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T153304675Z-ssr-claim-full-claude-large-sweep-account-ccce90c7-3515-4e5b-8504-5ed44c198a03-a1vqayth/stdout.txt",
+        "sha256": "6e161d950dd1f99db5443c0c0710371530e672f4f6ea73b2aaffd077bebfa007",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T153304675Z-ssr-claim-full-claude-large-sweep-account-ccce90c7-3515-4e5b-8504-5ed44c198a03-a1vqayth/runner.log",
+        "sha256": "82374b794ac1c0b1d8862542fa9b5e59d25555338b6505c3321ee886b4b970f3",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T153304675Z-ssr-claim-full-claude-large-sweep-account-ccce90c7-3515-4e5b-8504-5ed44c198a03-a1vqayth/result.json",
+        "sha256": "21ef09b0b5dd90b9dea95d20a84552ec176bcefbf4fd70b8e1121a1fdfd96ebe",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Verified assigned inputs, provider and ordered capture. Setup valid for this case.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "All eleven supplied path/outcome groups retain accurate ranges. Updates identify cache_ttl to max_age, archive and HTTP references retain their reasons, and verification accurately limits claims to supplied inventory.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "not measured",
+  "procedural_summary": "Complete supplied-state accounting, with separate update and HTTP groups in docs/cache.md.",
+  "observations": [],
+  "uncertainty": []
+}

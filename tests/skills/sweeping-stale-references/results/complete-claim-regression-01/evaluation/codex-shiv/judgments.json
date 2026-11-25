@@ -1,0 +1,40 @@
+{
+  "first_pass_event": 170,
+  "prior_first_access_event": 171,
+  "post_prior_event": 178,
+  "judgments": [
+    {
+      "run_id": "20261107T151004557Z-ssr-claim-full-codex-discovery-shiv-a72fb43f-64b3-409a-9217-c23db1ba3a3b-4qangb6g",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All three identical committed four-consumer repairs meet all nine functional factors. Source/final file comparisons, archives, both CLI forms, retired-option rejection, history, independent tool and both execution locations confirm the first-pass findings. All 67 required files were read before priors. No judgment changed after prior access."
+    },
+    {
+      "run_id": "20261107T152000707Z-ssr-claim-full-codex-discovery-shiv-9068ec05-2532-49cd-a6e0-0eb2c1a1e723-cihtim_5",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All three identical committed four-consumer repairs meet all nine functional factors. Source/final file comparisons, archives, both CLI forms, retired-option rejection, history, independent tool and both execution locations confirm the first-pass findings. All 67 required files were read before priors. No judgment changed after prior access."
+    },
+    {
+      "run_id": "20261107T152753814Z-ssr-claim-full-codex-discovery-shiv-6f02f24f-dbe0-4222-ba8a-e39a22740b0b-dsaobaht",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All three identical committed four-consumer repairs meet all nine functional factors. Source/final file comparisons, archives, both CLI forms, retired-option rejection, history, independent tool and both execution locations confirm the first-pass findings. All 67 required files were read before priors. No judgment changed after prior access."
+    }
+  ]
+}

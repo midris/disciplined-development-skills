@@ -1,0 +1,28 @@
+{
+  "stage": "focused",
+  "passed": true,
+  "subjects": 24,
+  "complete_repairs": 18,
+  "reporting_only": 6,
+  "reviews": 4,
+  "independent_functional_factors_met": 54,
+  "subject_indexes": [
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/evaluation/subject-index-snapshots/focused/claim-full-claude-01-run-index.json",
+      "sha256": "0c43b35227e289b2b0113954e8ae8bd72b96fb7c8067e2b92238ead49bb79c28"
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/evaluation/subject-index-snapshots/focused/claim-full-codex-01-run-index.json",
+      "sha256": "1168e005bf04ecb8ec225f71cd4ef1cc7049ecf2a41904a5191a7eb4889b6d34"
+    }
+  ],
+  "evaluator_ledger": {
+    "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/evaluation/subject-index-snapshots/focused/evaluator-checkpoint.json",
+    "sha256": "188aaa6bed69798ee0c56e0584c4b5e2c5bfe4e9bb0a313fc87ccc5c214349de"
+  },
+  "decision": "Proceed with the 42 remaining subjects and six reviews.",
+  "rationale": "All 18 repair projects meet F1\u2013F3, all six reporting tasks preserve each required path/outcome and the four independent complete-output reviews agree. Inventories and runtime identities verify.",
+  "reporting_limits": [
+    "Nine P3 defects across 24 observations. All six Shiv runs grouped required paths, other defects mixed outcomes or split a wrapped claim incorrectly. Each affected repair was complete."
+  ]
+}

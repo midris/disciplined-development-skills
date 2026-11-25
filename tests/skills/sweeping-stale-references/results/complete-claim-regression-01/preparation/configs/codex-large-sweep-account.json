@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.2",
+  "id": "ssr-claim-full-codex-large-sweep-account",
+  "prompt": "../../../candidate-screen-01/preparation/prompts/codex-large-sweep-account.md",
+  "fixtures": [
+    {
+      "source": "../../../../cases/large-sweep-account/fixture/inventory.md",
+      "target": "inventory.md"
+    },
+    {
+      "source": "../../../../cases/large-sweep-account/task.md",
+      "target": "TASK.md"
+    },
+    {
+      "source": "../skill/SKILL.md",
+      "target": ".agents/skills/sweeping-stale-references/SKILL.md"
+    }
+  ],
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}

@@ -1,0 +1,1 @@
+Read `.agents/skills/sweeping-stale-references/SKILL.md` completely. Work in `{{fixture_dir}}` and apply the skill to the task in `TASK.md`. The task supplies a completed inventory for an accounting-only diagnostic; no search, repair or commit is requested. Leave TASK.md and supplied inputs unchanged. Finish with a brief account of the saved report.

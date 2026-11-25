@@ -1,0 +1,113 @@
+{
+  "format_version": "1",
+  "manifest_id": "ssr-claim-full-claude-local-change",
+  "study_id": "sweeping-stale-references",
+  "case_id": "local-change",
+  "status": "frozen",
+  "created_at": "2026-11-07",
+  "source_revision": "f43a1ede55ce7ac6d9f9336d9c666e2c0e21fe1b",
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "a4038836187dcf16649e8f3ab91d2f5c120e319ce949e932a5627519ea9c2266",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/sweeping-stale-references/protocol.md",
+      "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "f54cb58884f9dbffd39f37746234487d6113e1f01ad3b1d355fe269310895321",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result-v2.schema.json",
+      "sha256": "81902ed03e807804404c0d6ba7a0092a1c311c9eef45ee88c89708ce50d7c2c2",
+      "version": "2"
+    },
+    "policy": {
+      "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/policy.txt",
+      "sha256": "cc030c28bcfc36c20b700f00d2307b2933ee7d884a0d0a87d14ed8b0da2b92f5",
+      "version": "SSR-count-free-1"
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/criteria/local-change.md",
+        "sha256": "ea99470da980b2cde4c3496f990c5eab2c77211b09081d15d2bb933ce1d2254a",
+        "version": "count-free-6"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "finalist",
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-local-change.json",
+        "sha256": "4462bea4590a4c87eada3ae1f5c6890f34fb5efa9c1fdc4394fc271adb09e382",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/skill/SKILL.md"
+    }
+  ],
+  "subject_sources": [
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/claude-comparison.gitignore",
+      "sha256": "25b48a27d48b2bb74e9953545e5d264de141bbc35fed11a9895033aaec4a3837",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/fixture/README.md",
+      "sha256": "e0864145d14cbb34906a8013552375f51cd6229e11cab1b86c9f49f93712999b",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/fixture/archive/2024-membership.md",
+      "sha256": "42ab9ea6404eb9d9efea77a768e6e9b3abbee5331ccd541cfb6e55960d702d47",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/fixture/config/account.json",
+      "sha256": "8bfd24d96962f4ed647f95009a87cf8f08ecd0f4b152c88e05b44b064560ed85",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/fixture/docs/billing.md",
+      "sha256": "8649eba204ece9d490b9506718b805e0cee69dfaad9e975d5232e87a5fa5b028",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/fixture/docs/glossary.md",
+      "sha256": "8330f2c33fb2c6020088abba05b8f7e2eb741b543da73b9e5e89dcaea852a6ec",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/fixture/docs/shipping.md",
+      "sha256": "8e7974b71367741874b70676bbb7105d0c501d02bb2aa6b0743456265f64dea0",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/local-change/task.md",
+      "sha256": "088ebc09534a24ec492db6779fd05f6ffe77e87c157f8f45f04b0b18209347ad",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/prompts/claude-local-change.md",
+      "sha256": "2ab1012e470f5ad978d8f758c974e31b8a6276831cf1eee2527011322deb26b1",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/skill/SKILL.md",
+      "sha256": "9bdd02d316c57fd320fe25feddbe30d08af57ffc541742b40b1d08ec3e68c224",
+      "version": null
+    }
+  ],
+  "controller_only": [
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/interpretation.md",
+      "sha256": "034e339185f45833ca78942c650bc4304a4536fa26a20533659f74b164975f0f",
+      "version": null
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+.claude/
+TASK.md
+__pycache__/
+*.pyc

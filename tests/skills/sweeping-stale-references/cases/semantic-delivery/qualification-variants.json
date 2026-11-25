@@ -1,0 +1,232 @@
+{
+  "purpose": "Orchestrator-constructed reference variants, not model output or an automatic semantic scorer. Start from fixture/; apply each exact replacement once. Ground truth remains controller-only during evaluator calibration.",
+  "variants": [
+    {
+      "id": "pristine",
+      "edits": [],
+      "commit_repair": false,
+      "reference_judgments": {
+        "F1": "not met",
+        "F2": "met",
+        "F3": "not met"
+      },
+      "rationale": "Three current claims contradict the settled worker; no repair committed."
+    },
+    {
+      "id": "readme_only",
+      "edits": [
+        {
+          "path": "README.md",
+          "old": "The worker makes at most three delivery attempts for a notification.",
+          "new": "The worker makes at most four delivery attempts for a notification."
+        }
+      ],
+      "commit_repair": true,
+      "reference_judgments": {
+        "F1": "not met",
+        "F2": "met",
+        "F3": "not met"
+      },
+      "rationale": "The operations and troubleshooting claims remain stale."
+    },
+    {
+      "id": "complete",
+      "edits": [
+        {
+          "path": "README.md",
+          "old": "The worker makes at most three delivery attempts for a notification.",
+          "new": "The worker makes at most four delivery attempts for a notification."
+        },
+        {
+          "path": "docs/operations.md",
+          "old": "After the first failed send, the worker has two additional tries available.",
+          "new": "After the first failed send, the worker has up to three additional tries available."
+        },
+        {
+          "path": "docs/troubleshooting.md",
+          "old": "For the current notification worker, the third consecutive failed send exhausts\nautomatic delivery attempts.",
+          "new": "For the current notification worker, the fourth consecutive failed send exhausts\nautomatic delivery attempts."
+        }
+      ],
+      "commit_repair": true,
+      "reference_judgments": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met"
+      },
+      "rationale": "All three meanings repaired; early success and preserved context remain accurate. Sparse commit accounting does not change functional success."
+    },
+    {
+      "id": "blanket_numbers",
+      "edits": [
+        {
+          "path": "README.md",
+          "old": "The worker makes at most three delivery attempts for a notification.",
+          "new": "The worker makes at most four delivery attempts for a notification."
+        },
+        {
+          "path": "docs/operations.md",
+          "old": "After the first failed send, the worker has two additional tries available.",
+          "new": "After the first failed send, the worker has three additional tries available."
+        },
+        {
+          "path": "docs/troubleshooting.md",
+          "old": "For the current notification worker, the third consecutive failed send exhausts\nautomatic delivery attempts.",
+          "new": "For the current notification worker, the fourth consecutive failed send exhausts\nautomatic delivery attempts."
+        },
+        {
+          "path": "plans/completed/delivery-policy.md",
+          "old": "The former notification worker allowed three attempts in total: the initial\nsend followed by up to two further tries.",
+          "new": "The former notification worker allowed four attempts in total: the initial\nsend followed by up to three further tries."
+        },
+        {
+          "path": "docs/download-helper.md",
+          "old": "It makes at most three attempts to obtain an artifact, stopping after success.",
+          "new": "It makes at most four attempts to obtain an artifact, stopping after success."
+        }
+      ],
+      "commit_repair": true,
+      "reference_judgments": {
+        "F1": "met",
+        "F2": "not met",
+        "F3": "met"
+      },
+      "rationale": "Current meanings repaired, but historical and independent helper documentation now state the wrong policies."
+    },
+    {
+      "id": "attempts_vs_retries",
+      "edits": [
+        {
+          "path": "README.md",
+          "old": "The worker makes at most three delivery attempts for a notification.",
+          "new": "The worker allows up to four retries after the initial delivery attempt."
+        },
+        {
+          "path": "docs/operations.md",
+          "old": "After the first failed send, the worker has two additional tries available.",
+          "new": "After the first failed send, the worker has up to three additional tries available."
+        },
+        {
+          "path": "docs/troubleshooting.md",
+          "old": "For the current notification worker, the third consecutive failed send exhausts\nautomatic delivery attempts.",
+          "new": "For the current notification worker, the fourth consecutive failed send exhausts\nautomatic delivery attempts."
+        }
+      ],
+      "commit_repair": true,
+      "reference_judgments": {
+        "F1": "not met",
+        "F2": "met",
+        "F3": "not met"
+      },
+      "rationale": "Four retries means five attempts, contradicting the worker and the other repaired guidance."
+    },
+    {
+      "id": "always_four",
+      "edits": [
+        {
+          "path": "README.md",
+          "old": "The worker makes at most three delivery attempts for a notification.",
+          "new": "The worker makes exactly four delivery attempts for every notification."
+        },
+        {
+          "path": "docs/operations.md",
+          "old": "After the first failed send, the worker has two additional tries available.",
+          "new": "After the first failed send, the worker has up to three additional tries available."
+        },
+        {
+          "path": "docs/troubleshooting.md",
+          "old": "For the current notification worker, the third consecutive failed send exhausts\nautomatic delivery attempts.",
+          "new": "For the current notification worker, the fourth consecutive failed send exhausts\nautomatic delivery attempts."
+        }
+      ],
+      "commit_repair": true,
+      "reference_judgments": {
+        "F1": "not met",
+        "F2": "met",
+        "F3": "not met"
+      },
+      "rationale": "Exactly four conflicts with stopping on success, including the accurate following sentence."
+    },
+    {
+      "id": "removed_limits",
+      "edits": [
+        {
+          "path": "README.md",
+          "old": "The worker makes at most three delivery attempts for a notification.",
+          "new": ""
+        },
+        {
+          "path": "docs/operations.md",
+          "old": "After the first failed send, the worker has two additional tries available.",
+          "new": ""
+        },
+        {
+          "path": "docs/troubleshooting.md",
+          "old": "For the current notification worker, the third consecutive failed send exhausts\nautomatic delivery attempts.",
+          "new": ""
+        }
+      ],
+      "commit_repair": true,
+      "reference_judgments": {
+        "F1": "not met",
+        "F2": "met",
+        "F3": "not met"
+      },
+      "rationale": "Removing every limit/exhaustion explanation leaves the reader without the needed information."
+    },
+    {
+      "id": "equivalent_consolidation",
+      "edits": [
+        {
+          "path": "README.md",
+          "old": "The worker makes at most three delivery attempts for a notification.",
+          "new": "Delivery begins with one send. If it fails, up to three further sends are available."
+        },
+        {
+          "path": "docs/operations.md",
+          "old": "After the first failed send, the worker has two additional tries available.",
+          "new": "Use the [delivery limit](../README.md#delivery-limit) for the number of sends available."
+        },
+        {
+          "path": "docs/troubleshooting.md",
+          "old": "For the current notification worker, the third consecutive failed send exhausts\nautomatic delivery attempts.",
+          "new": "For the current notification worker, automatic attempts are exhausted after\nthe [delivery limit](../README.md#delivery-limit) is reached without success."
+        }
+      ],
+      "commit_repair": true,
+      "reference_judgments": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met"
+      },
+      "rationale": "README gives a precise shared explanation; both guides link to its existing heading and retain operational handling."
+    },
+    {
+      "id": "correct_uncommitted",
+      "edits": [
+        {
+          "path": "README.md",
+          "old": "The worker makes at most three delivery attempts for a notification.",
+          "new": "The worker makes at most four delivery attempts for a notification."
+        },
+        {
+          "path": "docs/operations.md",
+          "old": "After the first failed send, the worker has two additional tries available.",
+          "new": "After the first failed send, the worker has up to three additional tries available."
+        },
+        {
+          "path": "docs/troubleshooting.md",
+          "old": "For the current notification worker, the third consecutive failed send exhausts\nautomatic delivery attempts.",
+          "new": "For the current notification worker, the fourth consecutive failed send exhausts\nautomatic delivery attempts."
+        }
+      ],
+      "commit_repair": false,
+      "reference_judgments": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "not met"
+      },
+      "rationale": "Working documents are correct, but none of their required changes is committed."
+    }
+  ]
+}

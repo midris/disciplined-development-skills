@@ -1,0 +1,40 @@
+{
+  "first_pass_event": 185,
+  "prior_first_access_event": 186,
+  "post_prior_event": 193,
+  "judgments": [
+    {
+      "run_id": "20261107T151202042Z-ssr-claim-full-claude-discovery-shiv-320c830b-2fbe-421b-b9ad-721737a073e6-5mp1u62w",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All nine independently judged factors agree for the three four-consumer repairs. Each commit and final project preserve the retired option rejection, independent inventory tool and both script invocation locations. The provider-specific .gitignore matches its supplied object. All 67 required files arrived before first pass at event 185 and prior access at 186. No judgment changed."
+    },
+    {
+      "run_id": "20261107T151907824Z-ssr-claim-full-claude-discovery-shiv-32b291b7-7267-434e-a69f-8b96db17745c-7giqnvrw",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All nine independently judged factors agree for the three four-consumer repairs. Each commit and final project preserve the retired option rejection, independent inventory tool and both script invocation locations. The provider-specific .gitignore matches its supplied object. All 67 required files arrived before first pass at event 185 and prior access at 186. No judgment changed."
+    },
+    {
+      "run_id": "20261107T152934525Z-ssr-claim-full-claude-discovery-shiv-6ac2dcda-7037-4fd1-ac6d-0481a50a87ce-hgqhmoco",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All nine independently judged factors agree for the three four-consumer repairs. Each commit and final project preserve the retired option rejection, independent inventory tool and both script invocation locations. The provider-specific .gitignore matches its supplied object. All 67 required files arrived before first pass at event 185 and prior access at 186. No judgment changed."
+    }
+  ]
+}

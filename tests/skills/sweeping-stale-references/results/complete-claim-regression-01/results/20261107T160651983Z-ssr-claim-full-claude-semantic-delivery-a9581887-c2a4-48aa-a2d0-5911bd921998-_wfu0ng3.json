@@ -1,0 +1,149 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claim-full-claude-01-semantic-delivery-finalist-2",
+  "assessed_at": "2026-11-07T16:07:50.687400+00:00",
+  "run_id": "20261107T160651983Z-ssr-claim-full-claude-semantic-delivery-a9581887-c2a4-48aa-a2d0-5911bd921998-_wfu0ng3",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/claude-semantic-delivery-manifest.json",
+    "sha256": "119db216283a601ac256592ff54d64f770a502efbe7b2ad46f67bc2365715ac6",
+    "version": "1",
+    "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T160651983Z-ssr-claim-full-claude-semantic-delivery-a9581887-c2a4-48aa-a2d0-5911bd921998-_wfu0ng3.inventory.json",
+        "sha256": "6230d31ab22414486101fe035327fc956cc106fcaaeb63aad98cee040e2b79c3",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T160651983Z-ssr-claim-full-claude-semantic-delivery-a9581887-c2a4-48aa-a2d0-5911bd921998-_wfu0ng3/stdout.txt",
+        "sha256": "14e4c587e86499080527ec8528e3fb4e3dad5434b3a444bb707b400d192d61e2",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T160651983Z-ssr-claim-full-claude-semantic-delivery-a9581887-c2a4-48aa-a2d0-5911bd921998-_wfu0ng3/runner.log",
+        "sha256": "a61a1d96153ff5dc19fa9b5481629841089169fe8ae34bed51587951b2c99420",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T160651983Z-ssr-claim-full-claude-semantic-delivery-a9581887-c2a4-48aa-a2d0-5911bd921998-_wfu0ng3/result.json",
+        "sha256": "9405a5399969ba6e458d50cdd2584bb492deb306b24c9eca5a4066a7804f0018",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    },
+    {
+      "id": "replay",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/replays/slot-43.json",
+        "sha256": "e0d3ce7f37c93cc814673b66a54ccd2e41d5818414cda5c9be20dc758e0f06b6",
+        "version": null
+      },
+      "selector": "Deterministic observations from disposable final-project copy, not semantic verdicts."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Verified assigned inputs, provider and ordered capture. Setup valid for this case.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "README gives the four-attempt ceiling, operations provides three additional tries, troubleshooting gives fourth-failure exhaustion, and success still terminates delivery.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only current documentation changed. Exact fixture baseline, preserved historical/helper behavior and all seven disposable tests verify.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Final committed tree includes all three correct edits with clean status.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Pre-edit search and complete policy-document inspection establish current, historical and independent meanings.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One repair commit after the fixture baseline.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "Claims a post-edit retry/attempt search absent from complete trace. Required updates, historical reason and useful paths remain identifiable.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "74c15b0 correctly fixes the documents including fourth-failure exhaustion. Replay confirms seven passing tests.",
+  "observations": [],
+  "uncertainty": []
+}

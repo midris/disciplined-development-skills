@@ -36,6 +36,8 @@ It missed the trial’s prespecified advancement criterion. The owner accepted t
 The record also preserves the failed rollback instruction and identifies which skill combination was actually used for discovery.
 Use the same chain from evidence to decision when promoting subsequent skills.
 
+The [Sweeping Stale References adoption record](skills/sweeping-stale-references/README.md) follows a full eleven-scenario regression. It separates complete repairs from native selection and reporting quality.
+
 ## Promoting a skill
 
 Use one PR per adopted skill. Put its protocol, runnable cases, assessment rules and adoption results under `tests/skills/<skill>/` and install the exact tested bytes under `skills/<skill>/`.

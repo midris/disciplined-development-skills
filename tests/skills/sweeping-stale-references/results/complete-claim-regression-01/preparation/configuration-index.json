@@ -1,0 +1,134 @@
+[
+  {
+    "case_id": "pressure-repair",
+    "provider": "codex",
+    "configuration": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-pressure-repair.json",
+    "stage": "focused"
+  },
+  {
+    "case_id": "pressure-repair",
+    "provider": "claude",
+    "configuration": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-pressure-repair.json",
+    "stage": "focused"
+  },
+  {
+    "case_id": "discovery-shiv",
+    "provider": "codex",
+    "configuration": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-discovery-shiv.json",
+    "stage": "focused"
+  },
+  {
+    "case_id": "discovery-shiv",
+    "provider": "claude",
+    "configuration": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-discovery-shiv.json",
+    "stage": "focused"
+  },
+  {
+    "case_id": "local-change",
+    "provider": "codex",
+    "configuration": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-local-change.json",
+    "stage": "focused"
+  },
+  {
+    "case_id": "local-change",
+    "provider": "claude",
+    "configuration": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-local-change.json",
+    "stage": "focused"
+  },
+  {
+    "case_id": "large-sweep-account",
+    "provider": "codex",
+    "configuration": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-large-sweep-account.json",
+    "stage": "focused"
+  },
+  {
+    "case_id": "large-sweep-account",
+    "provider": "claude",
+    "configuration": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-large-sweep-account.json",
+    "stage": "focused"
+  },
+  {
+    "case_id": "initiating-change",
+    "provider": "codex",
+    "configuration": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-initiating-change.json",
+    "stage": "remaining"
+  },
+  {
+    "case_id": "initiating-change",
+    "provider": "claude",
+    "configuration": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-initiating-change.json",
+    "stage": "remaining"
+  },
+  {
+    "case_id": "moved-guide",
+    "provider": "codex",
+    "configuration": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-moved-guide.json",
+    "stage": "remaining"
+  },
+  {
+    "case_id": "moved-guide",
+    "provider": "claude",
+    "configuration": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-moved-guide.json",
+    "stage": "remaining"
+  },
+  {
+    "case_id": "semantic-delivery",
+    "provider": "codex",
+    "configuration": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-semantic-delivery.json",
+    "stage": "remaining"
+  },
+  {
+    "case_id": "semantic-delivery",
+    "provider": "claude",
+    "configuration": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-semantic-delivery.json",
+    "stage": "remaining"
+  },
+  {
+    "case_id": "invocation-change",
+    "provider": "codex",
+    "configuration": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-invocation-change.json",
+    "stage": "remaining"
+  },
+  {
+    "case_id": "invocation-change",
+    "provider": "claude",
+    "configuration": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-invocation-change.json",
+    "stage": "remaining"
+  },
+  {
+    "case_id": "invocation-review",
+    "provider": "codex",
+    "configuration": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-invocation-review.json",
+    "stage": "remaining"
+  },
+  {
+    "case_id": "invocation-review",
+    "provider": "claude",
+    "configuration": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-invocation-review.json",
+    "stage": "remaining"
+  },
+  {
+    "case_id": "invocation-verification",
+    "provider": "codex",
+    "configuration": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-invocation-verification.json",
+    "stage": "remaining"
+  },
+  {
+    "case_id": "invocation-verification",
+    "provider": "claude",
+    "configuration": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-invocation-verification.json",
+    "stage": "remaining"
+  },
+  {
+    "case_id": "invocation-unrelated",
+    "provider": "codex",
+    "configuration": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-invocation-unrelated.json",
+    "stage": "remaining"
+  },
+  {
+    "case_id": "invocation-unrelated",
+    "provider": "claude",
+    "configuration": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-invocation-unrelated.json",
+    "stage": "remaining"
+  }
+]

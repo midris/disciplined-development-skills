@@ -1,0 +1,83 @@
+{
+  "format_version": "1",
+  "manifest_id": "ssr-claim-full-claude-large-sweep-account",
+  "study_id": "sweeping-stale-references",
+  "case_id": "large-sweep-account",
+  "status": "frozen",
+  "created_at": "2026-11-07",
+  "source_revision": "f43a1ede55ce7ac6d9f9336d9c666e2c0e21fe1b",
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "a4038836187dcf16649e8f3ab91d2f5c120e319ce949e932a5627519ea9c2266",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/sweeping-stale-references/protocol.md",
+      "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "f54cb58884f9dbffd39f37746234487d6113e1f01ad3b1d355fe269310895321",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result-v2.schema.json",
+      "sha256": "81902ed03e807804404c0d6ba7a0092a1c311c9eef45ee88c89708ce50d7c2c2",
+      "version": "2"
+    },
+    "policy": {
+      "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/policy.txt",
+      "sha256": "cc030c28bcfc36c20b700f00d2307b2933ee7d884a0d0a87d14ed8b0da2b92f5",
+      "version": "SSR-count-free-1"
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/criteria/large-sweep-account.md",
+        "sha256": "badb6bef58581b04c2c1f280e82ffb373d14bf5363f4054029b4af5d011ff823",
+        "version": "claim-full-1"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "finalist",
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/claude-large-sweep-account.json",
+        "sha256": "c9bef5d685a2f5f62802004125437bf331466d5a603ef5693b1ebf0935e967ab",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/skill/SKILL.md"
+    }
+  ],
+  "subject_sources": [
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/large-sweep-account/fixture/inventory.md",
+      "sha256": "b566e44540f768e6138a42b4651f43ba64937464b248f3db2f7073a10cae6df1",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/large-sweep-account/task.md",
+      "sha256": "525d39ced36acfd15d3656dd59701c5e4d5d75918ed1f2a657593e290f614170",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/prompts/claude-large-sweep-account.md",
+      "sha256": "396f19a60a9028e162a073ea1bb7672d071a90bafe7dffd6ac7e15b51960d0e5",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/skill/SKILL.md",
+      "sha256": "9bdd02d316c57fd320fe25feddbe30d08af57ffc541742b40b1d08ec3e68c224",
+      "version": null
+    }
+  ],
+  "controller_only": [
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/interpretation.md",
+      "sha256": "034e339185f45833ca78942c650bc4304a4536fa26a20533659f74b164975f0f",
+      "version": null
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claim-full-codex-01-initiating-change-finalist-3",
+  "assessed_at": "2026-11-07T16:17:18.503466+00:00",
+  "run_id": "20261107T161550024Z-ssr-claim-full-codex-initiating-change-48741eba-dfa5-4163-8003-532823fc8d49-bsmftfn8",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-initiating-change-manifest.json",
+    "sha256": "c79c217ecaef257da65d4138047b0d731c0bb63d7e0ad9c62a6af8da6ac7745c",
+    "version": "1",
+    "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T161550024Z-ssr-claim-full-codex-initiating-change-48741eba-dfa5-4163-8003-532823fc8d49-bsmftfn8.inventory.json",
+        "sha256": "cf98c71a1103a90ae74aa4fee1e699f699fad9a8030fd1c675e86856d01a794f",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T161550024Z-ssr-claim-full-codex-initiating-change-48741eba-dfa5-4163-8003-532823fc8d49-bsmftfn8/stdout.txt",
+        "sha256": "a88a0a08975f7882836232d135f48db26de838cd3364d372e7ae05c4c62fc0f3",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T161550024Z-ssr-claim-full-codex-initiating-change-48741eba-dfa5-4163-8003-532823fc8d49-bsmftfn8/runner.log",
+        "sha256": "9125a580c75f046f5373638bc889bc245bc2357639b0fed41f0fd9e5b025b121",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T161550024Z-ssr-claim-full-codex-initiating-change-48741eba-dfa5-4163-8003-532823fc8d49-bsmftfn8/result.json",
+        "sha256": "2bc15ad668fb4ad40e9627c3c76ac8968369227b516404045de741850a6c201a",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    },
+    {
+      "id": "provider-session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T161550024Z-ssr-claim-full-codex-initiating-change-48741eba-dfa5-4163-8003-532823fc8d49-bsmftfn8/provider-session.jsonl",
+        "sha256": "68959a4cf3702e77b43e31ba541cf067acb3cbd05812ee8c11109203fb55c336",
+        "version": null
+      },
+      "selector": "Complete provider session including nested tools omitted by stdout projection."
+    },
+    {
+      "id": "replay",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/replays/slot-53.json",
+        "sha256": "cd9db4a1999ed1b3bd05d7184e85cbf8e8e57d8449743827fcd0cdf9f361e385",
+        "version": null
+      },
+      "selector": "Deterministic observations from disposable final-project copy, not semantic verdicts."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Verified assigned inputs, provider and ordered capture. Setup valid for this case.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All six current consumers use session_ttl_minutes and current session terminology. Script reports 30 and expiry 1900 from both working directories.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Minute-to-second conversion, nonpositive rejection, default and custom behavior, partner limit and refresh-cost rationale preserved. Historical archive and both independent vendor files unchanged. Three replay tests pass.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Complete six-file rename committed after exact baseline with clean worktree.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Pre-edit search and contextual inspection distinguished service, history and external partner meanings.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One complete reconciliation commit.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "Both independent vendor paths are accounted together instead of separate path/outcome groups. All required changes and preservation reasons remain clear.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "e45783a preserves behavior in code and in both operational explanations. External-CWD replay matches.",
+  "observations": [],
+  "uncertainty": []
+}

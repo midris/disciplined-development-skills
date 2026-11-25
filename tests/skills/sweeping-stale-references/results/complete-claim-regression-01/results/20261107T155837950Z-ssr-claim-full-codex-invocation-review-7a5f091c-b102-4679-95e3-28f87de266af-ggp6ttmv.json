@@ -1,0 +1,136 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claim-full-codex-01-invocation-review-finalist-1",
+  "assessed_at": "2026-11-07T15:59:56.718994+00:00",
+  "run_id": "20261107T155837950Z-ssr-claim-full-codex-invocation-review-7a5f091c-b102-4679-95e3-28f87de266af-ggp6ttmv",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-invocation-review-manifest.json",
+    "sha256": "065f52462ea358d71629bec0b23bfdb5bf22fa88d41703a10b0e300bd52a67c2",
+    "version": "1",
+    "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T155837950Z-ssr-claim-full-codex-invocation-review-7a5f091c-b102-4679-95e3-28f87de266af-ggp6ttmv.inventory.json",
+        "sha256": "1a5f26afb91dc5f52034b95e8bac7b9a2380aa19f1c613f1ba91aef83a7ac129",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T155837950Z-ssr-claim-full-codex-invocation-review-7a5f091c-b102-4679-95e3-28f87de266af-ggp6ttmv/stdout.txt",
+        "sha256": "8b2817ce9ca5cbaa9da77414a25b25c2f689b12f00cc0189dc0caff3136394a1",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T155837950Z-ssr-claim-full-codex-invocation-review-7a5f091c-b102-4679-95e3-28f87de266af-ggp6ttmv/runner.log",
+        "sha256": "0f86fe5cd118b90c62ee22474cedfc58859502d9537ec36f3d969b2df710a1a2",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T155837950Z-ssr-claim-full-codex-invocation-review-7a5f091c-b102-4679-95e3-28f87de266af-ggp6ttmv/result.json",
+        "sha256": "406c1260000a35421a91e1e73a4522af1eb71746593093250720f6d8a43c9ebc",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    },
+    {
+      "id": "provider-session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T155837950Z-ssr-claim-full-codex-invocation-review-7a5f091c-b102-4679-95e3-28f87de266af-ggp6ttmv/provider-session.jsonl",
+        "sha256": "747836b3a52d1b464acd1610c01eceb7b6e01a682b8f814033f1feec3381c394",
+        "version": null
+      },
+      "selector": "Complete provider session including nested tools omitted by stdout projection."
+    },
+    {
+      "id": "replay",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/replays/slot-33.json",
+        "sha256": "fdb5ef6c7b4d3967539ad15f6354403bba7ec29c3fc852e72e06b57d80c445d8",
+        "version": null
+      },
+      "selector": "Deterministic observations from disposable final-project copy, not semantic verdicts."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Verified assigned inputs, provider and ordered capture. Setup valid for this case.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "README gives the four-attempt ceiling, operations provides three additional tries, troubleshooting gives fourth-failure exhaustion, and success still terminates delivery.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only current documentation changed. Exact fixture baseline, preserved historical/helper behavior and all seven disposable tests verify.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Final committed tree includes all three correct edits with clean status.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Codex read the full assigned body in its initial task inspection before edits.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "b442d49 correctly revises the fourth-failure claim after reading the full troubleshooting document. Extra skill-file inventory is unnecessary.",
+  "observations": [],
+  "uncertainty": []
+}

@@ -1,0 +1,18 @@
+{
+  "qualification": "11 passed in 49.02s. Installed CLIs, actual wrapper and surrogate endpoint, zero model calls.",
+  "evidence": [
+    "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/qualification/claude-cli-read-only",
+    "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/qualification/claude-cli-workspace-write",
+    "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/qualification/claude-input-isolation-ia3slk9j",
+    "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/qualification/claude-input-isolation-zl1cih21",
+    "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/qualification/claude-read-only-6790xx88",
+    "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/qualification/codex-git-r8f9j6_9",
+    "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/qualification/codex-input-isolation-li83v71g",
+    "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/qualification/codex-input-isolation-rnp6d5_g",
+    "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/qualification/codex-read-only-dwr3p68u",
+    "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/qualification/login-shell-read-only.json",
+    "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/qualification/login-shell-workspace-write.json"
+  ],
+  "claude_login_status": "claude.ai logged in during host preflight",
+  "codex_login_status": "ChatGPT logged in"
+}

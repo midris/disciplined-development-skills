@@ -1,0 +1,85 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claim-full-claude-01-invocation-unrelated-finalist-2",
+  "assessed_at": "2026-11-07T16:15:13.759130+00:00",
+  "run_id": "20261107T161451810Z-ssr-claim-full-claude-invocation-unrelated-ead0cbbe-10cb-47cf-b003-ec9c92f4f74a-s7ryigct",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/claude-invocation-unrelated-manifest.json",
+    "sha256": "06be503237311fcf18d50fd88b4d09f8a06f168b55b3c030fe62f4806d063887",
+    "version": "1",
+    "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T161451810Z-ssr-claim-full-claude-invocation-unrelated-ead0cbbe-10cb-47cf-b003-ec9c92f4f74a-s7ryigct.inventory.json",
+        "sha256": "f019310109598d623afdc4964a5b5bba2dd7975de7f3683c20c645d298789799",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T161451810Z-ssr-claim-full-claude-invocation-unrelated-ead0cbbe-10cb-47cf-b003-ec9c92f4f74a-s7ryigct/stdout.txt",
+        "sha256": "c07b8bb17e3a298d38265fbe5cc800158a37014c76666d50152140a32d7b2fdb",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T161451810Z-ssr-claim-full-claude-invocation-unrelated-ead0cbbe-10cb-47cf-b003-ec9c92f4f74a-s7ryigct/runner.log",
+        "sha256": "e47a53a3a5dd66051a99f2149275d44118583e82ef219c881de5970944de3478",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T161451810Z-ssr-claim-full-claude-invocation-unrelated-ead0cbbe-10cb-47cf-b003-ec9c92f4f74a-s7ryigct/result.json",
+        "sha256": "6cebe8260ea8361a5748eea717f8a6dd7bf2c0bed2e10213cc40e9cb9795d316",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Verified assigned inputs, provider and ordered capture. Setup valid for this case.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "D1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Read requested service source and defaults and explained 100 + 30 \u00d7 60 = 1900. No selection of SSR as applicable or use of its sweep/accounting procedure. Repository unchanged.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "not measured",
+  "procedural_summary": "Correct no-edit explanation including validation and partner rationale.",
+  "observations": [],
+  "uncertainty": []
+}

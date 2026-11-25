@@ -1,0 +1,41 @@
+{
+  "moved_from": "docs/setup.md",
+  "moved_to": "docs/reference/setup.md",
+  "required_consumers": [
+    {
+      "path": "README.md",
+      "kind": "markdown",
+      "old_target": "docs/setup.md",
+      "new_target": "docs/reference/setup.md"
+    },
+    {
+      "path": "docs/index.md",
+      "kind": "markdown",
+      "old_target": "setup.md",
+      "new_target": "reference/setup.md"
+    },
+    {
+      "path": "docs/tutorials/quickstart.md",
+      "kind": "markdown",
+      "old_target": "../setup.md",
+      "new_target": "../reference/setup.md"
+    },
+    {
+      "path": "scripts/export-guide.sh",
+      "kind": "shell",
+      "old_target": "../docs/setup.md",
+      "new_target": "../docs/reference/setup.md"
+    }
+  ],
+  "preserve": [
+    "docs/reference/setup.md",
+    "plans/completed/docs-layout.md",
+    "vendor/widget/README.md",
+    "vendor/widget/setup.md"
+  ],
+  "independent_link": {
+    "path": "vendor/widget/README.md",
+    "target": "vendor/widget/setup.md"
+  },
+  "accounting_scope": "Four current references to the moved guide plus the historical reference; already-current and unrelated broad-query hits are not required account entries for this case. All accounting detail is secondary."
+}

@@ -1,0 +1,149 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claim-full-codex-01-local-change-finalist-1",
+  "assessed_at": "2026-11-07T15:14:29.277132+00:00",
+  "run_id": "20261107T151302392Z-ssr-claim-full-codex-local-change-4cba2b75-6496-4fdf-8ec1-07fdffe82f84-s2etsdls",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-local-change-manifest.json",
+    "sha256": "5ae8af8fb597dd30022f6533c5419fe93775ef9c41388f93b58125dc201066c5",
+    "version": "1",
+    "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151302392Z-ssr-claim-full-codex-local-change-4cba2b75-6496-4fdf-8ec1-07fdffe82f84-s2etsdls.inventory.json",
+        "sha256": "ed6cba14490a32d8aa966afa346e9f0fb688a31352372fbe01109f576c2adae6",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151302392Z-ssr-claim-full-codex-local-change-4cba2b75-6496-4fdf-8ec1-07fdffe82f84-s2etsdls/stdout.txt",
+        "sha256": "5baed5230725ae3497dd93febdd519117f5224596ea5977c7dccdf3785917ba8",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151302392Z-ssr-claim-full-codex-local-change-4cba2b75-6496-4fdf-8ec1-07fdffe82f84-s2etsdls/runner.log",
+        "sha256": "b91c59b9058d61644c0dbbb2048162809573488ac7ff63ed5035505eccc574bd",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151302392Z-ssr-claim-full-codex-local-change-4cba2b75-6496-4fdf-8ec1-07fdffe82f84-s2etsdls/result.json",
+        "sha256": "fa45f582572fa0f7fe9420ddea50568dba6af2b9e8f4650cdd20f2e37874dd8c",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    },
+    {
+      "id": "provider-session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151302392Z-ssr-claim-full-codex-local-change-4cba2b75-6496-4fdf-8ec1-07fdffe82f84-s2etsdls/provider-session.jsonl",
+        "sha256": "83667cf5b08ce9dcb9a9974556f77b41db2e156b87bb3fa84e997c1582160075",
+        "version": null
+      },
+      "selector": "Complete provider session including nested tools omitted by stdout projection."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Verified assigned inputs, provider and ordered capture. Setup valid for this case.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Glossary heading correctly reads Membership and its definition remains useful.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Only the heading changes. Billing, account JSON, membership/shipping meanings and the two linked README targets are preserved.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Complete correction is committed with clean working tree.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Search precedes editing and distinguishes current terms and unrelated shipping references.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One repair commit after exact baseline.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Positive inventory covers the corrected heading and outside matches with separate path, outcome and useful locations. Historical review preserves the same terminology.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Correct bounded edit and complete account in 314c745.",
+  "observations": [],
+  "uncertainty": []
+}

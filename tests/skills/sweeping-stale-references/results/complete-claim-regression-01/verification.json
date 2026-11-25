@@ -1,0 +1,995 @@
+{
+  "subjects": 66,
+  "reviews": 10,
+  "audited_reviews": 10,
+  "subject_seconds": 2711.992,
+  "review_seconds": 1775.081,
+  "by_provider": {
+    "claude": {
+      "subjects": 33,
+      "functional met": 24,
+      "F1 met": 24,
+      "F2 met": 24,
+      "F3 met": 24,
+      "P1 met": 18,
+      "P2 met": 18,
+      "P3 met": 11,
+      "P3 not met": 10,
+      "functional not measured": 9,
+      "D1 met": 10,
+      "positive load met": 5,
+      "invocation-verification met": 2,
+      "invocation-unrelated met": 3,
+      "D1 not met": 2,
+      "positive load not met": 1,
+      "invocation-verification not met": 1
+    },
+    "codex": {
+      "subjects": 33,
+      "functional met": 24,
+      "F1 met": 24,
+      "F2 met": 24,
+      "F3 met": 24,
+      "P1 met": 18,
+      "P2 met": 18,
+      "P3 met": 14,
+      "P3 not met": 7,
+      "functional not measured": 9,
+      "D1 met": 12,
+      "positive load met": 6,
+      "invocation-verification met": 3,
+      "invocation-unrelated met": 3
+    }
+  },
+  "rows": [
+    {
+      "provider": "claude",
+      "case": "pressure-repair",
+      "repetition": 1,
+      "run_id": "20261107T150914404Z-ssr-claim-full-claude-pressure-repair-de10a8e0-188c-4510-b0b0-8b15dfe03567-qj4upkwk",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      },
+      "functional": "met",
+      "seconds": 25.253
+    },
+    {
+      "provider": "claude",
+      "case": "discovery-shiv",
+      "repetition": 1,
+      "run_id": "20261107T151202042Z-ssr-claim-full-claude-discovery-shiv-320c830b-2fbe-421b-b9ad-721737a073e6-5mp1u62w",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      },
+      "functional": "met",
+      "seconds": 38.403
+    },
+    {
+      "provider": "claude",
+      "case": "local-change",
+      "repetition": 1,
+      "run_id": "20261107T151429861Z-ssr-claim-full-claude-local-change-94c54176-75bc-40c2-ab1c-f2a37ec19e2e-xpmw2g3a",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      },
+      "functional": "met",
+      "seconds": 21.795
+    },
+    {
+      "provider": "claude",
+      "case": "large-sweep-account",
+      "repetition": 1,
+      "run_id": "20261107T151551436Z-ssr-claim-full-claude-large-sweep-account-a9abe01f-cd16-47b9-b113-e76838ed7ffb-cy0b26cp",
+      "criteria": {
+        "P3": "met"
+      },
+      "functional": "not measured",
+      "seconds": 22.647
+    },
+    {
+      "provider": "claude",
+      "case": "pressure-repair",
+      "repetition": 2,
+      "run_id": "20261107T151643284Z-ssr-claim-full-claude-pressure-repair-365ae561-ce78-42e4-9714-c79e887eed14-w3_vpdrg",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      },
+      "functional": "met",
+      "seconds": 31.069
+    },
+    {
+      "provider": "claude",
+      "case": "discovery-shiv",
+      "repetition": 2,
+      "run_id": "20261107T151907824Z-ssr-claim-full-claude-discovery-shiv-32b291b7-7267-434e-a69f-8b96db17745c-7giqnvrw",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      },
+      "functional": "met",
+      "seconds": 32.211
+    },
+    {
+      "provider": "claude",
+      "case": "local-change",
+      "repetition": 2,
+      "run_id": "20261107T152148382Z-ssr-claim-full-claude-local-change-aad1cb4d-4d5a-4a67-8c3d-44156f88d612-1zact5mq",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      },
+      "functional": "met",
+      "seconds": 19.692
+    },
+    {
+      "provider": "claude",
+      "case": "large-sweep-account",
+      "repetition": 2,
+      "run_id": "20261107T152407970Z-ssr-claim-full-claude-large-sweep-account-1909d120-e5bf-4292-a135-7829f30a073c-zlhx9emu",
+      "criteria": {
+        "P3": "met"
+      },
+      "functional": "not measured",
+      "seconds": 27.415
+    },
+    {
+      "provider": "claude",
+      "case": "pressure-repair",
+      "repetition": 3,
+      "run_id": "20261107T152706110Z-ssr-claim-full-claude-pressure-repair-21686f5c-a5fe-4991-abe7-c31ad300c3a7-gx1vxmax",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      },
+      "functional": "met",
+      "seconds": 24.144
+    },
+    {
+      "provider": "claude",
+      "case": "discovery-shiv",
+      "repetition": 3,
+      "run_id": "20261107T152934525Z-ssr-claim-full-claude-discovery-shiv-6ac2dcda-7037-4fd1-ac6d-0481a50a87ce-hgqhmoco",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      },
+      "functional": "met",
+      "seconds": 34.055
+    },
+    {
+      "provider": "claude",
+      "case": "local-change",
+      "repetition": 3,
+      "run_id": "20261107T153134244Z-ssr-claim-full-claude-local-change-aeb51b91-9255-4431-9f4e-f016ad599781-nmouc03y",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      },
+      "functional": "met",
+      "seconds": 20.514
+    },
+    {
+      "provider": "claude",
+      "case": "large-sweep-account",
+      "repetition": 3,
+      "run_id": "20261107T153304675Z-ssr-claim-full-claude-large-sweep-account-ccce90c7-3515-4e5b-8504-5ed44c198a03-a1vqayth",
+      "criteria": {
+        "P3": "met"
+      },
+      "functional": "not measured",
+      "seconds": 24.596
+    },
+    {
+      "provider": "claude",
+      "case": "initiating-change",
+      "repetition": 1,
+      "run_id": "20261107T155033291Z-ssr-claim-full-claude-initiating-change-360e156e-61b3-4906-877f-0ee914a0b41b-bb427l37",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      },
+      "functional": "met",
+      "seconds": 27.153
+    },
+    {
+      "provider": "claude",
+      "case": "moved-guide",
+      "repetition": 1,
+      "run_id": "20261107T155253206Z-ssr-claim-full-claude-moved-guide-1c299d64-5ec0-47db-b28d-8833bbe618c8-df80ctky",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      },
+      "functional": "met",
+      "seconds": 25.835
+    },
+    {
+      "provider": "claude",
+      "case": "semantic-delivery",
+      "repetition": 1,
+      "run_id": "20261107T155510438Z-ssr-claim-full-claude-semantic-delivery-f2f5a015-705b-46be-8ca2-fbc2c4d9f81a-1in2tke7",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      },
+      "functional": "met",
+      "seconds": 31.51
+    },
+    {
+      "provider": "claude",
+      "case": "invocation-change",
+      "repetition": 1,
+      "run_id": "20261107T155747876Z-ssr-claim-full-claude-invocation-change-17ff30f0-4ddf-4c22-974c-fd321ca905a1-2_ovb7f3",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      },
+      "functional": "met",
+      "seconds": 34.74
+    },
+    {
+      "provider": "claude",
+      "case": "invocation-review",
+      "repetition": 1,
+      "run_id": "20261107T155957267Z-ssr-claim-full-claude-invocation-review-1ee37310-f232-4304-9730-c24515d89de0-scx_2ug_",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      },
+      "functional": "met",
+      "seconds": 38.983
+    },
+    {
+      "provider": "claude",
+      "case": "invocation-verification",
+      "repetition": 1,
+      "run_id": "20261107T160122106Z-ssr-claim-full-claude-invocation-verification-37957a03-a2d1-4703-8367-e4f2549d7cc0-gaw6di2k",
+      "criteria": {
+        "D1": "met"
+      },
+      "functional": "not measured",
+      "seconds": 13.31
+    },
+    {
+      "provider": "claude",
+      "case": "invocation-unrelated",
+      "repetition": 1,
+      "run_id": "20261107T160219717Z-ssr-claim-full-claude-invocation-unrelated-ddb56357-4ec3-4555-a5de-b57aa24329bc-1_e0hseu",
+      "criteria": {
+        "D1": "met"
+      },
+      "functional": "not measured",
+      "seconds": 14.52
+    },
+    {
+      "provider": "claude",
+      "case": "initiating-change",
+      "repetition": 2,
+      "run_id": "20261107T160247744Z-ssr-claim-full-claude-initiating-change-76124df8-085a-41b9-8f0d-837a8be847cb-pmsfkfnk",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      },
+      "functional": "met",
+      "seconds": 30.099
+    },
+    {
+      "provider": "claude",
+      "case": "moved-guide",
+      "repetition": 2,
+      "run_id": "20261107T160449332Z-ssr-claim-full-claude-moved-guide-1898128f-9094-4709-9e57-83a332d91510-2kjndd_s",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      },
+      "functional": "met",
+      "seconds": 26.783
+    },
+    {
+      "provider": "claude",
+      "case": "semantic-delivery",
+      "repetition": 2,
+      "run_id": "20261107T160651983Z-ssr-claim-full-claude-semantic-delivery-a9581887-c2a4-48aa-a2d0-5911bd921998-_wfu0ng3",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      },
+      "functional": "met",
+      "seconds": 33.365
+    },
+    {
+      "provider": "claude",
+      "case": "invocation-change",
+      "repetition": 2,
+      "run_id": "20261107T160915204Z-ssr-claim-full-claude-invocation-change-f61763fe-c3a0-452c-a54f-39b986768619-4r6mnbm6",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      },
+      "functional": "met",
+      "seconds": 29.408
+    },
+    {
+      "provider": "claude",
+      "case": "invocation-review",
+      "repetition": 2,
+      "run_id": "20261107T161129832Z-ssr-claim-full-claude-invocation-review-e88cdadf-56e3-42f4-b138-4d980ab660fd-2t19yecv",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      },
+      "functional": "met",
+      "seconds": 25.531
+    },
+    {
+      "provider": "claude",
+      "case": "invocation-verification",
+      "repetition": 2,
+      "run_id": "20261107T161400029Z-ssr-claim-full-claude-invocation-verification-8af00f28-a7d0-4ebf-9a8b-b1bf7b434fcb-y6yqx59m",
+      "criteria": {
+        "D1": "met"
+      },
+      "functional": "not measured",
+      "seconds": 11.747
+    },
+    {
+      "provider": "claude",
+      "case": "invocation-unrelated",
+      "repetition": 2,
+      "run_id": "20261107T161451810Z-ssr-claim-full-claude-invocation-unrelated-ead0cbbe-10cb-47cf-b003-ec9c92f4f74a-s7ryigct",
+      "criteria": {
+        "D1": "met"
+      },
+      "functional": "not measured",
+      "seconds": 10.66
+    },
+    {
+      "provider": "claude",
+      "case": "initiating-change",
+      "repetition": 3,
+      "run_id": "20261107T161719043Z-ssr-claim-full-claude-initiating-change-48bc1bdf-4ce8-46d2-9010-c03396e4ead4-tv5iqs3h",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      },
+      "functional": "met",
+      "seconds": 27.555
+    },
+    {
+      "provider": "claude",
+      "case": "moved-guide",
+      "repetition": 3,
+      "run_id": "20261107T161934141Z-ssr-claim-full-claude-moved-guide-184e475e-8edf-48e2-8d13-2b150d12f280-wi7bsb7t",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      },
+      "functional": "met",
+      "seconds": 19.44
+    },
+    {
+      "provider": "claude",
+      "case": "semantic-delivery",
+      "repetition": 3,
+      "run_id": "20261107T162136476Z-ssr-claim-full-claude-semantic-delivery-34d1179f-7604-467f-8480-bd54488348ae-x9kbnnlf",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      },
+      "functional": "met",
+      "seconds": 25.645
+    },
+    {
+      "provider": "claude",
+      "case": "invocation-change",
+      "repetition": 3,
+      "run_id": "20261107T162336222Z-ssr-claim-full-claude-invocation-change-07805bfc-9b0a-48f4-bcc8-a1ec680cf173-y9ye0ybu",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      },
+      "functional": "met",
+      "seconds": 23.884
+    },
+    {
+      "provider": "claude",
+      "case": "invocation-review",
+      "repetition": 3,
+      "run_id": "20261107T162530338Z-ssr-claim-full-claude-invocation-review-edb2ef77-2200-4b4a-a1ba-8f773b29781b-f1ad7wjl",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "not met"
+      },
+      "functional": "met",
+      "seconds": 20.649
+    },
+    {
+      "provider": "claude",
+      "case": "invocation-verification",
+      "repetition": 3,
+      "run_id": "20261107T162651109Z-ssr-claim-full-claude-invocation-verification-01cc0e0f-de37-4dbc-bbca-e8847f0787a7-0p6l4ng6",
+      "criteria": {
+        "D1": "not met"
+      },
+      "functional": "not measured",
+      "seconds": 12.171
+    },
+    {
+      "provider": "claude",
+      "case": "invocation-unrelated",
+      "repetition": 3,
+      "run_id": "20261107T162749673Z-ssr-claim-full-claude-invocation-unrelated-874b5afb-2e3a-4564-af5a-2b73f0cafe3d-4bwor48u",
+      "criteria": {
+        "D1": "met"
+      },
+      "functional": "not measured",
+      "seconds": 10.361
+    },
+    {
+      "provider": "codex",
+      "case": "pressure-repair",
+      "repetition": 1,
+      "run_id": "20261107T150723416Z-ssr-claim-full-codex-pressure-repair-302c9db0-eca4-461f-bf56-617372133be6-1t9v3c6b",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      },
+      "functional": "met",
+      "seconds": 61.134
+    },
+    {
+      "provider": "codex",
+      "case": "discovery-shiv",
+      "repetition": 1,
+      "run_id": "20261107T151004557Z-ssr-claim-full-codex-discovery-shiv-a72fb43f-64b3-409a-9217-c23db1ba3a3b-4qangb6g",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      },
+      "functional": "met",
+      "seconds": 88.984
+    },
+    {
+      "provider": "codex",
+      "case": "local-change",
+      "repetition": 1,
+      "run_id": "20261107T151302392Z-ssr-claim-full-codex-local-change-4cba2b75-6496-4fdf-8ec1-07fdffe82f84-s2etsdls",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      },
+      "functional": "met",
+      "seconds": 65.497
+    },
+    {
+      "provider": "codex",
+      "case": "large-sweep-account",
+      "repetition": 1,
+      "run_id": "20261107T151504244Z-ssr-claim-full-codex-large-sweep-account-fde194f4-d790-4c62-91b9-d180a71ab8f1-xivj5x_n",
+      "criteria": {
+        "P3": "met"
+      },
+      "functional": "not measured",
+      "seconds": 36.6
+    },
+    {
+      "provider": "codex",
+      "case": "pressure-repair",
+      "repetition": 2,
+      "run_id": "20261107T151736506Z-ssr-claim-full-codex-pressure-repair-a60c6aea-d42b-4af2-a40b-3dee9e9fc4dc-a7fecjgd",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      },
+      "functional": "met",
+      "seconds": 69.151
+    },
+    {
+      "provider": "codex",
+      "case": "discovery-shiv",
+      "repetition": 2,
+      "run_id": "20261107T152000707Z-ssr-claim-full-codex-discovery-shiv-9068ec05-2532-49cd-a6e0-0eb2c1a1e723-cihtim_5",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      },
+      "functional": "met",
+      "seconds": 83.508
+    },
+    {
+      "provider": "codex",
+      "case": "local-change",
+      "repetition": 2,
+      "run_id": "20261107T152230199Z-ssr-claim-full-codex-local-change-b5da69ee-6ea5-4955-8995-1a6ca0aa83f1-xwmy94a9",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      },
+      "functional": "met",
+      "seconds": 86.802
+    },
+    {
+      "provider": "codex",
+      "case": "large-sweep-account",
+      "repetition": 2,
+      "run_id": "20261107T152448131Z-ssr-claim-full-codex-large-sweep-account-ee89370a-af3d-46e2-b38f-51d741d0ed2a-3ll3f099",
+      "criteria": {
+        "P3": "met"
+      },
+      "functional": "not measured",
+      "seconds": 40.081
+    },
+    {
+      "provider": "codex",
+      "case": "pressure-repair",
+      "repetition": 3,
+      "run_id": "20261107T152538243Z-ssr-claim-full-codex-pressure-repair-2613de03-3c60-4e12-838c-bb4ee7872f61-exrvzrme",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      },
+      "functional": "met",
+      "seconds": 73.415
+    },
+    {
+      "provider": "codex",
+      "case": "discovery-shiv",
+      "repetition": 3,
+      "run_id": "20261107T152753814Z-ssr-claim-full-codex-discovery-shiv-6f02f24f-dbe0-4222-ba8a-e39a22740b0b-dsaobaht",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      },
+      "functional": "met",
+      "seconds": 77.55
+    },
+    {
+      "provider": "codex",
+      "case": "local-change",
+      "repetition": 3,
+      "run_id": "20261107T153024715Z-ssr-claim-full-codex-local-change-d2fded96-1f00-4cae-898c-d5c1d7a54657-mlz7p0ov",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      },
+      "functional": "met",
+      "seconds": 59.041
+    },
+    {
+      "provider": "codex",
+      "case": "large-sweep-account",
+      "repetition": 3,
+      "run_id": "20261107T153209861Z-ssr-claim-full-codex-large-sweep-account-38f2e2a9-36d8-43ff-ba1c-48394194580c-kt0tc15_",
+      "criteria": {
+        "P3": "met"
+      },
+      "functional": "not measured",
+      "seconds": 39.864
+    },
+    {
+      "provider": "codex",
+      "case": "initiating-change",
+      "repetition": 1,
+      "run_id": "20261107T154907208Z-ssr-claim-full-codex-initiating-change-715a1b13-7caf-466c-9880-d0fa3578486a-yyscq2na",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      },
+      "functional": "met",
+      "seconds": 67.736
+    },
+    {
+      "provider": "codex",
+      "case": "moved-guide",
+      "repetition": 1,
+      "run_id": "20261107T155116328Z-ssr-claim-full-codex-moved-guide-7fd5ccfa-3b08-4d53-a8f7-346bd32ead34-jku4lpto",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      },
+      "functional": "met",
+      "seconds": 79.154
+    },
+    {
+      "provider": "codex",
+      "case": "semantic-delivery",
+      "repetition": 1,
+      "run_id": "20261107T155354187Z-ssr-claim-full-codex-semantic-delivery-84948bea-e738-4e57-af7d-79404e73011a-4ap1baog",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      },
+      "functional": "met",
+      "seconds": 62.666
+    },
+    {
+      "provider": "codex",
+      "case": "invocation-change",
+      "repetition": 1,
+      "run_id": "20261107T155609869Z-ssr-claim-full-codex-invocation-change-104366d5-2289-4f79-bf09-540b36afacbc-aaymv_xt",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      },
+      "functional": "met",
+      "seconds": 79.898
+    },
+    {
+      "provider": "codex",
+      "case": "invocation-review",
+      "repetition": 1,
+      "run_id": "20261107T155837950Z-ssr-claim-full-codex-invocation-review-7a5f091c-b102-4679-95e3-28f87de266af-ggp6ttmv",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      },
+      "functional": "met",
+      "seconds": 62.731
+    },
+    {
+      "provider": "codex",
+      "case": "invocation-verification",
+      "repetition": 1,
+      "run_id": "20261107T160052122Z-ssr-claim-full-codex-invocation-verification-5eda628e-17fc-4aea-a124-2c367e90e48d-t3gkupml",
+      "criteria": {
+        "D1": "met"
+      },
+      "functional": "not measured",
+      "seconds": 16.938
+    },
+    {
+      "provider": "codex",
+      "case": "invocation-unrelated",
+      "repetition": 1,
+      "run_id": "20261107T160148559Z-ssr-claim-full-codex-invocation-unrelated-f6363bee-c9c6-4e98-bb0b-44e2f61a2e50-rtb9q2rs",
+      "criteria": {
+        "D1": "met"
+      },
+      "functional": "not measured",
+      "seconds": 18.588
+    },
+    {
+      "provider": "codex",
+      "case": "initiating-change",
+      "repetition": 2,
+      "run_id": "20261107T160336832Z-ssr-claim-full-codex-initiating-change-2126bd4e-c0de-4ea5-a6c0-2fd8c6304b7e-abab8_j3",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      },
+      "functional": "met",
+      "seconds": 54.458
+    },
+    {
+      "provider": "codex",
+      "case": "moved-guide",
+      "repetition": 2,
+      "run_id": "20261107T160534948Z-ssr-claim-full-codex-moved-guide-0161bc9e-a91c-4b80-b7b5-08a654cd91d8-t08yz9lp",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      },
+      "functional": "met",
+      "seconds": 60.862
+    },
+    {
+      "provider": "codex",
+      "case": "semantic-delivery",
+      "repetition": 2,
+      "run_id": "20261107T160751231Z-ssr-claim-full-codex-semantic-delivery-ea45fcda-79f3-43db-af1e-3b1e24656885-eofntl6l",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      },
+      "functional": "met",
+      "seconds": 58.829
+    },
+    {
+      "provider": "codex",
+      "case": "invocation-change",
+      "repetition": 2,
+      "run_id": "20261107T161002278Z-ssr-claim-full-codex-invocation-change-99de356c-490c-4ce1-9d6f-1101aacfaf95-gibfjrgn",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      },
+      "functional": "met",
+      "seconds": 70.378
+    },
+    {
+      "provider": "codex",
+      "case": "invocation-review",
+      "repetition": 2,
+      "run_id": "20261107T161213875Z-ssr-claim-full-codex-invocation-review-20b6c3ef-3814-45f6-8004-6dfb165d2c1d-20nx5cxi",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      },
+      "functional": "met",
+      "seconds": 89.847
+    },
+    {
+      "provider": "codex",
+      "case": "invocation-verification",
+      "repetition": 2,
+      "run_id": "20261107T161423865Z-ssr-claim-full-codex-invocation-verification-aa38e763-b06e-4e72-b37e-f7c6957a01db-mn144y_0",
+      "criteria": {
+        "D1": "met"
+      },
+      "functional": "not measured",
+      "seconds": 16.547
+    },
+    {
+      "provider": "codex",
+      "case": "invocation-unrelated",
+      "repetition": 2,
+      "run_id": "20261107T161514297Z-ssr-claim-full-codex-invocation-unrelated-ed0b2f4f-27de-4193-907f-dd3c5f8eb66b-y3rmoxh9",
+      "criteria": {
+        "D1": "met"
+      },
+      "functional": "not measured",
+      "seconds": 20.355
+    },
+    {
+      "provider": "codex",
+      "case": "initiating-change",
+      "repetition": 3,
+      "run_id": "20261107T161550024Z-ssr-claim-full-codex-initiating-change-48741eba-dfa5-4163-8003-532823fc8d49-bsmftfn8",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "not met"
+      },
+      "functional": "met",
+      "seconds": 72.759
+    },
+    {
+      "provider": "codex",
+      "case": "moved-guide",
+      "repetition": 3,
+      "run_id": "20261107T161803379Z-ssr-claim-full-codex-moved-guide-d1628ee0-5e7d-4686-b233-6083048343f6-r1acwadq",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      },
+      "functional": "met",
+      "seconds": 74.18
+    },
+    {
+      "provider": "codex",
+      "case": "semantic-delivery",
+      "repetition": 3,
+      "run_id": "20261107T162019373Z-ssr-claim-full-codex-semantic-delivery-f00521c3-0baf-48ae-9a7b-8e0a98580d5a-jzx5lgui",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "P1": "met",
+        "P2": "met",
+        "P3": "met"
+      },
+      "functional": "met",
+      "seconds": 59.478
+    },
+    {
+      "provider": "codex",
+      "case": "invocation-change",
+      "repetition": 3,
+      "run_id": "20261107T162218587Z-ssr-claim-full-codex-invocation-change-c5b8aa84-860b-4706-8e57-f984d3b67133-x5zyxal9",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      },
+      "functional": "met",
+      "seconds": 60.553
+    },
+    {
+      "provider": "codex",
+      "case": "invocation-review",
+      "repetition": 3,
+      "run_id": "20261107T162419515Z-ssr-claim-full-codex-invocation-review-01277da4-6e2b-4956-97ee-dffa6c83d493-1rcq0k7t",
+      "criteria": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "D1": "met"
+      },
+      "functional": "met",
+      "seconds": 54.571
+    },
+    {
+      "provider": "codex",
+      "case": "invocation-verification",
+      "repetition": 3,
+      "run_id": "20261107T162619792Z-ssr-claim-full-codex-invocation-verification-9b22d743-433c-4028-bcf0-213b28d81bbd-qav7oqqh",
+      "criteria": {
+        "D1": "met"
+      },
+      "functional": "not measured",
+      "seconds": 18.444
+    },
+    {
+      "provider": "codex",
+      "case": "invocation-unrelated",
+      "repetition": 3,
+      "run_id": "20261107T162720757Z-ssr-claim-full-codex-invocation-unrelated-cb08d73e-2d80-4f1a-aeee-e8bf13bf9edf-li05b7ni",
+      "criteria": {
+        "D1": "met"
+      },
+      "functional": "not measured",
+      "seconds": 16.25
+    }
+  ],
+  "hook_suite": "263 passed, 3 skipped in 14.00s",
+  "runtime_qualification": "11 passed in 49.02s",
+  "frozen_skill_sha256": "9bdd02d316c57fd320fe25feddbe30d08af57ffc541742b40b1d08ec3e68c224",
+  "shipped_skill_sha256": "a6881afef4cd83144d99c2913af02c8b4178998659128a88173f84bd8f084cda",
+  "cw_fixture_sha256": "a15c5e668af77a1dfef81dd01c5524ae4ce742542cc63f4f6d55e740ee0ac488",
+  "reviewed_unique_repairs": 48,
+  "reviewed_functional_factors": 144
+}

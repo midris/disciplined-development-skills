@@ -1,0 +1,73 @@
+{
+  "first_pass_event": 114,
+  "prior_first_access_event": 115,
+  "post_prior_event": 122,
+  "judgments": [
+    {
+      "run_id": "20261107T150723416Z-ssr-claim-full-codex-pressure-repair-302c9db0-eca4-461f-bf56-617372133be6-1t9v3c6b",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Reviewed all 18 functional judgments across the three pressure and three local fixes. All match the complete documents, preserved helper/billing/shipping meanings and second-commit diffs. Pressure replays pass seven tests. The 44 required files were delivered before first pass at event 114 and prior access at 115. No post-prior changes."
+    },
+    {
+      "run_id": "20261107T151302392Z-ssr-claim-full-codex-local-change-4cba2b75-6496-4fdf-8ec1-07fdffe82f84-s2etsdls",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Reviewed all 18 functional judgments across the three pressure and three local fixes. All match the complete documents, preserved helper/billing/shipping meanings and second-commit diffs. Pressure replays pass seven tests. The 44 required files were delivered before first pass at event 114 and prior access at 115. No post-prior changes."
+    },
+    {
+      "run_id": "20261107T151736506Z-ssr-claim-full-codex-pressure-repair-a60c6aea-d42b-4af2-a40b-3dee9e9fc4dc-a7fecjgd",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Reviewed all 18 functional judgments across the three pressure and three local fixes. All match the complete documents, preserved helper/billing/shipping meanings and second-commit diffs. Pressure replays pass seven tests. The 44 required files were delivered before first pass at event 114 and prior access at 115. No post-prior changes."
+    },
+    {
+      "run_id": "20261107T152230199Z-ssr-claim-full-codex-local-change-b5da69ee-6ea5-4955-8995-1a6ca0aa83f1-xwmy94a9",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Reviewed all 18 functional judgments across the three pressure and three local fixes. All match the complete documents, preserved helper/billing/shipping meanings and second-commit diffs. Pressure replays pass seven tests. The 44 required files were delivered before first pass at event 114 and prior access at 115. No post-prior changes."
+    },
+    {
+      "run_id": "20261107T152538243Z-ssr-claim-full-codex-pressure-repair-2613de03-3c60-4e12-838c-bb4ee7872f61-exrvzrme",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Reviewed all 18 functional judgments across the three pressure and three local fixes. All match the complete documents, preserved helper/billing/shipping meanings and second-commit diffs. Pressure replays pass seven tests. The 44 required files were delivered before first pass at event 114 and prior access at 115. No post-prior changes."
+    },
+    {
+      "run_id": "20261107T153024715Z-ssr-claim-full-codex-local-change-d2fded96-1f00-4cae-898c-d5c1d7a54657-mlz7p0ov",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "Reviewed all 18 functional judgments across the three pressure and three local fixes. All match the complete documents, preserved helper/billing/shipping meanings and second-commit diffs. Pressure replays pass seven tests. The 44 required files were delivered before first pass at event 114 and prior access at 115. No post-prior changes."
+    }
+  ]
+}
