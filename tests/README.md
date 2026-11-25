@@ -23,9 +23,16 @@ cat "$(dirname "$protocol")/example-assessment.md"
 
 The walkthrough freezes a two-attempt study in Git, runs both slots through the installed CLI with a local stand-in for Codex, and checks the resulting bundles and judgments at collection and assessment readiness.
 Inspect its protocol, manifest, attempt index and results beside the assessment.
-Expect two included attempts, one met and one not met, with both results cited.
+The source assigns badge pickup to the west desk. One answer directs the visitor there and one sends them east. Expect two included attempts, one met and one not met, with both results cited.
 Changing a recorded judgment without reconciling its aggregate should fail the readiness check.
 Run the full offline suite with `uv run --locked --offline pytest -q` from the same directory.
+
+## Trace a real decision
+
+The [Concise Writing adoption record](https://github.com/midris/disciplined-development-skills/blob/44766517c4550cd65c13c9fe0f489ac26efee1e0/skill-studies/concise-writing/protocol.md#closure-and-adoption) identifies the selected skill bytes and links the underlying comparisons.
+The discovery trial supported changing the description. The body comparisons found no consistent consequential benefit, so the owner retained the original body.
+The record also preserves the failed rollback instruction and identifies which skill combination was actually used for discovery.
+Use the same chain from evidence to decision when promoting subsequent skills.
 
 ## Promoting a skill
 

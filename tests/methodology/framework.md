@@ -134,7 +134,7 @@ Changing intended behavior creates a new comparison contract; it must not be dis
 ### 1. Understand and agree on the behavioral contract
 
 Read the complete skill, referenced materials used by its procedure and relevant companion skills.
-Use the [skill purpose and relationship map](../../ARCHITECTURE.md#sub-flows--skills-in-composition) for orientation, then verify relationships against the selected skill's procedure.
+Use the [skill purpose and relationship map](../../ARCHITECTURE.md#composition-boundaries) for orientation, then verify relationships against the selected skill's procedure.
 Distinguish an independent procedure, an explicit adapter/base pairing, and an orchestrator invoking a sibling at a particular moment.
 Default to independent evaluation unless the selected use explicitly requires composition or inter-skill interaction.
 An incoming DD invocation or an ownership reference is not a reverse dependency; bundle installation requirements do not require every skill to be loaded into every subject context.

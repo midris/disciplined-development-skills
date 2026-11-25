@@ -206,6 +206,7 @@ def document_study(tmp_path, request):
     """A two-attempt study in real Git; raw evidence is disposable, never a model run."""
     import hashlib, re, subprocess, stat
 
+    run_cli = getattr(request, "param", None) == "run-cli"
     root = tmp_path / "repo"
     root.mkdir()
 
@@ -282,9 +283,20 @@ Dispatched calls are **2 subject, 0 evaluator, 0 authoring, 0 retry**; remaining
         .replace("Dimension: example", "Dimension: functional")
         .replace("Applies to: example", "Applies to: `original`")
     )
+    if run_cli:
+        card = card.replace("F1: Outcome", "F1: Correct pickup desk")
+        card = card.replace("Basis: example", "Basis: The supplied operations note assigns pickup to the west desk.")
+        card = card.replace("Required evidence: example", "Required evidence: Read the complete final answer against input.txt.")
+        card = card.replace("Met: example", "Met: Direct the visitor to the west desk.")
+        card = card.replace("Not met: example", "Not met: Direct the visitor to a different desk.")
+        card = card.replace("Insufficient evidence: example", "Insufficient evidence: The final answer is unavailable.")
+        card = card.replace("Alternatives: example", "Alternatives: Any equivalent wording identifying the west desk.")
+        write("case/prompt.md", "Read input.txt and tell the visitor where to collect their badge.")
+        write("case/input.txt", "Visitor badges are at the west desk.")
+    else:
+        write("case/prompt.md", "Do the fixture task")
+        write("case/input.txt", "Fixture input")
     write("case/assessment.md", card.replace("Status: draft", "Status: prepared"))
-    write("case/prompt.md", "Do the fixture task")
-    write("case/input.txt", "Fixture input")
     config = {
         "schema_version": "0.2",
         "id": "example-original",
@@ -328,22 +340,26 @@ Dispatched calls are **2 subject, 0 evaluator, 0 authoring, 0 retry**; remaining
     mi = ident("case/manifest.json", mrev)
     attempts = []
     for n, judgment in [(1, "met"), (2, "not met")]:
-        if getattr(request, "param", None) == "run-cli":
+        if run_cli:
             import sys
             from skilltest.documents.retention import inventory
 
             provider = request.getfixturevalue("fake_provider")
-            provider.configure(final=f"Fixture result {n}".encode())
+            reply = "Collect your badge at the west desk." if n == 1 else "Go to the east desk."
+            provider.configure(final=reply.encode())
             command = Path(sys.executable).with_name("skilltest")
             bundle = Path(subprocess.check_output(
                 [command, "run", root / "case/original.json"], text=True
             ).strip())
             mechanical = json.loads((bundle / "result.json").read_text())
             assert mechanical["status"] == "COMPLETED"
-            assert (bundle / "final.txt").read_text() == f"Fixture result {n}"
+            observed = (bundle / "final.txt").read_text()
+            assert observed == reply
+            reason = f"The retained answer says {observed!r} The source assigns pickup to the west desk."
             run_id = mechanical["run_id"]
             entries = inventory(bundle)
         else:
+            reason = "Synthetic outcome"
             run_id = f"run-{n}"
             bundle = tmp_path / f"bundle-{n}"
             bundle.mkdir()
@@ -402,7 +418,7 @@ Dispatched calls are **2 subject, 0 evaluator, 0 authoring, 0 retry**; remaining
                     "id": "F1",
                     "dimension": "functional",
                     "judgment": judgment,
-                    "reason": "Synthetic outcome",
+                    "reason": reason,
                     "consequence": "Outcome applies",
                     "evidence": ["output"],
                 }
