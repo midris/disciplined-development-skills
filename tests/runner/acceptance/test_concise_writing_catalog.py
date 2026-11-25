@@ -12,10 +12,7 @@ import skilltest.workspace as workspace_module
 
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
-SCENARIO_ROOT = REPOSITORY_ROOT / "skill-validation" / "scenarios" / "concise-writing"
-SUPERPOWERS_ROOT = Path(
-    "/Users/simon/.codex/plugins/cache/claude-plugins-official/superpowers/6.3.0/skills"
-)
+SCENARIO_ROOT = REPOSITORY_ROOT / "tests" / "legacy-validation" / "scenarios" / "concise-writing"
 
 NINE_SKILLS = (
     "concise-writing",
@@ -54,43 +51,31 @@ PACKAGE_INPUTS = {
         "fixture/descriptions/adversarial-review-loop.txt",
         "descriptions/adversarial-review-loop.txt",
         "38843f7718501f52116bfd4f95a6640cb16b560851767df540c808a1ed18cefa",
-        REPOSITORY_ROOT / "skills/adversarial-review-loop/SKILL.md",
-        True,
     ),
     "desc-concise": (
         "fixture/descriptions/concise-writing.txt",
         "descriptions/concise-writing.txt",
         "586a741a9cb28746078ca1b5f7aa570a4e621a5d2cdecac16e31bd6d2c82fd62",
-        REPOSITORY_ROOT / "skills/concise-writing/SKILL.md",
-        True,
     ),
     "desc-writing": (
         "fixture/descriptions/superpowers-writing-skills.txt",
         "descriptions/superpowers-writing-skills.txt",
         "5504b0825ec458aa8c20e9a55c6a932b36849e261a97aaf98af366e19a937154",
-        SUPERPOWERS_ROOT / "writing-skills/SKILL.md",
-        True,
     ),
     "writing-skills": (
         "fixture/skills/writing-skills/SKILL.md",
         "skills/writing-skills/SKILL.md",
         "d34db5c8aed6a4e0440132bd0613aace70a693ec7819d5637ad77481d8e10d1b",
-        SUPERPOWERS_ROOT / "writing-skills/SKILL.md",
-        False,
     ),
     "writing-tests": (
         "fixture/skills/writing-skills/testing-skills-with-subagents.md",
         "skills/writing-skills/testing-skills-with-subagents.md",
         "c711346852c911b24a84aa161e0cff06a4cd7f4e2fa9e9c0a266cead5afcbade",
-        SUPERPOWERS_ROOT / "writing-skills/testing-skills-with-subagents.md",
-        False,
     ),
     "tdd": (
         "fixture/skills/test-driven-development/SKILL.md",
         "skills/test-driven-development/SKILL.md",
         "bf1b8216e523851a411e91d429a7c1c2a173e79d88957bc78e348218d50edd54",
-        SUPERPOWERS_ROOT / "test-driven-development/SKILL.md",
-        False,
     ),
 }
 
@@ -150,22 +135,12 @@ def _package_files(scenario_dir: Path) -> set[str]:
     }
 
 
-def _description_bytes(skill_path: Path) -> bytes:
-    for line in skill_path.read_bytes().splitlines():
-        if line.startswith(b"description: "):
-            description = line.removeprefix(b"description: ")
-            if description.startswith(b"'") and description.endswith(b"'"):
-                description = description[1:-1]
-            return description + b"\n"
-    raise AssertionError(f"missing description in {skill_path}")
-
-
 def _expected_fixtures(
     scenario_id: str, scenario_dir: Path
 ) -> tuple[tuple[Path, Path], ...]:
     live = tuple(
         (
-            (scenario_dir / f"../../../../skills/{skill_id}/SKILL.md").resolve(),
+            (scenario_dir / f"../../../../../skills/{skill_id}/SKILL.md").resolve(),
             Path(f"skills/{skill_id}/SKILL.md"),
         )
         for skill_id in LIVE_SKILLS[scenario_id]
@@ -216,12 +191,9 @@ def test_concise_writing_catalog_prepares_only_declared_inputs(
         assert all(rubric_bytes not in input_bytes for input_bytes in declared_inputs)
 
         for label in PACKAGED_LABELS[scenario_id]:
-            source, _, expected_hash, origin, is_description = PACKAGE_INPUTS[label]
+            # These packaged inputs were frozen before the skill promotions.
+            source, _, expected_hash = PACKAGE_INPUTS[label]
             source_bytes = (scenario_dir / source).read_bytes()
-            expected_bytes = (
-                _description_bytes(origin) if is_description else origin.read_bytes()
-            )
-            assert source_bytes == expected_bytes
             assert hashlib.sha256(source_bytes).hexdigest() == expected_hash
 
         context = workspace_module.create_run(config)

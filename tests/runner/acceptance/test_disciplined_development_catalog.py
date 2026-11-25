@@ -13,7 +13,7 @@ import skilltest.workspace as workspace_module
 
 
 SCENARIO_ROOT = (
-    Path(__file__).resolve().parents[3] / "skill-validation"
+    Path(__file__).resolve().parents[2] / "legacy-validation"
     / "scenarios"
     / "disciplined-development"
 )
@@ -195,7 +195,7 @@ def _expected_files(scenario_id: str) -> set[str]:
 def _expected_fixtures(scenario_id: str) -> tuple[tuple[str, str], ...]:
     live = tuple(
         (
-            f"../../../../skills/{skill_id}/SKILL.md",
+            f"../../../../../skills/{skill_id}/SKILL.md",
             f"skills/{skill_id}/SKILL.md",
         )
         for skill_id in LIVE_SKILLS[scenario_id]

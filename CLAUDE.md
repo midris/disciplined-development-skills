@@ -27,14 +27,14 @@ skills/<skill>/                       # nine skill dirs under skills/, each with
 skills/disciplined-development/hooks/ # hook stack + hook tests
 commands/                             # slash-command templates (installer copies into consumers' .claude/commands/; currently: dd-log.md)
 examples/                             # reference configs consumers copy (hooks block, dd-config, CLAUDE.md snippet + starter template)
-research/                             # non-shipped experiment tooling (replay harness + its smoke test)
-skill-validation/                     # non-shipped validation records (skills, commands, project rules)
+tests/research/                       # non-shipped experiment tooling (replay harness + its smoke test)
+tests/legacy-validation/              # non-shipped validation records (skills, commands, project rules)
 tests/runner/              # non-shipped one-run skill-test CLI, offline tests, and operator guide
 tests/                                # installer tests, skill study methodology and runner
 plans/                                # active plans (created on demand)
 plans/specs/                          # active design specs
 plans/completed/, plans/deferred/     # archived / deferred work
-reviews/                              # architecture / code-review findings (non-shipped records)
+plans/reviews/                        # architecture / code-review findings (non-shipped records)
 install-skills.sh                     # copy installer
 ARCHITECTURE.md                       # component interplay + diagrams
 README.md                             # bundle overview + install + recovery
@@ -47,7 +47,7 @@ README.md                             # bundle overview + install + recovery
 cd skills/disciplined-development/hooks && python3 -m pytest -q
 
 # Research harness smoke test (run separately — not part of the hook suite)
-python3 -m pytest research/ -q
+python3 -m pytest tests/research/ -q
 
 # Top-level installer-suite tests
 python3 -m pytest tests/ -q

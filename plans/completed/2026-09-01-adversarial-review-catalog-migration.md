@@ -19,7 +19,7 @@ only runner mechanics, never response quality.
 
 **Spec:** [schema `"0.2"` catalog migration design](specs/2026-08-29-catalog-migration-design.md),
 [scenario porting roadmap](2026-08-24-scenario-porting-roadmap.md), and
-[scenario migration index](../../skill-validation/scenarios/README.md).
+[scenario migration index](../../tests/legacy-validation/scenarios/README.md).
 
 ## Scope and constraints
 

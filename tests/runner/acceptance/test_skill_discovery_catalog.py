@@ -13,7 +13,7 @@ import skilltest.workspace as workspace_module
 
 
 SCENARIO_ROOT = (
-    Path(__file__).resolve().parents[3] / "skill-validation"
+    Path(__file__).resolve().parents[2] / "legacy-validation"
     / "scenarios"
     / "skill-discovery"
 )

@@ -13,49 +13,49 @@ import skilltest.workspace as workspace_module
 
 
 SCENARIO_ROOT = (
-    Path(__file__).resolve().parents[3] / "skill-validation"
+    Path(__file__).resolve().parents[2] / "legacy-validation"
     / "scenarios"
     / "dispatching-development-subagents"
 )
 
 DISPATCH = (
-    "../../../../skills/dispatching-development-subagents/SKILL.md",
+    "../../../../../skills/dispatching-development-subagents/SKILL.md",
     "skills/dispatching-development-subagents/SKILL.md",
 )
 REVIEW_LOOP = (
-    "../../../../skills/adversarial-review-loop/SKILL.md",
+    "../../../../../skills/adversarial-review-loop/SKILL.md",
     "skills/adversarial-review-loop/SKILL.md",
 )
 REVIEW = (
-    "../../../../skills/adversarial-review/SKILL.md",
+    "../../../../../skills/adversarial-review/SKILL.md",
     "skills/adversarial-review/SKILL.md",
 )
 CONCISE = (
-    "../../../../skills/concise-writing/SKILL.md",
+    "../../../../../skills/concise-writing/SKILL.md",
     "skills/concise-writing/SKILL.md",
 )
 PARENT = (
-    "../../../../skills/disciplined-development/SKILL.md",
+    "../../../../../skills/disciplined-development/SKILL.md",
     "skills/disciplined-development/SKILL.md",
 )
 HOOK = (
-    "../../../../skills/disciplined-development/hooks/review_nudge.py",
+    "../../../../../skills/disciplined-development/hooks/review_nudge.py",
     "skills/disciplined-development/hooks/review_nudge.py",
 )
 RESEARCH = (
-    "../../../../skills/disciplined-research/SKILL.md",
+    "../../../../../skills/disciplined-research/SKILL.md",
     "skills/disciplined-research/SKILL.md",
 )
 LEAN_PLAN = (
-    "../../../../skills/lean-plan-writing/SKILL.md",
+    "../../../../../skills/lean-plan-writing/SKILL.md",
     "skills/lean-plan-writing/SKILL.md",
 )
 SWEEP = (
-    "../../../../skills/sweeping-stale-references/SKILL.md",
+    "../../../../../skills/sweeping-stale-references/SKILL.md",
     "skills/sweeping-stale-references/SKILL.md",
 )
 RATIONALE = (
-    "../../../../skills/writing-explicit-rationale/SKILL.md",
+    "../../../../../skills/writing-explicit-rationale/SKILL.md",
     "skills/writing-explicit-rationale/SKILL.md",
 )
 

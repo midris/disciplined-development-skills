@@ -22,5 +22,9 @@ baseline-*.md
 .worktrees/
 
 # Research harness output — never commit experiment results
-research/results.csv
-research/runs/
+/tests/research/results.csv
+/tests/research/runs/
+
+# Existing replay outputs in checkouts created before the harness moved.
+/research/results.csv
+/research/runs/

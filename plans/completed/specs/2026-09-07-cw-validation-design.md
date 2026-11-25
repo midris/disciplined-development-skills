@@ -2,21 +2,21 @@
 
 **Archive status (2026-09-09):** Baseline and existing-candidate collection, scoring and mechanical auditing are complete.
 The owner accepted candidate evidence validity on 2026-09-09; further evaluation and adoption decisions remain open in the [current testing plan](../../2026-09-09-dd-skill-testing.md#remaining-work).
-The subsequent routine suite produced six approved input packages and an initial evidence pass; the [current catalog proposal](../../../skill-validation/pilot/cw-catalog.md#routine-suite-coverage) now reevaluates coverage against the baseline specification and awaits its own review.
+The subsequent routine suite produced six approved input packages and an initial evidence pass; the [current catalog proposal](../../../tests/legacy-validation/pilot/cw-catalog.md#routine-suite-coverage) now reevaluates coverage against the baseline specification and awaits its own review.
 This document preserves the completed comparison contract and its handoff, not a pending collection plan.
 
 **Status:** The owner accepted the complete 99-observation CW baseline on 2026-09-08; the subsequent 66-observation candidate comparison is collected, scored, audited and accepted as valid evidence on 2026-09-09.
-The [accepted evidence index](../../../skill-validation/accepted/concise-writing/codex-gpt-5.6-sol-medium/README.md) retains all results, complete bundles and provenance; archives have passed independent restoration checks.
+The [accepted evidence index](../../../tests/legacy-validation/accepted/concise-writing/codex-gpt-5.6-sol-medium/README.md) retains all results, complete bundles and provenance; archives have passed independent restoration checks.
 Both command batches are exhausted; the [candidate handoff](#candidate-comparison-handoff) retains the collection-time evidence checkpoint.
 No additional provider calls, new skill wording, evidence promotion or deployment are authorized.
 **Workspace:** `.worktrees/cw-validation-design`, branch `feature/cw-validation-design`.
-**Contract:** [CW charter](../../../skill-validation/charter/core-contracts.md#concise-writing), [controlled-input decisions](2026-09-06-skilltest-controlled-inputs-design.md), and [CW runbook](../../../skill-validation/pilot/cw-runbook.md).
+**Contract:** [CW charter](../../../tests/legacy-validation/charter/core-contracts.md#concise-writing), [controlled-input decisions](2026-09-06-skilltest-controlled-inputs-design.md), and [CW runbook](../../../tests/legacy-validation/pilot/cw-runbook.md).
 
 ## Selected portfolio
 
 Port all 17 existing CW sources: CW-01–14 and CW-17–19; there are no CW-15/16 packages.
 Preserve their task facts and intended criteria, separating mixed purposes into new variants rather than modifying accepted packages.
-The [catalog mapping](../../../skill-validation/pilot/cw-catalog.md) is the single inventory of variants, conditions, prompt changes, criterion attribution and fixed counts.
+The [catalog mapping](../../../tests/legacy-validation/pilot/cw-catalog.md) is the single inventory of variants, conditions, prompt changes, criterion attribution and fixed counts.
 It retains the already prepared positive native-discovery variant as separate coverage, not a replacement for CW-01 behavior.
 
 The baseline measures current pre-rewrite DD plus meaningful no-DD controls at Codex / gpt-5.6-sol / medium, three observations per scenario/condition.
@@ -111,7 +111,7 @@ Their command approvals are exhausted; acceptance changes no recorded verdict, r
 
 The following records the completed comparison's preparation contract, not a pending launch; see the [handoff](#candidate-comparison-handoff) for current status.
 
-Use only the CW file from `docs/comprehensive-skill-cleanup` at `13599fb7d3127334b0d07bfe468767e586ec5f9c`, copied unchanged into [candidate inputs](../../../skill-validation/pilot/inputs/candidates/cw-rewrite/SKILL.md).
+Use only the CW file from `docs/comprehensive-skill-cleanup` at `13599fb7d3127334b0d07bfe468767e586ec5f9c`, copied unchanged into [candidate inputs](../../../tests/legacy-validation/pilot/inputs/candidates/cw-rewrite/SKILL.md).
 Do not edit that worktree, import its other rewritten skills, or replace the shipped CW skill.
 This tests an already-written candidate; it cannot establish RED-before-authoring chronology or satisfy deployment acceptance by inspection.
 
@@ -129,7 +129,7 @@ The outcome is a descriptive comparison for owner review, not a new GREEN thresh
 For subsequent coverage review, apply the accepted [shared-category and coverage policy](2026-09-06-skilltest-controlled-inputs-design.md#accepted-methodology-decision-shared-test-categories-and-coverage): map existing CW cases before proposing consolidation or stronger skill-specific tests.
 This prospective methodology update does not alter the frozen comparison's prompts, rubrics, judgments or approval boundaries, and did not itself complete the subsequent coverage audit.
 
-- [x] Pin the unchanged candidate body and derived description, and prepare matching configs with provider-free source/target/prompt checks: [22-config mapping](../../../skill-validation/pilot/cw-catalog.md#cw-rewrite-candidate-configs).
+- [x] Pin the unchanged candidate body and derived description, and prepare matching configs with provider-free source/target/prompt checks: [22-config mapping](../../../tests/legacy-validation/pilot/cw-catalog.md#cw-rewrite-candidate-configs).
 - [x] Preserve and restore-check all 99 accepted observations under the whole-set/Git-history policy without changing the 105 historical records; include them in the clean freeze below.
 - [x] Review candidate coverage and comparison interpretation and reconcile reuse/qualification: [provider-free qualification](/private/tmp/skilltest-cw-candidate.pITN2u/qualification/summary.md) supports 66 candidate calls and reuse of all 99 accepted observations.
 - [x] Freeze reviewed inputs, guidance and preserved evidence together; record and verify the resulting full revision in the candidate command-approval package before launch.
@@ -145,6 +145,6 @@ The scratch record's clean/synchronized worktree statement describes the collect
 
 - [x] Owner accepts the validity of the complete candidate comparison evidence on 2026-09-09. Further evaluation and skill decisions remain open; no adoption follows.
 
-The [accepted candidate package](../../../skill-validation/accepted/concise-writing/codex-gpt-5.6-sol-medium-candidate/README.md) preserves complete bundles and supporting provenance with verified restoration.
+The [accepted candidate package](../../../tests/legacy-validation/accepted/concise-writing/codex-gpt-5.6-sol-medium-candidate/README.md) preserves complete bundles and supporting provenance with verified restoration.
 Retain original scratch; do not rerun the exhausted command batch, deploy the snapshot or discard its evidence.
 The agreed shared-category methodology guides subsequent coverage proposals; the completed audit informs the unapproved catalog proposal, and new scenarios or runs need separate approval.

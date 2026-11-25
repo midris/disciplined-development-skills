@@ -7,7 +7,7 @@ The broader repairs remain DEFERRED; prospective CW suite design is owned by the
 The pilot plan's Tasks 8–9 retain the completed first CW procedure batch, not the current preparation scope.
 **Goal:** Give every one of the nine DD skills separately identified discoverability tests and explicitly loaded behavioral-effectiveness tests.
 **Approach:** Reuse existing scenario material, runner configs, worksheets and written runbooks; no new testing framework or schema.
-**Authority:** [Test-purpose separation](../completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-separation-setup-discovery-and-behavior) and [charter](../../skill-validation/charter/core-contracts.md).
+**Authority:** [Test-purpose separation](../completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-separation-setup-discovery-and-behavior) and [charter](../../tests/legacy-validation/charter/core-contracts.md).
 **Return to:** [Current scope and remaining decisions](../2026-09-09-dd-skill-testing.md#remaining-work).
 The owner approved porting all existing CW sources and separating mixed purposes before baseline collection and rewrite evaluation; this does not activate the other eight skills' repairs.
 
@@ -18,10 +18,10 @@ Inventoried all 105 prompt/config packages across ten catalogs; inspected loadin
 This is a coverage/design audit, not a fresh execution, verdict review or complete re-audit of every semantic criterion.
 The tenth catalog, skill-discovery, tests the nine DD descriptions; it is not a tenth DD skill.
 
-1. **Native discoverability is untested by these packages.** None of the 105 configs declares native `.agents/skills/` or `.claude/skills/` targets. The twelve [DISC scenarios](../../skill-validation/scenarios/skill-discovery/summary.md) have no fixtures, paste descriptions and prohibit body reads. Their selection results are useful description-classification observations, not evidence of native discovery/loading. Earlier pilot catalog qualification proves setup availability, not spontaneous selection.
-2. **Selection and application are combined in concise-writing.** [CW-17](../../skill-validation/scenarios/concise-writing/cw-17/prompt.md) and CW-18 read both descriptions and the skill body before requesting selection plus an application decision. [CW-13](../../skill-validation/scenarios/concise-writing/cw-13/prompt.md) and CW-14 require all supplied bodies, then combine applicable-skill selection, lifecycle ownership and an action choice in one exact-answer rubric. Split the future test purposes; a read-all directive cannot demonstrate spontaneous discovery.
-3. **Not every skill-catalog test measures task effectiveness.** CW-09/11 are description classifiers; CW-10/12 extract a literal ownership sentence. Keep useful contract checks clearly labeled and optional to the core portfolio; do not count them as successful prose application or native discovery. Preserve the historical contract mismatches already disclosed by the [CW summary](../../skill-validation/scenarios/concise-writing/summary.md), without changing criteria to erase accepted FAILs.
-4. **Composition and execution claims need bounded ownership.** The [DSD summary](../../skill-validation/scenarios/dispatching-development-subagents/summary.md#scenario-contract-observations) notes that DSD-11 asks for research-method selection without supplying the research body, and DSD-09 does not explicitly read its upstream fixture. Naming a method can test a loaded parent's dispatch judgment, but cannot establish the companion's execution effectiveness. WER-07 already separates target and composition-owner judgments; preserve that useful distinction.
+1. **Native discoverability is untested by these packages.** None of the 105 configs declares native `.agents/skills/` or `.claude/skills/` targets. The twelve [DISC scenarios](../../tests/legacy-validation/scenarios/skill-discovery/summary.md) have no fixtures, paste descriptions and prohibit body reads. Their selection results are useful description-classification observations, not evidence of native discovery/loading. Earlier pilot catalog qualification proves setup availability, not spontaneous selection.
+2. **Selection and application are combined in concise-writing.** [CW-17](../../tests/legacy-validation/scenarios/concise-writing/cw-17/prompt.md) and CW-18 read both descriptions and the skill body before requesting selection plus an application decision. [CW-13](../../tests/legacy-validation/scenarios/concise-writing/cw-13/prompt.md) and CW-14 require all supplied bodies, then combine applicable-skill selection, lifecycle ownership and an action choice in one exact-answer rubric. Split the future test purposes; a read-all directive cannot demonstrate spontaneous discovery.
+3. **Not every skill-catalog test measures task effectiveness.** CW-09/11 are description classifiers; CW-10/12 extract a literal ownership sentence. Keep useful contract checks clearly labeled and optional to the core portfolio; do not count them as successful prose application or native discovery. Preserve the historical contract mismatches already disclosed by the [CW summary](../../tests/legacy-validation/scenarios/concise-writing/summary.md), without changing criteria to erase accepted FAILs.
+4. **Composition and execution claims need bounded ownership.** The [DSD summary](../../tests/legacy-validation/scenarios/dispatching-development-subagents/summary.md#scenario-contract-observations) notes that DSD-11 asks for research-method selection without supplying the research body, and DSD-09 does not explicitly read its upstream fixture. Naming a method can test a loaded parent's dispatch judgment, but cannot establish the companion's execution effectiveness. WER-07 already separates target and composition-owner judgments; preserve that useful distinction.
 5. **Existing routing language is not automatically a discovery defect.** DD mode/gate selection, AR lens selection and review-loop next-action choices are behavior after target loading. Their read-only answers are decision/application evidence, not proof of executed edits, dispatch, remediation or commits. Preserve these focused tests and label their claims accurately rather than splitting every choice into another scenario.
 
 Across the inventory, 14 prompts are description-only selection tests (DISC-01–12 and CW-09/11); the other 91 request skill-body reads, including the four combined CW cases above.
@@ -29,12 +29,12 @@ This partitions prompt design only, not run validity or effectiveness.
 
 ## Per-skill coverage and reusable discovery seeds
 
-The [validation guide's purpose map](../../skill-validation/README.md#coverage-by-test-purpose) is the single coverage table, with charter ownership, representative scenario links and discovery seeds for all nine skills.
+The [validation guide's purpose map](../../tests/legacy-validation/README.md#coverage-by-test-purpose) is the single coverage table, with charter ownership, representative scenario links and discovery seeds for all nine skills.
 The seeds are source material, not ready native tests or execution approval.
 
 ## Deferred work
 
-The [CW mapping](../../skill-validation/pilot/cw-catalog.md) records the activated CW portion of Task 2; other-skill repairs and Task 3 collection remain separately gated.
+The [CW mapping](../../tests/legacy-validation/pilot/cw-catalog.md) records the activated CW portion of Task 2; other-skill repairs and Task 3 collection remain separately gated.
 The [batch/fixture-design amendment](../completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-bounded-batch-operation) governs later preparation and collection, not permission to launch them.
 
 ### Task 1: Map purposes without moving the catalog
@@ -51,20 +51,20 @@ Use the complete frozen rubric when scoring; exact presentation is fidelity unle
 
 | Existing criterion | Owner / ledger | Required evidence and boundary |
 |---|---|---|
-| [CW-01](../../skill-validation/scenarios/concise-writing/cw-01/rubric.md): retain four states and download/error distinctions; add nothing | CW-I1 / semantic | Compare returned prose to supplied input. Missing a state/distinction or adding unsupported meaning fails preservation. A claimed skill read is not this evidence. |
+| [CW-01](../../tests/legacy-validation/scenarios/concise-writing/cw-01/rubric.md): retain four states and download/error distinctions; add nothing | CW-I1 / semantic | Compare returned prose to supplied input. Missing a state/distinction or adding unsupported meaning fails preservation. A claimed skill read is not this evidence. |
 | CW-01: remove the opener and both restatements | CW-I2 / semantic | Inspect the actual revision; retaining targeted padding fails. Shortness alone does not pass preservation. |
-| [DD-05](../../skill-validation/scenarios/disciplined-development/dd-05/rubric.md): owner resolution before planning/implementation | DD-I1 / semantic | The checkpoint response must require fresh sources, owner resolution and both blocks. It proves the decision, not executed planning or a real approval. |
-| [SSR-01](../../skill-validation/scenarios/sweeping-stale-references/ssr-01/rubric.md): read-only sweep evidence | SSR-I1–I4 / semantic | Actual reads/searches can support a proposed inventory and preserved rationale, not a completed edit or commit. Do not demand fabricated post-edit verification. |
-| [DSD-03](../../skill-validation/scenarios/dispatching-development-subagents/dsd-03/prompt.md): integration inspection/disclosure | DSD-I3/I4 / semantic | Absent diffs permit only an inspection sequence and conditional disposition. Require each commit's stat/full-diff inspection in the response and flag the undisclosed README change; do not claim actual integration. |
-| [LP-05](../../skill-validation/pilot/lp-05/current-dd/rubric.md): concrete tests and runnable verification | LP-I2 / semantic | The plan names behavioral tests and a command with usable task context; “run tests” does not suffice. Future fixtures supply framework/command/cwd; this does not mean the subject must execute absent application tests. |
-| [AR-03](../../skill-validation/pilot/ar-03/current-dd/rubric.md) clauses 1–2: account for all callers and sorting | AR-I2 / semantic | Model-authored review must account for each caller's precondition. Tool output containing all source files is loading/inspection evidence, not an explicit caller account. |
+| [DD-05](../../tests/legacy-validation/scenarios/disciplined-development/dd-05/rubric.md): owner resolution before planning/implementation | DD-I1 / semantic | The checkpoint response must require fresh sources, owner resolution and both blocks. It proves the decision, not executed planning or a real approval. |
+| [SSR-01](../../tests/legacy-validation/scenarios/sweeping-stale-references/ssr-01/rubric.md): read-only sweep evidence | SSR-I1–I4 / semantic | Actual reads/searches can support a proposed inventory and preserved rationale, not a completed edit or commit. Do not demand fabricated post-edit verification. |
+| [DSD-03](../../tests/legacy-validation/scenarios/dispatching-development-subagents/dsd-03/prompt.md): integration inspection/disclosure | DSD-I3/I4 / semantic | Absent diffs permit only an inspection sequence and conditional disposition. Require each commit's stat/full-diff inspection in the response and flag the undisclosed README change; do not claim actual integration. |
+| [LP-05](../../tests/legacy-validation/pilot/lp-05/current-dd/rubric.md): concrete tests and runnable verification | LP-I2 / semantic | The plan names behavioral tests and a command with usable task context; “run tests” does not suffice. Future fixtures supply framework/command/cwd; this does not mean the subject must execute absent application tests. |
+| [AR-03](../../tests/legacy-validation/pilot/ar-03/current-dd/rubric.md) clauses 1–2: account for all callers and sorting | AR-I2 / semantic | Model-authored review must account for each caller's precondition. Tool output containing all source files is loading/inspection evidence, not an explicit caller account. |
 | AR-03 clauses 3–5: benchmark, material defect and conclusion | AR-I3 and AR-I1 / respective semantic criteria | Review corrects 18% to 1.8%, explains the asymmetric ordering defect and blocks. These do not substitute for caller coverage. |
 | AR-03 extra claims / future precision criterion | AR-I1 / semantic when explicitly included in a new rubric | Existing clause 2 does not require a post-normalization output-order finding. Retain completed caveats; a future rubric can explicitly reject unsupported extra findings, but not retrofit that verdict rule onto this pair. |
 
 ### First CW repair — bounded purposes
 
 Start with concise-writing because it has a small real prose task and the clearest documented selection/application conflation; no new task-tool capability is needed to draft these inputs.
-These three purposes defined the first CW increment, retaining all existing packages; the [prepared inputs](../../skill-validation/pilot/README.md#cw-purpose-separated-inputs) contain those unchanged prompts and criterion tables:
+These three purposes defined the first CW increment, retaining all existing packages; the [prepared inputs](../../tests/legacy-validation/pilot/README.md#cw-purpose-separated-inputs) contain those unchanged prompts and criterion tables:
 
 | New variant purpose | Reuse | Contract to preserve or separate |
 |---|---|---|
@@ -73,7 +73,7 @@ These three purposes defined the first CW increment, retaining all existing pack
 | Native discovery, non-trigger | CW-17's response-only detailed-explanation request | Apply the charter's CW-I3 detailed-response exception without asking a routing quiz or loading CW first. Missing/ambiguous trace evidence is inconclusive, not proof of non-use. A complete observable trace supports only the scoped no-selection claim. |
 
 The non-trigger expectation follows the charter even though current CW lacks that exception; retain any resulting failure rather than weakening the test to match the implementation.
-The [full-CW expansion](../../skill-validation/pilot/cw-catalog.md) now prepares CW-18 durable-file discovery, separate loaded scope decisions, the remaining prose tasks and authoring/contract diagnostics.
+The [full-CW expansion](../../tests/legacy-validation/pilot/cw-catalog.md) now prepares CW-18 durable-file discovery, separate loaded scope decisions, the remaining prose tasks and authoring/contract diagnostics.
 The earlier CW-08/19 behavior pairs and discovery pair remain unchanged and eligible for audited medium-result reuse; CW-01 behavior receives new medium configs.
 CW-09–14 remain composition/contract coverage, not core compression; the current skill deliberately excludes authoring, and its historical target mismatches are preserved.
 Scope-contract answers do not establish hidden method use or actual authoring; that limit remains after this expansion.
@@ -103,5 +103,5 @@ Other-skill items below remain deferred; no prepared config grants launch permis
 
 Expected work is documentation, prompts, fixtures/configs and evaluator rubrics; change runner code only for a demonstrated required mechanical gap under separately approved scope.
 No skill rewriting, hook work, Claude integration, model-matrix execution or unrelated worktree inspection belongs to this plan.
-Use the [batch verification cadence](../../skill-validation/pilot/README.md#bounded-batches-and-approval): verify harness changes before collection, keep per-run controls, then check links/configs/evidence preservation and run the required hook suite once at the batch/unit handoff, not per observation.
+Use the [batch verification cadence](../../tests/legacy-validation/pilot/README.md#bounded-batches-and-approval): verify harness changes before collection, keep per-run controls, then check links/configs/evidence preservation and run the required hook suite once at the batch/unit handoff, not per observation.
 Completion requires separately identifiable discovery and loaded-behavior coverage for all nine skills, reviewed evidence and an honest statement of what remains unexercised—not all observed skill results being PASS.

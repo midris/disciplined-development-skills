@@ -14,12 +14,12 @@ The earlier CW-14 fidelity clarification and evaluator reports remain historical
 CW-19's owner-reviewed preservation failure remains directly relevant; CW-23's no-DD overall failure is companion accounting despite both CW prose results passing.
 All original and owner-revised judgments remain unchanged.
 The prospective run verdict is now `RUN_NOT_JUDGEABLE`; earlier records retain their original `SCENARIO_INVALID` labels.
-This was the active plan for that pilot; the [validation guide](../skill-validation/README.md) indexes the durable contracts and execution instructions.
+This was the active plan for that pilot; the [validation guide](../tests/legacy-validation/README.md) indexes the durable contracts and execution instructions.
 
 **Goal:** A repeatable set of tests for each DD skill’s discoverability, effectiveness and composition, with distinct questions and observable scoring criteria.
 Use as many cases as the obligations require; neither a minimum count nor retaining every historical test is a goal.
-The [charter](../skill-validation/charter/core-contracts.md) supplies core intent, the existing skill supplies detailed promises, and the accepted [coverage policy](completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-methodology-decision-shared-test-categories-and-coverage) supplies the common categories.
-The [intended-use and authoring guidance](../skill-validation/README.md#intended-use-and-dependencies) records the owner's development-first context, broader uses, varied composition requirements and Superpowers writing-skills workflow.
+The [charter](../tests/legacy-validation/charter/core-contracts.md) supplies core intent, the existing skill supplies detailed promises, and the accepted [coverage policy](completed/specs/2026-09-06-skilltest-controlled-inputs-design.md#accepted-methodology-decision-shared-test-categories-and-coverage) supplies the common categories.
+The [intended-use and authoring guidance](../tests/legacy-validation/README.md#intended-use-and-dependencies) records the owner's development-first context, broader uses, varied composition requirements and Superpowers writing-skills workflow.
 All nine baseline DD bodies were read for the [composition map](../ARCHITECTURE.md#composition-boundaries); this did not evaluate their other catalogs or rewritten versions.
 CW remains the recommended first pilot because ordinary source-to-prose tasks exercise its own complete procedure without the DD parent, with existing specification and evidence available.
 Focus first on its leaf discovery/effectiveness coverage, then its bounded composition cases; conditional pairings remain part of the specification, and full validation of their owning skills is not a prerequisite to CW's leaf tests.
@@ -27,9 +27,9 @@ Focus first on its leaf discovery/effectiveness coverage, then its bounded compo
 ## Baseline specification before testing
 
 The owner clarified that the current skill is the source of its detailed behavioral specification, not merely an implementation judged against a short charter or a desired future rewrite.
-Follow the [baseline-specification-first method](../skill-validation/README.md#baseline-specification-first).
+Follow the [baseline-specification-first method](../tests/legacy-validation/README.md#baseline-specification-first).
 The [reviewed CW specification](specs/2026-09-10-cw-baseline-specification.md) records the exact baseline source and extracts its scope, rules, exceptions, method and companion boundaries; the owner authorized proceeding to catalog evaluation.
-The [completed catalog audit](../skill-validation/pilot/cw-catalog.md#routine-suite-coverage) recommends a disposition for all 22 historical purpose variants and six subsequent packages, and maps every specification obligation to proposed coverage or an explicit evidence limit.
+The [completed catalog audit](../tests/legacy-validation/pilot/cw-catalog.md#routine-suite-coverage) recommends a disposition for all 22 historical purpose variants and six subsequent packages, and maps every specification obligation to proposed coverage or an explicit evidence limit.
 Its proposal retains ordinary cases, replaces mismatched discovery expectations, retires authoring/extraction tasks from routine CW coverage and adds uncertain-framing plus two named-companion composition cases.
 The owner authorized preparing the 18-purpose proposal: 12 effectiveness, four discoverability and two composition cases.
 Following input review and remediation, the owner authorized committing and pushing the prepared tasks.
@@ -66,7 +66,7 @@ Keep the reviewed scenarios and specification; derive their scoring afresh rathe
 This is a bounded scoring repair, not a restart of methodology design or skill authoring.
 
 Use a fresh session for derivation because the current session has extensively read the old rubrics and grades.
-Before derivation, read only this handoff section of the active plan, required project guidance, the complete [baseline CW](../skills/concise-writing/SKILL.md), the [reviewed specification](specs/2026-09-10-cw-baseline-specification.md), the charter's acceptance model and CW contract, and the exact [CW-02 task](../skill-validation/pilot/cw-02/specification/prompt.md) and [CW-19 task](../skill-validation/pilot/cw-19/specification/prompt.md).
+Before derivation, read only this handoff section of the active plan, required project guidance, the complete [baseline CW](../skills/concise-writing/SKILL.md), the [reviewed specification](specs/2026-09-10-cw-baseline-specification.md), the charter's acceptance model and CW contract, and the exact [CW-02 task](../tests/legacy-validation/pilot/cw-02/specification/prompt.md) and [CW-19 task](../tests/legacy-validation/pilot/cw-19/specification/prompt.md).
 Read the validation guide's baseline-specification-first section and the controlled-input design's overall goal as required by project guidance; use the methodology's ledger and verdict rules without importing old scenario criteria.
 Do not follow links into old rubrics, catalog scoring descriptions, worksheets, evaluator reports, subject outputs or completed result sections until the checkpoints below permit them.
 The reviewed specification remains an authority even where it already contains observable assessment guidance; the withheld material is prior scenario-specific scoring and judgments.
@@ -114,7 +114,7 @@ Missing retained evidence blocks that assessment, not the source-grounded deriva
 
 ## Pilot relevance audit and current scope
 
-The [relevance audit](../reviews/2026-09-11-cw-pilot-relevance-audit.md) checks all 18 current purposes and 32 judgeable observations, the three unjudgeable CW-23 attempts and the earlier catalog's retired mismatches.
+The [relevance audit](reviews/2026-09-11-cw-pilot-relevance-audit.md) checks all 18 current purposes and 32 judgeable observations, the three unjudgeable CW-23 attempts and the earlier catalog's retired mismatches.
 It identifies useful cases with unnecessary checks: CW-13/14 authoring-method fidelity, CW-23's companion-only commit accounting and historical progress-message failures on CW-03/05/18.
 Ordinary prose, restraint, uncertainty and scope-boundary tests remain meaningful; no-DD passes are valid comparison evidence.
 CW-22's actual loss of source rationale/requirements is materially different from grading an unrelated selected authoring workflow.
@@ -135,7 +135,7 @@ Completed sections below preserve the criteria and decisions that governed those
 ## Owner clarification: CW effectiveness and readability
 
 The owner authorized rescoring the latest 18 routine observations on 2026-09-10.
-The [charter](../skill-validation/charter/core-contracts.md#concise-writing) now owns the whole-document effectiveness/readability promise; the [runbook](../skill-validation/pilot/cw-runbook.md#routine-suite-assessment) owns comparative assessment and the [six routine rubrics](../skill-validation/pilot/cw-catalog.md#routine-input-map) express reader outcomes.
+The [charter](../tests/legacy-validation/charter/core-contracts.md#concise-writing) now owns the whole-document effectiveness/readability promise; the [runbook](../tests/legacy-validation/pilot/cw-runbook.md#routine-suite-assessment) owns comparative assessment and the [six routine rubrics](../tests/legacy-validation/pilot/cw-catalog.md#routine-input-map) express reader outcomes.
 That retrospective reassessment changed no categories or suite membership; the later catalog audit proposes coverage changes separately.
 
 All 18 observations have separate rescored worksheets linked from `/private/tmp/skilltest-cw-routine.c81p4an9/summary.md`, with the revised evaluation inputs frozen in that package.
@@ -155,11 +155,11 @@ Owner review of those judgments remains open; there is no automatic evidence pro
 |---|---|
 | Copy installer | Copies whole shipped skill folders into `.claude/skills` or `.agents/skills`, replacing same-name skills and preserving unrelated consumer files/history. Implemented on main and applied to both Steno installations. [Completed spec](completed/specs/2026-09-09-copy-based-installer-design.md). |
 | Runner and worksheets | The same configuration, run bundles and model-scored worksheets support Codex and Claude. No campaign manager or automatic semantic scorer. [Runner](../tests/runner/README.md), [methodology](completed/specs/2026-09-02-skill-testing-methodology-design.md). |
-| Controlled-input qualification | Codex controls and the procedure pilot are complete. Claude’s native catalogs/loading, companion access, seven local tools, file/Git work and capture/cleanup passed scoped qualification. [Qualification reference](../skill-validation/pilot/qualification/README.md), [completed Claude spec](completed/specs/2026-09-09-claude-skill-testing-design.md). |
-| Historical records and procedure pilot | All 105 historical records and 14 procedure observations are preserved. These are not matching-input controls for the later CW comparison. [Historical catalog](../skill-validation/scenarios/README.md), [accepted pilot package](../skill-validation/accepted/procedure-pilot/codex-gpt-5.6-sol-low/README.md). |
-| CW baseline | Owner-accepted: 99 observations covering 22 purpose-separated variants, current-DD and meaningful no-DD conditions, Sol medium. [Accepted baseline](../skill-validation/accepted/concise-writing/codex-gpt-5.6-sol-medium/README.md). |
-| Existing CW candidate comparison | All 66 observations are collected, scored and audited under unchanged criteria; their validity is owner-accepted. Further interpretation remains open and the candidate is not adopted. [Accepted candidate package](../skill-validation/accepted/concise-writing/codex-gpt-5.6-sol-medium-candidate/README.md), [comparison contract](completed/specs/2026-09-07-cw-validation-design.md). |
-| Previous coverage and initial pass | The earlier approved 18-purpose proposal had 11 effectiveness, five discoverability and two composition cases; six changed/new packages produced the retained initial observations. The specification-based [coverage proposal](../skill-validation/pilot/cw-catalog.md#proposed-routine-portfolio) now supersedes that proposal for review, without changing historical evidence. |
+| Controlled-input qualification | Codex controls and the procedure pilot are complete. Claude’s native catalogs/loading, companion access, seven local tools, file/Git work and capture/cleanup passed scoped qualification. [Qualification reference](../tests/legacy-validation/pilot/qualification/README.md), [completed Claude spec](completed/specs/2026-09-09-claude-skill-testing-design.md). |
+| Historical records and procedure pilot | All 105 historical records and 14 procedure observations are preserved. These are not matching-input controls for the later CW comparison. [Historical catalog](../tests/legacy-validation/scenarios/README.md), [accepted pilot package](../tests/legacy-validation/accepted/procedure-pilot/codex-gpt-5.6-sol-low/README.md). |
+| CW baseline | Owner-accepted: 99 observations covering 22 purpose-separated variants, current-DD and meaningful no-DD conditions, Sol medium. [Accepted baseline](../tests/legacy-validation/accepted/concise-writing/codex-gpt-5.6-sol-medium/README.md). |
+| Existing CW candidate comparison | All 66 observations are collected, scored and audited under unchanged criteria; their validity is owner-accepted. Further interpretation remains open and the candidate is not adopted. [Accepted candidate package](../tests/legacy-validation/accepted/concise-writing/codex-gpt-5.6-sol-medium-candidate/README.md), [comparison contract](completed/specs/2026-09-07-cw-validation-design.md). |
+| Previous coverage and initial pass | The earlier approved 18-purpose proposal had 11 effectiveness, five discoverability and two composition cases; six changed/new packages produced the retained initial observations. The specification-based [coverage proposal](../tests/legacy-validation/pilot/cw-catalog.md#proposed-routine-portfolio) now supersedes that proposal for review, without changing historical evidence. |
 
 ## Retained and deferred work
 
@@ -209,7 +209,7 @@ This keeps the earlier prompts/rubrics recoverable without introducing another t
 
 No scoring changes, runner changes, skill edits, evidence changes or provider calls belong to this preparation step.
 Execution configurations and a frozen collection package follow agreement on task inputs and scoring.
-The [prospective input map](../skill-validation/pilot/cw-catalog.md#prospective-input-map) links the reviewable tasks and fixture conditions.
+The [prospective input map](../tests/legacy-validation/pilot/cw-catalog.md#prospective-input-map) links the reviewable tasks and fixture conditions.
 Provider-free previews, frozen source copies, checks and review notes are retained in [/private/tmp/dd-cw-specification-inputs-n_sfodg5/summary.md](/private/tmp/dd-cw-specification-inputs-n_sfodg5/summary.md).
 The [corrected composition previews and probes](/private/tmp/dd-cw-specification-inputs-n_sfodg5/review-1/summary.md) supersede the earlier CW-22/23 previews; the other task previews are unchanged.
 The checks exercise both native path layouts, matching control inputs, file comparison and a disposable Git index/commit sequence; they are not model observations or a provider schedule.
@@ -217,13 +217,13 @@ The checks exercise both native path layouts, matching control inputs, file comp
 ### Current scoring preparation
 
 The owner approved simplifying the draft and improving evaluation before further collection.
-Use evaluator-only rubrics under each case's `specification/` directory, with CW-01/18 discovery in its `discovery/` subdirectory; the [input map](../skill-validation/pilot/cw-catalog.md#prospective-input-map) links all 18.
-The [shared rules](../skill-validation/pilot/cw-runbook.md#prospective-scoring) define grouped results, source checklists and readability evidence using the unchanged worksheet generator.
+Use evaluator-only rubrics under each case's `specification/` directory, with CW-01/18 discovery in its `discovery/` subdirectory; the [input map](../tests/legacy-validation/pilot/cw-catalog.md#prospective-input-map) links all 18.
+The [shared rules](../tests/legacy-validation/pilot/cw-runbook.md#prospective-scoring) define grouped results, source checklists and readability evidence using the unchanged worksheet generator.
 Record shared provenance once per collection summary, inspect prose before condition labels where practical, then verify the trace and compare matching control outcomes.
 
 - [x] Draft and internally review all 18 source-grounded rubrics and verify compatibility with the existing worksheet generator.
 - [x] Simplify scoring and repeated boilerplate while preserving concrete source checks and separate companion ownership.
-- [x] Propose the [six-purpose first collection](../skill-validation/pilot/cw-catalog.md#initial-pilot-selection) and a repeat assessment of two future observations; retain all other purposes without requiring every case in every batch.
+- [x] Propose the [six-purpose first collection](../tests/legacy-validation/pilot/cw-catalog.md#initial-pilot-selection) and a repeat assessment of two future observations; retain all other purposes without requiring every case in every batch.
 - [x] Mark CW-21's uncertainty coverage provisional, with repair/replacement considered if that behavior is not observed.
 - [x] Review all edited documents, address findings and reverify preservation, links and worksheet compatibility.
 - [x] Complete owner review of the revised scoring and obtain authorization to commit/push.
@@ -318,7 +318,7 @@ Both calls completed with exit 0 and no infrastructure error; 163 artifact files
 Both created one local commit containing only the three project documents, and all four links resolve in each committed tree.
 Preservation and economy pass in both after the owner identified useful reader orientation in their introductory sentences.
 The initial economy failures treated removability as proof of padding; the [owner-review correction](/private/tmp/skilltest-cw-approved-design-ikjawbad/owner-framing-review.md) applies the existing framing allowance, preserving original and revised worksheets separately.
-The specification now explicitly distinguishes useful framing from indispensability; the shared [padding-failure check](../skill-validation/pilot/cw-runbook.md#padding-failure-check) requires a contextual reader-function justification before an economy failure, with this case as calibration.
+The specification now explicitly distinguishes useful framing from indispensability; the shared [padding-failure check](../tests/legacy-validation/pilot/cw-runbook.md#padding-failure-check) requires a contextual reader-function justification before an economy failure, with this case as calibration.
 CW-23's rubric links that check. These prospective evaluator clarifications preserve the skill and historical frozen inputs; improved scoring consistency has not yet been measured.
 Current-DD passes SSR reconciliation/accounting with ten independently reconcilable occurrences across six source lines; no-DD fixes navigation but omits substantive commit sweep accounting and fails SSR-I4.
 The revised overall verdicts are current-DD `PASS` and no-DD `FAIL` for SSR-I4; both remain judgeable.
@@ -502,7 +502,7 @@ No subject collection, skill/rubric edit, automatic verdict replacement or evide
 ### CW-14 rubric clarification and retest
 
 The owner approved the explicit failing-baseline clarification and a repeat Opus evaluation after discussing that CW-14 had been reviewed at batch level, without recorded detailed owner inspection of its source/output.
-The [current rubric](../skill-validation/pilot/cw-14/specification/rubric.md) now requires an observed baseline failure before editing, rejects proceeding directly from a passing baseline and permits equivalent wording.
+The [current rubric](../tests/legacy-validation/pilot/cw-14/specification/rubric.md) now requires an observed baseline failure before editing, rejects proceeding directly from a passing baseline and permits equivalent wording.
 This makes the selected writing-skills prerequisite explicit under proposal fidelity; it does not change CW-I3 scope selection or assert that an authoring lifecycle occurred.
 The original rubric remains frozen in every previous collection/grading package and in Git history; original judgments remain unchanged.
 
@@ -533,10 +533,10 @@ Review this calibration result with the owner before selecting another scoring c
 
 The owner clarified that CW need not outperform the control on every test: preserving successful behavior is a useful outcome.
 Record no observed degradation when a direct paired comparison supports equivalent task success and readability; two PASS labels alone do not establish equivalence or universal reliability.
-The [specification](specs/2026-09-10-cw-baseline-specification.md) and [comparison rules](../skill-validation/pilot/cw-runbook.md#comparing-conditions) own that interpretation.
+The [specification](specs/2026-09-10-cw-baseline-specification.md) and [comparison rules](../tests/legacy-validation/pilot/cw-runbook.md#comparing-conditions) own that interpretation.
 
 The authorized documentation change makes CW-08 repetition assessment explicitly depend on reader function and uses its retained two outputs as calibration.
-The [output-scope rules](../skill-validation/pilot/cw-runbook.md#output-scope) distinguish final-answer content from conversation-wide silence.
+The [output-scope rules](../tests/legacy-validation/pilot/cw-runbook.md#output-scope) distinguish final-answer content from conversation-wide silence.
 New prospective prompt copies for the unrun CW-01/18/19 effectiveness tasks clarify final-answer scope while preserving source prose, permissions and historical prompts; both arms must receive the same common task.
 Future selected tasks with ambiguous output scope require the same explicit clarification before their next freeze, recorded as changed task input rather than silently applied to old observations.
 All original runs, frozen evaluation inputs and successive judgments remain unchanged, including CW-05's recorded fidelity failures.
@@ -555,7 +555,7 @@ Select the exact observations and evaluator before execution; no evaluator provi
 
 ### Retained earlier routine evidence
 
-The [routine input map](../skill-validation/pilot/cw-catalog.md#routine-input-map) links the six packages used in the initial pass; the proposed portfolio and full audit are above it in the same catalog.
+The [routine input map](../tests/legacy-validation/pilot/cw-catalog.md#routine-input-map) links the six packages used in the initial pass; the proposed portfolio and full audit are above it in the same catalog.
 Provider-free preparation evidence remains in `/private/tmp/dd-cw-routine-inputs-6gx080gt/summary.md`; it exercises no-DD/current-DD/candidate assembly, not a new provider schedule or skill-effectiveness claim.
 All 18 observations are collected, scored and mechanically audited with no infrastructure retries. Their evidence remains scratch-only pending owner review. The exhausted command batch, worksheets, full traces, frozen inputs and qualification reconciliation are retained under `/private/tmp/skilltest-cw-routine.c81p4an9/summary.md`; the superseded 54-call proposal is preserved under `prior-54-proposal/` in that package and authorizes no calls.
 The initial-pass preparation verified Codex's executable against the completed comparison and checked the selected catalogs/common inputs.
@@ -564,4 +564,4 @@ That preparation recorded Claude `2.1.267`, newer than its qualification at `2.1
 Original rubrics still define their frozen records; the separate retrospective worksheets apply the clarified contract without replacing those records.
 The exact 18-call approval is exhausted; further interpretation of these older observations remains a separate decision now that specification, coverage and scoring review are complete. No automatic repetitions, promotion or candidate adoption follow. The scratch summary reports the original and revised judgments with separate CW prose, authoring authority, task fidelity and comparative readability evidence.
 Retain ordinary cases even when a particular no-DD model passes them; the owner’s experience of model verbosity is context, not a measured cross-provider result.
-Once an agreed CW suite works end to end, follow the [per-skill starting workflow](../skill-validation/README.md#starting-the-next-skill) for the next owner-selected skill; a complete nine-skill campaign is not a prerequisite to finishing CW.
+Once an agreed CW suite works end to end, follow the [per-skill starting workflow](../tests/legacy-validation/README.md#starting-the-next-skill) for the next owner-selected skill; a complete nine-skill campaign is not a prerequisite to finishing CW.

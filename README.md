@@ -23,7 +23,7 @@ Claude Code-specific. See [Requirements](#requirements).
 
 ## Developing or evaluating these skills
 
-Start with the [skill study workflow and offline walkthrough](tests/README.md). Historical packages and their original contracts live in [skill-validation](skill-validation/README.md).
+Start with the [skill study workflow and offline walkthrough](tests/README.md). Historical packages and their original contracts live in [legacy validation](tests/legacy-validation/README.md).
 
 ## What's included
 
@@ -62,7 +62,7 @@ The hook stack (under `skills/disciplined-development/hooks/`) is documented in 
 [`hooks/dd-config.md`](skills/disciplined-development/hooks/dd-config.md).
 
 Packaged scenarios and retained validation records live in
-[`skill-validation/`](skill-validation/README.md).
+[`tests/legacy-validation/`](tests/legacy-validation/README.md).
 They support repeatable skill testing; historical current-skill observations are
 distinct from the no-skill RED controls required for authoring.
 These are development records, not part of the installed bundle.

@@ -48,5 +48,7 @@ Include every attempt and the bounds of the comparison. Where the broader suite 
 Keep reserved inputs and raw private transcripts in the controlled evidence store. Record a durable locator, hash and retrieval instructions for authorized reviewers.
 Verify the installed bytes, evidence references and offline checks in a clean checkout before merging.
 
-The maintained runner lives under `tests/runner/`. The historical path `skill-validation/runner/` points to that same implementation for existing shell commands.
-Read historical scores with the criteria and runner revision recorded at collection. The [legacy validation records](../skill-validation/README.md) retain those identities.
+The maintained runner lives under `tests/runner/`. Use this path for commands that older studies spell `skill-validation/runner/`.
+Read historical scores with the criteria and runner revision recorded at collection. The [legacy validation records](legacy-validation/README.md) retain those identities.
+
+The [replay harness](research/replay_codex.py) exercises historical review strategies. Run its provider-free smoke test from the repository root with `python3 -m pytest -q tests/research`.

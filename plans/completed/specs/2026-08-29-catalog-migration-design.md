@@ -85,7 +85,7 @@ This design owns the shared migration rules. Each catalog plan owns only that
 catalog's candidates, exact package mappings, permitted prompt adaptations,
 default executions, representative scenario, acceptance test, and implementation
 steps. Scenario READMEs document the finished packages and current smoke status.
-The [scenario migration index](../../../skill-validation/scenarios/README.md) owns
+The [scenario migration index](../../../tests/legacy-validation/scenarios/README.md) owns
 catalog totals, scenario links and summaries, representative markers, and the
 liftable sample prompt.
 
@@ -172,7 +172,7 @@ requires an unapproved adaptation.
 
 Every `prompt.md` is independently readable and preserves the canonical ordering,
 task meaning, and output requirements. It follows the
-[documented prompt anatomy](../../../skill-validation/scenarios/README.md#prompt-anatomy)
+[documented prompt anatomy](../../../tests/legacy-validation/scenarios/README.md#prompt-anatomy)
 without adding a generic wrapper.
 
 When the prompt directly names a supplied file or directory, root that reference

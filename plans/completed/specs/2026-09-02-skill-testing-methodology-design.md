@@ -17,10 +17,10 @@ The methodology must distinguish semantic behavior from deterministic protocol, 
 
 ## Authorities
 
-- The [validation charter](../../../skill-validation/charter/core-contracts.md) defines skill invariants, evaluation ledgers, and acceptance ownership.
+- The [validation charter](../../../tests/legacy-validation/charter/core-contracts.md) defines skill invariants, evaluation ledgers, and acceptance ownership.
 - The live [test-category and coverage amendment](2026-09-06-skilltest-controlled-inputs-design.md#accepted-methodology-decision-shared-test-categories-and-coverage) defines shared discoverability/effectiveness/composition categories, non-redundant skill-specific coverage and model-dependent interpretation without changing the ledger/verdict rules here.
-- The [runner contract](../../../skill-validation/runner/README.md) defines scenario preparation, model invocation, and mechanical evidence collection.
-- The [scenario catalog](../../../skill-validation/scenarios/README.md) indexes the migrated prompts, rubrics, configurations, and supplied files.
+- The [runner contract](../../../tests/runner/README.md) defines scenario preparation, model invocation, and mechanical evidence collection.
+- The [scenario catalog](../../../tests/legacy-validation/scenarios/README.md) indexes the migrated prompts, rubrics, configurations, and supplied files.
 - The [retired comprehensive cleanup plan](../2026-08-01-comprehensive-skill-cleanup.md) and [design](2026-08-01-comprehensive-skill-cleanup-design.md) are historical context, not current methodology.
 
 ## Responsibility boundary
@@ -363,7 +363,7 @@ before then.
 
 ## Initial manual pilot
 
-The first pilot uses [`DR-02`](../../../skill-validation/scenarios/disciplined-research/dr-02/README.md).
+The first pilot uses [`DR-02`](../../../tests/legacy-validation/scenarios/disciplined-research/dr-02/README.md).
 It validates the low-level methodology before introducing test-operator subagents,
 scorer agents, repetitions, control arms, suite automation, or tooling beyond the
 worksheet generator.

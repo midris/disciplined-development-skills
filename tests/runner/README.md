@@ -414,8 +414,8 @@ Malformed, missing or provider-reported error output does not fabricate a proces
 Mechanical completion and evidence validity remain distinct: inspect the raw trace before scoring or accepting the run.
 Codex also captures its final answer through its last-message option. Its JSON command events may omit prefixes present in the model-facing tool response; use the retained session response entries when needed, with call-ID, content and truncation checks. See the [verified capture diagnosis](https://github.com/midris/disciplined-development-skills/blob/44766517c4550cd65c13c9fe0f489ac26efee1e0/skill-studies/sweeping-stale-references/runs/claude-smoke-01/capture-diagnosis.md).
 
-The earlier adapter passed offline verification and the [scoped live qualification](../../skill-validation/pilot/qualification/README.md#claude-qualification-checkpoint) on Claude Code `2.1.266`.
-Use the [Claude qualification checkpoint](../../skill-validation/pilot/qualification/README.md#claude-qualification-checkpoint) before a real comparison, including native no-DD/A/B/composition catalogs, required reads/writes, shell/Git behavior and common-input drift.
+The earlier adapter passed offline verification and the [scoped live qualification](../legacy-validation/pilot/qualification/README.md#claude-qualification-checkpoint) on Claude Code `2.1.266`.
+Use the [Claude qualification checkpoint](../legacy-validation/pilot/qualification/README.md#claude-qualification-checkpoint) before a real comparison, including native no-DD/A/B/composition catalogs, required reads/writes, shell/Git behavior and common-input drift.
 The completed qualification adds actual companion loading, file search/write/edit and shell/Git operations to the earlier Read/Skill feasibility evidence; repeat only affected controls when that setup changes.
 
 ## Result

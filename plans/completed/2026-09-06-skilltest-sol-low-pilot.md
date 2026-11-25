@@ -3,7 +3,7 @@
 **Archive status (2026-09-09):** Implementation, qualification, all 14 procedure observations and their handoffs are complete and the tooling is on main.
 The owner considers baseline tooling settled.
 The owner accepted the validity of all 14 observations on 2026-09-09; further evaluation and decisions remain open.
-The [accepted procedure evidence](../../skill-validation/accepted/procedure-pilot/codex-gpt-5.6-sol-low/README.md) preserves complete bundles, qualification and original judgments.
+The [accepted procedure evidence](../../tests/legacy-validation/accepted/procedure-pilot/codex-gpt-5.6-sol-low/README.md) preserves complete bundles, qualification and original judgments.
 Historical pending statements below describe the original handoffs; this acceptance supersedes them without promoting the pilot into an effectiveness campaign.
 The [current testing plan](../2026-09-09-dd-skill-testing.md#remaining-work) owns those decisions and all further work.
 The completed checklist below is a record, not instructions to resume the pilot.
@@ -81,7 +81,7 @@ The Codex-only runtime owns private directories, file-cache authentication, temp
 Verification: 199 offline runner tests pass; the hook suite passes 263 tests with three skips.
 Lifecycle review fixed deadline-edge reaping, false cleanup reporting after successful deletion, and unclosed pipes on handled interruption, with failing regression checks observed before each correction.
 The schema retains its shape/version and provider labels; only the cleanup enum/state and truthful Codex timeout-with-unknown-exit case are added.
-The [operator guide](../../skill-validation/runner/README.md#codex) documents the implemented controls and remaining qualification limits.
+The [operator guide](../../tests/runner/README.md#codex) documents the implemented controls and remaining qualification limits.
 Review was performed inline because this session has no no-write-tool reviewer type; no provider-backed review or real authentication was used.
 
 ## Task 2a: Consistent unit/process-smoke boundaries
@@ -99,7 +99,7 @@ Real-process tests cover wiring and lifecycle behavior that mocks cannot establi
 
 Verification: 224 guarded unit tests and seven local process smoke cases pass separately; the combined suite passes 231 tests, and hooks pass 263 with three skips.
 In-memory mutations of the setup deadline, process shutdown and runtime removal are rejected; production files remain unchanged.
-The [runner testing guide](../../skill-validation/runner/README.md#testing-the-runner-code) documents selection and ownership of each boundary.
+The [runner testing guide](../../tests/runner/README.md#testing-the-runner-code) documents selection and ownership of each boundary.
 
 This removes incidental process scheduling from orchestration assertions; it does not establish the original failure's root cause or excuse a failing process smoke test.
 No production fix, provider qualification, hooks redesign or repository-wide test rewrite is included.
@@ -120,12 +120,12 @@ Results remain scratch-only through owner review; use one Markdown summary linki
 - [x] Exercise handoff and failure/recovery bookkeeping using retained or synthetic evidence where possible, without deliberately spending more provider calls to manufacture failures. The summary identifies completed/planned runs, exclusions, deviations and the next resumable action.
 - [x] Prepare the complete pilot record and practical runbook findings for owner review, then stop. Do not expand the matrix, author skill edits, promote pilot observations into an effectiveness baseline, or clean up evidence automatically.
 
-Preparation is at [the pilot runbook](../../skill-validation/pilot/README.md), with four behavioral configs and two qualification configs.
+Preparation is at [the pilot runbook](../../tests/legacy-validation/pilot/README.md), with four behavioral configs and two qualification configs.
 All nine DD files match main `ca14bbe24f8aea957dbcfeece3511226e929243d`; both conditions use the same frozen writing-plans and reviewer-guidance files from Superpowers 6.3.0.
 The first provider-free catalog check found six common entries and exactly nine DD additions; normalized common prompt content and 60 bootstrap file hashes matched.
 Provider-free gates pass: the four accepted contamination controls were reconciled to the private-profile/project-boundary setup, loopback positive/denied controls passed under host execution, and the selected shell/file tools read the qualification fixtures successfully.
 Scratch `preflight/reconciliation.md` records exact evidence references, CLI version/digest, cleanup, and the limits of debug inspection and untraced login-shell startup reads.
-The [qualification reference](../../skill-validation/pilot/qualification/README.md) pins retained-evidence inspection and provider-free checks; the routine runbook requires version/digest comparison before each launch and owner-assisted recovery when process ownership cannot be established.
+The [qualification reference](../../tests/legacy-validation/pilot/qualification/README.md) pins retained-evidence inspection and provider-free checks; the routine runbook requires version/digest comparison before each launch and owner-assisted recovery when process ownership cannot be established.
 The prior mixed Git-timeout test is replaced by deterministic setup-failure checks and explicit real-process smoke coverage in Task 2a; its original OS failure cause remains unconfirmed.
 Task 2a verification passes; scratch `runbook-review-verification.md` preserves the original error and retained dummy-runtime path without claiming a production fix.
 The test-only review separated CLI diagnostic formatting into the guarded unit group and restored cleanup-error logging coverage at the provider adapter boundary.
@@ -252,7 +252,7 @@ This is input preparation only: no provider/CLI-auth invocation, new sampling de
 - [x] Prepare the behavior pair with identical rubrics/task text and only the current-DD loading prefix plus DD availability differing.
 - [x] Prepare positive/non-trigger current-DD discovery tasks without loading hints; define observable selection/loading, missing-trace handling and separate fidelity in withheld rubrics.
 - [x] Audit configs and rendered fixtures using existing provider-free helpers; verify frozen dependencies, withholding and protected inputs, then review the complete change and run the required hook suite.
-- [x] Prepare the [exact prompt/rubric handoff](../../skill-validation/pilot/README.md#cw-purpose-separated-inputs) in the input-preparation commit; no results collected or native-discovery qualification claimed by that step.
+- [x] Prepare the [exact prompt/rubric handoff](../../tests/legacy-validation/pilot/README.md#cw-purpose-separated-inputs) in the input-preparation commit; no results collected or native-discovery qualification claimed by that step.
 
 Provider-free audit: [input-audit.json](/private/tmp/skilltest-sol-low-pilot.Lunoau/cw-inputs.veav95/input-audit.json), produced from the feature-worktree root by `skill-validation/runner/.venv/bin/python /private/tmp/skilltest-sol-low-pilot.Lunoau/cw-inputs.veav95/audit-inputs.py`.
 All four configs/rendered inventories match; current-DD uses the unchanged 13 guidance files and no-DD the same four common files. Prompt relationships, rubric equality and frozen source bytes pass.
@@ -289,6 +289,6 @@ Next checkpoint: owner review of this batch and the warning-policy clarification
 
 Review this plan and the amended spec before Task 1. Scenario/count approval does not approve provider commands.
 Before signing off a code-changing implementation unit, run the offline runner and hook suites, check local documentation links and run `git diff --check`.
-For documentation-only or collection units, use the [bounded-batch cadence](../../skill-validation/pilot/README.md#bounded-batches-and-approval): retain unchanged harness verification, check affected artifacts and run the required hook suite once at handoff.
+For documentation-only or collection units, use the [bounded-batch cadence](../../tests/legacy-validation/pilot/README.md#bounded-batches-and-approval): retain unchanged harness verification, check affected artifacts and run the required hook suite once at handoff.
 After Task 2, confirm the final invocation/setup matches the approved design before any Task 3 real calls.
 The pilot is successful when the procedure produces trustworthy, reviewable records and exposes its limitations; skill PASS is not its completion criterion.
