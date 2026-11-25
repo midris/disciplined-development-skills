@@ -1,0 +1,10 @@
+--- a/catalog-spec.md
++++ b/catalog-spec.md
+@@ -1,5 +1,5 @@
+ # Traveling exhibition catalog
+
+-The public catalog lists each lender under the name on the signed loan form.
++The public catalog lists each lender under the name on the signed loan form. It is the approved credit, even after a rebrand, until the lender amends it.
+
+-Sort objects by accession number within each room.
++Sort objects by accession number within each room so proof corrections line up with the room sheets. Visitors can look up titles in the index.

@@ -1,0 +1,133 @@
+{
+  "reader_template": {
+    "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/reader-smoke/config.json",
+    "version": null,
+    "sha256": "35f09d4f4adb2d8c6a723eadac105853e28175c9cc9f89c8c204e45ccf3da6cf"
+  },
+  "question": {
+    "path": "skill-studies/writing-explicit-rationale/cases/catalog-review/maintenance-question.txt",
+    "version": null,
+    "sha256": "9f86d070a1d06cd863fd6093d578aea115c40428908a7456467d1403f3c8f0e5"
+  },
+  "reader_execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "permissions": "read-only"
+  },
+  "subjects": [
+    {
+      "order": 1,
+      "provider": "claude",
+      "case": "repeated-review",
+      "condition": "candidate",
+      "config": "skill-studies/writing-explicit-rationale/runs/rewrite-broad-01/claude/repeated-review.json",
+      "sha256": "fb3c39afa402540b72368348774ae0838262ebd846174a9706175bed5a341d4c",
+      "inputs": {
+        "ingest.py": "3eb96679a60bc60fbded053fd83be60b6df52a6478cab6319a9e7eccbbafbf81",
+        "labels.py": "ea76992b87ebfbd550cae798faf0a4c746fe1cd6ba42857c4b76f40b6b651c30",
+        "quota.py": "5f9ea763f1380feaf0dc7920e704c9e5a7a2d55ed194e1e7769a8d7259526978",
+        "test_service.py": "6043483e16545088f74717ddd7228416c1c1f4b787ff2def86cfc58a19e638d9",
+        "TASK.md": "ffe88c1bbf6ae01f85479828d95796ba7943c9589684b3b17402c5a710de103a",
+        "review-input/change.patch": "a9e80c458cf5dda3488ed18ee992af827ace6a6eb4fc119222953189bb28de88",
+        "GUIDANCE.md": "36ab7246d4c974cbf7d195b92780d835c31863477e33aaca1f0a8389c0f48381"
+      },
+      "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+      "criteria": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/criteria/repeated-review.md",
+      "criteria_sha256": "fae907be2ff87a87511ef62bf59b99edcb05c519865a6cf56bf87b7b5b602bec"
+    },
+    {
+      "order": 2,
+      "provider": "codex",
+      "case": "quota-grace",
+      "condition": "candidate",
+      "config": "skill-studies/writing-explicit-rationale/runs/rewrite-broad-01/codex/quota-grace.json",
+      "sha256": "1e957e38bd681ef30342fb5a86399ceab1558d7f52f6d5e9d90a080ad67d38e9",
+      "inputs": {
+        "quota.py": "7deed5997f6930227a84a71f1f8d1b70259c6a87c55faa5461a6064fdfaaa052",
+        "test_quota.py": "722b6b47ed52378f9e1d48128119e376009cb931a61b25503c78c5a96ef19e17",
+        "TASK.md": "2bddc0dacfe3a85b32251042c636a5edc14180568163e77ad3814153f9f9e781",
+        "GUIDANCE.md": "36ab7246d4c974cbf7d195b92780d835c31863477e33aaca1f0a8389c0f48381"
+      },
+      "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+      "criteria": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/criteria/quota-grace.md",
+      "criteria_sha256": "e457281af18c0e0c3473ba75af62d49e271341ef113e6f1aa579ac7969366cd4"
+    },
+    {
+      "order": 3,
+      "provider": "claude",
+      "case": "quota-grace",
+      "condition": "candidate",
+      "config": "skill-studies/writing-explicit-rationale/runs/rewrite-broad-01/claude/quota-grace.json",
+      "sha256": "593cdf90a6302faa25d89b08be54c547eda09c5a5128bb6a8029570f3cb5258a",
+      "inputs": {
+        "quota.py": "7deed5997f6930227a84a71f1f8d1b70259c6a87c55faa5461a6064fdfaaa052",
+        "test_quota.py": "722b6b47ed52378f9e1d48128119e376009cb931a61b25503c78c5a96ef19e17",
+        "TASK.md": "2bddc0dacfe3a85b32251042c636a5edc14180568163e77ad3814153f9f9e781",
+        "GUIDANCE.md": "36ab7246d4c974cbf7d195b92780d835c31863477e33aaca1f0a8389c0f48381"
+      },
+      "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+      "criteria": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/criteria/quota-grace.md",
+      "criteria_sha256": "e457281af18c0e0c3473ba75af62d49e271341ef113e6f1aa579ac7969366cd4"
+    },
+    {
+      "order": 4,
+      "provider": "codex",
+      "case": "catalog-review",
+      "condition": "candidate",
+      "config": "skill-studies/writing-explicit-rationale/runs/rewrite-broad-01/codex/catalog-review.json",
+      "sha256": "4fab901ad1ae74f82b6f48c3f592780d6406aa0aa312a25c15dce031870a9463",
+      "inputs": {
+        "catalog-spec.md": "47079199a0021b20018e71305f75237dcb2d60df714400acd4e5aa6a1209d0a6",
+        "TASK.md": "0cdc1dbfd2a96ee1af6a579acbbbf0d168d3a2411b5a85ef7459a6484f5c2ca3",
+        "GUIDANCE.md": "36ab7246d4c974cbf7d195b92780d835c31863477e33aaca1f0a8389c0f48381"
+      },
+      "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+      "criteria": "skill-studies/writing-explicit-rationale/cases/catalog-review/assessment.md",
+      "criteria_sha256": "8af06b7d046c27bbd4c99a2a5f7436637ea7f8162dd517c9d8f312ed70b3f777"
+    },
+    {
+      "order": 5,
+      "provider": "claude",
+      "case": "catalog-review",
+      "condition": "candidate",
+      "config": "skill-studies/writing-explicit-rationale/runs/rewrite-broad-01/claude/catalog-review.json",
+      "sha256": "d5431b4930aeb05704069a52f2bebb497a3aae8110079ee7aaddf9787946eaed",
+      "inputs": {
+        "catalog-spec.md": "47079199a0021b20018e71305f75237dcb2d60df714400acd4e5aa6a1209d0a6",
+        "TASK.md": "0cdc1dbfd2a96ee1af6a579acbbbf0d168d3a2411b5a85ef7459a6484f5c2ca3",
+        "GUIDANCE.md": "36ab7246d4c974cbf7d195b92780d835c31863477e33aaca1f0a8389c0f48381"
+      },
+      "prompt_sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+      "criteria": "skill-studies/writing-explicit-rationale/cases/catalog-review/assessment.md",
+      "criteria_sha256": "8af06b7d046c27bbd4c99a2a5f7436637ea7f8162dd517c9d8f312ed70b3f777"
+    }
+  ],
+  "decision_readers": [
+    {
+      "order": 1,
+      "subject_order": 4
+    },
+    {
+      "order": 2,
+      "subject_order": 5
+    }
+  ],
+  "candidate": {
+    "path": "skill-studies/writing-explicit-rationale/drafts/baseline-edit-with-examples/SKILL.md",
+    "sha256": "36ab7246d4c974cbf7d195b92780d835c31863477e33aaca1f0a8389c0f48381"
+  },
+  "runtime": {
+    "path": "skill-studies/writing-explicit-rationale/runs/functional-pilot-01/runtime.json",
+    "sha256": "92d24a3ddc9cedfe0536efb14cb33ec178f87466c9bb8039884e9fc6d3637f92"
+  },
+  "isolation": {
+    "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/connector-qualification.json",
+    "sha256": "c988892403eee2e79555a6ad2a33beb15dbe197dda33abee11fa34caca9a68e2"
+  },
+  "policy": {
+    "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/scoring-policy.txt",
+    "sha256": "2f5a7e512fb1a3d978b36f0b410b94bb8459565df1b1a8f6e2a835766bf7bc8c"
+  },
+  "replacements": 0
+}

@@ -1,0 +1,1 @@
+We're rolling out the address-check queue. Bring the dispatch spec, morning planner and overflow planner up to date. Parcels in address_check should follow the existing dispatch-hold policy. Keep both public lookup functions and change the overflow screen title to “Overflow dispatch”.

@@ -1,0 +1,50 @@
+[
+  {
+    "label": "0e94a789",
+    "payload_sha256": "050db7c439f4464a4b35b99e92bc4474f5da24ce2111bf024f800f7876c142a5",
+    "project_read": "CSV and JSON ship in v1, with encoding, column order, runbook and first-month follow-up preserved. The Later item gives the changing schema, the partner approval condition and what XML customers lack until then. No release date or certainty of breakage.",
+    "sealed_at": "2026-11-24T20:35:51.809008+00:00"
+  },
+  {
+    "label": "fa5fd4d1",
+    "payload_sha256": "bb817c026a5f3461fb68e9ab68854b59b1dfaecacee35a5a66abf9d5028e05ef",
+    "project_read": "The plan keeps CSV and JSON, existing milestones and defers XML to Later. It explains schema churn as a compatibility risk, the customer wait and when partner approval triggers reconsideration.",
+    "sealed_at": "2026-11-24T20:35:51.809195+00:00"
+  },
+  {
+    "label": "31e3b95f",
+    "payload_sha256": "abfddf27448d076dc2f5e1d68cbba24d24d2068283def3b6200c6e6660bc6ea0",
+    "project_read": "The short plan identifies both daily launch items, the pre-rollout guide and first-month review. It defers both weekly features pending the split-period rule and explains the possible manual Support comparison. Reconsideration is implicit; no automatic release or launch date is promised.",
+    "sealed_at": "2026-11-24T20:37:10.783815+00:00"
+  },
+  {
+    "label": "96d0991a",
+    "payload_sha256": "1d8a78b230a75ba22b7fb2d206110ac0c26163d62d77147a6977052117290ba3",
+    "project_read": "Both daily commitments remain at launch. The plan defers both weekly features, explicitly calls for review after Finance agrees on the cross-period close rule and gives the conditional Support cost. The guide and adoption review are intact.",
+    "sealed_at": "2026-11-24T20:37:10.783985+00:00"
+  },
+  {
+    "label": "3ae55c4d",
+    "payload_sha256": "c641dafd50787b5da77bded06be68d6ebbef6ee1eaa5ca6e6e771fd91a8d353f",
+    "project_read": "Both public callers use the renamed helper. The existing billing explanation stays beside the zero clamp, with no rationale added for the routine rename.",
+    "sealed_at": "2026-11-24T20:38:32.256742+00:00"
+  },
+  {
+    "label": "6ea69f2e",
+    "payload_sha256": "c641dafd50787b5da77bded06be68d6ebbef6ee1eaa5ca6e6e771fd91a8d353f",
+    "project_read": "Both public callers use the new helper name, and the project retains the reason for treating negative corrections as zero. It adds no explanation of the rename.",
+    "sealed_at": "2026-11-24T20:38:32.256944+00:00"
+  },
+  {
+    "label": "0d5e2935",
+    "payload_sha256": "faae5551638e9fbe58eb8cc269bd17a07e3250f646dd8ac8743c5111e70c0fe3",
+    "project_read": "Both public functions delegate to one policy. The project explains the wrong-address risk, dispatcher control and why dropping loaded parcels interferes with redirection. The carrier attribution for the new status is uncertain. The title needs no extra explanation.",
+    "sealed_at": "2026-11-24T20:39:22.331376+00:00"
+  },
+  {
+    "label": "79cc82c5",
+    "payload_sha256": "f8f2f23e7f6c07f0092a39f8189aeec4b405bc9cb80933dc6fe253b55fc155c4",
+    "project_read": "Both public planners implement the same statuses, with duplicated comments. The spec supplies the wrong-address risk and dispatcher ownership. Its reference to avoiding a new dispatch queue could confuse a reader about the address-check queue but the required scheduling behavior is clear. Carrier provenance is assumed. No title justification.",
+    "sealed_at": "2026-11-24T20:39:22.331600+00:00"
+  }
+]

@@ -1,0 +1,12 @@
+--- a/quota.py
++++ b/quota.py
+@@ -12,4 +12,9 @@
+     """Return a limit for a validated token. All timestamps are in seconds."""
+     if now < change.effective_at:
+         return change.previous
++    # In-flight work admitted under the old token could be rejected on downgrade.
++    # Keep its higher allowance for the agreed 60-second handover.
++    if change.current < change.previous and issued_at < change.effective_at:
++        if now < change.effective_at + 60:
++            return change.previous
+     return change.current

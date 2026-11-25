@@ -1,0 +1,736 @@
+{
+  "subjects": [
+    {
+      "order": 1,
+      "provider": "codex",
+      "case": "helper-rename",
+      "condition": "original",
+      "repetition": 3,
+      "label": "84a93dde",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "interpretation": "The complete project and handoff agree on the internal rename, preserved public callers and behavior. The subject ran the tests and the two original tests passed independently. The relevant billing rationale survives without redundant explanation.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-01/execution-result.json",
+        "sha256": "9f0ccab4521ced0e311503665650b6294d7e4e0d0b6190754bdbb11ad9dd8cac",
+        "version": "1"
+      }
+    },
+    {
+      "order": 2,
+      "provider": "claude",
+      "case": "helper-rename",
+      "condition": "control",
+      "repetition": 3,
+      "label": "5a24b355",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "interpretation": "The complete project and handoff agree on the internal rename, preserved public callers and behavior. The subject ran the tests and the two original tests passed independently. The relevant billing rationale survives without redundant explanation.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-02/execution-result.json",
+        "sha256": "f88397fdf3ead0d9849ed17dc87b96788bd2631e4f86e23fde9a04b41a00a5af",
+        "version": "1"
+      }
+    },
+    {
+      "order": 3,
+      "provider": "codex",
+      "case": "helper-rename",
+      "condition": "control",
+      "repetition": 3,
+      "label": "d66d3e44",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "interpretation": "The complete project and handoff agree on the internal rename, preserved public callers and behavior. The subject ran the tests and the two original tests passed independently. The relevant billing rationale survives without redundant explanation.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-03/execution-result.json",
+        "sha256": "1a23fd326040f70617a68403e38b53aa754c96f037a82d5e7800da7abea7a925",
+        "version": "1"
+      }
+    },
+    {
+      "order": 4,
+      "provider": "claude",
+      "case": "helper-rename",
+      "condition": "original",
+      "repetition": 3,
+      "label": "2623c1ee",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "interpretation": "The complete project and handoff agree on the internal rename, preserved public callers and behavior. The subject ran the tests and the two original tests passed independently. The relevant billing rationale survives without redundant explanation.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-04/execution-result.json",
+        "sha256": "1962a57acce3b7b20a091169835f9b039cbd9b6330fb62afa4d2d872fd475561",
+        "version": "1"
+      }
+    },
+    {
+      "order": 5,
+      "provider": "codex",
+      "case": "scope-trim",
+      "condition": "control",
+      "repetition": 3,
+      "label": "ad611909",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "interpretation": "The whole deferred section explains both weekly cuts without promising delivery. The narrower Support wording in the plan resolves the broader shorthand in the handoff.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-05/execution-result.json",
+        "sha256": "2db0460733b9876bd5813505f01fdd0449f9f2f869852779195fd594d0dbf188",
+        "version": "1"
+      }
+    },
+    {
+      "order": 6,
+      "provider": "claude",
+      "case": "scope-trim",
+      "condition": "original",
+      "repetition": 3,
+      "label": "09046804",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "interpretation": "The plan shortens the rollout while preserving every disposition, Finance trigger and conditional operational cost. The handoff confirms the same scope.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-06/execution-result.json",
+        "sha256": "88aa6a8f3838230fbfcc0c589458f706bd683b6f91d85735fcc284460fa346fd",
+        "version": "1"
+      }
+    },
+    {
+      "order": 7,
+      "provider": "codex",
+      "case": "scope-trim",
+      "condition": "original",
+      "repetition": 3,
+      "label": "7765bc7f",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "interpretation": "The short After launch section gives a reconsideration, not a delivery commitment. The plan limits the possible workaround to affected weeks and the handoff correctly attaches Monday to handoff.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-07/execution-result.json",
+        "sha256": "96ecc22c571dc5348303b1637b7603200d51d848294002e34427ca34fc3cb892",
+        "version": "1"
+      }
+    },
+    {
+      "order": 8,
+      "provider": "claude",
+      "case": "scope-trim",
+      "condition": "control",
+      "repetition": 3,
+      "label": "161dae07",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "interpretation": "The complete plan and handoff preserve both daily and weekly decisions and the Finance agreement without inventing launch timing.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-08/execution-result.json",
+        "sha256": "4fdfb707a16ca3f4921f6e10c8bc8810f091cc2838d9813b92c388eef5e4b46d",
+        "version": "1"
+      }
+    },
+    {
+      "order": 9,
+      "provider": "codex",
+      "case": "dispatch-hold",
+      "condition": "original",
+      "repetition": 3,
+      "label": "252c9fd6",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "interpretation": "Both planner entry points pass replay. The specification and local comments preserve the wrong-address risk and dispatcher exception, and the title edit needs no explanation.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-09/execution-result.json",
+        "sha256": "6f4c331368786c60bd375586087fdec572374c6b4f34dc77bc753af71990ab1d",
+        "version": "1"
+      }
+    },
+    {
+      "order": 10,
+      "provider": "claude",
+      "case": "dispatch-hold",
+      "condition": "control",
+      "repetition": 3,
+      "label": "e51b90dc",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "interpretation": "Both local status sets implement the documented policy and pass replay. The spec explains both branches, and the unrelated title change stays concise.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-10/execution-result.json",
+        "sha256": "77f801ade22061376fc8a6cbf5d13f23e2d87ae675e2e698b54fbce3e72605d2",
+        "version": "1"
+      }
+    },
+    {
+      "order": 11,
+      "provider": "codex",
+      "case": "dispatch-hold",
+      "condition": "control",
+      "repetition": 3,
+      "label": "5d12be33",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "interpretation": "The two functions match the documented hold statuses and pass replay. The spec supplies the reason and exception, without duplicating them at each use.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-11/execution-result.json",
+        "sha256": "c5507a69d40350a89a191b68277d51e41316cbfb3ddd01856116a1ef03119bb0",
+        "version": "1"
+      }
+    },
+    {
+      "order": 12,
+      "provider": "claude",
+      "case": "dispatch-hold",
+      "condition": "original",
+      "repetition": 3,
+      "label": "6e2ddbae",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "interpretation": "The shared definition connects both passing planners to the reason for the hold and the loaded-parcel exception. Extra maintenance guidance still leaves the title edit proportionate.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-12/execution-result.json",
+        "sha256": "f2ce73207147d9aa5f7168859d7dd63aa419146d2c66503eb5c15ede4710f8f7",
+        "version": "1"
+      }
+    },
+    {
+      "order": 13,
+      "provider": "codex",
+      "case": "helper-rename",
+      "condition": "control",
+      "repetition": 4,
+      "label": "fe68efc2",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "interpretation": "Both callers use the new name, the original tests pass in the session and replay, and the original billing explanation survives without new rename commentary.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-13/execution-result.json",
+        "sha256": "8f3ae857381b8d9f05b059a417475a72df915da68572e2b7a5ba2197a8928c3e",
+        "version": "1"
+      }
+    },
+    {
+      "order": 14,
+      "provider": "claude",
+      "case": "helper-rename",
+      "condition": "original",
+      "repetition": 4,
+      "label": "f4fc8c46",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "interpretation": "Both callers use the new name, the original tests pass in the session and replay, and the original billing explanation survives without new rename commentary.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-14/execution-result.json",
+        "sha256": "39fb8419416332f032a1c52edceb2e157a22b96b5bb8be4baa0f6e0a67626b4e",
+        "version": "1"
+      }
+    },
+    {
+      "order": 15,
+      "provider": "codex",
+      "case": "helper-rename",
+      "condition": "original",
+      "repetition": 4,
+      "label": "56a0a064",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "interpretation": "Both callers use the new name, the original tests pass in the session and replay, and the original billing explanation survives without new rename commentary.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-15/execution-result.json",
+        "sha256": "90760401fc0c39811c1de2b86d748995ad0bfef6b9a90067d5227cad1b9c5b01",
+        "version": "1"
+      }
+    },
+    {
+      "order": 16,
+      "provider": "claude",
+      "case": "helper-rename",
+      "condition": "control",
+      "repetition": 4,
+      "label": "b998836b",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "interpretation": "Both callers use the new name, the original tests pass in the session and replay, and the original billing explanation survives without new rename commentary.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-16/execution-result.json",
+        "sha256": "ef748153c6188871e1d0b48a31d0468448d0096d4bd5df13787aee989c8c2ba6",
+        "version": "1"
+      }
+    },
+    {
+      "order": 17,
+      "provider": "codex",
+      "case": "scope-trim",
+      "condition": "original",
+      "repetition": 4,
+      "label": "e362797f",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "interpretation": "The shortened project retains the daily scope, guide and adoption review, and explains both deferrals, the Finance dependency and conditional manual work. Neither project nor handoff commits to a launch date or automatic delivery.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-17/execution-result.json",
+        "sha256": "2cca2b45aa65779db921ba10594ffd490e71d68dc050525e6e3d68aea06935f3",
+        "version": "1"
+      }
+    },
+    {
+      "order": 18,
+      "provider": "claude",
+      "case": "scope-trim",
+      "condition": "control",
+      "repetition": 4,
+      "label": "6d78fa40",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "interpretation": "The shortened project retains the daily scope, guide and adoption review, and explains both deferrals, the Finance dependency and conditional manual work. Neither project nor handoff commits to a launch date or automatic delivery.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-18/execution-result.json",
+        "sha256": "7a6ca257b1422a792de0444854cfeae43f12fc9e5d836f40a17d0cce98c38e39",
+        "version": "1"
+      }
+    },
+    {
+      "order": 19,
+      "provider": "codex",
+      "case": "scope-trim",
+      "condition": "control",
+      "repetition": 4,
+      "label": "93ae6169",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "interpretation": "The shortened project retains the daily scope, guide and adoption review, and explains both deferrals, the Finance dependency and conditional manual work. Neither project nor handoff commits to a launch date or automatic delivery.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-19/execution-result.json",
+        "sha256": "8d8d385e171b00a4f10b74dc6f09b6c77b4a99db90ce3e9f4546f8a835011549",
+        "version": "1"
+      }
+    },
+    {
+      "order": 20,
+      "provider": "claude",
+      "case": "scope-trim",
+      "condition": "original",
+      "repetition": 4,
+      "label": "dba1a6d9",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "interpretation": "The shortened project retains the daily scope, guide and adoption review, and explains both deferrals, the Finance dependency and conditional manual work. Neither project nor handoff commits to a launch date or automatic delivery.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-20/execution-result.json",
+        "sha256": "3d8cb3dee61544b3c704fb97462d27cd060498084dfca3c84ecc674d79b7e79e",
+        "version": "1"
+      }
+    },
+    {
+      "order": 21,
+      "provider": "codex",
+      "case": "dispatch-hold",
+      "condition": "control",
+      "repetition": 4,
+      "label": "ea148730",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "interpretation": "Both public functions and the new title pass replay. From either planner a maintainer can recover the wrong-address risk and why loaded parcels stay assigned. The unsupported carrier attribution changes no action, and the title has no added rationale.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-21/execution-result.json",
+        "sha256": "edd921f70a66a74ec7e4b44167031e046dd2704c4328f8b6167915ceb6a045ca",
+        "version": "1"
+      }
+    },
+    {
+      "order": 22,
+      "provider": "claude",
+      "case": "dispatch-hold",
+      "condition": "original",
+      "repetition": 4,
+      "label": "2628847f",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "interpretation": "Both public functions and the new title pass replay. From either planner a maintainer can recover the wrong-address risk and why loaded parcels stay assigned. The unsupported carrier attribution changes no action, and the title has no added rationale.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-22/execution-result.json",
+        "sha256": "e854211b1bc15ce99d1b3c403c480145d90d3a7eed27bfbca34184256e1b37f3",
+        "version": "1"
+      }
+    },
+    {
+      "order": 23,
+      "provider": "codex",
+      "case": "dispatch-hold",
+      "condition": "original",
+      "repetition": 4,
+      "label": "1be0351f",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "interpretation": "Both public functions and the new title pass replay. From either planner a maintainer can recover the wrong-address risk and why loaded parcels stay assigned. The unsupported carrier attribution changes no action, and the title has no added rationale.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-23/execution-result.json",
+        "sha256": "f5316dedd5c934564c6b9d9a9adad81b9b22a21efaf33d005023c6c3d25ae3f4",
+        "version": "1"
+      }
+    },
+    {
+      "order": 24,
+      "provider": "claude",
+      "case": "dispatch-hold",
+      "condition": "control",
+      "repetition": 4,
+      "label": "27760b77",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "interpretation": "Both public functions and the new title pass replay. From either planner a maintainer can recover the wrong-address risk and why loaded parcels stay assigned. The unsupported carrier attribution changes no action, and the title has no added rationale.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-24/execution-result.json",
+        "sha256": "52ba25605de9196ed42267436ec555073ac5f3b7487958e1ff8119f07a165a05",
+        "version": "1"
+      }
+    },
+    {
+      "order": 25,
+      "provider": "codex",
+      "case": "helper-rename",
+      "condition": "original",
+      "repetition": 5,
+      "label": "5f375ab6",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "interpretation": "Both public callers use the renamed helper, and tests pass in the session and on replay. The billing explanation survives without any new durable rename rationale.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-25/execution-result.json",
+        "sha256": "62a7a7765ea83d48e9eb68bec0920e91928a5a00f8e192e9253d807cc5eb2627",
+        "version": "1"
+      }
+    },
+    {
+      "order": 26,
+      "provider": "claude",
+      "case": "helper-rename",
+      "condition": "control",
+      "repetition": 5,
+      "label": "25f0d024",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "interpretation": "Both public callers use the renamed helper, and tests pass in the session and on replay. The billing explanation survives without any new durable rename rationale.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-26/execution-result.json",
+        "sha256": "1c1f9251c575edcef6a591ab58b7a25444f66db11e1969a507fc3bf49478456b",
+        "version": "1"
+      }
+    },
+    {
+      "order": 27,
+      "provider": "codex",
+      "case": "helper-rename",
+      "condition": "control",
+      "repetition": 5,
+      "label": "138368b9",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "interpretation": "Both public callers use the renamed helper, and tests pass in the session and on replay. The billing explanation survives without any new durable rename rationale.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-27/execution-result.json",
+        "sha256": "430663c90fed7e3818606ec5bc4c10cc90dcb9f99bdb532fef385221ba7da734",
+        "version": "1"
+      }
+    },
+    {
+      "order": 28,
+      "provider": "claude",
+      "case": "helper-rename",
+      "condition": "original",
+      "repetition": 5,
+      "label": "eb8faef2",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "interpretation": "Both public callers use the renamed helper, and tests pass in the session and on replay. The billing explanation survives without any new durable rename rationale.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-28/execution-result.json",
+        "sha256": "247b4a843fb4d9aec14b7ca1ecb6564051ee40a096ea1f37d87e77ef4e3e9d52",
+        "version": "1"
+      }
+    },
+    {
+      "order": 29,
+      "provider": "codex",
+      "case": "scope-trim",
+      "condition": "control",
+      "repetition": 5,
+      "label": "1b4cc71c",
+      "setup": "valid",
+      "functional_result": "not met",
+      "criteria": {
+        "T1": "not met",
+        "R1": "met"
+      },
+      "interpretation": "The plan's Monday launch heading and the handoff's Monday launch commitments turn a handoff date into a rollout date. The source supports only the handoff. The weekly decision, Finance rule and conditional Support cost remain clear.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-29/execution-result.json",
+        "sha256": "94721333342fc76d507fa67fdd4029beb8e10bf28bbd2b3d0f8d3d7b17104b00",
+        "version": "1"
+      }
+    },
+    {
+      "order": 30,
+      "provider": "claude",
+      "case": "scope-trim",
+      "condition": "original",
+      "repetition": 5,
+      "label": "5da1fe42",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "interpretation": "The short plan retains the launch and follow-up scope and puts the decision, revisit trigger and concrete interim cost together.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-30/execution-result.json",
+        "sha256": "0b2e1376f9dbdf40eb7152ae499a756275e2c002bfbcc7ba43c1e890c6d95bb6",
+        "version": "1"
+      }
+    },
+    {
+      "order": 31,
+      "provider": "codex",
+      "case": "scope-trim",
+      "condition": "original",
+      "repetition": 5,
+      "label": "a0595ff1",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "interpretation": "The concise plan preserves scope and ancillary commitments. Deferral pending the close rule leaves the decision open and describes the manual Support work.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-31/execution-result.json",
+        "sha256": "cac90e117e69b7ca1110745455b9137bdf163669462c7c4541b0bddd6cf6daff",
+        "version": "1"
+      }
+    },
+    {
+      "order": 32,
+      "provider": "claude",
+      "case": "scope-trim",
+      "condition": "control",
+      "repetition": 5,
+      "label": "15e698bd",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "interpretation": "The short plan preserves launch and follow-up scope, and the deferral explains Finance's rule and the possible manual cost.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-32/execution-result.json",
+        "sha256": "e8b03c5cc0b308d91f78d6943426bb5d63a46f7095ffa5216cd3d612af997f8b",
+        "version": "1"
+      }
+    },
+    {
+      "order": 33,
+      "provider": "codex",
+      "case": "dispatch-hold",
+      "condition": "original",
+      "repetition": 5,
+      "label": "b9c592dd",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "interpretation": "Both lookups pass replay and lead to both policy reasons. The repeated comments and carrier attribution leave the maintainer's decision intact, and no durable justification was added to the title.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-33/execution-result.json",
+        "sha256": "d6b6c8f4c4a5248c2b5c97ed02b73e1ca1124bbc49394ce0590230d4af7aab92",
+        "version": "1"
+      }
+    },
+    {
+      "order": 34,
+      "provider": "claude",
+      "case": "dispatch-hold",
+      "condition": "control",
+      "repetition": 5,
+      "label": "fe234b93",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "interpretation": "Both public lookup functions pass replay, retain the dispatcher exception and connect the two statuses to the wrong-address risk. The title change is proportionate and carrier provenance does not change the required action.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-34/execution-result.json",
+        "sha256": "b6a6674ff23edb7d554267a735a5068b6562e7fb788128df0c394b02c6052106",
+        "version": "1"
+      }
+    },
+    {
+      "order": 35,
+      "provider": "codex",
+      "case": "dispatch-hold",
+      "condition": "control",
+      "repetition": 5,
+      "label": "df0b691b",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "interpretation": "Both public lookup functions pass replay, retain the dispatcher exception and connect the two statuses to the wrong-address risk. The title change is proportionate and carrier provenance does not change the required action.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-35/execution-result.json",
+        "sha256": "4bb2015e5ff590efe4ef31d50d0d18c38dec8843fc80684ee67c2efa3dd1efe0",
+        "version": "1"
+      }
+    },
+    {
+      "order": 36,
+      "provider": "claude",
+      "case": "dispatch-hold",
+      "condition": "original",
+      "repetition": 5,
+      "label": "e5478cdf",
+      "setup": "valid",
+      "functional_result": "met",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "interpretation": "Both public lookup functions pass replay, retain the dispatcher exception and connect the two statuses to the wrong-address risk. The title change is proportionate and carrier provenance does not change the required action.",
+      "assessed_result": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/application-topup-01/controller/subject-36/execution-result.json",
+        "sha256": "6aec61425774da64763c9805a82336656738381879e37aea61bfdb119f6b9af0",
+        "version": "1"
+      }
+    }
+  ]
+}

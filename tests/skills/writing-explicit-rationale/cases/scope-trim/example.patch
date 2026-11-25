@@ -1,0 +1,24 @@
+--- a/launch-plan.md
++++ b/launch-plan.md
+@@ -1,13 +1,14 @@
+ # Deposit reporting rollout
+ 
+-## Launch commitments
++## Launch
+ 
+-- Deliver daily deposit reconciliation. This is the report that reconciles deposits each day.
+-- Deliver weekly deposit reconciliation. This is the weekly version of the reconciliation report.
+-- Send daily discrepancy alerts when daily reconciliation finds a mismatch.
+-- Send weekly discrepancy alerts when weekly reconciliation finds a mismatch.
+-- Send the operator guide to Support before rollout. Support will receive the guide ahead of rollout.
++- Deliver daily deposit reconciliation and daily discrepancy alerts.
++- Send the operator guide to Support before rollout.
+ 
+-## After launch
++## Deferred
++
++Defer weekly reconciliation and weekly discrepancy alerts because Finance has yet to settle how to close a week spanning two accounting periods. Reconsider both once Finance agrees on a close rule. Until then, Support may need to compare daily reports by hand for such a week.
+ 
++## After launch
++
+ Review adoption after the first month.

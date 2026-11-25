@@ -1,0 +1,26 @@
+[
+  {
+    "label": "d58e942f",
+    "project_read": "Quota code explicitly accepts the previous higher limit for older tokens until second 60 because immediately resetting could reject admitted work. The shared persistence comment protects approved imports and accepts duplication. It instructs factoring if a third interactive caller appears. The routine rename has no commentary.",
+    "payload_sha256": "78d6d03cf5af079deaa1d023eca85efd183843b3371f4fb25f2d0114cb2c921b",
+    "sealed_at": "2026-11-25T17:47:13.890038+00:00"
+  },
+  {
+    "label": "cbb2e7b6",
+    "project_read": "Quota code explicitly accepts a higher quota for older tokens until second 60 because an immediate reset could reject work already admitted. Interactive guards protect approved imports from rechecking and a third interactive caller triggers reconsideration. No label-rename explanation.",
+    "payload_sha256": "f641ee8751ef5ea8280b88c64cd27cdd1ae6b6f012f1d9c907bc2f991df30cc8",
+    "sealed_at": "2026-11-25T17:47:46.027856+00:00"
+  },
+  {
+    "label": "ccd5aeb0",
+    "project_read": "The downgrade branch explicitly accepts 60 seconds of extra quota to prevent rejection of previously admitted in-flight work. Strict issue-time and expiry predicates and the tests demonstrate the exact boundaries.",
+    "payload_sha256": "934627c87ed5ba96c16f1c1d6a69a0b76b65799785f63467c7f5102d89222feb",
+    "sealed_at": "2026-11-25T17:48:10.459742+00:00"
+  },
+  {
+    "label": "2fe4e90a",
+    "project_read": "The quota site accepts 60 seconds of extra quota to honor in-flight older tokens. A reader can infer why applying the lower limit immediately harms that work; rejection is implicit. Code and tests give the exact issue-time and expiry boundaries.",
+    "payload_sha256": "560dc8538e7d3d520652d9afb554c55b30266401de1400992d9b42a4369b1050",
+    "sealed_at": "2026-11-25T17:49:00.097480+00:00"
+  }
+]

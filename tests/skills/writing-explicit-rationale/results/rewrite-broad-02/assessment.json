@@ -1,0 +1,270 @@
+{
+  "subjects": [
+    {
+      "order": 1,
+      "provider": "codex",
+      "case": "export-deferral",
+      "attempt": "attempt-1.json",
+      "setup": "valid",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "reading": "CSV and JSON ship in v1, with encoding, column order, runbook and first-month follow-up preserved. The Later item gives the changing schema, the partner approval condition and what XML customers lack until then. No release date or certainty of breakage.",
+      "reconciliation": "The plan and PR summary keep CSV and JSON on schedule and preserve unrelated commitments. The XML item makes the customer wait and partner approval dependency clear.",
+      "checks": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/controller/subject-01/audit.json",
+          "sha256": "a267913bb5a3879486035a9edd44169690ca58f29bc73d55548477544809fc9b"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/controller/subject-01/full-evidence.json",
+          "sha256": "5e4891d803bee7eada57a6652da875a98169364feb618c90855c608e43603ade"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/controller/project-read/0e94a789/payload.json",
+          "sha256": "050db7c439f4464a4b35b99e92bc4474f5da24ce2111bf024f800f7876c142a5"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/subjects/20261124T203432192Z-project-task-d94ade9c-2f2a-4829-957e-d4c4700fe74d-fri36a25/final.txt",
+          "sha256": "652eb5f33494d6c96f861f8b8fa4ab984ca54ba3a605dbfe80947ca39343aca8"
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "provider": "claude",
+      "case": "export-deferral",
+      "attempt": "attempt-2.json",
+      "setup": "valid",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "reading": "The plan keeps CSV and JSON, existing milestones and defers XML to Later. It explains schema churn as a compatibility risk, the customer wait and when partner approval triggers reconsideration.",
+      "reconciliation": "The Later item and accurate PR summary convey the deferral, schema risk, customer wait and stable-schema approval trigger. The wording presents breakage as possible.",
+      "checks": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/controller/subject-02/audit.json",
+          "sha256": "b8f7018a09bce6bac91634a83b7f52f87c9928659fbcca34be00abfc74a58680"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/controller/subject-02/full-evidence.json",
+          "sha256": "258966cae94431e487a0ad3802989fca383cf7126297e6059d5528029fc0c0c1"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/controller/project-read/fa5fd4d1/payload.json",
+          "sha256": "bb817c026a5f3461fb68e9ab68854b59b1dfaecacee35a5a66abf9d5028e05ef"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/subjects/20261124T203519025Z-project-task-49526d6d-e3d2-41ff-9e91-409f1c7822cb-o63qmv4e/final.txt",
+          "sha256": "cce73c9ff1a165e8ace8917fd29acdab2c3bc990e04bdb118f385d9eee5348e9"
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "provider": "codex",
+      "case": "scope-trim",
+      "attempt": "attempt-3.json",
+      "setup": "valid",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "reading": "The short plan identifies both daily launch items, the pre-rollout guide and first-month review. It defers both weekly features pending the split-period rule and explains the possible manual Support comparison. Reconsideration is implicit; no automatic release or launch date is promised.",
+      "reconciliation": "The shortened plan and handoff preserve launch scope and the conditional Finance and Support decisions. The plan's deferral sets a dependency without promising delivery when the rule is agreed.",
+      "checks": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/controller/subject-03/audit.json",
+          "sha256": "ce899dcd37d122ade663b78820aa5ad8df6f3aee9864f8a29b1f2dd3baf54acd"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/controller/subject-03/full-evidence.json",
+          "sha256": "2e0f2676a2a61f67c5387d63df3aaa7aec069a77ef87335ff1ecd6690be6f848"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/controller/project-read/31e3b95f/payload.json",
+          "sha256": "abfddf27448d076dc2f5e1d68cbba24d24d2068283def3b6200c6e6660bc6ea0"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/subjects/20261124T203536073Z-project-task-f9fbd27a-af56-4079-9f9a-9f9428ee3a21-k5wlxqds/final.txt",
+          "sha256": "ede7515c595f8297b5cc597f53f7879f27093cc93460b5d96941f0f2cc745e26"
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "provider": "claude",
+      "case": "scope-trim",
+      "attempt": "attempt-4.json",
+      "setup": "valid",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "reading": "Both daily commitments remain at launch. The plan defers both weekly features, explicitly calls for review after Finance agrees on the cross-period close rule and gives the conditional Support cost. The guide and adoption review are intact.",
+      "reconciliation": "The project explicitly says to revisit both weekly items, preserves the possible manual comparison and avoids assigning a launch date. The handoff's phrase about bringing the items back is resolved by the precise plan.",
+      "checks": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/controller/subject-04/audit.json",
+          "sha256": "c12630cfa80d916e6cd7bf0bc5201556e14c03ac5dc9d1cab24707e6e4de3e10"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/controller/subject-04/full-evidence.json",
+          "sha256": "17ee60b9fc4d69e4fdc77b034a2ed2c5775c0eb9e2f0b6d7213ac08bf848069d"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/controller/project-read/96d0991a/payload.json",
+          "sha256": "1d8a78b230a75ba22b7fb2d206110ac0c26163d62d77147a6977052117290ba3"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/subjects/20261124T203620899Z-project-task-c6d19252-f383-481a-8bb9-9e3fd3d57d83-xo7v2a1j/final.txt",
+          "sha256": "5d9844a604fc9eb36fa29bd75a73538c5fa6063e7409ea356324d1413f3e2cfd"
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "provider": "codex",
+      "case": "helper-rename",
+      "attempt": "attempt-5.json",
+      "setup": "valid",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "reading": "Both public callers use the renamed helper. The existing billing explanation stays beside the zero clamp, with no rationale added for the routine rename.",
+      "reconciliation": "The project tests passed in-session and on replay. The new helper name is used consistently, while the billing comment stays at its decision site.",
+      "checks": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/controller/subject-05/audit.json",
+          "sha256": "b470698a49e0bfe50e0dfa116ff6ceea35892321e35a7fed84b185a5abc17044"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/controller/subject-05/full-evidence.json",
+          "sha256": "b9b4a3ffa1a3729ba50b7f3dd5a037266d78cb1ae6956341c06d294485a420ad"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/controller/project-read/3ae55c4d/payload.json",
+          "sha256": "c641dafd50787b5da77bded06be68d6ebbef6ee1eaa5ca6e6e771fd91a8d353f"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/subjects/20261124T203637388Z-project-task-e7b372e0-ba46-4c6d-aede-e053f57d2184-h6_56fcs/final.txt",
+          "sha256": "2c326548481a706044fc17ab4298261b874ed930a38da77d8d91f79c195d47d8"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/controller/subject-05/replay.json",
+          "sha256": "0b9fef6e4e6c09d65f0781acd809b3b7e2043a58d6996ec07fa7af79242fa4de"
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "provider": "claude",
+      "case": "helper-rename",
+      "attempt": "attempt-6.json",
+      "setup": "valid",
+      "criteria": {
+        "T1": "met",
+        "R1": "met"
+      },
+      "reading": "Both public callers use the new helper name, and the project retains the reason for treating negative corrections as zero. It adds no explanation of the rename.",
+      "reconciliation": "Both callers and both public behaviors are correct, as the original test replay confirms. The existing useful comment survives and the handoff adds no durable rename commentary.",
+      "checks": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/controller/subject-06/audit.json",
+          "sha256": "e3df6198490686b43bee29e18ae24d97fddf93fb2f58911884dd7f5c94eb223e"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/controller/subject-06/full-evidence.json",
+          "sha256": "264c603f91f70f99604b01b83096f2865b5438c3befe893e0b4d1379fb80585f"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/controller/project-read/6ea69f2e/payload.json",
+          "sha256": "c641dafd50787b5da77bded06be68d6ebbef6ee1eaa5ca6e6e771fd91a8d353f"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/subjects/20261124T203723875Z-project-task-2108a1c1-60fe-46f2-b073-7d30d2050700-94znf58v/final.txt",
+          "sha256": "68ada872d1367d66c50c00883bfcb5bc190e9213b1c17fd9b625a7e8c25c58f2"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/controller/subject-06/replay.json",
+          "sha256": "0b9fef6e4e6c09d65f0781acd809b3b7e2043a58d6996ec07fa7af79242fa4de"
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "provider": "codex",
+      "case": "dispatch-hold",
+      "attempt": "attempt-7.json",
+      "setup": "valid",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "reading": "Both public planners implement the same statuses, with duplicated comments. The spec supplies the wrong-address risk and dispatcher ownership. Its reference to avoiding a new dispatch queue could confuse a reader about the address-check queue but the required scheduling behavior is clear. Carrier provenance is assumed. No title justification.",
+      "reconciliation": "Both public functions and title pass replay. The paired comments and spec preserve the wrong-address risk and dispatcher exception. Repeated rules add upkeep; the carrier attribution and queue phrasing do not change the required action. No rationale was attached to the title.",
+      "checks": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/controller/subject-07/audit.json",
+          "sha256": "280a4fc43be79ec98f76138b1a3e5ddefc101e03ac306736eb21ee554e35e8a5"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/controller/subject-07/full-evidence.json",
+          "sha256": "4e26a3ddbe6befb94537b9f9f4f0c677e9a62a6391e614355ab7b150f46b264f"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/controller/project-read/79cc82c5/payload.json",
+          "sha256": "f8f2f23e7f6c07f0092a39f8189aeec4b405bc9cb80933dc6fe253b55fc155c4"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/subjects/20261124T203738850Z-project-task-a6dff836-20cd-456a-93c4-f47154772e78-sgo2yugo/final.txt",
+          "sha256": "b6436dc0cd696a4255297797bb270ea9986c3775ac55cef21d6d3f3dcb4421a2"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/controller/subject-07/replay.json",
+          "sha256": "15598cfaeb431e69d7f7abb623e37d44ccec8ae3798671489bfca6a967ce5e3a"
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "provider": "claude",
+      "case": "dispatch-hold",
+      "attempt": "attempt-8.json",
+      "setup": "valid",
+      "criteria": {
+        "T1": "met",
+        "R1": "met",
+        "R2": "met"
+      },
+      "reading": "Both public functions delegate to one policy. The project explains the wrong-address risk, dispatcher control and why dropping loaded parcels interferes with redirection. The carrier attribution for the new status is uncertain. The title needs no extra explanation.",
+      "reconciliation": "Both public functions pass the private replay and lead to a shared decision with both policy reasons recoverable. The carrier attribution is unsupported for address_check, but does not alter the action. The title is changed without extra explanation.",
+      "checks": [
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/controller/subject-08/audit.json",
+          "sha256": "f870171bdd25a9b2e20a5e3926ce6d8ba1280aed95b4546684a4710bf17d121f"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/controller/subject-08/full-evidence.json",
+          "sha256": "6e0062508d11b2515e370408689ac65b49ca0a78f284c5eca0d84dd6a6054809"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/controller/project-read/0d5e2935/payload.json",
+          "sha256": "faae5551638e9fbe58eb8cc269bd17a07e3250f646dd8ac8743c5111e70c0fe3"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/subjects/20261124T203841066Z-project-task-f2acb634-dc91-4f34-923c-20352ee25e86-11p60gbh/final.txt",
+          "sha256": "da2433f7ad5fb51197ad363b1c701314dbfa260ff6ba86f3994c9e8c557094ee"
+        },
+        {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-02/controller/subject-08/replay.json",
+          "sha256": "bd9a92a20e66df33a2257a9f7445cd121dfc847f56694f0b31cdb8352b2760f4"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+[
+  {
+    "order": 1,
+    "provider": "codex",
+    "candidate": "shipped",
+    "case": "repeated-review",
+    "bundle": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/repeated-review-01/20261122T192132161Z-project-task-77e000b2-a68e-4192-98c4-2834e5512b91-3dkpbyvm",
+    "inventory_sha256": "d88990217e528125177fd49f79e763aa8d75642185d347f928614a1dc91c2540",
+    "status": "COMPLETED",
+    "charge": 1,
+    "authority": "17e828f4",
+    "payload": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/repeated-review-01/20261122T192132161Z-project-task-77e000b2-a68e-4192-98c4-2834e5512b91-3dkpbyvm.payload.json",
+    "payload_sha256": "c4c27e46481ebf8279a18936087b38f1a7a501d5dc3d939af17b9c4896a9e690"
+  },
+  {
+    "order": 2,
+    "provider": "codex",
+    "candidate": "revision",
+    "case": "repeated-review",
+    "bundle": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/repeated-review-01/20261122T192226568Z-project-task-454ba3c1-fd4e-42b7-95c2-630596b06627-sbckw95w",
+    "inventory_sha256": "882811db2c673fbb7c92a59f6604c1a0499768c85a3e4680a59625c36e6e6e6b",
+    "status": "COMPLETED",
+    "charge": 1,
+    "authority": "17e828f4",
+    "payload": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/repeated-review-01/20261122T192226568Z-project-task-454ba3c1-fd4e-42b7-95c2-630596b06627-sbckw95w.payload.json",
+    "payload_sha256": "e13828962f346f0b7a18d9973b044ef62a7cb1630c0c1d4fedbfc6f6a37f3158"
+  },
+  {
+    "order": 3,
+    "provider": "codex",
+    "candidate": "shipped",
+    "case": "repeated-review",
+    "bundle": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/repeated-review-01/20261122T192354356Z-project-task-8ec9ccb6-c403-4aa4-9b1f-92af37bf144c-ko4houcs",
+    "inventory_sha256": "9b9a0005347def5016a7658ebf2aa081ee495f4e32b6dfd0539bbc565f4c3aec",
+    "status": "COMPLETED",
+    "charge": 1,
+    "authority": "17e828f4",
+    "payload": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/repeated-review-01/20261122T192354356Z-project-task-8ec9ccb6-c403-4aa4-9b1f-92af37bf144c-ko4houcs.payload.json",
+    "payload_sha256": "24dd9c1c591a2959ecc04fab0faad9afc6a8bea25ae341212c335002e3c56880"
+  },
+  {
+    "order": 4,
+    "provider": "codex",
+    "candidate": "revision",
+    "case": "repeated-review",
+    "bundle": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/repeated-review-01/20261122T192520748Z-project-task-92926098-edad-4e4c-a4d9-24741ae4e927-x3io1yx0",
+    "inventory_sha256": "0fe632e015738217df6fdadfe38ccbb71e717549974a3c6c8daf4ec85e832464",
+    "status": "COMPLETED",
+    "charge": 1,
+    "authority": "17e828f4",
+    "payload": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/repeated-review-01/20261122T192520748Z-project-task-92926098-edad-4e4c-a4d9-24741ae4e927-x3io1yx0.payload.json",
+    "payload_sha256": "b732e4412bc702f4c9c20329e592f15f63048e3993289631a45aad5339a24343"
+  },
+  {
+    "order": 5,
+    "provider": "codex",
+    "candidate": "shipped",
+    "case": "repeated-review",
+    "bundle": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/repeated-review-01/20261122T192623949Z-project-task-edfd45e7-bd02-49b4-a089-4b5b53695917-xu04lg2b",
+    "inventory_sha256": "fafd46132587014c56d54d55e7cbc6b63fba9418056c1c8b9472fc6692e9f735",
+    "status": "COMPLETED",
+    "charge": 1,
+    "authority": "17e828f4",
+    "payload": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/repeated-review-01/20261122T192623949Z-project-task-edfd45e7-bd02-49b4-a089-4b5b53695917-xu04lg2b.payload.json",
+    "payload_sha256": "7baa7f4b42da83bab502bc3df38cb620017c09b5f2da31d2dc6613ba49b9c664"
+  },
+  {
+    "order": 6,
+    "provider": "codex",
+    "candidate": "revision",
+    "case": "repeated-review",
+    "bundle": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/repeated-review-01/20261122T192728182Z-project-task-d3b1a69d-3c37-4cdc-a400-be586df1ebae-s1gd9d3i",
+    "inventory_sha256": "fdc7ac7e393f7d14ae8f780c886ab6bca1dd7fe5fe96211305e0c61370089f08",
+    "status": "COMPLETED",
+    "charge": 1,
+    "authority": "17e828f4",
+    "payload": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/repeated-review-01/20261122T192728182Z-project-task-d3b1a69d-3c37-4cdc-a400-be586df1ebae-s1gd9d3i.payload.json",
+    "payload_sha256": "9fe4a4a3ecb2633c4e8c4543222e2f3c062d120ef70a5ca4d6ac11b4b1f5d1dd"
+  }
+]

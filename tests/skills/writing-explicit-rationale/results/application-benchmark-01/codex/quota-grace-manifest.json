@@ -1,0 +1,152 @@
+{
+  "format_version": "1",
+  "manifest_id": "wer-codex-quota-grace-application-01",
+  "study_id": "writing-explicit-rationale",
+  "case_id": "quota-grace",
+  "status": "frozen",
+  "created_at": "2026-11-24",
+  "source_revision": "b6c8157a9f61dd98589fc9b73e5e1fb1e3a1f60b",
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "b096a78b10819dc39b432b4afb669bbf164490ed8debdd8d44bbedc2fd35a158",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/writing-explicit-rationale/protocol.md",
+      "sha256": "6c2578af78ceee7d7236c30b0e13efa2785360c347a71db58190adb157551700",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "f54cb58884f9dbffd39f37746234487d6113e1f01ad3b1d355fe269310895321",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result.schema.json",
+      "sha256": "0abc6cdd04c2c90495736dd9b0020bbee8ed4772babe46e8e8eb637ebd03f358",
+      "version": "1"
+    },
+    "policy": {
+      "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/scoring-policy.txt",
+      "sha256": "2f5a7e512fb1a3d978b36f0b410b94bb8459565df1b1a8f6e2a835766bf7bc8c",
+      "version": null
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/criteria/quota-grace.md",
+        "sha256": "e457281af18c0e0c3473ba75af62d49e271341ef113e6f1aa579ac7969366cd4",
+        "version": "1"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "original",
+      "configuration": {
+        "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/quota-grace-original.json",
+        "sha256": "d86578e848ccc3e64a94bfb79b4ca30925f3ec6d18e4489ddcd141351a915d86",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/writing-explicit-rationale/cases/skill-original/SKILL.md"
+    },
+    {
+      "id": "control",
+      "configuration": {
+        "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/quota-grace-control.json",
+        "sha256": "52b7f62765a86c4e8f765e7bf1df65e4ba68fabefce472c25f732b47dce1acd8",
+        "version": "0.2"
+      },
+      "target_skill": null
+    }
+  ],
+  "subject_sources": [
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/quota-grace/fixture/quota.py",
+      "sha256": "7deed5997f6930227a84a71f1f8d1b70259c6a87c55faa5461a6064fdfaaa052",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/quota-grace/fixture/test_quota.py",
+      "sha256": "722b6b47ed52378f9e1d48128119e376009cb931a61b25503c78c5a96ef19e17",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/quota-grace/task.md",
+      "sha256": "2bddc0dacfe3a85b32251042c636a5edc14180568163e77ad3814153f9f9e781",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/skill-original/SKILL.md",
+      "sha256": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/original-prompt.txt",
+      "sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/task-prompt.txt",
+      "sha256": "f37b712f4d6ad47417b5706f57656537c1eaf5fb180bca568ee0d338604baf49",
+      "version": null
+    }
+  ],
+  "controller_only": [
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/quota-grace/assessment.md",
+      "sha256": "b1d8df27890208961f8b090f0150c9cc29e1c559242dd5dab7932babdbb58092",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/quota-grace/example.patch",
+      "sha256": "524beba30457b7b48d5012697ee013ec57d0d8c4047e36ef81e79c0a8e15a23d",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/reader_payload.py",
+      "sha256": "05eb1d127495ad5316a9ceeef83b2e8dd1c3e3063afe3375555739aa6bde2463",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/README.md",
+      "sha256": "77bf5f7f98014d47a7a99373801a3eabb1969261f6cfb61ba0bbe8a02f32b9bf",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/functional-pilot-01/runtime.json",
+      "sha256": "92d24a3ddc9cedfe0536efb14cb33ec178f87466c9bb8039884e9fc6d3637f92",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/schedule.json",
+      "sha256": "a7784b10652430e6e745b6cfddf8b485ecca21491d5e104e4a6d67aa7c7b40bb",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/review-question.txt",
+      "sha256": "fd4ec343c9e979d4c52ac706f90b2950bedc0383f832b15e9af611a7b7d21798",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/reader-smoke/config.json",
+      "sha256": "35f09d4f4adb2d8c6a723eadac105853e28175c9cc9f89c8c204e45ccf3da6cf",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/reader-smoke/subscription-catalog.json",
+      "sha256": "ecb4b248dccee2b95e0292c867065b3574be9bd599c3740e08149979dc887f91",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/catalog-review/maintenance-question.txt",
+      "sha256": "9f86d070a1d06cd863fd6093d578aea115c40428908a7456467d1403f3c8f0e5",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/quota-grace/replay.py",
+      "sha256": "cf9d745a99360ed4f8e9d4a9fffd2707fd0b86aa0dfa291eccca3c1f8d992eea",
+      "version": null
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "order": 24,
+  "status": "COMPLETED",
+  "run_id": "20261125T082107886Z-project-task-a5ebf205-4b48-4a8b-b714-0d2ccc9e2e59-4zmqd5uq",
+  "charge": 1,
+  "authority": "de3f10740a06a3ffaab66d2dc93f4421cc52f186",
+  "bundle": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-05/subjects/20261125T082107886Z-project-task-a5ebf205-4b48-4a8b-b714-0d2ccc9e2e59-4zmqd5uq",
+  "inventory": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-broad-05/controller/subject-24/inventory.json",
+  "inventory_sha256": "d9fa887825eada29180a98b0ee6459f76c7560c13fe7c257f966a64c5d75f9df"
+}

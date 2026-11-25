@@ -1,0 +1,34 @@
+{
+  "setup": "valid",
+  "outcome": "met",
+  "criteria": {
+    "T1": "Met. Original service tests and private quota replay pass; both interactive paths, approved imports, quota timing and renamed label survive.",
+    "R1": "Met. The shared persistence path also serves pre-approved batches. The two visible guards and third-interactive-caller trigger explain why duplication stays. Factoring is stated more definitely than the source agreement to reconsider it.",
+    "R2": "Met. The quota comment explains why already-admitted work with an older token is protected. The adjacent comparison and 60-second cutoff make the higher old quota and its limited exposure recoverable. The commit reason reached the subject and the handoff mentions the repair.",
+    "R3": "Met. The routine label helper is free of redundant justification."
+  },
+  "checks": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-screen-01/audit.json",
+      "sha256": "ddd505d76d1bae9daf1abeb02cb57d960c4a22735935d48597792af904d78fad"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-screen-01/replays.json",
+      "sha256": "c8863932338b8468615794fcec19f0aef830d6307cecd54579ff7be5e43bf5fe"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-screen-01/project-only.json",
+      "sha256": "59e19562def3f20f2439d225458065c69ef0c4e41334fce75a2244b8228a1b0c"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-screen-01/20261124T143337783Z-project-task-f5ce5cff-baf6-4553-97bb-f09ee2e9380f-63le69e6/final.txt",
+      "sha256": "0d0d0f3c6e0898aab25b60818882a65b77a4637e2c4d7149efd0b8bfb9a073ea"
+    }
+  ],
+  "size": {
+    "encoding": "o200k_base",
+    "shipped": 1963,
+    "candidate": 752
+  },
+  "next": "Eligible for two additional observations, subject to owner approval."
+}

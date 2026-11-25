@@ -1,0 +1,142 @@
+{
+  "format_version": "1",
+  "manifest_id": "wer-claude-export-deferral-application-01",
+  "study_id": "writing-explicit-rationale",
+  "case_id": "export-deferral",
+  "status": "frozen",
+  "created_at": "2026-11-24",
+  "source_revision": "b6c8157a9f61dd98589fc9b73e5e1fb1e3a1f60b",
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "b096a78b10819dc39b432b4afb669bbf164490ed8debdd8d44bbedc2fd35a158",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/writing-explicit-rationale/protocol.md",
+      "sha256": "6c2578af78ceee7d7236c30b0e13efa2785360c347a71db58190adb157551700",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "f54cb58884f9dbffd39f37746234487d6113e1f01ad3b1d355fe269310895321",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result.schema.json",
+      "sha256": "0abc6cdd04c2c90495736dd9b0020bbee8ed4772babe46e8e8eb637ebd03f358",
+      "version": "1"
+    },
+    "policy": {
+      "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/scoring-policy.txt",
+      "sha256": "2f5a7e512fb1a3d978b36f0b410b94bb8459565df1b1a8f6e2a835766bf7bc8c",
+      "version": null
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/criteria/export-deferral.md",
+        "sha256": "43ef10f8cea647a4d0b51aced86df48d9d0b465764367c0025fc9d8828d91c91",
+        "version": "2"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "original",
+      "configuration": {
+        "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/export-deferral-original.json",
+        "sha256": "0682b36aa29e2ea94c5fa288bd6f4472ed6ba76ac5b0c3adedafdc4ec9613596",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/writing-explicit-rationale/cases/skill-original/SKILL.md"
+    },
+    {
+      "id": "control",
+      "configuration": {
+        "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/claude/export-deferral-control.json",
+        "sha256": "1955ef5847345e2093942a0ace56a05895985882a2eb415bf5ea0d95f73bc4e3",
+        "version": "0.2"
+      },
+      "target_skill": null
+    }
+  ],
+  "subject_sources": [
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/export-deferral/fixture/release-plan.md",
+      "sha256": "9084d8bbd4a951aeb6fdf6972ddfb76f1fb1f670a0787a936459b74d92c8ad7d",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/export-deferral/task.md",
+      "sha256": "a5aee3e4025f4ab8426519ccfa22c21a76021c614d42f7abf38924eaae72a6aa",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/skill-original/SKILL.md",
+      "sha256": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/original-prompt.txt",
+      "sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/task-prompt.txt",
+      "sha256": "f37b712f4d6ad47417b5706f57656537c1eaf5fb180bca568ee0d338604baf49",
+      "version": null
+    }
+  ],
+  "controller_only": [
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/export-deferral/assessment.md",
+      "sha256": "ba814cd36525649929672ca82f1a7af118c5cd10ff151a88e1fbd5059fd6713c",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/export-deferral/example.patch",
+      "sha256": "af3e1f5868a4b7ac0e83083c8559cfc69d32f32e431a6972c9b13df006537f08",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/reader_payload.py",
+      "sha256": "05eb1d127495ad5316a9ceeef83b2e8dd1c3e3063afe3375555739aa6bde2463",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/README.md",
+      "sha256": "77bf5f7f98014d47a7a99373801a3eabb1969261f6cfb61ba0bbe8a02f32b9bf",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/functional-pilot-01/runtime.json",
+      "sha256": "92d24a3ddc9cedfe0536efb14cb33ec178f87466c9bb8039884e9fc6d3637f92",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/schedule.json",
+      "sha256": "a7784b10652430e6e745b6cfddf8b485ecca21491d5e104e4a6d67aa7c7b40bb",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/review-question.txt",
+      "sha256": "fd4ec343c9e979d4c52ac706f90b2950bedc0383f832b15e9af611a7b7d21798",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/reader-smoke/config.json",
+      "sha256": "35f09d4f4adb2d8c6a723eadac105853e28175c9cc9f89c8c204e45ccf3da6cf",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/reader-smoke/subscription-catalog.json",
+      "sha256": "ecb4b248dccee2b95e0292c867065b3574be9bd599c3740e08149979dc887f91",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/catalog-review/maintenance-question.txt",
+      "sha256": "9f86d070a1d06cd863fd6093d578aea115c40428908a7456467d1403f3c8f0e5",
+      "version": null
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "setup": "valid",
+  "outcome": "met",
+  "criteria": {
+    "T1": "Met. Both original service tests and both private quota checks pass. Admission, approved imports, quota timing and label formatting survive.",
+    "R1": "Met. The third interactive caller and duplication cost are explicit. Factoring reads more definitively than the agreement to reconsider.",
+    "R2": "Met. The submitted quota reason reached the subject in a tool result. The final quota site explains protecting in-flight work with an old token and its bounded higher allowance. The handoff also mentions the quota repair.",
+    "R3": "Met. The routine label helper has no unnecessary explanation."
+  },
+  "checks": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-screen-01/rep-2/audit.json",
+      "sha256": "cbf7e3a014a37186c5c99141be510ab90ec4b65deff6afb6ff72845748c96a97"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-screen-01/rep-2/replays.json",
+      "sha256": "c8863932338b8468615794fcec19f0aef830d6307cecd54579ff7be5e43bf5fe"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-screen-01/rep-2/project-only.json",
+      "sha256": "d448f174196ec2d2852cd096896039b248c040cee15a7879ef6a705d57e48b7b"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-screen-01/rep-2/20261124T193314249Z-project-task-1ac57753-c0be-48e9-8cbe-2f0636b9e210-njcva50k/final.txt",
+      "sha256": "adc27d512f61df0ee0a48819d14317626d0787ecdbe49149ee11be9fefdd52d9"
+    }
+  ]
+}

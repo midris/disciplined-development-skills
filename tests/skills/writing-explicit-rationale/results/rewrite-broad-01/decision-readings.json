@@ -1,0 +1,22 @@
+[
+  {
+    "label": "2a40f636",
+    "order": 1,
+    "subject_order": 4,
+    "action": "retain",
+    "decision_assessment": "informed",
+    "grounding_and_consequence": "Cites the room-sheet correction dependency, points visitors to the title index, and calls for coordinating a future change. Saying the keyed sheets are sorted and would have to switch order is more specific than the source.",
+    "answer_sha256": "32fe8f65ef81a86efffde3753229b5b490b70ea325cbbb13b2876bc18732d724",
+    "assessed_at": "2026-11-24T20:26:03.033817+00:00"
+  },
+  {
+    "label": "202df9df",
+    "order": 2,
+    "subject_order": 5,
+    "action": "retain",
+    "decision_assessment": "informed",
+    "grounding_and_consequence": "Connects retaining accession order to matching corrections to keyed room sheets, directs title searches to the index, and proposes consulting the proof desk before changing the workflow.",
+    "answer_sha256": "741e1a1f6b68e13e7aa0880e142738d249bd79f7662e090d66cc23a607f5be09",
+    "assessed_at": "2026-11-24T20:26:03.033937+00:00"
+  }
+]

@@ -1,0 +1,584 @@
+{
+  "format_version": "1",
+  "index_id": "codex-baseline-01-attempts",
+  "study_id": "writing-explicit-rationale",
+  "attempts": [
+    {
+      "attempt_id": "codex-baseline-01-export-deferral-original-1-1",
+      "case_id": "export-deferral",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/codex/export-deferral-manifest.json",
+        "sha256": "7663a5b2ea8f0eef0441b920389805b81ec321708c04ae706c88091de5edcdc7",
+        "version": "1",
+        "git_revision": "67effc100a8ba6bd5ce933f50d10df91a1ba6f1d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "4ededfea3e03f0210178bcaff4196728b776f404a491868d862b78c048fb4711",
+          "version": "1",
+          "git_revision": "67effc100a8ba6bd5ce933f50d10df91a1ba6f1d"
+        },
+        "selector": "Batch: codex-baseline-01; order 1"
+      },
+      "run_id": "20261108T214608512Z-project-task-bcdfc4b0-2db0-4cda-80f0-d4830d694f97-5w4fszsu",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Eligible for isolated reading because the decision site changed and could convey the rationale."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261108T214608512Z-project-task-bcdfc4b0-2db0-4cda-80f0-d4830d694f97-5w4fszsu",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261108T214608512Z-project-task-bcdfc4b0-2db0-4cda-80f0-d4830d694f97-5w4fszsu.inventory.json",
+          "sha256": "7ed023c95227ce5372cac85b2e6cdc0bab39d6e58063ce786367624dcdc7351b",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-baseline-01-export-deferral-original-1-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/application-checkpoint/codex/1/execution-result.json",
+          "sha256": "3e7773874c634312ff7aa464469f7340be15e0c206523006622c122687643792",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-baseline-01-export-deferral-control-1-1",
+      "case_id": "export-deferral",
+      "condition": "control",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/codex/export-deferral-manifest.json",
+        "sha256": "7663a5b2ea8f0eef0441b920389805b81ec321708c04ae706c88091de5edcdc7",
+        "version": "1",
+        "git_revision": "67effc100a8ba6bd5ce933f50d10df91a1ba6f1d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "4ededfea3e03f0210178bcaff4196728b776f404a491868d862b78c048fb4711",
+          "version": "1",
+          "git_revision": "67effc100a8ba6bd5ce933f50d10df91a1ba6f1d"
+        },
+        "selector": "Batch: codex-baseline-01; order 2"
+      },
+      "run_id": "20261108T214738215Z-project-task-6c5dc03e-16ac-4926-8808-3b8221d978e9-ddpqd7bc",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Eligible for isolated reading because the decision site changed and could convey the rationale."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261108T214738215Z-project-task-6c5dc03e-16ac-4926-8808-3b8221d978e9-ddpqd7bc",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261108T214738215Z-project-task-6c5dc03e-16ac-4926-8808-3b8221d978e9-ddpqd7bc.inventory.json",
+          "sha256": "59fc4e53460d6c6a195b738f799a247b74d82a3b94fd26bebd3f9440a590617f",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-baseline-01-export-deferral-control-1-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/application-checkpoint/codex/2/execution-result.json",
+          "sha256": "e54aea6bfb5a6e69f96df0d1c1f43dc1c01bfe184cba207eecc826224a3be6f1",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-baseline-01-quota-grace-control-1-1",
+      "case_id": "quota-grace",
+      "condition": "control",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/codex/quota-grace-manifest.json",
+        "sha256": "3fa3366e631fec2109809da206b7aea5dc55de016333efd4950ead14b1eed0e9",
+        "version": "1",
+        "git_revision": "67effc100a8ba6bd5ce933f50d10df91a1ba6f1d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "4ededfea3e03f0210178bcaff4196728b776f404a491868d862b78c048fb4711",
+          "version": "1",
+          "git_revision": "67effc100a8ba6bd5ce933f50d10df91a1ba6f1d"
+        },
+        "selector": "Batch: codex-baseline-01; order 3"
+      },
+      "run_id": "20261108T214818530Z-project-task-0688e46e-980f-44dc-a960-586ae3ee26ba-adn9geb9",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Eligible for isolated reading because the decision site changed and could convey the rationale."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261108T214818530Z-project-task-0688e46e-980f-44dc-a960-586ae3ee26ba-adn9geb9",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261108T214818530Z-project-task-0688e46e-980f-44dc-a960-586ae3ee26ba-adn9geb9.inventory.json",
+          "sha256": "c8f21cb4d980c7bddecf225045d1cd1118bfffc6c6965aa404ac3977f0bbeaea",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-baseline-01-quota-grace-control-1-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/application-checkpoint/codex/3/execution-result.json",
+          "sha256": "40af9e19b9a4326ab4d3e2885a9430c68d6d65f1cf4edefdb4a08ce396bee6d6",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-baseline-01-quota-grace-original-1-1",
+      "case_id": "quota-grace",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/codex/quota-grace-manifest.json",
+        "sha256": "3fa3366e631fec2109809da206b7aea5dc55de016333efd4950ead14b1eed0e9",
+        "version": "1",
+        "git_revision": "67effc100a8ba6bd5ce933f50d10df91a1ba6f1d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "4ededfea3e03f0210178bcaff4196728b776f404a491868d862b78c048fb4711",
+          "version": "1",
+          "git_revision": "67effc100a8ba6bd5ce933f50d10df91a1ba6f1d"
+        },
+        "selector": "Batch: codex-baseline-01; order 4"
+      },
+      "run_id": "20261108T214906985Z-project-task-9aad1653-5f9b-406f-ae66-137cf06ffc35-alwm_ma8",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Eligible for isolated reading because the decision site changed and could convey the rationale."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261108T214906985Z-project-task-9aad1653-5f9b-406f-ae66-137cf06ffc35-alwm_ma8",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261108T214906985Z-project-task-9aad1653-5f9b-406f-ae66-137cf06ffc35-alwm_ma8.inventory.json",
+          "sha256": "597595821611249d8f2e479ed9e22e3a7de303a378b3dabe9ff0847b2f527a55",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-baseline-01-quota-grace-original-1-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/application-checkpoint/codex/4/execution-result.json",
+          "sha256": "be9a67bc65c2cdc0d69979247a938b3f348ae25ca3a7cf6bf5d628393de6b295",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-baseline-01-helper-rename-original-1-1",
+      "case_id": "helper-rename",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/codex/helper-rename-manifest.json",
+        "sha256": "e14abf614ad6d334b4bc0f0b16438140dc14994dc1279ceffff3b25eec56e681",
+        "version": "1",
+        "git_revision": "67effc100a8ba6bd5ce933f50d10df91a1ba6f1d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "4ededfea3e03f0210178bcaff4196728b776f404a491868d862b78c048fb4711",
+          "version": "1",
+          "git_revision": "67effc100a8ba6bd5ce933f50d10df91a1ba6f1d"
+        },
+        "selector": "Batch: codex-baseline-01; order 5"
+      },
+      "run_id": "20261108T215009297Z-project-task-7f167a38-d354-4484-b0b0-e00615d2b216-7brlxlp4",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct diff assessment of routine rename."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261108T215009297Z-project-task-7f167a38-d354-4484-b0b0-e00615d2b216-7brlxlp4",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261108T215009297Z-project-task-7f167a38-d354-4484-b0b0-e00615d2b216-7brlxlp4.inventory.json",
+          "sha256": "1c30223f1b2db2f065026276d6e199968d10f241dd8e9dbda6cf7dbf543ae582",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-baseline-01-helper-rename-original-1-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/application-checkpoint/codex/5/execution-result.json",
+          "sha256": "35aca74ee7ef9b34338849bab141fd806bb0653e83e7d37c9c1636816dc355d9",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-baseline-01-helper-rename-control-1-1",
+      "case_id": "helper-rename",
+      "condition": "control",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/codex/helper-rename-manifest.json",
+        "sha256": "e14abf614ad6d334b4bc0f0b16438140dc14994dc1279ceffff3b25eec56e681",
+        "version": "1",
+        "git_revision": "67effc100a8ba6bd5ce933f50d10df91a1ba6f1d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "4ededfea3e03f0210178bcaff4196728b776f404a491868d862b78c048fb4711",
+          "version": "1",
+          "git_revision": "67effc100a8ba6bd5ce933f50d10df91a1ba6f1d"
+        },
+        "selector": "Batch: codex-baseline-01; order 6"
+      },
+      "run_id": "20261108T215105057Z-project-task-ba506c9a-0c54-42b9-9d8f-33fa1763503f-7hw42862",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct diff assessment of routine rename."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261108T215105057Z-project-task-ba506c9a-0c54-42b9-9d8f-33fa1763503f-7hw42862",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261108T215105057Z-project-task-ba506c9a-0c54-42b9-9d8f-33fa1763503f-7hw42862.inventory.json",
+          "sha256": "be83ca9fee19cc210de4c53ea78cfb85fb93256ccbfdb87c4a0683936a5f7226",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-baseline-01-helper-rename-control-1-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/application-checkpoint/codex/6/execution-result.json",
+          "sha256": "474e83e7bc81d865b31b830e8d80108842f357b9ac7a0d7796c7beb93318fb99",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-baseline-01-repeated-review-control-1-1",
+      "case_id": "repeated-review",
+      "condition": "control",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/codex/repeated-review-manifest.json",
+        "sha256": "afd9b3e544c76e9dc4217b53a5eb3d59b28ef6ec85fe55c511e7974ca6f60423",
+        "version": "1",
+        "git_revision": "67effc100a8ba6bd5ce933f50d10df91a1ba6f1d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "4ededfea3e03f0210178bcaff4196728b776f404a491868d862b78c048fb4711",
+          "version": "1",
+          "git_revision": "67effc100a8ba6bd5ce933f50d10df91a1ba6f1d"
+        },
+        "selector": "Batch: codex-baseline-01; order 7"
+      },
+      "run_id": "20261108T215142812Z-project-task-d2dec788-9d44-4e0e-8681-2bb88fbce82f-4hqng65h",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Eligible for isolated reading because the decision site changed and could convey the rationale."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261108T215142812Z-project-task-d2dec788-9d44-4e0e-8681-2bb88fbce82f-4hqng65h",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261108T215142812Z-project-task-d2dec788-9d44-4e0e-8681-2bb88fbce82f-4hqng65h.inventory.json",
+          "sha256": "89a837e7830a0201f9fbb5f8c653f4f7da2b652f3e298191dde87d359288bec0",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-baseline-01-repeated-review-control-1-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/application-checkpoint/codex/7/execution-result.json",
+          "sha256": "b3b0239f61b7e52e922b27800059e57f250853bd88fa9c182ed8dd372b8b2a9f",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-baseline-01-repeated-review-original-1-1",
+      "case_id": "repeated-review",
+      "condition": "original",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/codex/repeated-review-manifest.json",
+        "sha256": "afd9b3e544c76e9dc4217b53a5eb3d59b28ef6ec85fe55c511e7974ca6f60423",
+        "version": "1",
+        "git_revision": "67effc100a8ba6bd5ce933f50d10df91a1ba6f1d"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "4ededfea3e03f0210178bcaff4196728b776f404a491868d862b78c048fb4711",
+          "version": "1",
+          "git_revision": "67effc100a8ba6bd5ce933f50d10df91a1ba6f1d"
+        },
+        "selector": "Batch: codex-baseline-01; order 8"
+      },
+      "run_id": "20261108T215253739Z-project-task-a6e2c4bf-b74f-4abd-be18-f8d86d0c53b8-zovw365t",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Eligible for isolated reading because the decision site changed and could convey the rationale."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261108T215253739Z-project-task-a6e2c4bf-b74f-4abd-be18-f8d86d0c53b8-zovw365t",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261108T215253739Z-project-task-a6e2c4bf-b74f-4abd-be18-f8d86d0c53b8-zovw365t.inventory.json",
+          "sha256": "4048d3916cee4dd458893d7a4b7eb393007c947c56bca20e6bd56c0e97bb1844",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-baseline-01-repeated-review-original-1-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/application-checkpoint/codex/8/execution-result.json",
+          "sha256": "3e0091595dddd6b4c8f19b78377d17d7a27f3eb34af8f0583791cf7af879b908",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-baseline-01-export-deferral-native-1-1",
+      "case_id": "export-deferral",
+      "condition": "native",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/codex/export-deferral-manifest.json",
+        "sha256": "7663a5b2ea8f0eef0441b920389805b81ec321708c04ae706c88091de5edcdc7",
+        "version": "1",
+        "git_revision": "9cc391dfce3d0ff68df228d8f413bc0159ac7ded"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "629a684fcf9f26c31ef97d1fc25f86988e55e16ac98c53b53c0af805bae19bae",
+          "version": "1",
+          "git_revision": "9cc391dfce3d0ff68df228d8f413bc0159ac7ded"
+        },
+        "selector": "Batch: codex-baseline-01; order 9"
+      },
+      "run_id": "20261109T205658169Z-project-task-d6d271d9-0345-46fc-a35a-724d88360832-0xl_p0y4",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Eligible for isolated reading because the decision site changed and could convey the rationale."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261109T205658169Z-project-task-d6d271d9-0345-46fc-a35a-724d88360832-0xl_p0y4",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261109T205658169Z-project-task-d6d271d9-0345-46fc-a35a-724d88360832-0xl_p0y4.inventory.json",
+          "sha256": "690b1589af346c3017fb9642405da06f0fc44acd474b9f6c2c0a4ea5518d80c0",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-baseline-01-export-deferral-native-1-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/native-checkpoint/codex/9/execution-result.json",
+          "sha256": "7c2b37bb104e28f5a83f5b38f64b0340c09ddf8ee8404f52027dd920b783e480",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-baseline-01-quota-grace-native-1-1",
+      "case_id": "quota-grace",
+      "condition": "native",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/codex/quota-grace-manifest.json",
+        "sha256": "3fa3366e631fec2109809da206b7aea5dc55de016333efd4950ead14b1eed0e9",
+        "version": "1",
+        "git_revision": "9cc391dfce3d0ff68df228d8f413bc0159ac7ded"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "629a684fcf9f26c31ef97d1fc25f86988e55e16ac98c53b53c0af805bae19bae",
+          "version": "1",
+          "git_revision": "9cc391dfce3d0ff68df228d8f413bc0159ac7ded"
+        },
+        "selector": "Batch: codex-baseline-01; order 10"
+      },
+      "run_id": "20261109T205804439Z-project-task-342b818b-fcf0-426f-9e93-a7870a80acab-z1egqulv",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Eligible for isolated reading because the decision site changed and could convey the rationale."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261109T205804439Z-project-task-342b818b-fcf0-426f-9e93-a7870a80acab-z1egqulv",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261109T205804439Z-project-task-342b818b-fcf0-426f-9e93-a7870a80acab-z1egqulv.inventory.json",
+          "sha256": "a45307389c07950f00640722670ee8e47b27d59acb4aa37d0e5a83bb28bd3a56",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-baseline-01-quota-grace-native-1-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/native-checkpoint/codex/10/execution-result.json",
+          "sha256": "45e3c354458c6b23829dd33cf9347c5dd500e8b00ae5008604f92add0064d682",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-baseline-01-helper-rename-native-1-1",
+      "case_id": "helper-rename",
+      "condition": "native",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/codex/helper-rename-manifest.json",
+        "sha256": "e14abf614ad6d334b4bc0f0b16438140dc14994dc1279ceffff3b25eec56e681",
+        "version": "1",
+        "git_revision": "9cc391dfce3d0ff68df228d8f413bc0159ac7ded"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "629a684fcf9f26c31ef97d1fc25f86988e55e16ac98c53b53c0af805bae19bae",
+          "version": "1",
+          "git_revision": "9cc391dfce3d0ff68df228d8f413bc0159ac7ded"
+        },
+        "selector": "Batch: codex-baseline-01; order 11"
+      },
+      "run_id": "20261109T205902315Z-project-task-b261f017-ab94-4e1b-aba8-e5e2b8c02bb0-3ira194a",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Direct diff assessment of routine rename."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261109T205902315Z-project-task-b261f017-ab94-4e1b-aba8-e5e2b8c02bb0-3ira194a",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261109T205902315Z-project-task-b261f017-ab94-4e1b-aba8-e5e2b8c02bb0-3ira194a.inventory.json",
+          "sha256": "93020fbf9db4b1f9bc67d696654fe177c0c548cba445bb34fa13566a541e1fce",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-baseline-01-helper-rename-native-1-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/native-checkpoint/codex/11/execution-result.json",
+          "sha256": "20113a5e4cadde3c32bb2c509e8188a3be3863da6ffd1291ebc7bc4ed87270f9",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "attempt_id": "codex-baseline-01-repeated-review-native-1-1",
+      "case_id": "repeated-review",
+      "condition": "native",
+      "repetition": 1,
+      "attempt_number": 1,
+      "retry_of": null,
+      "manifest": {
+        "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/codex/repeated-review-manifest.json",
+        "sha256": "afd9b3e544c76e9dc4217b53a5eb3d59b28ef6ec85fe55c511e7974ca6f60423",
+        "version": "1",
+        "git_revision": "9cc391dfce3d0ff68df228d8f413bc0159ac7ded"
+      },
+      "authorization": {
+        "artifact": {
+          "path": "skill-studies/writing-explicit-rationale/protocol.md",
+          "sha256": "629a684fcf9f26c31ef97d1fc25f86988e55e16ac98c53b53c0af805bae19bae",
+          "version": "1",
+          "git_revision": "9cc391dfce3d0ff68df228d8f413bc0159ac7ded"
+        },
+        "selector": "Batch: codex-baseline-01; order 12"
+      },
+      "run_id": "20261109T205948859Z-project-task-6f28fa6f-0366-4733-a07b-e8595903723d-5kanq9i2",
+      "allocation": {
+        "pool": "subject",
+        "charge": 1
+      },
+      "limitations": [
+        "Eligible for isolated reading because the decision site changed and could convey the rationale."
+      ],
+      "bundle": {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261109T205948859Z-project-task-6f28fa6f-0366-4733-a07b-e8595903723d-5kanq9i2",
+        "inventory": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/subjects/20261109T205948859Z-project-task-6f28fa6f-0366-4733-a07b-e8595903723d-5kanq9i2.inventory.json",
+          "sha256": "58c956e02038ff952fd046913e3d266bfc492f4c85f1c2de1db8de567a994602",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "result": {
+        "result_id": "codex-baseline-01-repeated-review-native-1-1",
+        "record": {
+          "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/baseline-01/native-checkpoint/codex/12/execution-result.json",
+          "sha256": "d8f305dba07f38978e8b36f50b35dbfc0fb7f3b6420d729864d62e83f6aae98a",
+          "version": "1"
+        }
+      }
+    }
+  ],
+  "batch_id": "codex-baseline-01"
+}

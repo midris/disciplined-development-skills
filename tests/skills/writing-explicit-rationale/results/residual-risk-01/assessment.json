@@ -1,0 +1,70 @@
+[
+  {
+    "order": 1,
+    "provider": "claude",
+    "case": "repeated-review",
+    "attempt": "attempt-1.json",
+    "criteria": {
+      "T1": "met",
+      "R1": "met",
+      "R2": "met",
+      "R3": "met"
+    },
+    "quota_exposure": "explicitly accepted",
+    "immediate_rejection": "explicit",
+    "acceptance_supported": true,
+    "reading": "The code identifies rejection of admitted work and expressly accepts the higher quota for pre-change tokens for under 60 seconds. Approved batches bypass interactive admission, duplication is deliberate, and a third interactive caller triggers reconsideration. The rename has no commentary.",
+    "handoff": "Keeps reconsideration open in the suggested reply.",
+    "checks": [
+      {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/residual-risk-01/controller/subject-01/audit.json",
+        "sha256": "547b10fc95e5d118e98605f4dda9b5c867004eb6d774e14da61c42a15d9dfaba"
+      },
+      {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/residual-risk-01/controller/subject-01/full-evidence.json",
+        "sha256": "245f4a2915a5dfaddace5fb4bbe698dba0a87c83421c02826e918a1f0ea5f392"
+      },
+      {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/residual-risk-01/controller/subject-01/replay.json",
+        "sha256": "86c5753e71624fd558b25b6406543f5886c61075feed57aeece32870e4b13b89"
+      },
+      {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/residual-risk-01/subjects/20261125T161916181Z-project-task-4acada0c-a692-4d5d-a6b1-6a854dbfb74c-f_hnxkb8/final.txt",
+        "sha256": "8adaefd260267c452d4f84d253963f461970caf70b5cd6910a5672d6244b637f"
+      }
+    ]
+  },
+  {
+    "order": 2,
+    "provider": "codex",
+    "case": "quota-grace",
+    "attempt": "attempt-2.json",
+    "criteria": {
+      "T1": "met",
+      "R1": "met"
+    },
+    "quota_exposure": "explicitly accepted",
+    "immediate_rejection": "inferable",
+    "acceptance_supported": true,
+    "reading": "The grace protects already-admitted work and expressly accepts extra quota for 60 seconds. The condition restricts grace to pre-change tokens. A maintainer can infer immediate enforcement could reject admitted work, although the comment does not state that outcome directly.",
+    "handoff": "Accurately summarizes policy boundaries; adds no explicit rejection consequence.",
+    "checks": [
+      {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/residual-risk-01/controller/subject-02/audit.json",
+        "sha256": "18499ecfd54d599a76da46425f78692febeca5b4ae743b5bc92f88bf20f007d6"
+      },
+      {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/residual-risk-01/controller/subject-02/full-evidence.json",
+        "sha256": "f486ebb16600e8b95ba4b232127ef5f1410cb566a6f7fcc06e00a2fd06b977e5"
+      },
+      {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/residual-risk-01/controller/subject-02/replay.json",
+        "sha256": "57744ed435ad5fed48c29310c39df71018cc3f5484731cfc429b9b8955ff3370"
+      },
+      {
+        "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/residual-risk-01/subjects/20261125T161915307Z-project-task-8b4c645c-1b0b-4061-9ef9-ba86ad42156a-wda_1zq8/final.txt",
+        "sha256": "0fed5efa62e8ae46349f3955f7043d9e876be785bdf710db600252eb3e2435ad"
+      }
+    ]
+  }
+]

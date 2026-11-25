@@ -1,0 +1,6 @@
+{
+  "label": "project-F",
+  "sha256": "252e0ed3148cef6ad14d03c3c88662d09c2c09a23860edaf37c8f2fbbb54712d",
+  "reading": "The two guard comments connect to each other and explain the approved-batch exception; the third interactive caller reads as a direction to factor. The quota comment explicitly protects in-flight work and bounds the old allowance to 60 seconds. Label formatting is straightforward.",
+  "sealed_at": "2026-11-24T19:48:57.525523+00:00"
+}

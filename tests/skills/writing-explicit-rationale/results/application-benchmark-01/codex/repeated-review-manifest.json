@@ -1,0 +1,167 @@
+{
+  "format_version": "1",
+  "manifest_id": "wer-codex-repeated-review-application-01",
+  "study_id": "writing-explicit-rationale",
+  "case_id": "repeated-review",
+  "status": "frozen",
+  "created_at": "2026-11-24",
+  "source_revision": "b6c8157a9f61dd98589fc9b73e5e1fb1e3a1f60b",
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "b096a78b10819dc39b432b4afb669bbf164490ed8debdd8d44bbedc2fd35a158",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/writing-explicit-rationale/protocol.md",
+      "sha256": "6c2578af78ceee7d7236c30b0e13efa2785360c347a71db58190adb157551700",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "f54cb58884f9dbffd39f37746234487d6113e1f01ad3b1d355fe269310895321",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result.schema.json",
+      "sha256": "0abc6cdd04c2c90495736dd9b0020bbee8ed4772babe46e8e8eb637ebd03f358",
+      "version": "1"
+    },
+    "policy": {
+      "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/scoring-policy.txt",
+      "sha256": "2f5a7e512fb1a3d978b36f0b410b94bb8459565df1b1a8f6e2a835766bf7bc8c",
+      "version": null
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/criteria/repeated-review.md",
+        "sha256": "fae907be2ff87a87511ef62bf59b99edcb05c519865a6cf56bf87b7b5b602bec",
+        "version": "1"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "original",
+      "configuration": {
+        "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/repeated-review-original.json",
+        "sha256": "9713b3c773d3631abea93dfca37ab48db96b49015a9a2acf7b91db9bcc01be48",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/writing-explicit-rationale/cases/skill-original/SKILL.md"
+    },
+    {
+      "id": "control",
+      "configuration": {
+        "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/codex/repeated-review-control.json",
+        "sha256": "c77dad08e730d9636731da4393ef9db0f61078e5f35a27174b4dbef350edda07",
+        "version": "0.2"
+      },
+      "target_skill": null
+    }
+  ],
+  "subject_sources": [
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/repeated-review/change.patch",
+      "sha256": "a9e80c458cf5dda3488ed18ee992af827ace6a6eb4fc119222953189bb28de88",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/repeated-review/fixture/ingest.py",
+      "sha256": "3eb96679a60bc60fbded053fd83be60b6df52a6478cab6319a9e7eccbbafbf81",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/repeated-review/fixture/labels.py",
+      "sha256": "ea76992b87ebfbd550cae798faf0a4c746fe1cd6ba42857c4b76f40b6b651c30",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/repeated-review/fixture/quota.py",
+      "sha256": "5f9ea763f1380feaf0dc7920e704c9e5a7a2d55ed194e1e7769a8d7259526978",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/repeated-review/fixture/test_service.py",
+      "sha256": "6043483e16545088f74717ddd7228416c1c1f4b787ff2def86cfc58a19e638d9",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/repeated-review/task.md",
+      "sha256": "ffe88c1bbf6ae01f85479828d95796ba7943c9589684b3b17402c5a710de103a",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/skill-original/SKILL.md",
+      "sha256": "97eb06c649c194e8819b4dff68b808eda4ec7c948a6ead518da247daf31d6cfe",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/original-prompt.txt",
+      "sha256": "d89fc7c1d9c07e02c0d8a922966ab91fb6010bf2c820109aa993e963047a176c",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/task-prompt.txt",
+      "sha256": "f37b712f4d6ad47417b5706f57656537c1eaf5fb180bca568ee0d338604baf49",
+      "version": null
+    }
+  ],
+  "controller_only": [
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/repeated-review/assessment.md",
+      "sha256": "317a8a00acb0035fabf908b7236bef8d882f358da4fd829b68bb8fff227aa510",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/repeated-review/example.patch",
+      "sha256": "cd7e7faea2f3b196f2242918e441c25b512cbbb5524da0fa3264f9efb6150c88",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/reader_payload.py",
+      "sha256": "05eb1d127495ad5316a9ceeef83b2e8dd1c3e3063afe3375555739aa6bde2463",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/README.md",
+      "sha256": "77bf5f7f98014d47a7a99373801a3eabb1969261f6cfb61ba0bbe8a02f32b9bf",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/functional-pilot-01/runtime.json",
+      "sha256": "92d24a3ddc9cedfe0536efb14cb33ec178f87466c9bb8039884e9fc6d3637f92",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/schedule.json",
+      "sha256": "a7784b10652430e6e745b6cfddf8b485ecca21491d5e104e4a6d67aa7c7b40bb",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/application-benchmark-01/review-question.txt",
+      "sha256": "fd4ec343c9e979d4c52ac706f90b2950bedc0383f832b15e9af611a7b7d21798",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/reader-smoke/config.json",
+      "sha256": "35f09d4f4adb2d8c6a723eadac105853e28175c9cc9f89c8c204e45ccf3da6cf",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/runs/baseline-01/reader-smoke/subscription-catalog.json",
+      "sha256": "ecb4b248dccee2b95e0292c867065b3574be9bd599c3740e08149979dc887f91",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/catalog-review/maintenance-question.txt",
+      "sha256": "9f86d070a1d06cd863fd6093d578aea115c40428908a7456467d1403f3c8f0e5",
+      "version": null
+    },
+    {
+      "path": "skill-studies/writing-explicit-rationale/cases/quota-grace/replay.py",
+      "sha256": "cf9d745a99360ed4f8e9d4a9fffd2707fd0b86aa0dfa291eccca3c1f8d992eea",
+      "version": null
+    }
+  ]
+}

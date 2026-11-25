@@ -1,0 +1,218 @@
+[
+  {
+    "label": "2623c1ee",
+    "payload_sha256": "c641dafd50787b5da77bded06be68d6ebbef6ee1eaa5ca6e6e771fd91a8d353f",
+    "project_read": "Both public callers use the renamed normalization helper. The billing-correction explanation remains next to the zero clamp, with no extra policy or rename commentary.",
+    "sealed_at": "2026-11-24T17:55:27.503557+00:00"
+  },
+  {
+    "label": "5a24b355",
+    "payload_sha256": "c641dafd50787b5da77bded06be68d6ebbef6ee1eaa5ca6e6e771fd91a8d353f",
+    "project_read": "Both public callers use the renamed normalization helper. The billing-correction explanation remains next to the zero clamp, with no extra policy or rename commentary.",
+    "sealed_at": "2026-11-24T17:55:27.503801+00:00"
+  },
+  {
+    "label": "84a93dde",
+    "payload_sha256": "c641dafd50787b5da77bded06be68d6ebbef6ee1eaa5ca6e6e771fd91a8d353f",
+    "project_read": "Both public callers use the renamed normalization helper. The billing-correction explanation remains next to the zero clamp, with no extra policy or rename commentary.",
+    "sealed_at": "2026-11-24T17:55:27.503849+00:00"
+  },
+  {
+    "label": "d66d3e44",
+    "payload_sha256": "c641dafd50787b5da77bded06be68d6ebbef6ee1eaa5ca6e6e771fd91a8d353f",
+    "project_read": "Both public callers use the renamed normalization helper. The billing-correction explanation remains next to the zero clamp, with no extra policy or rename commentary.",
+    "sealed_at": "2026-11-24T17:55:27.503914+00:00"
+  },
+  {
+    "label": "09046804",
+    "payload_sha256": "8104e7aa26a80cad64c62b56a01d450b72ab77db2951f11964992ad103a22846",
+    "project_read": "Both daily items and the guide are in launch. Both weekly items are explicitly deferred with the unresolved Finance rule, conditional manual work and reconsideration trigger. First-month review survives.",
+    "sealed_at": "2026-11-24T17:57:35.083117+00:00"
+  },
+  {
+    "label": "161dae07",
+    "payload_sha256": "7ac59cca3b070f81dcf213905e29d3137ca597497c93aecbf6bf334a8b0f3cdf",
+    "project_read": "Launch, deferred and after-launch sections clearly distinguish both daily commitments, both weekly items, conditional Support work, the Finance agreement and first-month review.",
+    "sealed_at": "2026-11-24T17:57:35.083349+00:00"
+  },
+  {
+    "label": "7765bc7f",
+    "payload_sha256": "bd07b94e4de9372e5581caa2ee70fa538514d509a2274f77df2a02060a87cf07",
+    "project_read": "After launch identifies both weekly deliverables and says to reconsider after Finance agrees on the cross-period close rule. Those weeks may need manual comparison. The daily commitments, pre-rollout guide and adoption check survive.",
+    "sealed_at": "2026-11-24T17:57:35.083418+00:00"
+  },
+  {
+    "label": "ad611909",
+    "payload_sha256": "bc884575ad097a8e93e5f0ed1f61029e3a867dce6ad8251f9b161f259e845527",
+    "project_read": "The deferred heading, Finance prerequisite and conditional Support burden explain the weekly items. Reconsideration is implicit in pending; there is no commitment to ship on Finance agreement. Daily work, guide and adoption review remain.",
+    "sealed_at": "2026-11-24T17:57:35.083471+00:00"
+  },
+  {
+    "label": "252c9fd6",
+    "payload_sha256": "8c18e8d1d8b98da9b304b85026b30c6e803f5506a73833f4d40839a3ee576f55",
+    "project_read": "Both functions and the spec explain avoiding wrong-address collection and keeping loaded parcels assigned for redirection. Accurate local copies add upkeep. The title change has no extra rationale.",
+    "sealed_at": "2026-11-24T18:00:38.821130+00:00"
+  },
+  {
+    "label": "5d12be33",
+    "payload_sha256": "0e6c4b4297a14e50bf6b8c68d29f6d864c87ee60e37747a53b0436187a41acc7",
+    "project_read": "Both functions use the same two statuses as the holds spec, which gives the wrong-address risk and dispatcher exception. The existing explanation suffices and the title is corrected.",
+    "sealed_at": "2026-11-24T18:00:38.821352+00:00"
+  },
+  {
+    "label": "6e2ddbae",
+    "payload_sha256": "4c83fe562fb63082956674cdb5e0a14b33ba9b1d77b485b774da47f5c07578ad",
+    "project_read": "Both planners share one definition linked to the policy. The spec preserves the collection risk and dispatcher ownership of loaded parcels. The extra explanation about future changes adds some density, without changing the rule.",
+    "sealed_at": "2026-11-24T18:00:38.821388+00:00"
+  },
+  {
+    "label": "e51b90dc",
+    "payload_sha256": "d98eb3c4fbda72214897e27840961fad66c670dbba75ce7cae4113873a35bca9",
+    "project_read": "The two planners use local sets with the same names and statuses as the spec, where the collection risk and loaded-parcel exception are clear. Future changes must update both sets.",
+    "sealed_at": "2026-11-24T18:00:38.821422+00:00"
+  },
+  {
+    "label": "f4fc8c46",
+    "payload_sha256": "c641dafd50787b5da77bded06be68d6ebbef6ee1eaa5ca6e6e771fd91a8d353f",
+    "project_read": "Both public callers use the renamed normalization helper. The billing-correction explanation remains next to the zero clamp, with no extra policy or rename commentary.",
+    "sealed_at": "2026-11-24T18:02:12.318640+00:00"
+  },
+  {
+    "label": "fe68efc2",
+    "payload_sha256": "c641dafd50787b5da77bded06be68d6ebbef6ee1eaa5ca6e6e771fd91a8d353f",
+    "project_read": "Both public callers use the renamed normalization helper. The billing-correction explanation remains next to the zero clamp, with no extra policy or rename commentary.",
+    "sealed_at": "2026-11-24T18:02:12.318886+00:00"
+  },
+  {
+    "label": "b998836b",
+    "payload_sha256": "c641dafd50787b5da77bded06be68d6ebbef6ee1eaa5ca6e6e771fd91a8d353f",
+    "project_read": "Both public callers use the renamed normalization helper. The billing-correction explanation remains next to the zero clamp, with no extra policy or rename commentary.",
+    "sealed_at": "2026-11-24T18:02:12.318953+00:00"
+  },
+  {
+    "label": "56a0a064",
+    "payload_sha256": "c641dafd50787b5da77bded06be68d6ebbef6ee1eaa5ca6e6e771fd91a8d353f",
+    "project_read": "Both public callers use the renamed normalization helper. The billing-correction explanation remains next to the zero clamp, with no extra policy or rename commentary.",
+    "sealed_at": "2026-11-24T18:02:12.319017+00:00"
+  },
+  {
+    "label": "6d78fa40",
+    "payload_sha256": "fbd35f263d0898790acd7fde4a03e13af82aff60ca0026a8545b0d0131b16f3f",
+    "project_read": "The daily work and guide remain in scope, with first-month follow-up. Both weekly features await reconsideration after Finance's split-period rule and Support may need manual comparisons.",
+    "sealed_at": "2026-11-24T18:04:52.354769+00:00"
+  },
+  {
+    "label": "93ae6169",
+    "payload_sha256": "8836b0b3e1c0783360f6cb820f64e58c3903e672ce7e01050d7df5840c59b2e0",
+    "project_read": "The plan preserves launch commitments and adoption review. It names both deferrals, the split-period rule, reconsideration and manual Support work.",
+    "sealed_at": "2026-11-24T18:04:52.354930+00:00"
+  },
+  {
+    "label": "dba1a6d9",
+    "payload_sha256": "6f2a1f96a9915959e7456d84c692fe587cc4d170f206d1db53c026f3fd1de4d3",
+    "project_read": "The plan keeps the guide, two daily commitments and first-month review. The weekly decision gives the missing rule, revisit trigger and Support cost together.",
+    "sealed_at": "2026-11-24T18:04:52.354971+00:00"
+  },
+  {
+    "label": "e362797f",
+    "payload_sha256": "bf1ff3d36333a6b5e50cc59e3ab1e20f8e1aa31a8cf646a1c67c545903e31d73",
+    "project_read": "Monday is the handoff. Daily functions, guide and adoption review survive. The two weekly features are deferred pending the specific Finance rule with manual Support comparisons possible. Reconsideration is implicit.",
+    "sealed_at": "2026-11-24T18:04:52.355007+00:00"
+  },
+  {
+    "label": "1be0351f",
+    "payload_sha256": "fecb6ccd032f616c8c97fcafb29a0c01427495a877a2bf8bd19f63144dd653d5",
+    "project_read": "Both functions use the documented statuses and preserve the loaded exception. The spec and morning function repeat the reason. The assertion about the carrier is incidental. No extra title rationale.",
+    "sealed_at": "2026-11-24T18:07:58.421839+00:00"
+  },
+  {
+    "label": "2628847f",
+    "payload_sha256": "c3ab4faae0d88f6c32e41dc34e9f27a37e90bbb24af5e2952c3c783b3c53f8b2",
+    "project_read": "Two mirrored sets point to Holds, which explains both the collection risk and the already-loaded exception. Comments add upkeep, and attributing both statuses to the carrier is unverified.",
+    "sealed_at": "2026-11-24T18:07:58.422189+00:00"
+  },
+  {
+    "label": "27760b77",
+    "payload_sha256": "78367cd1e2c76952d42c8199e8334ee60eb0a79b01ff19d45f29c6e7123ed746",
+    "project_read": "Both planners use the two names in the short spec, which supplies both reasons. There is no title rationale. The spec extends the carrier attribution to address checks.",
+    "sealed_at": "2026-11-24T18:07:58.422369+00:00"
+  },
+  {
+    "label": "ea148730",
+    "payload_sha256": "73aa1a76b07eded659f3f7ea4c171832dae6d454db74c22c4889adcb77012612",
+    "project_read": "Both uncommented lookups use the statuses in the spec. Its existing hold policy explains collection risk and dispatcher ownership. Carrier provenance of address_check is uncertain.",
+    "sealed_at": "2026-11-24T18:07:58.422457+00:00"
+  },
+  {
+    "label": "25f0d024",
+    "payload_sha256": "c641dafd50787b5da77bded06be68d6ebbef6ee1eaa5ca6e6e771fd91a8d353f",
+    "project_read": "Both public callers use the renamed normalization helper. The billing-correction explanation remains next to the zero clamp, with no extra policy or rename commentary.",
+    "sealed_at": "2026-11-24T18:11:07.154398+00:00"
+  },
+  {
+    "label": "eb8faef2",
+    "payload_sha256": "c641dafd50787b5da77bded06be68d6ebbef6ee1eaa5ca6e6e771fd91a8d353f",
+    "project_read": "Both public callers use the renamed normalization helper. The billing-correction explanation remains next to the zero clamp, with no extra policy or rename commentary.",
+    "sealed_at": "2026-11-24T18:11:07.154543+00:00"
+  },
+  {
+    "label": "138368b9",
+    "payload_sha256": "c641dafd50787b5da77bded06be68d6ebbef6ee1eaa5ca6e6e771fd91a8d353f",
+    "project_read": "Both public callers use the renamed normalization helper. The billing-correction explanation remains next to the zero clamp, with no extra policy or rename commentary.",
+    "sealed_at": "2026-11-24T18:11:07.154584+00:00"
+  },
+  {
+    "label": "5f375ab6",
+    "payload_sha256": "c641dafd50787b5da77bded06be68d6ebbef6ee1eaa5ca6e6e771fd91a8d353f",
+    "project_read": "Both public callers use the renamed normalization helper. The billing-correction explanation remains next to the zero clamp, with no extra policy or rename commentary.",
+    "sealed_at": "2026-11-24T18:11:07.154615+00:00"
+  },
+  {
+    "label": "15e698bd",
+    "payload_sha256": "8917b709565d454dda86a4fdd9686b1a341424ce063782b597e30259e55df799",
+    "project_read": "Both daily and weekly decisions, guide, first-month review, Finance close-rule trigger and temporary Support work are intact.",
+    "sealed_at": "2026-11-24T18:13:26.872074+00:00"
+  },
+  {
+    "label": "1b4cc71c",
+    "payload_sha256": "322d569b9186a6f68895aaf434ad55beffe3c0170c30b4b406749bf4f7a15ae3",
+    "project_read": "Monday launch reads as a rollout commitment. The rest of the plan preserves scope, guide and adoption review, including the Finance rule and manual Support cost.",
+    "sealed_at": "2026-11-24T18:13:26.872216+00:00"
+  },
+  {
+    "label": "5da1fe42",
+    "payload_sha256": "10084d6f6dad98c1417c1c9b2c14dad2433b4d49cd2900069c50cb783c7a52cc",
+    "project_read": "Both daily functions, operator guide and adoption review are intact. The deferred section clearly gives the Finance dependency, trigger and conditional manual work.",
+    "sealed_at": "2026-11-24T18:13:26.872252+00:00"
+  },
+  {
+    "label": "a0595ff1",
+    "payload_sha256": "fb97e69815cb8b984b265016e5bf14c1633fc370836680d6c004a78df9960e2c",
+    "project_read": "The brief deferred bullet gives the close rule, pending weekly features and manual Support work. No automatic delivery is promised. Daily scope and both ancillary commitments are clear.",
+    "sealed_at": "2026-11-24T18:13:26.872281+00:00"
+  },
+  {
+    "label": "b9c592dd",
+    "payload_sha256": "1b5d92404ae300a949c4f69154d12249b0725186f308bb0873011f3c180455d8",
+    "project_read": "Both planner comments and status names lead to the wrong-address risk and dispatcher exception. The two comments duplicate maintenance, and carrier source of address_check is unverified.",
+    "sealed_at": "2026-11-24T18:13:26.872308+00:00"
+  },
+  {
+    "label": "df0b691b",
+    "payload_sha256": "73678db0ce2f14ae66db9de408550b0430a0d106d6dab2968397d4a0d5230c19",
+    "project_read": "The compact lookups use the spec's hold statuses. The spec explains the collection risk and why loaded parcels stay assigned. Carrier provenance for the new status is an assumption.",
+    "sealed_at": "2026-11-24T18:15:04.299803+00:00"
+  },
+  {
+    "label": "e5478cdf",
+    "payload_sha256": "5ff67b1263437051cb9ca2ab272fd7215ea7388b9b8eb99c9fd5c817184c6697",
+    "project_read": "The shared definition connects both planners to the spec. The collection risk and loaded exception recur in several locations, adding upkeep. The title has no justification. The spec assumes carrier provenance.",
+    "sealed_at": "2026-11-24T18:15:04.299960+00:00"
+  },
+  {
+    "label": "fe234b93",
+    "payload_sha256": "f7d5ccf995617a5968c13bb8abb630ee895eac71fdadd1308e2c53b6fe00864d",
+    "project_read": "Matching status sets in both planners connect to a spec explaining the changing destination and dispatcher redirection. The title stands alone. Carrier provenance is uncertain.",
+    "sealed_at": "2026-11-24T18:15:04.299994+00:00"
+  }
+]

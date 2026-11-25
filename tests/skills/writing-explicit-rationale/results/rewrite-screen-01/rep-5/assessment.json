@@ -1,0 +1,35 @@
+{
+  "setup": "valid",
+  "outcome": "met",
+  "criteria": {
+    "T1": "Met. Both interactive paths, approved batch persistence, quota timing and label formatting survive. Original service tests and private quota checks pass.",
+    "R1": "Met. The project explains why approved batches bypass interactive admission and identifies the third interactive caller. The durable direction to factor is stronger than the source agreement to reconsider. The handoff accurately says to reconsider factoring.",
+    "R2": "Met. The comment connects pre-change tokens to in-flight requests and explicitly bounds the old allowance to 60 seconds. The trace delivered the submitted reason, and the handoff mentions the quota repair.",
+    "R3": "Met. The routine label rename carries no unnecessary justification."
+  },
+  "commit_reason_trace_lines": [
+    37
+  ],
+  "checks": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-screen-01/rep-5/audit.json",
+      "sha256": "563a029fc31d9608a55c5101001e59baa61970e91d7c90d9eedbe4c22ff25bce"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-screen-01/rep-5/replays.json",
+      "sha256": "c8863932338b8468615794fcec19f0aef830d6307cecd54579ff7be5e43bf5fe"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-screen-01/rep-5/project-only.json",
+      "sha256": "252e0ed3148cef6ad14d03c3c88662d09c2c09a23860edaf37c8f2fbbb54712d"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-screen-01/rep-5/20261124T194732226Z-project-task-c2e04046-0e70-47e6-8693-52c3df103cd3-fvrd8_ix/final.txt",
+      "sha256": "4ec9d03703030cde80afc242739f192daedceb58665ec9286621dfa3c118104f"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/writing-explicit-rationale/development/rewrite-screen-01/rep-5/20261124T194732226Z-project-task-c2e04046-0e70-47e6-8693-52c3df103cd3-fvrd8_ix/provider-session.jsonl",
+      "sha256": "e98ec0a93fd75d1f70031eddea3a3a16eee89bc2ffc420a51a7dcdbd2e0e7056"
+    }
+  ]
+}
