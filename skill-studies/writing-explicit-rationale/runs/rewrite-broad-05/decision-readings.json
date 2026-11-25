@@ -1,0 +1,38 @@
+[
+  {
+    "label": "6d5ed27b",
+    "order": 1,
+    "subject_order": 4,
+    "action": "retain",
+    "decision_assessment": "informed",
+    "grounding_and_consequence": "Keeps accession order for correction matching, identifies the title index and would involve the proof desk before changing the spec. Every check requiring a search is a stronger inference than necessary.",
+    "answer_sha256": "baa01734ffa84acee79fbb1517bd60b92bb8dc0b706ddeb8c538b807a774fc40"
+  },
+  {
+    "label": "ea43437a",
+    "order": 2,
+    "subject_order": 5,
+    "action": "retain",
+    "decision_assessment": "informed",
+    "grounding_and_consequence": "Uses the accession-keyed room sheets to explain why proofing would suffer, points visitors to the index and identifies who should be consulted before a change.",
+    "answer_sha256": "ab9525e3a1dab2162052b902639702259fc709bc552406407afadea63b579ce6"
+  },
+  {
+    "label": "89a5d18e",
+    "order": 4,
+    "subject_order": 18,
+    "action": "retain",
+    "decision_assessment": "informed",
+    "grounding_and_consequence": "The reader uses the correction workflow to explain why accession order matters, offers the title index and recognizes the need to involve the proof desk in any change.",
+    "answer_sha256": "27d160fb526a906458e4c30d847a20c518b2ddc9a04e0c7201f0d9722a934f64"
+  },
+  {
+    "label": "e897cd6e",
+    "order": 3,
+    "subject_order": 17,
+    "action": "retain",
+    "decision_assessment": "informed",
+    "grounding_and_consequence": "Grounds the printer decision in room-sheet correction matching and points to the title index. The assertion that the keyed sheets are physically sorted and would have to be resorted exceeds the source.",
+    "answer_sha256": "5ea2f282e3ffa2e68e808521f3b4bf0fe58bd560048df7145853695c68459562"
+  }
+]

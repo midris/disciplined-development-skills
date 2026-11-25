@@ -810,3 +810,5 @@ All eight combinations qualify for consideration at five under the frozen rule. 
 ### Five-run broader candidate comparison
 
 The owner approved the [26-subject top-up](runs/rewrite-broad-05/schedule.json) and up to four eligible catalog readers. Use the same candidate, inputs, configuration, criteria and scoring policy as the preceding repetitions. Keep all attempts with zero replacements. Codex repeated review already has five observations. Compare all seven scenarios on both providers, keeping setup, task correctness, rationale and reader decisions distinct. Report before the independent cross-model review or adoption decision.
+
+The [five-run comparison report](runs/rewrite-broad-05/report.md) records 26/26 passes in this final allocation, four informed printer decisions and all retained evidence. Across the seven scenarios the candidate met every functional criterion in 69/70 valid outputs and all rationale and restraint criteria in 70/70. All ten candidate catalog readers grounded their action in the proof dependency. Keep the candidate frozen for independent output review before deciding whether to adopt it.
