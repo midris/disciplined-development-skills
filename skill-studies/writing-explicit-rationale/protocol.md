@@ -818,3 +818,5 @@ Fable’s [independent adoption review](runs/rewrite-broad-05/report.md#independ
 ### Post-freeze transfer check
 
 The owner approved [12 subjects](runs/transfer-01/schedule.json): three repetitions per provider and skill version, with zero replacements or evaluators. Exact fixture and scoring materials are in the private store. Both skill versions predate the case. The active assessor saw the scenario concept after candidate freeze and designed the case. This is a prospective post-freeze comparison with fresh subjects; the assessor is not an independent unexposed author. Seal mixed-label project readings and whole-output grades before revealing assignments. Review before any adoption edit.
+
+The [completed post-freeze check](runs/transfer-01/report.md) met all three criteria in all twelve subjects. Both versions preserved the reason and open decision in the durable project in all six of their runs. Adopt the frozen candidate on owner approval.
