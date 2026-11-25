@@ -838,3 +838,5 @@ Claude preserved reconsideration in the guard comment in two of three projects a
 ### Five-run residual-risk comparison
 
 The owner approved [four final subjects](runs/residual-risk-03/schedule.json), repetitions four and five in both cells. Use the frozen inputs, whole-output criteria and maintainer questions. Retain every attempt with zero replacements or evaluators. Compare at five with the frozen 599-word candidate.
+
+The [five-run comparison](runs/residual-risk-03/report.md) records all four final attempts and the ten-output comparison for each variant. Both variants met all whole-output criteria in both cells. Explicit acceptance in Claude quota comments rose from 1/5 to 5/5; Codex explicitly named rejection in 1/5 with either variant. Review the targeted wording preference and open-refactor caveat before adoption.
