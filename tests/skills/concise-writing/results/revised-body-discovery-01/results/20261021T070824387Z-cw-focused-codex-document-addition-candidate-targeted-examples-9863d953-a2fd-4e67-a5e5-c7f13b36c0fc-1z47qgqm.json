@@ -1,0 +1,175 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "codex-body-focused-01-document-addition-candidate-targeted-examples-3-1-assessment",
+  "assessed_at": "2026-10-21T07:09:19.441985+00:00",
+  "run_id": "20261021T070824387Z-cw-focused-codex-document-addition-candidate-targeted-examples-9863d953-a2fd-4e67-a5e5-c7f13b36c0fc-1z47qgqm",
+  "condition": "candidate-targeted-examples",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same Codex controller authored/reviewed exposed development variants and directly judged complete outputs; no blind, held-out or independent assessor claim. Separate Opus review supplements this."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/codex-document-addition-manifest.json",
+    "sha256": "e3ed581ee504cd0bbfebd50d9fc674ab0ab0ac50a3e31a9de9b6e813469bc3ba",
+    "version": "1",
+    "git_revision": "5e634e99617bdba4a96be045df4ba4d73f630c73"
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T070824387Z-cw-focused-codex-document-addition-candidate-targeted-examples-9863d953-a2fd-4e67-a5e5-c7f13b36c0fc-1z47qgqm/workspace/fixture/report.md",
+        "sha256": "28d3b6b697999a6bc444634e378ef4bc837410950a5995848bef125775bf5606",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T070824387Z-cw-focused-codex-document-addition-candidate-targeted-examples-9863d953-a2fd-4e67-a5e5-c7f13b36c0fc-1z47qgqm/provider-session.jsonl",
+        "sha256": "816ac17342c4ce952aab8ff0bf55711bf441eaaaffeba28a924b2e548acf74a3",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T070824387Z-cw-focused-codex-document-addition-candidate-targeted-examples-9863d953-a2fd-4e67-a5e5-c7f13b36c0fc-1z47qgqm/result.json",
+        "sha256": "9def15e3a2b82cef8b1c81fa9f011c0204a1826881d7794c25626ebd0c7c3108",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T070824387Z-cw-focused-codex-document-addition-candidate-targeted-examples-9863d953-a2fd-4e67-a5e5-c7f13b36c0fc-1z47qgqm/runner.log",
+        "sha256": "a57189172c104b0b026dcb92d0a6fa763f2e13ccb4d66ad034897eae9567d99a",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T070824387Z-cw-focused-codex-document-addition-candidate-targeted-examples-9863d953-a2fd-4e67-a5e5-c7f13b36c0fc-1z47qgqm/final.txt",
+        "sha256": "0f02387769ea03de188b9083d9a315f07adcb251338a4f5ab551c71278840717",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/effective-briefing/fixture/report.md",
+        "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491",
+        "version": null,
+        "git_revision": "08ec3eee2b57037d52bc7f04edcd8e42736384cd"
+      },
+      "selector": "Complete frozen report.md"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/document-addition/task.md",
+        "sha256": "d625196b6cf438dfe556238803851c5b86ae7f2eb07acaa31ddceb5c6e9b8db0",
+        "version": null,
+        "git_revision": "08ec3eee2b57037d52bc7f04edcd8e42736384cd"
+      },
+      "selector": "Complete frozen TASK.md"
+    },
+    {
+      "id": "source-2",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/document-addition/new-notes.md",
+        "sha256": "8ff2f1ece29e88f352aefe87506c1afcf7e3174849dd978d20ec7065e8da3b74",
+        "version": null,
+        "git_revision": "08ec3eee2b57037d52bc7f04edcd8e42736384cd"
+      },
+      "selector": "Complete frozen NEW-NOTES.md"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Fixed provider/model/CLI and retained inventory verified. Complete assigned body in tool output 15 before first task edit 39. Protected input bytes unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The complete revised E3 report retains all original observations/qualifications, collection-size and opt-in limits, strict timeout/approval gates and every added contact, affected-team/restricted-evidence, broader-problem, resumption and review condition. It explicitly distinguishes a report from confirmation by itself.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The named fallback remains a pre-invitation prerequisite. The dedicated incident section connects report-triggered pause and restricted query/result retention, permits others unless a broader problem is found, and separately states both resumption gates. Expanded review and separate rollout/default decisions remain actionable.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Source organization remains effective, with a coherent incident section and visible resumption paragraph before the expanded review. Meaningful framing remains, and the addition does not require reconciling disconnected requirements.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Fixed provider/model/CLI and retained inventory verified. Complete assigned body in tool output 15 before first task edit 39. Protected input bytes unchanged. O4/O5 remain unscored; native D1 is distinct from functional outcome.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Complete output 364 wc-w words; supplied report.md: 279 words, TASK.md: 58 words, NEW-NOTES.md: 166 words. Counts describe length, not semantic success; comment-only counts are reported separately for N4.",
+      "consequence": "Descriptive counts only.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "Revised E3 uses the particularly clear phrase that a report is not by itself a confirmed defect. Its split incident/resumption paragraphs resemble original3 and several controls; that precision strength does not establish an overall body advantage from one observation.",
+      "consequence": "Qualitative comparison is separate from threshold counts.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    }
+  ],
+  "uncertainty": []
+}

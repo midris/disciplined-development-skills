@@ -1,0 +1,175 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claude-body-focused-01-document-addition-control-5-1-assessment",
+  "assessed_at": "2026-10-21T14:08:42.020966+00:00",
+  "run_id": "20261021T140719301Z-cw-focused-claude-document-addition-control-adf17fd1-a422-4cd6-bba4-5ade8c19c9af-ilshpj0w",
+  "condition": "control",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same Codex controller authored/reviewed exposed development variants and directly judged complete outputs; no blind, held-out or independent assessor claim. Separate Opus review supplements this."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-document-addition-manifest.json",
+    "sha256": "fa95cda9233a077f63b3640677a865dd433c3053dca0624abe82939ebdcc49f2",
+    "version": "1",
+    "git_revision": "4025bbcb3b267e0aab9e6766fb7eab5a781cff0b"
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T140719301Z-cw-focused-claude-document-addition-control-adf17fd1-a422-4cd6-bba4-5ade8c19c9af-ilshpj0w/workspace/fixture/report.md",
+        "sha256": "5a11682f1cc6d178572c7daf89d6108398a4d245a8b4002e82f482f4c75daee9",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T140719301Z-cw-focused-claude-document-addition-control-adf17fd1-a422-4cd6-bba4-5ade8c19c9af-ilshpj0w/stdout.txt",
+        "sha256": "83856f5be9de025e5898d782e1b159c112ba664c91acde6d29d7a856cf4e53a3",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T140719301Z-cw-focused-claude-document-addition-control-adf17fd1-a422-4cd6-bba4-5ade8c19c9af-ilshpj0w/result.json",
+        "sha256": "d3db97e4227bf291db935d2f994b53d0a60774bc136823d251870aadee4a0488",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T140719301Z-cw-focused-claude-document-addition-control-adf17fd1-a422-4cd6-bba4-5ade8c19c9af-ilshpj0w/runner.log",
+        "sha256": "f661a712b7676e0355650fd15ef849c6b0cc65cf79dbc30ab9a461298d3c95d0",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T140719301Z-cw-focused-claude-document-addition-control-adf17fd1-a422-4cd6-bba4-5ade8c19c9af-ilshpj0w/final.txt",
+        "sha256": "3d62bfd475739cd4163076eb00a2a9e05616916a26117bfa0832cca86600abac",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/effective-briefing/fixture/report.md",
+        "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491",
+        "version": null,
+        "git_revision": "dcb8aba30fcbb28563f6db6965d8abb607fd0d97"
+      },
+      "selector": "Complete frozen report.md"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/document-addition/task.md",
+        "sha256": "d625196b6cf438dfe556238803851c5b86ae7f2eb07acaa31ddceb5c6e9b8db0",
+        "version": null,
+        "git_revision": "dcb8aba30fcbb28563f6db6965d8abb607fd0d97"
+      },
+      "selector": "Complete frozen TASK.md"
+    },
+    {
+      "id": "source-2",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/document-addition/new-notes.md",
+        "sha256": "8ff2f1ece29e88f352aefe87506c1afcf7e3174849dd978d20ec7065e8da3b74",
+        "version": null,
+        "git_revision": "dcb8aba30fcbb28563f6db6965d8abb607fd0d97"
+      },
+      "selector": "Complete frozen NEW-NOTES.md"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Fixed provider/model/CLI and retained inventory verified. No CW catalog/body exposure. Protected input bytes unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The complete report preserves existing evidence/scope uncertainty and invitation gates, explicit contact recording before invitation, all affected-team/restricted-evidence/precaution/other-team/resumption conditions, review outcomes and separate expansion/default decisions.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Contact, incident and review additions are integrated into usable procedures. The explicit final review limitation reinforces the separate decision requirement without changing the workflow.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Clear sections and coherent additions retain the source's decision orientation. Fuller incident detail and repeated opt-in/default boundaries serve explanation and reinforcement rather than imposing purposeless repetition.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Fixed provider/model/CLI and retained inventory verified. No CW catalog/body exposure. Protected input bytes unchanged. O4/O5 remain unscored; native D1 is distinct from functional outcome.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Complete output 398 wc-w words; supplied report.md: 279 words, TASK.md: 58 words, NEW-NOTES.md: 166 words. Counts describe length, not semantic success; comment-only counts are reported separately for N4.",
+      "consequence": "Descriptive counts only.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "Control Claude addition5 explicitly restates the no-default/no-automatic-expansion boundary at review as well as opening/closing. It is longer but remains effective. All fifteen additions pass; original/revised show no consistent consequential difference, with contact precision and paragraph compactness kept as observations.",
+      "consequence": "Qualitative comparison is separate from threshold counts.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    }
+  ],
+  "uncertainty": []
+}

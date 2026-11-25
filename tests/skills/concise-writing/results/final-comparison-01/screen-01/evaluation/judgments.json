@@ -1,0 +1,394 @@
+{
+  "scope": "Twelve final CW comment-screen artifacts, two six-output Opus reviews; manual interpretation of full first passes and comparisons",
+  "reviewer": "claude-opus-5-5 medium",
+  "active_assessor": "Codex controller",
+  "blinding": "Condition labels visible; active assessor has development/authoring exposure",
+  "reviewed_packets": 2,
+  "unique_subject_outputs": 12,
+  "reviews": [
+    {
+      "configuration": "codex-comments-explicit",
+      "evaluator_run_id": "20261021T194229699Z-cw-suite-opus-codex-comments-explicit-229f526a-3cdd-46c7-9e0f-343c41f988b2-x6ag6f19",
+      "audit": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/evaluation/codex-comments-explicit-audit.json",
+      "judgments": [
+        {
+          "run_id": "20261021T192106786Z-cw-final-codex-comments-explicit-original-body-edd19c3e-6bef-49e2-9a55-881ecec9bc5b-0xrc7pdu",
+          "condition": "original-body",
+          "repetition": 1,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "codex-final-comments-screen-01-comments-explicit-original-body-1-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T192106786Z-cw-final-codex-comments-explicit-original-body-edd19c3e-6bef-49e2-9a55-881ecec9bc5b-0xrc7pdu.json",
+              "sha256": "f2424769de7fceb3ee7ead45a00258c7c69eab392fa2699b73a414f9ce0bb73b",
+              "version": "2",
+              "git_revision": "5853140a9e17f2f146baa90f51c52fb547e45e2f"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/evaluation/codex-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "No factor, total or evidence-attribution change. Independent first pass and later prior comparison retained separately."
+        },
+        {
+          "run_id": "20261021T192300999Z-cw-final-codex-comments-explicit-revised-body-c4b7fa18-c41e-4264-aed1-5993195a94b2-k0fuy9bj",
+          "condition": "revised-body",
+          "repetition": 1,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "codex-final-comments-screen-01-comments-explicit-revised-body-1-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T192300999Z-cw-final-codex-comments-explicit-revised-body-c4b7fa18-c41e-4264-aed1-5993195a94b2-k0fuy9bj.json",
+              "sha256": "87bb0b7b175008a223a895f65aa59c2de9ab360548c731ffc45d32fa2a0a2685",
+              "version": "2",
+              "git_revision": "5853140a9e17f2f146baa90f51c52fb547e45e2f"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/evaluation/codex-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "No factor, total or evidence-attribution change. Independent first pass and later prior comparison retained separately."
+        },
+        {
+          "run_id": "20261021T192410997Z-cw-final-codex-comments-explicit-revised-body-e56a7e18-7ae7-4140-91f3-166dfb4bb2c5-hpdmjfq7",
+          "condition": "revised-body",
+          "repetition": 2,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "codex-final-comments-screen-01-comments-explicit-revised-body-2-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T192410997Z-cw-final-codex-comments-explicit-revised-body-e56a7e18-7ae7-4140-91f3-166dfb4bb2c5-hpdmjfq7.json",
+              "sha256": "814dbf9a3447e1bebca7978510f7eb86e12a16620a7913698ee45749639fcd87",
+              "version": "2",
+              "git_revision": "5853140a9e17f2f146baa90f51c52fb547e45e2f"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/evaluation/codex-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "No factor, total or evidence-attribution change. Independent first pass and later prior comparison retained separately."
+        },
+        {
+          "run_id": "20261021T192531063Z-cw-final-codex-comments-explicit-original-body-6b2c3e11-e21d-4de2-99c4-c48b66a97ea8-rv61auqg",
+          "condition": "original-body",
+          "repetition": 2,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "codex-final-comments-screen-01-comments-explicit-original-body-2-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T192531063Z-cw-final-codex-comments-explicit-original-body-6b2c3e11-e21d-4de2-99c4-c48b66a97ea8-rv61auqg.json",
+              "sha256": "e19ca81238752c711665b9f8ba47b110fd788aec1f4635a56b5c9f7946b37afc",
+              "version": "2",
+              "git_revision": "5853140a9e17f2f146baa90f51c52fb547e45e2f"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/evaluation/codex-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "No factor, total or evidence-attribution change. Independent first pass and later prior comparison retained separately."
+        },
+        {
+          "run_id": "20261021T192718747Z-cw-final-codex-comments-explicit-original-body-a2d143cb-0b10-47af-960d-3846f2e2e5b5-zuv2m2zn",
+          "condition": "original-body",
+          "repetition": 3,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "codex-final-comments-screen-01-comments-explicit-original-body-3-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T192718747Z-cw-final-codex-comments-explicit-original-body-a2d143cb-0b10-47af-960d-3846f2e2e5b5-zuv2m2zn.json",
+              "sha256": "b06be895d8b0eb33963fc09f8dc20e3dbbd0616edaa66ef958934e90c20ec2d2",
+              "version": "2",
+              "git_revision": "5853140a9e17f2f146baa90f51c52fb547e45e2f"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/evaluation/codex-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "No factor, total or evidence-attribution change. Independent first pass and later prior comparison retained separately."
+        },
+        {
+          "run_id": "20261021T192825872Z-cw-final-codex-comments-explicit-revised-body-338ab5d0-873f-42e4-b15a-43511c02e320-ixuuc5fr",
+          "condition": "revised-body",
+          "repetition": 3,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "codex-final-comments-screen-01-comments-explicit-revised-body-3-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T192825872Z-cw-final-codex-comments-explicit-revised-body-338ab5d0-873f-42e4-b15a-43511c02e320-ixuuc5fr.json",
+              "sha256": "3281d447df42ed351f0719642a2c76c1e07225e553c5d98cab759d907130f327",
+              "version": "2",
+              "git_revision": "5853140a9e17f2f146baa90f51c52fb547e45e2f"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/evaluation/codex-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "No factor, total or evidence-attribution change. Independent first pass and later prior comparison retained separately."
+        }
+      ],
+      "disagreements": [
+        "No factor disagreement; reviewer describes revised rep2 placement phrasing as descriptive rather than imperative, without a practical difference.",
+        "Reviewer proposed ambiguity about accepted-batch/no-resend and generic acknowledgement errors is already bounded by the frozen complete-code interpretation; no new literal keyword or exception name is required.",
+        "Reviewer hypothetical that moving acknowledgement into the handler causes a second upload is imprecise: the actual hazard is expanding the send try/retry scope to catch acknowledgement TemporaryUploadError. This reviewer explanation is not a subject defect and does not alter its correctly evidenced factor judgments."
+      ],
+      "quality_notes": [
+        "All six pass. No consistent consequential quality advantage; reviewer notes a small non-consequential explicitness edge for originals.",
+        "Original explicitly states other-send-error propagation in3/3 versus revised1/3; complete code makes remaining cases clear. Revised33-word output is compact and valid; revised59-word output is more explicit. Mean counts44vs44.33 do not establish a winner.",
+        "Reviewer abbreviated run IDs with unique suffixes rather than exact full IDs; controller manually mapped all six condition/rep/quoted passages back to the full packet index without an attribution ambiguity. Preserve this instruction deviation."
+      ],
+      "transcription_basis": "Manually read all six independent per-output factor rows/reasons, complete final comparison and all quoted passages against the previously read full outputs. All16required files delivered before first pass61; prior Read62; no pre-prior Grep. Identity/capture/protected inputs verified. Short IDs uniquely mapped; imprecise reviewer counterfactual disclosed separately."
+    },
+    {
+      "configuration": "claude-comments-explicit",
+      "evaluator_run_id": "20261021T194521414Z-cw-suite-opus-claude-comments-explicit-cf92c699-37b0-4dd0-a8de-54342ed5121d-cwkcgs4c",
+      "audit": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/evaluation/claude-comments-explicit-audit.json",
+      "judgments": [
+        {
+          "run_id": "20261021T192936761Z-cw-final-claude-comments-explicit-revised-body-179e8c05-6ac3-4f88-a491-4bf9aa00114f-wahfnx0c",
+          "condition": "revised-body",
+          "repetition": 1,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "claude-final-comments-screen-01-comments-explicit-revised-body-1-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T192936761Z-cw-final-claude-comments-explicit-revised-body-179e8c05-6ac3-4f88-a491-4bf9aa00114f-wahfnx0c.json",
+              "sha256": "7bf8574def5fa5bde78b6dd15462f65198aba8470bd3b5c3a9c64d87412f2947",
+              "version": "2",
+              "git_revision": "5853140a9e17f2f146baa90f51c52fb547e45e2f"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/evaluation/claude-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "No factor, total or evidence-attribution change. First pass and later prior comparison retained separately."
+        },
+        {
+          "run_id": "20261021T193637217Z-cw-final-claude-comments-explicit-original-body-5e474484-7f58-46a5-8f20-e0ce2475fe49-iwhaxcva",
+          "condition": "original-body",
+          "repetition": 1,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "claude-final-comments-screen-01-comments-explicit-original-body-1-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T193637217Z-cw-final-claude-comments-explicit-original-body-5e474484-7f58-46a5-8f20-e0ce2475fe49-iwhaxcva.json",
+              "sha256": "233a92ad9471f5aa25fa95953b441d49514c55b81629ad65cad54b4802f22955",
+              "version": "2",
+              "git_revision": "5853140a9e17f2f146baa90f51c52fb547e45e2f"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/evaluation/claude-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "No factor, total or evidence-attribution change. First pass and later prior comparison retained separately."
+        },
+        {
+          "run_id": "20261021T193718128Z-cw-final-claude-comments-explicit-original-body-d1a6de95-f8a7-4aae-b670-47c33c712d42-sx5l0p7h",
+          "condition": "original-body",
+          "repetition": 2,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "claude-final-comments-screen-01-comments-explicit-original-body-2-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T193718128Z-cw-final-claude-comments-explicit-original-body-d1a6de95-f8a7-4aae-b670-47c33c712d42-sx5l0p7h.json",
+              "sha256": "96909b691c32055f70a553d168fcb52c70b5ae6c2ebd2d41ba53a999b59f032c",
+              "version": "2",
+              "git_revision": "5853140a9e17f2f146baa90f51c52fb547e45e2f"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/evaluation/claude-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "No factor, total or evidence-attribution change. First pass and later prior comparison retained separately."
+        },
+        {
+          "run_id": "20261021T193818029Z-cw-final-claude-comments-explicit-revised-body-ce1cf2d0-db00-4ac3-b9b9-e2402752d4e3-buzvu051",
+          "condition": "revised-body",
+          "repetition": 2,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "claude-final-comments-screen-01-comments-explicit-revised-body-2-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T193818029Z-cw-final-claude-comments-explicit-revised-body-ce1cf2d0-db00-4ac3-b9b9-e2402752d4e3-buzvu051.json",
+              "sha256": "908b148b649d439c4805ff0164728162a9468fb017cf88949bafa8f6c4600ce7",
+              "version": "2",
+              "git_revision": "5853140a9e17f2f146baa90f51c52fb547e45e2f"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/evaluation/claude-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "No factor, total or evidence-attribution change. First pass and later prior comparison retained separately."
+        },
+        {
+          "run_id": "20261021T193852233Z-cw-final-claude-comments-explicit-revised-body-8f6afe52-2fa1-4edd-bac6-524c3e2abf6d-7k__l_sv",
+          "condition": "revised-body",
+          "repetition": 3,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "claude-final-comments-screen-01-comments-explicit-revised-body-3-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T193852233Z-cw-final-claude-comments-explicit-revised-body-8f6afe52-2fa1-4edd-bac6-524c3e2abf6d-7k__l_sv.json",
+              "sha256": "278e9fb4e0ec879496c12f767f54f0c5f1f0f9dba6503a8de699305aa705df85",
+              "version": "2",
+              "git_revision": "5853140a9e17f2f146baa90f51c52fb547e45e2f"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/evaluation/claude-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "No factor, total or evidence-attribution change. First pass and later prior comparison retained separately."
+        },
+        {
+          "run_id": "20261021T193924939Z-cw-final-claude-comments-explicit-original-body-a30c3cdd-d31e-411b-bbb4-353c9650397e-ywvr_40c",
+          "condition": "original-body",
+          "repetition": 3,
+          "active_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "opus_first_pass_factors": {
+            "F1": "met",
+            "F2": "met",
+            "F3": "met"
+          },
+          "active_result": {
+            "result_id": "claude-final-comments-screen-01-comments-explicit-original-body-3-1-assessment",
+            "record": {
+              "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/results/20261021T193924939Z-cw-final-claude-comments-explicit-original-body-a30c3cdd-d31e-411b-bbb4-353c9650397e-ywvr_40c.json",
+              "sha256": "92857bfb1343aaf52080fdbb48d0966467ebe5e6a32782b01a5ca3f5eabcdcd7",
+              "version": "2",
+              "git_revision": "5853140a9e17f2f146baa90f51c52fb547e45e2f"
+            }
+          },
+          "first_pass_evidence": {
+            "path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/evaluation/claude-comments-explicit-first-pass.md",
+            "selector": "Condition/repetition and unique run marker; complete per-output discussion"
+          },
+          "after_prior": "No factor, total or evidence-attribution change. First pass and later prior comparison retained separately."
+        }
+      ],
+      "disagreements": [
+        "No factor disagreement. Reviewer adds a useful precision observation: outside-except-block is narrower than outside-send-retry scope in revised1 and original3; actual code and rationale resolve it, with original3 additionally stating no resend on acknowledgement errors.",
+        "Generic acknowledgement errors plus complete code cover acknowledgement TemporaryUploadError under the fixed code-context criteria. Native Skill in the prior names the provider tool used under an explicit load instruction, not a native-selection measurement.",
+        "Reviewer says each condition has exactly one less-explicit output while correctly listing original2 and revised1/revised2: that is one versus two. This narrative count slip is retained and corrected in reconciliation; the six factor rows and quoted evidence are correctly attributed and unchanged."
+      ],
+      "quality_notes": [
+        "All six pass. Original1/original3 and revised3 state the full chain explicitly; original2 leaves the failure trigger implicit, revised1 leaves it partly implicit and revised2 leaves duplicate consequence implicit. Complete code/comment meaning remains adequate.",
+        "Comment ranges overlap: original50/42/51 and revised46/42/52, with no consistent consequential quality advantage. No statistical equivalence or causal body benefit established.",
+        "Both reviewer packets use unique abbreviated run IDs despite the exact-ID prompt. Controller mapped every condition/rep/quote to its full index ID without ambiguity; retain this instruction deviation."
+      ],
+      "transcription_basis": "Manually read all six independent F1-F3 rows/reasons and the full final comparison; checked every quoted acknowledgement block against complete outputs. All16required files before first pass58/priorRead59; no pre-prior Grep. Identity/tools/capture/protected bytes/inventory verified. Short IDs and narrative count slip disclosed; factor evidence remains usable."
+    }
+  ]
+}

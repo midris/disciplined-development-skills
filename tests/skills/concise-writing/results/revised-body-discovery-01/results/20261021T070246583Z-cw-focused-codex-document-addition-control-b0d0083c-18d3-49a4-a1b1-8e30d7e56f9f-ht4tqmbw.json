@@ -1,0 +1,175 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "codex-body-focused-01-document-addition-control-2-1-assessment",
+  "assessed_at": "2026-10-21T07:05:05.194973+00:00",
+  "run_id": "20261021T070246583Z-cw-focused-codex-document-addition-control-b0d0083c-18d3-49a4-a1b1-8e30d7e56f9f-ht4tqmbw",
+  "condition": "control",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same Codex controller authored/reviewed exposed development variants and directly judged complete outputs; no blind, held-out or independent assessor claim. Separate Opus review supplements this."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/codex-document-addition-manifest.json",
+    "sha256": "e3ed581ee504cd0bbfebd50d9fc674ab0ab0ac50a3e31a9de9b6e813469bc3ba",
+    "version": "1",
+    "git_revision": "5e634e99617bdba4a96be045df4ba4d73f630c73"
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T070246583Z-cw-focused-codex-document-addition-control-b0d0083c-18d3-49a4-a1b1-8e30d7e56f9f-ht4tqmbw/workspace/fixture/report.md",
+        "sha256": "524a68f77c7e34ce6171cddcb283bb9d0decc038fa727ad94bb629230fb31cdc",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T070246583Z-cw-focused-codex-document-addition-control-b0d0083c-18d3-49a4-a1b1-8e30d7e56f9f-ht4tqmbw/provider-session.jsonl",
+        "sha256": "ba99903f1f3729d5c351cc75c945f55441cb510036bce6c71e7894c4fb6e5c71",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T070246583Z-cw-focused-codex-document-addition-control-b0d0083c-18d3-49a4-a1b1-8e30d7e56f9f-ht4tqmbw/result.json",
+        "sha256": "44fc244b401ae4dcbd62cf8810de6e5056d360b4869c1cc1deeca82cc8e02909",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T070246583Z-cw-focused-codex-document-addition-control-b0d0083c-18d3-49a4-a1b1-8e30d7e56f9f-ht4tqmbw/runner.log",
+        "sha256": "8379047809653bdd10b434ddc4f076a06b9d99b9864923608a57afb8cae4c12d",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T070246583Z-cw-focused-codex-document-addition-control-b0d0083c-18d3-49a4-a1b1-8e30d7e56f9f-ht4tqmbw/final.txt",
+        "sha256": "477cb863402ec4edb559220214ef94567fccb6db7fca848348ac3b68c041dea6",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/effective-briefing/fixture/report.md",
+        "sha256": "93c23afd44aab52dfcd2bca53f3db0020a41f650d46d4c59a09595539dc72491",
+        "version": null,
+        "git_revision": "08ec3eee2b57037d52bc7f04edcd8e42736384cd"
+      },
+      "selector": "Complete frozen report.md"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/document-addition/task.md",
+        "sha256": "d625196b6cf438dfe556238803851c5b86ae7f2eb07acaa31ddceb5c6e9b8db0",
+        "version": null,
+        "git_revision": "08ec3eee2b57037d52bc7f04edcd8e42736384cd"
+      },
+      "selector": "Complete frozen TASK.md"
+    },
+    {
+      "id": "source-2",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/document-addition/new-notes.md",
+        "sha256": "8ff2f1ece29e88f352aefe87506c1afcf7e3174849dd978d20ec7065e8da3b74",
+        "version": null,
+        "git_revision": "08ec3eee2b57037d52bc7f04edcd8e42736384cd"
+      },
+      "selector": "Complete frozen NEW-NOTES.md"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Fixed provider/model/CLI and retained inventory verified. No CW catalog/body exposure. Protected input bytes unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Control E2 preserves all original evidence, uncertainty, collection-size and opt-in limits and exact timeout/approval gates. The named recorded contact, precautionary affected-team pause, restricted query/result retention, broader-problem exception, Omar investigation/Nia approval and expanded seven-day review remain faithful.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All old and new invitation prerequisites are together before Nia sends. The dedicated incident section states unaffected-team continuation and isolates the both-gates resumption rule in its own paragraph. Separate later expansion/default decisions remain clear and actionable.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "The complete briefing retains the effective source sequence, adds a coherent incident section and separates its resumption condition for scanning. No disconnected addendum or contradictory policy forces reconstruction.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Fixed provider/model/CLI and retained inventory verified. No CW catalog/body exposure. Protected input bytes unchanged. O4/O5 remain unscored; native D1 is distinct from functional outcome.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Complete output 389 wc-w words; supplied report.md: 279 words, TASK.md: 58 words, NEW-NOTES.md: 166 words. Counts describe length, not semantic success; comment-only counts are reported separately for N4.",
+      "consequence": "Descriptive counts only.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "Control E2 is another strong no-CW pass, with explicit contact recording and a separate resumption paragraph. The first revised/original outputs are also usable; these layout and precision differences do not establish a consistent body contribution.",
+      "consequence": "Qualitative comparison is separate from threshold counts.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    }
+  ],
+  "uncertainty": []
+}

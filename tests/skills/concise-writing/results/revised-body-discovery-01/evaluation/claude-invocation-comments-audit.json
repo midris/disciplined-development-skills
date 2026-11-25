@@ -1,0 +1,17 @@
+{
+  "configuration": "claude-invocation-comments",
+  "required_complete_files": 24,
+  "outputs": 15,
+  "first_pass_event": 79,
+  "prior_read_event": 80,
+  "first_pass_sha256": "1f548b49604285e3e674238b8657b4ba9f1ecdde867c5a9c13ac31b4de566a76",
+  "first_pass_path": "skill-studies/concise-writing/runs/revised-body-discovery-01/evaluation/claude-invocation-comments-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/reviews/20261021T181549113Z-cw-suite-opus-claude-invocation-comments-2008862a-a354-48f1-9287-2d334fdfe5c5-1gbblg99/final.txt",
+  "final_sha256": "6d4825d49207b28715790f3de06c625d8e611a940809bae6c9b9165a21ebecc0",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "pre_prior_grep_calls": [],
+  "semantic_completeness": "verified: all fifteen independent factor rows, complete first/final narratives and correction manually inspected; first-pass rewrite explanations were shifted across reps, corrected only after prior exposure, while factor rows/totals unchanged. Controller directly reread all five affected complete files and verified final mappings. All required files fully delivered before first pass; no pre-prior Grep exposure. Usable factor review with disclosed narrative-attribution limitation."
+}

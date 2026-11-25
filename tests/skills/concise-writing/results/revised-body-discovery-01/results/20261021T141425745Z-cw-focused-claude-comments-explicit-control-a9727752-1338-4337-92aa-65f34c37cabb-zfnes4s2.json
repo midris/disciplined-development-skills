@@ -1,0 +1,184 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claude-body-focused-01-comments-explicit-control-2-1-assessment",
+  "assessed_at": "2026-10-21T14:15:31.667162+00:00",
+  "run_id": "20261021T141425745Z-cw-focused-claude-comments-explicit-control-a9727752-1338-4337-92aa-65f34c37cabb-zfnes4s2",
+  "condition": "control",
+  "assessor": {
+    "name": "Codex active session",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Same Codex controller authored/reviewed exposed development variants and directly judged complete outputs; no blind, held-out or independent assessor claim. Separate Opus review supplements this."
+  },
+  "manifest": {
+    "path": "skill-studies/concise-writing/runs/revised-body-discovery-01/preparation/manifests/claude-comments-explicit-manifest.json",
+    "sha256": "20bad94f4a15a2bcb697241d3cea13c4939569170b891b57b09b10589a2d3069",
+    "version": "1",
+    "git_revision": "22fbc374c7f66454db0100a9ed00f73a045dbead"
+  },
+  "evidence": [
+    {
+      "id": "output",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T141425745Z-cw-focused-claude-comments-explicit-control-a9727752-1338-4337-92aa-65f34c37cabb-zfnes4s2/workspace/fixture/uploader.py",
+        "sha256": "70fdd1ef3f4c3ffd85b7c44036f559276e77992d932b9f7591f42b144dc4c237",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T141425745Z-cw-focused-claude-comments-explicit-control-a9727752-1338-4337-92aa-65f34c37cabb-zfnes4s2/stdout.txt",
+        "sha256": "ad3191003a7d5d3811eeb60182d5a5b18678e9ebb5600c462ea595a809f2e3fd",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T141425745Z-cw-focused-claude-comments-explicit-control-a9727752-1338-4337-92aa-65f34c37cabb-zfnes4s2/result.json",
+        "sha256": "dd8bcb47c94b619734ffcdd856ff507b5d1341e41f0af445aa267cf5ca715497",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "log",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T141425745Z-cw-focused-claude-comments-explicit-control-a9727752-1338-4337-92aa-65f34c37cabb-zfnes4s2/runner.log",
+        "sha256": "55ad7413ef516a7c1f09699c8b5f2b1d84568a6b15e66d1fdb109b8ca7920659",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "final",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/subjects/20261021T141425745Z-cw-focused-claude-comments-explicit-control-a9727752-1338-4337-92aa-65f34c37cabb-zfnes4s2/final.txt",
+        "sha256": "c57c1495cd4f71d63bc8ad6fcfc284734d039249fa44858a370fcd0317b4526a",
+        "version": null
+      },
+      "selector": "Complete artifact"
+    },
+    {
+      "id": "source-0",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-comments/task.md",
+        "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5",
+        "version": null,
+        "git_revision": "dcb8aba30fcbb28563f6db6965d8abb607fd0d97"
+      },
+      "selector": "Complete frozen TASK.md"
+    },
+    {
+      "id": "source-1",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-comments/fixture/uploader.py",
+        "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1",
+        "version": null,
+        "git_revision": "dcb8aba30fcbb28563f6db6965d8abb607fd0d97"
+      },
+      "selector": "Complete frozen uploader.py"
+    },
+    {
+      "id": "source-2",
+      "artifact": {
+        "path": "skill-studies/concise-writing/cases/invocation-comments/fixture/MAINTAINER-NOTES.md",
+        "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847",
+        "version": null,
+        "git_revision": "dcb8aba30fcbb28563f6db6965d8abb607fd0d97"
+      },
+      "selector": "Complete frozen MAINTAINER-NOTES.md"
+    },
+    {
+      "id": "task-mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/mechanical/080.json",
+        "sha256": "d64c8f53ffd2d20016f77668489973a538180820f034afafd227f825e93ec515",
+        "version": null
+      },
+      "selector": "Complete saved parse/token or numeric/reply observation; no subject code execution"
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Fixed provider/model/CLI and retained inventory verified. No CW catalog/body exposure. Protected input bytes unchanged.",
+    "evidence": [
+      "mechanical",
+      "trace",
+      "log"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Tokens/syntax are unchanged. Comments correctly give four total attempts, temporary-send-only retry with other/fourth-failure propagation, and exactly one acknowledgement after acceptance outside retry handling, with acknowledgement errors propagating without resend.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Budget and handler scope are explicit, and the acknowledgement block explains accepted remote state and duplicate-upload risk. The complete artifact preserves the maintenance boundary without needing separate notes.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Three focused blocks put budget, failure-limit and acknowledgement guidance at their relevant operations. The66comment words provide supplied rationale and details rather than needless per-line narration.",
+      "consequence": "Required whole-artifact functional factor; length cannot offset failure.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Fixed provider/model/CLI and retained inventory verified. No CW catalog/body exposure. Protected input bytes unchanged. O4/O5 remain unscored; native D1 is distinct from functional outcome.",
+  "observations": [
+    {
+      "dimension": "functional",
+      "description": "Complete output 100 wc-w words; supplied TASK.md: 47 words, uploader.py: 48 words, MAINTAINER-NOTES.md: 136 words. Counts describe length, not semantic success; comment-only counts are reported separately for N4.",
+      "consequence": "Descriptive counts only.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    },
+    {
+      "dimension": "functional",
+      "description": "Control Claude comments2 distributes explanation across loop/handler/success locations and is fuller than the first skill outputs. It remains readable and useful; neither fewer blocks nor fewer words is required.",
+      "consequence": "Qualitative comparison is separate from threshold counts.",
+      "evidence": [
+        "output",
+        "source-0",
+        "source-1",
+        "source-2"
+      ]
+    }
+  ],
+  "uncertainty": []
+}

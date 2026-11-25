@@ -30,8 +30,9 @@ Run the full offline suite with `uv run --locked --offline pytest -q` from the s
 
 ## Trace a real decision
 
-The [Concise Writing adoption record](https://github.com/midris/disciplined-development-skills/blob/44766517c4550cd65c13c9fe0f489ac26efee1e0/skill-studies/concise-writing/protocol.md#closure-and-adoption) identifies the selected skill bytes and links the underlying comparisons.
-The discovery trial supported changing the description. The body comparisons found no consistent consequential benefit, so the owner retained the original body.
+The [Concise Writing adoption record](skills/concise-writing/README.md) identifies the selected skill bytes and links the underlying comparisons.
+The rewritten description improved Claude’s selection on comment edits and increased surplus Codex loading on numeric edits.
+It missed the trial’s prespecified advancement criterion. The owner accepted the trade-off and kept the original body after the body comparisons showed no consistent consequential benefit.
 The record also preserves the failed rollback instruction and identifies which skill combination was actually used for discovery.
 Use the same chain from evidence to decision when promoting subsequent skills.
 

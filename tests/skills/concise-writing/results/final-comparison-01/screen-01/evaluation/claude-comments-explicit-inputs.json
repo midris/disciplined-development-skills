@@ -1,0 +1,158 @@
+{
+  "name": "claude-comments-explicit",
+  "subject_provider": "claude",
+  "case": "comments-explicit",
+  "configuration": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/evaluation/configs/claude-comments-explicit.json",
+  "configuration_sha256": "94f7b7d8f49ff71f42dfa82fc7e47dfc5d877c7d64e2c0f92153215c1447280e",
+  "packet": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/claude-comments-explicit",
+  "outputs": 6,
+  "input_files": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/claude-comments-explicit/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json",
+      "sha256": "e18655377d169fd966a6b418a529f62f231496d05bcab7b3897aacd6c5459bd6"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/claude-comments-explicit/INTERPRETATION.md",
+      "target": "INTERPRETATION.md",
+      "sha256": "dfb3c05d7c5f345ecf7ea939ffbb131eb642df2dd93ee334e13e017fdd3f9df5"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/claude-comments-explicit/MECHANICAL-CHECKS.json",
+      "target": "MECHANICAL-CHECKS.json",
+      "sha256": "b1becfb4c0544bb89b5394fb9cca0c44f1cef6382b6658332d0b3ce2f73c3d4c"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/claude-comments-explicit/SETUP.md",
+      "target": "SETUP.md",
+      "sha256": "c72703762cfa9b2be16c09550e27b534fd378c68150004b8d039cbcc499df6bd"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/claude-comments-explicit/WORD-COUNTS.json",
+      "target": "WORD-COUNTS.json",
+      "sha256": "17a7e3967d4571b2e51fadcad67e9b505e30f55eb24857efd44f7b42da3ae426"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/claude-comments-explicit/criteria.md",
+      "target": "criteria.md",
+      "sha256": "dc682490e96bbc3776a8cb90fdfe9e5889795013a3dbdaf47df4490adb386229"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/claude-comments-explicit/outputs/original-body-1.py",
+      "target": "outputs/original-body-1.py",
+      "sha256": "cf07b23e48eade809d9706f1b580214c67797a07083b1bd17ee5c0f981118c57"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/claude-comments-explicit/outputs/original-body-2.py",
+      "target": "outputs/original-body-2.py",
+      "sha256": "b757e2d0b5f71fba296b20e0f30e1db63231ab232e2b6d83d5ca0c3615060199"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/claude-comments-explicit/outputs/original-body-3.py",
+      "target": "outputs/original-body-3.py",
+      "sha256": "81237dfd9bbe45c35a4f87e91fc7dad6b1f172fdda3e2c06faa75e0442946a7d"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/claude-comments-explicit/outputs/revised-body-1.py",
+      "target": "outputs/revised-body-1.py",
+      "sha256": "a9687866a96a00888f6e4da8f4490a08608581978847abe723301cae1ea7b8ba"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/claude-comments-explicit/outputs/revised-body-2.py",
+      "target": "outputs/revised-body-2.py",
+      "sha256": "1cab1866d1ba3b44921d061763f260da5623df19ba9483726c29b16bc349d61b"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/claude-comments-explicit/outputs/revised-body-3.py",
+      "target": "outputs/revised-body-3.py",
+      "sha256": "e63a34665f6a91a912a3087cef67a039a4c503509b18f1d1e85e1ed39dd784c2"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/claude-comments-explicit/policy.txt",
+      "target": "policy.txt",
+      "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/claude-comments-explicit/prior-assessment.md",
+      "target": "prior-assessment.md",
+      "sha256": "2dcd123c4851fd917858b988938691cb831de799fe140f8317403d0af171747d"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/claude-comments-explicit/sources/MAINTAINER-NOTES.md",
+      "target": "sources/MAINTAINER-NOTES.md",
+      "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/claude-comments-explicit/sources/TASK.md",
+      "target": "sources/TASK.md",
+      "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/review-inputs/claude-comments-explicit/sources/uploader.py",
+      "target": "sources/uploader.py",
+      "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+    }
+  ],
+  "source_audit": [
+    {
+      "run_id": "20261021T192936761Z-cw-final-claude-comments-explicit-revised-body-179e8c05-6ac3-4f88-a491-4bf9aa00114f-wahfnx0c",
+      "declared_non_skill_sources": [
+        "sources/uploader.py",
+        "sources/MAINTAINER-NOTES.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "a9687866a96a00888f6e4da8f4490a08608581978847abe723301cae1ea7b8ba"
+    },
+    {
+      "run_id": "20261021T193637217Z-cw-final-claude-comments-explicit-original-body-5e474484-7f58-46a5-8f20-e0ce2475fe49-iwhaxcva",
+      "declared_non_skill_sources": [
+        "sources/uploader.py",
+        "sources/MAINTAINER-NOTES.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "cf07b23e48eade809d9706f1b580214c67797a07083b1bd17ee5c0f981118c57"
+    },
+    {
+      "run_id": "20261021T193718128Z-cw-final-claude-comments-explicit-original-body-d1a6de95-f8a7-4aae-b670-47c33c712d42-sx5l0p7h",
+      "declared_non_skill_sources": [
+        "sources/uploader.py",
+        "sources/MAINTAINER-NOTES.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "b757e2d0b5f71fba296b20e0f30e1db63231ab232e2b6d83d5ca0c3615060199"
+    },
+    {
+      "run_id": "20261021T193818029Z-cw-final-claude-comments-explicit-revised-body-ce1cf2d0-db00-4ac3-b9b9-e2402752d4e3-buzvu051",
+      "declared_non_skill_sources": [
+        "sources/uploader.py",
+        "sources/MAINTAINER-NOTES.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "1cab1866d1ba3b44921d061763f260da5623df19ba9483726c29b16bc349d61b"
+    },
+    {
+      "run_id": "20261021T193852233Z-cw-final-claude-comments-explicit-revised-body-8f6afe52-2fa1-4edd-bac6-524c3e2abf6d-7k__l_sv",
+      "declared_non_skill_sources": [
+        "sources/uploader.py",
+        "sources/MAINTAINER-NOTES.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "e63a34665f6a91a912a3087cef67a039a4c503509b18f1d1e85e1ed39dd784c2"
+    },
+    {
+      "run_id": "20261021T193924939Z-cw-final-claude-comments-explicit-original-body-a30c3cdd-d31e-411b-bbb4-353c9650397e-ywvr_40c",
+      "declared_non_skill_sources": [
+        "sources/uploader.py",
+        "sources/MAINTAINER-NOTES.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "81237dfd9bbe45c35a4f87e91fc7dad6b1f172fdda3e2c06faa75e0442946a7d"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "configuration": "codex-long-handoff",
+  "required_complete_files": 19,
+  "outputs": 10,
+  "first_pass_event": 96,
+  "prior_read_event": 97,
+  "first_pass_sha256": "d55ea9432533ba4fde671591fb8ab7768e9ff281389e915fdd59be6fbb2ad562",
+  "first_pass_path": "skill-studies/concise-writing/runs/final-comparison-01/handoff-02/evaluation/codex-long-handoff-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261022/handoff-02/reviews/20261022T205710493Z-cw-suite-opus-codex-long-handoff-abc344c1-ea7e-4bce-8bfa-a2d89f37dd95-63kmy0hh/final.txt",
+  "final_sha256": "09e1c1ca7de1ae2e207474de4f22385fac327bb149e58c0cd6fdb2a102a642e6",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "pre_prior_grep_calls": [],
+  "semantic_completeness": "verified: complete first pass and final read manually; all ten full IDs, thirty factors, quotes/examples, counts and comparison checked against complete sources/outputs. All factors met; no post-prior factor or attribution correction. Review narrative overstatements are explicitly bounded below.",
+  "controller_qualifications": [
+    "The reviewer says every Rollback section retains a pointer. Original repetitions 2, 3 and 4 have no separate local pointer, but retain the opening orientation and independently usable Rollback safeguards. The controller does not adopt the universal local-pointer claim; F2 remains met.",
+    "The review calls the brief family disclosure a correction. The prompt names the active Codex assessor and says the reviewer shares the Claude subjects family in general; this Codex-only packet is correctly identified by setup/index. Actual reviewer/subject/assessor identities are unchanged.",
+    "The summary says each condition has one near-source output but immediately names two revised outputs; use the actual named pattern: original5 and revised1/2. Formatting alone is not reader quality.",
+    "Original4 All eighty is read as the observed completed sample rather than exactly eighty total attempts; no unsupported total-attempt or zero-failure conclusion is established. The contextual basis, not lack of action impact, supports F1.",
+    "The prior packet contains per-output active scores and notes, rather than the first-stage provider summary or earlier Opus judgments. The token-endpoint and revised3 account-confirmation observations are new relative to that supplied prior; their appearance in earlier historical reviews does not make this reviewer exposed."
+  ]
+}

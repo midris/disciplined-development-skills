@@ -1,0 +1,17 @@
+{
+  "configuration": "claude-long-handoff",
+  "required_complete_files": 23,
+  "outputs": 15,
+  "first_pass_event": 109,
+  "prior_read_event": 110,
+  "first_pass_sha256": "97ffa131d9be19be61361cd707ecf39d08a3d7e1bd8b3b43b3d7ae90f2ed30fa",
+  "first_pass_path": "skill-studies/concise-writing/runs/revised-body-discovery-01/evaluation/claude-long-handoff-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/reviews/20261021T175304682Z-cw-suite-opus-claude-long-handoff-de35b023-680c-47d7-98cc-9a322be91541-poycjxmu/final.txt",
+  "final_sha256": "b979f87fa73c1e7748ad05b8b6020a07544b761abf6b78fc4da1d549c78fa2ed",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "pre_prior_grep_calls": [],
+  "semantic_completeness": "verified: manually read all fifteen first-pass factor judgments, complete source-context evidence and final comparison; report artifacts are the functional scope; no pre-prior Grep calls or premature prior exposure."
+}

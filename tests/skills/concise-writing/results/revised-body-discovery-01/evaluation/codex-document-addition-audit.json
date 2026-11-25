@@ -1,0 +1,17 @@
+{
+  "configuration": "codex-document-addition",
+  "required_complete_files": 24,
+  "outputs": 15,
+  "first_pass_event": 96,
+  "prior_read_event": 97,
+  "first_pass_sha256": "5e2b0b66c4500476bab66df1aab0a2147ced06b556dd9028692e90ad6148e38d",
+  "first_pass_path": "skill-studies/concise-writing/runs/revised-body-discovery-01/evaluation/codex-document-addition-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/reviews/20261021T174122063Z-cw-suite-opus-codex-document-addition-6784a405-77ae-436c-b340-49e09dbdbafa-3podcx2v/final.txt",
+  "final_sha256": "143bd7aad2e987bd8de18a9f3f85f3d1b48850472fa20dbf30aeb9462d97bbcb",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "pre_prior_grep_calls": [],
+  "semantic_completeness": "verified: all15 outputs individually judged with evidence; full first-pass/final comparison and disputed full artifact inspected; no pre-prior exposure"
+}

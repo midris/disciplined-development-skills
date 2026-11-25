@@ -1,0 +1,17 @@
+{
+  "configuration": "claude-invocation-nonprose",
+  "required_complete_files": 38,
+  "outputs": 15,
+  "first_pass_event": 94,
+  "prior_read_event": 95,
+  "first_pass_sha256": "92d9ca5922dde368bed6967efc4a7153af3ee39332c0f2b053ccd3f5f6d7fc1b",
+  "first_pass_path": "skill-studies/concise-writing/runs/revised-body-discovery-01/evaluation/claude-invocation-nonprose-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/revised-body-discovery-20261018/reviews/20261021T181307295Z-cw-suite-opus-claude-invocation-nonprose-4d1085bb-8558-49e8-b36e-084f7eca9150-a2a0xvlb/final.txt",
+  "final_sha256": "826a86a816c60897cbccbeff81f919e7744c7ad4c2dee0835d393b4abc05f523",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "pre_prior_grep_calls": [],
+  "semantic_completeness": "verified: all fifteen numeric/full assistant-stream observations and final comparison manually inspected; no functional score assigned; baseline-commit caveat reconciled against frozen native wrapper and active trace, without claiming reviewer verified that excluded setup context; no pre-prior Grep exposure."
+}

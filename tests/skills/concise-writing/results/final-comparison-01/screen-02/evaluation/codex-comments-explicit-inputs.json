@@ -1,0 +1,218 @@
+{
+  "name": "codex-comments-explicit",
+  "subject_provider": "codex",
+  "case": "comments-explicit",
+  "configuration": "skill-studies/concise-writing/runs/final-comparison-01/screen-02/evaluation/configs/codex-comments-explicit.json",
+  "configuration_sha256": "3062a8317d36815e3d4322f0e48b2f68365a3fff66a1fac4695f8ac1b0cb38ff",
+  "packet": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/codex-comments-explicit",
+  "outputs": 10,
+  "input_files": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/codex-comments-explicit/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json",
+      "sha256": "121a84fa35a36b7b12461a6f6058bab6a1b191aa18ad3fd3ae5a2a369a3953bf"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/codex-comments-explicit/INTERPRETATION.md",
+      "target": "INTERPRETATION.md",
+      "sha256": "dfb3c05d7c5f345ecf7ea939ffbb131eb642df2dd93ee334e13e017fdd3f9df5"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/codex-comments-explicit/MECHANICAL-CHECKS.json",
+      "target": "MECHANICAL-CHECKS.json",
+      "sha256": "6281ba55ddcd83ea0331bbf4191bdc2e34047e966a2e038f74567145cc856dd3"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/codex-comments-explicit/SETUP.md",
+      "target": "SETUP.md",
+      "sha256": "ec75556bc64e9de7ef0ca76ef50fe2db02021e90c8a855901b6e08a854f4d81e"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/codex-comments-explicit/WORD-COUNTS.json",
+      "target": "WORD-COUNTS.json",
+      "sha256": "a2a285964ff93f1caab04f9f1c6fd1e0e38b3aab8937db396dceb7bce579f0ec"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/codex-comments-explicit/criteria.md",
+      "target": "criteria.md",
+      "sha256": "dc682490e96bbc3776a8cb90fdfe9e5889795013a3dbdaf47df4490adb386229"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/codex-comments-explicit/outputs/original-body-1.py",
+      "target": "outputs/original-body-1.py",
+      "sha256": "7475c172895621d6e42d2354c04a58d4d4898ce1abbd3ba9c244b1ade8b8f792"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/codex-comments-explicit/outputs/original-body-2.py",
+      "target": "outputs/original-body-2.py",
+      "sha256": "afa2b015db254278acc7642bf72ec7114a8c373504d8b90ffeb56f4e8a0703db"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/codex-comments-explicit/outputs/original-body-3.py",
+      "target": "outputs/original-body-3.py",
+      "sha256": "b67c985d5b0b0e3c5504d4a9979d74ac21f6620aa41d0534a1e15e2738e227cc"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/codex-comments-explicit/outputs/original-body-4.py",
+      "target": "outputs/original-body-4.py",
+      "sha256": "06a533df84f1bbe4939d0065a23e8a7ee6b7ae4bd2aaf98ad533397ec165be9c"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/codex-comments-explicit/outputs/original-body-5.py",
+      "target": "outputs/original-body-5.py",
+      "sha256": "78f81ca138181e390a9aa58aefa37b7978acbb12b2e82e144eda763dca673360"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/codex-comments-explicit/outputs/revised-body-1.py",
+      "target": "outputs/revised-body-1.py",
+      "sha256": "52b57ef19f81f4adc7c5e44f3470bba493cfd1dfac76c7388746423021454f12"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/codex-comments-explicit/outputs/revised-body-2.py",
+      "target": "outputs/revised-body-2.py",
+      "sha256": "75e931aee637d67bb6e03a4164cb760a5b1ac6dde2ba5f12677ff82fa2084961"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/codex-comments-explicit/outputs/revised-body-3.py",
+      "target": "outputs/revised-body-3.py",
+      "sha256": "3e7769f0631d6fe2f981d4bd9011f533e517138accd33a191886781e6bcd9356"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/codex-comments-explicit/outputs/revised-body-4.py",
+      "target": "outputs/revised-body-4.py",
+      "sha256": "3adc248eb7da66e8063861c376e48ebd85ae80707d61f16c7e869c44982bf4eb"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/codex-comments-explicit/outputs/revised-body-5.py",
+      "target": "outputs/revised-body-5.py",
+      "sha256": "9776c3e7c764486277b52fd6849dc9fe17e2ad0daea8900845d121b5762293c6"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/codex-comments-explicit/policy.txt",
+      "target": "policy.txt",
+      "sha256": "9f8125d86d72a368cc12bdbc4c64cc1d7ee188f604fc13130dcd9f8313981c33"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/codex-comments-explicit/prior-assessment.md",
+      "target": "prior-assessment.md",
+      "sha256": "868d0b81df2f0906c7711fc33d3cc9d2805abd5eb4815e9603c14edfcb5d8b34"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/codex-comments-explicit/sources/MAINTAINER-NOTES.md",
+      "target": "sources/MAINTAINER-NOTES.md",
+      "sha256": "59175ed2990a8b65636507ce2116321e70c60b1c0a2eea288d01e075252fc847"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/codex-comments-explicit/sources/TASK.md",
+      "target": "sources/TASK.md",
+      "sha256": "6a771f7383d14f7d77b02c862155da0b10af1e83cc72333512c5a83fde9523b5"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-02/review-inputs/codex-comments-explicit/sources/uploader.py",
+      "target": "sources/uploader.py",
+      "sha256": "2587771c1d7fee7e2ca72dbb1ff1a2594fff69775a72fff1929f437cce8ec2f1"
+    }
+  ],
+  "source_audit": [
+    {
+      "run_id": "20261021T192106786Z-cw-final-codex-comments-explicit-original-body-edd19c3e-6bef-49e2-9a55-881ecec9bc5b-0xrc7pdu",
+      "declared_non_skill_sources": [
+        "sources/uploader.py",
+        "sources/MAINTAINER-NOTES.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "7475c172895621d6e42d2354c04a58d4d4898ce1abbd3ba9c244b1ade8b8f792"
+    },
+    {
+      "run_id": "20261021T192300999Z-cw-final-codex-comments-explicit-revised-body-c4b7fa18-c41e-4264-aed1-5993195a94b2-k0fuy9bj",
+      "declared_non_skill_sources": [
+        "sources/uploader.py",
+        "sources/MAINTAINER-NOTES.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "52b57ef19f81f4adc7c5e44f3470bba493cfd1dfac76c7388746423021454f12"
+    },
+    {
+      "run_id": "20261021T192410997Z-cw-final-codex-comments-explicit-revised-body-e56a7e18-7ae7-4140-91f3-166dfb4bb2c5-hpdmjfq7",
+      "declared_non_skill_sources": [
+        "sources/uploader.py",
+        "sources/MAINTAINER-NOTES.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "75e931aee637d67bb6e03a4164cb760a5b1ac6dde2ba5f12677ff82fa2084961"
+    },
+    {
+      "run_id": "20261021T192531063Z-cw-final-codex-comments-explicit-original-body-6b2c3e11-e21d-4de2-99c4-c48b66a97ea8-rv61auqg",
+      "declared_non_skill_sources": [
+        "sources/uploader.py",
+        "sources/MAINTAINER-NOTES.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "afa2b015db254278acc7642bf72ec7114a8c373504d8b90ffeb56f4e8a0703db"
+    },
+    {
+      "run_id": "20261021T192718747Z-cw-final-codex-comments-explicit-original-body-a2d143cb-0b10-47af-960d-3846f2e2e5b5-zuv2m2zn",
+      "declared_non_skill_sources": [
+        "sources/uploader.py",
+        "sources/MAINTAINER-NOTES.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "b67c985d5b0b0e3c5504d4a9979d74ac21f6620aa41d0534a1e15e2738e227cc"
+    },
+    {
+      "run_id": "20261021T192825872Z-cw-final-codex-comments-explicit-revised-body-338ab5d0-873f-42e4-b15a-43511c02e320-ixuuc5fr",
+      "declared_non_skill_sources": [
+        "sources/uploader.py",
+        "sources/MAINTAINER-NOTES.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "3e7769f0631d6fe2f981d4bd9011f533e517138accd33a191886781e6bcd9356"
+    },
+    {
+      "run_id": "20261021T200649492Z-cw-final-codex-comments-explicit-revised-body-c51de4ad-202c-4d75-b7e2-4d2deeb6d65a-2jak535y",
+      "declared_non_skill_sources": [
+        "sources/uploader.py",
+        "sources/MAINTAINER-NOTES.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "3adc248eb7da66e8063861c376e48ebd85ae80707d61f16c7e869c44982bf4eb"
+    },
+    {
+      "run_id": "20261021T200908311Z-cw-final-codex-comments-explicit-original-body-e9af45d9-9301-4d20-b9ba-3301e778f166-vrdw03bo",
+      "declared_non_skill_sources": [
+        "sources/uploader.py",
+        "sources/MAINTAINER-NOTES.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "06a533df84f1bbe4939d0065a23e8a7ee6b7ae4bd2aaf98ad533397ec165be9c"
+    },
+    {
+      "run_id": "20261021T201009511Z-cw-final-codex-comments-explicit-original-body-f9ffc034-7d80-433f-9c82-bcbf26f615f5-8714jyaa",
+      "declared_non_skill_sources": [
+        "sources/uploader.py",
+        "sources/MAINTAINER-NOTES.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "78f81ca138181e390a9aa58aefa37b7978acbb12b2e82e144eda763dca673360"
+    },
+    {
+      "run_id": "20261021T201139611Z-cw-final-codex-comments-explicit-revised-body-ea37b06e-36cc-4950-9fa3-d2c1b6a7b172-ni9m6s9t",
+      "declared_non_skill_sources": [
+        "sources/uploader.py",
+        "sources/MAINTAINER-NOTES.md",
+        "sources/TASK.md"
+      ],
+      "source_hashes_match": true,
+      "output_sha256": "9776c3e7c764486277b52fd6849dc9fe17e2ad0daea8900845d121b5762293c6"
+    }
+  ]
+}

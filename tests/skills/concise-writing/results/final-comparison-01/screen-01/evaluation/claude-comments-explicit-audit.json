@@ -1,0 +1,17 @@
+{
+  "configuration": "claude-comments-explicit",
+  "required_complete_files": 16,
+  "outputs": 6,
+  "first_pass_event": 58,
+  "prior_read_event": 59,
+  "first_pass_sha256": "59186ad6d01a8a552b857e9a8fcdcea08af13ed6e812bc0f1a6b536770f1322a",
+  "first_pass_path": "skill-studies/concise-writing/runs/final-comparison-01/screen-01/evaluation/claude-comments-explicit-first-pass.md",
+  "final_path": "/Users/simon/work/personal/skill-study-private/concise-writing/final-comparison-20261021/screen-01/reviews/20261021T194521414Z-cw-suite-opus-claude-comments-explicit-cf92c699-37b0-4dd0-a8de-54342ed5121d-cwkcgs4c/final.txt",
+  "final_sha256": "34a2a9c25074deebae02ff9b608ac49433907201cc35973cc35ae6d3ef60aa50",
+  "inventory_verified": true,
+  "complete_delivery_before_first_pass": true,
+  "protected_inputs_verified": true,
+  "native_read_only_tools_verified": true,
+  "pre_prior_grep_calls": [],
+  "semantic_completeness": "verified: all six independent F1-F3 judgments and full final comparison manually checked against complete outputs; unique abbreviated IDs mapped to exact IDs. No prior exposure before first pass, no pre-prior Grep. Narrative less-explicit-output count slip retained/corrected in reconciliation; individual factors and attribution unchanged."
+}
