@@ -9,6 +9,9 @@ Each skill promotion carries the tested skill, runnable suite, decision record, 
 
 Continue study development on `codex/skill-testing-reset`. At each new study freeze, record the `main` revision and verify the shipped skill and relevant dependencies against it. This branch retains historical inputs and has diverged from the promoted runner and skill layout. Open each promotion PR from current `main` so it carries only the reviewed changes.
 
+The three adopted local skills match `main` at [`e2cf5dbf`](https://github.com/midris/disciplined-development-skills/commit/e2cf5dbfdfbf5f33397d17189b67e2431810ff16). Their [SHA-256 pins](../skill-studies/adopted-skills.sha256) also match the tested CW original-body combination, SSR complete-claim finalist and WER 604-word variant.
+From the repository root, run `shasum -a 256 -c skill-studies/adopted-skills.sha256` to verify the local copies before using them in another study.
+
 ## Current next action
 
 | Skill | State | Decision record |
