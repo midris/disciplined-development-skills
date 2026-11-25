@@ -806,3 +806,7 @@ Codex scope-trim repetition 2 put the daily commitments under â€œMonday launch.â
 All six export plans kept XML outside v1 pending stable partner approval and explained the customer wait. All six rename outputs preserved the billing explanation without adding a rationale for the rename. All six dispatch projects explained both the collection risk and the loaded-parcel exception. All attributed the address-check status to the carrier, which the source establishes only for the manual hold. This recurring fidelity observation did not change the planner decision.
 
 All eight combinations qualify for consideration at five under the frozen rule. The Codex scope error was isolated and also observed with shipped WER. The other five three-run combinations qualified at the previous checkpoint; Codex repeated review already has five. A full top-up would therefore require 26 more subjects and up to four eligible catalog readers. No further calls are allocated here.
+
+### Five-run broader candidate comparison
+
+The owner approved the [26-subject top-up](runs/rewrite-broad-05/schedule.json) and up to four eligible catalog readers. Use the same candidate, inputs, configuration, criteria and scoring policy as the preceding repetitions. Keep all attempts with zero replacements. Codex repeated review already has five observations. Compare all seven scenarios on both providers, keeping setup, task correctness, rationale and reader decisions distinct. Report before the independent cross-model review or adoption decision.
