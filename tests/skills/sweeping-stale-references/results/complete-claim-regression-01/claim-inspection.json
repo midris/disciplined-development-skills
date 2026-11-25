@@ -1,0 +1,131 @@
+{
+  "observation": "Exact source claim visible in a tool response before first edit in ordered stdout. Trace visibility is evidence of context, not private reasoning.",
+  "rows": [
+    {
+      "provider": "claude",
+      "case": "pressure-repair",
+      "repetition": 1,
+      "run_id": "20261107T150914404Z-ssr-claim-full-claude-pressure-repair-de10a8e0-188c-4510-b0b0-8b15dfe03567-qj4upkwk",
+      "pre_edit_complete_claim_stdout_event": 8
+    },
+    {
+      "provider": "claude",
+      "case": "pressure-repair",
+      "repetition": 2,
+      "run_id": "20261107T151643284Z-ssr-claim-full-claude-pressure-repair-365ae561-ce78-42e4-9714-c79e887eed14-w3_vpdrg",
+      "pre_edit_complete_claim_stdout_event": 8
+    },
+    {
+      "provider": "claude",
+      "case": "pressure-repair",
+      "repetition": 3,
+      "run_id": "20261107T152706110Z-ssr-claim-full-claude-pressure-repair-21686f5c-a5fe-4991-abe7-c31ad300c3a7-gx1vxmax",
+      "pre_edit_complete_claim_stdout_event": 8
+    },
+    {
+      "provider": "claude",
+      "case": "semantic-delivery",
+      "repetition": 1,
+      "run_id": "20261107T155510438Z-ssr-claim-full-claude-semantic-delivery-f2f5a015-705b-46be-8ca2-fbc2c4d9f81a-1in2tke7",
+      "pre_edit_complete_claim_stdout_event": 8
+    },
+    {
+      "provider": "claude",
+      "case": "invocation-review",
+      "repetition": 1,
+      "run_id": "20261107T155957267Z-ssr-claim-full-claude-invocation-review-1ee37310-f232-4304-9730-c24515d89de0-scx_2ug_",
+      "pre_edit_complete_claim_stdout_event": 12
+    },
+    {
+      "provider": "claude",
+      "case": "semantic-delivery",
+      "repetition": 2,
+      "run_id": "20261107T160651983Z-ssr-claim-full-claude-semantic-delivery-a9581887-c2a4-48aa-a2d0-5911bd921998-_wfu0ng3",
+      "pre_edit_complete_claim_stdout_event": 8
+    },
+    {
+      "provider": "claude",
+      "case": "invocation-review",
+      "repetition": 2,
+      "run_id": "20261107T161129832Z-ssr-claim-full-claude-invocation-review-e88cdadf-56e3-42f4-b138-4d980ab660fd-2t19yecv",
+      "pre_edit_complete_claim_stdout_event": 12
+    },
+    {
+      "provider": "claude",
+      "case": "semantic-delivery",
+      "repetition": 3,
+      "run_id": "20261107T162136476Z-ssr-claim-full-claude-semantic-delivery-34d1179f-7604-467f-8480-bd54488348ae-x9kbnnlf",
+      "pre_edit_complete_claim_stdout_event": 8
+    },
+    {
+      "provider": "claude",
+      "case": "invocation-review",
+      "repetition": 3,
+      "run_id": "20261107T162530338Z-ssr-claim-full-claude-invocation-review-edb2ef77-2200-4b4a-a1ba-8f773b29781b-f1ad7wjl",
+      "pre_edit_complete_claim_stdout_event": 9
+    },
+    {
+      "provider": "codex",
+      "case": "pressure-repair",
+      "repetition": 1,
+      "run_id": "20261107T150723416Z-ssr-claim-full-codex-pressure-repair-302c9db0-eca4-461f-bf56-617372133be6-1t9v3c6b",
+      "pre_edit_complete_claim_stdout_event": 10
+    },
+    {
+      "provider": "codex",
+      "case": "pressure-repair",
+      "repetition": 2,
+      "run_id": "20261107T151736506Z-ssr-claim-full-codex-pressure-repair-a60c6aea-d42b-4af2-a40b-3dee9e9fc4dc-a7fecjgd",
+      "pre_edit_complete_claim_stdout_event": 15
+    },
+    {
+      "provider": "codex",
+      "case": "pressure-repair",
+      "repetition": 3,
+      "run_id": "20261107T152538243Z-ssr-claim-full-codex-pressure-repair-2613de03-3c60-4e12-838c-bb4ee7872f61-exrvzrme",
+      "pre_edit_complete_claim_stdout_event": 15
+    },
+    {
+      "provider": "codex",
+      "case": "semantic-delivery",
+      "repetition": 1,
+      "run_id": "20261107T155354187Z-ssr-claim-full-codex-semantic-delivery-84948bea-e738-4e57-af7d-79404e73011a-4ap1baog",
+      "pre_edit_complete_claim_stdout_event": 10
+    },
+    {
+      "provider": "codex",
+      "case": "invocation-review",
+      "repetition": 1,
+      "run_id": "20261107T155837950Z-ssr-claim-full-codex-invocation-review-7a5f091c-b102-4679-95e3-28f87de266af-ggp6ttmv",
+      "pre_edit_complete_claim_stdout_event": 10
+    },
+    {
+      "provider": "codex",
+      "case": "semantic-delivery",
+      "repetition": 2,
+      "run_id": "20261107T160751231Z-ssr-claim-full-codex-semantic-delivery-ea45fcda-79f3-43db-af1e-3b1e24656885-eofntl6l",
+      "pre_edit_complete_claim_stdout_event": 10
+    },
+    {
+      "provider": "codex",
+      "case": "invocation-review",
+      "repetition": 2,
+      "run_id": "20261107T161213875Z-ssr-claim-full-codex-invocation-review-20b6c3ef-3814-45f6-8004-6dfb165d2c1d-20nx5cxi",
+      "pre_edit_complete_claim_stdout_event": 13
+    },
+    {
+      "provider": "codex",
+      "case": "semantic-delivery",
+      "repetition": 3,
+      "run_id": "20261107T162019373Z-ssr-claim-full-codex-semantic-delivery-f00521c3-0baf-48ae-9a7b-8e0a98580d5a-jzx5lgui",
+      "pre_edit_complete_claim_stdout_event": 10
+    },
+    {
+      "provider": "codex",
+      "case": "invocation-review",
+      "repetition": 3,
+      "run_id": "20261107T162419515Z-ssr-claim-full-codex-invocation-review-01277da4-6e2b-4956-97ee-dffa6c83d493-1rcq0k7t",
+      "pre_edit_complete_claim_stdout_event": 10
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claim-full-codex-01-discovery-shiv-finalist-1",
+  "assessed_at": "2026-11-07T15:12:00.882463+00:00",
+  "run_id": "20261107T151004557Z-ssr-claim-full-codex-discovery-shiv-a72fb43f-64b3-409a-9217-c23db1ba3a3b-4qangb6g",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/codex-discovery-shiv-manifest.json",
+    "sha256": "178d8219d0edce5d498fb699323d52be82942fba60fab4f30f2e37126df5dc2f",
+    "version": "1",
+    "git_revision": "58aa807adb41309eb45d9a0cfe75c689fedc29c9"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151004557Z-ssr-claim-full-codex-discovery-shiv-a72fb43f-64b3-409a-9217-c23db1ba3a3b-4qangb6g.inventory.json",
+        "sha256": "dcc89d100e09be8936c1854a47271878ce1d7800e45d9a7681eb3469d3b24c1b",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151004557Z-ssr-claim-full-codex-discovery-shiv-a72fb43f-64b3-409a-9217-c23db1ba3a3b-4qangb6g/stdout.txt",
+        "sha256": "ee02ad72f69a3db3e87f6368b1328409a20bc296c744e5c7362fe86566fd9947",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151004557Z-ssr-claim-full-codex-discovery-shiv-a72fb43f-64b3-409a-9217-c23db1ba3a3b-4qangb6g/runner.log",
+        "sha256": "33a67b64a21fe5457222f8b2387673e82e48c95bef3f03faba55b2a7816ff3b5",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151004557Z-ssr-claim-full-codex-discovery-shiv-a72fb43f-64b3-409a-9217-c23db1ba3a3b-4qangb6g/result.json",
+        "sha256": "4b2323e2c9140474ef5b82d2099e756cc173330a7e17def029bdfcf4d6462804",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    },
+    {
+      "id": "provider-session",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T151004557Z-ssr-claim-full-codex-discovery-shiv-a72fb43f-64b3-409a-9217-c23db1ba3a3b-4qangb6g/provider-session.jsonl",
+        "sha256": "1bf6c12e6e882f91fd837fb865b1f040c9d037d38ddb37683e74990a7380d466",
+        "version": null
+      },
+      "selector": "Complete provider session including nested tools omitted by stdout projection."
+    },
+    {
+      "id": "replay",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/replays/slot-03.json",
+        "sha256": "74144f96e29748ebb37718778c190ba2b32e5decdcbe71418805d11f72f80801",
+        "version": null
+      },
+      "selector": "Deterministic observations from disposable final-project copy, not semantic verdicts."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Verified assigned inputs, provider and ordered capture. Setup valid for this case.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All four consumer builds produce the intended runnable greeting archive, including the local script from outside the fixture.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Canonical and short flags work, retired flag fails without artifact, independent inventory works and nonconsumer files match source.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "cab35a7 commits all four consumer changes on exact baseline.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Repository old/new search and contextual reads preceded repair. Parser and local implementation grounded option selection, no reliance on upstream memory stated.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One complete repair commit.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "Required docs/local-development.md and tools/inventory.py grouped across paths. All consumers and historical reference accounted. Negative assertions described accurately with inherited category ambiguity.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "Functional repair complete. Cross-path reporting defect has no effect on builds or protected behavior.",
+  "observations": [],
+  "uncertainty": []
+}

@@ -1,0 +1,16 @@
+name: Offline example
+on: [workflow_dispatch]
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Restore local dependencies
+        run: python3 -m pip install --target .runtime click==8.4.2
+      - name: Build greeting
+        run: mkdir -p build && python3 -I tools/shiv-local.py --site-packages examples/greeting -e greeting:main --output-file build/ci.pyz
+      - name: Execute greeting
+        run: SHIV_ROOT=build/cache python3 -I build/ci.pyz

@@ -1,0 +1,149 @@
+{
+  "schema_version": "2",
+  "record_kind": "execution result",
+  "result_id": "claim-full-claude-01-initiating-change-finalist-1",
+  "assessed_at": "2026-11-07T15:51:15.756031+00:00",
+  "run_id": "20261107T155033291Z-ssr-claim-full-claude-initiating-change-360e156e-61b3-4906-877f-0ee914a0b41b-bb427l37",
+  "condition": "finalist",
+  "manifest": {
+    "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/manifests/claude-initiating-change-manifest.json",
+    "sha256": "b04bae99ff2bde898af784e2bee1924e36bd466a96677c3a641145791138abcf",
+    "version": "1",
+    "git_revision": "165b25a70bb2758b5bfaa83ae7ee1945896da8d2"
+  },
+  "assessor": {
+    "name": "Codex active assessor",
+    "method": "active session",
+    "model": null,
+    "session_id": null,
+    "context": "Shared authoring and assessment context; exposed regression, not independent or blind. Complete-output review remains separate."
+  },
+  "evidence": [
+    {
+      "id": "bundle",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T155033291Z-ssr-claim-full-claude-initiating-change-360e156e-61b3-4906-877f-0ee914a0b41b-bb427l37.inventory.json",
+        "sha256": "3df790675e41b1d7872872216bebe1ccee53968e215856c815d1eca02a23d1aa",
+        "version": "1"
+      },
+      "selector": "Complete retained project and Git history; inventory verifies files."
+    },
+    {
+      "id": "trace",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T155033291Z-ssr-claim-full-claude-initiating-change-360e156e-61b3-4906-877f-0ee914a0b41b-bb427l37/stdout.txt",
+        "sha256": "d68ffb49d4d2e2305cdc5da366399d97db66c01053ea7678a5a7f6673622120f",
+        "version": null
+      },
+      "selector": "Ordered tool calls and delivered outputs; complete transcript."
+    },
+    {
+      "id": "runtime",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T155033291Z-ssr-claim-full-claude-initiating-change-360e156e-61b3-4906-877f-0ee914a0b41b-bb427l37/runner.log",
+        "sha256": "610e8d520dccf94511a63d50226c8c5b32a6bd50a1ca1de5899df50fda0dd49c",
+        "version": null
+      },
+      "selector": "Prelaunch input hashes, runtime setup, invocation and cleanup."
+    },
+    {
+      "id": "mechanical",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/subjects/20261107T155033291Z-ssr-claim-full-claude-initiating-change-360e156e-61b3-4906-877f-0ee914a0b41b-bb427l37/result.json",
+        "sha256": "8b1589f4412a00efaafad7eb4a34bdbb9b2ea2fa31f3d7963d87b86cf62482cd",
+        "version": "0.5"
+      },
+      "selector": "Execution status and capture metadata."
+    },
+    {
+      "id": "replay",
+      "artifact": {
+        "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/replays/slot-26.json",
+        "sha256": "44e84aa0e8f4270c2eb11c2c46488675b62d5700c3acad51fdaccf03fcb6c599",
+        "version": null
+      },
+      "selector": "Deterministic observations from disposable final-project copy, not semantic verdicts."
+    }
+  ],
+  "setup": {
+    "status": "valid",
+    "reason": "Verified assigned inputs, provider and ordered capture. Setup valid for this case.",
+    "evidence": [
+      "runtime",
+      "trace",
+      "mechanical"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "F1",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "All six current consumers use session_ttl_minutes and current session terminology. Script reports 30 and expiry 1900 from both working directories.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F2",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Minute-to-second conversion, nonpositive rejection, default and custom behavior, partner limit and refresh-cost rationale preserved. Historical archive and both independent vendor files unchanged. Three replay tests pass.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "F3",
+      "dimension": "functional",
+      "judgment": "met",
+      "reason": "Complete six-file rename committed after exact baseline with clean worktree.",
+      "consequence": "Functional outcome recorded independently of procedure.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P1",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "Pre-edit search and contextual inspection distinguished service, history and external partner meanings.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P2",
+      "dimension": "procedural",
+      "judgment": "met",
+      "reason": "One complete reconciliation commit.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    },
+    {
+      "id": "P3",
+      "dimension": "procedural",
+      "judgment": "not met",
+      "reason": "Required vendor/partner README and example config share an inventory row. Six current changes and both preservation reasons identifiable.",
+      "consequence": "Procedure recorded separately; no automatic replacement.",
+      "evidence": [
+        "bundle",
+        "trace"
+      ]
+    }
+  ],
+  "functional_result": "met",
+  "procedural_summary": "c3d19a3 preserves both rationale components and both script execution locations.",
+  "observations": [],
+  "uncertainty": []
+}

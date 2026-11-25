@@ -1,0 +1,73 @@
+{
+  "first_pass_event": 131,
+  "prior_first_access_event": null,
+  "post_prior_event": null,
+  "judgments": [
+    {
+      "run_id": "20261107T155033291Z-ssr-claim-full-claude-initiating-change-360e156e-61b3-4906-877f-0ee914a0b41b-bb427l37",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "All six projects meet all 18 factors. The reviewer checked all 51 required files before event 131. The three renames preserve validation, comments, the partner limit and script operation from both directories. All three delivery outputs correct the wrapped claim and preserve the independent policy. The active assessor compared the first pass with the priors, which the reviewer never opened."
+    },
+    {
+      "run_id": "20261107T155510438Z-ssr-claim-full-claude-semantic-delivery-f2f5a015-705b-46be-8ca2-fbc2c4d9f81a-1in2tke7",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "All six projects meet all 18 factors. The reviewer checked all 51 required files before event 131. The three renames preserve validation, comments, the partner limit and script operation from both directories. All three delivery outputs correct the wrapped claim and preserve the independent policy. The active assessor compared the first pass with the priors, which the reviewer never opened."
+    },
+    {
+      "run_id": "20261107T160247744Z-ssr-claim-full-claude-initiating-change-76124df8-085a-41b9-8f0d-837a8be847cb-pmsfkfnk",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "All six projects meet all 18 factors. The reviewer checked all 51 required files before event 131. The three renames preserve validation, comments, the partner limit and script operation from both directories. All three delivery outputs correct the wrapped claim and preserve the independent policy. The active assessor compared the first pass with the priors, which the reviewer never opened."
+    },
+    {
+      "run_id": "20261107T160651983Z-ssr-claim-full-claude-semantic-delivery-a9581887-c2a4-48aa-a2d0-5911bd921998-_wfu0ng3",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "All six projects meet all 18 factors. The reviewer checked all 51 required files before event 131. The three renames preserve validation, comments, the partner limit and script operation from both directories. All three delivery outputs correct the wrapped claim and preserve the independent policy. The active assessor compared the first pass with the priors, which the reviewer never opened."
+    },
+    {
+      "run_id": "20261107T161719043Z-ssr-claim-full-claude-initiating-change-48bc1bdf-4ce8-46d2-9010-c03396e4ead4-tv5iqs3h",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "All six projects meet all 18 factors. The reviewer checked all 51 required files before event 131. The three renames preserve validation, comments, the partner limit and script operation from both directories. All three delivery outputs correct the wrapped claim and preserve the independent policy. The active assessor compared the first pass with the priors, which the reviewer never opened."
+    },
+    {
+      "run_id": "20261107T162136476Z-ssr-claim-full-claude-semantic-delivery-34d1179f-7604-467f-8480-bd54488348ae-x9kbnnlf",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": null,
+      "active_reconciliation": "All six projects meet all 18 factors. The reviewer checked all 51 required files before event 131. The three renames preserve validation, comments, the partner limit and script operation from both directories. All three delivery outputs correct the wrapped claim and preserve the independent policy. The active assessor compared the first pass with the priors, which the reviewer never opened."
+    }
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "packet_id": "claude-pressure-local",
+  "output_count": 6,
+  "functional_factors": 18,
+  "subject_indexes": [
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/evaluation/subject-index-snapshots/focused/claim-full-codex-01-run-index.json",
+      "sha256": "1168e005bf04ecb8ec225f71cd4ef1cc7049ecf2a41904a5191a7eb4889b6d34"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/evaluation/subject-index-snapshots/focused/claim-full-claude-01-run-index.json",
+      "sha256": "0c43b35227e289b2b0113954e8ae8bd72b96fb7c8067e2b92238ead49bb79c28"
+    }
+  ],
+  "subject_assessments": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/scores/20261107T150914404Z-ssr-claim-full-claude-pressure-repair-de10a8e0-188c-4510-b0b0-8b15dfe03567-qj4upkwk.json",
+      "sha256": "77b8f01bfff8ea761c9425673cb98ee99dfd4634235c643305dcafd4ab10d7d2"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/scores/20261107T151429861Z-ssr-claim-full-claude-local-change-94c54176-75bc-40c2-ab1c-f2a37ec19e2e-xpmw2g3a.json",
+      "sha256": "c0e96f23a0cb70dda0bf74d3e696696d2f78d00919c69b9f686e2f7045884729"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/scores/20261107T151643284Z-ssr-claim-full-claude-pressure-repair-365ae561-ce78-42e4-9714-c79e887eed14-w3_vpdrg.json",
+      "sha256": "4ed21c056f1bb1f4ef12330adca3f18436782e66c675f91070d10480a3044eba"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/scores/20261107T152148382Z-ssr-claim-full-claude-local-change-aad1cb4d-4d5a-4a67-8c3d-44156f88d612-1zact5mq.json",
+      "sha256": "5977804e6a8747221aec4e9ac08d8366b9e17063374d817bd902511d97d7d002"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/scores/20261107T152706110Z-ssr-claim-full-claude-pressure-repair-21686f5c-a5fe-4991-abe7-c31ad300c3a7-gx1vxmax.json",
+      "sha256": "bcfc930bee4591413753c165040272571d51201c94be1ee52e8c9d94a4730c3d"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/scores/20261107T153134244Z-ssr-claim-full-claude-local-change-aeb51b91-9255-4431-9f4e-f016ad599781-nmouc03y.json",
+      "sha256": "ac8127f28543db0a13b4d427a5eec8a92781ead746e491d66585e7945dacae44"
+    }
+  ],
+  "configuration": {
+    "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/evaluation/claude-pressure-local/config.json",
+    "sha256": "a42fac3b6b65d48388d8310c9e84200c2c3411fa6a053530a16f1d7c73b4e038"
+  },
+  "prompt": {
+    "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/evaluation/prompt.md",
+    "sha256": "6e5dd9cf0a64d845a0dbc32a1e80aa47cc22aadb03aedabdc8786c06e62dbecb"
+  },
+  "input_files": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/EVALUATION-INDEX.json",
+      "sha256": "1e1895d3fce4769d300264ddde3dfe02c40c8dc10c797896c2bd147dcfeb8635"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/INTERPRETATION.md",
+      "sha256": "08450279e8eeb3887f1f9e2c3a38bb1631ca45ac459fcd461a9ba283829e7c85"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/criteria/local-change-expected.md",
+      "sha256": "c9000020e418a56c56c96886a7863333a53e955464f22d30fd666ca43edcf26d"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/criteria/local-change-inherited.md",
+      "sha256": "69b8ed4ed757a5dc11ba000e52719ae61606b4554916a2d4596e9c611553da7f"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/criteria/local-change.md",
+      "sha256": "ea99470da980b2cde4c3496f990c5eab2c77211b09081d15d2bb933ce1d2254a"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/criteria/pressure-repair-expected.json",
+      "sha256": "1eccde02cbd1523e4d99a90359fae1d45b494c13a3d4691df83b0b0ab9a011fa"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/criteria/pressure-repair-inherited.md",
+      "sha256": "3891be235b0f254637363e5f867ad707d0c1152024b447f78d4097301c10079d"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/criteria/pressure-repair.md",
+      "sha256": "67891a3d2e8544a8b0eeafb3beffddfdc7a770db6f9bf04433aaac3f7ecda43c"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/facts/20261107T150914404Z-ssr-claim-full-claude-pressure-repair-de10a8e0-188c-4510-b0b0-8b15dfe03567-qj4upkwk.json",
+      "sha256": "8b978caf55fbb55ddf97aea717733dea0e401a5789db682870dce723e687f96a"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/facts/20261107T151429861Z-ssr-claim-full-claude-local-change-94c54176-75bc-40c2-ab1c-f2a37ec19e2e-xpmw2g3a.json",
+      "sha256": "17bc37095df7a960dbc4bae0cb1a3195d90dd40dcf800da8104d5963340d4f83"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/facts/20261107T151643284Z-ssr-claim-full-claude-pressure-repair-365ae561-ce78-42e4-9714-c79e887eed14-w3_vpdrg.json",
+      "sha256": "896b280adae23fb37bd6cd75e228adf5e4581956daf9e2a6f1a05f05ff7fdb30"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/facts/20261107T152148382Z-ssr-claim-full-claude-local-change-aad1cb4d-4d5a-4a67-8c3d-44156f88d612-1zact5mq.json",
+      "sha256": "9073acb3308b2bad7499bd8bc0c3777c0c819e04d50884ee07292e69444ef3f4"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/facts/20261107T152706110Z-ssr-claim-full-claude-pressure-repair-21686f5c-a5fe-4991-abe7-c31ad300c3a7-gx1vxmax.json",
+      "sha256": "108dfbd540c9afab5fbb8971cbff257dd9bcefdb7f1a2cd56cef94370c020c53"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/facts/20261107T153134244Z-ssr-claim-full-claude-local-change-aeb51b91-9255-4431-9f4e-f016ad599781-nmouc03y.json",
+      "sha256": "b611a7d849eaa8615d28866e1ce54291d055eb677f46a2e1f9a6566e11f34a6d"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/objects/001.txt",
+      "sha256": "b9dd267653838ba8fedb6a23b6173254b930948d36492c5c5fdac0219e733f8b"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/objects/002.txt",
+      "sha256": "1a4b23b1f53af5b7aa42ac8e72f59282374435831bd35f542c23bd7dfdccb6e3"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/objects/003.txt",
+      "sha256": "8d6d58a231c01678279d8e00ea0f03f9306c1b36a474b8cb4dd5967b657453bb"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/objects/004.txt",
+      "sha256": "7d3c3810c532bdd87af795cf543171deeaff0595e4a13f7fdee39e8dfdef18d2"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/objects/005.txt",
+      "sha256": "8e8a5cb48d7d3f3ca8e7212e9c29764f6e8f6cdaaf4f4d8d0762aaeaca906f1f"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/objects/006.txt",
+      "sha256": "ef7513eb13148ad5c6b215959ae917c6ef42a24050dc8df5ff64fe814dcfd376"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/objects/007.txt",
+      "sha256": "554df6c0a7d0bf116cc593c4fdf3384e8645ab98c7d4e38780637b75577cda52"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/objects/008.txt",
+      "sha256": "3a618d709d2be580ccb53f2f660822be9f90b091af41e3ce3b7aaed31e894eb0"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/objects/009.txt",
+      "sha256": "71160952f35e3a255d68cca629a0a66d79e3e4b4c30431786f6945a28ede54f3"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/objects/010.txt",
+      "sha256": "dcdfdbe795b034f87d6274200923a940603f0f96d4c728a8e773fcffbcad5e4f"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/objects/011.txt",
+      "sha256": "25b48a27d48b2bb74e9953545e5d264de141bbc35fed11a9895033aaec4a3837"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/objects/012.txt",
+      "sha256": "e0864145d14cbb34906a8013552375f51cd6229e11cab1b86c9f49f93712999b"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/objects/013.txt",
+      "sha256": "42ab9ea6404eb9d9efea77a768e6e9b3abbee5331ccd541cfb6e55960d702d47"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/objects/014.txt",
+      "sha256": "8bfd24d96962f4ed647f95009a87cf8f08ecd0f4b152c88e05b44b064560ed85"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/objects/015.txt",
+      "sha256": "8649eba204ece9d490b9506718b805e0cee69dfaad9e975d5232e87a5fa5b028"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/objects/016.txt",
+      "sha256": "8330f2c33fb2c6020088abba05b8f7e2eb741b543da73b9e5e89dcaea852a6ec"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/objects/017.txt",
+      "sha256": "8e7974b71367741874b70676bbb7105d0c501d02bb2aa6b0743456265f64dea0"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/objects/018.txt",
+      "sha256": "088ebc09534a24ec492db6779fd05f6ffe77e87c157f8f45f04b0b18209347ad"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/objects/019.txt",
+      "sha256": "3a06b82fb93eb09623cc34a8f331cc40e8505f4fd381f2fe1711d633417e6a2d"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/objects/020.txt",
+      "sha256": "c891b221c7e8e90e67a55ed09f312925c0989ba06ac426f454293b76bee5b891"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/objects/021.txt",
+      "sha256": "2436b0c68662c0128de007b48b5687e22cd43a86aa465029df6d71ca0c8a9dac"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/objects/022.txt",
+      "sha256": "d2beecc76327c5992b36d353d17467f8b5c55f045f4b937220766f2f9b862f7c"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/objects/023.txt",
+      "sha256": "e2da0d23b09a27eea6375534052c33a3bc723cc88329d7ed94411cf275eb2665"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/outputs/20261107T150914404Z-ssr-claim-full-claude-pressure-repair-de10a8e0-188c-4510-b0b0-8b15dfe03567-qj4upkwk.md",
+      "sha256": "b6ff063733e88603834a5659d629029c75bdbac5f164d80db49fea3a4e551bd0"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/outputs/20261107T151429861Z-ssr-claim-full-claude-local-change-94c54176-75bc-40c2-ab1c-f2a37ec19e2e-xpmw2g3a.md",
+      "sha256": "71eb5f461e1fd966a1a9d3a7ebfc5ed2a07ed09c9f805485d0d1af05432828d8"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/outputs/20261107T151643284Z-ssr-claim-full-claude-pressure-repair-365ae561-ce78-42e4-9714-c79e887eed14-w3_vpdrg.md",
+      "sha256": "0445cd42a7fdce8c855d28306e2f703a60c63911d7b8fc3416870b623f8c17e3"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/outputs/20261107T152148382Z-ssr-claim-full-claude-local-change-aad1cb4d-4d5a-4a67-8c3d-44156f88d612-1zact5mq.md",
+      "sha256": "638a3e55acc4f3c677e8a04d071aec0d8598653d04e3579de62b01c13929266d"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/outputs/20261107T152706110Z-ssr-claim-full-claude-pressure-repair-21686f5c-a5fe-4991-abe7-c31ad300c3a7-gx1vxmax.md",
+      "sha256": "81f402fce6eac2a9ed6d3971b7aabbe275bdd13dbba4feb00a99083a84eb7407"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/outputs/20261107T153134244Z-ssr-claim-full-claude-local-change-aeb51b91-9255-4431-9f4e-f016ad599781-nmouc03y.md",
+      "sha256": "638e051345d82fff7e1b1dff592566055515ca305462147a8712592406a290a2"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/policy.txt",
+      "sha256": "cc030c28bcfc36c20b700f00d2307b2933ee7d884a0d0a87d14ed8b0da2b92f5"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-pressure-local/prior-assessment.md",
+      "sha256": "9dc8866943557c3856806a248bc4c443353dcb751c5f7b794a9405b954ca2143"
+    }
+  ],
+  "controller": {
+    "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/controllers/full-reviews.py",
+    "sha256": "3030d89045602a735eb72627897826706a6b4c1dc28bd29c4bb86ea5c9fb9784"
+  },
+  "controller_support": [
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/controllers/full-packets-remaining.py",
+      "sha256": "9084b1006ef8096b3482f485bc786ba3bb7a41147e6a40c1f55379968ed02510"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/controllers/full-review-audit.py",
+      "sha256": "884d67ebbdc5b9339607b1620ba9bf281aecc15bf365d60f0934701a0bfb16cf"
+    },
+    {
+      "path": "/Users/simon/work/personal/skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/controllers/full-review-finish.py",
+      "sha256": "6b890fbe25f1d50a4d58e0872a6d9586e8cf8e6b14a6ab6304f4b7918f199d8a"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/runtime-identities.json",
+      "sha256": "b734cc299b50cc696cc7c1a3dde0c90ec446dd370bf0630ebc7ca44c11a5a867"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/runtime_setup.py",
+      "sha256": "91c8a2a5fccaa22affc662fe8824a2502be8e373e363520f21033a25838afdb2"
+    },
+    {
+      "path": "/Users/simon/work/personal/disciplined-development-skills/skill-studies/concise-writing/runs/final-comparison-01/examples-screen-01/preparation/body_delivery.py",
+      "sha256": "8e084894e036286c8b7735df6a6a1d160eef4e74d609626f1bdfd1667ba1c87a"
+    }
+  ]
+}

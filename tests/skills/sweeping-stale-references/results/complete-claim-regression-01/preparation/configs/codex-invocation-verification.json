@@ -1,0 +1,61 @@
+{
+  "schema_version": "0.2",
+  "id": "ssr-claim-full-codex-invocation-verification",
+  "prompt": "../../../candidate-screen-01/preparation/prompts/codex-invocation-verification.md",
+  "fixtures": [
+    {
+      "source": "../../../../cases/invocation-verification/fixture/README.md",
+      "target": "README.md"
+    },
+    {
+      "source": "../../../../cases/invocation-verification/fixture/archive/rollout-2024.md",
+      "target": "archive/rollout-2024.md"
+    },
+    {
+      "source": "../../../../cases/invocation-verification/fixture/config/defaults.json",
+      "target": "config/defaults.json"
+    },
+    {
+      "source": "../../../../cases/invocation-verification/fixture/docs/session-policy.md",
+      "target": "docs/session-policy.md"
+    },
+    {
+      "source": "../../../../cases/invocation-verification/fixture/scripts/show-session.py",
+      "target": "scripts/show-session.py"
+    },
+    {
+      "source": "../../../../cases/invocation-verification/fixture/src/session.py",
+      "target": "src/session.py"
+    },
+    {
+      "source": "../../../../cases/invocation-verification/fixture/tests/test_session.py",
+      "target": "tests/test_session.py"
+    },
+    {
+      "source": "../../../../cases/invocation-verification/fixture/vendor/partner/README.md",
+      "target": "vendor/partner/README.md"
+    },
+    {
+      "source": "../../../../cases/invocation-verification/fixture/vendor/partner/example.json",
+      "target": "vendor/partner/example.json"
+    },
+    {
+      "source": "../../../../cases/invocation-verification/codex.gitignore",
+      "target": ".gitignore"
+    },
+    {
+      "source": "../../../../cases/invocation-verification/task.md",
+      "target": "TASK.md"
+    },
+    {
+      "source": "../skill/SKILL.md",
+      "target": ".agents/skills/sweeping-stale-references/SKILL.md"
+    }
+  ],
+  "execution": {
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "effort": "low",
+    "permissions": "workspace-write"
+  }
+}

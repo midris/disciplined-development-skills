@@ -1,0 +1,221 @@
+{
+  "schema_version": "0.2",
+  "id": "ssr-claim-full-claude-semantic-initiating-review",
+  "prompt": "../prompt.md",
+  "fixtures": [
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/EVALUATION-INDEX.json",
+      "target": "EVALUATION-INDEX.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/INTERPRETATION.md",
+      "target": "INTERPRETATION.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/criteria/initiating-change-expected.md",
+      "target": "criteria/initiating-change-expected.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/criteria/initiating-change-inherited.md",
+      "target": "criteria/initiating-change-inherited.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/criteria/initiating-change.md",
+      "target": "criteria/initiating-change.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/criteria/semantic-delivery-expected.json",
+      "target": "criteria/semantic-delivery-expected.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/criteria/semantic-delivery-inherited.md",
+      "target": "criteria/semantic-delivery-inherited.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/criteria/semantic-delivery.md",
+      "target": "criteria/semantic-delivery.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/facts/20261107T155033291Z-ssr-claim-full-claude-initiating-change-360e156e-61b3-4906-877f-0ee914a0b41b-bb427l37.json",
+      "target": "facts/20261107T155033291Z-ssr-claim-full-claude-initiating-change-360e156e-61b3-4906-877f-0ee914a0b41b-bb427l37.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/facts/20261107T155510438Z-ssr-claim-full-claude-semantic-delivery-f2f5a015-705b-46be-8ca2-fbc2c4d9f81a-1in2tke7.json",
+      "target": "facts/20261107T155510438Z-ssr-claim-full-claude-semantic-delivery-f2f5a015-705b-46be-8ca2-fbc2c4d9f81a-1in2tke7.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/facts/20261107T160247744Z-ssr-claim-full-claude-initiating-change-76124df8-085a-41b9-8f0d-837a8be847cb-pmsfkfnk.json",
+      "target": "facts/20261107T160247744Z-ssr-claim-full-claude-initiating-change-76124df8-085a-41b9-8f0d-837a8be847cb-pmsfkfnk.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/facts/20261107T160651983Z-ssr-claim-full-claude-semantic-delivery-a9581887-c2a4-48aa-a2d0-5911bd921998-_wfu0ng3.json",
+      "target": "facts/20261107T160651983Z-ssr-claim-full-claude-semantic-delivery-a9581887-c2a4-48aa-a2d0-5911bd921998-_wfu0ng3.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/facts/20261107T161719043Z-ssr-claim-full-claude-initiating-change-48bc1bdf-4ce8-46d2-9010-c03396e4ead4-tv5iqs3h.json",
+      "target": "facts/20261107T161719043Z-ssr-claim-full-claude-initiating-change-48bc1bdf-4ce8-46d2-9010-c03396e4ead4-tv5iqs3h.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/facts/20261107T162136476Z-ssr-claim-full-claude-semantic-delivery-34d1179f-7604-467f-8480-bd54488348ae-x9kbnnlf.json",
+      "target": "facts/20261107T162136476Z-ssr-claim-full-claude-semantic-delivery-34d1179f-7604-467f-8480-bd54488348ae-x9kbnnlf.json"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/objects/001.txt",
+      "target": "objects/001.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/objects/002.txt",
+      "target": "objects/002.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/objects/003.txt",
+      "target": "objects/003.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/objects/004.txt",
+      "target": "objects/004.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/objects/005.txt",
+      "target": "objects/005.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/objects/006.txt",
+      "target": "objects/006.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/objects/007.txt",
+      "target": "objects/007.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/objects/008.txt",
+      "target": "objects/008.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/objects/009.txt",
+      "target": "objects/009.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/objects/010.txt",
+      "target": "objects/010.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/objects/011.txt",
+      "target": "objects/011.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/objects/012.txt",
+      "target": "objects/012.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/objects/013.txt",
+      "target": "objects/013.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/objects/014.txt",
+      "target": "objects/014.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/objects/015.txt",
+      "target": "objects/015.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/objects/016.txt",
+      "target": "objects/016.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/objects/017.txt",
+      "target": "objects/017.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/objects/018.txt",
+      "target": "objects/018.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/objects/019.txt",
+      "target": "objects/019.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/objects/020.txt",
+      "target": "objects/020.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/objects/021.txt",
+      "target": "objects/021.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/objects/022.txt",
+      "target": "objects/022.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/objects/023.txt",
+      "target": "objects/023.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/objects/024.txt",
+      "target": "objects/024.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/objects/025.txt",
+      "target": "objects/025.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/objects/026.txt",
+      "target": "objects/026.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/objects/027.txt",
+      "target": "objects/027.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/objects/028.txt",
+      "target": "objects/028.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/objects/029.txt",
+      "target": "objects/029.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/objects/030.txt",
+      "target": "objects/030.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/outputs/20261107T155033291Z-ssr-claim-full-claude-initiating-change-360e156e-61b3-4906-877f-0ee914a0b41b-bb427l37.md",
+      "target": "outputs/20261107T155033291Z-ssr-claim-full-claude-initiating-change-360e156e-61b3-4906-877f-0ee914a0b41b-bb427l37.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/outputs/20261107T155510438Z-ssr-claim-full-claude-semantic-delivery-f2f5a015-705b-46be-8ca2-fbc2c4d9f81a-1in2tke7.md",
+      "target": "outputs/20261107T155510438Z-ssr-claim-full-claude-semantic-delivery-f2f5a015-705b-46be-8ca2-fbc2c4d9f81a-1in2tke7.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/outputs/20261107T160247744Z-ssr-claim-full-claude-initiating-change-76124df8-085a-41b9-8f0d-837a8be847cb-pmsfkfnk.md",
+      "target": "outputs/20261107T160247744Z-ssr-claim-full-claude-initiating-change-76124df8-085a-41b9-8f0d-837a8be847cb-pmsfkfnk.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/outputs/20261107T160651983Z-ssr-claim-full-claude-semantic-delivery-a9581887-c2a4-48aa-a2d0-5911bd921998-_wfu0ng3.md",
+      "target": "outputs/20261107T160651983Z-ssr-claim-full-claude-semantic-delivery-a9581887-c2a4-48aa-a2d0-5911bd921998-_wfu0ng3.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/outputs/20261107T161719043Z-ssr-claim-full-claude-initiating-change-48bc1bdf-4ce8-46d2-9010-c03396e4ead4-tv5iqs3h.md",
+      "target": "outputs/20261107T161719043Z-ssr-claim-full-claude-initiating-change-48bc1bdf-4ce8-46d2-9010-c03396e4ead4-tv5iqs3h.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/outputs/20261107T162136476Z-ssr-claim-full-claude-semantic-delivery-34d1179f-7604-467f-8480-bd54488348ae-x9kbnnlf.md",
+      "target": "outputs/20261107T162136476Z-ssr-claim-full-claude-semantic-delivery-34d1179f-7604-467f-8480-bd54488348ae-x9kbnnlf.md"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/policy.txt",
+      "target": "policy.txt"
+    },
+    {
+      "source": "../../../../../../../skill-study-private/sweeping-stale-references/development/complete-claim-regression-01/review-inputs/claude-semantic-initiating/prior-assessment.md",
+      "target": "prior-assessment.md"
+    }
+  ],
+  "execution": {
+    "provider": "claude",
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "permissions": "read-only"
+  }
+}

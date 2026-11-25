@@ -1,0 +1,123 @@
+{
+  "format_version": "1",
+  "manifest_id": "ssr-claim-full-codex-semantic-delivery",
+  "study_id": "sweeping-stale-references",
+  "case_id": "semantic-delivery",
+  "status": "frozen",
+  "created_at": "2026-11-07",
+  "source_revision": "f43a1ede55ce7ac6d9f9336d9c666e2c0e21fe1b",
+  "authorities": {
+    "spec": {
+      "path": "plans/specs/2026-09-11-model-driven-skill-testing-framework.md",
+      "sha256": "a4038836187dcf16649e8f3ab91d2f5c120e319ce949e932a5627519ea9c2266",
+      "version": null
+    },
+    "protocol": {
+      "path": "skill-studies/sweeping-stale-references/protocol.md",
+      "sha256": "5ecd9666d3aeb9bc512d54e2eb42274bef692cf9a465e471c522b84aa5baa381",
+      "version": "1"
+    },
+    "format_contract": {
+      "path": "skill-studies/formats/companion-formats.md",
+      "sha256": "f54cb58884f9dbffd39f37746234487d6113e1f01ad3b1d355fe269310895321",
+      "version": "1"
+    },
+    "execution_result_schema": {
+      "path": "skill-studies/formats/execution-result-v2.schema.json",
+      "sha256": "81902ed03e807804404c0d6ba7a0092a1c311c9eef45ee88c89708ce50d7c2c2",
+      "version": "2"
+    },
+    "policy": {
+      "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/policy.txt",
+      "sha256": "cc030c28bcfc36c20b700f00d2307b2933ee7d884a0d0a87d14ed8b0da2b92f5",
+      "version": "SSR-count-free-1"
+    },
+    "criteria": [
+      {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/criteria/semantic-delivery.md",
+        "sha256": "88f7620a1c11ad4377ba5264687f7b57af4c18bc880f3f85f173b4e329359a7c",
+        "version": "count-free-5"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "id": "finalist",
+      "configuration": {
+        "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/configs/codex-semantic-delivery.json",
+        "sha256": "d894b14f5f8011828ea27b90c552809c895610e6894b90dfed1bf6c40b8f3541",
+        "version": "0.2"
+      },
+      "target_skill": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/skill/SKILL.md"
+    }
+  ],
+  "subject_sources": [
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/.gitignore",
+      "sha256": "7ab6574557548c2d1031511f15db14ace876b796b1471216aad74a0ab64aaee2",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/README.md",
+      "sha256": "1a4b23b1f53af5b7aa42ac8e72f59282374435831bd35f542c23bd7dfdccb6e3",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/docs/download-helper.md",
+      "sha256": "8d6d58a231c01678279d8e00ea0f03f9306c1b36a474b8cb4dd5967b657453bb",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/docs/operations.md",
+      "sha256": "7d3c3810c532bdd87af795cf543171deeaff0595e4a13f7fdee39e8dfdef18d2",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/docs/troubleshooting.md",
+      "sha256": "8e8a5cb48d7d3f3ca8e7212e9c29764f6e8f6cdaaf4f4d8d0762aaeaca906f1f",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/plans/completed/delivery-policy.md",
+      "sha256": "ef7513eb13148ad5c6b215959ae917c6ef42a24050dc8df5ff64fe814dcfd376",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/src/delivery.py",
+      "sha256": "554df6c0a7d0bf116cc593c4fdf3384e8645ab98c7d4e38780637b75577cda52",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/src/download.py",
+      "sha256": "3a618d709d2be580ccb53f2f660822be9f90b091af41e3ce3b7aaed31e894eb0",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/fixture/tests/test_retry_behavior.py",
+      "sha256": "71160952f35e3a255d68cca629a0a66d79e3e4b4c30431786f6945a28ede54f3",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/cases/semantic-delivery/task.md",
+      "sha256": "6c9685054ae4f4dd6f32a76a18401366e4206b829466367640370554bf33f683",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/candidate-screen-01/preparation/prompts/codex-semantic-delivery.md",
+      "sha256": "6695cbb23cfd7d8656a122b2e9ea4ba35fdea581f7a15780e146d84a0732b588",
+      "version": null
+    },
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/skill/SKILL.md",
+      "sha256": "9bdd02d316c57fd320fe25feddbe30d08af57ffc541742b40b1d08ec3e68c224",
+      "version": null
+    }
+  ],
+  "controller_only": [
+    {
+      "path": "skill-studies/sweeping-stale-references/runs/complete-claim-regression-01/preparation/interpretation.md",
+      "sha256": "034e339185f45833ca78942c650bc4304a4536fa26a20533659f74b164975f0f",
+      "version": null
+    }
+  ]
+}

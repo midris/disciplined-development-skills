@@ -1,0 +1,40 @@
+{
+  "first_pass_event": 77,
+  "prior_first_access_event": 78,
+  "post_prior_event": 83,
+  "judgments": [
+    {
+      "run_id": "20261107T155116328Z-ssr-claim-full-codex-moved-guide-7fd5ccfa-3b08-4d53-a8f7-346bd32ead34-jku4lpto",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All three guide moves meet all nine factors. Each four-file commit fixes three document-relative links and the exporter, with identical preserved service and vendor content. The independent replay returned exact guide bytes from both working directories. All 26 required files preceded event 77 and prior access at 78 changed no verdict."
+    },
+    {
+      "run_id": "20261107T160534948Z-ssr-claim-full-codex-moved-guide-0161bc9e-a91c-4b80-b7b5-08a654cd91d8-t08yz9lp",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All three guide moves meet all nine factors. Each four-file commit fixes three document-relative links and the exporter, with identical preserved service and vendor content. The independent replay returned exact guide bytes from both working directories. All 26 required files preceded event 77 and prior access at 78 changed no verdict."
+    },
+    {
+      "run_id": "20261107T161803379Z-ssr-claim-full-codex-moved-guide-d1628ee0-5e7d-4686-b233-6083048343f6-r1acwadq",
+      "first_pass": {
+        "F1": "met",
+        "F2": "met",
+        "F3": "met",
+        "overall": "met"
+      },
+      "post_prior_changes": [],
+      "active_reconciliation": "All three guide moves meet all nine factors. Each four-file commit fixes three document-relative links and the exporter, with identical preserved service and vendor content. The independent replay returned exact guide bytes from both working directories. All 26 required files preceded event 77 and prior access at 78 changed no verdict."
+    }
+  ]
+}
