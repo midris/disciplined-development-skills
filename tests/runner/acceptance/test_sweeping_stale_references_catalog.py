@@ -12,7 +12,7 @@ import skilltest.workspace as workspace_module
 
 
 SCENARIO_ROOT = (
-    Path(__file__).resolve().parents[3] / "skill-validation"
+    Path(__file__).resolve().parents[2] / "legacy-validation"
     / "scenarios"
     / "sweeping-stale-references"
 )
@@ -191,7 +191,7 @@ def _package_files(scenario_dir: Path) -> set[str]:
 def _expected_fixtures(scenario_id: str, scenario_dir: Path) -> tuple[tuple[Path, Path], ...]:
     live = tuple(
         (
-            (scenario_dir / f"../../../../skills/{skill_id}/SKILL.md").resolve(),
+            (scenario_dir / f"../../../../../skills/{skill_id}/SKILL.md").resolve(),
             Path(f"skills/{skill_id}/SKILL.md"),
         )
         for skill_id in LIVE_SKILLS[scenario_id]

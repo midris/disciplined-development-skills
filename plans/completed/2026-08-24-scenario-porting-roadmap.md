@@ -18,7 +18,7 @@ remains pending.
   canonical candidate scope and scenario content.
 - The migration design owns package, prompt, smoke, and completion
   rules.
-- The [scenario migration index](../../skill-validation/scenarios/README.md) owns
+- The [scenario migration index](../../tests/legacy-validation/scenarios/README.md) owns
   current totals and migrated scenario links.
 - This roadmap owns only phase and sequence status.
 

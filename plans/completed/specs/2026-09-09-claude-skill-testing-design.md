@@ -110,7 +110,7 @@ No provider call is authorized by implementation approval.
 - [x] Retain Claude trace/final output and accept equivalent lifecycle results through existing consumers.
 - [x] Integrate controlled Claude runtime and shared owned-process mechanics; verify with dummy-provider unit and process tests.
 - [x] Reconcile current runner/operator guidance and review the change; run required checks.
-- [x] Document affected qualification checks in the existing [qualification reference](../../../skill-validation/pilot/qualification/README.md#claude-qualification-checkpoint).
+- [x] Document affected qualification checks in the existing [qualification reference](../../../tests/legacy-validation/pilot/qualification/README.md#claude-qualification-checkpoint).
 - [x] Prepare and audit the exact remaining qualification batch using provider-free checks.
 - [x] Obtain approval and execute the two prepared live calls; inspect evidence before closing qualification.
 

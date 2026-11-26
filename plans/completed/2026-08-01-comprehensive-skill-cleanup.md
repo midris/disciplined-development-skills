@@ -8,9 +8,9 @@ a trustworthy way to prepare scenarios, invoke models, and retain evidence. Work
 instead established the small stateless [reusable prompt runner](specs/2026-08-27-reusable-prompt-runner-design.md)
 and migrated all 105 scenarios under the [schema `"0.2"` catalog contract](specs/2026-08-29-catalog-migration-design.md).
 
-Future testing-methodology work starts from the [validation charter](../../skill-validation/charter/core-contracts.md),
-the [runner contract](../../skill-validation/runner/README.md), and the
-[migrated scenario catalog](../../skill-validation/scenarios/README.md). It must
+Future testing-methodology work starts from the [validation charter](../../tests/legacy-validation/charter/core-contracts.md),
+the [runner contract](../../tests/runner/README.md), and the
+[migrated scenario catalog](../../tests/legacy-validation/scenarios/README.md). It must
 first confirm that scenario prompts and supplied files produce evidence suitable
 for evaluating the charter invariants. Additional tooling is out of scope unless
 an observed testing need can be simplified by a deterministic tool. The accepted

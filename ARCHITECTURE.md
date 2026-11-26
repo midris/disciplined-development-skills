@@ -302,4 +302,4 @@ Durable (never aged out), append-only, sparse by source; the field groups are in
 - **Config schema + env vars:** [`hooks/dd-config.md`](skills/disciplined-development/hooks/dd-config.md)
 - **Upgrading a deployment:** [`MIGRATIONS.md`](MIGRATIONS.md)
 - **One-run validation tooling:** [`tests/runner/README.md`](tests/runner/README.md)
-- **Skill behavior contracts and validation navigation:** [charter](skill-validation/charter/core-contracts.md), [validation guide](skill-validation/README.md)
+- **Skill behavior contracts and validation navigation:** [charter](tests/legacy-validation/charter/core-contracts.md), [validation guide](tests/legacy-validation/README.md)

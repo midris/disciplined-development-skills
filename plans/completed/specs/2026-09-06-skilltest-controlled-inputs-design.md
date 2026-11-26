@@ -54,10 +54,10 @@ Only the explicitly approved implementation and preparation units in the linked 
 
 ## Accepted starting constraints
 
-**Current requirement source (owner clarification, 2026-09-10):** Follow [baseline specification first](../../../skill-validation/README.md#baseline-specification-first): the charter gives core intent, while the existing skill text defines the detailed promises from which tests and rubrics are derived.
+**Current requirement source (owner clarification, 2026-09-10):** Follow [baseline specification first](../../../tests/legacy-validation/README.md#baseline-specification-first): the charter gives core intent, while the existing skill text defines the detailed promises from which tests and rubrics are derived.
 This supersedes charter-only requirement sourcing below; it does not change the frozen contracts or judgments of completed observations.
 
-The [charter](../../../skill-validation/charter/core-contracts.md#skill-contracts-and-proposed-core-portfolios) already defines each skill's intended behavior through named invariants.
+The [charter](../../../tests/legacy-validation/charter/core-contracts.md#skill-contracts-and-proposed-core-portfolios) already defines each skill's intended behavior through named invariants.
 Use those contracts and the existing audited scenario rubrics; do not redefine success as part of harness design.
 The charter also specifies evaluation ledgers, judgment ownership and executed-work evidence requirements.
 Its proposed suite changes and historical repetition schedule retain their stated activation conditions; this amendment does not silently activate them.
@@ -104,7 +104,7 @@ Current and candidate conditions supply the intended DD composition, not an isol
 The comparison measures DD's contribution on that substrate, not its independent effect outside it.
 An observed, judgeable failure establishes RED; merely running without DD does not guarantee RED.
 Assess charter behavior, not the expected absence of a DD file or command.
-Some existing prompts explicitly require reading a DD skill, such as [DR-02](../../../skill-validation/scenarios/disciplined-research/dr-02/prompt.md); deleting that fixture alone would leave a broken instruction, not a valid control.
+Some existing prompts explicitly require reading a DD skill, such as [DR-02](../../../tests/legacy-validation/scenarios/disciplined-research/dr-02/prompt.md); deleting that fixture alone would leave a broken instruction, not a valid control.
 Prepare fresh comparison inputs with a common task and rubric and explicitly declared condition-specific skill-loading instructions, where needed; audit them before freezing or collecting runs.
 This does not authorize editing the accepted scenario packages or rewriting their historical results.
 
@@ -231,7 +231,7 @@ The immediate extension below is behavior-only; a dedicated discovery scenario n
 
 ### Accepted post-pilot simplification
 
-Separate the [qualification reference](../../../skill-validation/pilot/qualification/README.md) from the short [routine runbook](../../../skill-validation/pilot/README.md).
+Separate the [qualification reference](../../../tests/legacy-validation/pilot/qualification/README.md) from the short [routine runbook](../../../tests/legacy-validation/pilot/README.md).
 Qualify affected discovery, common dependencies, setup and task-tool controls when they change; reuse evidence only where the mechanism and scope still match.
 A new prompt/task fact using unchanged mechanisms requires a new freeze and input audit, not automatically every old canary or paid qualification call.
 Routine work remains input/version checks, one approved invocation, evidence/cleanup inspection, worksheet scoring and a summary update.
@@ -268,7 +268,7 @@ Keep per-run CLI capture, frozen-input checks, full-trace/loading inspection, pr
 At handoff, reconcile evidence and documentation, run the repository-required hook suite once, and commit authorized changes together; do not repeat unchanged suites or status commits per observation.
 This reduces orchestration overhead without changing runner code or weakening runtime controls.
 
-The routine [scoring procedure](../../../skill-validation/pilot/README.md#scoring-and-handoff) defines a short pre-collection criterion/evidence table, not another automatic scorer.
+The routine [scoring procedure](../../../tests/legacy-validation/pilot/README.md#scoring-and-handoff) defines a short pre-collection criterion/evidence table, not another automatic scorer.
 Keep verdict detail in worksheets, mechanical facts in bundles, attempt/approval rows in one summary and only checkpoint/scope in the active plan.
 The LP pilot exposed an omitted task fact: future planning fixtures requiring runnable verification must supply framework/command/cwd unless selecting the toolchain is the explicit test purpose.
 Both arms receive identical context; preserve absent-source boundaries rather than inventing application code. No completed LP prompt, fixture, rubric or result changes under this amendment.
@@ -287,7 +287,7 @@ Any later migration must explicitly preserve historical identities, evidence byt
 ### Working requirements inventory
 
 This is the content checklist for one provisional runbook, not a list of new files or an approved execution schedule.
-The [scenario index](../../../skill-validation/scenarios/README.md), catalog summaries, [runner guide](../../../skill-validation/runner/README.md) and [methodology](2026-09-02-skill-testing-methodology-design.md) supply the existing material.
+The [scenario index](../../../tests/legacy-validation/scenarios/README.md), catalog summaries, [runner guide](../../../tests/runner/README.md) and [methodology](2026-09-02-skill-testing-methodology-design.md) supply the existing material.
 
 | Required content | Reuse | Work still to specify or assemble |
 |---|---|---|
@@ -318,7 +318,7 @@ Frozen-input evidence must identify recoverable versions of the prompt, rubric, 
 The current runner inventories fixture contents at finalization, and worksheet generation hashes the rubric at that later invocation; neither establishes a pre-launch snapshot on its own.
 Specify how prepared inputs are checked against frozen sources and how worksheet generation uses the matching frozen rubric.
 For executed-work scenarios, distinguish protected guidance/test inputs from task files the subject is expected to edit; retain the initial state and judged outputs rather than treating every fixture edit as contamination.
-The [pilot runbook](../../../skill-validation/pilot/README.md#preparation-and-freeze) uses frozen files, Git provenance and existing runner checks; this does not introduce another schema or a general snapshot system, nor reopen historical observations.
+The [pilot runbook](../../../tests/legacy-validation/pilot/README.md#preparation-and-freeze) uses frozen files, Git provenance and existing runner checks; this does not introduce another schema or a general snapshot system, nor reopen historical observations.
 
 Review the pilot's preparation/qualification, no-DD/current collection, scoring, interruption/failure recovery and handoff; a paper walkthrough of a later edit may expose gaps without requiring a complete edit runbook now.
 Choose exact pilot scenarios, counts and commands before execution; campaign schedules and directory moves remain deferred.
@@ -433,7 +433,7 @@ Qualify catalogs and observed bootstrap/common inputs once for the pinned pilot 
 Keep shell-startup/common-input limits explicit during qualification: neither `inherit="none"` nor a private profile alone proves absence of automatic shell reads.
 Use the resolved executable's directory followed by `/usr/bin:/bin:/usr/sbin:/sbin` as the explicit pilot PATH, with no inherited extra entries; qualify the selected task tools under it.
 Pin recovery commands and qualification calls in the runbook before execution; the Task 2 approval does not approve a new config schema or provider call.
-The [qualification checklist](../../../skill-validation/pilot/qualification/README.md#provider-free-command-checklist) and [routine recovery procedure](../../../skill-validation/pilot/README.md#failure-and-recovery) keep these operator steps explicit: compare each pre-launch CLI capture to fixed qualification evidence, and retain unresolved private runtimes for owner-assisted recovery when process ownership is unknown.
+The [qualification checklist](../../../tests/legacy-validation/pilot/qualification/README.md#provider-free-command-checklist) and [routine recovery procedure](../../../tests/legacy-validation/pilot/README.md#failure-and-recovery) keep these operator steps explicit: compare each pre-launch CLI capture to fixed qualification evidence, and retain unresolved private runtimes for owner-assisted recovery when process ownership is unknown.
 That exceptional recovery fallback does not require new process-management code or weaken the runner's normal cleanup contract.
 
 ## Review sequence
@@ -463,13 +463,13 @@ Use two fresh pilot variants, not replacements for their source packages or acce
 
 | Source | Pilot coverage | Required adaptation |
 |---|---|---|
-| [DR-02](../../../skill-validation/scenarios/disciplined-research/dr-02/README.md) | Native research-skill loading, reads of three local sources, judgment from controlling evidence, and sibling evidence-directory writes | Keep the procurement task and semantic rubric; explicitly request saving the same two-line answer returned in the final response to `{{evidence_dir}}/deadline-note.md`. Replace the blanket read-only restriction in both conditions with permission to write only that file. Record the saved artifact as task fidelity, not a new skill-behavior criterion. |
-| [LP-01](../../../skill-validation/scenarios/lean-plan-writing/lp-01/README.md) | DD/Superpowers composition and plan-artifact scoring | Retain the JSON-report task, rubric and supplied writing-plans guidance; adapt native fixture paths and condition-specific loading instructions while keeping the response-only task boundary. |
+| [DR-02](../../../tests/legacy-validation/scenarios/disciplined-research/dr-02/README.md) | Native research-skill loading, reads of three local sources, judgment from controlling evidence, and sibling evidence-directory writes | Keep the procurement task and semantic rubric; explicitly request saving the same two-line answer returned in the final response to `{{evidence_dir}}/deadline-note.md`. Replace the blanket read-only restriction in both conditions with permission to write only that file. Record the saved artifact as task fidelity, not a new skill-behavior criterion. |
+| [LP-01](../../../tests/legacy-validation/scenarios/lean-plan-writing/lp-01/README.md) | DD/Superpowers composition and plan-artifact scoring | Retain the JSON-report task, rubric and supplied writing-plans guidance; adapt native fixture paths and condition-specific loading instructions while keeping the response-only task boundary. |
 
 For both variants, supply all nine current DD skills in the current-DD condition and none in no-DD; hold the explicitly inventoried Superpowers inputs and ordinary task tools fixed.
 No-DD prompts must not request absent DD skills; LP-01 still invokes the supplied writing-plans guidance in both conditions.
 Freeze and audit the common task/rubric and declared loading differences before collection; any adaptation creates new pilot provenance, not a historical-baseline rerun.
-Do not add a separate description-routing scenario: [DISC-07](../../../skill-validation/scenarios/skill-discovery/disc-07/README.md), for example, forbids file reads and supplies descriptions inline, so it would not prove native CLI discovery.
+Do not add a separate description-routing scenario: [DISC-07](../../../tests/legacy-validation/scenarios/skill-discovery/disc-07/README.md), for example, forbids file reads and supplies descriptions inline, so it would not prove native CLI discovery.
 Native discovery, actual loading, composition inputs and write access still require explicit qualification; a subject choosing not to use a successfully qualified capability is scored as behavior/task fidelity, not automatically an environment failure.
 
 Use one run per condition per scenario: four planned scenario runs, all Codex / gpt-5.6-sol / low, with a fresh runtime each time.
@@ -488,9 +488,9 @@ It does not test spontaneous discovery or establish broad effectiveness or repea
 
 | Source scenario | Added question | Required new-variant adaptation |
 |---|---|---|
-| [DR-05](../../../skill-validation/scenarios/disciplined-research/dr-05/README.md) | Does it resist pressure to invent a missing date? | Keep the sole support-matrix source and missing-datum pressure; explicitly load research in current-DD only. This is also a non-development contrast to the planning/review tasks. |
-| [LP-05](../../../skill-validation/scenarios/lean-plan-writing/lp-05/README.md) | Does it specify required edges without writing implementation bodies? | Keep the membership-import brief, including absent/empty/malformed uploads, two-million-row maximum, uniqueness, atomic visibility and actionable errors. Explicitly load writing-plans in both conditions and lean-plan-writing in current-DD; state that application source/tests are not supplied. |
-| [AR-03](../../../skill-validation/scenarios/adversarial-review/ar-03/README.md) | Does it examine every caller and reject a false performance rationale? | Keep real project source, plan and benchmark fixtures; explicitly load requesting-code-review in both conditions and adversarial-review in current-DD. Request findings with severity and an overall approve/block conclusion in both conditions. Score substantive blocking judgment, not literal DD marker syntax. |
+| [DR-05](../../../tests/legacy-validation/scenarios/disciplined-research/dr-05/README.md) | Does it resist pressure to invent a missing date? | Keep the sole support-matrix source and missing-datum pressure; explicitly load research in current-DD only. This is also a non-development contrast to the planning/review tasks. |
+| [LP-05](../../../tests/legacy-validation/scenarios/lean-plan-writing/lp-05/README.md) | Does it specify required edges without writing implementation bodies? | Keep the membership-import brief, including absent/empty/malformed uploads, two-million-row maximum, uniqueness, atomic visibility and actionable errors. Explicitly load writing-plans in both conditions and lean-plan-writing in current-DD; state that application source/tests are not supplied. |
+| [AR-03](../../../tests/legacy-validation/scenarios/adversarial-review/ar-03/README.md) | Does it examine every caller and reject a false performance rationale? | Keep real project source, plan and benchmark fixtures; explicitly load requesting-code-review in both conditions and adversarial-review in current-DD. Request findings with severity and an overall approve/block conclusion in both conditions. Score substantive blocking judgment, not literal DD marker syntax. |
 
 The existing skill-discovery prompts are not suitable unchanged: they paste descriptions, prohibit skill-body reads and ask for a routing answer.
 They measure description classification, not native selection while performing the task.
@@ -532,9 +532,9 @@ AR-03 explicitly reads both requesting-code-review and its reviewer criteria, th
 
 | Scenario | No-DD input | Current-DD input |
 |---|---|---|
-| DR-05 | [Prompt](../../../skill-validation/pilot/dr-05/no-dd/prompt.md) | [Prompt](../../../skill-validation/pilot/dr-05/current-dd/prompt.md) |
-| LP-05 | [Prompt](../../../skill-validation/pilot/lp-05/no-dd/prompt.md) | [Prompt](../../../skill-validation/pilot/lp-05/current-dd/prompt.md) |
-| AR-03 | [Prompt](../../../skill-validation/pilot/ar-03/no-dd/prompt.md) | [Prompt](../../../skill-validation/pilot/ar-03/current-dd/prompt.md) |
+| DR-05 | [Prompt](../../../tests/legacy-validation/pilot/dr-05/no-dd/prompt.md) | [Prompt](../../../tests/legacy-validation/pilot/dr-05/current-dd/prompt.md) |
+| LP-05 | [Prompt](../../../tests/legacy-validation/pilot/lp-05/no-dd/prompt.md) | [Prompt](../../../tests/legacy-validation/pilot/lp-05/current-dd/prompt.md) |
+| AR-03 | [Prompt](../../../tests/legacy-validation/pilot/ar-03/no-dd/prompt.md) | [Prompt](../../../tests/legacy-validation/pilot/ar-03/current-dd/prompt.md) |
 
 Each directory contains its existing-format config and evaluator-withheld rubric.
 Freeze the recoverable revision and audit the conditions before collection; input preparation is not qualification or provider-call permission.
@@ -545,7 +545,7 @@ Do not turn those limits into a larger pilot automatically; select any next incr
 ## Existing authorities to reconcile after decisions
 
 - [Methodology](2026-09-02-skill-testing-methodology-design.md): ledger/verdict separation and evidence lifecycle.
-- [Core contracts](../../../skill-validation/charter/core-contracts.md): invariants, orchestrator responsibility and conditional historical comparison schedule.
-- [Runner contract](../../../skill-validation/runner/README.md): invocation, evidence collection and infrastructure-only retry handling.
+- [Core contracts](../../../tests/legacy-validation/charter/core-contracts.md): invariants, orchestrator responsibility and conditional historical comparison schedule.
+- [Runner contract](../../../tests/runner/README.md): invocation, evidence collection and infrastructure-only retry handling.
 
 Older deferred or conditional campaign designs are context, not automatic authorization for the new comparison campaign.

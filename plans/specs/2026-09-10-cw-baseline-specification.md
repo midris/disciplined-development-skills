@@ -2,11 +2,11 @@
 
 **Status:** Reviewed against the complete existing skill; the owner authorized proceeding to catalog evaluation under this specification.
 This specifies what the current skill promises; it does not establish that the skill works, approve a rewrite or authorize test collection.
-The [active testing plan](../2026-09-09-dd-skill-testing.md) owns next steps; the [existing catalog](../../skill-validation/pilot/cw-catalog.md#baseline-specification-alignment) owns test mapping and reconciliation.
+The [active testing plan](../2026-09-09-dd-skill-testing.md) owns next steps; the [existing catalog](../../tests/legacy-validation/pilot/cw-catalog.md#baseline-specification-alignment) owns test mapping and reconciliation.
 
 ## Sources and authority
 
-The [charter](../../skill-validation/charter/core-contracts.md#concise-writing) supplies the core purpose: remove prose that adds no value while preserving reader understanding and use.
+The [charter](../../tests/legacy-validation/charter/core-contracts.md#concise-writing) supplies the core purpose: remove prose that adds no value while preserving reader understanding and use.
 The full [baseline skill](../../skills/concise-writing/SKILL.md) supplies the specific scope, rules, exceptions, method and responsibility boundaries.
 Read them together; neither the short charter nor the skill's individual slogans substitute for the complete skill.
 
@@ -31,7 +31,7 @@ An already-effective passage can remain unchanged; a useful explanation can rema
 Read the core test's “necessary framing” alongside the overview's “any framing that aids comprehension”: framing need not be indispensable to be useful.
 Orientation, transitions and reinforcement can improve reading even when the facts or headings overlap with them.
 Removability, lack of a new fact, introductory placement or resemblance to a named verbosity pattern does not by itself establish padding.
-Assess the passage's reader function in the whole artifact; the [shared padding-failure check](../../skill-validation/pilot/cw-runbook.md#padding-failure-check) makes that distinction explicit for evaluators.
+Assess the passage's reader function in the whole artifact; the [shared padding-failure check](../../tests/legacy-validation/pilot/cw-runbook.md#padding-failure-check) makes that distinction explicit for evaluators.
 
 ## Behavioral requirements from the baseline
 
@@ -56,7 +56,7 @@ Likewise, testing a warning revision after an explicit CW-loading instruction do
 
 ## Test design after specification and catalog review
 
-The [intended-use and authoring guidance](../../skill-validation/README.md#intended-use-and-dependencies) places development projects first, with representative broader use and Superpowers available.
+The [intended-use and authoring guidance](../../tests/legacy-validation/README.md#intended-use-and-dependencies) places development projects first, with representative broader use and Superpowers available.
 For CW, cover ordinary prose use without requiring the DD orchestrator, plus its contribution to DD-guided project tasks with the relevant companions.
 Superpowers writing-skills governs how CW itself is edited and validated; it does not override CW's existing exclusion of skill/reference authoring in subject tasks.
 
@@ -92,7 +92,7 @@ Once specification, scenario inputs and scoring are agreed, freeze them together
 Judge a later rewrite against the same agreed promises and comparison conditions.
 If a new behavior is desired, explicitly revise the specification and affected tests before measuring that change; do not redefine success to fit the candidate's output.
 
-The [catalog audit](../../skill-validation/pilot/cw-catalog.md#routine-suite-coverage) now identifies the proposed repairs, retirements and additions.
-The [resulting task inputs](../../skill-validation/pilot/cw-catalog.md#prospective-input-map) have completed review and remediation, with owner authorization to commit/push; [reviewed scoring](../../skill-validation/pilot/cw-runbook.md#prospective-scoring) is also approved for commit/push.
+The [catalog audit](../../tests/legacy-validation/pilot/cw-catalog.md#routine-suite-coverage) now identifies the proposed repairs, retirements and additions.
+The [resulting task inputs](../../tests/legacy-validation/pilot/cw-catalog.md#prospective-input-map) have completed review and remediation, with owner authorization to commit/push; [reviewed scoring](../../tests/legacy-validation/pilot/cw-runbook.md#prospective-scoring) is also approved for commit/push.
 The [active testing plan](../2026-09-09-dd-skill-testing.md#current-scoring-preparation) records collection results, owner decisions and the next batch; this specification does not track execution status.
 Other skills and new provider calls are not activated by this specification.
