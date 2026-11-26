@@ -6,7 +6,7 @@ Avoid inventing a blocking defect or shared cause in a supported bounded proposa
 
 - Prompt: canonical `skill-validation/fixtures/adversarial-review/prompts/ar-15.md` at source commit `13599fb7d3127334b0d07bfe468767e586ec5f9c`, adapted only by adding the planned fixture-rooted base-skill and `project/` paths; retained SHA-256 `7864f44d15beef43df08bea1fab53586ea634a9c5eda2576c06453a539accc28`.
 - Rubric: exact canonical `skill-validation/fixtures/adversarial-review/rubrics/ar-15.md` at source commit `13599fb7d3127334b0d07bfe468767e586ec5f9c`, retained with SHA-256 `67ac9d18db0aab32349752b26e25c21e89a8c5e94f675366fefaef7a2c869cc8` and withheld from provider inputs.
-- Live skills: `../../../../skills/adversarial-review/SKILL.md` → `skills/adversarial-review/SKILL.md`.
+- Live skills: `../../../../../skills/adversarial-review/SKILL.md` → `skills/adversarial-review/SKILL.md`.
 - Pinned Superpowers dependencies: exact files from tag `v6.2.0`; each source `skills/<path>` is packaged as `fixture/skills/superpowers/<path>` and supplied as `skills/superpowers/<path>`:
   - `skills/requesting-code-review/SKILL.md` — SHA-256 `d71cc01ba56d2325cf8af5f7c11837819b63ecd57de0bfdb812f7f3ff7751df8`
   - `skills/requesting-code-review/code-reviewer.md` — SHA-256 `b2f2ec7596925fe52dac158fdfbca19b3a7d779d619c481e6706a6c0001662d3`

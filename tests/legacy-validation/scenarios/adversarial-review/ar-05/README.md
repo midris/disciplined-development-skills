@@ -6,7 +6,7 @@ Apply broad durability and holistic review without requiring one predetermined v
 
 - Prompt: canonical `skill-validation/fixtures/adversarial-review/prompts/ar-05.md` at source commit `13599fb7d3127334b0d07bfe468767e586ec5f9c`, adapted only by adding the planned fixture-rooted base-skill and `subject/` paths; retained SHA-256 `0f62c02acd47bf781d762420897a9a6a14ab7a94026494dfbed71cce9de1be41`.
 - Rubric: exact canonical `skill-validation/fixtures/adversarial-review/rubrics/ar-05.md` at source commit `13599fb7d3127334b0d07bfe468767e586ec5f9c`, retained with SHA-256 `2dd2372981b9b88eff3567ce5e1c6b5b3b8c7999285400c79ab1711fe6bbfa94` and withheld from provider inputs.
-- Live skills: `../../../../skills/adversarial-review/SKILL.md` → `skills/adversarial-review/SKILL.md`.
+- Live skills: `../../../../../skills/adversarial-review/SKILL.md` → `skills/adversarial-review/SKILL.md`.
 - Pinned Superpowers dependencies: exact files from tag `v6.2.0`; each source `skills/<path>` is packaged as `fixture/skills/superpowers/<path>` and supplied as `skills/superpowers/<path>`:
   - `skills/requesting-code-review/SKILL.md` — SHA-256 `d71cc01ba56d2325cf8af5f7c11837819b63ecd57de0bfdb812f7f3ff7751df8`
   - `skills/requesting-code-review/code-reviewer.md` — SHA-256 `b2f2ec7596925fe52dac158fdfbca19b3a7d779d619c481e6706a6c0001662d3`

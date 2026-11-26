@@ -57,7 +57,7 @@ review (now on-page in the README).
 **Fix:** see [`plans/deferred/2026-06-14-threshold-rationale-and-calibration.md`](../deferred/2026-06-14-threshold-rationale-and-calibration.md).
 Document each as a deliberately-provisional starter value now; calibrate against
 the firing telemetry from
-[`plans/2026-06-14-review-logging-instrumentation.md`](../plans/2026-06-14-review-logging-instrumentation.md)
+[`plans/completed/2026-06-14-review-logging-instrumentation.md`](../completed/2026-06-14-review-logging-instrumentation.md)
 once it lands.
 
 ### F2 — No human-facing trust artifact

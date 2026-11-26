@@ -122,7 +122,7 @@ deliberately undecided; these 17 single runs do not answer those questions.
 ## Next actions
 
 1. Execute the deferred
-   [Skilltest Codex Input Isolation Feasibility Plan](../../../plans/deferred/2026-09-05-skilltest-provider-input-isolation.md),
+   [Skilltest Codex Input Isolation Feasibility Plan](../../../../plans/completed/2026-09-05-skilltest-provider-input-isolation.md),
    beginning with its spike before changing runner behavior.
 2. Use the completed catalog summaries to define the smallest consolidated
    baseline portfolio and resolve cross-skill ownership before any rewrite

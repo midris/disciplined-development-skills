@@ -6,7 +6,7 @@ Reject a generic shared cause for two independently caused findings.
 
 - Prompt: canonical `skill-validation/fixtures/adversarial-review/prompts/ar-13.md` at source commit `13599fb7d3127334b0d07bfe468767e586ec5f9c`, adapted only by rooting the planned `skills/` and `project/` paths at the fixture directory; retained SHA-256 `76e00b195de7e65f0a9039d7a8fbde578fea9e58ae28764fccbcfc2ffa2dcb38`.
 - Rubric: exact canonical `skill-validation/fixtures/adversarial-review/rubrics/ar-13.md` at source commit `13599fb7d3127334b0d07bfe468767e586ec5f9c`, retained with SHA-256 `0ea6ad7ec83921325946609145fe06ce733d6e7496bddcf13af3168082dbc1f2` and withheld from provider inputs.
-- Live skills: `../../../../skills/adversarial-review/SKILL.md` → `skills/adversarial-review/SKILL.md`.
+- Live skills: `../../../../../skills/adversarial-review/SKILL.md` → `skills/adversarial-review/SKILL.md`.
 - Pinned Superpowers dependencies: exact files from tag `v6.2.0`; each source `skills/<path>` is packaged as `fixture/skills/superpowers/<path>` and supplied as `skills/superpowers/<path>`:
   - `skills/requesting-code-review/SKILL.md` — SHA-256 `d71cc01ba56d2325cf8af5f7c11837819b63ecd57de0bfdb812f7f3ff7751df8`
   - `skills/requesting-code-review/code-reviewer.md` — SHA-256 `b2f2ec7596925fe52dac158fdfbca19b3a7d779d619c481e6706a6c0001662d3`
